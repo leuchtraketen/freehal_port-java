@@ -50,6 +50,18 @@ public class Grammar2012 extends AbstractGrammar {
 		return key;
 	}
 
+	public Entity modifySymbol(Entity obj, List<String> _str) {
+		String str = new String();
+		for (String it : _str) {
+			str += "/" + it;
+		}
+
+		Entity modified = new Entity(obj);
+		modified.add(str);
+
+		return addEntity(modified);
+	}
+
 	private String allToKey(Entities entities) {
 		if (entities.size() == 0)
 			return "";
@@ -284,6 +296,7 @@ public class Grammar2012 extends AbstractGrammar {
 		while (!found && ++order < reducemap.size()) {
 			// for each key
 			for (final String key : reducekeysSorted.get(order)) {
+				LogUtils.d("reducekeysSorted: "+key);
 				// does it match?
 				if (oldImpression.contains(key)) {
 					LogUtils.d("    found: '" + key + "' in '" + oldImpression
@@ -304,7 +317,7 @@ public class Grammar2012 extends AbstractGrammar {
 											.indexOf("$"));
 						}
 						if (!inThisStepReduceTo.isEmpty()
-								&& complexityKey != inThisStepReduceTo) {
+								&& !complexityKey.equals(inThisStepReduceTo)) {
 							LogUtils.d("      wrong target entity("
 									+ complexityKey
 									+ "), in this step we'll reduce to "
@@ -396,8 +409,8 @@ public class Grammar2012 extends AbstractGrammar {
 				if (found) {
 					Entities foundList = new Entities();
 					for (f = 0, j = i; j < vec.size() && f < find.size(); ++f, ++j) {
-						Entity e = this.modifySymbol(vec.get(j), find.get(f)
-								.getMarker());
+						Entity e = this.modifySymbol(vec.get(j), 
+								find.get(f).getMarker());
 
 						foundList.add(e); // /////////////////////////
 					}
@@ -469,6 +482,7 @@ public class Grammar2012 extends AbstractGrammar {
 		}
 
 		buildReducemap();
+		expand();
 
 		return true;
 	}
@@ -532,18 +546,6 @@ public class Grammar2012 extends AbstractGrammar {
 		} else {
 			return null;
 		}
-	}
-
-	public Entity modifySymbol(Entity obj, List<String> _str) {
-		String str = new String();
-		for (String it : _str) {
-			str += "/" + it;
-		}
-
-		Entity modified = new Entity(obj);
-		modified.add(str);
-
-		return addEntity(modified);
 	}
 
 	public static String printInput(List<Word> words) {

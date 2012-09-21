@@ -56,9 +56,9 @@ public class XmlUtils {
 		int i;
 		int countFacts = 0;
 		for (i = 0; i < lines.length; ++i) {
-			if (lines[i] == "<") {
+			if (lines[i].equals("<")) {
 				++i;
-				if (lines[i] == "fact") {
+				if (lines[i].equals("fact")) {
 					++countFacts;
 				}
 			}
@@ -66,9 +66,9 @@ public class XmlUtils {
 		i = 0;
 		int countFactsSoFar = 0;
 		while (i < lines.length) {
-			if (lines[i] == "<") {
+			if (lines[i].equals("<")) {
 				++i;
-				if (lines[i] == "fact") {
+				if (lines[i].equals("fact")) {
 					++i;
 					MutableInteger j = new MutableInteger(i);
 					XmlFact xfact = XmlUtils.readXmlFact(lines, j);
@@ -96,12 +96,12 @@ public class XmlUtils {
 		tree.setName(tagname);
 
 		while (i.get() < lines.length) {
-			if (lines[i.get()] == ">") {
+			if (lines[i.get()].equals(">")) {
 				i.increment();
-				if (lines[i.get()] == tagname) {
+				if (lines[i.get()].equals(tagname)) {
 					break;
 				}
-			} else if (lines[i.get()] == "<") {
+			} else if (lines[i.get()].equals("<")) {
 				i.increment();
 				String _tagname = lines[i.get()];
 				i.increment();
@@ -115,11 +115,11 @@ public class XmlUtils {
 			} else if (lines[i.get()].length() > 0) {
 				final String text = lines[i.get()];
 				// check for default values
-				if (text != "00000" && !text.startsWith("0.50")) {
+				if (!text.equals("00000") && !text.startsWith("0.50")) {
 					XmlText t = new XmlText();
 					t.setText(text.startsWith("0.0") ? "0" : text
 							.startsWith("1.0") ? "1" : text);
-					if (tagname == "text") {
+					if (tagname.equals("text")) {
 						tree.add(t);
 					} else {
 						XmlList textObj = new XmlList();

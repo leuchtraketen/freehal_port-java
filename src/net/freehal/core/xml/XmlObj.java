@@ -1,5 +1,6 @@
 package net.freehal.core.xml;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import net.freehal.core.pos.AbstractTagger;
@@ -9,9 +10,9 @@ public abstract class XmlObj {
 
 	protected String name = new String();
 
-	protected boolean isCachedWords;
-	protected boolean isCachedTags;
-	protected List<Word> cacheWords;
+	protected boolean isCachedWords = false;
+	protected boolean isCachedTags = false;
+	protected List<Word> cacheWords = new ArrayList<Word>();
 
 	public XmlObj() {
 	}

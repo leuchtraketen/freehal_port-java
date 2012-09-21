@@ -8,7 +8,7 @@ import net.freehal.core.util.LogUtils;
 
 public class XmlList extends XmlObj {
 
-	private List<XmlObj> embedded;
+	private List<XmlObj> embedded = new ArrayList<XmlObj>();
 
 	public int part(List<XmlObj> list, String tagname) {
 		int j = 0;

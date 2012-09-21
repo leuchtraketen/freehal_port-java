@@ -5,6 +5,7 @@ import java.util.List;
 
 import net.freehal.core.grammar.typedefs.Entities;
 import net.freehal.core.grammar.typedefs.StringMultiMap;
+import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Mutable;
 import net.freehal.core.util.RegexUtils;
 
@@ -40,7 +41,7 @@ public class Entity {
 		this.order = obj.order;
 	}
 
-	public void add(String s) {
+	public void add(String text) {
 		init(text);
 	}
 
@@ -183,32 +184,32 @@ public class Entity {
 	}
 
 	private String toXml(Mutable<String> _key, Mutable<String> _text, int level) {
-
+		for (String v : virt) {
+			if (v.contains("v-"))
+				LogUtils.d("virt: " + v);
+		}
 		String grammarKey = (virt.size() > 0) ? virt.get(0) : this.toKey();
-		String key = grammarKey == "s-all" ? "fact"
-				: grammarKey == "v-subject" ? "subject"
-						: grammarKey == "v-object" ? "object"
-								: grammarKey == "v-questionword" ? "questionword"
-										: grammarKey.startsWith("v-extra-") ? "extra"
-												: grammarKey == "v-verb" ? "verb"
-														: (grammarKey
-																.startsWith("v-clause-") && grammarKey != "v-clause-1") ? "clause"
-																: grammarKey == "v-adverb" ? "adverbs"
-																		: grammarKey == "v-linked" ? "linked"
-																				: grammarKey == "d-linking" ? "linking"
-																						: grammarKey == "" ? ""
-																								: ""; // "--"
-																										// +
-																										// key;
+		String key = grammarKey.equals("s-all") ? "fact" : grammarKey
+				.equals("v-subject") ? "subject" : grammarKey
+				.equals("v-object") ? "object" : grammarKey
+				.equals("v-questionword") ? "questionword" : grammarKey
+				.startsWith("v-extra-") ? "extra"
+				: grammarKey.equals("v-verb") ? "verb" : (grammarKey
+						.startsWith("v-clause-") && !grammarKey
+						.equals("v-clause-1")) ? "clause" : grammarKey
+						.equals("v-adverb") ? "adverbs" : grammarKey
+						.equals("v-linked") ? "linked" : grammarKey
+						.equals("d-linking") ? "linking" : grammarKey
+						.equals("") ? "" : "";
 
 		if (_key != null)
 			_key.set(grammarKey);
 		if (_text != null)
 			_text.set(text);
 
-		if (key == "clause")
+		if (key.equals("clause"))
 			level = 0;
-		if (grammarKey == "d-linking" || grammarKey == "d-komma")
+		if (grammarKey.equals("d-linking") || grammarKey.equals("d-komma"))
 			return "";
 
 		StringBuilder ssEmbed = new StringBuilder();

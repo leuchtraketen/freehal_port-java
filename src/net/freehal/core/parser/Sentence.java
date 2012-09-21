@@ -9,6 +9,7 @@ import net.freehal.core.grammar.Grammar2012;
 import net.freehal.core.grammar.typedefs.Entities;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.util.FreehalConfig;
+import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
@@ -39,7 +40,11 @@ public class Sentence {
 	private void parse() {
 		List<Entities> parsed = FreehalConfig.getGrammar().parse(wordsList);
 		final String xmlInput = Grammar2012.printXml(parsed);
+		LogUtils.d("parsed fact as xml:");
+		LogUtils.d(xmlInput);
 		final String xmlPre = XmlUtils.orderTags(xmlInput);
+		LogUtils.d("xml parsing string:");
+		LogUtils.d(xmlPre);
 		final Sentence sentence = this;
 		XmlUtils.readXmlFacts(null, xmlPre, null, new XmlFactReciever() {
 
@@ -48,6 +53,7 @@ public class Sentence {
 					int countFacts, long start, File filename,
 					int countFactsSoFar) {
 				sentence.setFact(xfact);
+				LogUtils.i("found fact: "+xfact);
 			}
 
 		});
