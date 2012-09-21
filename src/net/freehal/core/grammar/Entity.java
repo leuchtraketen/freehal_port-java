@@ -6,7 +6,7 @@ import java.util.List;
 import net.freehal.core.grammar.typedefs.Entities;
 import net.freehal.core.grammar.typedefs.StringMultiMap;
 import net.freehal.core.util.Mutable;
-import net.freehal.core.util.Regex;
+import net.freehal.core.util.RegexUtils;
 
 public class Entity {
 
@@ -50,7 +50,7 @@ public class Entity {
 		for (String part : parts) {
 			if (part.equals("") || part.equals("null")) {
 				// ignore
-			} else if (Regex.find(part, "^([0-9]+)$")) {
+			} else if (RegexUtils.find(part, "^([0-9]+)$")) {
 				order = Integer.parseInt(part);
 			} else if (symbol.length() == 0 && repl.length() == 0
 					&& data.length() == 0) {

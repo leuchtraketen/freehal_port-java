@@ -19,8 +19,9 @@ import net.freehal.core.util.MultiMap;
 import net.freehal.core.util.Mutable;
 import net.freehal.core.util.Pair;
 import net.freehal.core.util.StringLengthComparator;
+import net.freehal.core.xml.Word;
 
-public class Grammar2012 {
+public class Grammar2012 extends AbstractGrammar {
 	private HashMap<String, Entity> symbolmapStrObj = new HashMap<String, Entity>();
 	private HashMap<Entity, String> symbolmapObjStr = new HashMap<Entity, String>();
 	private MultiMap<String, Entities> grammarmap = new MultiMap<String, Entities>();
@@ -42,8 +43,8 @@ public class Grammar2012 {
 
 		key = new Entity(this, str);
 		if (key.toString() != str) {
-			LogUtils.e("Error! key.to_str() != line: " + key.toString() + " != "
-					+ str);
+			LogUtils.e("Error! key.to_str() != line: " + key.toString()
+					+ " != " + str);
 		}
 		addEntity(key);
 		return key;
@@ -202,7 +203,7 @@ public class Grammar2012 {
 		return newvalues;
 	}
 
-	private Entities parseInput(String input) {
+	private Entities parseInput(List<Word> words) {
 		Entities wordsI = new Entities();
 
 		// marker
@@ -212,28 +213,17 @@ public class Grammar2012 {
 			wordsI.add(obj);
 		}
 
-		// split by # or >
-		String[] words = input.split("[#>]");
-		for (String word : words) {
+		// for each word in the input sentence
+		for (Word word : words) {
 			// ignore invalid words
-			if (word.isEmpty() || word.equals("null")) {
+			if (word.getWord().isEmpty() || word.equals("null")) {
 				continue;
 			}
-
-			// split by | or <
-			String[] parts = word.split("[|<]");
-			if (parts.length != 2) {
-				LogUtils.e("Error! no or too many pipe characters in: \""
-						+ word + "\" from: \"" + input + "\"");
-				continue;
-			}
-
-			String partOfSpeech = parts[0].trim();
-			String text = parts[1].trim();
 
 			// construct objects
-			Entity obj = addEntity(new Entity(this, partOfSpeech));
-			obj.setText(text);
+			Entity obj = addEntity(new Entity(this, word.getTags()
+					.getGrammarType()));
+			obj.setText(word.getWord());
 			wordsI.add(obj);
 		}
 
@@ -411,7 +401,8 @@ public class Grammar2012 {
 						foundList.add(e); // /////////////////////////
 					}
 
-					Entity e = new Entity(this, replacement.toString(), foundList);
+					Entity e = new Entity(this, replacement.toString(),
+							foundList);
 					this.addEntity(e);
 					newList.add(e);
 					i = j - 1;
@@ -486,8 +477,8 @@ public class Grammar2012 {
 		for (Map.Entry<String, Entities> entry : grammarmap.multiEntrySet()) {
 
 			Entity first = s2o(entry.getKey());
-			grammarStr.append(first != null ? first.toString() : "#null").append(
-					" = ");
+			grammarStr.append(first != null ? first.toString() : "#null")
+					.append(" = ");
 
 			Entities value = entry.getValue();
 			for (Entity entity : value) {
@@ -505,7 +496,7 @@ public class Grammar2012 {
 		return grammarStr.toString();
 	}
 
-	public List<Entities> parse(String words) {
+	public List<Entities> parse(List<Word> words) {
 
 		LogUtils.i("========================================");
 		LogUtils.i("============  Grammar 2012  ============");
@@ -554,36 +545,23 @@ public class Grammar2012 {
 		return addEntity(modified);
 	}
 
-	public String printInput(String input) {
+	public static String printInput(List<Word> words) {
 		StringBuilder ss = new StringBuilder();
 
-		// split by # or >
-		String[] words = input.split("[#>]");
-		for (String word : words) {
+		// for each word
+		for (Word word : words) {
 			// ignore invalid words
-			if (word.isEmpty() || word.equals("null")) {
+			if (word.getWord().isEmpty() || word.equals("null")) {
 				continue;
 			}
-
-			// split by | or <
-			String[] parts = word.split("[|<]");
-			if (parts.length != 2) {
-				LogUtils.e("Error! no or too many pipe characters in: \""
-						+ word + "\" from: \"" + input + "\"");
-				continue;
-			}
-
-			String partOfSpeech = parts[0].trim();
-			String text = parts[1].trim();
-
-			ss.append("  - ").append(partOfSpeech).append(": '").append(text)
-					.append("'\n");
+			ss.append("  - ").append(word.getTags().getGrammarType())
+					.append(": '").append(word.getWord()).append("'\n");
 		}
 
 		return ss.toString();
 	}
 
-	public String printOutput(List<Entities> list) {
+	public static String printOutput(List<Entities> list) {
 		StringBuilder ss = new StringBuilder();
 
 		for (Entities output : list) {
@@ -600,7 +578,7 @@ public class Grammar2012 {
 		return ss.toString();
 	}
 
-	public String printPerl(List<Entities> list) {
+	public static String printPerl(List<Entities> list) {
 		StringBuilder ss = new StringBuilder();
 
 		for (Entities output : list) {
@@ -613,7 +591,7 @@ public class Grammar2012 {
 		return ss.toString();
 	}
 
-	public String printGraph(List<Entities> list) {
+	public static String printGraph(List<Entities> list) {
 		StringBuilder ss = new StringBuilder();
 		ss.append("digraph parsed {\n");
 
@@ -628,7 +606,7 @@ public class Grammar2012 {
 		return ss.toString();
 	}
 
-	public String printXml(List<Entities> list) {
+	public static String printXml(List<Entities> list) {
 		StringBuilder ss = new StringBuilder();
 
 		for (Entities output : list) {

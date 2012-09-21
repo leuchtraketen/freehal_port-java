@@ -2,6 +2,8 @@ package net.freehal.core.pos;
 
 public interface AbstractTagger {
 
-	public Tags getPartOfSpeech(String word);
+	public Tags getPartOfSpeech(final String word);
+	
+	public boolean isName(final String word);
 
 }

@@ -7,7 +7,7 @@ import net.freehal.core.grammar.typedefs.MutableInteger;
 
 public class XmlUtils {
 
-	public static String halxml_ordertags(String indata) {
+	public static String orderTags(String indata) {
 		StringBuilder predata = new StringBuilder();
 		int k = 0;
 		char num = 0;
@@ -46,7 +46,7 @@ public class XmlUtils {
 		return predata.toString();
 	}
 
-	public int halxml_readfacts(DatabaseImpl d, final String prestr,
+	public static int readXmlFacts(DatabaseImpl d, final String prestr,
 			final File filename, XmlFactReciever reciever) {
 
 		long start = System.currentTimeMillis() / 1000;

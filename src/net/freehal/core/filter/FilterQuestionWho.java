@@ -7,10 +7,6 @@ import net.freehal.core.xml.XmlText;
 
 public class FilterQuestionWho implements FactFilter {
 
-	static {
-		FactFilters.addFilter(new FilterQuestionWho());
-	}
-
 	@Override
 	public double filter(XmlFact f1, XmlFact f2, double match) {
 		LogUtils.d("matches (filter: question who): " + match);

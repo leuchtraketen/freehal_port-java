@@ -6,4 +6,8 @@ public interface FreehalConfigImpl {
 
 	public File getLanguageDirectory();
 
+	public String getLanguage();
+
+	public File getPath();
+
 }

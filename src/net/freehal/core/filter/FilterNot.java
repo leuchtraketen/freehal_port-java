@@ -5,10 +5,6 @@ import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlText;
 
 public class FilterNot implements FactFilter {
-	
-	static {
-		FactFilters.addFilter(new FilterNot());
-	}
 
 	@Override
 	public double filter(XmlFact f1, XmlFact f2, double match) {

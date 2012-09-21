@@ -6,10 +6,6 @@ import net.freehal.core.xml.XmlList;
 
 public class FilterQuestionExtra implements FactFilter {
 
-	static {
-		FactFilters.addFilter(new FilterQuestionExtra());
-	}
-
 	@Override
 	public double filter(XmlFact f1, XmlFact f2, double match) {
 		LogUtils.d("matches (filter: question what): " + match);

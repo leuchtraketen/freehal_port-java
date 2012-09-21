@@ -7,13 +7,24 @@ import net.freehal.core.xml.XmlFact;
 
 public class FactFilters implements FactFilter {
 	
-	static List<FactFilter> factfilters = null;
+	private static FactFilters singleton = new FactFilters();
 	
-	static synchronized void addFilter(FactFilter filter) {
+	private List<FactFilter> factfilters = null;
+	
+	private FactFilters() {
+		factfilters = new ArrayList<FactFilter>();
+	}
+	
+	public static FactFilters getInstance() {
+		return singleton;
+	}
+	
+	public FactFilters add(FactFilter filter) {
 		if (factfilters == null) {
 			factfilters = new ArrayList<FactFilter>();
 		}
 		factfilters.add(filter);
+		return this;
 	}
 
 	@Override

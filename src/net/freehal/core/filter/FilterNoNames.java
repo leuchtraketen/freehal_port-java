@@ -6,10 +6,6 @@ import net.freehal.core.xml.XmlText;
 
 public class FilterNoNames implements FactFilter {
 
-	static {
-		FactFilters.addFilter(new FilterNoNames());
-	}
-
 	@Override
 	public double filter(XmlFact f1, XmlFact f2, double match) {
 		LogUtils.d("matches (filter: no names): " + match);
