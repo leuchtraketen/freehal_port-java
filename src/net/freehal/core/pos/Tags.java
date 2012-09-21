@@ -57,6 +57,10 @@ public class Tags {
 				return "d-noun";
 		}
 		return "q";
+	}
 
+	@Override
+	public String toString() {
+		return "type=" + type + (genus.isEmpty() ? "" : "genus=" + genus);
 	}
 }

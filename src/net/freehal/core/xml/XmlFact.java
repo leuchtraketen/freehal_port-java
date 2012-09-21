@@ -1,8 +1,11 @@
 package net.freehal.core.xml;
 
 import java.io.File;
+import java.util.List;
 
+import net.freehal.core.filter.FactFilters;
 import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.Ranking;
 
 public class XmlFact extends XmlList {
 
@@ -56,12 +59,19 @@ public class XmlFact extends XmlList {
 
 		LogUtils.d("matches (before filterlist): " + matches);
 
-		// TODO
-		// boost::shared_ptr<filterlist> filters = filterlist::get();
-		// matches = (*filters)(make_pair(o1, o2), matches);
+		// fact filters!
+		matches = FactFilters.getInstance().filter(this, other, matches);
 
 		LogUtils.d("matches (after filterlist): " + matches);
 
 		return matches;
+	}
+
+	public Ranking<XmlFact> ranking(List<XmlFact> possibleAnswers) {
+		Ranking<XmlFact> rank = new Ranking<XmlFact>();
+		for (XmlFact other : possibleAnswers) {
+			rank.insert(other, this.isLike(other));
+		}
+		return rank;
 	}
 }

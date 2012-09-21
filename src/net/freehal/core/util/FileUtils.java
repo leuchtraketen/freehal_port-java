@@ -16,7 +16,7 @@ public class FileUtils {
 	}
 
 	public static List<String> readLines(File d, File f) {
-		return instance.readLines(new File(d.getAbsolutePath(), f.getAbsolutePath()));
+		return instance.readLines(new File(d.getAbsolutePath(), f.getPath()));
 	}
 
 	public static String read(File f) {
@@ -24,6 +24,6 @@ public class FileUtils {
 	}
 
 	public static String read(File d, File f) {
-		return instance.read(new File(d.getAbsolutePath(), f.getAbsolutePath()));
+		return instance.read(new File(d.getAbsolutePath(), f.getPath()));
 	}
 }

@@ -9,18 +9,42 @@ public class LogUtils {
 	}
 
 	public static void e(final String s) {
-		instance.e(s);
+		if (s.contains("\n")) {
+			for (final String line : s.split("[\r\n]+")) {
+				instance.e(line);
+			}
+		} else {
+			instance.e(s);
+		}
 	}
 
 	public static void w(final String s) {
-		instance.w(s);
+		if (s.contains("\n")) {
+			for (final String line : s.split("[\r\n]+")) {
+				instance.w(line);
+			}
+		} else {
+			instance.w(s);
+		}
 	}
 
 	public static void i(final String s) {
-		instance.i(s);
+		if (s.contains("\n")) {
+			for (final String line : s.split("[\r\n]+")) {
+				instance.i(line);
+			}
+		} else {
+			instance.i(s);
+		}
 	}
 
 	public static void d(final String s) {
-		instance.d(s);
+		if (s.contains("\n")) {
+			for (final String line : s.split("[\r\n]+")) {
+				instance.d(line);
+			}
+		} else {
+			instance.d(s);
+		}
 	}
 }

@@ -17,6 +17,7 @@ public class FileUtilsStandard implements FileUtilsImpl {
 
 	@Override
 	public List<String> readLines(File f) {
+		LogUtils.d("reading line by line: " + f.getAbsolutePath());
 		List<String> lines = new ArrayList<String>();
 		try {
 			FileInputStream in = new FileInputStream(f);
@@ -37,6 +38,7 @@ public class FileUtilsStandard implements FileUtilsImpl {
 
 	@Override
 	public String read(File f) {
+		LogUtils.d("reading whole file: " + f.getAbsolutePath());
 		BufferedReader theReader = null;
 		String returnString = null;
 

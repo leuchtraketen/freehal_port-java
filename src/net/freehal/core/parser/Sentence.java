@@ -49,11 +49,19 @@ public class Sentence {
 					int countFactsSoFar) {
 				sentence.setFact(xfact);
 			}
-			
+
 		});
 	}
 
 	protected void setFact(XmlFact xfact) {
 		this.xfact = xfact;
+	}
+
+	public XmlFact getFact() {
+		return xfact;
+	}
+
+	public boolean isValidFact() {
+		return xfact != null;
 	}
 }

@@ -26,7 +26,7 @@ public class Grammar2012 extends AbstractGrammar {
 	private HashMap<Entity, String> symbolmapObjStr = new HashMap<Entity, String>();
 	private MultiMap<String, Entities> grammarmap = new MultiMap<String, Entities>();
 	private List<MultiMap<String, Pair<Entity, Entities>>> reducemap = new ArrayList<MultiMap<String, Pair<Entity, Entities>>>();
-	private List<List<String>> reducekeysSorted;
+	private List<List<String>> reducekeysSorted = new ArrayList<List<String>>();
 
 	private Entity addEntity(Entity entity) {
 		symbolmapStrObj.put(entity.toString(), entity);
@@ -42,7 +42,7 @@ public class Grammar2012 extends AbstractGrammar {
 		}
 
 		key = new Entity(this, str);
-		if (key.toString() != str) {
+		if (!key.toString().equals(str)) {
 			LogUtils.e("Error! key.to_str() != line: " + key.toString()
 					+ " != " + str);
 		}
@@ -261,7 +261,8 @@ public class Grammar2012 extends AbstractGrammar {
 			wordsList = newWordsList;
 
 			for (Entities entities : wordsList.values()) {
-				if (entities.size() == 1 && entities.get(0).toKey() == "s-all") {
+				if (entities.size() == 1
+						&& entities.get(0).toKey().equals("s-all")) {
 
 					LogUtils.d(" !!! done: " + print(entities));
 					finalList.add(entities);
@@ -383,11 +384,11 @@ public class Grammar2012 extends AbstractGrammar {
 		boolean replaceDone = false;
 		Entities newList = new Entities();
 		for (int i = 0; i < vec.size(); ++i)
-			if (!replaceDone && vec.get(i).toKey() == find.get(0).toKey()) {
+			if (!replaceDone && vec.get(i).toKey().equals(find.get(0).toKey())) {
 				boolean found = true;
 				int f, j;
 				for (f = 1, j = i + 1; j < vec.size() && f < find.size(); ++f, ++j) {
-					if (vec.get(j).toKey() != find.get(f).toKey()) {
+					if (!vec.get(j).toKey().equals(find.get(f).toKey())) {
 						found = false;
 						break;
 					}
@@ -524,7 +525,7 @@ public class Grammar2012 extends AbstractGrammar {
 	}
 
 	public Entity s2o(String str) {
-		if (str == "null" || str.length() == 0) {
+		if (str.equals("null") || str.length() == 0) {
 			return null;
 		} else if (symbolmapStrObj.containsKey(str)) {
 			return symbolmapStrObj.get(str);

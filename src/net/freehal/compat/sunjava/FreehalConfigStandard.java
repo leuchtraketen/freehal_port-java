@@ -14,8 +14,9 @@ public class FreehalConfigStandard implements FreehalConfigImpl {
 		return language;
 	}
 
-	public void setLanguage(String language) {
+	public FreehalConfigStandard setLanguage(String language) {
 		this.language = language;
+		return this;
 	}
 
 	@Override
@@ -23,8 +24,9 @@ public class FreehalConfigStandard implements FreehalConfigImpl {
 		return path;
 	}
 
-	public void setPath(File path) {
+	public FreehalConfigStandard setPath(File path) {
 		this.path = path;
+		return this;
 	}
 
 	@Override

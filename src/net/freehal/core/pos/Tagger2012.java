@@ -4,12 +4,11 @@ public class Tagger2012 implements AbstractTagger {
 
 	@Override
 	public Tags getPartOfSpeech(String word) {
-		return null;
+		return new Tags("n", "", word);
 	}
 
 	@Override
 	public boolean isName(String word) {
-		// TODO Automatisch generierter Methodenstub
 		return false;
 	}
 

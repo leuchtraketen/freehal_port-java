@@ -23,6 +23,7 @@ public class Word {
 
 	public Word(String word, Tags tag) {
 		this.word = word;
+		this.tag = tag;
 	}
 
 	public boolean equals(Object o) {
@@ -110,5 +111,10 @@ public class Word {
 	private double matches(Word otherWord) {
 		return (this.word == otherWord.word || this.word.toLowerCase() == otherWord.word
 				.toLowerCase()) ? 1 : 0;
+	}
+	
+	@Override
+	public String toString() {
+		return word+"{"+tag+"}";
 	}
 }
