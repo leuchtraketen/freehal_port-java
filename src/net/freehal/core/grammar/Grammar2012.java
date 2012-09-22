@@ -296,7 +296,6 @@ public class Grammar2012 extends AbstractGrammar {
 		while (!found && ++order < reducemap.size()) {
 			// for each key
 			for (final String key : reducekeysSorted.get(order)) {
-				LogUtils.d("reducekeysSorted: "+key);
 				// does it match?
 				if (oldImpression.contains(key)) {
 					LogUtils.d("    found: '" + key + "' in '" + oldImpression
