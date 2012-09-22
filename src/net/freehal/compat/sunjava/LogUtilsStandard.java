@@ -12,7 +12,7 @@ public class LogUtilsStandard implements LogUtilsImpl {
 				.getClassName();
 		final String className = fullClassName.substring(fullClassName
 				.lastIndexOf(".") + 1);
-		final String sourceFile = className + ".java";
+		final String sourceFile = className;// + ".java";
 		@SuppressWarnings("unused")
 		final String methodName = Thread.currentThread().getStackTrace()[4]
 				.getMethodName();
@@ -23,7 +23,6 @@ public class LogUtilsStandard implements LogUtilsImpl {
 		int lengthLineNumber = ("" + lineNumber).length();
 
 		StringBuilder place = new StringBuilder();
-		place.append("(");
 
 		if (lengthSourceFile < maxLengthSourceFile)
 			place.append(sourceFile);
@@ -36,7 +35,6 @@ public class LogUtilsStandard implements LogUtilsImpl {
 
 		place.append(":");
 		place.append(lineNumber);
-		place.append(")");
 
 		for (int i = lengthSourceFile + lengthLineNumber; i <= maxLengthSourceFile
 				+ maxLengthLineNumber; ++i)
