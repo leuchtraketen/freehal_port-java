@@ -10,6 +10,7 @@ import net.freehal.compat.sunjava.LogUtilsStandard;
 import net.freehal.core.answer.AnswerProvider;
 import net.freehal.core.answer.AnswerProviders;
 import net.freehal.core.database.DatabaseAnswerProvider;
+import net.freehal.core.database.DiskDatabase;
 import net.freehal.core.database.FakeDatabase;
 import net.freehal.core.filter.FactFilters;
 import net.freehal.core.filter.FilterNoNames;
@@ -47,7 +48,7 @@ public class ShellTest {
 				.add(new FilterQuestionExtra());
 
 		AnswerProviders.getInstance().add(new PredefinedAnswerProvider())
-				.add(new DatabaseAnswerProvider(new FakeDatabase()))
+				.add(new DatabaseAnswerProvider(new DiskDatabase()))
 				.add(new FakeAnswerProvider());
 	}
 

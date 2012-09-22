@@ -61,6 +61,6 @@ public class Tags {
 
 	@Override
 	public String toString() {
-		return "type=" + type + (genus.isEmpty() ? "" : "genus=" + genus);
+		return "{type=" + type + (genus.isEmpty() ? "" : ",genus=" + genus)+"}";
 	}
 }

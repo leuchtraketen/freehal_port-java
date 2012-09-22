@@ -11,7 +11,7 @@ import net.freehal.core.xml.XmlFact;
 public class DatabaseAnswerProvider implements AnswerProvider {
 
 	private DatabaseImpl database;
-	
+
 	public DatabaseAnswerProvider(DatabaseImpl database) {
 		this.database = database;
 	}
@@ -21,7 +21,7 @@ public class DatabaseAnswerProvider implements AnswerProvider {
 		if (!s.isValidFact()) {
 			return null;
 		}
-		
+
 		XmlFact input = s.getFact();
 		List<XmlFact> possibleAnswers = database.findFacts(input);
 		Ranking<XmlFact> rank = input.ranking(possibleAnswers);
@@ -31,7 +31,11 @@ public class DatabaseAnswerProvider implements AnswerProvider {
 			}
 		}
 		XmlFact best = rank.getBestOne();
-		return best.printStr();
+
+		if (best != null)
+			return best.printStr();
+		else
+			return null;
 	}
 
 }

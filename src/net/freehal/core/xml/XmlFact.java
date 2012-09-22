@@ -3,6 +3,7 @@ package net.freehal.core.xml;
 import java.io.File;
 import java.util.List;
 
+import net.freehal.core.database.DatabaseImpl;
 import net.freehal.core.filter.FactFilters;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Ranking;
@@ -73,5 +74,10 @@ public class XmlFact extends XmlList {
 			rank.insert(other, this.isLike(other));
 		}
 		return rank;
+	}
+
+	public void insertSynonyms(DatabaseImpl database) {
+		// TODO Automatisch generierter Methodenstub
+		
 	}
 }

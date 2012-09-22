@@ -20,6 +20,10 @@ public class FreehalConfig {
 		return instance.getLanguageDirectory();
 	}
 
+	public static File getCacheDirectory() {
+		return instance.getCacheDirectory();
+	}
+
 	public static String getLanguage() {
 		return instance.getLanguage();
 	}

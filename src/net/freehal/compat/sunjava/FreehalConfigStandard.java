@@ -34,4 +34,9 @@ public class FreehalConfigStandard implements FreehalConfigImpl {
 		return new File(path, "lang_" + language + "/");
 	}
 
+	@Override
+	public File getCacheDirectory() {
+		return new File(path, "cache_" + language + "/");
+	}
+
 }

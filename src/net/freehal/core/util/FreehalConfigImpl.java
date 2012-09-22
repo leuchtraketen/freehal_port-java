@@ -10,4 +10,6 @@ public interface FreehalConfigImpl {
 
 	public File getPath();
 
+	public File getCacheDirectory();
+
 }

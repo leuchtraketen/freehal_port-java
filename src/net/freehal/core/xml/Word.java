@@ -109,12 +109,12 @@ public class Word {
 	}
 
 	private double matches(Word otherWord) {
-		return (this.word == otherWord.word || this.word.toLowerCase() == otherWord.word
-				.toLowerCase()) ? 1 : 0;
+		return (this.word.equals(otherWord.word) || this.word.toLowerCase().equals(otherWord.word
+				.toLowerCase())) ? 1 : 0;
 	}
 	
 	@Override
 	public String toString() {
-		return word+"{"+tag+"}";
+		return "{word=\""+word+"\",tags="+tag+"}";
 	}
 }

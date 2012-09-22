@@ -119,8 +119,7 @@ public class XmlList extends XmlObj {
 		return embedded;
 	}
 
-	int toggle(AbstractTagger tagger) {
-		// TODO
+	public int toggle(AbstractTagger tagger) {
 		return 0;
 	}
 
@@ -306,5 +305,10 @@ public class XmlList extends XmlObj {
 		if (this.getName() == "link_|" || this.getName() == "synonyms")
 			c /= embedded.size();
 		return c;
+	}
+	
+	@Override
+	public String toString() {
+		return printStr();
 	}
 }
