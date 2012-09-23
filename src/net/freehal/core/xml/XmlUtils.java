@@ -3,7 +3,7 @@ package net.freehal.core.xml;
 import java.io.File;
 
 import net.freehal.core.database.DatabaseImpl;
-import net.freehal.core.grammar.typedefs.MutableInteger;
+import net.freehal.core.typedefs.MutableInteger;
 
 public class XmlUtils {
 

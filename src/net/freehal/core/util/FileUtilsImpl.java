@@ -9,4 +9,8 @@ public interface FileUtilsImpl {
 
 	public String read(File f);
 
+	public void append(File f, String s);
+
+	public void write(File f, String s);
+
 }

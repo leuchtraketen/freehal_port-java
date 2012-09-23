@@ -6,8 +6,8 @@ import java.util.List;
 
 import net.freehal.core.database.DatabaseImpl;
 import net.freehal.core.grammar.Grammar2012;
-import net.freehal.core.grammar.typedefs.Entities;
 import net.freehal.core.pos.Tags;
+import net.freehal.core.typedefs.Entities;
 import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;

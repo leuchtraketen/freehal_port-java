@@ -26,4 +26,24 @@ public class FileUtils {
 	public static String read(File d, File f) {
 		return instance.read(new File(d.getAbsolutePath(), f.getPath()));
 	}
+
+	public static void append(File f,
+			String s) {
+		instance.append(f, s);
+	}
+
+	public static void append(File d, File f,
+			String s) {
+		instance.append(new File(d.getAbsolutePath(), f.getPath()), s);
+	}
+
+	public static void write(File f,
+			String s) {
+		instance.write(f, s);
+	}
+
+	public static void write(File d, File f,
+			String s) {
+		instance.write(new File(d.getAbsolutePath(), f.getPath()), s);
+	}
 }

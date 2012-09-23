@@ -1,10 +1,12 @@
 package net.freehal.compat.sunjava;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -72,4 +74,43 @@ public class FileUtilsStandard implements FileUtilsImpl {
 		return returnString;
 	}
 
+	@Override
+	public void append(File filename, String string) {
+		BufferedWriter bw = null;
+
+		try {
+			bw = new BufferedWriter(new FileWriter(filename, true));
+			bw.write(string);
+			bw.flush();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		} finally { // always close the file
+			if (bw != null)
+				try {
+					bw.close();
+				} catch (IOException ioe2) {
+					// just ignore it
+				}
+		} // end try/catch/finally
+	}
+
+	@Override
+	public void write(File filename, String string) {
+		BufferedWriter bw = null;
+
+		try {
+			bw = new BufferedWriter(new FileWriter(filename, false));
+			bw.write(string);
+			bw.flush();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		} finally { // always close the file
+			if (bw != null)
+				try {
+					bw.close();
+				} catch (IOException ioe2) {
+					// just ignore it
+				}
+		} // end try/catch/finally
+	}
 }
