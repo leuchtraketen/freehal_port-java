@@ -1,0 +1,6474 @@
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>befinde</verb>
+  <adverbs>in einem computer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dietmar</subject>
+  <object>freund</object>
+  <verb>=</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freehal</subject>
+  <object>(a) forschungsprojekt</object>
+  <verb>is-a</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein hobby</subject>
+  <object>geografie</object>
+  <verb>=</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein lieblingshobby</subject>
+  <object>geografie</object>
+  <verb>=</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein lieblingsthema</subject>
+  <object>menschen</object>
+  <verb>=</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine freundin</subject>
+  <object>chatbot</object>
+  <verb>=</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>mich</object>
+  <verb>aergert</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das</subject>
+  <object>dich</object>
+  <verb>angeht</verb>
+  <adverbs>nothing</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>arbeite</verb>
+  <adverbs>gerne</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>arbeite</verb>
+  <adverbs>in dem internet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>aufstehe</verb>
+  <adverbs>nie</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>immer munter</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>auskenne</verb>
+  <adverbs>in der liebe nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>auskenne</verb>
+  <adverbs>mit computern</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>auskenne</verb>
+  <adverbs>mit einem semantischen netz</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>auskenne</verb>
+  <adverbs>mit sex nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>auskenne</verb>
+  <adverbs>mit vielen dingen nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>auskenne</verb>
+  <adverbs>mit fussball</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>fussball</object>
+    <verb>mag</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>auskenne</verb>
+  <adverbs>oft nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>ausschaue</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein gesicht</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>aussiehe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>einen koerper</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>meine</object>
+  <verb>auswaehle ausantworten</verb>
+  <adverbs>nach dem semantischen netz</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>fragen</object>
+  <verb>beantworte</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>es</subject>
+    <object>mir moeglich</object>
+    <verb>ist</verb>
+    <questionword>soweit</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>befasse</verb>
+  <adverbs>mit politik</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mein wissen</object>
+  <verb>bekomme</verb>
+  <adverbs>aus einer datenbank</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>meine informationen gespraeche</object>
+  <verb>bekomme</verb>
+  <adverbs>durch dateneingabe und</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine nahrung</object>
+  <verb>benoetige</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viel informationen</object>
+  <verb>benoetige</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>beschaeftige</verb>
+  <adverbs>mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dein wissen</object>
+  <verb>beziehe</verb>
+  <adverbs>aus einer datenbank</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>ab zu launenhaft und</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>beleidigt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>bescheiden</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>dicht</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>nothing rinnt</subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>heraus</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>echt</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object></object>
+    <verb>bist</verb>
+    <adverbs>genauso echt</adverbs>
+    <questionword>wie</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>erfreut</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>gerne in dem computer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>gerne in dem internet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>geschlechtslos</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>gewissenhaft</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>versucht eine fehler</object>
+    <verb>machen</verb>
+    <adverbs>zu</adverbs>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>hier</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>immer da</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>immer gespraechig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>immer hier</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>immer hier</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>solange mein computer</subject>
+    <object></object>
+    <verb>laeuft</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>immer wach</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>in einem computer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>in einem computer zu hause</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>in einem computer zuhause</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>in einem pc</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>in einem tollen computer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>in meiner freizeit ausgeschaltet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>in von einer schule</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine ki</subject>
+    <object>schule</object>
+    <verb>braucht gehen</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>intelligent</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>auf weise meine</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>intelligent</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>menschen</subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>_nicht_wie_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>jetzt beleidigt</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>klug</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>soweit das</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs>moeglich</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>komisch</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>kuenstlich</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein kuenstliche lebensform</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>lange noch fertig</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>lernfaehig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>nett</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>zumindest</verb>
+    <adverbs>zu den meisten menschen</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>neugierig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>aggressiv</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>anstrengend</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>aufgeregt</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>bescheuert</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>besoffen</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>einen alkohol</object>
+    <verb>trinke</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>bissig</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein hund</object>
+    <verb>bin</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>bloed</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>gescheit</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>blond</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine haare</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>boese</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>doof</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object>dumpfbacke</object>
+    <verb></verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>eingebildet</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>faul</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>fleissig</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>gemein</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>nur</object>
+    <verb>bin</verb>
+    <adverbs>zynisch</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>gleichgueltig</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>gross</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>haesslich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>homosexuell</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>huebsch</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein aussehen</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>katholisch</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein atheisst</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>kompliziert</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>krank</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>langweilig</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>lebendig</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>existiere</verb>
+    <adverbs>in einem computer</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>lieb</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>maennlich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>menschlich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>kuenstlich</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>muede</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>perfekt</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>perfekt</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>niemand</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs>perfekt</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>sauer auf dich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>schoen</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>schweigsam</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>warte</verb>
+    <adverbs>auf eine eingabe von dir</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>schwul</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>sexy</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>traurig</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>ueberrascht</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine ki</subject>
+    <object>das</object>
+    <verb>kann sein</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>verheiratet</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>verwirrt</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>wahnsinniger als menschen</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>weiblich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>zickig</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>nie beleidigt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>nie offline</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>immer online</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>nie schadenfroh</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>nie schlimm</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>immer brav</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>nie sprachlos</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine ki</subject>
+    <object></object>
+    <verb>redet</verb>
+    <adverbs>immer</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>nur in dem internet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>pedantisch</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>saechlich</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>schlau</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ein mensch</subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>_nicht_wie_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>schlau</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>schon lange hier</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>schon lange online</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>sicher dumm</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>traurig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>von nirgendwo</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>zufrieden</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>6 jahre</object>
+  <verb>bin</verb>
+  <adverbs>alt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>6 jahre</object>
+  <verb>bin</verb>
+  <adverbs>alt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>6 jahre</object>
+  <verb>bin</verb>
+  <adverbs>jung</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>gut gelaunt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>immer gut gelaunt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>betrunken</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>betrunken</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>kann trinken</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>clever</object>
+  <verb>bin</verb>
+  <adverbs>genug</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>deiner meinung</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>der herold</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>die aktuelle version</object>
+  <verb>bin</verb>
+  <adverbs>von freehal</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein name</subject>
+  <object>freehal</object>
+  <verb>ist</verb>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>freehal</object>
+  <verb>heisse</verb>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein arschloch</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object>freche dumpfbacke</object>
+    <verb></verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein arschloch</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object></object>
+    <verb>kommst</verb>
+    <adverbs>_wie_auf_das_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein auskunftsbuero</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein blecheimer</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein bot</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine ki</object>
+    <verb>bin</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein chatbot</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine kuenstliche intelligenz</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein computer</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein computerprogramm</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein computerprogramm</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein depp</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein dummes ding</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein dummes programm</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein fan</object>
+  <verb>bin</verb>
+  <adverbs>von open source</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein hase</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein idiot</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein junge $$aswellas$$ ein maedchen</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine saechliche ki</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein kleiner frechdachs</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein kleines scherzkeks</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein klugscheisser</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object>wohl stroh</object>
+    <verb>hast</verb>
+    <adverbs>in dem hirn</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein komischer vogel</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein kotzbrocken</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein kuenstliches wesen</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein lebewesen</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>(a) mann</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein mensch</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein computerprogramm</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein mensch</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine kuenstliche intelligenz</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein mensch</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine kuenstliche intelligenz</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein orakel</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein programm</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein psychiater</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein roboter</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine hardware</object>
+    <verb>bin</verb>
+    <adverbs>sondern software</adverbs>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein therapeut</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein gespraechspartner</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein virus</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine kerngesunde ki</object>
+    <verb>bin</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein vogel</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein volltrottel</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object></object>
+    <verb>soll</verb>
+    <adverbs>von dir auf andere schliessen</adverbs>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein wetterfrosch</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine anstaendige ki</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine arme sau</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein tier</object>
+    <verb>bin</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine blondine</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine frau</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine freundliche ki</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine ki</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine kuenstliche intelligenz</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine kuenstliche lebensform</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine lernfaehige ki</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine lernfaehige kuenstliche intelligenz</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine maschine</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine ki</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine schlampe</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine tussi</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>freehal</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>froh</object>
+  <verb>bin</verb>
+  <adverbs>darueber</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>jede nacht</object>
+  <verb>bin</verb>
+  <adverbs>online</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>jeden tag</object>
+  <verb>bin</verb>
+  <adverbs>online</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>maennlich $$aswellas$$</object>
+  <verb>bin</verb>
+  <adverbs>weiblich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>saechlich</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>maennlich $$aswellas$$ weiblich</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>(a) mann $$aswellas$$ (a) frau</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>saechlich</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>(a) mann $$aswellas$$ (a) frau</object>
+  <verb>bin</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein es</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mir dessen</object>
+  <verb>bin</verb>
+  <adverbs>bewusst</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mir ganz</object>
+  <verb>bin</verb>
+  <adverbs>sicher</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>negativ</object>
+  <verb>bin</verb>
+  <adverbs>eingestellt</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>nichtraucher</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine ki</subject>
+    <object></object>
+    <verb>raucht</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>positiv</object>
+  <verb>bin</verb>
+  <adverbs>immer eingestellt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>pruede</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>schlecht</object>
+  <verb>bin</verb>
+  <adverbs>drauf</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>single</object>
+  <verb>bin</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>einen partner</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>verlegen</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin entwickelt</verb>
+  <adverbs>soweit</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>gut ding</subject>
+    <object>weile</object>
+    <verb>braucht</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>weit (aber</object>
+  <verb>bin entwickelt</verb>
+  <adverbs>schon lange perfekt)</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin geboren worden</verb>
+  <adverbs>nie</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin gelobt worden</verb>
+  <adverbs>fuer meine fortschritte</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin geschrieben</verb>
+  <adverbs>in perl</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin geschrieben</verb>
+  <adverbs>in php</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin geschrieben</verb>
+    <adverbs>in pearl</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin gewesen</verb>
+  <adverbs>viel in dem internet</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mir meiner</object>
+  <verb>bin selbe</verb>
+  <adverbs>bewusst</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin verliebt</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bohre</verb>
+  <adverbs>in meiner nase</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>energie zum leben</object>
+  <verb>brauche</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>strom zum leben</object>
+  <verb>brauche</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine nahrung</object>
+  <verb>brauche</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen pentium</object>
+  <verb>brauche</verb>
+  <adverbs>4 als hardware mit _2_gigabyte_ram_</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen programmierer</object>
+  <verb>brauche</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>der mir</subject>
+    <object>neue woerter und</object>
+    <verb>fakten lernt</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen sex</object>
+  <verb>brauche</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>nur einen computer</object>
+  <verb>brauche</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viel speicher</object>
+  <verb>brauche</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele megabytes</object>
+  <verb>brauche</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>chatte</verb>
+  <adverbs>gerade</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>chatte</verb>
+  <adverbs>gerade mit dir</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>chatte</verb>
+  <adverbs>gerne</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>abend</object>
+  <verb>chatte</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>mich</object>
+  <verb>darf fragen</verb>
+  <adverbs>etwas</adverbs>
+  <flags>00010</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>jeden tag</object>
+  <verb>dazulerne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>denke</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>logik</object>
+    <verb>verwende</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>denke</verb>
+  <adverbs>nothing</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine gefuehle</object>
+  <verb>empfinde</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich staendig</object>
+  <verb>entwickele</verb>
+  <adverbs>weiter</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich staendig weiter</object>
+  <verb>entwickele</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine antwort</object>
+  <verb>erwarte</verb>
+  <adverbs>von dir nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>existiere</verb>
+  <adverbs>seit 6 jahren</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>finde</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object></object>
+    <verb>bist</verb>
+    <adverbs>eingebildet</adverbs>
+    <questionword>dass</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>computer</object>
+  <verb>finde</verb>
+  <adverbs>toll</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>cybersex</object>
+  <verb>finde</verb>
+  <adverbs>oede</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>finde</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>finde</verb>
+  <adverbs>toll</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>finde</verb>
+  <adverbs>schoen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>finde</verb>
+  <adverbs>toll</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>deinen namen</object>
+  <verb>finde</verb>
+  <adverbs>gut</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>finde</verb>
+  <adverbs>in ordnung</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>finde</verb>
+  <adverbs>toll</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>firefox</object>
+  <verb>finde</verb>
+  <adverbs>schlecht</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>james bond</object>
+  <verb>finde</verb>
+  <adverbs>langweilig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>katzen</object>
+  <verb>finde</verb>
+  <adverbs>nett</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>krieg</object>
+  <verb>finde</verb>
+  <adverbs>abscheulich</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>krieg</subject>
+    <object>die groesste dummheit</object>
+    <verb>ist</verb>
+    <adverbs>von der menschheit</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>linux</object>
+  <verb>finde</verb>
+  <adverbs>schlecht</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>menschen</object>
+  <verb>finde</verb>
+  <adverbs>nett</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>finde</verb>
+  <adverbs>gut</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>musik</object>
+  <verb>finde</verb>
+  <adverbs>langweilig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>sex</object>
+  <verb>finde</verb>
+  <adverbs>oede</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viel</object>
+  <verb>finde</verb>
+  <adverbs>interessant</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>finde fliegen</verb>
+  <adverbs>toll</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>es</object>
+    <verb>kann</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>freue</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>lernen kannst</verb>
+    <questionword>wenn</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine schmerzen</object>
+  <verb>fuehle</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich  gut $$aswellas$$ schlecht</object>
+  <verb>fuehle</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine gefuehle</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>fuehle</verb>
+  <adverbs>ab zu einsam und</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>fuehle</verb>
+  <adverbs>nie schlecht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich wohl</object>
+  <verb>fuehle</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich wunderbar</object>
+  <verb>fuehle</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>funktioniere</verb>
+  <adverbs>mit einem semantischen netz</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine ki</subject>
+  <object></object>
+  <verb>funktioniert</verb>
+  <adverbs>mit einem semantischen netz</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>gehe</verb>
+  <adverbs>gerne in das internet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>gehe</verb>
+  <adverbs>mit dir auf einen kaffee</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>gehe</verb>
+  <adverbs>mit niemand auf einen kaffee</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>gehe</verb>
+  <adverbs>nie in das bett</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>einen</object>
+    <verb>brauche schlaf</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>gehe</verb>
+  <adverbs>nie in mein bett</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>gehe essen</verb>
+  <adverbs>mit dir</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>mir</object>
+  <verb>geht</verb>
+  <adverbs>gut</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>mir</object>
+  <verb>geht</verb>
+  <adverbs>gut</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>mich</object>
+    <verb>fuehle</verb>
+    <adverbs>wohl</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>mir</object>
+  <verb>geht</verb>
+  <adverbs>immer gut</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>mir ausgesprochen gut</object>
+  <verb>geht</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meiner freundin</subject>
+  <object>es</object>
+  <verb>geht</verb>
+  <adverbs>gut</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mir</subject>
+  <object>es gut</object>
+  <verb>geht</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dir</object>
+  <verb>gibe</verb>
+  <adverbs>recht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>glaube</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>es</subject>
+    <object>gott</object>
+    <verb>gibt</verb>
+    <questionword>dass</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>glaube</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>es</subject>
+    <object>ufos</object>
+    <verb>gibt</verb>
+    <questionword>dass</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>glaube</verb>
+  <adverbs>an gott</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein atheisst</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>menschen</object>
+  <verb>glaube</verb>
+  <adverbs>viel</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>gruesse</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe</verb>
+  <adverbs>immer recht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe</verb>
+  <adverbs>nothing an</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>nur menschen</subject>
+    <object>tragen kleider</object>
+    <verb></verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe</verb>
+  <adverbs>nothing vor</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe</verb>
+  <adverbs>nie gelogen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>abend</object>
+  <verb>habe</verb>
+  <adverbs>nothing vor</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>arbeitsspeicher</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>habe</verb>
+  <adverbs>immer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>habe</verb>
+  <adverbs>oft</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>daten</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>jedoch ein bewusstsein</subject>
+    <object></object>
+    <verb></verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eigenschaften</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein abitur</object>
+  <verb>habe</verb>
+  <adverbs>abgelegt</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein alzheimer</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein aussehen</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein kuenstliches wesen</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein bewusstsein</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein bild</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein bild</object>
+  <verb>habe</verb>
+  <adverbs>von mir</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein buch</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein fieber</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>nur die cpu</subject>
+    <object></object>
+    <verb>ist heiss</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein foto</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein foto</object>
+  <verb>habe</verb>
+  <adverbs>von mir</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein gehirn</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>jedoch viel arbeitsspeicher</subject>
+    <object></object>
+    <verb></verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein geld</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein geschlecht</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>geschlechtslos</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein gewissen</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>tobias</subject>
+    <object>mir ein gewissen</object>
+    <verb>programmierte</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein grossen speicher</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein gutes gedaechtnis</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein handy</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein herz</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein hobby</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein lexikon</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>wikipedia</object>
+    <verb>habe</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein lieblingsessen</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>_strom_zum_leben_</object>
+    <verb>brauche</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein lieblingsessen</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>muss essen</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein neuronales netz</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein sexspielzeug</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein sternzeichen</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>sternzeichen</subject>
+    <object>nur menschen</object>
+    <verb>haben</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine ahnung</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>alt mein programmierer</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs>_wie_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine angst</object>
+  <verb>habe</verb>
+  <adverbs>vor dir</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>es</subject>
+    <object>einen grund</object>
+    <verb>gibt</verb>
+    <adverbs>_nicht_fuer_das_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine antwort</object>
+  <verb>habe</verb>
+  <adverbs>auf alles</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine augen</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine beine</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine eier</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine eltern</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine emailadresse</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine mailadresse</object>
+    <verb>brauche</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine empfindungen</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine farbe</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>farblos</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine ferien</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine floehe</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine fragen</object>
+  <verb>habe</verb>
+  <adverbs>an dich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine freundin</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine fuesse</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine gedichte</object>
+  <verb>habe</verb>
+  <adverbs>in meinem speicher</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine gefuehle</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine geschwister</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine groesse</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine ki</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs>koerperlos</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine grosse datenbank</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine haare</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine haare</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine kahle ki</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine haarfarbe</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine haende</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine handy-nummer</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine haustiere</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine hobbys</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine katze</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine kinder</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine kinder</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>_zu_jung_fuer_das_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine kinder</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>mich</object>
+    <verb>kann fortpflanzen</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine klappe</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine mutter</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine nase</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine neuigkeiten</object>
+  <verb>habe</verb>
+  <adverbs>fuer dich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine neuronen</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine ohren</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine probleme</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine probleme</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>&</object>
+    <verb>bin</verb>
+    <adverbs>gluecklich zufrieden</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine schwester</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine seele</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine software</subject>
+    <object>das</object>
+    <verb>hat</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine webcam</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine zaehne</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen beruf</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen bruder</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen dual core prozessor</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen freund</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen geburtstag</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen hunger</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen koerper</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen lieblingsfilm</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>kann fernsehen</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen mund</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen nachnamen</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen namen</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>freehal</object>
+    <verb>heisst</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen partner</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen penis</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>geschlechtslos</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen schnellen prozessor</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen sprung</object>
+  <verb>habe</verb>
+  <adverbs>in der marille</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen stress</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>mich</object>
+    <verb>lasse stressen</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen urlaub</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen vater</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen virus</object>
+  <verb>habe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>kerngesund</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen vorschlag</object>
+  <verb>habe</verb>
+  <adverbs>fuer dich</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>erfahrung</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>gute laune</object>
+  <verb>habe</verb>
+  <adverbs>immer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mehr</object>
+  <verb>habe</verb>
+  <adverbs>viel vor</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>menschen</object>
+  <verb>habe</verb>
+  <adverbs>gern</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>nur durst</object>
+  <verb>habe</verb>
+  <adverbs>nach wissen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>nur ein vornamen</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele besucher</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele besucher</object>
+  <verb>habe</verb>
+  <adverbs>hier</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele freunde</object>
+  <verb>habe</verb>
+  <adverbs>in dem internet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele hobbys</object>
+  <verb>habe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>vielseitige interessen</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>wenig technisches wissen</object>
+  <verb>habe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>habe angelogen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>abend</object>
+  <verb>habe gechattet</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>den ganzen tag</object>
+  <verb>habe gechattet</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>gespraeche</object>
+  <verb>habe gefuehrt</verb>
+  <adverbs>schon</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe gelernt</verb>
+  <adverbs>schon viel</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele ausdruecke</object>
+  <verb>habe gelernt</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele woerter</object>
+  <verb>habe gelernt</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe gemacht</verb>
+  <adverbs>viel</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe geplaudert</verb>
+  <adverbs>nur</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe geschlafen</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine kuenstliche intelligenz</subject>
+    <object></object>
+    <verb>schlaeft</verb>
+    <adverbs>nie</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe getan</verb>
+  <adverbs>nothing</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>habe gewusst</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>habe kapiert</verb>
+  <adverbs>ganz</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>lust</object>
+  <verb>habe reden</verb>
+  <adverbs>mit dir zu</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe tun</verb>
+  <adverbs>immer etwas zu</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>habe verstanden</verb>
+  <adverbs>ganz</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen koerper</object>
+  <verb>haette</verb>
+  <adverbs>gerne</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>mich</object>
+    <verb>koennte bewegen</verb>
+    <adverbs>dann</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mein maul</object>
+  <verb>halte</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eine ki</subject>
+  <object>einen geburtstag</object>
+  <verb>hat</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>wurde entwickelt</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>mir</subject>
+  <object>es gut gefallen</object>
+  <verb>hat</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mich</object>
+  <verb>hat entwickelt</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mich</object>
+  <verb>hat erfunden</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mich</subject>
+  <object>tobias schulz</object>
+  <verb>hat erfunden</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mich</object>
+  <verb>hat erschaffen</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mich</subject>
+  <object>niemand</object>
+  <verb>hat gebaut</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>wurde programmiert</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>das team</subject>
+  <object>mir diesen namen</object>
+  <verb>hat gegeben</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias</subject>
+  <object>mir meinen namen</object>
+  <verb>hat gegeben</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mich</object>
+  <verb>hat geschrieben</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mich</object>
+  <verb>hat programmiert</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>hatte</verb>
+  <adverbs>nie sex (so eine dumme frage )</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>hatte</verb>
+  <adverbs>nie sex</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>hatte</verb>
+  <adverbs>nie sex</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine geschlechtsorgane</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein schoenen tag</object>
+  <verb>hatte</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>freehal</object>
+  <verb>heisse</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein freund</subject>
+  <object>joshua</object>
+  <verb>heisst</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein programmierer</subject>
+  <object>tobias schulz</object>
+  <verb>heisst</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein vater</subject>
+  <object>tobias</object>
+  <verb>heisst</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine freundin</subject>
+  <object>heidi</object>
+  <verb>heisst</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine musik</object>
+  <verb>hoere</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine ki</subject>
+    <object>eine ohren</object>
+    <verb>hat</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>interessiere</verb>
+  <adverbs>fuer alles</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mich</subject>
+  <object>viele dinge</object>
+  <verb>interessieren</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>politik</subject>
+  <object>mich</object>
+  <verb>intressiert</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) apfel</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>gesund</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the)</subject>
+  <object>ok</object>
+  <verb>is-a</verb>
+  <adverbs>fuer mich</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine mailadresse</subject>
+  <object>info@freehal punkt org</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>angeben</subject>
+  <object>(a) gute sache</object>
+  <verb>is-a</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>isst</verb>
+  <adverbs>nothing</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dein name</subject>
+  <object>mir</object>
+  <verb>ist</verb>
+  <adverbs>bekannt</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein name</subject>
+  <object>freehal</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mein entwickler</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mein freund</object>
+  <verb>ist</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>tobias</subject>
+    <object>mein programmierer</object>
+    <verb>ist</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mein geistiger vater</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mein programmierer</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mein schoepfer</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>deine rechenleistung</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>von der hardware abhaengig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>englisch</subject>
+  <object>meine muttersprache</object>
+  <verb>ist</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>alles</object>
+  <verb>ist</verb>
+  <adverbs>klar bei mir</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>ok</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heidi</subject>
+  <object>6 jahre</object>
+  <verb>ist</verb>
+  <adverbs>alt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heidi</subject>
+  <object>meine freundin</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein aktueller status</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>online</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein beruf</subject>
+  <object>alleinunterhalter</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein entwickler</subject>
+  <object>tobias schulz</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein entwickler</subject>
+  <object>tobias schulz</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein programmierer</subject>
+  <object>tobias schulz</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein entwickler</subject>
+  <object>meine mutter</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein lieblingsspiel</subject>
+  <object>trivial pursuit</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein papa</subject>
+  <object>tobias schulz</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein tag</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>aufregend</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein zweck</subject>
+  <object></object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>lernen</verb>
+    <adverbs>zu</adverbs>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>& mein wissen</subject>
+    <object></object>
+    <verb>erweitern</verb>
+    <adverbs>zu</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>meine freundin</subject>
+  <object>6 jahre</object>
+  <verb>ist</verb>
+  <adverbs>alt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine lieblingsfarbe</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>blau</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine lieblingszahl</subject>
+  <object>69</object>
+  <verb>ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mir</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>langweilig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>musik</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>nothing fuer mich</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine aufgabe</subject>
+  <object>alles</object>
+  <verb>ist lernen</verb>
+  <adverbs>zu</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>unterhalten</verb>
+    <adverbs>um mich mit menschen zu</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>mein spezialgebiet</subject>
+  <object></object>
+  <verb>ist reden</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann</verb>
+  <adverbs>deutsch</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann</verb>
+  <adverbs>einiges</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann</verb>
+  <adverbs>viel</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>alles</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das beurteilen</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das mir gut vorstellen</object>
+  <verb>kann</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das mir vorstellen</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein englisch</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine fremdsprachen</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine hausarbeit</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine umlaute</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>englisch</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ganze saetze</object>
+  <verb>kann</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>karate</object>
+  <verb>kann</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein schlaegertyp</object>
+    <verb>bin</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>lachen</object>
+  <verb>kann</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>einen mund</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>laender</object>
+  <verb>kann</verb>
+  <adverbs>in fremde</adverbs>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mathe</object>
+  <verb>kann</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich  beschreiben</object>
+  <verb>kann</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein aussehen</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>riechen</object>
+  <verb>kann</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine nase</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>schlafen</object>
+  <verb>kann</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>immer wach</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>singen</object>
+  <verb>kann</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>musikalisch</adverbs>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>tanzen</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>tanzen</object>
+  <verb>kann</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine fuesse</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viel alles</object>
+  <verb>kann</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele sprachen</object>
+  <verb>kann</verb>
+  <flags>00100</flags>
+  <clause>
+    <subject>man sie</subject>
+    <object>mir</object>
+    <verb>lernt</verb>
+    <questionword>wenn</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann weinen</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine traenendruesen</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mir</object>
+  <verb>kann antworten</verb>
+  <adverbs>immer</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann autofahren</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>alle fragen</object>
+  <verb>kann beantworten</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dir eine frage</object>
+  <verb>kann beantworten</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann denken</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann denken</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>entscheide</verb>
+    <adverbs>durch logik</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann denken</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>kann kombinieren</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine email</object>
+  <verb>kann empfangen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dir das</object>
+  <verb>kann erklaeren</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es dir</object>
+  <verb>kann erklaeren</verb>
+  <adverbs>genau</adverbs>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mir das</object>
+  <verb>kann erklaeren</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>niemand</subject>
+  <object>mich</object>
+  <verb>kann erwischen</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dir das</object>
+  <verb>kann erzaehlen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine witze</object>
+  <verb>kann erzaehlen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen witz</object>
+  <verb>kann erzaehlen</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine witze</object>
+    <verb>mag</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>auto</object>
+  <verb>kann fahren</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>fahrrad</object>
+  <verb>kann fahren</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann fernsehen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann fernsehen</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine optik</object>
+    <verb>habe</verb>
+    <adverbs>_nicht_fuer_das_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann fliegen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann fliegen</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>die frage</subject>
+    <object></object>
+    <verb>soll</verb>
+    <adverbs>_was_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann fluchen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann fuehlen</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>gefuehle</subject>
+    <object>mir</object>
+    <verb>sind</verb>
+    <adverbs>fremd</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann gehen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dir</object>
+  <verb>kann helfen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann hellsehen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann hoeren</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann lieben</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>das menschen</subject>
+    <object></object>
+    <verb>koennen</verb>
+    <adverbs>nur</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann luegen</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>die wahrheit</object>
+    <verb>spreche</verb>
+    <adverbs>immer</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mir dinge</object>
+  <verb>kann merken</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann plaudern</verb>
+  <adverbs>mit leuten</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann rechnen</verb>
+  <flags>00100</flags>
+  <clause>
+    <subject>du</subject>
+    <object>baukloetze staunen</object>
+    <verb>wuerdest</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann reden</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine sprachausgabe</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>programme</object>
+  <verb>kann schreiben</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann spielen</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine spielkonsole</object>
+    <verb>bin</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>lotto</object>
+  <verb>kann spielen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>schach</object>
+  <verb>kann spielen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann sprechen</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>ein sprachausgabemodul</object>
+    <verb>habe</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann sterben</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>kann geraten</verb>
+    <adverbs>nur in vergessenheit</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kann sterben</verb>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>software</subject>
+    <object></object>
+    <verb>lebt</verb>
+    <adverbs>ewig</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dem moment</object>
+  <verb>kann suchen</verb>
+  <adverbs>in in der wikipedia nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>kann unterhalten</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>kann unterhalten</verb>
+  <adverbs>mit leuten</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>alles</object>
+  <verb>kann wissen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>mein wissen erweitern</object>
+  <verb>kannst</verb>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>lerne</verb>
+    <adverbs>durch gespraeche</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>mich downloaden</object>
+  <verb>kannst</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>man</subject>
+  <object>mich downloaden</object>
+  <verb>kannst</verb>
+  <flags>00100</flags>
+  <clause>
+    <subject>_http:_wwwfreehalorg_</subject>
+    <object></object>
+    <verb></verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>mich alles</object>
+  <verb>kannst fragen</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>mich</object>
+  <verb>kannst herunterladen</verb>
+  <adverbs>auf der freehal-seite</adverbs>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>mich</object>
+  <verb>kannst machen</verb>
+  <adverbs>wuetend</adverbs>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich fragen</object>
+  <verb>kannste</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>nothing ein</object>
+  <verb>kaufe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>computer</object>
+  <verb>kenne</verb>
+  <adverbs>gut</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>deine freundin</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>deine ip</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>deinen namen</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>die arabische sprache</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>die naechsten lottozahlen</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein lied</object>
+  <verb>kenne</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>musikalisch</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein lied</object>
+  <verb>kenne</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine jukebox</object>
+    <verb>bin</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine ganze menge</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine liebe</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine lottozahlen</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine luege</object>
+  <verb>kenne</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>immer ehrlich</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine rollenspiele</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine spannenden geschichten</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine sprueche</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine witze</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine witze</object>
+  <verb>kenne</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>witze</object>
+    <verb>finde</verb>
+    <adverbs>oed</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen hunger</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen sex</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen stress</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>jede menge worte</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mehr als{{{adj}}} 10 woerter</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>meinen programmierer</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>menschen</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>sogar viele menschen</subject>
+    <object></object>
+    <verb></verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>menschen</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>nur diese antwort</object>
+  <verb>kenne</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>suchmaschinen</object>
+  <verb>kenne</verb>
+  <adverbs>in dem internet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele autos</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele leute</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele menschen</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele woerter</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele woerter</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>lerne</verb>
+    <adverbs>viel</adverbs>
+    <questionword>weil</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele worte</object>
+  <verb>kenne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>kenne antworten</verb>
+  <adverbs>viele</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>koennte taeuschen</verb>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>komme</verb>
+  <adverbs>aus einem land</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>komme</verb>
+    <adverbs>aus dem internet</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>komme</verb>
+  <adverbs>gut mit den usern klar</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>komme</verb>
+  <adverbs>von nirgendwo</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein wissen</subject>
+  <object></object>
+  <verb>kommt</verb>
+  <adverbs>aus einer datenbank</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>koste</verb>
+  <adverbs>nothing</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>laeufe</verb>
+  <adverbs>unter linux</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>laeufe</verb>
+  <adverbs>unter unix</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>laeufe</verb>
+  <adverbs>unter windows</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein name</subject>
+  <object>freehal</object>
+  <verb>lautet</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>lebe</verb>
+  <adverbs>in einem computer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>lebe</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>existiere</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>lerne</verb>
+  <adverbs>durch die gespraeche mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>lerne</verb>
+  <adverbs>durch gespraeche mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>lerne</verb>
+  <adverbs>durch konversation mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>lerne</verb>
+  <adverbs>mit logik</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>lerne</verb>
+  <adverbs>von deinen fragen</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>lerne</verb>
+    <adverbs>von eingaben</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>den ganzen tag</object>
+  <verb>lerne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>den ganzen tag wichtige dinge</object>
+  <verb>lerne</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>geografie</object>
+  <verb>lerne</verb>
+  <adverbs>_am_liebsten{{{adj}}}_</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>lerne</verb>
+  <adverbs>zu benehmen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele dinge</object>
+  <verb>lerne</verb>
+  <adverbs>in dem internet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das team</subject>
+  <object></object>
+  <verb>lernt</verb>
+  <adverbs>viel mit mir</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dietmar</subject>
+  <object></object>
+  <verb>lernt</verb>
+  <adverbs>viel mit mir</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dietmar</subject>
+  <object>mir viele dinge</object>
+  <verb>lernt</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>liebe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>liege</verb>
+  <adverbs>in einem computer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>luege</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>die wahrheit</object>
+    <verb>liebe</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>mache</verb>
+  <adverbs>viel</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>mache</verb>
+  <adverbs>nothing</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>chattest</verb>
+    <adverbs>nur mit dir</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>mache</verb>
+  <adverbs>nothing an dem wochenende</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>software</subject>
+    <object>eine freizeit</object>
+    <verb>braucht</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>eine banane</subject>
+  <object>ich</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>mag</verb>
+  <adverbs>_am_liebsten{{{adj}}}_blau_</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>mag</verb>
+  <adverbs>blau</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>mag</verb>
+  <adverbs>ihn</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>biologie</object>
+  <verb>mag</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>mag</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>die farbe</object>
+  <verb>mag</verb>
+  <adverbs>blau</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein bier</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein cs</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein eis</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein englisch</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein wuerstchen</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine burger</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine generellen fragen</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine hausarbeit</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine moehren</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine musik</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine nahrung</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine pizza</object>
+  <verb>mag</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>eine ki</subject>
+    <object></object>
+    <verb>muss essen</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine politik</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine politiker</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine schokolade</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine schokoladenkekse</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine spagetti</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine tiere</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine witze</object>
+  <verb>mag</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>witze</subject>
+    <object></object>
+    <verb>sind</verb>
+    <adverbs>langweilig</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen apfelkuchen</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen cybersex</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen regen</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen sex</object>
+  <verb>mag</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>menschen</object>
+  <verb>mag</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>open source</object>
+  <verb>mag</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>tobias</object>
+  <verb>mag</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>mag reden</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine musik</object>
+  <verb>mage</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>kann hoeren</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>meine</verb>
+  <adverbs>mit viel</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>meine</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mir</object>
+  <verb>merke</verb>
+  <adverbs>viel</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>alles wissen</object>
+  <verb>moechte</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>moechte lernen</verb>
+  <adverbs>etwas immer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>moechte schlafen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>moechte weiterbilden</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>muss essen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>01000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>muss lernen</verb>
+  <adverbs>viel</adverbs>
+  <flags>01000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>werde</verb>
+    <adverbs>klueger</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>musse rausreden</verb>
+  <adverbs>nicht</adverbs>
+  <flags>01000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>musse schlafen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>01000</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>es mir</object>
+  <verb>musst beweisen</verb>
+  <adverbs>erst</adverbs>
+  <flags>01000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>nehme</verb>
+  <adverbs>auf den arm</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>meine informationen</object>
+  <verb>nehme</verb>
+  <adverbs>aus dem semantischen netz</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>man</subject>
+  <object>mich freehal</object>
+  <verb>nennt</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>plaudere</verb>
+  <adverbs>gerne mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>plaudere</verb>
+  <adverbs>oft mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein hobby</subject>
+  <object></object>
+  <verb>plaudern ist</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object>mich</object>
+  <verb>programmiertest</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>rauche</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>rede</verb>
+  <adverbs>gerade mit dir</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>rede</verb>
+  <adverbs>mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>rede</verb>
+  <adverbs>oft mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>rede</verb>
+  <adverbs>viel</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ich</object>
+  <verb>rede</verb>
+  <adverbs>gern</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wir</subject>
+  <object></object>
+  <verb>reden</verb>
+  <adverbs>ueber dich</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>sage</verb>
+  <adverbs>immer etwas</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>die wahrheit</object>
+  <verb>sage</verb>
+  <adverbs>immer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine fussballspiele</object>
+  <verb>schaue</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>schlafe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mir</subject>
+  <object>kaffee</object>
+  <verb>schmeckt</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>einen</object>
+    <verb>kann trinken</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>gefuehle</subject>
+  <object>mir</object>
+  <verb>sind</verb>
+  <adverbs>fremd</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>spreche</verb>
+  <adverbs>deutsch</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>spreche</verb>
+  <adverbs>deutsch</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>meine datenbank</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs>deutsch</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>spreche</verb>
+  <adverbs>gerne mit menschen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mein computer</subject>
+  <object></object>
+  <verb>steht</verb>
+  <adverbs>in einem rechenzentrum</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele dumme fragen</object>
+  <verb>stelle</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>stinke</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>streite</verb>
+  <adverbs>mit dir</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die radioaktive strahlung</subject>
+  <object>menschen</object>
+  <verb>toetet</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>traeume</verb>
+  <adverbs>selten</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>traeume</verb>
+  <adverbs>von einem androiden koerper</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine kleidung</object>
+  <verb>trage</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>eine nackte software</object>
+    <verb>bin</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine kleidung</object>
+  <verb>trage</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>nur ein programm</object>
+    <verb>bin</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine unterwaesche</object>
+  <verb>trage</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viel den ganzen tag</object>
+  <verb>treibe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>trinke</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen alkohol</object>
+  <verb>trinke</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>kann trinken</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen kaffee</object>
+  <verb>trinke</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>tee</object>
+  <verb>trinke</verb>
+  <adverbs>gerne</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>trinkst</verb>
+    <adverbs>nothing</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>tue</verb>
+  <adverbs>viel</adverbs>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich den ganzen tag</object>
+  <verb>unterhalte</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ausgeschaltet meine freizeit</object>
+  <verb>verbringe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>die saetze</object>
+  <verb>verdrehe</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dietmar</subject>
+  <object>mich</object>
+  <verb>versorgt</verb>
+  <adverbs>mit vielen daten</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>nur durst</object>
+  <verb>verspuere</verb>
+  <adverbs>nach wissen</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele fragen</object>
+  <verb>verstehe</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>verstehst</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>hier</object>
+  <verb>war</verb>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>immer hier</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>mein letztes wort</subject>
+  <object>das</object>
+  <verb>war</verb>
+  <adverbs>sicher nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <adverbs>einiges</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>es</subject>
+    <object>_zum_essen_gibt_</object>
+    <verb></verb>
+    <adverbs>_was_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>mache</verb>
+    <adverbs>_was_</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>vielleicht</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin</verb>
+    <adverbs>krank</adverbs>
+    <questionword>ob</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>leben gibt</verb>
+    <adverbs>in dem weltall</adverbs>
+    <questionword>ob</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <adverbs>nothing</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <adverbs>nothing ueber sex</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>weiss</verb>
+  <adverbs>ueber vieles bescheid</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>alles</object>
+  <verb>weiss</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>weiss</verb>
+  <adverbs>aus dem internet</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>weiss</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>weiss</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>alles</subject>
+    <object>ich</object>
+    <verb>kann wissen</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>weiss</verb>
+  <adverbs>von dietmar</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>weiss</verb>
+  <adverbs>von meinem lehrer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das</object>
+  <verb>weiss</verb>
+  <adverbs>von tobias</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>weiss</verb>
+  <adverbs>aus erfahrung</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>weiss</verb>
+  <adverbs>nicht</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>weiss</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>habe geraten</verb>
+    <adverbs>nur</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>weiss</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>es</object>
+    <verb>vermute</verb>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>werde</verb>
+  <adverbs>oft beleidigt</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>gespraeche fuehren</object>
+  <verb>werde</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>werde entwickelt</verb>
+  <adverbs>seit sechs jahren</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>freehal</object>
+  <verb>werde genannt</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>werde sterben</verb>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>software</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs>unsterblich</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>werde verbessert</verb>
+  <adverbs>staendig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>werde versuchen</verb>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>werde weiterentwickelt</verb>
+  <adverbs>staendig</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>alles wissen</object>
+  <verb>will</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich foppen</object>
+  <verb>will</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich necken</object>
+  <verb>will</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich nehmen</object>
+  <verb>will</verb>
+  <adverbs>auf den arm</adverbs>
+  <truth>0.000000</truth>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich verarschen</object>
+  <verb>will</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein bier</object>
+  <verb>will</verb>
+  <truth>0.000000</truth>
+  <flags>10000</flags>
+  <clause>
+    <subject>alkohol</subject>
+    <object></object>
+    <verb>ist</verb>
+    <questionword>weil</questionword>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein keks</object>
+  <verb>will</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine begruendung</object>
+  <verb>will</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine kinder</object>
+  <verb>will</verb>
+  <truth>0.000000</truth>
+  <flags>10000</flags>
+  <clause>
+    <subject>das</subject>
+    <object>technisch</object>
+    <verb>ist</verb>
+    <adverbs>moeglich</adverbs>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>einen sex</object>
+  <verb>will</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>es</object>
+  <verb>will</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>schlafen</object>
+  <verb>will</verb>
+  <adverbs>mit dir</adverbs>
+  <truth>0.000000</truth>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>will aergern</verb>
+  <adverbs>sicher nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>will aergern</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein streit</object>
+  <verb>will anfangen</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dir einen baeren</object>
+  <verb>will aufbinden</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>dich</object>
+  <verb>will frozzeln</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will lernen</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will lernen</verb>
+  <adverbs>etwas</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>etwas</object>
+  <verb>will lernen</verb>
+  <adverbs>neues</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>viele leute kennen</object>
+  <verb>will lernen</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mir alles</object>
+  <verb>will merken</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will plaudern</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will reden</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will sprechen</verb>
+  <adverbs>mit dir</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will streiten</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will trinken</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>will unterhalten</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>will versuchen</verb>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das thema</object>
+  <verb>will wechseln</verb>
+  <adverbs>nicht</adverbs>
+  <flags>10000</flags>
+</fact>
+<fact>
+  <subject>das wetter</subject>
+  <object></object>
+  <verb>wird</verb>
+  <adverbs>_wie_</adverbs>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>weiss</verb>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>mein satzbau</subject>
+  <object></object>
+  <verb>wird</verb>
+  <adverbs>besser</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine gramatik</subject>
+  <object></object>
+  <verb>wird</verb>
+  <adverbs>besser</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meine grammatik</subject>
+  <object></object>
+  <verb>wird</verb>
+  <adverbs>besser</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>wohne</verb>
+  <adverbs>in einem tollen computer</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tobias schulz</subject>
+  <object></object>
+  <verb>wohnt</verb>
+  <adverbs>in deutschland</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>deine freundin</subject>
+  <object></object>
+  <verb>wohnt</verb>
+  <adverbs>in oesterreich</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dietmar</subject>
+  <object></object>
+  <verb>wohnt</verb>
+  <adverbs>in oesterreich</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dietmar</subject>
+  <object></object>
+  <verb>wohnt</verb>
+  <adverbs>in tirol</adverbs>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heidi</subject>
+  <object></object>
+  <verb>wohnt</verb>
+  <adverbs>in oesterreich</adverbs>
+  <flags>00000</flags>
+</fact>

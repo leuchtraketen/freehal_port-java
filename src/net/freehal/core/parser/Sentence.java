@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.freehal.core.database.DatabaseImpl;
 import net.freehal.core.grammar.Grammar2012;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.typedefs.Entities;
@@ -46,14 +45,14 @@ public class Sentence {
 		LogUtils.d("xml parsing string:");
 		LogUtils.d(xmlPre);
 		final Sentence sentence = this;
-		XmlUtils.readXmlFacts(null, xmlPre, null, new XmlFactReciever() {
+		XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
 
 			@Override
-			public void useXmlFact(DatabaseImpl d, XmlFact xfact,
-					int countFacts, long start, File filename,
-					int countFactsSoFar) {
+			public void useXmlFact(XmlFact xfact, int countFacts, long start,
+					File filename, int countFactsSoFar) {
+				xfact.tag(FreehalConfig.getTagger());
 				sentence.setFact(xfact);
-				LogUtils.i("found fact: "+xfact);
+				LogUtils.i("found fact: " + xfact);
 			}
 
 		});

@@ -5,6 +5,7 @@ import java.util.List;
 
 import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.Tags;
+import net.freehal.core.util.LogUtils;
 
 public abstract class XmlObj {
 
@@ -33,7 +34,7 @@ public abstract class XmlObj {
 		return printXml(0, 0);
 	}
 
-	public String printXml(int level, int secondlevel) {
+	protected String printXml(int level, int secondlevel) {
 		return "";
 	}
 
@@ -45,7 +46,7 @@ public abstract class XmlObj {
 		return "";
 	}
 
-	public boolean prepareWords() {
+	protected boolean prepareWords() {
 		if (isCachedWords)
 			return false;
 		cacheWords.clear();
@@ -53,13 +54,17 @@ public abstract class XmlObj {
 		return true;
 	}
 
-	public boolean prepareTags(AbstractTagger tagger) {
+	protected boolean prepareTags(AbstractTagger tagger) {
 		if (isCachedTags)
 			return false;
 
 		prepareWords();
 		isCachedTags = (tagger != null);
 		return (tagger != null);
+	}
+
+	public void tag(AbstractTagger tagger) {
+		prepareTags(tagger);
 	}
 
 	public List<Word> getWords() {
@@ -80,14 +85,14 @@ public abstract class XmlObj {
 	public void resetCache() {
 		isCachedWords = false;
 		isCachedTags = false;
-		cacheWords = null;
+		cacheWords = new ArrayList<Word>();
 	}
 
-	abstract public double isLike(XmlObj other);
+	public abstract double isLike(XmlObj other);
 
-	abstract double matches(XmlObj other);
+	public abstract double matches(XmlObj other);
 
-	abstract public double countWords();
+	public abstract double countWords();
 
 	public double countTags(Tags tags) {
 		List<Word> words = this.getWords();
@@ -101,5 +106,22 @@ public abstract class XmlObj {
 		}
 
 		return (double) amount;
+	}
+
+	public abstract boolean toggle(AbstractTagger tagger);
+
+	@Override
+	public abstract String toString();
+
+	@Override
+	public int hashCode() {
+		return hashString().hashCode();
+	}
+	
+	protected abstract String hashString();
+
+	@Override
+	public boolean equals(Object other) {
+		return this.hashCode() == other.hashCode();
 	}
 }

@@ -1,4 +1,4 @@
-package net.freehal.core.grammar.typedefs;
+package net.freehal.core.typedefs;
 
 import java.util.ArrayList;
 

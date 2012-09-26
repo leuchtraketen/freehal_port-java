@@ -1,8 +1,11 @@
 package net.freehal.core.xml;
 
+import java.util.Iterator;
 import java.util.List;
 
+import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.Tags;
+import net.freehal.core.util.LogUtils;
 
 public class Word {
 
@@ -12,24 +15,41 @@ public class Word {
 	public Word() {
 	}
 
-	public Word(String word) {
-		this.word = word;
+	public Word(String word, Tags tag) {
+		init(null, word, tag);
 	}
 
 	public Word(Word word) {
-		this.word = word.word;
-		this.tag = word.tag;
+		init(word, null, null);
 	}
 
-	public Word(String word, Tags tag) {
-		this.word = word;
-		this.tag = tag;
+	public Word(Word word, String wordStr, Tags tag) {
+		init(word, wordStr, tag);
+	}
+
+	private void init(Word word, String wordStr, Tags tag) {
+		if (word != null) {
+			this.word = word.word;
+			this.tag = word.tag;
+		}
+		if (wordStr != null)
+			this.word = wordStr;
+		if (tag != null)
+			this.tag = tag;
+		
+		if (this.word.contains("{word="))
+			throw new IllegalArgumentException(
+					"A toString()'ed Word object is going to "
+							+ "be set as a String to a Word object");
+	}
+
+	public void set(Word newWord) {
+		init(newWord, null, null);
 	}
 
 	public boolean equals(Object o) {
 		if (o instanceof Word) {
-			return (this.word.equals(((Word) o).word) && this.tag
-					.equals(((Word) o).tag));
+			return (this.word.equals(((Word) o).word));
 		} else if (o instanceof String) {
 			return (this.word.equals((String) o));
 		} else {
@@ -43,6 +63,10 @@ public class Word {
 
 	public void setTags(Tags tag) {
 		this.tag = tag;
+	}
+
+	public void setTags(AbstractTagger tagger) {
+		this.tag = tagger.getPartOfSpeech(word);
 	}
 
 	public String getWord() {
@@ -70,10 +94,15 @@ public class Word {
 
 		for (Word otherWord : otherWords) {
 			double matches = this.isLike(otherWord);
+			LogUtils.d("---- compare: " + this.toString() + " isLike "
+					+ otherWord + " = " + matches);
 			if (matches > 0)
 				return matches * (3.0 * otherWords.size() + 1) / 4.0
 						/ otherWords.size();
 		}
+
+		LogUtils.d("---- compare: " + this.toString() + " isLike "
+				+ other.printStr() + " = " + 0);
 
 		return 0;
 	}
@@ -109,12 +138,24 @@ public class Word {
 	}
 
 	private double matches(Word otherWord) {
-		return (this.word.equals(otherWord.word) || this.word.toLowerCase().equals(otherWord.word
-				.toLowerCase())) ? 1 : 0;
+		return (this.word.equals(otherWord.word) || this.word.toLowerCase()
+				.equals(otherWord.word.toLowerCase())) ? 1 : 0;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "{word=\""+word+"\",tags="+tag+"}";
+		return "{word=\"" + word + "\",tags=" + tag + "}";
+	}
+
+	public static String join(String delimiter, List<Word> words) {
+		if (words == null)
+			return "";
+		Iterator<Word> iter = words.iterator();
+		StringBuilder builder = new StringBuilder();
+		builder.append(iter.next().getWord());
+		while (iter.hasNext()) {
+			builder.append(delimiter).append(iter.next().getWord());
+		}
+		return builder.toString();
 	}
 }

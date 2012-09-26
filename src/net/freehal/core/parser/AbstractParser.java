@@ -11,7 +11,9 @@ public abstract class AbstractParser {
 		String[] splittedInput = cleanInput(rawInput).split("[@]+");
 		for (String i : splittedInput) {
 			i = extendInput(simplifyInput(i));
-			sentences.add(new Sentence(this, i));
+			if (i != null) {
+				sentences.add(new Sentence(this, i));
+			}
 		}
 	}
 

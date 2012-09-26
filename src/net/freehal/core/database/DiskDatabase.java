@@ -1,12 +1,16 @@
 package net.freehal.core.database;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.Mutable;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlFactReciever;
@@ -15,7 +19,7 @@ import net.freehal.core.xml.XmlUtils;
 public class DiskDatabase implements DatabaseImpl {
 
 	@Override
-	public List<XmlFact> findFacts(XmlFact xfact) {
+	public Set<XmlFact> findFacts(XmlFact xfact) {
 		LogUtils.i("find by fact: " + xfact);
 
 		xfact.insertSynonyms(this);
@@ -33,10 +37,10 @@ public class DiskDatabase implements DatabaseImpl {
 	}
 
 	@Override
-	public List<XmlFact> findFacts(List<Word> words) {
+	public Set<XmlFact> findFacts(List<Word> words) {
 		LogUtils.i("find by words: " + words);
 
-		List<XmlFact> found = new ArrayList<XmlFact>();
+		Set<XmlFact> found = new HashSet<XmlFact>();
 		for (Word w : words) {
 			found.addAll(findFacts(w));
 		}
@@ -47,24 +51,24 @@ public class DiskDatabase implements DatabaseImpl {
 	}
 
 	@Override
-	public List<XmlFact> findFacts(Word word) {
+	public Set<XmlFact> findFacts(Word word) {
 		LogUtils.i("find by word: " + word);
 
 		return findFacts(new Key(word));
 	}
 
-	private List<XmlFact> findFacts(Key key) {
+	private Set<XmlFact> findFacts(Key key) {
 		LogUtils.i("find by key: " + key);
 
 		File databaseFile = getFile("index", key, null);
 
-		List<XmlFact> found = findFacts(databaseFile);
+		Set<XmlFact> found = findFacts(databaseFile);
 
 		return found;
 	}
 
-	private List<XmlFact> findFacts(File databaseFile) {
-		final List<XmlFact> list = new ArrayList<XmlFact>();
+	private Set<XmlFact> findFacts(File databaseFile) {
+		final Set<XmlFact> list = new HashSet<XmlFact>();
 
 		if (databaseFile.isDirectory()) {
 			LogUtils.i("find in directory: " + databaseFile);
@@ -81,20 +85,15 @@ public class DiskDatabase implements DatabaseImpl {
 			LogUtils.i("find in file: " + databaseFile);
 
 			final String xmlInput = FileUtils.read(databaseFile);
-			LogUtils.d("database file:");
-			LogUtils.d(xmlInput);
 			final String xmlPre = XmlUtils.orderTags(xmlInput);
-			LogUtils.d("xml parsing string:");
-			LogUtils.d(xmlPre);
 
-			XmlUtils.readXmlFacts(null, xmlPre, null, new XmlFactReciever() {
+			XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
 				@Override
-				public void useXmlFact(DatabaseImpl d, XmlFact xfact,
-						int countFacts, long start, File filename,
-						int countFactsSoFar) {
+				public void useXmlFact(XmlFact xfact, int countFacts,
+						long start, File filename, int countFactsSoFar) {
 
 					list.add(xfact);
-					LogUtils.i("found fact: " + xfact);
+					LogUtils.d("found fact: " + xfact);
 				}
 			});
 		}
@@ -117,6 +116,75 @@ public class DiskDatabase implements DatabaseImpl {
 		else
 			return new File(directory.getPath(), filename.getPath());
 	}
+
+	@Override
+	public void updateCache() {
+		updateCache(new File(""));
+	}
+
+	@Override
+	public void updateCache(File databaseFile) {
+		if (!databaseFile.isAbsolute()) {
+			databaseFile = new File(FreehalConfig.getLanguageDirectory()
+					.getPath(), databaseFile.getPath());
+		}
+		LogUtils.i("update cache for this: " + databaseFile);
+
+		if (databaseFile.isDirectory()) {
+			LogUtils.i("update cache for this directory: " + databaseFile);
+
+			File[] files = databaseFile.listFiles();
+			for (File file : files) {
+				if (file.isFile() && file.getName().endsWith(".xml")) {
+					this.updateCache(file);
+				}
+			}
+		}
+
+		else if (databaseFile.isFile()) {
+			LogUtils.i("update cache for this file: " + databaseFile);
+
+			final String xmlInput = FileUtils.read(databaseFile);
+			final String xmlPre = XmlUtils.orderTags(xmlInput);
+
+			final Mutable<Map<File, Set<XmlFact>>> cache = new Mutable<Map<File, Set<XmlFact>>>(
+					new HashMap<File, Set<XmlFact>>());
+
+			XmlUtils.readXmlFacts(xmlPre, databaseFile, new XmlFactReciever() {
+				@Override
+				public void useXmlFact(XmlFact xfact, int countFacts,
+						long start, File filename, int countFactsSoFar) {
+
+					updateCache(xfact, cache);
+				}
+			});
+
+			for (File cacheFile : cache.get().keySet()) {
+				StringBuilder content = new StringBuilder();
+				for (XmlFact xfact : cache.get().get(cacheFile)) {
+					content.append(xfact.printXml());
+				}
+				LogUtils.d("write cache file : " + cacheFile);
+
+				FileUtils.write(cacheFile, content.toString());
+			}
+		}
+	}
+
+	protected void updateCache(XmlFact xfact,
+			Mutable<Map<File, Set<XmlFact>>> cache) {
+		LogUtils.d("update cache for this fact: " + xfact.printText());
+
+		List<Word> words = xfact.getWords();
+		for (Word w : words) {
+			File cacheFile = getFile("index", new Key(w), new File(xfact
+					.getFilename().getName()));
+			if (!cache.get().containsKey(cacheFile)) {
+				cache.get().put(cacheFile, new HashSet<XmlFact>());
+			}
+			cache.get().get(cacheFile).add(xfact);
+		}
+	}
 }
 
 class Key {
@@ -130,7 +198,7 @@ class Key {
 	}
 
 	public Key(String word) {
-		this.word = new Word(word);
+		this.word = new Word(word, null);
 		init();
 	}
 

@@ -2,7 +2,6 @@ package net.freehal.core.xml;
 
 import java.io.File;
 
-import net.freehal.core.database.DatabaseImpl;
 import net.freehal.core.typedefs.MutableInteger;
 
 public class XmlUtils {
@@ -46,7 +45,7 @@ public class XmlUtils {
 		return predata.toString();
 	}
 
-	public static int readXmlFacts(DatabaseImpl d, final String prestr,
+	public static int readXmlFacts(final String prestr,
 			final File filename, XmlFactReciever reciever) {
 
 		long start = System.currentTimeMillis() / 1000;
@@ -72,9 +71,11 @@ public class XmlUtils {
 					++i;
 					MutableInteger j = new MutableInteger(i);
 					XmlFact xfact = XmlUtils.readXmlFact(lines, j);
+					if (filename != null)
+						xfact.setFilename(filename);
 					i = j.get();
 
-					reciever.useXmlFact(d, xfact, countFacts, start, filename,
+					reciever.useXmlFact(xfact, countFacts, start, filename,
 							countFactsSoFar);
 					++countFactsSoFar;
 				}

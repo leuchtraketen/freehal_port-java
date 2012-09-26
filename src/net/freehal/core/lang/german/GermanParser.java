@@ -1,8 +1,9 @@
-package net.freehal.core.parser;
+package net.freehal.core.lang.german;
 
 import java.io.File;
 import java.util.List;
 
+import net.freehal.core.parser.AbstractParser;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
@@ -1557,6 +1558,6 @@ public class GermanParser extends AbstractParser {
 
 	@Override
 	protected String extendInput(String str) {
-		return null;
+		return str;
 	}
 }

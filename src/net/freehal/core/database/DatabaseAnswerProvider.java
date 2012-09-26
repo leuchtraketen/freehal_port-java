@@ -1,6 +1,6 @@
 package net.freehal.core.database;
 
-import java.util.List;
+import java.util.Set;
 
 import net.freehal.core.answer.AnswerProvider;
 import net.freehal.core.parser.Sentence;
@@ -23,7 +23,7 @@ public class DatabaseAnswerProvider implements AnswerProvider {
 		}
 
 		XmlFact input = s.getFact();
-		List<XmlFact> possibleAnswers = database.findFacts(input);
+		Set<XmlFact> possibleAnswers = database.findFacts(input);
 		Ranking<XmlFact> rank = input.ranking(possibleAnswers);
 		for (int i = 0; i < rank.size(); ++i) {
 			for (XmlFact xfact : rank.get(i)) {

@@ -10,4 +10,6 @@ public interface LogUtilsImpl {
 
 	public void d(String e);
 
+	public void flush();
+
 }

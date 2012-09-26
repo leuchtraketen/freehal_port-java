@@ -14,9 +14,10 @@ public class StringUtils {
 		if (s == null)
 			return "";
 		Iterator<String> iter = s.iterator();
-		StringBuilder builder = new StringBuilder(iter.next());
+		StringBuilder builder = new StringBuilder();
+		builder.append(iter.next().toString());
 		while (iter.hasNext()) {
-			builder.append(delimiter).append(iter.next());
+			builder.append(delimiter).append(iter.next().toString());
 		}
 		return builder.toString();
 	}
@@ -27,5 +28,10 @@ public class StringUtils {
 
 	public static String ucfirst(String string) {
 		return string.substring(0, 1).toUpperCase()+string.substring(1);
+	}
+
+	public static String toAscii(String wordString) {
+		// TODO Automatisch generierter Methodenstub
+		return wordString;
 	}
 }

@@ -79,6 +79,11 @@ public class FileUtilsStandard implements FileUtilsImpl {
 		BufferedWriter bw = null;
 
 		try {
+			File parent = filename.getParentFile();
+			if (!parent.exists()) {
+				parent.mkdirs();
+			}
+
 			bw = new BufferedWriter(new FileWriter(filename, true));
 			bw.write(string);
 			bw.flush();
@@ -99,11 +104,18 @@ public class FileUtilsStandard implements FileUtilsImpl {
 		BufferedWriter bw = null;
 
 		try {
+			File parent = filename.getParentFile();
+			if (!parent.exists()) {
+				parent.mkdirs();
+			}
+
 			bw = new BufferedWriter(new FileWriter(filename, false));
 			bw.write(string);
 			bw.flush();
-		} catch (IOException ioe) {
-			ioe.printStackTrace();
+		} catch (FileNotFoundException e) {
+
+		} catch (IOException e) {
+			e.printStackTrace();
 		} finally { // always close the file
 			if (bw != null)
 				try {

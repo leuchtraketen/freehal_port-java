@@ -31,12 +31,12 @@ public class FreehalConfigStandard implements FreehalConfigImpl {
 
 	@Override
 	public File getLanguageDirectory() {
-		return new File(path, "lang_" + language + "/");
+		return new File(path, "lang_" + language + "/").getAbsoluteFile();
 	}
 
 	@Override
 	public File getCacheDirectory() {
-		return new File(path, "cache_" + language + "/");
+		return new File(path, "cache_" + language + "/").getAbsoluteFile();
 	}
 
 }

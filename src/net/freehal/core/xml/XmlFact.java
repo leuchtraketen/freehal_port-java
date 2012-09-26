@@ -1,7 +1,6 @@
 package net.freehal.core.xml;
 
 import java.io.File;
-import java.util.List;
 
 import net.freehal.core.database.DatabaseImpl;
 import net.freehal.core.filter.FactFilters;
@@ -68,7 +67,7 @@ public class XmlFact extends XmlList {
 		return matches;
 	}
 
-	public Ranking<XmlFact> ranking(List<XmlFact> possibleAnswers) {
+	public Ranking<XmlFact> ranking(Iterable<XmlFact> possibleAnswers) {
 		Ranking<XmlFact> rank = new Ranking<XmlFact>();
 		for (XmlFact other : possibleAnswers) {
 			rank.insert(other, this.isLike(other));
@@ -77,7 +76,6 @@ public class XmlFact extends XmlList {
 	}
 
 	public void insertSynonyms(DatabaseImpl database) {
-		// TODO Automatisch generierter Methodenstub
 		
 	}
 }

@@ -6,7 +6,7 @@ import net.freehal.core.database.DatabaseImpl;
 
 public interface XmlFactReciever {
 
-	public void useXmlFact(DatabaseImpl d, XmlFact xfact, int countFacts,
+	public void useXmlFact(XmlFact xfact, int countFacts,
 			long start, File filename, int countFactsSoFar);
 
 }

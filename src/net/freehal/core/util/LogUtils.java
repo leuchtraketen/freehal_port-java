@@ -8,7 +8,8 @@ public class LogUtils {
 		LogUtils.instance = instance;
 	}
 
-	public static void e(final String s) {
+	public static void e(final Object obj) {
+		final String s = obj.toString();
 		if (s.contains("\n")) {
 			for (final String line : s.split("[\r\n]+")) {
 				instance.e(line);
@@ -18,7 +19,8 @@ public class LogUtils {
 		}
 	}
 
-	public static void w(final String s) {
+	public static void w(final Object obj) {
+		final String s = obj.toString();
 		if (s.contains("\n")) {
 			for (final String line : s.split("[\r\n]+")) {
 				instance.w(line);
@@ -28,7 +30,8 @@ public class LogUtils {
 		}
 	}
 
-	public static void i(final String s) {
+	public static void i(final Object obj) {
+		final String s = obj.toString();
 		if (s.contains("\n")) {
 			for (final String line : s.split("[\r\n]+")) {
 				instance.i(line);
@@ -38,7 +41,8 @@ public class LogUtils {
 		}
 	}
 
-	public static void d(final String s) {
+	public static void d(final Object obj) {
+		final String s = obj.toString();
 		if (s.contains("\n")) {
 			for (final String line : s.split("[\r\n]+")) {
 				instance.d(line);
@@ -46,5 +50,9 @@ public class LogUtils {
 		} else {
 			instance.d(s);
 		}
+	}
+
+	public static void flush() {
+		instance.flush();
 	}
 }

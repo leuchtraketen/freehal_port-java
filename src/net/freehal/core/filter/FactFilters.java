@@ -3,6 +3,7 @@ package net.freehal.core.filter;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.freehal.core.util.LogUtils;
 import net.freehal.core.xml.XmlFact;
 
 public class FactFilters implements FactFilter {
@@ -29,6 +30,7 @@ public class FactFilters implements FactFilter {
 
 	@Override
 	public double filter(XmlFact f1, XmlFact f2, double match) {
+		LogUtils.d( "fact filter: compare " + f1 + " and " + f2);
 		for (FactFilter filter : factfilters) {
 			match = filter.filter(f1, f2, match);
 		}

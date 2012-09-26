@@ -1,8 +1,10 @@
-package net.freehal.core.parser;
+package net.freehal.core.lang.english;
 
-public class NullParser extends AbstractParser {
+import net.freehal.core.parser.AbstractParser;
 
-	public NullParser(String rawInput) {
+public class EnglishParser extends AbstractParser {
+
+	public EnglishParser(String rawInput) {
 		super(rawInput);
 	}
 

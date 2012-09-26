@@ -21,7 +21,7 @@ import net.freehal.core.util.Pair;
 import net.freehal.core.util.StringLengthComparator;
 import net.freehal.core.xml.Word;
 
-public class Grammar2012 extends AbstractGrammar {
+public abstract class Grammar2012 extends AbstractGrammar {
 	private HashMap<String, Entity> symbolmapStrObj = new HashMap<String, Entity>();
 	private HashMap<Entity, String> symbolmapObjStr = new HashMap<Entity, String>();
 	private MultiMap<String, Entities> grammarmap = new MultiMap<String, Entities>();
@@ -232,6 +232,11 @@ public class Grammar2012 extends AbstractGrammar {
 				continue;
 			}
 
+			// ignore words without part of speech
+			if (!word.hasTags()) {
+				continue;
+			}
+
 			// construct objects
 			Entity obj = addEntity(new Entity(this, word.getTags()
 					.getGrammarType()));
@@ -408,8 +413,8 @@ public class Grammar2012 extends AbstractGrammar {
 				if (found) {
 					Entities foundList = new Entities();
 					for (f = 0, j = i; j < vec.size() && f < find.size(); ++f, ++j) {
-						Entity e = this.modifySymbol(vec.get(j), 
-								find.get(f).getMarker());
+						Entity e = this.modifySymbol(vec.get(j), find.get(f)
+								.getMarker());
 
 						foundList.add(e); // /////////////////////////
 					}
@@ -556,8 +561,15 @@ public class Grammar2012 extends AbstractGrammar {
 			if (word.getWord().isEmpty() || word.equals("null")) {
 				continue;
 			}
-			ss.append("  - ").append(word.getTags().getGrammarType())
-					.append(": '").append(word.getWord()).append("'\n");
+
+			// print it
+			ss.append("  - ");
+			if (word.hasTags())
+				ss.append(word.getTags().getGrammarType());
+
+			else
+				ss.append("(no tags)");
+			ss.append(": '").append(word.getWord()).append("'\n");
 		}
 
 		return ss.toString();

@@ -119,12 +119,19 @@ public class XmlList extends XmlObj {
 		return embedded;
 	}
 
-	public int toggle(AbstractTagger tagger) {
-		return 0;
+	@Override
+	public boolean toggle(AbstractTagger tagger) {
+		boolean changed = false;
+		for (XmlObj e : embedded) {
+			if (e.toggle(tagger)) {
+				changed = true;
+			}
+		}
+		return changed;
 	}
 
 	@Override
-	public String printXml(int level, int secondlevel) {
+	protected String printXml(int level, int secondlevel) {
 		if (name == "clause") {
 			++level;
 			secondlevel = 0;
@@ -219,7 +226,7 @@ public class XmlList extends XmlObj {
 	}
 
 	@Override
-	public boolean prepareWords() {
+	protected boolean prepareWords() {
 		if (super.prepareWords()) {
 			if (!name.equals("truth")) {
 				for (XmlObj e : embedded) {
@@ -232,7 +239,7 @@ public class XmlList extends XmlObj {
 	}
 
 	@Override
-	public boolean prepareTags(AbstractTagger tagger) {
+	protected boolean prepareTags(AbstractTagger tagger) {
 		if (super.prepareTags(tagger)) {
 			for (XmlObj e : embedded) {
 				e.prepareTags(tagger);
@@ -295,10 +302,10 @@ public class XmlList extends XmlObj {
 	public double countWords() {
 		double c = 0;
 		for (XmlObj subobj : embedded) {
-			if (subobj.getName().equals("questionword") ||
-					subobj.getName().equals("extra") ||
-							subobj.getName().equals("truth")||
-									subobj.getName().equals("clause")) {
+			if (subobj.getName().equals("questionword")
+					|| subobj.getName().equals("extra")
+					|| subobj.getName().equals("truth")
+					|| subobj.getName().equals("clause")) {
 				c += subobj.countWords();
 			}
 		}
@@ -306,9 +313,19 @@ public class XmlList extends XmlObj {
 			c /= embedded.size();
 		return c;
 	}
-	
+
 	@Override
 	public String toString() {
 		return printStr();
+	}
+
+	@Override
+	protected String hashString() {
+		StringBuilder ss = new StringBuilder();
+		ss.append(name);
+		for (XmlObj e : embedded) {
+			ss.append(" ").append(e.hashString());
+		}
+		return ss.toString();
 	}
 }
