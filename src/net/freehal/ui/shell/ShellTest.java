@@ -47,9 +47,9 @@ public class ShellTest {
 		log.to(new File("../stdout.txt"));
 		LogUtils.set(log);
 
-		// the language and the base directory (if executed in "bin/", the base
-		// directory is ".."). Freehal expects a "lang_xy" directory there which
-		// contains the database.
+		// set the language and the base directory (if executed in "bin/", the
+		// base directory is ".."). Freehal expects a "lang_xy" directory there
+		// which contains the database files.
 		FreehalConfig.set(new FreehalConfigStandard().setLanguage("de")
 				.setPath(new File("..")));
 
