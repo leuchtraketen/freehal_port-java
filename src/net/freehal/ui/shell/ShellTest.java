@@ -32,6 +32,12 @@ import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.StringUtils;
 
+/**
+ * This class is a reference implementation of a simple console user interface.
+ * It uses all main APIs and runs on every normal java platform.
+ * 
+ * @author tobias
+ */
 public class ShellTest {
 	private static void init() {
 		// file access
@@ -42,9 +48,9 @@ public class ShellTest {
 		// package "xml" (net.freehal.core.xml) are not logged to console
 		// output, but everything is written into a log file
 		LogUtilsStandard log = new LogUtilsStandard();
-		log.to(System.out).addFilter("DiskDatabase", "debug")
-				.addFilter("xml", "debug");
-		log.to(new File("../stdout.txt"));
+		log.to(LogUtilsStandard.ConsoleLogStream.create(System.out)
+				.addFilter("DiskDatabase", "debug").addFilter("xml", "debug"));
+		log.to(LogUtilsStandard.FileLogStream.create("../stdout.txt"));
 		LogUtils.set(log);
 
 		// set the language and the base directory (if executed in "bin/", the
