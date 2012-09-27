@@ -1,0 +1,850 @@
+<fact>
+  <subject>das wort advent</subject>
+  <object>ankunft</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der name gregor</subject>
+  <object>hirte</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der name innozenz</subject>
+  <object></object>
+  <verb>bedeutet</verb>
+  <adverbs>unschuldig</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>koran</subject>
+  <object>lesung</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>misericordia</subject>
+  <object>barmherzigkeit</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zoelibat</subject>
+  <object>ehelosigkeit</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das christliche kirchenjahr</subject>
+  <object>advent</object>
+  <verb>beginnt</verb>
+  <adverbs>an dem erster</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die katholische fastenzeit</subject>
+  <object></object>
+  <verb>beginnt</verb>
+  <adverbs>an dem aschermittwoch</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>chrisamoel</subject>
+  <object></object>
+  <verb>besteht</verb>
+  <adverbs>aus olivenoel mit duftstoffen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die reformation</subject>
+  <object></object>
+  <verb>fand</verb>
+  <adverbs>im 16 jahrhundert  statt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>den sonnengesang</subject>
+  <object></object>
+  <verb>franz verfasste</verb>
+  <adverbs>von assisi</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zu pfingsten</subject>
+  <object>die ausgiessung</object>
+  <verb>gefeiert wird</verb>
+  <adverbs>des heiligen geistes</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pentateuch</subject>
+  <object>die fuenf buecher mose</object>
+  <verb>heissen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>laetare</subject>
+  <object>der vierte fastensonntag</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein glaeubiger moslem</subject>
+  <object>ein schweinefleisch</object>
+  <verb>isst</verb>
+  <adverbs>nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>allah</subject>
+  <object>(the) name gottes bei</object>
+  <verb>is-a</verb>
+  <adverbs>den moslems</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dalai lama</subject>
+  <object>(the) titel des hoechsten wuerdentraegers des tibetischen buddhismus</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das hohe lied</subject>
+  <object>(a) biblisches buch</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) karma</subject>
+  <object>(the) ewige weltgesetz</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) tabernakel</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>(the) aufbewahrungsort der eucharistie</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) aga khan</subject>
+  <object>(the) oberhaupt</object>
+  <verb>is-a</verb>
+  <adverbs>(the) ismailiten</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) fisch</subject>
+  <object>das symbol</object>
+  <verb>is-a</verb>
+  <adverbs>fuer jesus christus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>(the) iran</subject>
+  <object>(a) islamisches land</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der name innozenz</subject>
+  <object>(a) papstname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) palmsonntag</subject>
+  <object>(the) sonntag</object>
+  <verb>is-a</verb>
+  <adverbs>vor ostern</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) papst</subject>
+  <object>zugleich bischof</object>
+  <verb>is-a</verb>
+  <adverbs>von rom</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) rabbiner</subject>
+  <object>(a) juedischer gesetzesgelehrter</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) ramadan</subject>
+  <object>(the) fastenmonat</object>
+  <verb>is-a</verb>
+  <adverbs>(the) moslems</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) ramadan</subject>
+  <object>(the) fastenmonat</object>
+  <verb>is-a</verb>
+  <adverbs>im islam</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) talmud</subject>
+  <object>(the) gesetzbuch</object>
+  <verb>is-a</verb>
+  <adverbs>(the) nachbiblischen juden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) talmud</subject>
+  <object>(the) gesetzeslehre</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>deutschland</subject>
+  <object>(a) christliches land</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) bibel</subject>
+  <object>(the) heilige schrift</object>
+  <verb>is-a</verb>
+  <adverbs>der christen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) hadsch</subject>
+  <object>(the) wallfahrt</object>
+  <verb>is-a</verb>
+  <adverbs>der glaeubigen moslems nach mekka</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) hadsch</subject>
+  <object>(the) wallfahrt</object>
+  <verb>is-a</verb>
+  <adverbs>nach mekka</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) kaaba</subject>
+  <object>(the) hauptheiligtum des islams</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) karwoche</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>vor ostern</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) scharia</subject>
+  <object>(the) heilige gesetz des islams</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) septuaginta</subject>
+  <object>(the) aelteste griechische uebersetzung des alten testaments</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) thora</subject>
+  <object>(the) mosaische gesetz</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) sure</subject>
+  <object>(a) kapitel</object>
+  <verb>is-a</verb>
+  <adverbs>in dem koran</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) mudschahedin</subject>
+  <object>(a) islamischer kaempfer</object>
+  <verb>is-a</verb>
+  <adverbs>fuer die sache gottes</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eschatologie</subject>
+  <object>(the) lehre</object>
+  <verb>is-a</verb>
+  <adverbs>_ von_den_letzten_dingen_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gregor</subject>
+  <object>(a) papstname</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>griechenland</subject>
+  <object>(a) christliches land</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jerusalem</subject>
+  <object>fuer drei religionen</object>
+  <verb>ist</verb>
+  <adverbs>bedeutsam</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kabbala</subject>
+  <object>(a) juedische geheimlehre</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>laetare</subject>
+  <object>(the) vierte fastensonntag</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lucifer</subject>
+  <object>(the) gestuerzte erzengel</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mythologie</subject>
+  <object>(the) lehre</object>
+  <verb>is-a</verb>
+  <adverbs>von den gottheiten der voelker</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nirvana</subject>
+  <object>(the) himmel des buddismus</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>nirvana</subject>
+  <object>(a) begriff</object>
+  <verb>is-a</verb>
+  <adverbs>aus dem buddhismus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ostern</subject>
+  <object>(the) fest</object>
+  <verb>is-a</verb>
+  <adverbs>(the) auferstehung von jesus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ostern</subject>
+  <object>(the) fest jesu</object>
+  <verb>is-a</verb>
+  <adverbs>(the) auferstehung</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>palmsonntag</subject>
+  <object>immer der sonntag</object>
+  <verb>ist</verb>
+  <adverbs>vor ostern</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>servus servorum dei</subject>
+  <object>(the) selbstbezeichung</object>
+  <verb>is-a</verb>
+  <adverbs>(the) paepste</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>theologie</subject>
+  <object>(the) lehre</object>
+  <verb>is-a</verb>
+  <adverbs>von gott</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>utah</subject>
+  <object>(the) heimat</object>
+  <verb>is-a</verb>
+  <adverbs>(the) mormonen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zakat</subject>
+  <object>(the) armensteuer</object>
+  <verb>is-a</verb>
+  <adverbs>(the) moslems</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leo der dritte</subject>
+  <object>karl</object>
+  <verb>kroente</verb>
+  <adverbs>den grossen zum kaiser</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zwischen und ostern pfingsten</subject>
+  <object>7 wochen</object>
+  <verb>liegen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die karwoche</subject>
+  <object>unmittelbar</object>
+  <verb>liegt</verb>
+  <adverbs>vor ostern</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die fuenf buecher mose</subject>
+  <object>man pentateuch</object>
+  <verb>nennt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der muezzin</subject>
+  <object>taeglich fuenfmal</object>
+  <verb>ruft</verb>
+  <adverbs>zum gebet</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>martin luther</subject>
+  <object>95 thesen</object>
+  <verb>schlug</verb>
+  <adverbs>an die schlosskirche von wittenberg</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>martin</subject>
+  <object>luther seine thesen</object>
+  <verb>schlug</verb>
+  <adverbs>in wittenberg an</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der koran</subject>
+  <object>die offenbarungen</object>
+  <verb>sind</verb>
+  <adverbs>von mohammed</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der pentateuch</subject>
+  <object>die fuenf buecher mose</object>
+  <verb>sind</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die meisten franzosen</subject>
+  <object>katholiken</object>
+  <verb>sind</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>horen</subject>
+  <object>die stundengebete eines katholischen geistlichen</object>
+  <verb>sind</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ikonen</subject>
+  <object>kultbilder</object>
+  <verb>sind</verb>
+  <adverbs>der ostkirche</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das hohelied</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>von salomo</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die geburtskirche christi</subject>
+  <object></object>
+  <verb>steht</verb>
+  <adverbs>in bethlehem</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die geburtskirche von jesus</subject>
+  <object></object>
+  <verb>steht</verb>
+  <adverbs>in bethlehem</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die grabeskirche</subject>
+  <object></object>
+  <verb>steht</verb>
+  <adverbs>in jerusalem</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die konklave</subject>
+  <object>den papst</object>
+  <verb>waehlt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hippolytos</subject>
+  <object>der erste gegenpapst</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leo der dritte</subject>
+  <object>ein papst</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>moses</subject>
+  <object>ein gesandter gottes</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>petrus</subject>
+  <object>der erste bischof</object>
+  <verb>war</verb>
+  <adverbs>von rom</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>siddharta gautama</subject>
+  <object>der begruender des buddhismus</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die kaaba</subject>
+  <object>als zentraler kultort des islam</object>
+  <verb>wird</verb>
+  <adverbs>in mekka verehrt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jesus</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in betlehem geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>

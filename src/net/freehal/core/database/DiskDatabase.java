@@ -19,6 +19,38 @@ import net.freehal.core.xml.XmlUtils;
 
 public class DiskDatabase implements DatabaseImpl {
 
+	private Map<String, Integer> cacheFiles = new HashMap<String, Integer>();
+
+	public DiskDatabase() {
+		readMetadata();
+	}
+
+	private void readMetadata() {
+		List<String> lines = FileUtils.readLines(DiskStorage.getDirectory(
+				"database", "meta"), new File("files.csv"));
+
+		for (String line : lines) {
+			String[] csv = line.split(":");
+			if (csv.length == 2) {
+				try {
+					cacheFiles.put(csv[0], Integer.valueOf(csv[1]));
+				} catch (NumberFormatException e) {
+					// ignore
+				}
+			}
+		}
+	}
+
+	private void writeMetadata() {
+		StringBuilder sb = new StringBuilder();
+		for (String filename : cacheFiles.keySet()) {
+			sb.append(filename).append(":").append(cacheFiles.get(filename))
+					.append("\n");
+		}
+		FileUtils.write(DiskStorage.getDirectory("database", "meta"), new File(
+				"files.csv"), sb.toString());
+	}
+
 	@Override
 	public Set<XmlFact> findFacts(XmlFact xfact) {
 		LogUtils.i("find by fact: " + xfact);
@@ -98,7 +130,7 @@ public class DiskDatabase implements DatabaseImpl {
 				}
 			});
 		}
-		
+
 		Runtime.getRuntime().gc();
 
 		return list;
@@ -115,10 +147,9 @@ public class DiskDatabase implements DatabaseImpl {
 			databaseFile = new File(FreehalConfig.getLanguageDirectory()
 					.getPath(), databaseFile.getPath());
 		}
-		LogUtils.i("update cache for this: " + databaseFile);
 
 		if (databaseFile.isDirectory()) {
-			LogUtils.i("update cache for this directory: " + databaseFile);
+			LogUtils.i("update cache (directory): " + databaseFile);
 
 			File[] files = databaseFile.listFiles();
 			for (File file : files) {
@@ -129,31 +160,44 @@ public class DiskDatabase implements DatabaseImpl {
 		}
 
 		else if (databaseFile.isFile()) {
-			LogUtils.i("update cache for this file: " + databaseFile);
-
 			final String xmlInput = FileUtils.read(databaseFile);
-			final String xmlPre = XmlUtils.orderTags(xmlInput);
 
-			final Mutable<Map<File, Set<XmlFact>>> cache = new Mutable<Map<File, Set<XmlFact>>>(
-					new HashMap<File, Set<XmlFact>>());
+			if (cacheFiles.containsKey(databaseFile.getName())
+					&& cacheFiles.get(databaseFile.getName()) == xmlInput
+							.hashCode()) {
+				LogUtils.i("cache is up to date (file): " + databaseFile);
 
-			XmlUtils.readXmlFacts(xmlPre, databaseFile, new XmlFactReciever() {
-				@Override
-				public void useXmlFact(XmlFact xfact, int countFacts,
-						long start, File filename, int countFactsSoFar) {
+			} else {
+				LogUtils.i("update cache (file): " + databaseFile);
 
-					updateCache(xfact, cache);
+				final String xmlPre = XmlUtils.orderTags(xmlInput);
+
+				final Mutable<Map<File, Set<XmlFact>>> cache = new Mutable<Map<File, Set<XmlFact>>>(
+						new HashMap<File, Set<XmlFact>>());
+
+				XmlUtils.readXmlFacts(xmlPre, databaseFile,
+						new XmlFactReciever() {
+							@Override
+							public void useXmlFact(XmlFact xfact,
+									int countFacts, long start, File filename,
+									int countFactsSoFar) {
+
+								updateCache(xfact, cache);
+							}
+						});
+
+				for (File cacheFile : cache.get().keySet()) {
+					StringBuilder content = new StringBuilder();
+					for (XmlFact xfact : cache.get().get(cacheFile)) {
+						content.append(xfact.printXml());
+					}
+					LogUtils.d("write cache file : " + cacheFile);
+
+					FileUtils.write(cacheFile, content.toString());
 				}
-			});
 
-			for (File cacheFile : cache.get().keySet()) {
-				StringBuilder content = new StringBuilder();
-				for (XmlFact xfact : cache.get().get(cacheFile)) {
-					content.append(xfact.printXml());
-				}
-				LogUtils.d("write cache file : " + cacheFile);
-
-				FileUtils.write(cacheFile, content.toString());
+				cacheFiles.put(databaseFile.getName(), xmlInput.hashCode());
+				writeMetadata();
 			}
 		}
 	}
@@ -164,8 +208,9 @@ public class DiskDatabase implements DatabaseImpl {
 
 		List<Word> words = xfact.getWords();
 		for (Word w : words) {
-			File cacheFile = DiskStorage.getFile("database", "index", new DiskStorage.Key(w), new File(xfact
-					.getFilename().getName()));
+			File cacheFile = DiskStorage.getFile("database", "index",
+					new DiskStorage.Key(w), new File(xfact.getFilename()
+							.getName()));
 			if (!cache.get().containsKey(cacheFile)) {
 				cache.get().put(cacheFile, new HashSet<XmlFact>());
 			}

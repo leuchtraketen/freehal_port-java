@@ -1,0 +1,1760 @@
+<fact>
+  <subject>andreas hofer</subject>
+  <object>den volksaufstand</object>
+  <verb>anfuehrt</verb>
+  <adverbs>gegen napoleon</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>der bundesrat</subject>
+  <object>64 mitglieder</object>
+  <verb>at</verb>
+  <adverbs>in oesterreich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die udssr</subject>
+  <object>das erste atomkraftwerk</object>
+  <verb>baute</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tenno</subject>
+  <object>himmlischer herrscher</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die bedeutendste bibliothek der antike</subject>
+  <object>sich</object>
+  <verb>befand</verb>
+  <adverbs>in alexandria</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das bundesverfassungsgericht</subject>
+  <object>sich</object>
+  <verb>befindet</verb>
+  <adverbs>in karlsruhe</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das europaeische parlament</subject>
+  <object>sich</object>
+  <verb>befindet</verb>
+  <adverbs>in strassburg</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der bundesgerichtshof</subject>
+  <object>sich</object>
+  <verb>befindet</verb>
+  <adverbs>in karlsruhe</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der zweite</subject>
+  <object>weltkrieg</object>
+  <verb>begann</verb>
+  <adverbs>1939</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object></object>
+  <verb>beton</verb>
+  <adverbs>in der antike erfunden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alberich</subject>
+  <object>den nibelungenhort</object>
+  <verb>bewacht</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object>als hexenhammer das inquisitionshandbuch fuer hexenprozesse</object>
+  <verb>bezeichnet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>asaph</subject>
+  <object>die marsmonde</object>
+  <verb>entdeckte</verb>
+  <adverbs>hall</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>christoph kolumbus</subject>
+  <object>amerika</object>
+  <verb>entdeckte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die pizza</subject>
+  <object></object>
+  <verb>entstanden sein soll</verb>
+  <adverbs>in neapel</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>marie curie</subject>
+  <object>1911 den chemie-nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ernest rutherford</subject>
+  <object>1908 den nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs>fuer chemie</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>marie curie</subject>
+  <object>1911 den nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oesterreich</subject>
+  <object>1920 die bundesverfassung</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>roald amundsen</subject>
+  <object>als erster mensch den suedpol</object>
+  <verb>erreichte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die berliner mauer</subject>
+  <object></object>
+  <verb>errichtet ist</verb>
+  <adverbs>1961  worden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die berliner mauer</subject>
+  <object></object>
+  <verb>errichtet wurde</verb>
+  <adverbs>1961</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>andreas hofer</subject>
+  <object>1810</object>
+  <verb>erschossen wurde</verb>
+  <adverbs>in mantua</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>che</subject>
+  <object>guevara</object>
+  <verb>erschossen wurde</verb>
+  <adverbs>in bolivien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die oktoberrevolution</subject>
+  <object></object>
+  <verb>fand</verb>
+  <adverbs>1917 statt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>maria theresia</subject>
+  <object>die schulpflicht</object>
+  <verb>fuehrte</verb>
+  <adverbs>in oesterreich ein</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die berliner mauer</subject>
+  <object></object>
+  <verb>gebaut ist</verb>
+  <adverbs>1916  worden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die berliner mauer</subject>
+  <object></object>
+  <verb>gebaut wurde</verb>
+  <adverbs>1961</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der dritte mann</subject>
+  <object></object>
+  <verb>gedreht wurde</verb>
+  <adverbs>in wien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object>der oetzi</object>
+  <verb>gefunden</verb>
+  <adverbs>in den alpen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bremerhaven</subject>
+  <object></object>
+  <verb>gegruendet wurde</verb>
+  <adverbs>1827</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die opec</subject>
+  <object></object>
+  <verb>gegruendet wurde</verb>
+  <adverbs>1960</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die opec</subject>
+  <object></object>
+  <verb>gegruendet wurde</verb>
+  <adverbs>in bagdad</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die schweiz</subject>
+  <object></object>
+  <verb>gehoert</verb>
+  <adverbs>zur nato</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goethe</subject>
+  <object></object>
+  <verb>gestorben ist</verb>
+  <adverbs>in weimar</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hegel</subject>
+  <object>1831</object>
+  <verb>gestorben ist</verb>
+  <adverbs>in berlin</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kleist</subject>
+  <object>1811</object>
+  <verb>gestorben ist</verb>
+  <adverbs>an dem 21 november in berlin</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schiller</subject>
+  <object></object>
+  <verb>gestorben ist</verb>
+  <adverbs>in weimar</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>euklid</subject>
+  <object>als begruender</object>
+  <verb>gilt</verb>
+  <adverbs>der geometrie</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sigmund freud</subject>
+  <object>als begruender</object>
+  <verb>gilt</verb>
+  <adverbs>der psychoanalyse</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ramses ii</subject>
+  <object>als bedeutender bauherr</object>
+  <verb>ging</verb>
+  <adverbs>in die geschichte ein</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object>das deutsche reich</object>
+  <verb>gruendet</verb>
+  <adverbs>1871</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object>israel</object>
+  <verb>gruendet</verb>
+  <adverbs>1948</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object></object>
+  <verb>gruendet</verb>
+  <adverbs>die eta 1959</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object>das deutsche reich</object>
+  <verb>gruendete</verb>
+  <adverbs>1871</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>francisco pizarro</subject>
+  <object>lima</object>
+  <verb>gruendete</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>swami prabhupada</subject>
+  <object>die hare-krishna-bewegung</object>
+  <verb>gruendete</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der nationalrat</subject>
+  <object>183 mitglieder</object>
+  <verb>hat</verb>
+  <adverbs>in oesterreich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der deutsche bundestag</subject>
+  <object>614 sitze</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>demokratie</subject>
+  <object>herrschaft des volkes</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) 14 februar</subject>
+  <object>valentinstag</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) 3 oktober</subject>
+  <object>(the) tag</object>
+  <verb>is-a</verb>
+  <adverbs>(the) deutscheneinheit</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) buergerschaft</subject>
+  <object>(the) volksvertretung</object>
+  <verb>is-a</verb>
+  <adverbs>von hamburg</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) cdu</subject>
+  <object>(a) politische partei</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) erste mai</subject>
+  <object>(the) tag</object>
+  <verb>is-a</verb>
+  <adverbs>(the) arbeit</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) gez</subject>
+  <object>(the) gebuehreneinzugszentrale</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) grundgesetz</subject>
+  <object>(the) verfassung</object>
+  <verb>is-a</verb>
+  <adverbs>von deutschland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) klm</subject>
+  <object>(the) aelteste fluggesellschaft</object>
+  <verb>is-a</verb>
+  <adverbs>(the) welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) knesset</subject>
+  <object>(the) parlament</object>
+  <verb>is-a</verb>
+  <adverbs>von israel</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) nationalrat</subject>
+  <object>(the) volksvertretung</object>
+  <verb>is-a</verb>
+  <adverbs>in oesterreich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) nato</subject>
+  <object>(a) verteidigungsbuendnis</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) schloss bellevue</subject>
+  <object>(the) amtssitz des bundespraesidenten</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) spd</subject>
+  <object>(a) politische partei</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) unicef</subject>
+  <object>(the) weltkinderhilfswerk</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>5 jahre</subject>
+  <object>(the) amtszeit des bundespraesidenten</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bayern</subject>
+  <object>(the) flaechenmaessig groesste bundesland</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>claudio abbado</subject>
+  <object>(a) italienischer dirigent</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ikarus</subject>
+  <object>(the) sohn</object>
+  <verb>is-a</verb>
+  <adverbs>von daedalus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>in luxemburg</subject>
+  <object>(the) sitz</object>
+  <verb>is-a</verb>
+  <adverbs>des europaeischen gerichtshofs</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>tenno</subject>
+  <object>(the) titel des japanischen kaisers</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>demokratie</subject>
+  <object>die herrschaft des volkes</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ignaz semmelweis</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>_der_retter_der_muetter_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>politik</subject>
+  <object>vom griechischen wort</object>
+  <verb>leitet</verb>
+  <adverbs>polis ab</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>das wort hitler</object>
+  <verb>lesen will</verb>
+  <adverbs>hier nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kamenz</subject>
+  <object></object>
+  <verb>liegt</verb>
+  <adverbs>in sachsen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>martin luther</subject>
+  <object>95 thesen</object>
+  <verb>schlug</verb>
+  <adverbs>an die tuer der schlosskirche in wittenberg</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bram stoker</subject>
+  <object>den roman dracula</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich hoffmann</subject>
+  <object>den text</object>
+  <verb>schrieb</verb>
+  <adverbs>der deutschen nationalhymne</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james cook</subject>
+  <object></object>
+  <verb>segelte</verb>
+  <adverbs>mit der endeavour um die welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>martin heidegger</subject>
+  <object>1976</object>
+  <verb>starb</verb>
+  <adverbs>in freiburg in dem breisgau</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert einstein</subject>
+  <object>in dem bundesstaat</object>
+  <verb>starb</verb>
+  <adverbs>_new_york_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert einstein</subject>
+  <object></object>
+  <verb>starb</verb>
+  <adverbs>an dem 18 april 1955</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert einstein</subject>
+  <object></object>
+  <verb>starb</verb>
+  <adverbs>in princeton</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goethe</subject>
+  <object></object>
+  <verb>starb</verb>
+  <adverbs>in weimar</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hegel</subject>
+  <object></object>
+  <verb>starb</verb>
+  <adverbs>1831</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kleist</subject>
+  <object>1811</object>
+  <verb>starb</verb>
+  <adverbs>an dem 21 november  in berlin</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mozart</subject>
+  <object>1791</object>
+  <verb>starb</verb>
+  <adverbs>in wien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schiller</subject>
+  <object></object>
+  <verb>starb</verb>
+  <adverbs>in weimar</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das aelteste atomkraftwerk</subject>
+  <object></object>
+  <verb>steht</verb>
+  <adverbs>in obrigheim  von deutschland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>iwf</subject>
+  <object>fuer den internationalen waehrungsfond</object>
+  <verb>steht</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>weu</subject>
+  <object>fuer westeuropaeische union</object>
+  <verb>steht</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kleopatra</subject>
+  <object>sich</object>
+  <verb>toetete</verb>
+  <adverbs>durch einen schlangenbiss</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der bundestag</subject>
+  <object>in deutschland gesetze</object>
+  <verb>verabschiedet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>walter ulbricht</subject>
+  <object></object>
+  <verb>veranlasste</verb>
+  <adverbs>den bau der berliner mauer</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object>napoleon st helena</object>
+  <verb>verbannt</verb>
+  <adverbs>auf die insel</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>richard nixon</subject>
+  <object></object>
+  <verb>verwickelt war</verb>
+  <adverbs>in die watergate-affaire</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object>der bundespraesident alle fuenf jahre</object>
+  <verb>waehlt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der bundestag</subject>
+  <object>den bundeskanzler</object>
+  <verb>waehlt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die bundesversammlung</subject>
+  <object>den bundespraesidenten</object>
+  <verb>waehlt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>adolf hitler</subject>
+  <object>ein massenmoerder</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benjamin franklin</subject>
+  <object>ein naturwissenschaftler</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der hexenhammer</subject>
+  <object>das inquisationshandbuch fuer hexenprozesse</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ludwig der dritte</subject>
+  <object>der letzte bayrische koenig</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wilhelm friedrich hegel</subject>
+  <object>ein philosoph</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>adolf hitler</subject>
+  <object>ein tyrann</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alan turing</subject>
+  <object>ein britischer logiker</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>albert einstein</subject>
+  <object>ein deutscher physiker</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert speer</subject>
+  <object>ein architekt reich</object>
+  <verb>war</verb>
+  <adverbs>in dem dritten</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>andreas hofer</subject>
+  <object>ein tiroler freiheitskaempfer</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>andreas hofer</subject>
+  <object>ein volksheld</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benjamin franklin</subject>
+  <object>ein erfinder</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bruno kreisky</subject>
+  <object>ein oesterreichischer staatsmann</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>christoph columbus</subject>
+  <object>italiener</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>daedalus</subject>
+  <object>der vater</object>
+  <verb>war</verb>
+  <adverbs>von ikarus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das</subject>
+  <object></object>
+  <verb>war</verb>
+  <adverbs>so gemeint</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der erste weltkrieg</subject>
+  <object></object>
+  <verb>war</verb>
+  <adverbs>_von_1914_bist_1918_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der falklandkrieg</subject>
+  <object></object>
+  <verb>war</verb>
+  <adverbs>1982</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>der letzte deutsche kaiser</subject>
+  <object>wilhelm ii</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die ddr</subject>
+  <object>eine republik</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>die erste mondlandung</subject>
+  <object></object>
+  <verb>war</verb>
+  <adverbs>1969</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>einstein</subject>
+  <object>ein deutscher physiker</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elvis presley</subject>
+  <object>ein superstar</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>francis drake</subject>
+  <object>ein beruehmter pirat</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geiserich</subject>
+  <object>ein wandalenkoenig</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george bush</subject>
+  <object>ein praesident der vereinigten staaten</object>
+  <verb>war</verb>
+  <adverbs>von amerika</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george washington</subject>
+  <object>der erste praesident</object>
+  <verb>war</verb>
+  <adverbs>der usa</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goethe</subject>
+  <object>ein dichter</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goethe</subject>
+  <object>ein naturforscher</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>habakuk</subject>
+  <object>ein prophet</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hegel</subject>
+  <object>ein philosoph</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henry dunant</subject>
+  <object>der erste friedensnobelpreistraeger</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hitler</subject>
+  <object>ein massenmoerder</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>houdini</subject>
+  <object>ein entfesselungskuenstler</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karl popper</subject>
+  <object>ein philosoph</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kolumbus</subject>
+  <object>der entdecker</object>
+  <verb>war</verb>
+  <adverbs>von amerika</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>konrad adenauer</subject>
+  <object>der erste bundeskanzler</object>
+  <verb>war</verb>
+  <adverbs>von deutschland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lessing</subject>
+  <object>ein dichter</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>martin heidegger</subject>
+  <object>ein philosoph</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>napoleon</subject>
+  <object>ein franzoesischer feldherr</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>napoleon</subject>
+  <object>ein franzose</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>war</verb>
+  <adverbs>das sarkasmus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otto lilienthal</subject>
+  <object>ein luftfahrtspionier</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pythagoras</subject>
+  <object>ein mathematiker</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>sokrates</subject>
+  <object>ein griechischer philosoph</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sputnik</subject>
+  <object>der erste satellit</object>
+  <verb>war</verb>
+  <adverbs>im weltraum</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>theoderich der grosse</subject>
+  <object>koenig</object>
+  <verb>war</verb>
+  <adverbs>der ostgoten</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>theodor heuss</subject>
+  <object>der erste bundespraesident</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wilhelm der zweite</subject>
+  <object>der letzte deutsche kaiser</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich heine</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in duesseldorf geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert einstein</subject>
+  <object>76 jahre</object>
+  <verb>wurde</verb>
+  <adverbs>alt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert einstein</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>1879 geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert einstein</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in ulm geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albrecht duerer</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in nuernberg geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anna seghers</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>190 geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anna seghers</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in mainz geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bill gates</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in seattle geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der eurotunnel</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>1994 eroeffnet</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goethe</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in frankfurt an dem main geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hegel</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in stuttgart geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich von kleist</subject>
+  <object>1777</object>
+  <verb>wurde</verb>
+  <adverbs>an dem 18 oktober  in frankfurt an der oder geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kleist</subject>
+  <object>1777</object>
+  <verb>wurde</verb>
+  <adverbs>an dem 18 oktober  in frankfurt an der oder geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lessing</subject>
+  <object>1729</object>
+  <verb>wurde</verb>
+  <adverbs>in kamenz geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mozart</subject>
+  <object>1756</object>
+  <verb>wurde</verb>
+  <adverbs>in salzburg geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nietzsche</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in roecken geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oesterreich</subject>
+  <object>1995 mitglied</object>
+  <verb>wurde</verb>
+  <adverbs>der eu</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schiller</subject>
+  <object>1759</object>
+  <verb>wurde</verb>
+  <adverbs>an dem 10 november  in marbach an dem neckar geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schiller</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in marbach an dem neckar geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>

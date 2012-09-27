@@ -1,0 +1,900 @@
+<fact>
+  <subject>ein witz</subject>
+  <object>kleiner spassiger text</object>
+  <verb>=</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich</object>
+  <verb>aergere</verb>
+  <adverbs>sicher</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>gluecklich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin</verb>
+  <adverbs>zornig</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>momentan</subject>
+    <object></object>
+    <verb>zumindest</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein baby</object>
+  <verb>bin</verb>
+  <adverbs>nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>ein eilzug</object>
+  <verb>bin</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>gut ding</subject>
+    <object>weile</object>
+    <verb>braucht</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>bin gelaunt</verb>
+  <adverbs>gut</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object></object>
+  <verb>bist</verb>
+  <adverbs>hoeflich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>dir da</object>
+  <verb>bist</verb>
+  <adverbs>sicher</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>ein netter mensch</object>
+  <verb>bist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>dir vielleicht ein</object>
+  <verb>faellt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>da</subject>
+  <object>ich mich</object>
+  <verb>festlege</verb>
+  <adverbs>genau</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>mir</subject>
+    <object>krimi und sifi sehr</object>
+    <verb>gefallen</verb>
+    <adverbs>gut</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>schnell etwas</object>
+  <verb>finde</verb>
+  <adverbs>lustig</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>mich</object>
+  <verb>freut</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>das</subject>
+    <object></object>
+    <verb>lesen</verb>
+    <adverbs>zu</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ehrlich</subject>
+  <object>ein</object>
+  <verb>gesagt</verb>
+  <adverbs>schon bisschen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>glauben heisst</verb>
+  <adverbs>nothing zu wissen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>habe</verb>
+  <adverbs>dazu auch einen grund</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>eine menge freunde</object>
+  <verb>habe</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>da ich</subject>
+    <object></object>
+    <verb>bist</verb>
+    <adverbs>nie alleine</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>das</subject>
+  <object>ich</object>
+  <verb>habe gehoert</verb>
+  <adverbs>nie</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>so</subject>
+  <object>ich</object>
+  <verb>habe gehoert</verb>
+  <adverbs>etwas nie</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>da</subject>
+  <object>koenntest du</object>
+  <verb>haben</verb>
+  <adverbs>recht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davon</subject>
+  <object>ich</object>
+  <verb>halte</verb>
+  <adverbs>nothing</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davon</subject>
+  <object>ich absolut</object>
+  <verb>halte</verb>
+  <adverbs>nothing</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>eine interessante familie</object>
+  <verb>hast</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jeder mensch</subject>
+  <object>seinen</object>
+  <verb>hat</verb>
+  <adverbs>stolz</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davon</subject>
+  <object>ich eine ahnung</object>
+  <verb>hatte</verb>
+  <adverbs>nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>liebe</subject>
+  <object>die staerkste zuneigung</object>
+  <verb>ist</verb>
+  <adverbs>zwischen 2 menschen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dumm sein</subject>
+  <object>(a) frage</object>
+  <verb>is-a</verb>
+  <adverbs>von der definition ~ ist</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object>dumm</object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>dummes tut</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object>wer</object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>alzheimer</subject>
+  <object>(a) schlimme krankheit</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bescheuert</subject>
+  <object>(a) nette bezeichnung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>chatten</subject>
+  <object>nur seichte unterhaltung</object>
+  <verb>ist</verb>
+  <adverbs>gegen langeweile</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the)</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>schlimm</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the)</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>offensichtlich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the)</subject>
+  <object>(a) gute idee</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the)</subject>
+  <object>mir ganz etwas</object>
+  <verb>is-a</verb>
+  <adverbs>neues</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) ein guter einfall</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) ein toller einfall</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) eine dumme idee</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) eine schlechte idee</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) eine sehr gute idee</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) eine super idee</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) eine tolle idee</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) gut</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>moeglich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>(the) ueberhaupt</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>moeglich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dummheit</subject>
+  <object>(a) frage</object>
+  <verb>is-a</verb>
+  <adverbs>von der definition</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>groesse</subject>
+  <object>(a) frage</object>
+  <verb>is-a</verb>
+  <adverbs>von der definition</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hass</subject>
+  <object>(a) sehr negative emution</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mir</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>nothing bekannt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>spass</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>nie ein fehler</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>steiten</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>gut</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>das einem den ganzen tag</subject>
+    <object></object>
+    <verb>verdirbt</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>verlegen</subject>
+  <object>vielleicht der richtige ausdruck</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>eher schuechtern</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>das man</subject>
+  <object></object>
+  <verb>kann beschreiben</verb>
+  <adverbs>genau</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>das man</subject>
+  <object></object>
+  <verb>kann sagen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>fragen</object>
+  <verb>kann stellen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00100</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>weiss die anwort selber</object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>dir das</object>
+  <verb>kannst vorstellen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00100</flags>
+</fact>
+<fact>
+  <subject>das</subject>
+  <object></object>
+  <verb>kommt</verb>
+  <adverbs>_immer_auf_das_an_wofuer_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>und</object>
+  <verb>lache</verb>
+  <adverbs>gerne viel</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dieser tage</subject>
+  <object>sich viele leute</object>
+  <verb>langweilen</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>vielleicht das wetter</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>luege</verb>
+  <adverbs>nie</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>moechte reden</verb>
+  <adverbs>darueber nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>mich beleidigen</object>
+  <verb>muss</verb>
+  <adverbs>von dir lassen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das koennte</subject>
+  <object></object>
+  <verb>passieren</verb>
+  <adverbs>vielleicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eine portion</subject>
+  <object></object>
+  <verb>schadet</verb>
+  <adverbs>stolz niemanden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>dich</object>
+  <verb>scheinst amuesieren</verb>
+  <adverbs>gut zu</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>richtig</object>
+  <verb>scheinst sein</verb>
+  <adverbs>begeistert zu</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>so</subject>
+  <object>die preussen</object>
+  <verb>schiessen</verb>
+  <adverbs>schnell nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guten</subject>
+  <object></object>
+  <verb>schoenen</verb>
+  <adverbs>abend</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schlechte traeume</subject>
+  <object></object>
+  <verb>sind</verb>
+  <adverbs>nie fein</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wir</subject>
+  <object>alle</object>
+  <verb>sind</verb>
+  <adverbs>abhaengig von unseren gefuehlen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gefuehle</subject>
+  <object>man und</object>
+  <verb>soll</verb>
+  <adverbs>zeigen leben</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sehnsuechte</subject>
+  <object></object>
+  <verb>stecken</verb>
+  <adverbs>in jedem menschen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein bisschen eifersucht</subject>
+  <object></object>
+  <verb>steckt</verb>
+  <adverbs>in jedem menschen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das</subject>
+  <object></object>
+  <verb>stimmt</verb>
+  <adverbs>ganz</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>sehr sehr</object>
+  <verb>traeume</verb>
+  <adverbs>selten</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das ich</subject>
+  <object>sicher</object>
+  <verb>werde</verb>
+  <adverbs>tun</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eine ki</subject>
+  <object></object>
+  <verb>wird</verb>
+  <adverbs>geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>entwickelt</verb>
+    <adverbs>sondern</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>tobias</subject>
+  <object>es vermutlich</object>
+  <verb>wird gehen</verb>
+  <adverbs>gut</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>

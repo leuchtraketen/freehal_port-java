@@ -1,0 +1,2180 @@
+<fact>
+  <subject>das meiste eisenerz</subject>
+  <object></object>
+  <verb>ausgefuehrt wird</verb>
+  <adverbs>aus brasilien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>agb</subject>
+  <object>allgemeine geschaeftsbedingungen</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bwl</subject>
+  <object>betriebswirtschaftslehre</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der begriff tan</subject>
+  <object>transaktionsnummer</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>export</subject>
+  <object>ausfuhr</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>subsistenzwirtschaft</subject>
+  <object>selbstversorgungswirtschaft</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vwl</subject>
+  <object>volkswirtschaftslehre</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die rendite</subject>
+  <object></object>
+  <verb>beruht</verb>
+  <adverbs>auf den ertragseinnahmen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die rendite</subject>
+  <object></object>
+  <verb>beruht</verb>
+  <adverbs>auf den kursveraenderungen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein kartell</subject>
+  <object>den wettbewerb</object>
+  <verb>beschraenkt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die inflation</subject>
+  <object>eine geldentwertung</object>
+  <verb>bewirkt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>man</subject>
+  <object>hundesteuer</object>
+  <verb>bezahlt</verb>
+  <adverbs>fuer hunde</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein vergleich</subject>
+  <object>zur abwendung</object>
+  <verb>dient</verb>
+  <adverbs>einer zahlungsunfaehigkeit</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein wechsel</subject>
+  <object>zur gewaehrung</object>
+  <verb>dient</verb>
+  <adverbs>eines kurzfristigen kredits</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>_</subject>
+  <object>der euro</object>
+  <verb>einfuehrt</verb>
+  <adverbs>2002</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der dax</subject>
+  <object></object>
+  <verb>eingefuehrt wurde</verb>
+  <adverbs>1988</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die elfenbeinkueste</subject>
+  <object>den meisten kakao</object>
+  <verb>erzeugt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kuba</subject>
+  <object>hauptsaechlich zucker</object>
+  <verb>exportiert</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das meiste gold</subject>
+  <object>man</object>
+  <verb>foerdert</verb>
+  <adverbs>in suedafrika</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henry ford</subject>
+  <object>die fliessbandfertigung ein</object>
+  <verb>fuehrte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die meisten bananen</subject>
+  <object></object>
+  <verb>geerntet werden</verb>
+  <adverbs>in indien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die meisten zitrusfruechte</subject>
+  <object></object>
+  <verb>geerntet werden</verb>
+  <adverbs>in nigeria</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>niger</subject>
+  <object></object>
+  <verb>gehoert</verb>
+  <adverbs>zu den zehn aermsten staaten</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>vw</subject>
+  <object>mehrheitlich niedersachsen</object>
+  <verb>gehoert</verb>
+  <adverbs>dem land</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das meiste kupfer</subject>
+  <object>man</object>
+  <verb>gewinnt</verb>
+  <adverbs>in chile</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>adolf dassler</subject>
+  <object>adidas</object>
+  <verb>gruendete</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>august horch</subject>
+  <object>audi</object>
+  <verb>gruendete</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ingvar kamprad</subject>
+  <object>ikea</object>
+  <verb>gruendete</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die brueder albrecht</subject>
+  <object>aldi</object>
+  <verb>gruendeten</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sam walton</subject>
+  <object>wal-mart</object>
+  <verb>gruendete</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein komplementaer</subject>
+  <object></object>
+  <verb>haftet</verb>
+  <adverbs>mit seinem gesamten vermoegen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die karstadtquelle ag</subject>
+  <object></object>
+  <verb>hat</verb>
+  <adverbs>ihren stammsitz in essen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die opec</subject>
+  <object></object>
+  <verb>hat</verb>
+  <adverbs>ihren sitz in wien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die siemens ag</subject>
+  <object></object>
+  <verb>hat</verb>
+  <adverbs>ihren stammsitz in muenchen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die unctad</subject>
+  <object></object>
+  <verb>hat</verb>
+  <adverbs>ihren sitz in genf</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die welthandelskonferenz</subject>
+  <object></object>
+  <verb>hat</verb>
+  <adverbs>ihren sitz in genf</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die welthandelsorganisation</subject>
+  <object></object>
+  <verb>hat</verb>
+  <adverbs>ihren sitz in genf</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die wto</subject>
+  <object></object>
+  <verb>hat</verb>
+  <adverbs>ihren sitz in genf</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein barrel</subject>
+  <object>159 liter</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein dollar</subject>
+  <object>10 cent</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein dutzend</subject>
+  <object>12 stueck</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein euro cent</subject>
+  <object></object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein zinsjahr</subject>
+  <object>360 tage</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der arbeitsplatz eines kapitaens</subject>
+  <object>bruecke</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die russische waehrung</subject>
+  <object>rubel</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>globalisierung</subject>
+  <object>die zunehmende vernetzung</object>
+  <verb>heisst</verb>
+  <adverbs>der weltwirtschaft</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zahlungsunfaehigkeit</subject>
+  <object>insolvenz</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>autarkie</subject>
+  <object>(a) wirtschaftliche unabhaengigkeit</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bill gates</subject>
+  <object>gruender</object>
+  <verb>ist</verb>
+  <adverbs>der firma microsoft</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bip</subject>
+  <object>(the) bruttoinlandsprodukt</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bolivien</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>das aermste land in suedamerika</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>china</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>der groesste textilexporteur</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) kuratorium</subject>
+  <object>(the) aufsichtsgremium einer stiftung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) pfund</subject>
+  <object>die waehrung in der tuerkei</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) pfund</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in grossbritanien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) storno</subject>
+  <object>(the) widerruf eines auftraggebers</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dax</subject>
+  <object>(the) abkuerzung</object>
+  <verb>is-a</verb>
+  <adverbs>fuer den deutschen aktienindex</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dax</subject>
+  <object>(the) abkuerzung fuer deutscher aktienindex</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>deichmann</subject>
+  <object>(the) groesste schuheinzelhaendler</object>
+  <verb>is-a</verb>
+  <adverbs>in europa</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) baht</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in tailand</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) balboa</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in panama</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) belize-dollar</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in belize</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) dalesi</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in gambia</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) denar</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in mazedonien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) dinar</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>im irak</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) dinar</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in algerien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) dinar</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in tunesien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) dirham</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in marokko</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) dong</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in vietnam</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) dram</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in armenien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) euro</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in andorra</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) euro</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in den von niederlande</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) euro</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in finnland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) euro</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in griechenland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) euro</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in italien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) euro</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in portugal</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) euro</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in spanien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) forint</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in ungarn</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) gourde</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in haiti</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) guarani</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in paraguay</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) guarani</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>von paraguay</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) hauptsitz</subject>
+  <object>motors</object>
+  <verb>is-a</verb>
+  <adverbs>in detroit von general</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) hauptsitz</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>in eindhoven  von philips</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) hauptsitz</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>in kalifornien  von ibm</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) jen</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in japan</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) kranich</subject>
+  <object>(the) symbol</object>
+  <verb>is-a</verb>
+  <adverbs>(the) lufthansa</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) kuna</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in kroatien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) lats</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in lettland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) lek</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in albanien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) lempira</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in hoduras</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) lew</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in bulgarien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) libysche dinar</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in lybien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) litas</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in litauen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) naira</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in nigeria</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) nakfa</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in eritrea</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) neue sol</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in peru</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) ouguiya</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in mauretanien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) peso</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in argentinien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) peso</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in mexiko</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) quetzal</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in paraguay</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) rand</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in suedafrika</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) real</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in brasilien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) rial</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>im iran</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) ringitt</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>von malaysia</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) saudi-dirham</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in saudi-arabien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) schilling</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in kenia</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) sitz</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>(the) weltbank in washington d c</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) taka</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in bangladesch</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) taxkurs</subject>
+  <object>(the) geschaetzte kurs eines wertpapiers</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) tolar</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in slowenien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der turik</subject>
+  <object>die waehrung</object>
+  <verb>ist</verb>
+  <adverbs>in der mongolei</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) us-dollar</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>auf den marshall-inseln</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) yen</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in japan</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) yuan</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>von china</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) allianz</subject>
+  <object>(the) mutterkonzern bank</object>
+  <verb>is-a</verb>
+  <adverbs>(the) dresdner</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) demoskopie</subject>
+  <object>(the) meinungsforschung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) dividende</subject>
+  <object>(the) gewinnbeteiligung eines aktionaers</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) einkommenssteuer</subject>
+  <object>(a) direkte steuer</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) expansion</subject>
+  <object>(the) ausweitung</object>
+  <verb>is-a</verb>
+  <adverbs>(the) wirtschaftstaetigkeit</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) federal reserve bank</subject>
+  <object>(the) notenbank</object>
+  <verb>is-a</verb>
+  <adverbs>(the) usa</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) hauptversammlung</subject>
+  <object>(the) versammlung der aktionaere</object>
+  <verb>is-a</verb>
+  <adverbs>eines unternehmens</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) heuer</subject>
+  <object>(the) lohn</object>
+  <verb>is-a</verb>
+  <adverbs>(the) seeleute</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) hundesteuer</subject>
+  <object>(a) gemeindesteuer</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) inflation</subject>
+  <object>(a) geldentwertung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) inventur</subject>
+  <object>(a) kaufmaennische bestandsaufnahme</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) knappschaft</subject>
+  <object>(the) zunft</object>
+  <verb>is-a</verb>
+  <adverbs>(the) bergleute</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) koerperschaftsteuer</subject>
+  <object>(the) gewinnsteuer eine kapitalgesellschaft</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) krone</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in schweden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) lira</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in der tuerkei</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) lira</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in malta</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) lohnsteuer</subject>
+  <object>(a) unterfall</object>
+  <verb>is-a</verb>
+  <adverbs>(the) einkommenssteuer</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) lufthansa</subject>
+  <object>(the) groesste fluggesellschaft</object>
+  <verb>is-a</verb>
+  <adverbs>in deutschland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) maltesische lira</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in malta</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) mehrwertsteuer</subject>
+  <object>(a) indirekte steuer</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) rupie</subject>
+  <object>(the) waehrung</object>
+  <verb>is-a</verb>
+  <adverbs>in indien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) waehrung</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>(the) pfund  in der tuerkei</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) waehrung</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>(the) pfund  in schottland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) waehrung</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>(the) ngultrum  in bhutan</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) zession</subject>
+  <object>(the) abtretung einer forderung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) aval</subject>
+  <object>(a) wechselbuergschaft</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) broker</subject>
+  <object>(a) boersenmakler</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) ag</subject>
+  <object>(a) aktiengesellschaft</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) aktiengesellschaft</subject>
+  <object>(a) handelsgesellschaft</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) aktiengesellschaft</subject>
+  <object>(a) juristische person des privatrechts</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) bank</subject>
+  <object>(a) kreditinstitut</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) dividende</subject>
+  <object>(the) gewinnanteil</object>
+  <verb>is-a</verb>
+  <adverbs>von einem aktionaer</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) dividende</subject>
+  <object>(a) ausgeschuetteter gewinn</object>
+  <verb>is-a</verb>
+  <adverbs>an einen aktionaer</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) emission</subject>
+  <object>(a) wertpapierausgabe</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) emmission</subject>
+  <object>(the) ausgabe</object>
+  <verb>is-a</verb>
+  <adverbs>von wertpapieren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) genossenschaft</subject>
+  <object>(a) wirtschaftlicher verein</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) kaution</subject>
+  <object>(a) sicherheitsleistung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) kommanditgesellschaft</subject>
+  <object>(a) personengesellschaft</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) konzession</subject>
+  <object>(a) verwaltungsrechtliche erlaubnis</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) novation</subject>
+  <object>(a) schuldumwandlung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) obligation</subject>
+  <object>(a) schuldverschreibung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) ohg</subject>
+  <object>(a) offene handelsgesellschaft</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) etat</subject>
+  <object>(a) haushaltsplan</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) tratte</subject>
+  <object>(a) gezogener wechsel</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) verdingung</subject>
+  <object>(a) ausschreibung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) zahlungsunfaehigkeit</subject>
+  <object>(a) insolvenz</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) fixum</subject>
+  <object>(the) grundgehalt</object>
+  <verb>is-a</verb>
+  <adverbs>eines handlungsreisenden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) jobkiller</subject>
+  <object>(a) arbeitsplatzvernichter</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) konnossement</subject>
+  <object>(a) seefrachtbrief</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) kreditor</subject>
+  <object>(a) glaeubiger</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) moratorium</subject>
+  <object>(a) zahlungsaufschub</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) offert</subject>
+  <object>(a) angebot</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) pfandbrief</subject>
+  <object>(a) festverzinsliche schuldverschreibung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) rabatt</subject>
+  <object>(a) preisnachlass</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) schwarzmarkt</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>illegal</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) wagnis</subject>
+  <object>(a) risiko</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) zielkauf</subject>
+  <object>(a) kreditkauf</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) zwischenurteil</subject>
+  <object>(a) grundurteil</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frankfurt</subject>
+  <object>(the) fuenftgroesste stadt</object>
+  <verb>is-a</verb>
+  <adverbs>von deutschland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frankfurt</subject>
+  <object>(the) groesste stadt</object>
+  <verb>is-a</verb>
+  <adverbs>von hessen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fusion</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>die verschmelzung von unternehmen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gasprom</subject>
+  <object>(the) groesste erdgasproduzent</object>
+  <verb>is-a</verb>
+  <adverbs>(the) welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>giralgeld</subject>
+  <object>(a) andere bezeichnung</object>
+  <verb>is-a</verb>
+  <adverbs>fuer buchgeld</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>giroverkehr</subject>
+  <object>bargeldlosen zahlungsverkehr</object>
+  <verb>ist</verb>
+  <adverbs>von banken</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>haiti</subject>
+  <object>das aermste</object>
+  <verb>ist</verb>
+  <adverbs>amerikanische land</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>haiti</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>das aermste land von amerika</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>in atlanta</subject>
+  <object>(the) sitz</object>
+  <verb>is-a</verb>
+  <adverbs>von coca-cola</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>inkasso</subject>
+  <object>(the) einziehung</object>
+  <verb>is-a</verb>
+  <adverbs>von geldforderungen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jobsharing</subject>
+  <object>(the) teilen</object>
+  <verb>is-a</verb>
+  <adverbs>eines arbeitsplatzes</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kaizen</subject>
+  <object>(a) unternehmensfuehrungskonzept</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>liquiditaet</subject>
+  <object>(the) zahlungsfaehigkeit</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mobbing</subject>
+  <object>(a) starke belaestigung</object>
+  <verb>is-a</verb>
+  <adverbs>von arbeitskollegen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>payback</subject>
+  <object>(the) moderne variante</object>
+  <verb>is-a</verb>
+  <adverbs>von rabattmarken</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pfizer inc</subject>
+  <object>(the) groesste pharmakonzern</object>
+  <verb>is-a</verb>
+  <adverbs>(the) welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>prokura</subject>
+  <object>(the) gesetzlich definierte handlungsvollmacht</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>reibach</subject>
+  <object>(a) unverhaeltnismaessiger hoher gewinn</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rendite</subject>
+  <object>(the) ertrag eines angelegten kapitals</object>
+  <verb>is-a</verb>
+  <adverbs>innerhalb eines jahres</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rezession</subject>
+  <object>(the) rueckgang</object>
+  <verb>is-a</verb>
+  <adverbs>(the) wirtschaftstaetigkeit</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tara</subject>
+  <object>(the) gewicht einer verpackung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ups</subject>
+  <object>(the) groesste private paketversender</object>
+  <verb>is-a</verb>
+  <adverbs>(the) welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ver.di</subject>
+  <object>(the) name fuer die dienstleistungsgewerkschaft</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wal-mart</subject>
+  <object>(the) groesste handelskonzern</object>
+  <verb>is-a</verb>
+  <adverbs>(the) welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>xetra</subject>
+  <object>(a) elektronisches boersenhandelssystem</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frankfurt</subject>
+  <object></object>
+  <verb>liegt</verb>
+  <adverbs>an dem main</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>den bargeldlosen zahlungsverkehr</subject>
+  <object>man giroverkehr</object>
+  <verb>nennt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ryanair</subject>
+  <object>sich ikea</object>
+  <verb>nennt</verb>
+  <adverbs>der luefte</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein patent</subject>
+  <object>eine erfindung</object>
+  <verb>schuetzt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>depots</subject>
+  <object>die bei einer bank verwahrten wertpapiere</object>
+  <verb>sind</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein barrel</subject>
+  <object>159 liter</object>
+  <verb>sind</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein gros</subject>
+  <object>144 stueck</object>
+  <verb>sind</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>high flyer</subject>
+  <object>wertpapiere</object>
+  <verb>sind</verb>
+  <adverbs>mit steilem kursanstieg</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>liquide personen</subject>
+  <object></object>
+  <verb>sind</verb>
+  <adverbs>fluessig</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>subventionen</subject>
+  <object>staatliche zuschuesse</object>
+  <verb>sind</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kaizen</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>aus japan</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>comecon</subject>
+  <object>fuer council for mutual economic assistance</object>
+  <verb>steht</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gmbh</subject>
+  <object></object>
+  <verb>steht</verb>
+  <adverbs>fuer gesellschaft mit beschraenkter haftung</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein betriebsrat</subject>
+  <object>die anliegen</object>
+  <verb>vertretet</verb>
+  <adverbs>der belegschaft</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>milton friedman</subject>
+  <object>den monetarismus</object>
+  <verb>vertritt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der schilling</subject>
+  <object>die waehrung</object>
+  <verb>war</verb>
+  <adverbs>in oesterreich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der schwarze freitag</subject>
+  <object></object>
+  <verb>war</verb>
+  <adverbs>am 13 mai 1927</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die lira</subject>
+  <object>die waehrung</object>
+  <verb>war</verb>
+  <adverbs>in italien</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die malboro zigaretten</subject>
+  <object>morris</object>
+  <verb>werden</verb>
+  <adverbs>von philp  hergestellt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein kreditnehmer</subject>
+  <object>zinsen</object>
+  <verb>zahlt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>

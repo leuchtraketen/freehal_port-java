@@ -1,0 +1,120 @@
+<fact>
+  <subject>ich</subject>
+  <object>die naechsten lottozahlen</object>
+  <verb>kenne</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs>nur</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs>in dem internet</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>kennst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>

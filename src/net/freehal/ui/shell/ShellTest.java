@@ -25,7 +25,7 @@ import net.freehal.core.lang.german.GermanTagger;
 import net.freehal.core.parser.AbstractParser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.pos.AbstractTagger;
-import net.freehal.core.pos.TaggerCacheDisk;
+import net.freehal.core.pos.TaggerCacheMemory;
 import net.freehal.core.predefined.PredefinedAnswerProvider;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
@@ -51,17 +51,16 @@ public class ShellTest {
 				.setPath(new File("..")));
 
 		// initialize the grammar
-		// also possible: EnglishGrammar, GermanGrammar, FakeGrammar
+		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
 		AbstractGrammar grammar = new GermanGrammar();
 		grammar.readGrammar(new File("grammar.txt"));
 		FreehalConfig.setGrammar(grammar);
 
 		// initialize the part of speech tagger
-		// also possible: EnglishTagger, GermanTagger, FakeTagger
-		//
-		// the parameter is either a MemoryTaggerCache (faster, more RAM) or a
-		// DiskTaggerCache (slower, less RAM)
-		AbstractTagger tagger = new GermanTagger(new TaggerCacheDisk());
+		// (also possible: EnglishTagger, GermanTagger, FakeTagger)
+		// the parameter is either a TaggerCacheMemory (faster, higher memory
+		// usage) or a TaggerCacheDisk (slower, less memory usage)
+		AbstractTagger tagger = new GermanTagger(new TaggerCacheMemory());
 		tagger.readTagsFrom(new File("guessed.pos"));
 		tagger.readTagsFrom(new File("brain.pos"));
 		tagger.readTagsFrom(new File("memory.pos"));
@@ -70,7 +69,7 @@ public class ShellTest {
 		FreehalConfig.setTagger(tagger);
 
 		// initialize the database
-		// also possible: DiskDatabase, FakeDatabase
+		// (also possible: DiskDatabase, FakeDatabase)
 		DatabaseImpl database = new DiskDatabase();
 		// while updating the cache, a cache_xy/ directory will be filled with
 		// information from the database files in lang_xy/

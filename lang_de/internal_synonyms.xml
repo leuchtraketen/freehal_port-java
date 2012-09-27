@@ -1,0 +1,170 @@
+<fact>
+  <subject>(a)</subject>
+  <object>a</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>(a)</subject>
+  <object>ein</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>(a)</subject>
+  <object>eine</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>(the)</subject>
+  <object>der</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>(the)</subject>
+  <object>die</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>(the)</subject>
+  <object>das</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>who</subject>
+  <object>wer</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>what</subject>
+  <object>was</object>
+  <verb>=</verb>
+</fact>
+
+<fact>
+  <subject>=</subject>
+  <object>~</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>~</subject>
+  <object>is-a</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>is-a</subject>
+  <object>bin</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>bin</subject>
+  <object>bist</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>bist</subject>
+  <object>ist</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>ist</subject>
+  <object>sind</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>sind</subject>
+  <object>seid</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>seid</subject>
+  <object>sein</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>sein</subject>
+  <object>heisst</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>heisst</subject>
+  <object>heisse</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>heisse</subject>
+  <object>heissen</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>heissen</subject>
+  <object>sei</object>
+  <verb>=</verb>
+</fact>
+
+<fact>
+  <subject>war</subject>
+  <object>wurde</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>wurde</subject>
+  <object>wurden</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>wurden</subject>
+  <object>werden</object>
+  <verb>=</verb>
+</fact>
+
+<fact>
+  <subject>werde</subject>
+  <object>wirst</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>wirst</subject>
+  <object>wurdest</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>wurdest</subject>
+  <object>wurde</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>wurde</subject>
+  <object>wuerdet</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>wuerdet</subject>
+  <object>werdet</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>wuerdet</subject>
+  <object>werden</object>
+  <verb>=</verb>
+</fact>
+
+<fact>
+  <subject>bezeichne</subject>
+  <object>bezeichnet</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>bezeichnet</subject>
+  <object>bezeichnen</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>bezeichnen</subject>
+  <object>bezeichnest</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>bezeichnest</subject>
+  <object></object>
+  <verb>=</verb>
+</fact>
+

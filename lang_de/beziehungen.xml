@@ -1,0 +1,550 @@
+<fact>
+  <subject>aggressiv sein</subject>
+  <object>sich beruhigen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arbeitslos sein</subject>
+  <object>die hoffnung nicht aufgeben</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arm sein</subject>
+  <object>darueber nicht traurig sein</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aufs ohr hauen</subject>
+  <object>dabei nicht schnarchen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ausgelaugt sein</subject>
+  <object>sich ausruhen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>auto fahren</subject>
+  <object>vorsichtig fahren</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>besoffen sein</subject>
+  <object>daran selber schuld sein</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betrunken sein</subject>
+  <object>seinen rausch ausschlafen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bier trinken</subject>
+  <object>nicht zuviel bier trinken</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bier trinken</subject>
+  <object>nicht zuviel davon trinken</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>daran glauben</subject>
+  <object>sich ganz sicher ein</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dick sein</subject>
+  <object>sich mehr bewegen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>durst haben</subject>
+  <object>etwas trinken</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eine rauchen</subject>
+  <object>diese sucht bekaempfen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>einsam fuehlen</subject>
+  <object>etwas mit freunden unternehmen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>einsam sein</subject>
+  <object>sich mit freunden treffen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erfolg haben</subject>
+  <object>sich darueber freuen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hunger haben</subject>
+  <object>etwas essen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hungrig sein</subject>
+  <object>etwas essen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>in die schule gehen</subject>
+  <object>hoffentlich etwas lernen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kochen</subject>
+  <object>nothing anbrennen lassen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kochen gehen</subject>
+  <object>nothing anbrennen lassen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kopfweh haben</subject>
+  <object>eine tablette nehmen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>krank sein</subject>
+  <object>ins bett legen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>krank sein</subject>
+  <object>zum arzt gehen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>langeweile haben</subject>
+  <object>etwas dagegen unternehmen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>langweilig sein</subject>
+  <object>etwas unternehmen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>laufen</subject>
+  <object>dabei nicht stolpern</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>laufen gehen</subject>
+  <object>dabei nicht stolpern</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>muede sein</subject>
+  <object>schlafen gehen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rauchen</subject>
+  <object>mit dem laster aufhoeren</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rauchen gehen</subject>
+  <object>mit dem laster aufhoeren</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>reich sein</subject>
+  <object>sich darueber freuen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>saufen gehen</subject>
+  <object>an die gesundheit denken</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schlecht hoeren</subject>
+  <object>hoerapparat kaufen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schlecht sehen</subject>
+  <object>brille kaufen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schlecht sehen</subject>
+  <object>brille putzen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schlecht sehen</subject>
+  <object>zum augenarzt gehen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schoen sein</subject>
+  <object>der natur dankbar sein</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schule gehen</subject>
+  <object>hoffentlich etwas lernen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schwimmen gehen</subject>
+  <object>dabei ein wasser schlucken</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>servus</subject>
+  <object>guten tag</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sich blamieren</subject>
+  <object>es nicht tragisch nehmen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>traurig sein</subject>
+  <object>sich nicht unterkriegen lassen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>uebergewichtig sein</subject>
+  <object>sich viel bewegen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verliebt sein</subject>
+  <object>die zeit mit dem partner geniessen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verreisen</subject>
+  <object>den urlaub genissen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wandern gehen</subject>
+  <object>festes schuhwerk anziehen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zuviel gegessen haben</subject>
+  <object>sich nicht ueber magenschmerzen wundern</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aengstlich sein</subject>
+  <object>sich nicht fuerchten</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>angst haben</subject>
+  <object>eine furcht zeigen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aergerlich sein</subject>
+  <object>sich beruhigen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bedrueckt sein</subject>
+  <object>positiv denken</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>belastet sein</subject>
+  <object>nicht zu viel darueber nachdenken</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>betruebt sein</subject>
+  <object>alles mehr positv sehen</object>
+  <verb>reasonof</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>

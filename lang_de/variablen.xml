@@ -1,0 +1,1030 @@
+<fact>
+  <subject>$a$</subject>
+  <object>sich</object>
+  <verb>befindet</verb>
+  <adverbs>in $b$</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>steht</verb>
+    <adverbs>in $b$</adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>50</subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object>online</object>
+  <verb>bin</verb>
+  <adverbs>lange</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>immer online</object>
+    <verb>bin f=></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>100</subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>frage</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>bin f=></verb>
+    <adverbs>neugierig</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>f=> will wissen</subject>
+    <object>ich es</object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object>bin f=> wissbegierig</object>
+    <verb></verb>
+    <adverbs>ich</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs>100</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>$b$</object>
+  <verb>gegessen hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$b$</subject>
+    <object>$a$</object>
+    <verb>=> geschmeckt hat</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>=> geschmeckt hat</subject>
+    <object>$b$</object>
+    <verb></verb>
+    <adverbs>$a$</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>$b$</object>
+  <verb>gegessen hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$b$</subject>
+    <object>$a$</object>
+    <verb>=> geschmeckt hat</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wie</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>geh</verb>
+  <adverbs>ins bett</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>f=> schlaefe</verb>
+    <adverbs>nie</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>durst</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object>etwas</object>
+    <verb>f=> sollte trinken</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>q=> trinkt</subject>
+    <object>$a$</object>
+    <verb></verb>
+    <adverbs>nothing</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>warum</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>mir</subject>
+  <object>diesen namen</object>
+  <verb>hat</verb>
+  <adverbs>gegeben</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>das team</subject>
+    <object>dir diesen namen</object>
+    <verb>f=> hat</verb>
+    <adverbs>gegeben</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$$month$$</subject>
+  <object>(a) monat</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>$$year$$</subject>
+  <object>(a) jahr</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>$b$</object>
+  <verb>ist</verb>
+  <adverbs>gross</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object>einen durchmesser</object>
+    <verb>hat</verb>
+    <adverbs>von $b$</adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>$b$</object>
+  <verb>ist</verb>
+  <adverbs>gross</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object>$b$</object>
+    <verb>ist</verb>
+    <adverbs>hoch</adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>war</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>langweilig</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>lies</subject>
+    <object>doch ein buch</object>
+    <verb>f=></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>muede</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>f=> gehen schlafen sollte</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object></object>
+  <verb>sollst tun</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>dir einen rat</object>
+    <verb>f=> geben kann/can</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>wiege</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>software</subject>
+    <object>ein gewicht</object>
+    <verb>f=> hat</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>ficken</object>
+  <verb>will</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>geh doch</subject>
+    <object></object>
+    <verb>f=></verb>
+    <adverbs>in ein bordell</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>ich</subject>
+  <object></object>
+  <verb>herkomme</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>du</subject>
+    <object></object>
+    <verb>f=> kommst</verb>
+    <adverbs>aus dem internet</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>f=></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>aus dem kopf von einem programmierer</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$$mday$$ $$month$$ $$year$$</subject>
+  <object>ein datum</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wir</subject>
+  <object>heute den $$mday$$ $$month$$ $$year$$</object>
+  <verb>haben</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wir</subject>
+  <object>$$mday$$ $$month$$ $$year$$</object>
+  <verb>haben</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>aussieht</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object>ein aussehen</object>
+    <verb>hat</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>ein aussehen</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>aussieht</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>(a) b</subject>
+  <object></object>
+  <verb>anhat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>_a_b_</subject>
+    <object></object>
+    <verb>anhaben kann/can</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>anhat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>anhaben kann/can</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>mehr jeliza</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.000000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object></object>
+    <verb>f=> verwechselt wurde</verb>
+    <adverbs>immer mit eliza</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>ist</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>du</subject>
+  <object>$a$</object>
+  <verb>besitzt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>auch $a$</object>
+    <verb>f=> moechte</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>q=> schenkst</subject>
+    <object>du</object>
+    <verb></verb>
+    <adverbs>mir dann $a$</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.000000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>warum</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>geht</verb>
+  <adverbs>jetzt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich</subject>
+    <object>wuensche dir einen schoenen tag</object>
+    <verb>f=></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>f=></subject>
+    <object>danke</object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>fuer das gespraech</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$$wday$$</subject>
+  <object>(a) tag</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dein name</subject>
+  <object>$a$</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>ich du</subject>
+    <object>$$randomname$$</object>
+    <verb>dachte f=> heisst</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>$b$</object>
+  <verb>studiert</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$b$</subject>
+    <object>sicher sehr interessant</object>
+    <verb>f=> ist</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>q=></subject>
+    <object>gefaellt</object>
+    <verb></verb>
+    <adverbs>mir an</adverbs>
+    <extra></extra>
+    <questionword>$b$</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>was</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>dick</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>abnehmen f=> solltest</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>wohnt</verb>
+  <adverbs>in $b$</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>q=> wohnt</verb>
+    <adverbs>in b schon lange</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>q=></subject>
+    <object>gefaellt</object>
+    <verb></verb>
+    <adverbs>es $a$</adverbs>
+    <extra></extra>
+    <questionword>in $b$</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>wie</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>$b$</object>
+  <verb>erfunden hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object>$b$</object>
+    <verb>erfand</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>mit $a$</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>q=> sein soll</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>heute geburtstag</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>f=></verb>
+    <adverbs>alle gute</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>blond</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>blond wirklich</subject>
+    <object>bloed</object>
+    <verb>macht q=></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>hunger</object>
+  <verb>hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object>etwas</object>
+    <verb>essen f=> solltest</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject>f=> pluendern sollte</subject>
+    <object>$a$</object>
+    <verb></verb>
+    <adverbs>den kuehlschrank</adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>1.000000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object></object>
+  <verb>sein</verb>
+  <adverbs>alt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object></object>
+    <verb>gestorben ist</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>$a$ beherrscht $b$, wenn $a$ $b$ spricht</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>$a$</subject>
+  <object>$b$</object>
+  <verb>--> beherrscht</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject>$a$</subject>
+    <object>$b$</object>
+    <verb>spricht</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword>wenn</questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>

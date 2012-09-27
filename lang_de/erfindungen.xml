@@ -1,0 +1,7780 @@
+<fact>
+  <subject>albert hofmann</subject>
+  <object>das lsd</object>
+  <verb>entdeckt hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>johannes gutenberg</subject>
+  <object>den druck</object>
+  <verb>erfand</verb>
+  <adverbs>mit beweglichen lettern</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benjamin franklin</subject>
+  <object>den blitzableiter</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benjamin franklin</subject>
+  <object>die bifokalbrille</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gambrinus</subject>
+  <object>als der erfinder des bierbrauens</object>
+  <verb>gilt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>adolf eugen fick</subject>
+  <object>die kontaktlinse</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>adolphe clement</subject>
+  <object>das luftschiff</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aeneas coffey</subject>
+  <object>den waermetauscher</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aim argand</subject>
+  <object>die oellampe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alchwarizmi</subject>
+  <object>die algebra erfunden</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alrazi</subject>
+  <object>die seife erfunden</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert jones</subject>
+  <object>die wellpappe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert hofmann</subject>
+  <object>das lsd</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albrecht ludwig berblinger</subject>
+  <object>den haengegleiter</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alejandro finisterre</subject>
+  <object>das tischfussball</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alexander fleming</subject>
+  <object>das penicillin</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alexander graham bell</subject>
+  <object>das telefon</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alexander parkes</subject>
+  <object>das zelluloid</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alfonso bialetti</subject>
+  <object>die espressokanne</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alfred buechi</subject>
+  <object>den turbolader</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alfred kaercher</subject>
+  <object>den heisswasserhochdruckreiniger</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alfred nobel</subject>
+  <object>das dynamit erfunden</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>alhazen</subject>
+  <object>die</object>
+  <verb>hat erfunden erfunden</verb>
+  <adverbs>lupe</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>allan cormack</subject>
+  <object>die computertomographie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anders celsius</subject>
+  <object>das thermometer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anton dreher senior</subject>
+  <object>das lagerbier</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anton loehner</subject>
+  <object>die rollschuhe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>archimedes</subject>
+  <object>das hebelgesetz entdeckt</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>archimedes</subject>
+  <object>das spezifische gewicht entdeckt</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>archimedes</subject>
+  <object>sehr</object>
+  <verb>hat erfunden</verb>
+  <adverbs>viel erfunden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arnold william arnold anthony</subject>
+  <object>das galvanometer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arthur koepchen</subject>
+  <object>das pumpspeicherkraftwerk</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>artur fischer</subject>
+  <object>den duebel</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>asa griggs candler</subject>
+  <object>den warengutschein</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>august loden</subject>
+  <object>den lodenmantel</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>august fischer</subject>
+  <object>den uhu</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>augustine sackett</subject>
+  <object>die gipskartonplatten</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bartolomeo cristofori</subject>
+  <object>das klavier</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benjamin biram</subject>
+  <object>das anemometer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bette nesmith graham</subject>
+  <object>das tippex</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bill gates</subject>
+  <object>das windowsbetriebssystem</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>blaise pascal</subject>
+  <object>die rechenmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cai lun</subject>
+  <object>das papier</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>caleb bradham</subject>
+  <object>das pepsi cola</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carl djerassi</subject>
+  <object>die antibabypille</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carl friedrich benz</subject>
+  <object>den motorwagen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carl gassner</subject>
+  <object>die trockenzellenbatterie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carl von linde</subject>
+  <object>die ammoniakkaeltemaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carlos glidden</subject>
+  <object>die schreibmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>celadon daboll</subject>
+  <object>das nebelhorn</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles best</subject>
+  <object>das insulin</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles bourseul</subject>
+  <object>das telefon erfunden</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles brace darrow</subject>
+  <object>das monopolyspiel</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles fey</subject>
+  <object>den einarmigen banditen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles francis brush</subject>
+  <object>den dynamo</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles ginsburg</subject>
+  <object>die videokassette</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles goodyear</subject>
+  <object>die kautschukvulkanisation</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles renard</subject>
+  <object>das luftschiff</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles richard drew</subject>
+  <object>die blutbank</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>chester carlson</subject>
+  <object>die xerographie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>christine hardt</subject>
+  <object>den buestenhalter</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>christopher cockerell</subject>
+  <object>das luftkissenfahrzeug</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>clarence birdseye</subject>
+  <object>die tiefkuehlkost</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>conrad gesner</subject>
+  <object>den bleistift</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>constantin fahlberg</subject>
+  <object>das saccharin</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cornelis corneliszoon</subject>
+  <object>die saegemuehle</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cornelis drebbel</subject>
+  <object>das unterseeboot</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>daniel gabriel fahrenheit</subject>
+  <object>das quecksilberthermometer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das polyvinylchlorid</subject>
+  <object></object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>david brewster</subject>
+  <object>das kaleidoskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>david bushnell</subject>
+  <object>die zeitbombe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>den wasserrohrkessel</subject>
+  <object></object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>denis papin</subject>
+  <object>den dampfkochtopf</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dennis gabor</subject>
+  <object>die holographie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die rollschuhe</subject>
+  <object></object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alberto palacio & ferdinand arnodin</subject>
+  <object>die schwebefaehre</object>
+  <verb>haben erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>diego ribero</subject>
+  <object>die wasserpumpe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dieter binninger</subject>
+  <object>die mengenlehreuhr</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dieter binninger</subject>
+  <object>die ewigkeitsgluehbirne</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dom perignon</subject>
+  <object>den champagner</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>donald bitzer</subject>
+  <object>den plasmabildschirm</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dont bnki</subject>
+  <object>den vergaser</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dorothy gerber</subject>
+  <object>die vorgefertigte babynahrung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>douard bndictus</subject>
+  <object>das sicherheitsglas</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>douglas cockcroft</subject>
+  <object>den teilchenbeschleuniger</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>douglas engelbart</subject>
+  <object>die computermaus</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dugald clark</subject>
+  <object>den zweitaktmotor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>earl flosdorf</subject>
+  <object>das trockengefrierverfahren</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eben norton horsford</subject>
+  <object>das backpulver</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edmond halley</subject>
+  <object>die taucherglocke</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edmund cartwright</subject>
+  <object>den webstuhl</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edmund davy</subject>
+  <object>das azetylen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edward calahan</subject>
+  <object>den boersenfernschreiber</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edward jenner</subject>
+  <object>die pockenimpfung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edwin binney</subject>
+  <object>die wachsmalstifte</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edwin laurentine drake</subject>
+  <object>die oelfoerderung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elmer gates</subject>
+  <object>den schaumfeuerloescher</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>enrico fermi</subject>
+  <object>den kernreaktor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eric fawcett</subject>
+  <object>das polyethylen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erik rotheim</subject>
+  <object>die spruehdose</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ernst bettag</subject>
+  <object>das bobbycar</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ernst ruska</subject>
+  <object>das elektronenmikroskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eugen baumann</subject>
+  <object>das polyvinylchlorid</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eugene clark</subject>
+  <object>den gabelstapler</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felix hoffmann</subject>
+  <object>das aspirin</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>forrest bird</subject>
+  <object>die atemschutzmaske</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frank bowden</subject>
+  <object>den bowdenzug</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franois nicolas appert</subject>
+  <object>die konservierung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frederic stanley kipping</subject>
+  <object>das silikon</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedrich fischer</subject>
+  <object>das kugellager</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gambrinus</subject>
+  <object>das bierbrauen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>garnet carter</subject>
+  <object>das miniaturgolf</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gary fisher</subject>
+  <object>das mountainbike</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gaston plante</subject>
+  <object>den bleiakkumulator</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george antheil</subject>
+  <object>das frequenzsprungverfahren</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george babcock</subject>
+  <object>den wasserrohrkessel</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george crum</subject>
+  <object>die kartoffelchips</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george grant blaisdell</subject>
+  <object>das zippofeuerzeug</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george henry felt</subject>
+  <object>die signalrakete</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george pullman</subject>
+  <object>den schlafwagen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>georges claude</subject>
+  <object>die neonroehre</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>georges leclanch</subject>
+  <object>die trockenbatterie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gerd binnig</subject>
+  <object>das rastertunnelmikroskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gerhard fischer</subject>
+  <object>den metalldetektor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gerhard mueller</subject>
+  <object>den schlepplift</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>giovanni de dondi</subject>
+  <object>die astronomische uhr</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>glenn curtiss</subject>
+  <object>das wohnmobil</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>godfrey hounsfield</subject>
+  <object>die computertomographie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gordon gould</subject>
+  <object>den laser</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gottlieb christoph bohnenberger</subject>
+  <object>die influenzmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gottlieb daimler</subject>
+  <object>das motorrad</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gottlieb daimler</subject>
+  <object>den benzinmotor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gregory pincus</subject>
+  <object>die antibabypille</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guglielmo marconi</subject>
+  <object>die drahtlose telegrafie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gyoergy jendrassik</subject>
+  <object>den turboprop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hans friedrich geitel</subject>
+  <object>die fotozelle</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hans wilhelm geiger</subject>
+  <object>den geigerzaehler</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>harold brown</subject>
+  <object>den elektrischen stuhl</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>harold gatty</subject>
+  <object>den luftfahrtsextant</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>harold lyons</subject>
+  <object>die atomuhr</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich arnold</subject>
+  <object>die uhrfeder</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich rohrer</subject>
+  <object>das rastertunnelmikroskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hellmuth hertz</subject>
+  <object>den ultraschall</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henri dufaux</subject>
+  <object>den fahrradmotor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henri giffard</subject>
+  <object>das angetriebene luftschiff</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henri gustave delvigne</subject>
+  <object>den vorderlader</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henry ford</subject>
+  <object>das fliessband</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henry john heinz</subject>
+  <object>das tomatenketchup</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>herbert edwin land</subject>
+  <object>die polaroidkamera</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>herman hollerith</subject>
+  <object>die lochkarten</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann anschuetzkaempfe</subject>
+  <object>den kreiselkompass</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann berthold</subject>
+  <object>das typometer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann oberth</subject>
+  <object>die fluessigkeitsraketen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann oberth</subject>
+  <object>die feststoffraketen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>herta heuwer</subject>
+  <object>die currywurst</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>holger crafoord</subject>
+  <object>die kuenstliche niere</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>horst burbulla</subject>
+  <object>den kamerakran</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hugo erfurt</subject>
+  <object>die raufasertapete</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hugo junkers</subject>
+  <object>das ganzmetallflugzeug</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hugo koch</subject>
+  <object>die rotorchiffriermaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>humphry davy</subject>
+  <object>die grubenlampe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ian donald</subject>
+  <object>das ultraschallbild</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ira remsen</subject>
+  <object>das saccharin erfunden</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>isaac newton</subject>
+  <object>das spiegelteleskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jacques brandenberger</subject>
+  <object>das zellophan</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jacques yves cousteau</subject>
+  <object>den lungenautomat</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jakob degen</subject>
+  <object>das fluggeraet</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james ayscough</subject>
+  <object>die sonnenbrille</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james dyson</subject>
+  <object>den staubsauger</object>
+  <verb>hat erfunden</verb>
+  <adverbs>mit fliehkraftabscheider</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james fergason</subject>
+  <object>den fluessigkristallbildschirm</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james nasmyth</subject>
+  <object>den dampfhammer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james stuart blackton</subject>
+  <object>den animationsfilm</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jaron lanier</subject>
+  <object>die virtuelle realitaet</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jesse reno</subject>
+  <object>die rolltreppe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>johann bruecker</subject>
+  <object>den rasierapparat</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>johann korbuly</subject>
+  <object>den matadorholzbaukasten</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>johann maria farina</subject>
+  <object>das koelnisch wasser</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>johannes gutenberg</subject>
+  <object>den buchdruck</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john barber</subject>
+  <object>die gasturbine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john bardeen</subject>
+  <object>den transistor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john blenkinsop</subject>
+  <object>die dampflokomotive</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john boyd dunlop</subject>
+  <object>den autoreifen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john deere</subject>
+  <object>den stahlpflug</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john froehlich</subject>
+  <object>den traktor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john harington</subject>
+  <object>das wasserklosett</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john harvey kellogg</subject>
+  <object>die cornflakes</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john heysham gibbon</subject>
+  <object>die herzlungenmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john napier</subject>
+  <object>den logarithmus</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john pemberton</subject>
+  <object>das cocacola</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john wesley hyatt</subject>
+  <object>die zelluloseherstellung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john warner backus</subject>
+  <object>fortran</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>josef madersperger</subject>
+  <object>die naehmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph fraunhofer</subject>
+  <object>das spektroskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph gayetty</subject>
+  <object>das toilettenpapier</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph glidden</subject>
+  <object>den stacheldraht</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph hardtmuth</subject>
+  <object>die bleistiftmine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph henry</subject>
+  <object>den elektromagnet</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph priestley</subject>
+  <object>das sodawasser</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph bramah</subject>
+  <object>die zapfanlage</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph gayetty</subject>
+  <object>das klopapier</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>josephine cochrane</subject>
+  <object>die geschirrspuelmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>juan de la cierva</subject>
+  <object>den tragschrauber</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>juergen dethloff</subject>
+  <object>die chipkarte</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jules bied</subject>
+  <object>den tonerdezemant</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>julius elster</subject>
+  <object>die fotozelle</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>julius fromm</subject>
+  <object>das latexkondom</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>justus claproth</subject>
+  <object>das recyclingpapier</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karl ferdinand braun</subject>
+  <object>das oszilloskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karl nessler</subject>
+  <object>die dauerwelle</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kenneth house</subject>
+  <object>den rauchdetektor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>king camp gillette</subject>
+  <object>die rasierklinge</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ktesibios</subject>
+  <object>das federkatapult</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lars magnus ericsson</subject>
+  <object>den telefonhoerer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leo hendrik baekeland</subject>
+  <object>das bakelit</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leonard goodall</subject>
+  <object>den benzinrasenmaeher</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>levi strauss</subject>
+  <object>die jeans</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis braille</subject>
+  <object>die blindenschrift</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis deguerre</subject>
+  <object>die fotografie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis glass</subject>
+  <object>die jukebox</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis leitz</subject>
+  <object>den leitzordner</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis pasteur</subject>
+  <object>die pasteurisierung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis reard</subject>
+  <object>den bikini</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis renault</subject>
+  <object>die trommelbremse</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis renault</subject>
+  <object>den stossdaempfer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lszl jzsef bir</subject>
+  <object>den kugelschreiber</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lucien gaulard</subject>
+  <object>den transformator</object>
+  <verb>hat erfunden</verb>
+  <adverbs>fuer wechselstrom</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>luigi palmieri</subject>
+  <object>das seismometer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>marion donovan</subject>
+  <object>die einwegwindel</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>marvin camras</subject>
+  <object>die magnetaufzeichnung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mats leijon</subject>
+  <object>den hochspannungsgenerator</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>maurice lvy</subject>
+  <object>den lippenstift</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>max giese</subject>
+  <object>die betonpumpe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>max mauermann</subject>
+  <object>den rostfreien stahl</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>max knoll</subject>
+  <object>das elektronenmikroskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>melitta bentz</subject>
+  <object>die filtertuete</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>michael cullen</subject>
+  <object>den supermarkt</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>michael faraday</subject>
+  <object>den bunsenbrenner</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nancy johnson</subject>
+  <object>die handbetriebene eismaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>neil arnott</subject>
+  <object>das wasserbett</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nicholas joseph cugnot</subject>
+  <object>den dampfwagen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nils bohlin</subject>
+  <object>den sicherheitsgurt</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nolan bushnell</subject>
+  <object>das videospiel</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ole evinrude</subject>
+  <object>den aussenbordmotor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ole kirk christiansen</subject>
+  <object>das lego</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oskar czeija</subject>
+  <object>das tonband</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otto griessing</subject>
+  <object>den volksempfaenger</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otto lilienthal</subject>
+  <object>den normalsegelapparat</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ottomar anschuetz</subject>
+  <object>den schlitzverschluss</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paul carl beiersdorf</subject>
+  <object>den wundschnellverband</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paul daimler</subject>
+  <object>den panzerkraftwagen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paul langevin</subject>
+  <object>das sonar</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>peter durand</subject>
+  <object>die konservendose</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>peter mitterhofer</subject>
+  <object>die schreibmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>petrache poenaru</subject>
+  <object>den fuellfederhalter</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ralph baer</subject>
+  <object>die videospielkonsole</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ray dolby</subject>
+  <object>die rauschunterdrueckung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>raymond damadian</subject>
+  <object>die magnetresonanztomographie</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>reinhold burger</subject>
+  <object>die rontgenroehre</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>reinhold burger</subject>
+  <object>die thermosflasche</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>richard bacon</subject>
+  <object>die schnellpresse</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>richard drew</subject>
+  <object>das klebeband</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>richard stanton avery</subject>
+  <object>das selbstklebeetikett</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert adler</subject>
+  <object>die fernbedienung erfunden</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert barron</subject>
+  <object>das tresorschloss</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert bosch</subject>
+  <object>die zuendkerze</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert conrad</subject>
+  <object>das kugellager</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert edwards</subject>
+  <object>die reagenzglasbefruchtung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert fulton</subject>
+  <object>den schaufelraddampfer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert oppenheimer</subject>
+  <object>die atombombe</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert wilhelm bunsen</subject>
+  <object>den bunsenbrenner</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>roy plunkett</subject>
+  <object>das teflon</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rudolf diesel</subject>
+  <object>den dieselmotor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rune elmqvist</subject>
+  <object>den herzschrittmacher</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>samuel blumer</subject>
+  <object>das heizkissen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>samuel colt</subject>
+  <object>den revolver</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>samuel guthrie</subject>
+  <object>das chloroform</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>samuel hunter christie</subject>
+  <object>die wheatstonebruecke</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>scott jones</subject>
+  <object>das voicemail</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>seth boyden</subject>
+  <object>die nagelmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sidney darlington</subject>
+  <object>die darlingtonschaltung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sigmund bergmann</subject>
+  <object>die gluehlampe</object>
+  <verb>hat erfunden</verb>
+  <adverbs>mit edison</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stain atkinson</subject>
+  <object>die komplettgiessmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stephanie kwolek</subject>
+  <object>das kevlar</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stephen perry</subject>
+  <object>das gummiband</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>steve jobs</subject>
+  <object>das macintoshbetriebssystem</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sumio iijima</subject>
+  <object>die kohlenstoffnanoroehre</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thaddeus cahill</subject>
+  <object>das dynamophon</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas alva edison</subject>
+  <object>das kinetoskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas alva edison</subject>
+  <object>das mikrophon</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas alva edison</subject>
+  <object>den fernschreiber</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas alva edison</subject>
+  <object>den phonograph</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas alva edison</subject>
+  <object>den projektor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas cook</subject>
+  <object>die pauschalreise</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas davenport</subject>
+  <object>den elektromotor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas edmondson</subject>
+  <object>die fahrkarte</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas fowler</subject>
+  <object>die zentralheizung</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas adams</subject>
+  <object>den kaugummi erfunden</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>titusz ott titusz blthy</subject>
+  <object>das wattmeter</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>titusz ott titusz blthy</subject>
+  <object>den transformator</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>titusz ott titusz blthy</subject>
+  <object>den turbogenerator</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tony fadell</subject>
+  <object>den ipod</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tracy hall</subject>
+  <object>den synthetischer diamant</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>udo adelsberger</subject>
+  <object>die quarzuhr</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>viktor kaplan</subject>
+  <object>die kaplanturbine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>walter bitterlich</subject>
+  <object>das spiegelrealaskop</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>walter brattain</subject>
+  <object>den transistor</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wernher von braun</subject>
+  <object>die gesteuerte rakete</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wilhelm bartelmann</subject>
+  <object>den strandkorb</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wilhelm bruhn</subject>
+  <object>das taxameter</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wilhelm emil fein</subject>
+  <object>die elektrische handbohrmaschine</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>willem einthoven</subject>
+  <object>das elektrokardiogramm</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william arnold anthony</subject>
+  <object>die turbinen</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william crookes</subject>
+  <object>das radiometer</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william cullen</subject>
+  <object>den kuehlschrank</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william dobelle</subject>
+  <object>das kuenstliche auge</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william lear</subject>
+  <object>den learjet</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william oughtred</subject>
+  <object>den rechenschieber</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william painter</subject>
+  <object>den kronkorken</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william robert grove</subject>
+  <object>die brennstoffzelle</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>willis carrier</subject>
+  <object>die klimaanlage</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wolfgang hilberg</subject>
+  <object>die funkuhr</object>
+  <verb>hat erfunden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alchwarizmi</subject>
+  <object>erfinder der algebra</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>josef ahlmann</subject>
+  <object>erfinder des radladers</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas adams</subject>
+  <object>erfinder des kaugummis</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bauer</subject>
+  <object>das acrylglas</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1928</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goodhue</subject>
+  <object>die aerosolspruehdose</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1941</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>plant</subject>
+  <object>den bleiakkumulator</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1859</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leonhardi</subject>
+  <object>die alizarintinte</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1855</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frau woehler</subject>
+  <object>das aluminium</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1827</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>priestley</subject>
+  <object>das ammoniak</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1774</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fritz haber carl bosch</subject>
+  <object>1908 die ammoniaksynthese</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr und</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davy</subject>
+  <object>die lachgasanaesthesie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1799</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rudolph</subject>
+  <object>das</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1890   anastigmat</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>popow</subject>
+  <object>die antenne</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1895</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>knorr</subject>
+  <object>das</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1884   antipyrin</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>steinheil</subject>
+  <object>das aplanat</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1866</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dreser</subject>
+  <object>das aspirin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1899</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>valerius cordus</subject>
+  <object>den aether</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1540</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>papin</subject>
+  <object>die atmosphaerische dampfmaschine</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1690</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>niels bohr</subject>
+  <object>das atommodell</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1913</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otto hahn</subject>
+  <object>die atomspaltung</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1938</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lyons</subject>
+  <object>die atomuhr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1946</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otis</subject>
+  <object>den aufzug</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1852</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>werner</subject>
+  <object>1880 den elektrischen aufzug</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von siemens</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>weigel</subject>
+  <object>den fahrstuhl</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1687</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>helmholtz</subject>
+  <object>den augenspiegel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1850</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>menne</subject>
+  <object>das autogene</object>
+  <verb>erfand schneiden</verb>
+  <adverbs>im jahr 1901</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>siegfried marcus</subject>
+  <object>automobil</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1875  das vergaser</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meisenbach</subject>
+  <object>die autotypie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1882</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>griess</subject>
+  <object>die azofarbstoffe</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1863</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leo baekeland</subject>
+  <object>das bakelit</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1907</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>1783 im jahr   den ballon mit wasserstoff</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>newberry</subject>
+  <object>die bandsaege</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1808</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>torricelli</subject>
+  <object>das barometer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1643</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>volta</subject>
+  <object>180 die batterie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>semmelweis des wochenbettfibers</subject>
+  <object>die behandlung</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1847</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benz</subject>
+  <object>den benzinmotor</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1883</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faraday</subject>
+  <object>das benzol</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1825</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henry bessemer</subject>
+  <object>die bessemerbirne</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1855</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henry bessemer</subject>
+  <object>den bessemerstahl</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1856</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>donald kernt</subject>
+  <object>das betatron</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1939</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>donald glaser</subject>
+  <object>die blasenkammer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1952</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paine</subject>
+  <object>das blechwalzen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1728</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franklin</subject>
+  <object>den blitzableiter</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1732</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hales</subject>
+  <object>die blutdruckmessung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1726</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hoskyns</subject>
+  <object>die bodenfraese</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1850</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davy</subject>
+  <object>die bogenlampe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1808</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>maritz</subject>
+  <object>die bohrmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1710</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hunaus</subject>
+  <object>den bohrturm</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1857</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>louis braille</subject>
+  <object>die brailleschrift</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1829</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die braunsche</subject>
+  <object>roehre</object>
+  <verb>erfand</verb>
+  <adverbs>braun im jahr 1897</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>amberger</subject>
+  <object>die elektrische bremse</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1850</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die luftdruckbremse</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>andraud im jahr 1854</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>justi</subject>
+  <object>das brennstoffelement</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1955</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>spina</subject>
+  <object>130 die brille</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>balard</subject>
+  <object>das brom</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1826</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gutenberg</subject>
+  <object>den buchdruck</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1445</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedrich koenig</subject>
+  <object>die buchdruckschnellpresse</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1811</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davy</subject>
+  <object>das calcium</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1808</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>woehler</subject>
+  <object>das calciumkarbid</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1862</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>levi</subject>
+  <object>gerson die camera</object>
+  <verb>ben erfand obscura</verb>
+  <adverbs>im jahr 1321</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philips</subject>
+  <object>die cdrom</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1985</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>chassepot</subject>
+  <object>das chassepotgewehr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1860</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pelletier caventon</subject>
+  <object>das chinin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1820</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>scheele</subject>
+  <object></object>
+  <verb>entdeckte</verb>
+  <adverbs>1774 im jahr   das chlor</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>liebig</subject>
+  <object>das chloroform</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1831</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>soubeiran</subject>
+  <object>das chloroform</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1831</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert koch</subject>
+  <object></object>
+  <verb>entdeckte</verb>
+  <adverbs>den im jahr 1883   choleraerreger</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>engelbart</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1969   computermaus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cook</subject>
+  <object>die dampfheizung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1745</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james watt</subject>
+  <object>den dampfkessel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1781</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>trevithick</subject>
+  <object>die dampflokomotive</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1803</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james watt</subject>
+  <object>die dampfmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1765</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>papin</subject>
+  <object>die dampfmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1681</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>darnal</subject>
+  <object>die dampfmuehle</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1779</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fulton</subject>
+  <object>das dampfschiff</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1807</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shawk</subject>
+  <object>die dampfspritze</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1829</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>werner</subject>
+  <object>1870 das dampfstrahlgeblaese</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von siemens</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>parsons de laval</subject>
+  <object>die dampfturbine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1883</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>regiomontanus</subject>
+  <object>die dezimalrechnung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1460</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rudolf diesel</subject>
+  <object>den dieselmotor</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1892</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leibniz</subject>
+  <object>die differentialrechnung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1675</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fleming</subject>
+  <object>die zweielektrodenroehre</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1904</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>loeffler</subject>
+  <object></object>
+  <verb>entdeckte</verb>
+  <adverbs>den im jahr 1884   diphtheriebazillus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>collins</subject>
+  <object>die drahtlose telefonie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1902</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>marconi</subject>
+  <object>die drahtlose telegraphie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1895</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>druecker</subject>
+  <object>die drahtseilbahn</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1861</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>drais</subject>
+  <object>die draisine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1817</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>basson</subject>
+  <object>die drehbank</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1578</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pittler</subject>
+  <object>die revolverdrehbank</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1850</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felix wankel</subject>
+  <object>den drehkolbenmotor</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1957</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>menzies</subject>
+  <object>die drehmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1732</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>haselwander</subject>
+  <object>den drehstromgenerator</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1887</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dolivo dobrowolski</subject>
+  <object>den drehstrommotor</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1889</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ulrich vogel</subject>
+  <object>den dreifarbendruck</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1890</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pi sheng</subject>
+  <object>das drucken</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1040   mit beweglichen lettern</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bauer</subject>
+  <object>den druckknopf</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1885</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cousteauund gagnan</subject>
+  <object>das</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1943   drucklufttauchgeraet</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frank whittle</subject>
+  <object>den duesenantrieb</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1937</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alfred nobel</subject>
+  <object>das dynamit</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1867</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pixii</subject>
+  <object>den dynamo</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1832</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>werner</subject>
+  <object>1867 die dynamomaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von siemens</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>behm</subject>
+  <object>das echolot</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1912</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stephenson</subject>
+  <object>die eisenbahn</object>
+  <verb>baute</verb>
+  <adverbs>im jahr 1830   liverpoolmanchester</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stevens</subject>
+  <object>die eisenbahnschiene</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1831</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>monier</subject>
+  <object>das eisenbeton</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1867</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>darby</subject>
+  <object>die eisenerzeugung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1735   mit koks</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cort</subject>
+  <object>das eisenwalzwerk</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1754</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>drinker</subject>
+  <object>die eiserne lunge</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1928</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shaw</subject>
+  <object>die eiserne lunge</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1928</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>den eisschrank</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>focardchat erfundeneau im jahr 1801</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>werner</subject>
+  <object>1846 den elektrischen zeigertelegraphen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von siemens</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jenkin</subject>
+  <object>die elektrische schwebebahn</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1882</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>siemens</subject>
+  <object>die elektrische strassenbahn</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1881</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>halske</subject>
+  <object>die elektrische strassenbahn</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1881</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salva</subject>
+  <object>den elektrischer telegraf</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1804</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guericke</subject>
+  <object>die elektrisiermaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1663</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lodge</subject>
+  <object>den elektrodynamischer lautsprecher</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1898</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faraday</subject>
+  <object>die elektrolyse</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1833</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sturgeon</subject>
+  <object>den elektromagneten</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1823</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jacobi</subject>
+  <object>den elektromotor</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1834</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brueche knoll ruska</subject>
+  <object>1933 das elektronenmikroskop</object>
+  <verb>erfanden</verb>
+  <adverbs>(johannsen) im jahr und</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fleming</subject>
+  <object>die elektronenroehre</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1904</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kilby</subject>
+  <object>den elektronischer taschenrechner</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1972</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>merryman</subject>
+  <object>den elektronischer taschenrechner</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1972</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das endoskop</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>mikuliczradecki im jahr 1881</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leonardo da vinci</subject>
+  <object>den fallschirm</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1495</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arnold</subject>
+  <object>die federuhr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1427</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mueller</subject>
+  <object>das feldelektronenmikroskop</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1950</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>galilei</subject>
+  <object>das fernrohr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1609</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karolus</subject>
+  <object>das fernsehen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1929</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zworykin</subject>
+  <object>das ikonoskop</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1938</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paul nipkow</subject>
+  <object>das</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1884   lochscheibenfernsehen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philip reis</subject>
+  <object>den fernsprecher</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1861</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>strowger</subject>
+  <object>den fernsprecher</object>
+  <verb>automatischen erfand</verb>
+  <adverbs>im jahr 1898</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lumire</subject>
+  <object>den film</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1895</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goodwin</subject>
+  <object>den film schichttraeger</object>
+  <verb>erfand photographischer</verb>
+  <adverbs>im jahr 1888  als</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eastman</subject>
+  <object>den film schichttraeger</object>
+  <verb>erfand photographischer</verb>
+  <adverbs>im jahr 1888  als</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jenkins</subject>
+  <object>die filmprojektion</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1894</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>owens</subject>
+  <object>die flaschenblasmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1899</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die gebrueder wright</subject>
+  <object>190 das flugzeug</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otto lilienthal</subject>
+  <object>das gleitflugzeug</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1891</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wright</subject>
+  <object>das motorflugzeug</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1903</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hugo junkers</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>1915 im jahr   das ganzmetallflugzeug</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinkel</subject>
+  <object>das flugzeug</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1939   mit luftstrahltriebwerk</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heilmeier</subject>
+  <object>das</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1964   fluessigkristalldisplay</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>niepce</subject>
+  <object>die fotografie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1816</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>drescher</subject>
+  <object>den fuellfederhalter</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1843</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fessender</subject>
+  <object>die funkuebertragung menschlicher sprache</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1906</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>krische</subject>
+  <object>das galalith</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr 1897</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>spitteler</subject>
+  <object>das galalith</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr 1897</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>galvani</subject>
+  <object>den galvanismus</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1780</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schwaiger</subject>
+  <object>das galvanometer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1819</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jacobi</subject>
+  <object>die galvanoplastik</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1837</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>spencer</subject>
+  <object>die galvanoplastik</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1837</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dundonald</subject>
+  <object>die gasbeleuchtung</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1786</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pikkel</subject>
+  <object>die gasbeleuchtung</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1786</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>claude</subject>
+  <object>die gasentladungslampe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1910</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>faber du faure</subject>
+  <object>den gasgenerator</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1832</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lebon</subject>
+  <object>die gaslampe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1799</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>komma bennet</subject>
+  <object>1961 den gaslaser</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr von java</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>herriot</subject>
+  <object>1961 den gaslaser</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr von java</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>holzwarth</subject>
+  <object>die gasturbine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1905</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>chamberlen</subject>
+  <object>die geburtszange</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1860</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geiger</subject>
+  <object>den geigerzaehler</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1913</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alfred krupp</subject>
+  <object>das geschuetz</object>
+  <verb>baute</verb>
+  <adverbs>im jahr 1847   aus gussstahl</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>smith</subject>
+  <object>das gewehrmagazin</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1854</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wesson</subject>
+  <object>das gewehrmagazin</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1854</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>besson</subject>
+  <object>die gewindedrehbank</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1568</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kapany</subject>
+  <object>das glasfaserkabel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1955</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>auer</subject>
+  <object>1885 das glasgluehlicht</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von welsbach</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lilienthal</subject>
+  <object>den gleitfluegler</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1890</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>swan</subject>
+  <object>die gluehbirne</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1878</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edison</subject>
+  <object>die gluehbirne</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1878</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goebel</subject>
+  <object>die gluehlampe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1854</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thoma alfa edison</subject>
+  <object>die kohlenfadengluehlampe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1879</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>welsbach</subject>
+  <object>die metalldrahtgluehlampe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1889</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>steele</subject>
+  <object>das glyzerin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1783</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berliner</subject>
+  <object>das grammophon</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1887</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>newton</subject>
+  <object>das gravitationsgesetz</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1682</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davy</subject>
+  <object>die grubenlampe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1815</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huntsman</subject>
+  <object>den gussstahl</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1742</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arthur fry</subject>
+  <object>die haftnotizen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1980</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fred ives</subject>
+  <object>die halbtondruckplatte</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1886</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>christofori</subject>
+  <object>das hammerklavier</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1709</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schmidt</subject>
+  <object>190 die heissdampflokomotive</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>montgolfier</subject>
+  <object>den heissluftballon</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1783</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paul cornu</subject>
+  <object>den helikopter</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1907</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gauss</subject>
+  <object>den heliograph</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1820</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ramsay</subject>
+  <object>das helium</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1895</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1951   herzlungenmaschine</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hat erfundenton</subject>
+  <object>die hobelmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1776</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gabor</subject>
+  <object>die holographie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1949</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>keller</subject>
+  <object>den holzschliff</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1843</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die holzwolle</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>anthon im jahr 1885</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>focke</subject>
+  <object>den hubschrauber</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1936</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bramah</subject>
+  <object>die hydraulische presse</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1795</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leonardo da vinci</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>1490 im jahr   das hygrometer</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jenner</subject>
+  <object>die impfung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1796   gegen pocken</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>courtois</subject>
+  <object>das</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1901   indanthrenblau</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pravaz</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1853   injektionsspritze</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>werner</subject>
+  <object>1847 das kabel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von siemens</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>runge</subject>
+  <object>das koffein</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1820</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>brewster</subject>
+  <object>das kaleidoskop</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1817</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davy</subject>
+  <object>das kalium</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1807</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frank</subject>
+  <object>den kalkstickstoff</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1899</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dulong</subject>
+  <object>das kalorimeter</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1838</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carl</subject>
+  <object>1876 die ammoniniakkaeltemaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von linde</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>priessnitz</subject>
+  <object>die kaltwasserkur</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1830</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>runge</subject>
+  <object>die karbolsaeure</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1867</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hittorf</subject>
+  <object>die kathodenstrahlen</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1869</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>crookes</subject>
+  <object>die kathodenstrahlroehre</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1878</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>garcia</subject>
+  <object>den kehlkopfspiegel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1855</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fermi</subject>
+  <object>den kernreaktor</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1942</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die gebrueder lumiere</subject>
+  <object>die kinematographie</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1895</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas alva edison</subject>
+  <object>das kinematoskop</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1889</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cristofori</subject>
+  <object>das klavier</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1710</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carrier</subject>
+  <object>die klimaanlage</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1911</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>priestley</subject>
+  <object>das knallgas</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1775</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bergios</subject>
+  <object>die kohleverfluessigung hochdruck</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1913</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die kohleverfluessigung</subject>
+  <object>niederdruck</object>
+  <verb>erfand</verb>
+  <adverbs>fischertropsch im jahr 1925</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schoenbein</subject>
+  <object>das kollodium</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1845</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>borden</subject>
+  <object>die kondensierte milch</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1853</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>appert</subject>
+  <object>das konservieren</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1810   durch erhitzen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kopernikus</subject>
+  <object>das kopernikanisches weltsystem</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1543</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>daimler</subject>
+  <object>das kraftrad</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1883</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>benz</subject>
+  <object>den kraftwagen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1885</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cugnot</subject>
+  <object>den dampfkraftwagen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1769</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>den kreiselkompass</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>anschuetzkaempfe im jahr 1908</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leonardo da vinci</subject>
+  <object>das kugellager</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1496</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kolff</subject>
+  <object>die kuenstliche niere</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1943</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>de chardonnet</subject>
+  <object>die kuenstliche seide</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1884</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hyatt</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>den im jahr 1869   kunststoffzelluloid</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mertens</subject>
+  <object>190 den kupfertiefdruck</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>liebreich</subject>
+  <object>das lanolin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1885</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>den laermschutz</subject>
+  <object></object>
+  <verb>erfand lueg</verb>
+  <adverbs>im jahr 1933   durch gegenlaerm</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>drais</subject>
+  <object>das lenkbares laufrad</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1817</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hansen</subject>
+  <object>das leprabazillus</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1880</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>claude</subject>
+  <object>die leuchtstoffroehre</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1910</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pauken</subject>
+  <object>190 den lichtbogensender</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert</subject>
+  <object>den lichtdruck</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1868</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>walton</subject>
+  <object>das linoleum</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1860</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mergenthaler</subject>
+  <object>die linotype setzmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1884</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>senefelder</subject>
+  <object>die lithographie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1798</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hollerith</subject>
+  <object>die lochkarte</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1880</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>trevithick</subject>
+  <object>eine lokomotive</object>
+  <verb>baute</verb>
+  <adverbs>im jahr 1803</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>montgolfier</subject>
+  <object>den luftballon luft</object>
+  <verb>erfand erhitzer</verb>
+  <adverbs>im jahr 1782  mit</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomson</subject>
+  <object>die luftbereifung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1845</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cokkerell</subject>
+  <object>das luftkissenboot</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1955</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guericke</subject>
+  <object>die luftpumpe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1650</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dunlop</subject>
+  <object>den luftreifen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1890</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>giffard</subject>
+  <object>das luftschiff</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1852</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ferdinand graf</subject>
+  <object>190 das luftschiff</object>
+  <verb>erfand starre</verb>
+  <adverbs>im jahr von zeppelin</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das magnetophon</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>aeg im jahr 1935</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otto</subject>
+  <object>1662 das manometer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von guericke</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die margarine</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>megemouries im jahr 1869</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mercer</subject>
+  <object>die merzerisation</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1844</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>philipp</subject>
+  <object>das metallgewebe</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1825</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schoop</subject>
+  <object>das metallspritzverfahren</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1906</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>maelzel</subject>
+  <object>das metronom</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1816</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jack kilby</subject>
+  <object>den microchip</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1959</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>spencer</subject>
+  <object>die microwelle</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1947</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>janssen</subject>
+  <object>das mikoskop</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1590</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gascoigne</subject>
+  <object>das mikrometer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1636</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>luedtge</subject>
+  <object>das mikrophon</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1878</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas alva edison</subject>
+  <object>das kohlemikrophon</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1877</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>janssen</subject>
+  <object>das mikroskop</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1590</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>prandtl</subject>
+  <object>die milchzentrifuge</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1864</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lanston</subject>
+  <object>die monotype setzmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1887</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sertuerner</subject>
+  <object>das morphin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1805</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>weisskopf</subject>
+  <object>den motorflug</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1901</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>daimler</subject>
+  <object>das motorrad</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1883</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leibnitz</subject>
+  <object>die multipliziermaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1674</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jaquard</subject>
+  <object>den musterwebstuhl</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1805   mit lochkarten</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>saint</subject>
+  <object>die naehmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1790</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>garden</subject>
+  <object>das naphtalin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1820</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jackson</subject>
+  <object></object>
+  <verb>entdeckte</verb>
+  <adverbs>den im jahr 1846   narkoseaether</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>davy</subject>
+  <object>das natrium</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1807</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wilson</subject>
+  <object>die nebelkammer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1911</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>claude</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1911   neonlampe</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sobrero</subject>
+  <object>das nitroglyzerin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1846</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carrothers</subject>
+  <object>das nylon</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1935</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rubel</subject>
+  <object>den offsetdruck</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1904</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schoenbein</subject>
+  <object>das ozon</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1893</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bruch</subject>
+  <object>das</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1960   palsystem</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>keller</subject>
+  <object>das papier</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1843   aus holzschliff</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>reichenbach</subject>
+  <object>das paraffin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1830</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>magee</subject>
+  <object>die parkuhr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1935</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huygens</subject>
+  <object>die pendeluhr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1656</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>foucault</subject>
+  <object>den pendelversuch</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1850</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fleming</subject>
+  <object>das penicillin</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr 1928</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>chaim</subject>
+  <object>das penicillin</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr 1928</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>yersin</subject>
+  <object>das pestbazillus</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr 1894</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kitasato</subject>
+  <object>das pestbazillus</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr 1894</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas alva edison</subject>
+  <object>den phonograph</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1877</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>daguerre</subject>
+  <object>die photographie</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1838</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>niepce</subject>
+  <object>die photographie</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1838</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ives</subject>
+  <object>die farbphotographie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1881</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>talbot</subject>
+  <object>das negativphotoverfahren</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1839</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>land</subject>
+  <object>die polaroidphotographie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1932</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eastman</subject>
+  <object>den rollfilm</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1884</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elster</subject>
+  <object>die photozelle</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1893</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>geitel</subject>
+  <object>die photozelle</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1893</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die zeisswerke</subject>
+  <object>das planetarium</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1924</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berliner</subject>
+  <object>den plattenspieler</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1887</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>70 das porzellan</subject>
+  <object></object>
+  <verb>erfunden wurde</verb>
+  <adverbs>in china im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>boettger</subject>
+  <object>das harte porzellan</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1709</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>morin</subject>
+  <object>1695 das porzellan</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr weiches</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tschirnhaus</subject>
+  <object>das porzellan</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1693   in europa</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>den presslufthammer</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>ingersoll im jahr 1871</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>marrison</subject>
+  <object>die quarzuhr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1929</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fahrenheit</subject>
+  <object>das quecksilberthermometer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1716</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>huelsmeyer</subject>
+  <object>das radar</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1904</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mailand</subject>
+  <object>die raederuhr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1309</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>marcani</subject>
+  <object>das radio</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1894</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>becquerel</subject>
+  <object>die radioaktivitaet</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1896</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das ehepaar curie</subject>
+  <object>das radium</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1898</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die heinkelwerke</subject>
+  <object>das raketenflugzeug</object>
+  <verb>bauten</verb>
+  <adverbs>im jahr 1937</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die raumfaehre</subject>
+  <object>columbia</object>
+  <verb>gebaut wurde</verb>
+  <adverbs>in den usa im jahr 1981</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leibniz</subject>
+  <object>die rechenmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1694</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pascal</subject>
+  <object>die rechenmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1642</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>burroughs</subject>
+  <object>die addierrechenmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1885</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>babbage</subject>
+  <object>die analytische rechenmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1833</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>napier</subject>
+  <object>1617 den rechenschieber</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr of merchiston</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>john ritty</subject>
+  <object>die registrierkasse</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1879</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thompson</subject>
+  <object>den luftreifen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1843</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>judson</subject>
+  <object>den reissverschluss</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1893</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albert einstein</subject>
+  <object>die relativitaetstheorie</object>
+  <verb>erdachte</verb>
+  <adverbs>im jahr 1913</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>colt</subject>
+  <object>den revolver</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1831</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meissner</subject>
+  <object>den roehrensender</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1913</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>clark</subject>
+  <object>die rohrpost</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1853</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eastman</subject>
+  <object>den rollfilm</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1889</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>roentgen</subject>
+  <object>die roentgenstrahlen</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1895</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bullock</subject>
+  <object>den rotationsdruck</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1863</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mertens</subject>
+  <object>den rotationstiefdruck</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1910</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>flettner</subject>
+  <object>das rotorschiff</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1924</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fahlberg</subject>
+  <object>das saccharin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1878</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>remsen</subject>
+  <object>das saccharin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1878</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kolbe</subject>
+  <object>die salizylsaeure</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1873</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>priestley</subject>
+  <object>die salzsaeure</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1775</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kepler</subject>
+  <object>die sammellinse</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1611</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tilghman</subject>
+  <object>das sandstrahlgeblaese</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1870</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>priestley</subject>
+  <object>den sauerstoff</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1771</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>honnsfield</subject>
+  <object>den scanner</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1973</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paulsen</subject>
+  <object>die schallaufzeichnung</object>
+  <verb>erfand magnetische</verb>
+  <adverbs>im jahr 1899</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berliner</subject>
+  <object>die schallplatte</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1887</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schoenbein</subject>
+  <object>die schiessbaumwolle</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1846</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berthold schwarz</subject>
+  <object>das schiesspulver</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1313</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schlick</subject>
+  <object>den schiffskreisel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1903</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stevens</subject>
+  <object>die schiffsschraube</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1804</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meikle</subject>
+  <object>die schlagleisten dreschmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1785</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>werner</subject>
+  <object>1880 den elektrischen schmelzofen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr von siemens</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mill</subject>
+  <object>die schreibmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1714</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lilienthal</subject>
+  <object>das segelflugzeug</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1891</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mergenthaler</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1884   linotypesetzmaschine</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hunt</subject>
+  <object>die sicherheitsnadel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1849</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gustav pasch</subject>
+  <object>die sicherheitszuendhoelzer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1845</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hoff</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>den im jahr 1969   siliziummikroprozessor</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die solarzelle</subject>
+  <object></object>
+  <verb>entwickelt wurde</verb>
+  <adverbs>in den usa im jahr 1954</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>doehring</subject>
+  <object>den spannbeton</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1888</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bunsen</subject>
+  <object>die spektralanalyse</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1859</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kirchhoff</subject>
+  <object>die spektralanalyse</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1859</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>newton</subject>
+  <object>das spiegelteleskop</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1669</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>barbara uttmann</subject>
+  <object>das spitzenkloeppeln</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1561</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edison</subject>
+  <object>die sprechmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1877</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>glidden</subject>
+  <object>den stacheldraht</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1874</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schmidt</subject>
+  <object>das strahltriebwerk</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1930</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>whittle</subject>
+  <object>das strahltriebwerk</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1930</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>chevreul</subject>
+  <object>das stearin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1820</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der steigbuegel</subject>
+  <object></object>
+  <verb>erfunden wurde</verb>
+  <adverbs>im jahr 850</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wedgwood</subject>
+  <object>das steingut</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1759</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ged</subject>
+  <object>die stereotypie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1725</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>launec</subject>
+  <object>das stethoskop</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1819</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>rutherford</subject>
+  <object>den stickstoff</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1772</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>turner</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1831   stiftendreschmaschine</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>walker</subject>
+  <object>das streichholz</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1827</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>waksman</subject>
+  <object>das streptomycin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1943</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eisenstruck</subject>
+  <object>die strickmaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1857</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pelletier</subject>
+  <object>das strychnin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1818</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>domagk</subject>
+  <object>die sulfonamide</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1935</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hofmann</subject>
+  <object>den synthetischen kautschuk</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1909</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henlein</subject>
+  <object>die taschenuhr</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1510</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bauer</subject>
+  <object>das tauchboot</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1850</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>halley</subject>
+  <object>die taucherglocke</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1717</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>siebe</subject>
+  <object>den taucherhelm</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1837</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>perkin</subject>
+  <object>den teerfarbstoff</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1856</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guglieminetti</subject>
+  <object>die teerstrasse</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1902</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject></subject>
+  <object></object>
+  <verb>erfand reis</verb>
+  <adverbs>im jahr 1861   das telefon</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>breese morse</subject>
+  <object>den telegraf</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1837</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gauss</subject>
+  <object>die elektromagnetische telegraphie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1833</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>weber</subject>
+  <object>die elektromagnetische telegraphie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1833</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>soemmering</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1809   mehrdrahttelegraphie</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>werner</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1846   zeigertelegraphie von siemens</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>galilei</subject>
+  <object>das</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1597   luftthermometer</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dewar</subject>
+  <object>die thermosflasche</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1873</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>drebbel</subject>
+  <object>den thermostat</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1609</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lushnell</subject>
+  <object>den torpedo</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1776</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>keeley</subject>
+  <object>den traktor</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1825</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stanley</subject>
+  <object>den transformator</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1885</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>regeney</subject>
+  <object>das transistorradio</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1954</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>portsmouth</subject>
+  <object>das trockendock</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1495</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert koch</subject>
+  <object>den tuberkelbazillus</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1882</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert koch</subject>
+  <object>das tuberkulin</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1890</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kaplan</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1919   kaplanturbine</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>segner</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1750   ueberdruckturbine</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>donald</subject>
+  <object>die ultraschalldiagnostik</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1950</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>born</subject>
+  <object>die ultraschalldiagnostik</object>
+  <verb>erfanden</verb>
+  <adverbs>im jahr 1950</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fulton</subject>
+  <object>180 das unterseeboot</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fermi</subject>
+  <object>den uranbrenner</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1942</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hales</subject>
+  <object>den ventilator</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1740</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>linde</subject>
+  <object>die verfluessigung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1895   der luft</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alfred benesh</subject>
+  <object>die verkehrsampel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1914</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ginsberg</subject>
+  <object></object>
+  <verb>erfanden</verb>
+  <adverbs>die im jahr 1956   videokassette</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dolby</subject>
+  <object></object>
+  <verb>erfanden</verb>
+  <adverbs>die im jahr 1956   videokassette</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>funk</subject>
+  <object>die vitamine</object>
+  <verb>entdeckte</verb>
+  <adverbs>im jahr 1911</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>reychler</subject>
+  <object>das waschmittel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1913</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>curtiss</subject>
+  <object>das wasserflugzeug</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1911</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fuchs</subject>
+  <object>das wasserglas</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1825</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cavendish</subject>
+  <object>den wasserstoff</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1766</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cartwright</subject>
+  <object>den mechanischen webstuhl</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1785</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jacquard</subject>
+  <object>den webstuhl</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1805   fuer gemusterte stoffe</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert koch</subject>
+  <object></object>
+  <verb>fand</verb>
+  <adverbs>den im jahr 1878   wundinfektionserreger</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carlson</subject>
+  <object>die xerographie</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1948</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>riggenbach</subject>
+  <object>die zahnradbahn</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1862</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>soehne</subject>
+  <object>die zeitung</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1609</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tilghman</subject>
+  <object>den zellstoff</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1857   auf sulfidbasis</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hyatt</subject>
+  <object>das zelluloid</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1869</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>asydin</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>den im jahr 1824   portlandzement</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>penzoldt</subject>
+  <object>die zentrifuge</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1836</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kammerer</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1833   zuendhoelzer</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lenoir</subject>
+  <object></object>
+  <verb>erfand</verb>
+  <adverbs>die im jahr 1860   zuendkerze</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lawrence</subject>
+  <object>das zyklotron</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1934</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>berzelius</subject>
+  <object></object>
+  <verb>entdeckte</verb>
+  <adverbs>1825 im jahr   das titan</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich hertz</subject>
+  <object>die wellen</object>
+  <verb>elektromagnetische entdeckte</verb>
+  <adverbs>im jahr 1887</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ernest rutherford</subject>
+  <object>190 die gammastrahlen</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>villard</subject>
+  <object>190 die gammastrahlen</object>
+  <verb>entdeckten</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fuchs</subject>
+  <object>den feuerloescher</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1734</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lazlo biro</subject>
+  <object>den kugelschreiber</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1938</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fresnau</subject>
+  <object>den regenmantel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1747</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sylvan goldman</subject>
+  <object>den einkaufswagen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1937</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>becton dickenson</subject>
+  <object>die einwegspritze</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1954</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>achille gaggia</subject>
+  <object>die espressomaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1938</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>birds eye</subject>
+  <object>die fischstaebchen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1955</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>earle dickson</subject>
+  <object>die heftpflaster</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1920</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph kreiger</subject>
+  <object>den teebeutel</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1919</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>frank clarke</subject>
+  <object>die teemaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1902</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ruben rausing</subject>
+  <object>das tetrapak</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1951</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>johann vaalers</subject>
+  <object>190 die bueroklammer</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henry seely</subject>
+  <object>das buegeleisen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1882</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>otto rohwedder</subject>
+  <object>die brotschneidemaschine</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1928</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james sharp</subject>
+  <object>den gasherd</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1826</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>william kent</subject>
+  <object>den kinderwagen</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1733</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erik rothheim</subject>
+  <object>die spraydose</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1926</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edwin budding</subject>
+  <object>den rasenmaeher</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1830</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>king camp gilette</subject>
+  <object>den rasierapparat</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1901</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hubert cecil booth</subject>
+  <object>den staubsauger</object>
+  <verb>erfand</verb>
+  <adverbs>im jahr 1902</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>

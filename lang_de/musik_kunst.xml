@@ -1,0 +1,3100 @@
+<fact>
+  <subject>der name caligula</subject>
+  <object>stiefelchen</object>
+  <verb>bedeutet</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die ilias</subject>
+  <object>sich</object>
+  <verb>befasst</verb>
+  <adverbs>mit dem trojanischen krieg</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karl marx</subject>
+  <object></object>
+  <verb>begraben liegt</verb>
+  <adverbs>in london</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>michelangelo</subject>
+  <object>die decke</object>
+  <verb>bemalte</verb>
+  <adverbs>der sixtinischen kapelle</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>falco</subject>
+  <object>jeanny</object>
+  <verb>besang</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>eine sinfonie</subject>
+  <object></object>
+  <verb>besteht</verb>
+  <adverbs>aus mehreren saetzen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sigrid undset</subject>
+  <object>1928 den literaturnobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ludwig zamenhof</subject>
+  <object></object>
+  <verb>entwickelt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james kruess</subject>
+  <object>tim thaler</object>
+  <verb>erfand</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>christa wolf</subject>
+  <object>1980 den georg-buechner-preis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elias canetti</subject>
+  <object>1981 den nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs>fuer literatur</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gerhart hauptmann</subject>
+  <object>1912 den nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs>fuer literatur</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>golo mann</subject>
+  <object>1968 den georg-buechner-preis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gottfried benn</subject>
+  <object>1951 den georg-buechner-preis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich boell</subject>
+  <object>1972 den literatur-nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann hesse</subject>
+  <object>1946 den literatur-nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann hesse</subject>
+  <object>einen nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nelly sachs</subject>
+  <object>1966 den literatur-nobelpreis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>paul celan</subject>
+  <object>1960 den georg-buechner-preis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>peter hanke</subject>
+  <object>1973 den georg-buechner-preis</object>
+  <verb>erhielt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der songcontest 2002</subject>
+  <object></object>
+  <verb>fand</verb>
+  <adverbs>in tallinn statt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nils holgerson</subject>
+  <object></object>
+  <verb>flog</verb>
+  <adverbs>mit den gaensen durch suedschweden</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der souffleur</subject>
+  <object>den schauspielern stichwoerter</object>
+  <verb>fluestert</verb>
+  <adverbs>ein</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die brueder grimm</subject>
+  <object>das maerchen rumpelstilzchen</object>
+  <verb>geschrieben haben</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carl zuckmayer</subject>
+  <object>den hauptmann</object>
+  <verb>geschrieben hat</verb>
+  <adverbs>von koepenick</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann hesse</subject>
+  <object>den steppenwolf</object>
+  <verb>geschrieben hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>simone de beauvoir</subject>
+  <object>das buch das andere geschlecht</object>
+  <verb>geschrieben hat</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charlie chaplin</subject>
+  <object></object>
+  <verb>gestorben ist</verb>
+  <adverbs>1977</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freddie mercury</subject>
+  <object></object>
+  <verb>gestorben ist</verb>
+  <adverbs>an dem 24 november 1991</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>es</subject>
+  <object>4 teletubbies</object>
+  <verb>gibt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die mona lisa</subject>
+  <object>im louvre</object>
+  <verb>haengt</verb>
+  <adverbs>in paris</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felix salten</subject>
+  <object>bambi</object>
+  <verb>hat</verb>
+  <adverbs>geschrieben</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>indien</subject>
+  <object>die groesste filmindustrie</object>
+  <verb>hat</verb>
+  <adverbs>der welt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wolfgang amadeus mozart</subject>
+  <object>die oesterreichische bundeshymne</object>
+  <verb>hat komponiert</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>angkor wat</subject>
+  <object>das groesste hinduistische bauwerk suedostasiens</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>georges bizet beruehmte oper</subject>
+  <object>carmen</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hollywood</subject>
+  <object>stechpalmenwald</object>
+  <verb>heisst uebersetzt</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>verleihnix</subject>
+  <object>der fischhaendler</object>
+  <verb>heisst</verb>
+  <adverbs>in asterix</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>winnetous blutsbruder</subject>
+  <object>old shatterhand</object>
+  <verb>heisst</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>abba</subject>
+  <object>(a) popgruppe</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>campino</subject>
+  <object>(the) saenger der toten hosen</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cats</subject>
+  <object>(a) musical</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles schulz</subject>
+  <object>(the) autor</object>
+  <verb>is-a</verb>
+  <adverbs>von den peanuts</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das forellenquintett</subject>
+  <object>(a) beruehmtes werk</object>
+  <verb>is-a</verb>
+  <adverbs>von franz schubert</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das i ging</subject>
+  <object>(the) buch</object>
+  <verb>is-a</verb>
+  <adverbs>(the) wandlungen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das siebte kreuz</subject>
+  <object>(a) roman</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) emmy</subject>
+  <object>(a) internationaler fernsehpreis</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der fliegende hollaender</subject>
+  <object>(a) oper</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) grammy</subject>
+  <object>(the) amerikanische musikpreis</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) kontrabass</subject>
+  <object>(the) groesste streichinstrument</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) louvre</subject>
+  <object>(the) beruehmte pariser museum fuer kunst</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der mann ohne eigenschaften</subject>
+  <object>(a) roman</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) paso doble</subject>
+  <object></object>
+  <verb>is-a</verb>
+  <adverbs>ein gesellschaftstanz</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der ring des nibelungen</subject>
+  <object>(a) opernzyklus</object>
+  <verb>is-a</verb>
+  <adverbs>_von_richard_wagner_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der tod des vergil</subject>
+  <object>(a) roman</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) zigeunerbaron</subject>
+  <object>(a) operette</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die farbe lila</subject>
+  <object>(a) roman</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) manege</subject>
+  <object>(the) buehne der zirkuskuenstler</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) prosseniumsloge</subject>
+  <object>(the) erste loge</object>
+  <verb>is-a</verb>
+  <adverbs>neben der buehne</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) quadrille</subject>
+  <object>(the) tanz</object>
+  <verb>is-a</verb>
+  <adverbs>auf baellen um mitternacht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(the) rezension</subject>
+  <object>(the) beurteilung</object>
+  <verb>is-a</verb>
+  <adverbs>von einem buch</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dur</subject>
+  <object>(the) tongeschlecht</object>
+  <verb>is-a</verb>
+  <adverbs>mit grosser terz</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) calamus</subject>
+  <object>(a) schreibgeraet aus zuckerrohr bzw einem schilfhalm</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) cembalo</subject>
+  <object>(a) historisches tasteninstrument</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) dramaturg</subject>
+  <object>(a) berater</object>
+  <verb>is-a</verb>
+  <adverbs>in dem theater</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) gitarre</subject>
+  <object>(a) zupfinstrument</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) redoute</subject>
+  <object>(a) maskenball</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) singende saege</subject>
+  <object>(a) musikinstrument</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) vernisage</subject>
+  <object>(a) ausstellungseroeffnung</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) fresko</subject>
+  <object>(a) wandmalerei</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) jive</subject>
+  <object>(a) lateinamerikanischer tanz</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) klavier</subject>
+  <object>(a) tasteninstrument</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) krummhorn</subject>
+  <object>(a) altes holzblasinstrument</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) lustspiel</subject>
+  <object>(a) komoedie</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ein sommernachtstraum</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>von shakespeare</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>(a) trauerspiel</subject>
+  <object>(a) tragoedie</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ennio morricone</subject>
+  <object>(a) italienischer filmkomponist</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>epistolographie</subject>
+  <object>(the) kunst des briefschreibens</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>esperanto</subject>
+  <object>(a) welthilfssprache</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>euterpe</subject>
+  <object>(the) griechische muse</object>
+  <verb>is-a</verb>
+  <adverbs>(the) lyrischen tonkunst</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>exupery</subject>
+  <object>(the) autor</object>
+  <verb>is-a</verb>
+  <adverbs>_von_der_kleine_prinz_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>felix salten</subject>
+  <object>der autor des buches bambi</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fidelio</subject>
+  <object>(the) einzige oper</object>
+  <verb>is-a</verb>
+  <adverbs>von beethoven</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fidelio</subject>
+  <object>(a) oper</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedrich duerrenmatt</subject>
+  <object>(a) lyriker</object>
+  <verb>is-a</verb>
+  <adverbs>nicht</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>fruehlings-erwachen</subject>
+  <object>(the) bedeutendste drama</object>
+  <verb>is-a</verb>
+  <adverbs>von frank wedekind</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george lazenby</subject>
+  <object>(a) schauspieler</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>graceland</subject>
+  <object>(the) anwesen</object>
+  <verb>is-a</verb>
+  <adverbs>von elvis presley</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>grisu</subject>
+  <object>(a) kleiner drache</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henning mankell</subject>
+  <object>(the) autor</object>
+  <verb>is-a</verb>
+  <adverbs>von mittsommermord</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>homer</subject>
+  <object>(the) autor</object>
+  <verb>is-a</verb>
+  <adverbs>von der ilias</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>homer</subject>
+  <object>(the) autor</object>
+  <verb>is-a</verb>
+  <adverbs>von der odyssee</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>isegrim</subject>
+  <object>(the) fabelname</object>
+  <verb>is-a</verb>
+  <adverbs>fuer den wolf</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>james blunt</subject>
+  <object>(a) saenger</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jeanny</subject>
+  <object>(a) maedchen</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jolly jumper</subject>
+  <object>(the) pferd luke</object>
+  <verb>is-a</verb>
+  <adverbs>von lucky</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jolly jumper</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>jon</subject>
+  <object>(the) herrchen</object>
+  <verb>is-a</verb>
+  <adverbs>von garfield</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kabale und liebe</subject>
+  <object>(a) roman</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kalevala</subject>
+  <object>(the) nationalepos</object>
+  <verb>is-a</verb>
+  <adverbs>(the) finnen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lara croft</subject>
+  <object>(a) figur</object>
+  <verb>is-a</verb>
+  <adverbs>in tomb raider</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>locus solus</subject>
+  <object>(a) roman</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lucky luke</subject>
+  <object>(a) name</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>madonna</subject>
+  <object>(a) saengerin</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>meister lampe</subject>
+  <object>(a) fabelname</object>
+  <verb>is-a</verb>
+  <adverbs>fuer den hasen</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>miss piggy</subject>
+  <object>(the) schwein</object>
+  <verb>is-a</verb>
+  <adverbs>in der muppet show></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb>50</verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>miss piggy</subject>
+  <object></object>
+  <verb>ist</verb>
+  <adverbs>in kermit verliebt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mondbasis alpha eins</subject>
+  <object>(a) weltraumserie</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nelly furtado</subject>
+  <object>(a) saengerin</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nils holgerson</subject>
+  <object>(the) freund</object>
+  <verb>is-a</verb>
+  <adverbs>von kruemel</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>pegasus</subject>
+  <object>(a) fliegendes pferd</object>
+  <verb>is-a</verb>
+  <adverbs>aus der griechischen mytologie</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>redoute</subject>
+  <object>(a) anderer name</object>
+  <verb>is-a</verb>
+  <adverbs>fuer einen maskenball</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robbie williams</subject>
+  <object>(a) saenger</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robin hood</subject>
+  <object>(a) romanfigur</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salma hayek</subject>
+  <object>(a) schauspielerin</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sancho pansa</subject>
+  <object>(the) knappe</object>
+  <verb>is-a</verb>
+  <adverbs>von don  quijote</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sascha</subject>
+  <object>(the) abkuerzung</object>
+  <verb>is-a</verb>
+  <adverbs>von alexander</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stephen king</subject>
+  <object>(the) autor</object>
+  <verb>is-a</verb>
+  <adverbs>_von_friedhof_der_kuscheltiere_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>theatralik</subject>
+  <object>uebertriebene schauspielerei</object>
+  <verb>ist</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>the wall</subject>
+  <object>(a) lied</object>
+  <verb>is-a</verb>
+  <adverbs>von pink floyd</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>timm thaler</subject>
+  <object>(a) deutsche fernsehserie</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>timm thaler</subject>
+  <object>(a) roman</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tomb raider</subject>
+  <object>(a) kionofilm</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tomb raider</subject>
+  <object>(a) pc-spiel</object>
+  <verb>is-a</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>urania</subject>
+  <object>(the) muse</object>
+  <verb>is-a</verb>
+  <adverbs>(the) sternenkunde</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ahab</subject>
+  <object>moby</object>
+  <verb>jagte</verb>
+  <adverbs>dick</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carl orff</subject>
+  <object>carmina burana</object>
+  <verb>komponierte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franz lehar</subject>
+  <object>land des laechelns</object>
+  <verb>komponierte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>haydn</subject>
+  <object>die musik</object>
+  <verb>komponierte</verb>
+  <adverbs>der deutschen nationalhymne</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>johann strauss</subject>
+  <object>den zigeunerbaron</object>
+  <verb>komponierte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karl kratzl</subject>
+  <object>das glueck is a vogerl</object>
+  <verb>komponierte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>puccini</subject>
+  <object>die oper tosca</object>
+  <verb>komponierte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ravel</subject>
+  <object>den bolero</object>
+  <verb>komponierte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>richard wagner</subject>
+  <object></object>
+  <verb>komponierte</verb>
+  <adverbs>_den_fliegende_hollaender_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>edward elgar</subject>
+  <object>die enigma variations</object>
+  <verb>komponiertest</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wolfgang amadeus mozart</subject>
+  <object>die spatzenmesse</object>
+  <verb>komponierte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>wolfgang amadeus mozart</subject>
+  <object>die zauberfloete</object>
+  <verb>komponierte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robin hood</subject>
+  <object></object>
+  <verb>lebte</verb>
+  <adverbs>in dem sherwood forest</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>graceland</subject>
+  <object></object>
+  <verb>liegt</verb>
+  <adverbs>in memphis</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>albrecht duerer</subject>
+  <object>die betenden haende</object>
+  <verb>malte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>botticelli</subject>
+  <object>die geburt</object>
+  <verb>malte</verb>
+  <adverbs>der venus</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>leonardo da vinci</subject>
+  <object>die mona lisa</object>
+  <verb>malte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>salvadore dali</subject>
+  <object>die brennende giraffe</object>
+  <verb>malte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tischbein</subject>
+  <object>das bild goethe</object>
+  <verb>malte</verb>
+  <adverbs>_in_der_campagna_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alexandre dumas</subject>
+  <object>der graf von monte christo</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alexandre dumas</subject>
+  <object>die drei musketiere</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>alice walker</subject>
+  <object>die farbe lila</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>andrew loyd webber</subject>
+  <object>cats</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>andrew loyd webber</subject>
+  <object>das musical cats</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>anna seghers</subject>
+  <object>das siebte kreuz</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>astrid lindgren</subject>
+  <object>karlsson</object>
+  <verb>schrieb</verb>
+  <adverbs>_vom_dach_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>boris pasternak</subject>
+  <object>den roman doktor schiwago</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>boris pasternak</subject>
+  <object>doktor schiwago</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>broch</subject>
+  <object>der tod des vergil</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>caesar</subject>
+  <object>de bello gallico</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carlo collodi</subject>
+  <object>pinoccio</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>carl zuckmayer</subject>
+  <object>den hauptmann  von koepenick</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cervantes</subject>
+  <object>don quijote</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles darwin</subject>
+  <object>die entstehung der arten</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charles schulz</subject>
+  <object>die peanuts</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cooper</subject>
+  <object>die lederstrumpfgeschichten</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>daniel defoe</subject>
+  <object>robinson crusoe</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dante</subject>
+  <object>die goettliche komoedie</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dante</subject>
+  <object></object>
+  <verb>schrieb</verb>
+  <adverbs>_die_divina_commedia_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>defoe</subject>
+  <object>robinson crusoe</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dickens</subject>
+  <object>oliver twist</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>doeblin</subject>
+  <object>berlin alexanderplatz</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dostojewskij</subject>
+  <object>der idiot</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dostojewskij</subject>
+  <object>die brueder karamasov</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>douglas coupland</subject>
+  <object>generation x</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>dumas</subject>
+  <object>die kameliendame</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erich fromm</subject>
+  <object>anatomie der menschlichen destruktivitaet</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ernst bloch</subject>
+  <object>das prinzip hoffnung</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>euripides</subject>
+  <object>andromache</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>exupery</subject>
+  <object>den kleinen prinzen</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>exupery</subject>
+  <object>der kleine prinz</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franz kafka</subject>
+  <object>den roman das schloss</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedrich der grosse</subject>
+  <object>den antimachiavell</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedrich duerrenmatt</subject>
+  <object>der besuch</object>
+  <verb>schrieb</verb>
+  <adverbs>_der_alten_dame_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george orwell</subject>
+  <object>die farm der tiere</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>goethe</subject>
+  <object>das hexeneinmaleins</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gogol</subject>
+  <object>der revisor</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>grillparzer</subject>
+  <object>die ahnfrau</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>guenter grass</subject>
+  <object>den roman die raettin</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gustave flaubert</subject>
+  <object>madame bovary</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hebbel</subject>
+  <object>gyges und sein ring</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich boell</subject>
+  <object>ansichten</object>
+  <verb>schrieb</verb>
+  <adverbs>_eines_clowns_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich boell</subject>
+  <object>die verlorene ehre der katharina blum</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich mann</subject>
+  <object>professor unrat</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hemingway</subject>
+  <object>der alte mann und das meer</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henning mankell</subject>
+  <object>die fuenfte frau</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>henning mankell</subject>
+  <object>mittsommermord</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>herbert marcuse</subject>
+  <object>der eindimensionale mensch</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann hesse</subject>
+  <object>den steppenwolf</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann melville</subject>
+  <object>moby dick</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hofmannsthal</subject>
+  <object>jedermann</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ibsen</subject>
+  <object>die wildente</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>immanuel kant</subject>
+  <object>der ewige frieden</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>johann nestroy</subject>
+  <object>der talisman</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>joseph weizenbaum</subject>
+  <object>die macht der computer und die ohnmacht der vernunft</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>kaestner</subject>
+  <object>emil und die detektive</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>klabund</subject>
+  <object>der kreidekreis</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lessing</subject>
+  <object>emilia galotti</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lessing</subject>
+  <object>nathan der weise</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lewis caroll</subject>
+  <object>alice im wunderland</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>marek</subject>
+  <object>goetter graeber und gelehrte</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>margaret mitchell</subject>
+  <object>vom winde verweht</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>max frisch</subject>
+  <object>andorra</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>max frisch</subject>
+  <object>homo faber</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>max scheler</subject>
+  <object>die stellung des menschen in dem kosmos</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mozart</subject>
+  <object>eine kleine nachtmusik</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>neil postmann</subject>
+  <object>wir amuesieren uns zu tode</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>neil postman</subject>
+  <object>wir amuesieren uns zu tode</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>nietzsche</subject>
+  <object>das buch ecce homo</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oedoen von horvath</subject>
+  <object>geschichten</object>
+  <verb>schrieb</verb>
+  <adverbs>_aus_dem_wienerwald_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oswald sprengler</subject>
+  <object>der untergang des abendlandes</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>patrik suesskind</subject>
+  <object>das parfuem</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>raabe</subject>
+  <object>der hungerpastor</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>raymond roussell</subject>
+  <object>locus solus</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert-louis-stevenson</subject>
+  <object>die schatzinsel</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robert musil</subject>
+  <object>der mann ohne eigenschaften</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>0.500000</truth>
+  <flags>00000</flags>
+  <clause>
+    <subject></subject>
+    <object></object>
+    <verb></verb>
+    <adverbs></adverbs>
+    <extra></extra>
+    <questionword></questionword>
+    <truth>0.500000</truth>
+    <flags>00000</flags>
+  </clause>
+</fact>
+<fact>
+  <subject>robert musil</subject>
+  <object>der mann ohne eigenschaften</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sallust</subject>
+  <object>die verschwoerung des catilina</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schiller</subject>
+  <object>die raeuber</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schiller</subject>
+  <object>kabale und liebe</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>schnitzler</subject>
+  <object>den reigen</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shakespeare</subject>
+  <object>der kaufmann von venedig</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shakespeare</subject>
+  <object>ein sommernachtstraum</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shakespeare</subject>
+  <object>romeo und julia</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>shakespeare</subject>
+  <object>viel laerm um nothing</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>siegfried lenz</subject>
+  <object>die deutschstunde</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sophokles</subject>
+  <object>antigone</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stefan zweig</subject>
+  <object>die schachnovelle</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>stephen king</subject>
+  <object>friedhof der kuscheltiere</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>theodor storm</subject>
+  <object>den schimmelreiter</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas malory</subject>
+  <object>le morte darthur</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas mann</subject>
+  <object>die buddenbrooks</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tolstoj</subject>
+  <object>anna karenina</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tschechow</subject>
+  <object>duell</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>tschechow</subject>
+  <object>onkel wanja</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ulrich beck</subject>
+  <object>die risikogesellschaft</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>umberto eco</subject>
+  <object>der name</object>
+  <verb>schrieb</verb>
+  <adverbs>_der_rose_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>victor hugo</subject>
+  <object>notre dame von paris</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>walter benjamin</subject>
+  <object>das kunstwerk in dem zeitalter seiner technischen reproduzierbarkeit</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zuckmayr</subject>
+  <object>barbara blomberg</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>zweig</subject>
+  <object>die schachnovelle</object>
+  <verb>schrieb</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>denis diderot</subject>
+  <object>die erste moderne enzyklopaedie</object>
+  <verb>schuf</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die raeuber</subject>
+  <object>ein drama</object>
+  <verb>sind</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>intarsien</subject>
+  <object>einlegearbeiten</object>
+  <verb>sind</verb>
+  <adverbs>in holz</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cabaret</subject>
+  <object></object>
+  <verb>spielt</verb>
+  <adverbs>in berlin</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das musical cabaret</subject>
+  <object></object>
+  <verb>spielt</verb>
+  <adverbs>in berlin</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>die oper madame butterfly</subject>
+  <object></object>
+  <verb>spielt</verb>
+  <adverbs>in japan</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>angelina jolie</subject>
+  <object>lara croft</object>
+  <verb>spielte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>martin landau</subject>
+  <object>die hauptrolle</object>
+  <verb>spielte</verb>
+  <adverbs>in mondbasis alpha eins</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>madame butterfly</subject>
+  <object></object>
+  <verb>spielt</verb>
+  <adverbs>in japan</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>romeo und julia</subject>
+  <object></object>
+  <verb>spielt</verb>
+  <adverbs>in verona</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>doktor doolittle</subject>
+  <object></object>
+  <verb>sprach</verb>
+  <adverbs>mit seinen tieren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der bolero</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>von ravel</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der ewige frieden</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>_von_immanuel_kant_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der fliegende hollaender</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>_von_richard_wagner_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der mardi gras</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>aus new orleans</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der talisman</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>_von_johann_nestroy_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karl marx</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>aus trier</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>land des laechelns</subject>
+  <object></object>
+  <verb>stammt</verb>
+  <adverbs>_von_franz_lehar_</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedrich schiller</subject>
+  <object></object>
+  <verb>starb</verb>
+  <adverbs>an dem 9 mai 1805</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>friedrich schiller</subject>
+  <object></object>
+  <verb>starb</verb>
+  <adverbs>in weimar</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich heine</subject>
+  <object>1856</object>
+  <verb>starb</verb>
+  <adverbs>in paris</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>thomas mann</subject>
+  <object></object>
+  <verb>starb</verb>
+  <adverbs>in zuerich</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>abba</subject>
+  <object>ihre weltkarriere</object>
+  <verb>startete</verb>
+  <adverbs>beim songcontest</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>das albrecht-duerer-haus</subject>
+  <object></object>
+  <verb>steht</verb>
+  <adverbs>in nuernberg</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hannibal</subject>
+  <object>die alpen</object>
+  <verb>ueberquerte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hannibal</subject>
+  <object>die alpen</object>
+  <verb>ueberquerte</verb>
+  <adverbs>mit 37 elefanten</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>gustav freytag</subject>
+  <object>das werk soll und haben</object>
+  <verb>verfasste</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>angelina jolie</subject>
+  <object>lara croft</object>
+  <verb>verkoerperte</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aesop</subject>
+  <object>ein legendaerer griechischer fabeldichter</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ahab</subject>
+  <object>ein kapitaen</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>aristoteles</subject>
+  <object>ein philosoph</object>
+  <verb>war</verb>
+  <adverbs>aus griechenland</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>arthur miller</subject>
+  <object></object>
+  <verb>war</verb>
+  <adverbs>mit marilyn monroe verheiratet</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bach</subject>
+  <object>der bedeutendste komponist des barocks</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>beethoven</subject>
+  <object>ein komponist</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>cheetah</subject>
+  <object>die schimpansin</object>
+  <verb>war</verb>
+  <adverbs>von tarzan</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>elvis presley</subject>
+  <object>der erste rock'n'roll star</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>erik ode</subject>
+  <object>der kommisar</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ernst wiechert</subject>
+  <object>ein deutscher schriftsteller</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>ernst wiechert</subject>
+  <object>ein romanautor</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>freddie mercury</subject>
+  <object>ein saenger</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hannibal</subject>
+  <object>ein feldherr</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>heinrich heine</subject>
+  <object>ein dichter</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>lewis caroll</subject>
+  <object>mathematikdozent</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>mark aurel</subject>
+  <object>philosoph</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>merlin</subject>
+  <object>der zauberer artus</object>
+  <verb>war</verb>
+  <adverbs>an dem hof von koenig</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>moby dick</subject>
+  <object>ein wal</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>oscar wilde</subject>
+  <object>ein schriftsteller</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>platon</subject>
+  <object>ein schueler</object>
+  <verb>war</verb>
+  <adverbs>von sokrates</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>richard loewenherz</subject>
+  <object>gefangener</object>
+  <verb>war</verb>
+  <adverbs>in duernstein</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>robin hood</subject>
+  <object>ein raeuberhauptmann</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>sappho</subject>
+  <object>eine griechische dichterin</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>theodor mommsen</subject>
+  <object>der erste deutsche literatur-nobelpreistraeger</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>grisu</subject>
+  <object>feuerwehrmann</object>
+  <verb>wollte werden</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>der emmy</subject>
+  <object></object>
+  <verb>wird wird</verb>
+  <adverbs>jaehrlich vergeben</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>bruno bettelheim</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in wien geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>charlie chaplin</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in london geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>franz kafka</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in prag geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>george lazenby</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in australien geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>hermann hesse</subject>
+  <object></object>
+  <verb>wurde</verb>
+  <adverbs>in calw geboren</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>romy schneider</subject>
+  <object>44 jahre</object>
+  <verb>wurde</verb>
+  <adverbs>alt</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karl may</subject>
+  <object>winnetou</object>
+  <verb>hat</verb>
+  <adverbs>geschrieben</adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
+<fact>
+  <subject>karl may</subject>
+  <object>ein schriftsteller</object>
+  <verb>war</verb>
+  <adverbs></adverbs>
+  <extra></extra>
+  <questionword></questionword>
+  <truth>1.000000</truth>
+  <flags>00000</flags>
+</fact>
