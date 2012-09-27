@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ ******************************************************************************/
 package net.freehal.core.xml;
 
 import java.util.ArrayList;
@@ -312,6 +328,31 @@ public class XmlList extends XmlObj {
 		if (this.getName() == "link_|" || this.getName() == "synonyms")
 			c /= embedded.size();
 		return c;
+	}
+
+	public void insertSynonyms(SynonymProvider database) {
+		List<XmlObj> newEmbedded = new ArrayList<XmlObj>();
+		for (XmlObj e : embedded) {
+			if (e instanceof XmlList) {
+				((XmlList) e).insertSynonyms(database);
+				newEmbedded.add(e);
+			} else if (e instanceof XmlText) {
+				List<Word> words = e.getWords();
+				if (words.size() > 1) {
+					XmlList list = new XmlList();
+					list.setName("list");
+					for (Word word : words) {
+						list.add(new XmlSynonyms(word, database));
+					}
+					newEmbedded.add(list);
+				} else if (words.size() == 1) {
+					newEmbedded.add(new XmlSynonyms(words.get(0), database));
+				}
+			}
+		}
+		embedded = null;
+		embedded = newEmbedded;
+		this.resetCache();
 	}
 
 	@Override

@@ -14,45 +14,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.pos;
+package net.freehal.core.xml;
 
-import java.io.File;
-import java.util.AbstractMap;
-import java.util.ArrayList;
+import java.util.Collection;
 
-import java.util.Map;
+public class XmlSynonyms extends XmlList {
 
-public class TagList extends ArrayList<Map.Entry<String, Tags>> implements
-		TagContainer {
+	public XmlSynonyms() {
+		setName("synonyms");
+	}
 
-	private static final long serialVersionUID = 7111858739911455030L;
-
-	@Override
-	public void add(String word, Tags tags) {
-		super.add(new AbstractMap.SimpleEntry<String, Tags>(word, tags));
+	public XmlSynonyms(final Word word, SynonymProvider database) {
+		add(XmlText.fromText(word));
+		add(database.getSynonyms(word.getWord()));
 	}
 
 	@Override
-	public boolean containsKey(String word) {
-		for (Map.Entry<String, Tags> entry : this) {
-			if (entry.getKey().equals(word))
-				return true;
+	public void insertSynonyms(SynonymProvider database) {
+		// ignore, the synonyms are already inserted if we are a XmlSynonxms
+		// instance!
+	}
+
+	public void add(Collection<String> collection) {
+		for (String word : collection) {
+			this.add(XmlText.fromText(word));
 		}
-		return false;
 	}
-
-	@Override
-	public Tags get(String word) {
-		for (Map.Entry<String, Tags> entry : this) {
-			if (entry.getKey().equals(word))
-				return entry.getValue();
-		}
-		return null;
-	}
-
-	@Override
-	public void add(File filename) {
-		// ignore
-	}
-
 }

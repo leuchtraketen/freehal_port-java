@@ -1,6 +1,23 @@
+/*******************************************************************************
+ * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ ******************************************************************************/
 package net.freehal.core.database;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -15,14 +32,18 @@ import net.freehal.core.util.Mutable;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlFactReciever;
+import net.freehal.core.xml.XmlObj;
+import net.freehal.core.xml.XmlText;
 import net.freehal.core.xml.XmlUtils;
 
 public class DiskDatabase implements DatabaseImpl {
 
 	private Map<String, Integer> cacheFiles = new HashMap<String, Integer>();
+	private SynonymMap synonymmap = new SynonymMap();
 
 	public DiskDatabase() {
 		readMetadata();
+		synonymmap.read();
 	}
 
 	private void readMetadata() {
@@ -55,7 +76,7 @@ public class DiskDatabase implements DatabaseImpl {
 	public Set<XmlFact> findFacts(XmlFact xfact) {
 		LogUtils.i("find by fact: " + xfact);
 
-		xfact.insertSynonyms(this);
+		xfact.insertSynonyms(synonymmap);
 		xfact.toggle(FreehalConfig.getTagger());
 
 		List<Word> words = xfact.getWords();
@@ -65,8 +86,16 @@ public class DiskDatabase implements DatabaseImpl {
 	}
 
 	private List<Word> filterUsefulWords(List<Word> words) {
-		// TODO Automatisch generierter Methodenstub
-		return words;
+		List<Word> usefulWords = new ArrayList<Word>();
+		for (Word word : words) {
+			if (FreehalConfig.getTagger().isIndexWord(word)) {
+				LogUtils.i("index word: " + word);
+				usefulWords.add(word);
+			} else
+				LogUtils.i("no index word: " + word);
+
+		}
+		return usefulWords;
 	}
 
 	@Override
@@ -170,11 +199,15 @@ public class DiskDatabase implements DatabaseImpl {
 			} else {
 				LogUtils.i("update cache (file): " + databaseFile);
 
+				// order the xml data
 				final String xmlPre = XmlUtils.orderTags(xmlInput);
 
-				final Mutable<Map<File, Set<XmlFact>>> cache = new Mutable<Map<File, Set<XmlFact>>>(
+				// the XmlFactReciever will store the data which need to be
+				// written to files in this hashmaps
+				final Mutable<Map<File, Set<XmlFact>>> cacheFacts = new Mutable<Map<File, Set<XmlFact>>>(
 						new HashMap<File, Set<XmlFact>>());
 
+				// read the xml data and build XmlFact objects
 				XmlUtils.readXmlFacts(xmlPre, databaseFile,
 						new XmlFactReciever() {
 							@Override
@@ -182,13 +215,15 @@ public class DiskDatabase implements DatabaseImpl {
 									int countFacts, long start, File filename,
 									int countFactsSoFar) {
 
-								updateCache(xfact, cache);
+								updateCacheFacts(xfact, cacheFacts);
+								updateCacheSynonyms(xfact);
 							}
 						});
 
-				for (File cacheFile : cache.get().keySet()) {
+				// write the fact cache files
+				for (File cacheFile : cacheFacts.get().keySet()) {
 					StringBuilder content = new StringBuilder();
-					for (XmlFact xfact : cache.get().get(cacheFile)) {
+					for (XmlFact xfact : cacheFacts.get().get(cacheFile)) {
 						content.append(xfact.printXml());
 					}
 					LogUtils.d("write cache file : " + cacheFile);
@@ -196,13 +231,39 @@ public class DiskDatabase implements DatabaseImpl {
 					FileUtils.write(cacheFile, content.toString());
 				}
 
+				// write the synonym cache files
+				synonymmap.write();
+
+				// ... and mark this database file as done!
 				cacheFiles.put(databaseFile.getName(), xmlInput.hashCode());
 				writeMetadata();
 			}
 		}
 	}
 
-	protected void updateCache(XmlFact xfact,
+	protected void updateCacheSynonyms(XmlFact xfact) {
+		// does this fact contain a synonym?
+		if (xfact.part("verb").matches(XmlText.fromText("=")) == 1) {
+			final XmlObj subject = xfact.part("subject");
+			final XmlObj object = xfact.part("object");
+			double countSubject = subject.countWords();
+			double countObject = object.countWords();
+
+			if (countSubject > 0 && countObject > 0) {
+				if ((countSubject == 1 || subject.matches(XmlText
+						.fromText("(a)")) == 0)
+						&& (countObject == 1 || object.matches(XmlText
+								.fromText("(a)")) == 0)) {
+
+					// it does!
+					synonymmap.add(Word.join(" ", subject.getWords()),
+							Word.join(" ", object.getWords()));
+				}
+			}
+		}
+	}
+
+	protected void updateCacheFacts(XmlFact xfact,
 			Mutable<Map<File, Set<XmlFact>>> cache) {
 		LogUtils.d("update cache for this fact: " + xfact.printText());
 

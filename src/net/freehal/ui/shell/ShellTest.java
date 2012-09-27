@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ ******************************************************************************/
 package net.freehal.ui.shell;
 
 import java.io.File;
@@ -21,9 +37,11 @@ import net.freehal.core.filter.FilterQuestionWho;
 import net.freehal.core.grammar.AbstractGrammar;
 import net.freehal.core.lang.german.GermanGrammar;
 import net.freehal.core.lang.german.GermanParser;
+import net.freehal.core.lang.german.GermanPhrase;
 import net.freehal.core.lang.german.GermanTagger;
 import net.freehal.core.parser.AbstractParser;
 import net.freehal.core.parser.Sentence;
+import net.freehal.core.phrase.AbstractPhrase;
 import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.TaggerCacheMemory;
 import net.freehal.core.predefined.PredefinedAnswerProvider;
@@ -45,11 +63,13 @@ public class ShellTest {
 
 		// how and where to print the log
 		// example: all debug messages from the class "DiskDatabase" and the sub
-		// package "xml" (net.freehal.core.xml) are not logged to console
-		// output, but everything is written into a log file
+		// packages "xml" (net.freehal.core.xml) and "filter"
+		// (net.freehal.core.filter) are not logged to console output, but
+		// everything is written into a log file
 		LogUtilsStandard log = new LogUtilsStandard();
 		log.to(LogUtilsStandard.ConsoleLogStream.create(System.out)
-				.addFilter("DiskDatabase", "debug").addFilter("xml", "debug"));
+				.addFilter("DiskDatabase", "debug").addFilter("xml", "debug")
+				.addFilter("filter", "debug"));
 		log.to(LogUtilsStandard.FileLogStream.create("../stdout.txt"));
 		LogUtils.set(log);
 
@@ -76,6 +96,11 @@ public class ShellTest {
 		tagger.readRegexFrom(new File("regex.pos"));
 		tagger.readToggleWordsFrom(new File("toggle.csv"));
 		FreehalConfig.setTagger(tagger);
+
+		// how to phrase the output sentences
+		// (also possible: EnglishPhrase, GermanPhrase, FakePhrase)
+		AbstractPhrase phrase = new GermanPhrase();
+		FreehalConfig.setPhrase(phrase);
 
 		// initialize the database
 		// (also possible: DiskDatabase, FakeDatabase)

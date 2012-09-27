@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ ******************************************************************************/
 package net.freehal.core.xml;
 
 import java.util.List;
@@ -27,6 +43,10 @@ public class XmlText extends XmlObj {
 		return xobj;
 	}
 
+	public static XmlObj fromText(Word word) {
+		return fromText(word.getWord());
+	}
+
 	@Override
 	public String printXml(int level, int secondlevel) {
 		return text;
@@ -45,7 +65,7 @@ public class XmlText extends XmlObj {
 	@Override
 	protected boolean prepareWords() {
 		if (super.prepareWords()) {
-			String[] words = text.split("[^A-Za-z0-9}{][=)(_-]+?");
+			String[] words = text.split("[^A-Za-z0-9}{\\]\\[=)(_-]+");
 			for (String word : words) {
 				if (word.length() > 0 && !word.equals("1"))
 					cacheWords.add(new Word(word, null));

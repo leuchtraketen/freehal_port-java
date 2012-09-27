@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ ******************************************************************************/
 package net.freehal.core.pos;
 
 import java.io.File;
@@ -40,6 +56,13 @@ public abstract class Tagger2012 implements AbstractTagger {
 
 		Tags tags = null;
 
+		if (tags == null)
+			tags = this.getBuiltinTags(word);
+		if (tags == null)
+			tags = this.getBuiltinTags(StringUtils.ucfirst(word));
+		if (tags == null)
+			tags = this.getBuiltinTags(word.toLowerCase());
+		
 		if (tags == null)
 			tags = this.getStaticTags(word);
 		if (tags == null)
@@ -85,6 +108,8 @@ public abstract class Tagger2012 implements AbstractTagger {
 
 		return tags;
 	}
+
+	protected abstract Tags getBuiltinTags(String word);
 
 	private Tags askUser(String word) {
 		// TODO Automatisch generierter Methodenstub
@@ -248,7 +273,6 @@ public abstract class Tagger2012 implements AbstractTagger {
 	}
 
 	private Tags getRegexTags(final String word) {
-
 		for (Map.Entry<String, Tags> entry : regexTags) {
 			final String regex = entry.getKey();
 			final Tags tags = entry.getValue();
@@ -258,5 +282,17 @@ public abstract class Tagger2012 implements AbstractTagger {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public boolean isIndexWord(final Word word) {
+		if (!word.hasTags()) {
+			word.setTags(this);
+		}
+
+		if (word.hasTags())
+			return word.getTags().isType("n") || word.getTags().isType("adj");
+		else
+			return false;
 	}
 }

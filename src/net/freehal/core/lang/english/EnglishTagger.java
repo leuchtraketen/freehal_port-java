@@ -1,22 +1,61 @@
+/*******************************************************************************
+ * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ ******************************************************************************/
 package net.freehal.core.lang.english;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
-import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.Tagger2012;
 import net.freehal.core.pos.TaggerCache;
+import net.freehal.core.pos.Tags;
 import net.freehal.core.util.RegexUtils;
+import net.freehal.core.xml.Word;
 
-public class EnglishTagger extends Tagger2012 implements AbstractTagger {
+public class EnglishTagger extends Tagger2012 {
 
 	Set<String> builtinEntityEnds = new HashSet<String>();
 	Set<String> builtinMaleNames = new HashSet<String>();
 	Set<String> builtinFemaleNames = new HashSet<String>();
 	Set<String> customNames = new HashSet<String>();
+	Map<String, Tags> builtinPosTypes = new HashMap<String, Tags>();
 
 	public EnglishTagger(TaggerCache container) {
 		super(container);
+
+		for (String s : EnglishBuiltinData.builtinEntityEnds.split(";")) {
+			builtinEntityEnds.add(s);
+		}
+		for (String s : EnglishBuiltinData.builtinMaleNames.split(";")) {
+			builtinMaleNames.add(s);
+		}
+		for (String s : EnglishBuiltinData.builtinFemaleNames.split(";")) {
+			builtinFemaleNames.add(s);
+		}
+		for (String s : EnglishBuiltinData.builtinPosTypes) {
+			String[] parts = s.split("[:][ ]");
+			if (parts.length == 2) {
+				builtinPosTypes.put(parts[0], new Tags(parts[1], null));
+			}
+			if (parts.length == 3) {
+				builtinPosTypes.put(parts[0], new Tags(parts[1], parts[2]));
+			}
+		}
 	}
 
 	@Override
@@ -47,4 +86,22 @@ public class EnglishTagger extends Tagger2012 implements AbstractTagger {
 						"(soehne|shne|toechter|tchter|gebrueder|brueder)|(^bundes)|(minister)|(meister$)|(ger$)");
 	}
 
+	@Override
+	public boolean isIndexWord(final Word word) {
+		if (word.equals("a") || word.equals("an") || word.equals("the")
+				|| word.equals("in") || word.equals("verb")
+				|| word.equals("of") || word.equals("that")
+				|| word.equals("is") || word.equals("are"))
+			return false;
+
+		return super.isIndexWord(word);
+	}
+
+	@Override
+	protected Tags getBuiltinTags(String word) {
+		if (builtinPosTypes.containsKey(word))
+			return builtinPosTypes.get(word);
+		else
+			return null;
+	}
 }
