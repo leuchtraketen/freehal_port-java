@@ -46,4 +46,12 @@ public class FileUtils {
 			String s) {
 		instance.write(new File(d.getAbsolutePath(), f.getPath()), s);
 	}
+	
+	public static void delete(File directory) {
+		instance.delete(directory);
+	}
+	
+	public static void delete(File d, File f) {
+		instance.delete(new File(d.getAbsolutePath(), f.getPath()));
+	}
 }

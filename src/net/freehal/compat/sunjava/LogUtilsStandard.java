@@ -1,8 +1,15 @@
 package net.freehal.compat.sunjava;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
+import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.LogUtilsImpl;
 import net.freehal.core.util.RegexUtils;
 
@@ -11,17 +18,39 @@ public class LogUtilsStandard implements LogUtilsImpl {
 	private final int maxLengthSourceFile = 20;
 	private final int maxLengthLineNumber = 4;
 	private Set<String> filter = new HashSet<String>();
+	private Set<String> temporaryFilter = new HashSet<String>();
+	private List<PrintStream> streams = new ArrayList<PrintStream>();
 
-	public LogUtilsStandard filter(String className) {
-		filter.add(className);
+	@Override
+	public LogUtilsImpl addFilter(String className, String type) {
+		filter.add(className + ":" + type);
 		return this;
 	}
 
-	private boolean isFiltered(final String className, final String type) {
+	@Override
+	public boolean isFiltered(final String className, final String type) {
+		return isFiltered(filter, className, type)
+				|| isFiltered(temporaryFilter, className, type);
+	}
+
+	private boolean isFiltered(Set<String> filter, final String className,
+			final String type) {
 		return filter.contains(className + ":" + type)
 				|| filter.contains(className + ":" + type.charAt(0))
 				|| filter.contains(className + ":*")
 				|| filter.contains(className);
+	}
+
+	@Override
+	public LogUtilsImpl addTemporaryFilter(String className, String type) {
+		temporaryFilter.add(className + ":" + type);
+		return this;
+	}
+
+	@Override
+	public LogUtilsImpl resetTemporaryFilters() {
+		temporaryFilter.clear();
+		return this;
 	}
 
 	private String className(StackTraceElement ste) {
@@ -98,19 +127,46 @@ public class LogUtilsStandard implements LogUtilsImpl {
 
 		final String prefix = whereInCode(stacktrace) + "(" + type + ") "
 				+ spaces;
-		if (isFiltered(className(stacktrace), type)
-				|| isFiltered(lastPackage(stacktrace), type)) {
-			// if filtered, ignore this line!
-		} else if (e.contains("\\r")) {
-			e = RegexUtils.replace(e, "\\r", "\r" + prefix);
-			System.out.print(prefix + e + "\r");
-		} else {
-			System.out.println(prefix + e);
+		for (PrintStream stream : streams) {
+			if (stream == System.out || stream == System.err) {
+				if (LogUtils.isFiltered(className(stacktrace), type)
+						|| LogUtils.isFiltered(lastPackage(stacktrace), type)) {
+					// if filtered, ignore this line!
+				} else if (e.contains("\\r")) {
+					e = RegexUtils.replace(e, "\\\\r", "\r" + prefix);
+					stream.print(prefix + e + "\r");
+				} else {
+					stream.println(prefix + e);
+				}
+			} else {
+				if (e.contains("\\r")) {
+					e = RegexUtils.replace(e, "\\\\r", "");
+					stream.print(prefix + e);
+				} else {
+					stream.println(prefix + e);
+				}
+			}
 		}
 	}
 
 	@Override
 	public void flush() {
-		System.out.flush();
+		for (PrintStream stream : streams) {
+			stream.flush();
+		}
+	}
+
+	public LogUtilsStandard to(PrintStream out) {
+		streams.add(out);
+		return this;
+	}
+
+	public LogUtilsImpl to(File file) {
+		try {
+			streams.add(new PrintStream(new FileOutputStream(file)));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return this;
 	}
 }

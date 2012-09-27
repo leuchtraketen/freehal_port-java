@@ -16,9 +16,27 @@ public class RegexUtils {
 		return find(text, "(?i)" + find);
 	}
 
+	@SuppressWarnings("unused")
 	public static String replace(final String text, final String find,
 			final String replacement) {
-		return text.replace(find, replacement);
+		
+		if (0 == 1) {
+			String result = text.replaceAll(find, replacement);
+			if (!text.equals(result) && result.length() < 1024) {
+				StackTraceElement ste = Thread.currentThread().getStackTrace()[2];
+
+				LogUtils.d(new StringBuilder().append("replace(\"")
+						.append(text).append("\", \"").append(find)
+						.append("\", \"").append(replacement).append("\")=\"")
+						.append(result).append("\" in ")
+						.append(ste.getClassName()).append(".")
+						.append(ste.getMethodName()).append(":")
+						.append(ste.getLineNumber()).toString());
+			}
+			return result;
+		}
+		
+		return text.replaceAll(find, replacement);
 	}
 
 	public static String ireplace(final String str, final String string,

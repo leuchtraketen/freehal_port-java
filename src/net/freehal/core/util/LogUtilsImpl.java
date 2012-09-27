@@ -12,4 +12,12 @@ public interface LogUtilsImpl {
 
 	public void flush();
 
+	public LogUtilsImpl addFilter(String className, String type);
+
+	public LogUtilsImpl addTemporaryFilter(String className, String type);
+
+	public LogUtilsImpl resetTemporaryFilters();
+
+	public boolean isFiltered(String className, String type);
+
 }

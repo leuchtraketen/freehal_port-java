@@ -4,9 +4,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.freehal.core.grammar.Entities;
 import net.freehal.core.grammar.Grammar2012;
 import net.freehal.core.pos.Tags;
-import net.freehal.core.typedefs.Entities;
 import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
@@ -20,11 +20,12 @@ public class Sentence {
 	private List<Word> wordsList = null;
 	private XmlFact xfact = null;
 
-	public Sentence(AbstractParser parser, String input) {
+	public Sentence(AbstractParser parser, final String input) {
 		String tmp = input;
-		tmp = RegexUtils.replace(tmp, "[.!?\"']", "");
+		tmp = RegexUtils.replace(tmp, "[.!\\?\"']+", "");
 		tmp = RegexUtils.trim(tmp, "-;,#+ ");
 		String[] tmpList = tmp.split("\\s+");
+		LogUtils.i("sentence: " + tmp);
 
 		wordsList = new ArrayList<Word>();
 

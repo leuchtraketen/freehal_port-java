@@ -5,7 +5,6 @@ import java.util.List;
 
 import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.Tags;
-import net.freehal.core.util.LogUtils;
 
 public abstract class XmlObj {
 

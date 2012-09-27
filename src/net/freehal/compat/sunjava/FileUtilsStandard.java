@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,7 +66,8 @@ public class FileUtilsStandard implements FileUtilsImpl {
 			LogUtils.e(e.getMessage());
 		} finally {
 			try {
-				theReader.close();
+				if (theReader != null)
+					theReader.close();
 			} catch (IOException e) {
 				LogUtils.e(e.getMessage());
 			}
@@ -124,5 +126,15 @@ public class FileUtilsStandard implements FileUtilsImpl {
 					// just ignore it
 				}
 		} // end try/catch/finally
+	}
+
+	@Override
+	public void delete(File f) {
+		if (f.isDirectory()) {
+			for (File c : f.listFiles())
+				delete(c);
+		}
+		if (!f.delete())
+			LogUtils.e("Failed to delete file or directory: " + f);
 	}
 }

@@ -25,6 +25,7 @@ import net.freehal.core.lang.german.GermanTagger;
 import net.freehal.core.parser.AbstractParser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.pos.AbstractTagger;
+import net.freehal.core.pos.TaggerCacheDisk;
 import net.freehal.core.predefined.PredefinedAnswerProvider;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
@@ -37,10 +38,11 @@ public class ShellTest {
 		FileUtils.set(new FileUtilsStandard());
 
 		// how and where to print the log
-		// example: all debug messages from class "DiskDatabase" and sub package "xml"
-		// (net.freehal.core.xml) are not logged
-		LogUtils.set(new LogUtilsStandard().filter("DiskDatabase:debug")
-				.filter("xml:debug"));
+		// example: all debug messages from class "DiskDatabase" and sub package
+		// "xml" (net.freehal.core.xml) are not logged
+		LogUtils.set(new LogUtilsStandard().to(System.out).to(
+				new File("../stdout.txt")));
+		LogUtils.addFilter("DiskDatabase", "debug").addFilter("xml", "debug");
 
 		// the language and the base directory (if executed in "bin/", the base
 		// directory is ".."). Freehal expects a "lang_xy" directory there which
@@ -56,7 +58,10 @@ public class ShellTest {
 
 		// initialize the part of speech tagger
 		// also possible: EnglishTagger, GermanTagger, FakeTagger
-		AbstractTagger tagger = new GermanTagger();
+		//
+		// the parameter is either a MemoryTaggerCache (faster, more RAM) or a
+		// DiskTaggerCache (slower, less RAM)
+		AbstractTagger tagger = new GermanTagger(new TaggerCacheDisk());
 		tagger.readTagsFrom(new File("guessed.pos"));
 		tagger.readTagsFrom(new File("brain.pos"));
 		tagger.readTagsFrom(new File("memory.pos"));

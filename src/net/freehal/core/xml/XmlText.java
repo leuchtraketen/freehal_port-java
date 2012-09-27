@@ -4,7 +4,6 @@ import java.util.List;
 
 import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.util.LogUtils;
-import net.freehal.core.util.StringUtils;
 
 public class XmlText extends XmlObj {
 

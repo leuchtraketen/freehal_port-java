@@ -33,6 +33,8 @@ public class AnswerProviders implements AnswerProvider {
 		for (AnswerProvider a : providers) {
 			if (answer == null) {
 				answer = a.getAnswer(s);
+				
+				Runtime.getRuntime().gc();
 			}
 		}
 		return answer;

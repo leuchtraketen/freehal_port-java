@@ -13,4 +13,6 @@ public interface FileUtilsImpl {
 
 	public void write(File f, String s);
 
+	public void delete(File directory);
+
 }

@@ -8,7 +8,10 @@ public class FilterQuestionExtra implements FactFilter {
 
 	@Override
 	public double filter(XmlFact f1, XmlFact f2, double match) {
-		LogUtils.d("matches (filter: question what): " + match);
+		LogUtils.d("matches (filter: question extra): " + match);
+		LogUtils.d("f1.part(\"extra\") = " + f1.part("extra"));
+		LogUtils.d("f1.part(\"extra\").countWords() = "
+				+ f1.part("extra").countWords());
 
 		if (f1.part("extra").countWords() > 0) {
 			XmlList extra1 = f1.part("extra");

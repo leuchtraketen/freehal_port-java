@@ -302,10 +302,10 @@ public class XmlList extends XmlObj {
 	public double countWords() {
 		double c = 0;
 		for (XmlObj subobj : embedded) {
-			if (subobj.getName().equals("questionword")
+			if (!(subobj.getName().equals("questionword")
 					|| subobj.getName().equals("extra")
-					|| subobj.getName().equals("truth")
-					|| subobj.getName().equals("clause")) {
+					|| subobj.getName().equals("truth") || subobj.getName()
+					.equals("clause"))) {
 				c += subobj.countWords();
 			}
 		}

@@ -5,9 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.freehal.core.typedefs.TagContainer;
-import net.freehal.core.typedefs.TagList;
-import net.freehal.core.typedefs.TagMap;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.LogUtils;
@@ -22,6 +19,14 @@ public abstract class Tagger2012 implements AbstractTagger {
 	private TagContainer regexTags = new TagList();
 	private Map<String, String> togglemap = new HashMap<String, String>();
 
+	public Tagger2012(TaggerCache storage) {
+		staticTags = storage.newContainer("staticTags");
+	}
+
+	@SuppressWarnings("unused")
+	private Tagger2012() {
+	}
+
 	@Override
 	public Tags getPartOfSpeech(final String _word) {
 		String word = StringUtils.toAscii(_word);
@@ -29,6 +34,9 @@ public abstract class Tagger2012 implements AbstractTagger {
 			return null;
 		}
 		LogUtils.i("get part of speech: " + word);
+
+		if (word.contains("?"))
+			throw new IllegalArgumentException("");
 
 		Tags tags = null;
 
@@ -164,6 +172,7 @@ public abstract class Tagger2012 implements AbstractTagger {
 		int n = 0;
 
 		LogUtils.i("read part of speech file: " + filename);
+		container.get().add(filename);
 
 		List<String> lines = FileUtils.readLines(
 				FreehalConfig.getLanguageDirectory(), filename);
@@ -239,6 +248,7 @@ public abstract class Tagger2012 implements AbstractTagger {
 	}
 
 	private Tags getRegexTags(final String word) {
+
 		for (Map.Entry<String, Tags> entry : regexTags) {
 			final String regex = entry.getKey();
 			final Tags tags = entry.getValue();

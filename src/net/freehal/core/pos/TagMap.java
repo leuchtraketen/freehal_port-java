@@ -1,9 +1,8 @@
-package net.freehal.core.typedefs;
+package net.freehal.core.pos;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
-
-import net.freehal.core.pos.Tags;
 
 public class TagMap extends HashMap<String, Tags> implements TagContainer {
 
@@ -29,4 +28,8 @@ public class TagMap extends HashMap<String, Tags> implements TagContainer {
 		return super.get(word);
 	}
 
+	@Override
+	public void add(File filename) {
+		// ignore
+	}
 }

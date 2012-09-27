@@ -1,9 +1,7 @@
-package net.freehal.core.typedefs;
+package net.freehal.core.grammar;
 
 import java.util.ArrayList;
 
-import net.freehal.core.grammar.Entity;
-import net.freehal.core.grammar.Grammar2012;
 
 public class Entities extends ArrayList<Entity> {
 

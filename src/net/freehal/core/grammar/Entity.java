@@ -3,7 +3,6 @@ package net.freehal.core.grammar;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.freehal.core.typedefs.Entities;
 import net.freehal.core.typedefs.StringMultiMap;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Mutable;

@@ -5,6 +5,7 @@ import java.util.Set;
 
 import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.Tagger2012;
+import net.freehal.core.pos.TaggerCache;
 import net.freehal.core.util.RegexUtils;
 
 public class EnglishTagger extends Tagger2012 implements AbstractTagger {
@@ -13,6 +14,10 @@ public class EnglishTagger extends Tagger2012 implements AbstractTagger {
 	Set<String> builtinMaleNames = new HashSet<String>();
 	Set<String> builtinFemaleNames = new HashSet<String>();
 	Set<String> customNames = new HashSet<String>();
+
+	public EnglishTagger(TaggerCache container) {
+		super(container);
+	}
 
 	@Override
 	public boolean isName(String _name) {

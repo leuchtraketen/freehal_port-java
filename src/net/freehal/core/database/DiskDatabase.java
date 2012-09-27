@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import net.freehal.core.cache.DiskStorage;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.LogUtils;
@@ -54,13 +55,13 @@ public class DiskDatabase implements DatabaseImpl {
 	public Set<XmlFact> findFacts(Word word) {
 		LogUtils.i("find by word: " + word);
 
-		return findFacts(new Key(word));
+		return findFacts(new DiskStorage.Key(word));
 	}
 
-	private Set<XmlFact> findFacts(Key key) {
+	private Set<XmlFact> findFacts(DiskStorage.Key key) {
 		LogUtils.i("find by key: " + key);
 
-		File databaseFile = getFile("index", key, null);
+		File databaseFile = DiskStorage.getFile("database", "index", key, null);
 
 		Set<XmlFact> found = findFacts(databaseFile);
 
@@ -97,24 +98,10 @@ public class DiskDatabase implements DatabaseImpl {
 				}
 			});
 		}
+		
+		Runtime.getRuntime().gc();
 
 		return list;
-	}
-
-	private File getFile(final String type, final Key key, final File filename) {
-		StringBuilder keyPath = new StringBuilder();
-		keyPath.append(key.getKey(0)).append("/").append(key.getKey(1))
-				.append("/").append(key.getKey(2)).append("/")
-				.append(key.getKey(3));
-
-		File directory = new File(FreehalConfig.getCacheDirectory(),
-				"database/" + type + "/" + keyPath);
-		directory.mkdirs();
-
-		if (filename == null)
-			return directory;
-		else
-			return new File(directory.getPath(), filename.getPath());
 	}
 
 	@Override
@@ -177,65 +164,12 @@ public class DiskDatabase implements DatabaseImpl {
 
 		List<Word> words = xfact.getWords();
 		for (Word w : words) {
-			File cacheFile = getFile("index", new Key(w), new File(xfact
+			File cacheFile = DiskStorage.getFile("database", "index", new DiskStorage.Key(w), new File(xfact
 					.getFilename().getName()));
 			if (!cache.get().containsKey(cacheFile)) {
 				cache.get().put(cacheFile, new HashSet<XmlFact>());
 			}
 			cache.get().get(cacheFile).add(xfact);
 		}
-	}
-}
-
-class Key {
-
-	private Word word;
-	private String key;
-
-	public Key(Word word) {
-		this.word = word;
-		init();
-	}
-
-	public Key(String word) {
-		this.word = new Word(word, null);
-		init();
-	}
-
-	private void init() {
-		if (word.getWord().length() >= 4)
-			key = word.getWord().substring(0, 4);
-		else
-			key = word.getWord();
-		while (key.length() < 4)
-			key += "_";
-	}
-
-	public Word getWord() {
-		return word;
-	}
-
-	public void setWord(Word word) {
-		this.word = word;
-	}
-
-	public String getKey() {
-		return key;
-	}
-
-	public char getKey(int index) {
-		if (index >= 4 || index < 0)
-			return 0;
-		else
-			return key.charAt(index);
-	}
-
-	public void setKey(String key) {
-		this.key = key;
-	}
-
-	@Override
-	public String toString() {
-		return "{key=\"" + key + "\",word=" + word + "}";
 	}
 }

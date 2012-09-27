@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import net.freehal.core.typedefs.Entities;
 import net.freehal.core.typedefs.StringMultiMap;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;

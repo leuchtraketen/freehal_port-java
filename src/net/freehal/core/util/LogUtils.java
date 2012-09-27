@@ -55,4 +55,24 @@ public class LogUtils {
 	public static void flush() {
 		instance.flush();
 	}
+	
+
+	public static LogUtilsImpl addFilter(String className, final String type) {
+		instance.addFilter(className, type);
+		return instance;
+	}
+
+	public static LogUtilsImpl addTemporaryFilter(String className, final String type) {
+		instance.addTemporaryFilter(className, type);
+		return instance;
+	}
+
+	public static LogUtilsImpl resetTemporaryFilters() {
+		instance.resetTemporaryFilters();
+		return instance;
+	}
+
+	public static boolean isFiltered(final String className, final String type) {
+		return instance.isFiltered(className, type);
+	}
 }

@@ -1,8 +1,9 @@
-package net.freehal.core.typedefs;
+package net.freehal.core.pos;
 
+import java.io.File;
 import java.util.AbstractMap;
 import java.util.ArrayList;
-import net.freehal.core.pos.Tags;
+
 import java.util.Map;
 
 public class TagList extends ArrayList<Map.Entry<String, Tags>> implements
@@ -31,6 +32,11 @@ public class TagList extends ArrayList<Map.Entry<String, Tags>> implements
 				return entry.getValue();
 		}
 		return null;
+	}
+
+	@Override
+	public void add(File filename) {
+		// ignore
 	}
 
 }
