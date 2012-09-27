@@ -71,8 +71,4 @@ public class LogUtils {
 		instance.resetTemporaryFilters();
 		return instance;
 	}
-
-	public static boolean isFiltered(final String className, final String type) {
-		return instance.isFiltered(className, type);
-	}
 }

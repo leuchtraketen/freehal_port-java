@@ -38,11 +38,14 @@ public class ShellTest {
 		FileUtils.set(new FileUtilsStandard());
 
 		// how and where to print the log
-		// example: all debug messages from class "DiskDatabase" and sub package
-		// "xml" (net.freehal.core.xml) are not logged
-		LogUtils.set(new LogUtilsStandard().to(System.out).to(
-				new File("../stdout.txt")));
-		LogUtils.addFilter("DiskDatabase", "debug").addFilter("xml", "debug");
+		// example: all debug messages from the class "DiskDatabase" and the sub
+		// package "xml" (net.freehal.core.xml) are not logged to console
+		// output, but everything is written into a log file
+		LogUtilsStandard log = new LogUtilsStandard();
+		log.to(System.out).addFilter("DiskDatabase", "debug")
+				.addFilter("xml", "debug");
+		log.to(new File("../stdout.txt"));
+		LogUtils.set(log);
 
 		// the language and the base directory (if executed in "bin/", the base
 		// directory is ".."). Freehal expects a "lang_xy" directory there which

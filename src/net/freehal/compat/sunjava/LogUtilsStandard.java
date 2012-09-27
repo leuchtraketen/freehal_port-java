@@ -9,7 +9,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.LogUtilsImpl;
 import net.freehal.core.util.RegexUtils;
 
@@ -19,7 +18,7 @@ public class LogUtilsStandard implements LogUtilsImpl {
 	private final int maxLengthLineNumber = 4;
 	private Set<String> filter = new HashSet<String>();
 	private Set<String> temporaryFilter = new HashSet<String>();
-	private List<PrintStream> streams = new ArrayList<PrintStream>();
+	private List<LogStream> streams = new ArrayList<LogStream>();
 
 	@Override
 	public LogUtilsImpl addFilter(String className, String type) {
@@ -27,14 +26,15 @@ public class LogUtilsStandard implements LogUtilsImpl {
 		return this;
 	}
 
-	@Override
-	public boolean isFiltered(final String className, final String type) {
-		return isFiltered(filter, className, type)
+	public boolean isFiltered(LogStream stream, final String className,
+			final String type) {
+		return isFiltered(stream.getFilters(), className, type)
+				|| isFiltered(filter, className, type)
 				|| isFiltered(temporaryFilter, className, type);
 	}
 
-	private boolean isFiltered(Set<String> filter, final String className,
-			final String type) {
+	private static boolean isFiltered(Set<String> filter,
+			final String className, final String type) {
 		return filter.contains(className + ":" + type)
 				|| filter.contains(className + ":" + type.charAt(0))
 				|| filter.contains(className + ":*")
@@ -127,18 +127,27 @@ public class LogUtilsStandard implements LogUtilsImpl {
 
 		final String prefix = whereInCode(stacktrace) + "(" + type + ") "
 				+ spaces;
-		for (PrintStream stream : streams) {
-			if (stream == System.out || stream == System.err) {
-				if (LogUtils.isFiltered(className(stacktrace), type)
-						|| LogUtils.isFiltered(lastPackage(stacktrace), type)) {
-					// if filtered, ignore this line!
-				} else if (e.contains("\\r")) {
+		// for each stream
+		for (LogStream stream : streams) {
+			// is it filtered?
+			if (isFiltered(stream, className(stacktrace), type)
+					|| isFiltered(stream, lastPackage(stacktrace), type)) {
+				// ignore this line!
+			}
+			// ... is it console output?
+			else if (stream.getStream() == System.out
+					|| stream.getStream() == System.err) {
+				// use carriage return for output
+				if (e.contains("\\r")) {
 					e = RegexUtils.replace(e, "\\\\r", "\r" + prefix);
 					stream.print(prefix + e + "\r");
 				} else {
 					stream.println(prefix + e);
 				}
-			} else {
+			}
+			// ... or a log file?
+			else {
+				// remove all carriage returns
 				if (e.contains("\\r")) {
 					e = RegexUtils.replace(e, "\\\\r", "");
 					stream.print(prefix + e);
@@ -151,22 +160,62 @@ public class LogUtilsStandard implements LogUtilsImpl {
 
 	@Override
 	public void flush() {
-		for (PrintStream stream : streams) {
+		for (LogStream stream : streams) {
 			stream.flush();
 		}
 	}
 
-	public LogUtilsStandard to(PrintStream out) {
-		streams.add(out);
-		return this;
+	public LogStream to(PrintStream out) {
+		LogStream stream = new LogStream(out);
+		streams.add(stream);
+		return stream;
 	}
 
-	public LogUtilsImpl to(File file) {
+	public LogStream to(File file) {
 		try {
-			streams.add(new PrintStream(new FileOutputStream(file)));
+			return this.to(new PrintStream(new FileOutputStream(file)));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		return this;
+		return new LogStream(null);
 	}
+
+	public static class LogStream {
+		private PrintStream out;
+		private Set<String> filter = new HashSet<String>();
+
+		public LogStream(PrintStream out) {
+			this.out = out;
+		}
+
+		public PrintStream getStream() {
+			return out;
+		}
+
+		public Set<String> getFilters() {
+			return filter;
+		}
+
+		public LogStream addFilter(String className, String type) {
+			filter.add(className + ":" + type);
+			return this;
+		}
+
+		public boolean isFiltered(final String className, final String type) {
+			return LogUtilsStandard.isFiltered(filter, className, type);
+		}
+
+		public void flush() {
+			out.flush();
+		}
+
+		public void println(String string) {
+			out.println(string);
+		}
+
+		public void print(String string) {
+			out.print(string);
+		}
+	}
+
 }

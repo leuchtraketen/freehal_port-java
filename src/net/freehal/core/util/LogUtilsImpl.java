@@ -18,6 +18,4 @@ public interface LogUtilsImpl {
 
 	public LogUtilsImpl resetTemporaryFilters();
 
-	public boolean isFiltered(String className, String type);
-
 }
