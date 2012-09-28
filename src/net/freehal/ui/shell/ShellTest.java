@@ -54,7 +54,7 @@ import net.freehal.core.util.StringUtils;
  * This class is a reference implementation of a simple console user interface.
  * It uses all main APIs and runs on every normal java platform.
  * 
- * @author tobias
+ * @author "Tobias Schulz"
  */
 public class ShellTest {
 	private static void init() {
