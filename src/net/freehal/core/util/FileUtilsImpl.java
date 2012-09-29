@@ -21,7 +21,7 @@ import java.util.List;
 
 public interface FileUtilsImpl {
 
-	public List<String> readLines(File f);
+	public List<String> readLinesAsList(File f);
 
 	public String read(File f);
 
@@ -30,5 +30,7 @@ public interface FileUtilsImpl {
 	public void write(File f, String s);
 
 	public void delete(File directory);
+
+	public Iterable<String> readLines(File f);
 
 }

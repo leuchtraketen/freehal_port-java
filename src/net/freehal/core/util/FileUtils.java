@@ -26,13 +26,21 @@ public class FileUtils {
 	public static void set(FileUtilsImpl instance) {
 		FileUtils.instance = instance;
 	}
-
-	public static List<String> readLines(File f) {
+	
+	public static Iterable<String> readLines(File f) {
 		return instance.readLines(f);
 	}
+	
+	public static Iterable<String> readLines(File d, File f) {
+		return instance.readLines(new File(d.getAbsoluteFile(), f.getPath()));
+	}
 
-	public static List<String> readLines(File d, File f) {
-		return instance.readLines(new File(d.getAbsolutePath(), f.getPath()));
+	public static List<String> readLinesAsList(File f) {
+		return instance.readLinesAsList(f);
+	}
+
+	public static List<String> readLinesAsList(File d, File f) {
+		return instance.readLinesAsList(new File(d.getAbsoluteFile(), f.getPath()));
 	}
 
 	public static String read(File f) {
@@ -40,7 +48,7 @@ public class FileUtils {
 	}
 
 	public static String read(File d, File f) {
-		return instance.read(new File(d.getAbsolutePath(), f.getPath()));
+		return instance.read(new File(d.getAbsoluteFile(), f.getPath()));
 	}
 
 	public static void append(File f,
@@ -50,7 +58,7 @@ public class FileUtils {
 
 	public static void append(File d, File f,
 			String s) {
-		instance.append(new File(d.getAbsolutePath(), f.getPath()), s);
+		instance.append(new File(d.getAbsoluteFile(), f.getPath()), s);
 	}
 
 	public static void write(File f,
@@ -60,7 +68,7 @@ public class FileUtils {
 
 	public static void write(File d, File f,
 			String s) {
-		instance.write(new File(d.getAbsolutePath(), f.getPath()), s);
+		instance.write(new File(d.getAbsoluteFile(), f.getPath()), s);
 	}
 	
 	public static void delete(File directory) {
@@ -68,6 +76,6 @@ public class FileUtils {
 	}
 	
 	public static void delete(File d, File f) {
-		instance.delete(new File(d.getAbsolutePath(), f.getPath()));
+		instance.delete(new File(d.getAbsoluteFile(), f.getPath()));
 	}
 }

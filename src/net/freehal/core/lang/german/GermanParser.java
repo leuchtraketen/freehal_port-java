@@ -1498,7 +1498,7 @@ public class GermanParser extends AbstractParser {
 
 		// cout << "parser2012: step 9: " << str << endl;
 
-		List<String> histMale = FileUtils.readLines(
+		Iterable<String> histMale = FileUtils.readLines(
 				FreehalConfig.getLanguageDirectory(), new File("male.history"));
 		String last_male_substantive = null;
 		for (String line : histMale) {
@@ -1509,7 +1509,7 @@ public class GermanParser extends AbstractParser {
 			str = replaceHe(str, last_male_substantive);
 		}
 
-		List<String> histFemale = FileUtils.readLines(
+		Iterable<String> histFemale = FileUtils.readLines(
 				FreehalConfig.getLanguageDirectory(),
 				new File("female.history"));
 		String last_female_substantive = null;

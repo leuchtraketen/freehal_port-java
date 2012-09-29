@@ -281,6 +281,11 @@ public class LogUtilsStandard implements LogUtilsImpl {
 			return className;
 		}
 
+		public static String methodName(StackTraceElement ste) {
+			final String methodName = ste.getMethodName();
+			return methodName;
+		}
+
 		public static String lastPackage(StackTraceElement ste) {
 			final String fullClassName = ste.getClassName();
 			String[] pkgs = fullClassName.split("[.]");

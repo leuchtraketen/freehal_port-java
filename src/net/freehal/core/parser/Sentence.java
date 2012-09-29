@@ -30,6 +30,7 @@ import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlFactReciever;
 import net.freehal.core.xml.XmlUtils;
+import net.freehal.core.xml.XmlUtils.XmlStreamIterator;
 
 public class Sentence {
 
@@ -58,7 +59,7 @@ public class Sentence {
 		final String xmlInput = Grammar2012.printXml(parsed);
 		LogUtils.d("parsed fact as xml:");
 		LogUtils.d(xmlInput);
-		final String xmlPre = XmlUtils.orderTags(xmlInput);
+		final XmlStreamIterator xmlPre = XmlUtils.orderTags(xmlInput);
 		LogUtils.d("xml parsing string:");
 		LogUtils.d(xmlPre);
 		final Sentence sentence = this;

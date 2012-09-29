@@ -91,7 +91,7 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 	}
 
 	public void read() {
-		List<String> lines = FileUtils.readLines(DiskStorage.getDirectory(
+		Iterable<String> lines = FileUtils.readLines(DiskStorage.getDirectory(
 				"database", "synonyms"), new File("synonyms.csv"));
 		for (String line : lines) {
 			String[] csv = line.split("[|]");

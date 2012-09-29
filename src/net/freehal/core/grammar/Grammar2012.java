@@ -469,10 +469,10 @@ public abstract class Grammar2012 extends AbstractGrammar {
 	}
 
 	public boolean readGrammar(File filename) {
-		List<String> lines = FileUtils.readLines(
+		Iterable<String> lines = FileUtils.readLines(
 				FreehalConfig.getLanguageDirectory(), filename);
 
-		if (lines.size() == 0) {
+		if (!lines.iterator().hasNext()) {
 			LogUtils.e("Error! Could not open grammar file: " + filename);
 			return false;
 		}
