@@ -18,10 +18,30 @@ package net.freehal.core.xml;
 
 import java.util.Collection;
 
+/**
+ * The synonym provider interface should be implemented by any class that can be
+ * used to find out the synonyms of a word.
+ * 
+ * @author "Tobias Schulz"
+ */
 public interface SynonymProvider {
 
+	/**
+	 * Get the synonyms of the given String as a Collection of Strings.
+	 * 
+	 * @param text
+	 *            the word to search
+	 * @return the synonyms
+	 */
 	public Collection<String> getSynonyms(final String text);
-	
+
+	/**
+	 * Get the synonyms of the given Word as a Collection of Words.
+	 * 
+	 * @param text
+	 *            the word to search
+	 * @return the synonyms
+	 */
 	public Collection<Word> getSynonyms(final Word word);
 
 }
