@@ -39,10 +39,10 @@ import net.freehal.core.util.Ranking;
  * &lt;/fact&gt;
  * </pre>
  * 
- * When read from a file, this is equivalent to the following data structure ("
- * {@code |->}" means that the following object is in a list in the object
- * above, and \{{@code key=value}\} means that the attribute {@code key} of the
- * object has the value {@code value}):<br />
+ * When read from a file, this is equivalent to the following data structure (
+ * {@code "|->"} means that the following object is in a list in the object
+ * above, and {@code key=value} in curly brackets means that the attribute
+ * {@code key} of the object has the value {@code value}):<br />
  * <br />
  * 
  * <pre>

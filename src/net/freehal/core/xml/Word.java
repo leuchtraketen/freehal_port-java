@@ -25,8 +25,8 @@ import net.freehal.core.util.LogUtils;
 
 /**
  * This class represents a word. It is a wrapper for a String which contains the
- * text and a {@link Tags} object which represents the part of speech of
- * the word.
+ * text and a {@link Tags} object which represents the part of speech of the
+ * word.
  * 
  * @author "Tobias Schulz"
  */
@@ -248,14 +248,14 @@ public class Word {
 	 * A static method which joins the given words with a given delimiter to a
 	 * string.
 	 * 
-	 * @see StringUtils.join(...)
+	 * @see net.freehal.core.util.StringUtils#join(String, Iterable)
 	 * @param delimiter
 	 *        the delimiter
 	 * @param words
 	 *        a list of words
 	 * @return a string
 	 */
-	public static String join(String delimiter, List<Word> words) {
+	public static String join(String delimiter, Iterable<Word> words) {
 		if (words == null)
 			return "";
 		Iterator<Word> iter = words.iterator();
