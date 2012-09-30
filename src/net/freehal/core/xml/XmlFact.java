@@ -46,27 +46,35 @@ import net.freehal.core.util.Ranking;
  * <br />
  * 
  * <pre>
- * XmlFact: {name="fact",filename="(...)",line=123}
+ * XmlFact: {name="fact",filename="(...)",line=123,cacheWords=["my","name","freehal","is"]}
  * |
- * |-> XmlList: {name="subject"}
+ * |-> XmlList: {name="subject",cacheWords=["my","name"]}
  * |   |
- * |   \-> XmlList: {name="text"}
+ * |   \-> XmlList: {name="text",cacheWords=["my","name"]}
  * |       |
  * |      \-> XmlText: {text="my name"}
  * |
- * |-> XmlList: {name="object"}
+ * |-> XmlList: {name="object",cacheWords=["freehal"]}
  * |   |
- * |   \-> XmlList: {name="text"}
+ * |   \-> XmlList: {name="text",cacheWords=["freehal"]}
  * |       |
  * |       \-> XmlText: {text="freehal"}
  * |
- * \-> XmlList: {name="verb"}
+ * \-> XmlList: {name="verb",cacheWords=["is"]}
  *     |
- *     \-> XmlList: {name="text"}
+ *     \-> XmlList: {name="text",cacheWords=["is"]}
  *         |
  *         \-> XmlText: {text="is"}
  * </pre>
  * 
+ * It doesn't seem to make much sense that there is a {@code XmlList} with
+ * {@code name="text"} which always contains only one XmlText object, but this
+ * structure is needed because later we can add synonyms with a
+ * {@code SynonymProvider}.
+ * 
+ * @see XmlList
+ * @see XmlText
+ * @see SynonymProvider
  * @author "Tobias Schulz"
  */
 public class XmlFact extends XmlList {
