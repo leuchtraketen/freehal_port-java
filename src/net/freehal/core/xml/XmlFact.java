@@ -68,9 +68,9 @@ import net.freehal.core.util.Ranking;
  * </pre>
  * 
  * It doesn't seem to make much sense that there is a {@code XmlList} with
- * {@code name="text"} which always contains only one XmlText object, but this
- * structure is needed because later we can add synonyms with a
- * {@code SynonymProvider}.
+ * {@code name="text"} which always contains only one {@code XmlText} object,
+ * but this structure is needed because later we can add synonyms to that
+ * {@code XmlList} with a {@code SynonymProvider}.
  * 
  * @see XmlList
  * @see XmlText
