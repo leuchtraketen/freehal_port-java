@@ -46,22 +46,22 @@ public class XmlFact extends XmlList {
 	/** the line it was read from */
 	private String line;
 
-	/** Get the line this fact was read from **/
+	/** Get the file this fact was read from **/
 	public File getFilename() {
 		return filename;
 	}
 
-	/** Set the line this fact was read from **/
+	/** Set the file this fact was read from **/
 	public void setFilename(File filename) {
 		this.filename = filename;
 	}
 
-	/** Get the line this fact was read from **/
+	/** Get the line of the file this fact was read from **/
 	public String getLine() {
 		return line;
 	}
 
-	/** Set the line this fact was read from **/
+	/** Set the line of the file this fact was read from **/
 	public void setLine(String line) {
 		this.line = line;
 	}
@@ -73,11 +73,12 @@ public class XmlFact extends XmlList {
 	 * to determine the equality.
 	 * 
 	 * @see FactFilters
-	 * @see FactFilters#getInstance()
 	 * @see XmlList#isLike(XmlObj)
 	 * @see #part(String)
 	 * @param other
-	 * @return
+	 *        the other fact
+	 * @return a number between 0.0 and 1.0. In some cases, it can be greater
+	 *         than 1.0 too.
 	 */
 	public double isLike(XmlFact other) {
 		double matches = 0;
