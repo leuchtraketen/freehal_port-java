@@ -1,18 +1,18 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.ui.shell;
 
@@ -38,13 +38,14 @@ import net.freehal.core.grammar.AbstractGrammar;
 import net.freehal.core.lang.german.GermanGrammar;
 import net.freehal.core.lang.german.GermanParser;
 import net.freehal.core.lang.german.GermanPhrase;
+import net.freehal.core.lang.german.GermanPredefinedAnswerProvider;
+import net.freehal.core.lang.german.GermanRandomAnswerProvider;
 import net.freehal.core.lang.german.GermanTagger;
 import net.freehal.core.parser.AbstractParser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.phrase.AbstractPhrase;
 import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.TaggerCacheMemory;
-import net.freehal.core.predefined.PredefinedAnswerProvider;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.LogUtils;
@@ -67,17 +68,15 @@ public class ShellTest {
 		// (net.freehal.core.filter) are not logged to console output, but
 		// everything is written into a log file
 		LogUtilsStandard log = new LogUtilsStandard();
-		log.to(LogUtilsStandard.ConsoleLogStream.create(System.out)
-				.addFilter("DiskDatabase", "debug").addFilter("xml", "debug")
-				.addFilter("filter", "debug"));
+		log.to(LogUtilsStandard.ConsoleLogStream.create(System.out).addFilter("DiskDatabase", "debug")
+				.addFilter("xml", "debug").addFilter("filter", "debug"));
 		log.to(LogUtilsStandard.FileLogStream.create("../stdout.txt"));
 		LogUtils.set(log);
 
 		// set the language and the base directory (if executed in "bin/", the
 		// base directory is ".."). Freehal expects a "lang_xy" directory there
 		// which contains the database files.
-		FreehalConfig.set(new FreehalConfigStandard().setLanguage("de")
-				.setPath(new File("..")));
+		FreehalConfig.set(new FreehalConfigStandard().setLanguage("de").setPath(new File("..")));
 
 		// initialize the grammar
 		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
@@ -110,15 +109,14 @@ public class ShellTest {
 		database.updateCache();
 
 		// Freehal has different ways to find an answer for an input
-		AnswerProviders.getInstance().add(new PredefinedAnswerProvider())
-				.add(new DatabaseAnswerProvider(database))
+		AnswerProviders.getInstance().add(new GermanPredefinedAnswerProvider())
+				.add(new DatabaseAnswerProvider(database)).add(new GermanRandomAnswerProvider())
 				.add(new FakeAnswerProvider());
 
 		// fact filters are used to filter the best-matching fact in the
 		// database
-		FactFilters.getInstance().add(new FilterNot()).add(new FilterNoNames())
-				.add(new FilterQuestionWho()).add(new FilterQuestionWhat())
-				.add(new FilterQuestionExtra());
+		FactFilters.getInstance().add(new FilterNot()).add(new FilterNoNames()).add(new FilterQuestionWho())
+				.add(new FilterQuestionWhat()).add(new FilterQuestionExtra());
 	}
 
 	public static void main(String[] args) {

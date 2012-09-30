@@ -1,18 +1,18 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.parser;
 
@@ -36,8 +36,12 @@ public class Sentence {
 
 	private List<Word> wordsList = null;
 	private XmlFact xfact = null;
+	private String input = null;
+	private boolean isQuestion = false;
 
-	public Sentence(AbstractParser parser, final String input) {
+	public Sentence(AbstractParser parser, final String input, boolean isQuestion) {
+		this.isQuestion = isQuestion;
+		this.input = input;
 		String tmp = input;
 		tmp = RegexUtils.replace(tmp, "[.!\\?\"']+", "");
 		tmp = RegexUtils.trim(tmp, "-;,#+ ");
@@ -66,8 +70,8 @@ public class Sentence {
 		XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
 
 			@Override
-			public void useXmlFact(XmlFact xfact, int countFacts, long start,
-					File filename, int countFactsSoFar) {
+			public void useXmlFact(XmlFact xfact, int countFacts, long start, File filename,
+					int countFactsSoFar) {
 				xfact.tag(FreehalConfig.getTagger());
 				sentence.setFact(xfact);
 				LogUtils.i("found fact: " + xfact);
@@ -86,5 +90,17 @@ public class Sentence {
 
 	public boolean isValidFact() {
 		return xfact != null;
+	}
+
+	public String getInput() {
+		return input;
+	}
+
+	public boolean isQuestion() {
+		return isQuestion;
+	}
+
+	public void setQuestion(boolean isQuestion) {
+		this.isQuestion = isQuestion;
 	}
 }

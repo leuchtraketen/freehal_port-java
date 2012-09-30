@@ -71,6 +71,7 @@ public class GermanParser extends AbstractParser {
 		str = RegexUtils.replace(str, "\\s*STOP\\s*", "@");
 		str = RegexUtils.trim(str, "@");
 
+		System.out.println(str);
 		return str;
 	}
 
@@ -85,10 +86,10 @@ public class GermanParser extends AbstractParser {
 
 	}
 
-	protected String simplifyInput(String str) {
+	protected String simplifyInput(String str, Mutable<Boolean> isQuestion) {
 		List<String> m = null;
 
-		boolean is_question = RegexUtils.find(str, "[?]");
+		isQuestion.set(RegexUtils.find(str, "[?]"));
 
 		str = RegexUtils.ireplace(str, "9637", "\\$\\$");
 		str = RegexUtils.ireplace(str, "9489", "\\$\\$");
@@ -472,7 +473,7 @@ public class GermanParser extends AbstractParser {
 		str = RegexUtils.replace(str, "sich (.*?)befindet", "$1liegt");
 		str = RegexUtils.ireplace(str, "teil von ein.?.?\\s", "teil von ");
 
-		if (is_question
+		if (isQuestion.get()
 				&& !RegexUtils
 						.ifind(str,
 								"^\\s*?(?:wie|wer|was|wo|wann|warum|wieso|weshalb|welcher|welchem|welches|welche|who|how|where|when|if|what)\\s")) {

@@ -14,30 +14,28 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.lang.english;
+package net.freehal.core.predefined;
 
-import net.freehal.core.parser.AbstractParser;
-import net.freehal.core.util.Mutable;
+import net.freehal.core.answer.AnswerProvider;
+import net.freehal.core.parser.Sentence;
 
-public class EnglishParser extends AbstractParser {
-
-	public EnglishParser(String rawInput) {
-		super(rawInput);
-	}
+public abstract class RandomAnswerProvider implements AnswerProvider {
 
 	@Override
-	protected String cleanInput(String str) {
-		return str;
+	public String getAnswer(Sentence s) {
+		String answer = null;
+
+		if (answer == null)
+			answer = getRandomQuestion(s, s.getInput());
+
+		if (answer == null)
+			answer = getRandomStatement(s, s.getInput());
+
+		return answer;
 	}
 
-	@Override
-	protected String simplifyInput(String str, Mutable<Boolean> isQuestion) {
-		return str;
-	}
+	protected abstract String getRandomQuestion(Sentence s, String input);
 
-	@Override
-	protected String extendInput(String str) {
-		return str;
-	}
+	protected abstract String getRandomStatement(Sentence s, String input);
 
 }
