@@ -248,6 +248,10 @@ public class DiskDatabase implements DatabaseImpl {
 		}
 	}
 
+	public static void setMemoryLimit(int memoryLimit) {
+		FactCacheUpdater.memoryLimit = memoryLimit;
+	}
+
 	/**
 	 * A helper class for updating the synonym cache.
 	 * 
@@ -311,8 +315,15 @@ public class DiskDatabase implements DatabaseImpl {
 		 */
 		final Mutable<Map<File, Set<String>>> cacheFacts = new Mutable<Map<File, Set<String>>>(
 				new HashMap<File, Set<String>>());
-		int count = 0;
+		
+		/**
+		 * The max count of facts to cache in memory.
+		 */
+		public static int memoryLimit = 500;
 
+		int count = 0;
+		boolean append = false;
+		
 		/**
 		 * Add a fact to cache.
 		 * 
@@ -334,7 +345,9 @@ public class DiskDatabase implements DatabaseImpl {
 			}
 			++count;
 
-			if (count % 500 == 0) {
+			if (count % memoryLimit == 0) {
+				if (count > memoryLimit)
+					append = true;
 				stop();
 				start();
 			}
@@ -360,7 +373,10 @@ public class DiskDatabase implements DatabaseImpl {
 				}
 				LogUtils.d("write cache file: " + cacheFile);
 
-				FileUtils.write(cacheFile, content.toString());
+				if (append)
+					FileUtils.append(cacheFile, content.toString());
+				else
+					FileUtils.write(cacheFile, content.toString());
 			}
 
 			cacheFacts.set(null);

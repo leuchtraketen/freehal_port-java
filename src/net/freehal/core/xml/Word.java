@@ -24,8 +24,9 @@ import net.freehal.core.pos.Tags;
 import net.freehal.core.util.LogUtils;
 
 /**
- * This class represents a word. It is a wrapper for a String and {@link Tags}
- * Tags object which represents the part of speech of the word.
+ * This class represents a word. It is a wrapper for a String which contains the
+ * text and a {@link Tags} object which represents the part of speech of
+ * the word.
  * 
  * @author "Tobias Schulz"
  */
@@ -39,8 +40,7 @@ public class Word {
 	/**
 	 * Construct an empty word object.
 	 */
-	public Word() {
-	}
+	public Word() {}
 
 	/**
 	 * Constructs a word object with a given word and given part-of-speech tags.
@@ -54,10 +54,27 @@ public class Word {
 		init(null, word, tag);
 	}
 
+	/**
+	 * Copy constructor.
+	 * 
+	 * @param word
+	 *        the word to copy
+	 */
 	public Word(Word word) {
 		init(word, null, null);
 	}
 
+	/**
+	 * First create a copy of the given word, and then change the text and tags
+	 * values if they are not {@code null}.
+	 * 
+	 * @param word
+	 *        the word to copy
+	 * @param wordStr
+	 *        if not null this overrides the word
+	 * @param tag
+	 *        if not null this overrides the tags
+	 */
 	public Word(Word word, String wordStr, Tags tag) {
 		init(word, wordStr, tag);
 	}
@@ -77,10 +94,19 @@ public class Word {
 					+ "be set as a String to a Word object");
 	}
 
+	/**
+	 * copy everything from the given word
+	 * 
+	 * @param newWord
+	 *        the other word object to copy
+	 */
 	public void set(Word newWord) {
 		init(newWord, null, null);
 	}
 
+	/**
+	 * Only compare the text, not the tags.
+	 */
 	public boolean equals(Object o) {
 		if (o instanceof Word) {
 			return (this.word.equals(((Word) o).word));
@@ -99,6 +125,12 @@ public class Word {
 		this.tag = tag;
 	}
 
+	/**
+	 * Use the given part of speech tagger to set the part of speech tags
+	 * 
+	 * @param tagger
+	 *        the part of speech tagger
+	 */
 	public void setTags(AbstractTagger tagger) {
 		this.tag = tagger.getPartOfSpeech(word);
 	}
@@ -119,10 +151,22 @@ public class Word {
 		return tag;
 	}
 
+	/**
+	 * Are there any part of speech tags?
+	 * 
+	 * @return true if the tags are not null, false otherwise
+	 */
 	public boolean hasTags() {
 		return tag != null;
 	}
 
+	/**
+	 * Like matches(XmlObj), but weighted.
+	 * 
+	 * @param other
+	 * @return something between 0.0 and 1.0, depending on the amount of words
+	 *         which are contained in the Xml Object.
+	 */
 	public double isLike(XmlObj other) {
 		final List<Word> otherWords = other.getWords();
 
@@ -138,6 +182,15 @@ public class Word {
 		return 0;
 	}
 
+	/**
+	 * Like matches(Word), but weighted.
+	 * 
+	 * @param otherWord
+	 * @return 0.75 if there are no part of speech tags, 1.0 for a noun, 0.5 for
+	 *         an adjective, 0.75 for a verb, 0.1 for article and 0.4 for any
+	 *         other part of speech given, neither in this object not in the
+	 *         other one.
+	 */
 	private double isLike(Word otherWord) {
 		if (this.matches(otherWord) > 0) {
 			Tags tags = null;
@@ -146,8 +199,8 @@ public class Word {
 			else if (otherWord.hasTags())
 				tags = otherWord.getTags();
 
-			double weight = tags == null ? 0.75 : tags.isType("n") ? 1 : tags.isType("adj") ? 0.5
-					: tags.isType("v") ? 0.75 : tags.isType("art") ? 0.1 : 0.4;
+			double weight = tags == null ? 0.75 : tags.isType("n") ? 1.0 : tags.isType("adj") ? 0.5 : tags
+					.isType("v") ? 0.75 : tags.isType("art") ? 0.1 : 0.4;
 
 			return weight;
 		} else {
@@ -155,6 +208,13 @@ public class Word {
 		}
 	}
 
+	/**
+	 * Does the given Xml Object contain this word?
+	 * 
+	 * @param other
+	 *        the Xml Object
+	 * @return 1.0 if this word is contained in the Xml Object, 0.0 otherwise
+	 */
 	public double matches(XmlObj other) {
 		final List<Word> otherWords = other.getWords();
 
@@ -167,9 +227,16 @@ public class Word {
 		return 0;
 	}
 
+	/**
+	 * Like {@code equals(otherWord)}, but NOT case-sensitive!
+	 * 
+	 * @param otherWord
+	 * @return 1.0 if this word is the same as the other word
+	 *         (case-insensitive), 0.0 otherwise
+	 */
 	private double matches(Word otherWord) {
-		return (this.word.equals(otherWord.word) || this.word.toLowerCase().equals(otherWord.word.toLowerCase())) ? 1
-				: 0;
+		return (this.word.equals(otherWord.word) || this.word.toLowerCase().equals(
+				otherWord.word.toLowerCase())) ? 1 : 0;
 	}
 
 	@Override
@@ -177,6 +244,17 @@ public class Word {
 		return "{word=\"" + word + "\",tags=" + tag + "}";
 	}
 
+	/**
+	 * A static method which joins the given words with a given delimiter to a
+	 * string.
+	 * 
+	 * @see StringUtils.join(...)
+	 * @param delimiter
+	 *        the delimiter
+	 * @param words
+	 *        a list of words
+	 * @return a string
+	 */
 	public static String join(String delimiter, List<Word> words) {
 		if (words == null)
 			return "";
