@@ -95,7 +95,7 @@ public class Word {
 	}
 
 	/**
-	 * copy everything from the given word
+	 * Copy everything from the given word.
 	 * 
 	 * @param newWord
 	 *        the other word object to copy
@@ -126,7 +126,7 @@ public class Word {
 	}
 
 	/**
-	 * Use the given part of speech tagger to set the part of speech tags
+	 * Use the given part of speech tagger to set the part of speech tags.
 	 * 
 	 * @param tagger
 	 *        the part of speech tagger
