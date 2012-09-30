@@ -21,82 +21,135 @@ import java.util.Iterator;
 
 import net.freehal.core.util.LogUtils;
 
+/**
+ * An utility class for reading XML files.<br />
+ * <br />
+ * Example:<br />
+ * <br />
+ * 
+ * <pre>
+ * 		final File databasefile = ...;
+ * 		final Iterable<String> xmlInput = FileUtils.readLines(databasefile);
+ * 		final XmlStreamIterator xmlIterator = new XmlUtils.XmlStreamIterator(xmlInput);
+ * 		XmlUtils.readXmlFacts(xmlIterator, filename, new XmlFactReciever() { ... });
+ * </pre>
+ * 
+ * First we create an Iterator which reads a file line by line with
+ * {@code FileUtils.readLines(File)}. Then, we wrap this iterator with an
+ * XmlStreamIterator, which can be used by our
+ * {@code readXmlFacts(XmlStreamIterator, File, XmlFactReciever)} method for
+ * reading the XML file and sending the {@code XmlFact} objects to an
+ * {@code XmlFactReciever}.<br />
+ * <br />
+ * 
+ * This is a quite special way to read XML files, but it's much, much faster
+ * than using one of those huge XML libraries. And the memory usage of the above
+ * example is very low. The first iterator's cause is to read the file line by
+ * line, because reading a big database file at once is horrible for example an
+ * Android devices. And the second one maintains a small cache of lines read
+ * from the first one and immediately creates the fact objects and gives them to
+ * the {@code XmlFactReciever} we used.<br />
+ * <br />
+ * 
+ * We only support a minimal subset of the XML language. Don't use any
+ * {@code <?xml...>} tag at the beginning and don't use any tag attributes. Tags
+ * with no content are not supported too (like {@code <nameoftag />}, for
+ * example).
+ * 
+ * @see net.freehal.core.util.FileUtils#readLines(File)
+ * @see XmlFactReciever
+ * @author "Tobias Schulz"
+ */
 public class XmlUtils {
 
-	public static XmlStreamIterator orderTags(Iterable<String> indata) {
-		return new XmlStreamIterator(indata.iterator());
-	}
+	/**
+	 * This is a simple iterator for wrapping a string. It returns string given
+	 * to the constructor at the first call of {@code next()} and after that,
+	 * {@code hasNext()} and {@code next()} will always return {@code false} and
+	 * {@code null}.
+	 * 
+	 * @author "Tobias Schulz"
+	 */
+	public static class OneStringIterator implements Iterable<String> {
 
-	public static XmlStreamIterator orderTags(Iterator<String> indata) {
-		return new XmlStreamIterator(indata);
-	}
+		private final String indata;
 
-	public static XmlStreamIterator orderTags(final String indata) {
-		return new XmlStreamIterator(new Iterator<String>() {
-			private boolean hasNext = true;
-
-			@Override
-			public boolean hasNext() {
-				LogUtils.i("static string iterator: hasNext = " + hasNext);
-				if (hasNext == true) {
-					hasNext = false;
-					return true;
-				} else
-					return hasNext;
-			}
-
-			@Override
-			public String next() {
-				LogUtils.i("static string iterator: next = " + indata);
-				return indata;
-			}
-
-			@Override
-			public void remove() {
-				throw new UnsupportedOperationException();
-			}
-		});
-	}
-
-	public static String orderTagsXX(String indata) {
-		StringBuilder predata = new StringBuilder();
-		int k = 0;
-		char num = 0;
-		char _num = 0;
-		boolean is_space = false;
-		int indata_size = indata.length();
-		while (k < indata_size) {
-			_num = num;
-			num = indata.charAt(k++);
-			if (num == '\n' || num == '\r' || num == '\t' || num == ' ') {
-				if (!is_space && _num != '>')
-					predata.append(" ");
-				is_space = true;
-				continue;
-			}
-			is_space = false;
-			// cout << num << endl;
-
-			if (num == '>') {
-				predata.append("\n");
-			} else if (_num == '<') {
-				if (num == '/') {
-					predata.append(">\n");
-				} else {
-					predata.append("<\n");
-					predata.append(num);
-				}
-			} else if (num == '<') {
-				if (_num != '>') {
-					predata.append("\n");
-				}
-			} else {
-				predata.append(num);
-			}
+		/**
+		 * Constructs a new OneStringIterator which wraps the given string.
+		 * 
+		 * @param indata
+		 *        the string to wrap
+		 */
+		public OneStringIterator(final String indata) {
+			this.indata = indata;
 		}
-		return predata.toString();
+
+		@Override
+		public Iterator<String> iterator() {
+			return new Iterator<String>() {
+				private boolean hasNext = true;
+
+				@Override
+				public boolean hasNext() {
+					LogUtils.i("static string iterator: hasNext = " + hasNext);
+					if (hasNext == true) {
+						hasNext = false;
+						return true;
+					} else
+						return hasNext;
+				}
+
+				@Override
+				public String next() {
+					LogUtils.i("static string iterator: next = " + indata);
+					return indata;
+				}
+
+				@Override
+				public void remove() {
+					throw new UnsupportedOperationException();
+				}
+			};
+		}
 	}
 
+	/**
+	 * This is the first step we use for parsing XML files. An XML Stream
+	 * Iterator filters the XML input data given to the constructor like the
+	 * following example. If it gets the this string from the given String
+	 * iterator:<br />
+	 * <br />
+	 * 
+	 * <pre>
+	 * &lt;fact&gt; &lt;subject&gt;my name&lt;/subject&gt; &lt;object&gt;freehal&lt;/object&gt;
+	 * &lt;verb&gt;is&lt;/verb&gt;&lt;/fact&gt;
+	 * </pre>
+	 * 
+	 * ... then the next calls to {@code hasNext()} and {@code next()} will
+	 * return:<br />
+	 * <br />
+	 * 
+	 * <pre>
+	 *  1. hasNext() = true, next() = "&lt;fact"
+	 *  2. hasNext() = true, next() = "&lt;subject"
+	 *  3. hasNext() = true, next() = "my name"
+	 *  4. hasNext() = true, next() = "&lt;/subject"
+	 *  5. hasNext() = true, next() = "&lt;object"
+	 *  6. hasNext() = true, next() = "freehal"
+	 *  7. hasNext() = true, next() = "&lt;/object"
+	 *  8. hasNext() = true, next() = "&lt;verb"
+	 *  9. hasNext() = true, next() = "is"
+	 * 10. hasNext() = true, next() = "&lt;/verb"
+	 * 11. hasNext() = true, next() = "&lt;/fact"
+	 * 12. hasNext() = false
+	 * </pre>
+	 * 
+	 * This is the input used by {@code XmlUtils.readXmlFacts} for second
+	 * parsing step.
+	 * 
+	 * @see XmlUtils#readXmlFacts(XmlStreamIterator, File, XmlFactReciever)
+	 * @author "Tobias Schulz"
+	 */
 	public static class XmlStreamIterator implements Iterable<String> {
 
 		private Iterator<String> input;
@@ -105,12 +158,35 @@ public class XmlUtils {
 		private static final int maxBufferSize = 15 * 1024;
 		private static final int minBufferSize = 5 * 1024;
 
+		/**
+		 * Construct a new XML Stream Iterator which gets its input from the
+		 * given String iterator. It doesn't matter whether the given Iterator
+		 * reads a file line by line or whether it returns the whole XML data in
+		 * the first {@code next()} call.
+		 * 
+		 * @param input
+		 *        the input iterator which gives us raw XML data
+		 */
 		public XmlStreamIterator(Iterator<String> input) {
 			this.input = input;
 			this.buffer = new StringBuilder();
 		}
 
-		public boolean fillBuffer() {
+		/**
+		 * The same as the other constructor, but with an
+		 * {@code Iterable<String>} instead of an an {@code Iterator<String>} as
+		 * first argument. It will only call {@code input.iterator()} and then
+		 * do the same as the other one.
+		 * 
+		 * @param input
+		 *        the input iterator which gives us raw XML data
+		 */
+		public XmlStreamIterator(Iterable<String> input) {
+			this.input = input.iterator();
+			this.buffer = new StringBuilder();
+		}
+
+		private boolean fillBuffer() {
 			if (buffer.length() < minBufferSize) {
 				while (buffer.length() < maxBufferSize && input.hasNext()) {
 					buffer.append(input.next());
@@ -119,7 +195,7 @@ public class XmlUtils {
 			return buffer.length() > 0;
 		}
 
-		public void resetBuffer(int k) {
+		private void resetBuffer(int k) {
 			buffer.delete(0, k);
 		}
 
@@ -148,7 +224,8 @@ public class XmlUtils {
 						predata.append(appendToNext);
 					// LogUtils.i("XmlStreamIterator.Iterator: next = " +
 					// toReturn);
-					//System.out.println("XmlStreamIterator.I.next = " + toReturn);
+					// System.out.println("XmlStreamIterator.I.next = " +
+					// toReturn);
 					return toReturn;
 				}
 
@@ -193,12 +270,25 @@ public class XmlUtils {
 		}
 	}
 
-	public static int readXmlFacts(final XmlStreamIterator prestr, final File filename,
+	/**
+	 * Parse the given XML input and send the created {@code XmlFact} objects to
+	 * the given {@code XmlFactReciever}.
+	 * 
+	 * @param xmlIterator
+	 *        the input data, wrapped by {@code XmlStreamIterator}
+	 * @param filename
+	 *        the filename of the input file, which will be added to the created
+	 *        fact objects, or {@code null} if there is none.
+	 * @param reciever
+	 *        the {@code XmlFactReciever} to give the fact objects to.
+	 * @return how many facts have been parsed.
+	 */
+	public static int readXmlFacts(final XmlStreamIterator xmlIterator, final File filename,
 			XmlFactReciever reciever) {
 
 		long start = System.currentTimeMillis() / 1000;
 
-		Iterator<String> lines = prestr.iterator();
+		Iterator<String> lines = xmlIterator.iterator();
 		int countFacts = 1; // how to do that with an iterator?
 
 		int countFactsSoFar = 0;
@@ -226,8 +316,9 @@ public class XmlUtils {
 		tree.setName(tagname);
 
 		for (String line = lines.next(); lines.hasNext(); line = lines.next()) {
-			//System.out.println("in readTree(tree=" + tree.printStr() + ", tagname=" + tagname + "): line="
-			//		+ line);
+			// System.out.println("in readTree(tree=" + tree.printStr() +
+			// ", tagname=" + tagname + "): line="
+			// + line);
 			if (line.startsWith("</")) {
 				if (line.equals("</" + tagname)) {
 					break;

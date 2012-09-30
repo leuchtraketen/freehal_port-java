@@ -63,9 +63,8 @@ public class Sentence {
 		final String xmlInput = Grammar2012.printXml(parsed);
 		LogUtils.d("parsed fact as xml:");
 		LogUtils.d(xmlInput);
-		final XmlStreamIterator xmlPre = XmlUtils.orderTags(xmlInput);
-		LogUtils.d("xml parsing string:");
-		LogUtils.d(xmlPre);
+		final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(new XmlUtils.OneStringIterator(
+				xmlInput));
 		final Sentence sentence = this;
 		XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
 

@@ -146,7 +146,7 @@ public class DiskDatabase implements DatabaseImpl {
 			LogUtils.i("find in file: " + databaseFile);
 
 			final Iterable<String> xmlInput = FileUtils.readLines(databaseFile);
-			final XmlStreamIterator xmlPre = XmlUtils.orderTags(xmlInput);
+			final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(xmlInput);
 
 			XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
 				@Override
@@ -197,7 +197,7 @@ public class DiskDatabase implements DatabaseImpl {
 				final Iterable<String> xmlInput = FileUtils.readLines(databaseFile);
 
 				// order the xml data
-				final XmlStreamIterator xmlPre = XmlUtils.orderTags(xmlInput);
+				final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(xmlInput);
 
 				// a separate scope for garbage collector!
 				{
@@ -315,7 +315,7 @@ public class DiskDatabase implements DatabaseImpl {
 		 */
 		final Mutable<Map<File, Set<String>>> cacheFacts = new Mutable<Map<File, Set<String>>>(
 				new HashMap<File, Set<String>>());
-		
+
 		/**
 		 * The max count of facts to cache in memory.
 		 */
@@ -323,7 +323,7 @@ public class DiskDatabase implements DatabaseImpl {
 
 		int count = 0;
 		boolean append = false;
-		
+
 		/**
 		 * Add a fact to cache.
 		 * 
