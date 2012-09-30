@@ -25,9 +25,11 @@ import net.freehal.core.util.Ranking;
 /**
  * This class represents a fact which is (in most cases) read from an xml
  * database file. It extends {@code XmlList} which is a list of xml tags and
- * their contents.<br /><br />
+ * their contents.<br />
+ * <br />
  * 
- * Example:<br /><br />
+ * Example:<br />
+ * <br />
  * 
  * <pre>
  * &lt;fact&gt;
@@ -35,6 +37,23 @@ import net.freehal.core.util.Ranking;
  *   &lt;object&gt;freehal&lt;/object&gt;
  *   &lt;verb&gt;is&lt;/verb&gt;
  * &lt;/fact&gt;
+ * </pre>
+ * 
+ * When read from a file, this is equivalent to the following data structure ("
+ * {@code |->}" means that the following object is in the :<br />
+ * <br />
+ * 
+ * <pre>
+ * XmlFact: {name="fact",filename="(...)",line=123}
+ * |-> XmlList: {name="subject"}
+ *     |-> XmlList: {name="text"}
+ *         |-> XmlText: {text="my name"}
+ * |-> XmlList: {name="object"}
+ *     |-> XmlList: {name="text"}
+ *         |-> XmlText: {text="freehal"}
+ * |-> XmlList: {name="verb"}
+ *     |-> XmlList: {name="text"}
+ *         |-> XmlText: {text="is"}
  * </pre>
  * 
  * @author "Tobias Schulz"
