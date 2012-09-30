@@ -25,9 +25,9 @@ import net.freehal.core.util.Ranking;
 /**
  * This class represents a fact which is (in most cases) read from an xml
  * database file. It extends {@code XmlList} which is a list of xml tags and
- * their contents.
+ * their contents.<br /><br />
  * 
- * Example:
+ * Example:<br /><br />
  * 
  * <pre>
  * &lt;fact&gt;
@@ -77,8 +77,8 @@ public class XmlFact extends XmlList {
 	 * @see #part(String)
 	 * @param other
 	 *        the other fact
-	 * @return a number between 0.0 and 1.0. In some cases, it can be greater
-	 *         than 1.0 too.
+	 * @return a double between 0.0 and 1.0. In some cases it can be greater
+	 *         than 1.0.
 	 */
 	public double isLike(XmlFact other) {
 		double matches = 0;
