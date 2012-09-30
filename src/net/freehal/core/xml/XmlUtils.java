@@ -147,6 +147,10 @@ public class XmlUtils {
 	 * This is the input used by {@code XmlUtils.readXmlFacts} for second
 	 * parsing step.
 	 * 
+	 * It doesn't matter whether the given Iterator reads a file line by line,
+	 * character by character or whether it returns the whole XML data in the
+	 * first {@code next()} call. We will cache about 5-15 KiB of data.
+	 * 
 	 * @see XmlUtils#readXmlFacts(XmlStreamIterator, File, XmlFactReciever)
 	 * @author "Tobias Schulz"
 	 */
