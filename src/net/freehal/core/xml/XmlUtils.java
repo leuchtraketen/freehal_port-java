@@ -28,10 +28,10 @@ import net.freehal.core.util.LogUtils;
  * <br />
  * 
  * <pre>
- * 		final File databasefile = ...;
- * 		final Iterable<String> xmlInput = FileUtils.readLines(databasefile);
- * 		final XmlStreamIterator xmlIterator = new XmlUtils.XmlStreamIterator(xmlInput);
- * 		XmlUtils.readXmlFacts(xmlIterator, filename, new XmlFactReciever() { ... });
+ *   final File databasefile = ...;
+ *   final Iterable<String> xmlInput = FileUtils.readLines(databasefile);
+ *   final XmlStreamIterator xmlIterator = new XmlUtils.XmlStreamIterator(xmlInput);
+ *   XmlUtils.readXmlFacts(xmlIterator, filename, new XmlFactReciever() { ... });
  * </pre>
  * 
  * First we create an Iterator which reads a file line by line with
