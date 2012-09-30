@@ -38,7 +38,7 @@ public interface SynonymProvider {
 	/**
 	 * Get the synonyms of the given Word as a Collection of Words.
 	 * 
-	 * @param text
+	 * @param word
 	 *            the word to search
 	 * @return the synonyms
 	 */

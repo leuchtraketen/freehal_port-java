@@ -39,23 +39,32 @@ import net.freehal.core.util.Ranking;
  * &lt;/fact&gt;
  * </pre>
  * 
- * When read from a file, this is equivalent to the following data structure (
+ * When read from a file, this is equivalent to the following data structure.
  * {@code "|->"} means that the following object is in a list in the object
  * above, and {@code key=value} in curly brackets means that the attribute
- * {@code key} of the object has the value {@code value}):<br />
+ * {@code key} of the object has the value {@code value}.<br />
  * <br />
  * 
  * <pre>
  * XmlFact: {name="fact",filename="(...)",line=123}
+ * |
  * |-> XmlList: {name="subject"}
- *     |-> XmlList: {name="text"}
- *         |-> XmlText: {text="my name"}
+ * |   |
+ * |   \-> XmlList: {name="text"}
+ * |       |
+ * |      \-> XmlText: {text="my name"}
+ * |
  * |-> XmlList: {name="object"}
- *     |-> XmlList: {name="text"}
- *         |-> XmlText: {text="freehal"}
- * |-> XmlList: {name="verb"}
- *     |-> XmlList: {name="text"}
- *         |-> XmlText: {text="is"}
+ * |   |
+ * |   \-> XmlList: {name="text"}
+ * |       |
+ * |       \-> XmlText: {text="freehal"}
+ * |
+ * \-> XmlList: {name="verb"}
+ *     |
+ *     \-> XmlList: {name="text"}
+ *         |
+ *         \-> XmlText: {text="is"}
  * </pre>
  * 
  * @author "Tobias Schulz"
