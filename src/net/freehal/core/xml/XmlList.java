@@ -1,18 +1,18 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.xml;
 
@@ -22,10 +22,28 @@ import java.util.List;
 import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.util.LogUtils;
 
+/**
+ * This class represents an XML tag which contains other XML tags. It is used to
+ * build trees of XML objects.
+ * 
+ * @author "Tobias Schulz"
+ */
 public class XmlList extends XmlObj {
 
+	/**
+	 * the embedded XML objects
+	 */
 	private List<XmlObj> embedded = new ArrayList<XmlObj>();
 
+	/**
+	 * Add all embedded XML objects with the given tag name to the given list.
+	 * 
+	 * @param list
+	 *        the list to add the XML objects to
+	 * @param tagname
+	 *        the tag name to search for
+	 * @return how many objects have been added
+	 */
 	public int part(List<XmlObj> list, String tagname) {
 		int j = 0;
 		for (XmlObj o : embedded) {
@@ -37,6 +55,13 @@ public class XmlList extends XmlObj {
 		return j;
 	}
 
+	/**
+	 * Return all embedded XML objects with the given tag name in a list.
+	 * 
+	 * @param tagname
+	 *        the tag name to search for
+	 * @return a list of matching XML objects
+	 */
 	public XmlList part(String tagname) {
 		int count = 0;
 		for (XmlObj o : embedded) {
@@ -74,10 +99,24 @@ public class XmlList extends XmlObj {
 		}
 	}
 
+	/**
+	 * Add an embedded XML object.
+	 * 
+	 * @param o
+	 *        the XML object to add
+	 */
 	public void add(XmlObj o) {
 		embedded.add(o);
 	}
 
+	/**
+	 * Add all embedded XML objects from the given object to this one if the
+	 * given XML object is an instance of {@code XmlList}. Otherwise, the given
+	 * XML object is added like in {@code add(XmlObj)}.
+	 * 
+	 * @see #add(XmlObj)
+	 * @param o
+	 */
 	public void addAll(XmlObj o) {
 		if (o instanceof XmlList) {
 			embedded.addAll(((XmlList) o).embedded);
@@ -86,10 +125,24 @@ public class XmlList extends XmlObj {
 		}
 	}
 
+	/**
+	 * Add all XML objects in the given list as embedded XML objects.
+	 * 
+	 * @param o
+	 *        the list of objects to add
+	 */
 	public void addAll(List<XmlObj> o) {
 		embedded.addAll(o);
 	}
 
+	/**
+	 * Group the embedded XML objects by their tag name, especially the tag
+	 * names "subject", "object", "adverbs" and "verb". This improves the speed
+	 * of later executions of {@code part()}.
+	 * 
+	 * @see #part(String)
+	 * @see #part(List, String)
+	 */
 	@Override
 	public void trim() {
 
@@ -127,10 +180,21 @@ public class XmlList extends XmlObj {
 		this.addAll(other);
 	}
 
+	/**
+	 * How many embedded XML objects are embedded in this object?
+	 * 
+	 * @return the count of embedded XML objects
+	 */
 	public int size() {
 		return embedded.size();
 	}
 
+	/**
+	 * Get a list of embedded XML objects. Do not modify this list if you don't
+	 * know what you are doing!
+	 * 
+	 * @return a list of embedded XML objects
+	 */
 	List<XmlObj> getEmbedded() {
 		return embedded;
 	}
@@ -146,6 +210,7 @@ public class XmlList extends XmlObj {
 		return changed;
 	}
 
+	
 	@Override
 	protected String printXml(int level, int secondlevel) {
 		if (name == "clause") {
@@ -154,16 +219,14 @@ public class XmlList extends XmlObj {
 		}
 
 		StringBuilder str = new StringBuilder();
-		str.append("<").append(name).append(">")
-				.append((secondlevel == 0 ? "\n" : ""));
+		str.append("<").append(name).append(">").append((secondlevel == 0 ? "\n" : ""));
 		for (XmlObj e : embedded) {
 
 			if (secondlevel == 0)
 				for (int r = 0; r < level + 1; ++r)
 					str.append("  ");
 
-			str.append(e.printXml(level, secondlevel + 1)).append(
-					(secondlevel == 0 ? "\n" : ""));
+			str.append(e.printXml(level, secondlevel + 1)).append((secondlevel == 0 ? "\n" : ""));
 		}
 
 		if (secondlevel == 0)
@@ -286,8 +349,7 @@ public class XmlList extends XmlObj {
 		if (this.getName() == "synonyms")
 			matches /= count;
 
-		LogUtils.d("---- compare: " + this.printStr() + " isLike "
-				+ other.printStr() + " = " + matches);
+		LogUtils.d("---- compare: " + this.printStr() + " isLike " + other.printStr() + " = " + matches);
 		return matches;
 	}
 
@@ -309,8 +371,7 @@ public class XmlList extends XmlObj {
 		if (this.getName() == "synonyms")
 			matches /= count;
 
-		LogUtils.d("---- compare: " + this.printStr() + " matches "
-				+ other.printStr() + " = " + matches);
+		LogUtils.d("---- compare: " + this.printStr() + " matches " + other.printStr() + " = " + matches);
 		return matches;
 	}
 
@@ -318,10 +379,8 @@ public class XmlList extends XmlObj {
 	public double countWords() {
 		double c = 0;
 		for (XmlObj subobj : embedded) {
-			if (!(subobj.getName().equals("questionword")
-					|| subobj.getName().equals("extra")
-					|| subobj.getName().equals("truth") || subobj.getName()
-					.equals("clause"))) {
+			if (!(subobj.getName().equals("questionword") || subobj.getName().equals("extra")
+					|| subobj.getName().equals("truth") || subobj.getName().equals("clause"))) {
 				c += subobj.countWords();
 			}
 		}

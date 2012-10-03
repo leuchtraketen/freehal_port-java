@@ -123,6 +123,12 @@ public abstract class XmlObj {
 		return (double) amount;
 	}
 
+	/**
+	 * Toggle all words in any embedded XML objects using the given part of
+	 * speech tagger.
+	 * 
+	 * @see AbstractTagger#toggle(Word)
+	 */
 	public abstract boolean toggle(AbstractTagger tagger);
 
 	@Override
