@@ -16,13 +16,13 @@
  ******************************************************************************/
 package net.freehal.core.lang.german;
 
-import java.io.File;
 import java.util.List;
 
 import net.freehal.core.parser.AbstractParser;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Mutable;
 import net.freehal.core.util.RegexUtils;
@@ -1500,7 +1500,7 @@ public class GermanParser extends AbstractParser {
 		// cout << "parser2012: step 9: " << str << endl;
 
 		Iterable<String> histMale = FileUtils.readLines(
-				FreehalConfig.getLanguageDirectory(), new File("male.history"));
+				FreehalConfig.getLanguageDirectory(), FreehalFiles.create("male.history"));
 		String last_male_substantive = null;
 		for (String line : histMale) {
 			if (line.length() > 1)
@@ -1512,7 +1512,7 @@ public class GermanParser extends AbstractParser {
 
 		Iterable<String> histFemale = FileUtils.readLines(
 				FreehalConfig.getLanguageDirectory(),
-				new File("female.history"));
+				FreehalFiles.create("female.history"));
 		String last_female_substantive = null;
 		for (String line : histFemale) {
 			if (line.length() > 1)

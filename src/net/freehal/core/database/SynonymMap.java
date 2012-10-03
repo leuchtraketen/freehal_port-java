@@ -16,7 +16,6 @@
  ******************************************************************************/
 package net.freehal.core.database;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -26,6 +25,7 @@ import java.util.Set;
 
 import net.freehal.core.cache.DiskStorage;
 import net.freehal.core.util.FileUtils;
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.xml.Word;
 
@@ -79,7 +79,7 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 
 	public void write() {
 		FileUtils.write(DiskStorage.getDirectory("database", "synonyms"),
-				new File("synonyms.csv"), this.print());
+				FreehalFiles.create("synonyms.csv"), this.print());
 	}
 
 	private String print() {
@@ -92,7 +92,7 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 
 	public void read() {
 		Iterable<String> lines = FileUtils.readLines(DiskStorage.getDirectory(
-				"database", "synonyms"), new File("synonyms.csv"));
+				"database", "synonyms"), FreehalFiles.create("synonyms.csv"));
 		for (String line : lines) {
 			String[] csv = line.split("[|]");
 			Set<String> set = new HashSet<String>();

@@ -1,6 +1,6 @@
 package net.freehal.core.pos;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
@@ -9,7 +9,7 @@ import net.freehal.core.util.RegexUtils;
 
 public abstract class TagContainerMemory implements TagContainer {
 
-	public boolean add(final File filename) {
+	public boolean add(final FreehalFile filename) {
 
 		LogUtils.i("read part of speech file: " + filename);
 

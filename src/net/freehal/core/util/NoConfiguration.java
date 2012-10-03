@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 
 public class NoConfiguration implements FreehalConfigImpl {
 
@@ -25,7 +25,7 @@ public class NoConfiguration implements FreehalConfigImpl {
 			+ "with FreehalConfig.set(...) before using the Freehal API!";
 
 	@Override
-	public File getLanguageDirectory() {
+	public FreehalFile getLanguageDirectory() {
 		throw new NoConfigurationException();
 	}
 
@@ -35,12 +35,12 @@ public class NoConfiguration implements FreehalConfigImpl {
 	}
 
 	@Override
-	public File getPath() {
+	public FreehalFile getPath() {
 		throw new NoConfigurationException();
 	}
 
 	@Override
-	public File getCacheDirectory() {
+	public FreehalFile getCacheDirectory() {
 		throw new NoConfigurationException();
 	}
 

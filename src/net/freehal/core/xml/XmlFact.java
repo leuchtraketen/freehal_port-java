@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.xml;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.filter.FactFilters;
 import net.freehal.core.util.LogUtils;
@@ -80,17 +80,17 @@ import net.freehal.core.util.Ranking;
 public class XmlFact extends XmlList {
 
 	/** the file it was read from */
-	private File filename;
+	private FreehalFile filename;
 	/** the line it was read from */
 	private String line;
 
 	/** Get the file this fact was read from **/
-	public File getFilename() {
+	public FreehalFile getFilename() {
 		return filename;
 	}
 
 	/** Set the file this fact was read from **/
-	public void setFilename(File filename) {
+	public void setFilename(FreehalFile filename) {
 		this.filename = filename;
 	}
 

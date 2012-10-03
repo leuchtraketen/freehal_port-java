@@ -18,6 +18,8 @@ package net.freehal.compat.sunjava;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import net.freehal.core.util.FreehalFile;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -35,11 +37,11 @@ import net.freehal.core.util.LogUtils;
 public class FileUtilsStandard implements FileUtilsImpl {
 
 	@Override
-	public List<String> readLinesAsList(File f) {
+	public List<String> readLinesAsList(FreehalFile f) {
 		LogUtils.d("reading line by line: " + f.getAbsolutePath());
 		List<String> lines = new ArrayList<String>();
 		try {
-			FileInputStream in = new FileInputStream(f);
+			FileInputStream in = new FileInputStream(f.getFile());
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			String line;
 
@@ -56,11 +58,11 @@ public class FileUtilsStandard implements FileUtilsImpl {
 	}
 
 	@Override
-	public Iterable<String> readLines(File f) {
+	public Iterable<String> readLines(FreehalFile f) {
 		LogUtils.d("reading line by line (via iterator): " + f.getAbsolutePath());
 		Iterable<String> iterator = null;
 		try {
-			FileInputStream in = new FileInputStream(f);
+			FileInputStream in = new FileInputStream(f.getFile());
 			iterator = new BufferedReaderIterator(new BufferedReader(new InputStreamReader(in)));
 
 		} catch (Exception e) {
@@ -72,13 +74,13 @@ public class FileUtilsStandard implements FileUtilsImpl {
 	}
 
 	@Override
-	public String read(File f) {
+	public String read(FreehalFile f) {
 		LogUtils.d("reading whole file: " + f.getAbsolutePath());
 		BufferedReader theReader = null;
 		String returnString = null;
 
 		try {
-			theReader = new BufferedReader(new FileReader(f));
+			theReader = new BufferedReader(new FileReader(f.getFile()));
 			char[] charArray = null;
 
 			if (f.length() > Integer.MAX_VALUE) {
@@ -108,16 +110,16 @@ public class FileUtilsStandard implements FileUtilsImpl {
 	}
 
 	@Override
-	public void append(File filename, String string) {
+	public void append(FreehalFile filename, String string) {
 		BufferedWriter bw = null;
 
 		try {
-			File parent = filename.getParentFile();
+			File parent = filename.getFile().getParentFile();
 			if (!parent.exists()) {
 				parent.mkdirs();
 			}
 
-			bw = new BufferedWriter(new FileWriter(filename, true));
+			bw = new BufferedWriter(new FileWriter(filename.getFile(), true));
 			bw.write(string);
 			bw.flush();
 		} catch (IOException ioe) {
@@ -133,16 +135,17 @@ public class FileUtilsStandard implements FileUtilsImpl {
 	}
 
 	@Override
-	public void write(File filename, String string) {
+	public void write(FreehalFile filename, String string) {
 		BufferedWriter bw = null;
 
 		try {
-			File parent = filename.getParentFile();
-			if (!parent.exists()) {
+			System.out.println("filename.getFile(): " + filename.getFile());
+			File parent = filename.getFile().getParentFile();
+			if (parent != null && !parent.exists()) {
 				parent.mkdirs();
 			}
 
-			bw = new BufferedWriter(new FileWriter(filename, false));
+			bw = new BufferedWriter(new FileWriter(filename.getFile(), false));
 			bw.write(string);
 			bw.flush();
 		} catch (FileNotFoundException e) {
@@ -160,9 +163,9 @@ public class FileUtilsStandard implements FileUtilsImpl {
 	}
 
 	@Override
-	public void delete(File f) {
+	public void delete(FreehalFile f) {
 		if (f.isDirectory()) {
-			for (File c : f.listFiles())
+			for (FreehalFile c : f.listFiles())
 				delete(c);
 		}
 		if (!f.delete())

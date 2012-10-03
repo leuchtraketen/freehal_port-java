@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.xml;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.Iterator;
 
 import net.freehal.core.util.LogUtils;
@@ -56,7 +56,7 @@ import net.freehal.core.util.LogUtils;
  * with no content are not supported too (like {@code <nameoftag />}, for
  * example).
  * 
- * @see net.freehal.core.util.FileUtils#readLines(File)
+ * @see net.freehal.core.util.FileUtils#readLines(FreehalFile)
  * @see XmlFactReciever
  * @author "Tobias Schulz"
  */
@@ -151,7 +151,7 @@ public class XmlUtils {
 	 * character by character or whether it returns the whole XML data in the
 	 * first {@code next()} call. We will cache about 5-15 KiB of data.
 	 * 
-	 * @see XmlUtils#readXmlFacts(XmlStreamIterator, File, XmlFactReciever)
+	 * @see XmlUtils#readXmlFacts(XmlStreamIterator, FreehalFile, XmlFactReciever)
 	 * @author "Tobias Schulz"
 	 */
 	public static class XmlStreamIterator implements Iterable<String> {
@@ -287,7 +287,7 @@ public class XmlUtils {
 	 *        the {@code XmlFactReciever} to give the fact objects to.
 	 * @return how many facts have been parsed.
 	 */
-	public static int readXmlFacts(final XmlStreamIterator xmlIterator, final File filename,
+	public static int readXmlFacts(final XmlStreamIterator xmlIterator, final FreehalFile filename,
 			XmlFactReciever reciever) {
 
 		long start = System.currentTimeMillis() / 1000;

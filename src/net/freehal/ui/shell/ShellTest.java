@@ -20,8 +20,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.freehal.compat.sunjava.FileUtilsStandard;
 import net.freehal.compat.sunjava.FreehalConfigStandard;
+import net.freehal.compat.sunjava.FreehalFileStandard;
 import net.freehal.compat.sunjava.LogUtilsStandard;
 import net.freehal.core.answer.AnswerProvider;
 import net.freehal.core.answer.AnswerProviders;
@@ -46,8 +46,11 @@ import net.freehal.core.parser.Sentence;
 import net.freehal.core.phrase.AbstractPhrase;
 import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.TaggerCacheMemory;
-import net.freehal.core.util.FileUtils;
+import net.freehal.core.util.AbstractFreehalFile;
+import net.freehal.core.util.FileUtilsImpl;
 import net.freehal.core.util.FreehalConfig;
+import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.StringUtils;
 
@@ -59,8 +62,9 @@ import net.freehal.core.util.StringUtils;
  */
 public class ShellTest {
 	private static void init() {
-		// file access
-		FileUtils.set(new FileUtilsStandard());
+		// use java.io.File for all protocols
+		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, new FreehalFileStandard(null));
+		FreehalFiles.add("sqlite", new FakeFreehalFile(null));
 
 		// how and where to print the log
 		// example: all debug messages from the class "DiskDatabase" and the sub
@@ -76,12 +80,12 @@ public class ShellTest {
 		// set the language and the base directory (if executed in "bin/", the
 		// base directory is ".."). Freehal expects a "lang_xy" directory there
 		// which contains the database files.
-		FreehalConfig.set(new FreehalConfigStandard().setLanguage("de").setPath(new File("..")));
+		FreehalConfig.set(new FreehalConfigStandard().setLanguage("de").setPath(FreehalFiles.create("..")));
 
 		// initialize the grammar
 		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
 		AbstractGrammar grammar = new GermanGrammar();
-		grammar.readGrammar(new File("grammar.txt"));
+		grammar.readGrammar(FreehalFiles.create("grammar.txt"));
 		FreehalConfig.setGrammar(grammar);
 
 		// initialize the part of speech tagger
@@ -89,11 +93,11 @@ public class ShellTest {
 		// the parameter is either a TaggerCacheMemory (faster, higher memory
 		// usage) or a TaggerCacheDisk (slower, less memory usage)
 		AbstractTagger tagger = new GermanTagger(new TaggerCacheMemory());
-		tagger.readTagsFrom(new File("guessed.pos"));
-		tagger.readTagsFrom(new File("brain.pos"));
-		tagger.readTagsFrom(new File("memory.pos"));
-		tagger.readRegexFrom(new File("regex.pos"));
-		tagger.readToggleWordsFrom(new File("toggle.csv"));
+		tagger.readTagsFrom(FreehalFiles.create("guessed.pos"));
+		tagger.readTagsFrom(FreehalFiles.create("brain.pos"));
+		tagger.readTagsFrom(FreehalFiles.create("memory.pos"));
+		tagger.readRegexFrom(FreehalFiles.create("regex.pos"));
+		tagger.readToggleWordsFrom(FreehalFiles.create("toggle.csv"));
 		FreehalConfig.setTagger(tagger);
 
 		// how to phrase the output sentences
@@ -156,4 +160,56 @@ class FakeAnswerProvider implements AnswerProvider {
 		return "Hello World!";
 	}
 
+}
+
+class FakeFreehalFile extends AbstractFreehalFile {
+
+	public FakeFreehalFile(File file) {
+		super(file);
+	}
+
+	@Override
+	public FreehalFile create(String path) {
+		return new FakeFreehalFile(new File(path));
+	}
+
+	@Override
+	public FreehalFile create(String dir, String file) {
+		return new FakeFreehalFile(new File(dir, file));
+	}
+
+	@Override
+	public boolean isFile() {
+		return false;
+	}
+
+	@Override
+	public boolean isDirectory() {
+		return false;
+	}
+
+	@Override
+	public FreehalFile[] listFiles() {
+		return new FreehalFile[0];
+	}
+
+	@Override
+	public long length() {
+		return 0;
+	}
+
+	@Override
+	public boolean mkdirs() {
+		return false;
+	}
+
+	@Override
+	public boolean delete() {
+		return false;
+	}
+
+	@Override
+	public FileUtilsImpl getFileUtilsImpl() {
+		return null;
+	}
 }

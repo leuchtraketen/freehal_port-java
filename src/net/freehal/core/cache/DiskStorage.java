@@ -1,54 +1,51 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.cache;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.util.FreehalConfig;
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
 
 public class DiskStorage {
 
-	public static File getFile(final String type1, final String type2,
-			final Key key, final File filename) {
+	public static FreehalFile getFile(final String type1, final String type2, final Key key,
+			final FreehalFile filename) {
 		if (filename != null)
-			return new File(getDirectory(type1, type2, key), filename.getPath());
+			return FreehalFiles.create(getDirectory(type1, type2, key), filename.getPath());
 		else
 			return getDirectory(type1, type2, key);
 	}
 
-	public static File getDirectory(final String type1, final String type2,
-			final Key key) {
+	public static FreehalFile getDirectory(final String type1, final String type2, final Key key) {
 		StringBuilder keyPath = new StringBuilder();
-		keyPath.append(key.getKey(0)).append("/").append(key.getKey(1))
-				.append("/").append(key.getKey(2)).append("/")
-				.append(key.getKey(3));
+		keyPath.append(key.getKey(0)).append("/").append(key.getKey(1)).append("/").append(key.getKey(2))
+				.append("/").append(key.getKey(3));
 
-		File directory = new File(getDirectory(type1, type2),
-				keyPath.toString());
+		FreehalFile directory = FreehalFiles.create(getDirectory(type1, type2), keyPath.toString());
 		directory.mkdirs();
 
 		return directory;
 	}
 
-	public static File getDirectory(final String type1, final String type2) {
-		File directory = new File(FreehalConfig.getCacheDirectory(), type1
-				+ "/" + type2);
+	public static FreehalFile getDirectory(final String type1, final String type2) {
+		FreehalFile directory = FreehalFiles.create(FreehalConfig.getCacheDirectory(), type1 + "/" + type2);
 		directory.mkdirs();
 		return directory;
 	}
@@ -57,7 +54,12 @@ public class DiskStorage {
 
 		private Word word;
 		private String key;
-		private int keysize = 4;
+		private static int globalKeyLength = 4;
+		private int keylength = globalKeyLength;
+
+		public static void setGlobalKeyLength(int globalKeyLength) {
+			Key.globalKeyLength = globalKeyLength;
+		}
 
 		public Key(Word word) {
 			this.word = word;
@@ -69,26 +71,25 @@ public class DiskStorage {
 			init();
 		}
 
-		public Key(Word word, int keysize) {
+		public Key(Word word, int keylength) {
 			this.word = word;
-			this.keysize = keysize;
+			this.keylength = keylength;
 			init();
 		}
 
-		public Key(String word, int keysize) {
+		public Key(String word, int keylength) {
 			this.word = new Word(word, null);
-			this.keysize = keysize;
+			this.keylength = keylength;
 			init();
 		}
 
 		private void init() {
-			final String onlyChars = RegexUtils.replace(word.getWord()
-					.toLowerCase(), "[^a-zA-Z0-9]", "");
-			if (onlyChars.length() >= keysize)
-				key = onlyChars.substring(0, keysize);
+			final String onlyChars = RegexUtils.replace(word.getWord().toLowerCase(), "[^a-zA-Z0-9]", "");
+			if (onlyChars.length() >= keylength)
+				key = onlyChars.substring(0, keylength);
 			else
 				key = onlyChars;
-			while (key.length() < keysize)
+			while (key.length() < keylength)
 				key += "_";
 		}
 
@@ -105,7 +106,7 @@ public class DiskStorage {
 		}
 
 		public char getKey(int index) {
-			if (index >= keysize || index < 0)
+			if (index >= keylength || index < 0)
 				return '_';
 			else
 				return key.charAt(index);

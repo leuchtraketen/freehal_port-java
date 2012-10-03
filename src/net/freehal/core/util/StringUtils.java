@@ -16,6 +16,8 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -60,5 +62,11 @@ public class StringUtils {
 	public static String toAscii(String wordString) {
 		// TODO Automatisch generierter Methodenstub
 		return wordString;
+	}
+	
+	public static String asString(Exception ex) {
+		StringWriter errors = new StringWriter();
+		ex.printStackTrace(new PrintWriter(errors));
+		return errors.toString();
 	}
 }

@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.grammar;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -468,7 +468,7 @@ public abstract class Grammar2012 extends AbstractGrammar {
 		super();
 	}
 
-	public boolean readGrammar(File filename) {
+	public boolean readGrammar(FreehalFile filename) {
 		Iterable<String> lines = FileUtils.readLines(
 				FreehalConfig.getLanguageDirectory(), filename);
 

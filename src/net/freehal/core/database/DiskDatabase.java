@@ -16,8 +16,8 @@
  ******************************************************************************/
 package net.freehal.core.database;
 
-import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -27,6 +27,8 @@ import java.util.Set;
 import net.freehal.core.cache.DiskStorage;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalConfig;
+import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Mutable;
 import net.freehal.core.xml.Word;
@@ -48,8 +50,8 @@ public class DiskDatabase implements DatabaseImpl {
 	}
 
 	private void readMetadata() {
-		Iterable<String> lines = FileUtils.readLines(DiskStorage.getDirectory("database", "meta"), new File(
-				"files.csv"));
+		Iterable<String> lines = FileUtils.readLines(DiskStorage.getDirectory("database", "meta"),
+				FreehalFiles.create("files.csv"));
 
 		for (String line : lines) {
 			String[] csv = line.split(":");
@@ -68,7 +70,8 @@ public class DiskDatabase implements DatabaseImpl {
 		for (String filename : cacheFiles.keySet()) {
 			sb.append(filename).append(":").append(cacheFiles.get(filename)).append("\n");
 		}
-		FileUtils.write(DiskStorage.getDirectory("database", "meta"), new File("files.csv"), sb.toString());
+		FileUtils.write(DiskStorage.getDirectory("database", "meta"), FreehalFiles.create("files.csv"),
+				sb.toString());
 	}
 
 	@Override
@@ -121,22 +124,22 @@ public class DiskDatabase implements DatabaseImpl {
 	private Set<XmlFact> findFacts(DiskStorage.Key key) {
 		LogUtils.i("find by key: " + key);
 
-		File databaseFile = DiskStorage.getFile("database", "index", key, null);
+		FreehalFile databaseFile = DiskStorage.getFile("database", "index", key, null);
 
 		Set<XmlFact> found = findFacts(databaseFile);
 
 		return found;
 	}
 
-	private Set<XmlFact> findFacts(File databaseFile) {
+	private Set<XmlFact> findFacts(FreehalFile databaseFile) {
 		final Set<XmlFact> list = new HashSet<XmlFact>();
 
 		if (databaseFile.isDirectory()) {
 			LogUtils.i("find in directory: " + databaseFile);
 
-			File[] files = databaseFile.listFiles();
-			for (File file : files) {
-				if (file.isFile() && file.getName().endsWith(".xml")) {
+			FreehalFile[] files = databaseFile.listFiles();
+			for (FreehalFile file : files) {
+				if (file.isFile() && file.getName().contains(".xml")) {
 					list.addAll(findFacts(file));
 				}
 			}
@@ -150,7 +153,7 @@ public class DiskDatabase implements DatabaseImpl {
 
 			XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
 				@Override
-				public void useXmlFact(XmlFact xfact, int countFacts, long start, File filename,
+				public void useXmlFact(XmlFact xfact, int countFacts, long start, FreehalFile filename,
 						int countFactsSoFar) {
 
 					list.add(xfact);
@@ -166,21 +169,23 @@ public class DiskDatabase implements DatabaseImpl {
 
 	@Override
 	public void updateCache() {
-		updateCache(new File(""));
+		updateCache(FreehalFiles.create(""));
 	}
 
 	@Override
-	public void updateCache(File databaseFile) {
+	public void updateCache(FreehalFile databaseFile) {
 		if (!databaseFile.isAbsolute()) {
-			databaseFile = new File(FreehalConfig.getLanguageDirectory().getPath(), databaseFile.getPath());
+			databaseFile = FreehalFiles.create(FreehalConfig.getLanguageDirectory().getPath(),
+					databaseFile.getPath());
 		}
 
 		if (databaseFile.isDirectory()) {
 			LogUtils.i("update cache (directory): " + databaseFile);
 
-			File[] files = databaseFile.listFiles();
-			for (File file : files) {
-				if (file.isFile() && file.getName().endsWith(".xml")) {
+			FreehalFile[] files = databaseFile.listFiles();
+			for (FreehalFile file : files) {
+				LogUtils.i("file:" + file);
+				if (file.isFile() && file.getName().contains(".xml")) {
 					this.updateCache(file);
 				}
 			}
@@ -219,8 +224,8 @@ public class DiskDatabase implements DatabaseImpl {
 					// read the xml data and build XmlFact objects
 					XmlUtils.readXmlFacts(xmlPre, databaseFile, new XmlFactReciever() {
 						@Override
-						public void useXmlFact(XmlFact xfact, int countFacts, long start, File filename,
-								int countFactsSoFar) {
+						public void useXmlFact(XmlFact xfact, int countFacts, long start,
+								FreehalFile filename, int countFactsSoFar) {
 
 							// update the caches
 							for (CacheUpdater updater : updaters) {
@@ -313,8 +318,8 @@ public class DiskDatabase implements DatabaseImpl {
 		 * the XmlFactReciever will store the data which need to be written to
 		 * files in this hashmap
 		 */
-		final Mutable<Map<File, Set<String>>> cacheFacts = new Mutable<Map<File, Set<String>>>(
-				new HashMap<File, Set<String>>());
+		final Mutable<Map<FreehalFile, Set<String>>> cacheFacts = new Mutable<Map<FreehalFile, Set<String>>>(
+				new HashMap<FreehalFile, Set<String>>());
 
 		/**
 		 * The max count of facts to cache in memory.
@@ -336,8 +341,8 @@ public class DiskDatabase implements DatabaseImpl {
 
 			List<Word> words = xfact.getWords();
 			for (Word w : words) {
-				File cacheFile = DiskStorage.getFile("database", "index", new DiskStorage.Key(w), new File(
-						xfact.getFilename().getName()));
+				FreehalFile cacheFile = DiskStorage.getFile("database", "index", new DiskStorage.Key(w),
+						FreehalFiles.create(xfact.getFilename().getName()));
 				if (!cacheFacts.get().containsKey(cacheFile)) {
 					cacheFacts.get().put(cacheFile, new HashSet<String>());
 				}
@@ -348,7 +353,7 @@ public class DiskDatabase implements DatabaseImpl {
 			if (count % memoryLimit == 0) {
 				if (count > memoryLimit)
 					append = true;
-				stop();
+				stop("-" + (count / memoryLimit));
 				start();
 			}
 		}
@@ -358,7 +363,7 @@ public class DiskDatabase implements DatabaseImpl {
 		 */
 		@Override
 		public void start() {
-			cacheFacts.set(new HashMap<File, Set<String>>());
+			cacheFacts.set(new HashMap<FreehalFile, Set<String>>());
 		}
 
 		/**
@@ -366,13 +371,20 @@ public class DiskDatabase implements DatabaseImpl {
 		 */
 		@Override
 		public void stop() {
-			for (File cacheFile : cacheFacts.get().keySet()) {
+			stop("");
+		}
+
+		private void stop(final String suffix) {
+			List<FreehalFile> sorted = new ArrayList<FreehalFile>(cacheFacts.get().keySet());
+			Collections.sort(sorted);
+			for (FreehalFile cacheFile : sorted) {
 				StringBuilder content = new StringBuilder();
 				for (final String xfactXml : cacheFacts.get().get(cacheFile)) {
 					content.append(xfactXml);
 				}
 				LogUtils.d("write cache file: " + cacheFile);
 
+				cacheFile = FreehalFiles.create(cacheFile.getPath() + suffix);
 				if (append)
 					FileUtils.append(cacheFile, content.toString());
 				else

@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.database;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -63,7 +63,7 @@ public class FakeDatabase implements DatabaseImpl {
 	 * a fake database doesn't need a cache...
 	 */
 	@Override
-	public void updateCache(File filename) {
+	public void updateCache(FreehalFile filename) {
 	}
 
 }

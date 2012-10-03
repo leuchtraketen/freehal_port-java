@@ -16,16 +16,16 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 
 public interface FreehalConfigImpl {
 
-	public File getLanguageDirectory();
+	public FreehalFile getLanguageDirectory();
 
 	public String getLanguage();
 
-	public File getPath();
+	public FreehalFile getPath();
 
-	public File getCacheDirectory();
+	public FreehalFile getCacheDirectory();
 
 }

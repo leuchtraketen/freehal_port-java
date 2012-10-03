@@ -16,21 +16,21 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.List;
 
 public interface FileUtilsImpl {
 
-	public List<String> readLinesAsList(File f);
+	public List<String> readLinesAsList(FreehalFile f);
 
-	public String read(File f);
+	public String read(FreehalFile f);
 
-	public void append(File f, String s);
+	public void append(FreehalFile f, String s);
 
-	public void write(File f, String s);
+	public void write(FreehalFile f, String s);
 
-	public void delete(File directory);
+	public void delete(FreehalFile directory);
 
-	public Iterable<String> readLines(File f);
+	public Iterable<String> readLines(FreehalFile f);
 
 }

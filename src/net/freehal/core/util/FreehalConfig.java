@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.grammar.AbstractGrammar;
 import net.freehal.core.grammar.FakeGrammar;
@@ -44,11 +44,11 @@ public class FreehalConfig {
 		FreehalConfig.instance = instance;
 	}
 
-	public static File getLanguageDirectory() {
+	public static FreehalFile getLanguageDirectory() {
 		return instance.getLanguageDirectory();
 	}
 
-	public static File getCacheDirectory() {
+	public static FreehalFile getCacheDirectory() {
 		return instance.getCacheDirectory();
 	}
 
@@ -60,7 +60,7 @@ public class FreehalConfig {
 		return instance.getLanguage().equals(otherLanguage);
 	}
 
-	public static File getPath() {
+	public static FreehalFile getPath() {
 		return instance.getPath();
 	}
 

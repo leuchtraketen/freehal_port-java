@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.parser;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,7 +69,7 @@ public class Sentence {
 		XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
 
 			@Override
-			public void useXmlFact(XmlFact xfact, int countFacts, long start, File filename,
+			public void useXmlFact(XmlFact xfact, int countFacts, long start, FreehalFile filename,
 					int countFactsSoFar) {
 				xfact.tag(FreehalConfig.getTagger());
 				sentence.setFact(xfact);

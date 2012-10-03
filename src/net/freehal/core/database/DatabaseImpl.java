@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.database;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.List;
 import java.util.Set;
 
@@ -33,6 +33,6 @@ public interface DatabaseImpl {
 
 	public void updateCache();
 
-	public void updateCache(File filename);
+	public void updateCache(FreehalFile filename);
 
 }

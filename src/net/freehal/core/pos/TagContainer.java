@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.Map;
 
 public interface TagContainer extends Iterable<Map.Entry<String, Tags>> {
@@ -26,5 +26,5 @@ public interface TagContainer extends Iterable<Map.Entry<String, Tags>> {
 
 	public Tags get(String word);
 
-	public boolean add(File filename);
+	public boolean add(FreehalFile filename);
 }

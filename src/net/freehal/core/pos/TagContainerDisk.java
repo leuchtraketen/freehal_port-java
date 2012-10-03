@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -31,11 +31,11 @@ public class TagContainerDisk implements TagContainer {
 
 	@SuppressWarnings("unused")
 	private String name;
-	private Set<File> files;
+	private Set<FreehalFile> files;
 
 	public TagContainerDisk(String name) {
 		this.name = name;
-		files = new HashSet<File>();
+		files = new HashSet<FreehalFile>();
 	}
 
 	@Override
@@ -56,7 +56,7 @@ public class TagContainerDisk implements TagContainer {
 	@Override
 	public Tags get(String word) {
 		final String search = word + ":";
-		for (File filename : files) {
+		for (FreehalFile filename : files) {
 			Tags tags = null;
 			Iterable<String> lines = FileUtils.readLines(FreehalConfig.getLanguageDirectory(),
 					filename);
@@ -91,7 +91,7 @@ public class TagContainerDisk implements TagContainer {
 	}
 
 	@Override
-	public boolean add(File filename) {
+	public boolean add(FreehalFile filename) {
 		files.add(filename);
 		return true;
 	}

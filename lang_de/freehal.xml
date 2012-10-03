@@ -2326,20 +2326,17 @@
   <object>mir</object>
   <verb>geht</verb>
   <adverbs>gut</adverbs>
-  <flags>00000</flags>
 </fact>
 <fact>
   <subject>es</subject>
   <object>mir</object>
   <verb>geht</verb>
   <adverbs>gut</adverbs>
-  <flags>00000</flags>
   <clause>
     <subject>ich</subject>
     <object>mich</object>
     <verb>fuehle</verb>
     <adverbs>wohl</adverbs>
-    <flags>00000</flags>
   </clause>
 </fact>
 <fact>

@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.xml.Word;
 
@@ -26,13 +26,13 @@ public interface AbstractTagger {
 	
 	public boolean isName(final String word);
 
-	public void readTagsFrom(final File filename);
+	public void readTagsFrom(final FreehalFile filename);
 
-	public void readRegexFrom(final File filename);
+	public void readRegexFrom(final FreehalFile filename);
 
 	public Word toggle(Word word);
 
-	public void readToggleWordsFrom(final File filename);
+	public void readToggleWordsFrom(final FreehalFile filename);
 
 	public boolean isIndexWord(final Word word);
 }

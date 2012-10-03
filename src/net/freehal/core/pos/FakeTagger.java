@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.xml.Word;
 
@@ -39,11 +39,11 @@ public class FakeTagger implements AbstractTagger {
 	}
 
 	@Override
-	public void readTagsFrom(File filename) {
+	public void readTagsFrom(FreehalFile filename) {
 	}
 
 	@Override
-	public void readRegexFrom(File filename) {
+	public void readRegexFrom(FreehalFile filename) {
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class FakeTagger implements AbstractTagger {
 	}
 
 	@Override
-	public void readToggleWordsFrom(File filename) {
+	public void readToggleWordsFrom(FreehalFile filename) {
 	}
 
 	@Override

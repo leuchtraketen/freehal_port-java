@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
-import java.io.File;
+import net.freehal.core.util.FreehalFile;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -173,7 +173,7 @@ public abstract class Tagger2012 implements AbstractTagger {
 	 */
 	public abstract boolean isName(final String word);
 
-	public static void writeTagsTo(File filename, Word word) {
+	public static void writeTagsTo(FreehalFile filename, Word word) {
 		if (word.hasTags()) {
 			StringBuilder toAppend = new StringBuilder();
 
@@ -190,17 +190,17 @@ public abstract class Tagger2012 implements AbstractTagger {
 	}
 
 	@Override
-	public void readTagsFrom(File filename) {
+	public void readTagsFrom(FreehalFile filename) {
 		staticTags.add(filename);
 	}
 
 	@Override
-	public void readRegexFrom(File filename) {
+	public void readRegexFrom(FreehalFile filename) {
 		regexTags.add(filename);
 	}
 
 	@Override
-	public void readToggleWordsFrom(File filename) {
+	public void readToggleWordsFrom(FreehalFile filename) {
 		LogUtils.i("read verbs file: " + filename);
 
 		Iterable<String> lines = FileUtils.readLines(FreehalConfig.getLanguageDirectory(), filename);
