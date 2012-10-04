@@ -108,8 +108,8 @@ public class XmlFact extends XmlList {
 	/**
 	 * Compare this fact to an other fact by comparing the "verb", "subject",
 	 * "object" and "adverbs" XML tags contained in both facts with the
-	 * {@code isLike} method from {@code XmlList}. Also use {@code FactFilters}
-	 * to determine the equality.
+	 * {@link XmlList#isLike(XmlObj)} method from {@link XmlList}. Also use
+	 * {@link net.freehal.core.filter.FactFilters} to determine the equality.
 	 * 
 	 * @see FactFilters
 	 * @see XmlList#isLike(XmlObj)
