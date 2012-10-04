@@ -26,6 +26,9 @@ import net.freehal.core.util.LogUtils;
  * This class represents an XML tag which contains other XML tags. It is used to
  * build trees of XML objects.
  * 
+ * @see XmlFact
+ * @see XmlObj
+ * @see XmlText
  * @author "Tobias Schulz"
  */
 public class XmlList extends XmlObj {
@@ -210,7 +213,6 @@ public class XmlList extends XmlObj {
 		return changed;
 	}
 
-	
 	@Override
 	protected String printXml(int level, int secondlevel) {
 		if (name == "clause") {
@@ -389,6 +391,14 @@ public class XmlList extends XmlObj {
 		return c;
 	}
 
+	/**
+	 * Iterator over all words in all embedded XML objects, use the given
+	 * {@link SynoynmProvider} to get their synonyms and replace the embedded
+	 * {@link XmlText} object by a {@link XmlSynoynms} object, which contains
+	 * the original word and all synonyms.
+	 * 
+	 * @param database
+	 */
 	public void insertSynonyms(SynonymProvider database) {
 		List<XmlObj> newEmbedded = new ArrayList<XmlObj>();
 		for (XmlObj e : embedded) {
