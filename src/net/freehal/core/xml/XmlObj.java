@@ -24,7 +24,8 @@ import net.freehal.core.pos.Tags;
 
 /**
  * This class represents an abstract XML object and is extended by
- * {@code XmlList}, {@code XmlText} and their subclasses.
+ * {@link XmlList}, {@link XmlText} and their subclasses like {@link XmlFact}
+ * and {@link XmlSynonyms}.
  * 
  * @see XmlList
  * @see XmlFact
