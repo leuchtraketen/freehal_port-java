@@ -393,8 +393,8 @@ public class XmlList extends XmlObj {
 
 	/**
 	 * Iterator over all words in all embedded XML objects, use the given
-	 * {@link SynoynmProvider} to get their synonyms and replace the embedded
-	 * {@link XmlText} object by a {@link XmlSynoynms} object, which contains
+	 * {@link SynonymProvider} to get their synonyms and replace the embedded
+	 * {@link XmlText} object by a {@link XmlSynonyms} object, which contains
 	 * the original word and all synonyms.
 	 * 
 	 * @param database

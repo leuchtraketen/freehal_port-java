@@ -1,6 +1,6 @@
 /**
- * Utility classes for reading and writing XML files and XML-related data
- * structures. See {@link XmlFact} for more information.
+ * XML-related data structures and utility classes for reading and writing XML
+ * files. See {@link xml.XmlFact} for more information.
  * 
  * @author "Tobias Schulz"
  */
