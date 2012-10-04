@@ -1,26 +1,27 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.grammar;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import net.freehal.core.typedefs.StringMultiMap;
 import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.MultiHashMap;
+import net.freehal.core.util.MultiMap;
 import net.freehal.core.util.Mutable;
 import net.freehal.core.util.RegexUtils;
 
@@ -68,8 +69,7 @@ public class Entity {
 				// ignore
 			} else if (RegexUtils.find(part, "^([0-9]+)$")) {
 				order = Integer.parseInt(part);
-			} else if (symbol.length() == 0 && repl.length() == 0
-					&& data.length() == 0) {
+			} else if (symbol.length() == 0 && repl.length() == 0 && data.length() == 0) {
 				if (part.startsWith("s-")) {
 					symbol = part;
 				} else if (part.startsWith("r-")) {
@@ -89,20 +89,19 @@ public class Entity {
 		}
 	}
 
-	public StringMultiMap toGroups() {
-		return toGroups(new StringMultiMap());
+	public MultiMap<String, String> toGroups() {
+		return toGroups(new MultiHashMap<String, String>());
 	}
 
-	public StringMultiMap toGroups(StringMultiMap p) {
+	public MultiMap<String, String> toGroups(MultiMap<String, String> p) {
 		return toGroups(p, new ArrayList<String>());
 	}
 
-	public StringMultiMap toGroups(StringMultiMap p, List<String> l) {
+	public MultiMap<String, String> toGroups(MultiMap<String, String> p, List<String> l) {
 		return toGroups(p, l, "v-clause-1");
 	}
 
-	public StringMultiMap toGroups(StringMultiMap pm, List<String> keys,
-			String keyprefix) {
+	public MultiMap<String, String> toGroups(MultiMap<String, String> pm, List<String> keys, String keyprefix) {
 
 		for (String it : virt) {
 			if (it.startsWith("v-clause")) {
@@ -111,13 +110,11 @@ public class Entity {
 				keys.add("subjects");
 			} else if (it.startsWith("v-object")) {
 				keys.add("objects");
-			} else if (it.startsWith("v-verb")
-					&& !it.startsWith("v-verbprefix")) {
+			} else if (it.startsWith("v-verb") && !it.startsWith("v-verbprefix")) {
 				keys.add("verbs");
 			} else if (it.startsWith("v-verbprefix")) {
 				keys.add("verbprefixes");
-			} else if (it.startsWith("v-adverb")
-					|| it.startsWith("v-longadverb")) {
+			} else if (it.startsWith("v-adverb") || it.startsWith("v-longadverb")) {
 				keys.add("adverbs");
 			} else if (it.startsWith("v-questionword")) {
 				keys.add("questionwords");
@@ -128,7 +125,7 @@ public class Entity {
 			}
 		}
 		if (pm == null) {
-			pm = new StringMultiMap();
+			pm = new MultiHashMap<String, String>();
 		}
 		if (text.length() > 0) {
 			String last = "";
@@ -172,20 +169,17 @@ public class Entity {
 		if (text.length() > 0) {
 			StringBuilder sstext = new StringBuilder();
 			sstext.append(text).append(" (").append(_u++).append(")");
-			ss.append("\"")
-					.append(sstext)
+			ss.append("\"").append(sstext)
 					.append("\" [shape=record,fontsize=14,style=filled,fillcolor=yellow,regular=1];\n");
 			ss.append("\"").append(key).append("\" -> \"").append(sstext)
 					.append("\" [dir=none,weight=10];\n");
 		} else {
 			if (embed.size() > 0) {
 				for (Entity embeddedEntity : embed) {
-					Mutable<String> keyOfEmbeddedEntity = new Mutable<String>(
-							null);
+					Mutable<String> keyOfEmbeddedEntity = new Mutable<String>(null);
 					ss.append(embeddedEntity.printGraph(keyOfEmbeddedEntity));
 
-					ss.append("\"").append(key).append("\" -> \"")
-							.append(keyOfEmbeddedEntity.get())
+					ss.append("\"").append(key).append("\" -> \"").append(keyOfEmbeddedEntity.get())
 							.append("\" [dir=none,weight=10];\n");
 				}
 			}
@@ -204,18 +198,17 @@ public class Entity {
 				LogUtils.d("virt: " + v);
 		}
 		String grammarKey = (virt.size() > 0) ? virt.get(0) : this.toKey();
-		String key = grammarKey.equals("s-all") ? "fact" : grammarKey
-				.equals("v-subject") ? "subject" : grammarKey
-				.equals("v-object") ? "object" : grammarKey
-				.equals("v-questionword") ? "questionword" : grammarKey
-				.startsWith("v-extra-") ? "extra"
-				: grammarKey.equals("v-verb") ? "verb" : (grammarKey
-						.startsWith("v-clause-") && !grammarKey
-						.equals("v-clause-1")) ? "clause" : grammarKey
-						.equals("v-adverb") ? "adverbs" : grammarKey
-						.equals("v-linked") ? "linked" : grammarKey
-						.equals("d-linking") ? "linking" : grammarKey
-						.equals("") ? "" : "";
+		String key = grammarKey.equals("s-all") ? "fact" : grammarKey.equals("v-subject") ? "subject"
+				: grammarKey.equals("v-object") ? "object"
+						: grammarKey.equals("v-questionword") ? "questionword" : grammarKey
+								.startsWith("v-extra-") ? "extra"
+								: grammarKey.equals("v-verb") ? "verb"
+										: (grammarKey.startsWith("v-clause-") && !grammarKey
+												.equals("v-clause-1")) ? "clause" : grammarKey
+												.equals("v-adverb") ? "adverbs" : grammarKey
+												.equals("v-linked") ? "linked" : grammarKey
+												.equals("d-linking") ? "linking" : grammarKey.equals("") ? ""
+												: "";
 
 		if (_key != null)
 			_key.set(grammarKey);
@@ -236,8 +229,8 @@ public class Entity {
 
 				Mutable<String> embeddedGrammarKey = new Mutable<String>();
 				Mutable<String> embeddedText = new Mutable<String>();
-				final String embedded = it.toXml(embeddedGrammarKey,
-						embeddedText, (key.length() > 0 ? level + 1 : level));
+				final String embedded = it.toXml(embeddedGrammarKey, embeddedText,
+						(key.length() > 0 ? level + 1 : level));
 				if (embeddedGrammarKey.get().startsWith("v-link")) {
 					// found some linked objects -> inner loop
 					String linkKey = "link_?";
@@ -246,20 +239,17 @@ public class Entity {
 					for (; j < embed.size(); ++j) {
 						final Entity it2 = embed.get(j);
 
-						final String embedded2 = it2.toXml(embeddedGrammarKey,
-								embeddedText, (key.length() > 0 ? level + 1
-										: level));
+						final String embedded2 = it2.toXml(embeddedGrammarKey, embeddedText,
+								(key.length() > 0 ? level + 1 : level));
 						if (!embeddedGrammarKey.get().startsWith("v-link")) {
 							// no linked objects from now on
 							break;
 						}
 
-						if (embeddedText.get().contains("&")
-								|| embeddedText.equals("und")
+						if (embeddedText.get().contains("&") || embeddedText.equals("und")
 								|| embeddedText.equals("and"))
 							linkKey = "link_&";
-						else if (embeddedText.get().contains("|")
-								|| embeddedText.equals("oder")
+						else if (embeddedText.get().contains("|") || embeddedText.equals("oder")
 								|| embeddedText.equals("or"))
 							linkKey = "link_|";
 						else
@@ -387,10 +377,8 @@ public class Entity {
 	}
 
 	public char type() {
-		return (data.length() == 0) ? (symbol.length() == 0 ? (repl.length() == 0 ? (virt
-				.size() == 0 ? 0 : 'v') : 'r')
-				: 's')
-				: 'd';
+		return (data.length() == 0) ? (symbol.length() == 0 ? (repl.length() == 0 ? (virt.size() == 0 ? 0
+				: 'v') : 'r') : 's') : 'd';
 	}
 
 	public void setText(String text) {
@@ -431,11 +419,11 @@ public class Entity {
 		return order >= 0 ? order : 1;
 	}
 
-	public static String printPerl(StringMultiMap p, String s1, String s2) {
+	public static String printPerl(MultiMap<String, String> p, String s1, String s2) {
 		return null;
 	}
 
-	public static String printPerl(StringMultiMap p) {
+	public static String printPerl(MultiMap<String, String> p) {
 		return null;
 	}
 }

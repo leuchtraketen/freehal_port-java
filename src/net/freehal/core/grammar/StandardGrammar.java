@@ -27,9 +27,9 @@ import java.util.Map;
 import java.util.Set;
 
 import net.freehal.core.storage.Storages;
-import net.freehal.core.typedefs.StringMultiMap;
 import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.MultiHashMap;
 import net.freehal.core.util.MultiMap;
 import net.freehal.core.util.Mutable;
 import net.freehal.core.util.Pair;
@@ -39,7 +39,7 @@ import net.freehal.core.xml.Word;
 public abstract class StandardGrammar extends Grammar {
 	private HashMap<String, Entity> symbolmapStrObj = new HashMap<String, Entity>();
 	private HashMap<Entity, String> symbolmapObjStr = new HashMap<Entity, String>();
-	private MultiMap<String, Entities> grammarmap = new MultiMap<String, Entities>();
+	private MultiMap<String, Entities> grammarmap = new MultiHashMap<String, Entities>();
 	private List<MultiMap<String, Pair<Entity, Entities>>> reducemap = new ArrayList<MultiMap<String, Pair<Entity, Entities>>>();
 	private List<List<String>> reducekeysSorted = new ArrayList<List<String>>();
 
@@ -117,7 +117,7 @@ public abstract class StandardGrammar extends Grammar {
 					int order = target.getOrder();
 					if (order >= reducemap.size()) {
 						for (int i = reducemap.size(); i <= order; ++i) {
-							reducemap.add(new MultiMap<String, Pair<Entity, Entities>>());
+							reducemap.add(new MultiHashMap<String, Pair<Entity, Entities>>());
 							reducekeys.add(new HashSet<String>());
 						}
 					}
@@ -149,7 +149,7 @@ public abstract class StandardGrammar extends Grammar {
 
 	private boolean expandStep(Mutable<Integer> expanded) {
 		Mutable<Boolean> complete = new Mutable<Boolean>(true);
-		MultiMap<String, Entities> newGrammarmap = new MultiMap<String, Entities>();
+		MultiMap<String, Entities> newGrammarmap = new MultiHashMap<String, Entities>();
 
 		for (Map.Entry<String, Entities> it : grammarmap.multiEntrySet()) {
 
@@ -563,7 +563,7 @@ public abstract class StandardGrammar extends Grammar {
 				ss.append(entity.printLong());
 
 				// perl
-				StringMultiMap perlmap = entity.toGroups();
+				MultiMap<String, String> perlmap = entity.toGroups();
 				ss.append(Entity.printPerl(perlmap));
 			}
 		}
@@ -576,7 +576,7 @@ public abstract class StandardGrammar extends Grammar {
 
 		for (Entities output : list) {
 			for (Entity entity : output) {
-				StringMultiMap perlmap = entity.toGroups();
+				MultiMap<String, String> perlmap = entity.toGroups();
 				ss.append(Entity.printPerl(perlmap));
 			}
 		}

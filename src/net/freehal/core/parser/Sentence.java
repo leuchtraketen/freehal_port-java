@@ -40,7 +40,7 @@ public class Sentence {
 	private String input = null;
 	private boolean isQuestion = false;
 
-	public Sentence(AbstractParser parser, final String input, boolean isQuestion) {
+	public Sentence(Parser parser, final String input, boolean isQuestion) {
 		this.isQuestion = isQuestion;
 		this.input = input;
 		String tmp = input;

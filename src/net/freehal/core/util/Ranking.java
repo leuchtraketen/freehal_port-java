@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Set;
 
 public class Ranking<O> {
-	private MultiMap<Double, O> map = new MultiMap<Double, O>();
+	private MultiMap<Double, O> map = new MultiHashMap<Double, O>();
 	private List<Double> keys;
 
 	public Ranking() {

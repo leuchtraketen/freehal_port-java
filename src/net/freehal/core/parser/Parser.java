@@ -21,11 +21,11 @@ import java.util.List;
 
 import net.freehal.core.util.Mutable;
 
-public abstract class AbstractParser {
+public abstract class Parser {
 
 	private List<Sentence> sentences = new ArrayList<Sentence>();
 
-	public AbstractParser(String rawInput) {
+	public Parser(String rawInput) {
 		String[] splittedInput = cleanInput(rawInput).split("[@]+");
 		for (String i : splittedInput) {
 			Mutable<Boolean> isQuestion = new Mutable<Boolean>(false);

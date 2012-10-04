@@ -19,7 +19,7 @@ package net.freehal.core.lang.german;
 import java.util.List;
 
 import net.freehal.core.lang.Languages;
-import net.freehal.core.parser.AbstractParser;
+import net.freehal.core.parser.Parser;
 import net.freehal.core.pos.Taggers;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.storage.Storages;
@@ -30,7 +30,7 @@ import net.freehal.core.util.Mutable;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
 
-public class GermanParser extends AbstractParser {
+public class GermanParser extends Parser {
 
 	public GermanParser(String rawInput) {
 		super(rawInput);

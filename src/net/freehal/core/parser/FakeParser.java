@@ -18,7 +18,7 @@ package net.freehal.core.parser;
 
 import net.freehal.core.util.Mutable;
 
-public class FakeParser extends AbstractParser {
+public class FakeParser extends Parser {
 
 	public FakeParser(String rawInput) {
 		super(rawInput);

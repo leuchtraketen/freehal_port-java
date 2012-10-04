@@ -16,10 +16,10 @@
  ******************************************************************************/
 package net.freehal.core.lang.english;
 
-import net.freehal.core.parser.AbstractParser;
+import net.freehal.core.parser.Parser;
 import net.freehal.core.util.Mutable;
 
-public class EnglishParser extends AbstractParser {
+public class EnglishParser extends Parser {
 
 	public EnglishParser(String rawInput) {
 		super(rawInput);

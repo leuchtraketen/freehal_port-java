@@ -43,7 +43,7 @@ import net.freehal.core.lang.german.GermanWording;
 import net.freehal.core.lang.german.GermanPredefinedAnswerProvider;
 import net.freehal.core.lang.german.GermanRandomAnswerProvider;
 import net.freehal.core.lang.german.GermanTagger;
-import net.freehal.core.parser.AbstractParser;
+import net.freehal.core.parser.Parser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.pos.Tagger;
 import net.freehal.core.pos.Taggers;
@@ -135,7 +135,7 @@ public class ShellTest {
 
 		for (String input : args) {
 			// also possible: EnglishParser, GermanParser, FakeParser
-			AbstractParser p = new GermanParser(input);
+			Parser p = new GermanParser(input);
 
 			// parse the input and get a list of sentences
 			final List<Sentence> inputParts = p.getSentences();
