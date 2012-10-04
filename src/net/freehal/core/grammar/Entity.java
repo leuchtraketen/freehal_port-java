@@ -26,7 +26,7 @@ import net.freehal.core.util.RegexUtils;
 
 public class Entity {
 
-	private Grammar2012 grammar;
+	private StandardGrammar grammar;
 	private String data = "";
 	private String symbol = "";
 	private String repl = "";
@@ -35,11 +35,11 @@ public class Entity {
 	private Entities embed = new Entities();
 	private int order = -1;
 
-	public Entity(Grammar2012 grammar, String text) {
+	public Entity(StandardGrammar grammar, String text) {
 		init(text);
 	}
 
-	public Entity(Grammar2012 grammar, String text, Entities embed) {
+	public Entity(StandardGrammar grammar, String text, Entities embed) {
 		init(text);
 		this.grammar = grammar;
 		this.embed = embed;

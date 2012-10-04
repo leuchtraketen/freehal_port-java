@@ -14,10 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.lang.german;
+package net.freehal.core.pos.storage;
 
-import net.freehal.core.grammar.StandardGrammar;
+public class TaggerCacheDisk implements TaggerCache {
 
-public class GermanGrammar extends StandardGrammar {
+	@Override
+	public TagContainer newContainer(String name) {
+		return new TagContainerDisk(name);
+	}
 
 }

@@ -18,10 +18,12 @@ package net.freehal.core.lang.german;
 
 import java.util.List;
 
+import net.freehal.core.lang.Languages;
 import net.freehal.core.parser.AbstractParser;
+import net.freehal.core.pos.Taggers;
 import net.freehal.core.pos.Tags;
+import net.freehal.core.storage.Storages;
 import net.freehal.core.util.FileUtils;
-import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Mutable;
@@ -99,7 +101,7 @@ public class GermanParser extends AbstractParser {
 		str = RegexUtils.ireplace(str, "\\s*[?]", " ?");
 		str = RegexUtils.ireplace(str, "^[und]<ws>[,]<ws>", "");
 
-		if (FreehalConfig.isLanguage("en")) {
+		if (Languages.getLanguage().isCode("en")) {
 			if (str.length() > 7) {
 				str = RegexUtils.ireplace(str, "(^|\\s)no(\\s|$)",
 						"$1not a$2");
@@ -326,7 +328,7 @@ public class GermanParser extends AbstractParser {
 
 		str = RegexUtils.ireplace(str, " hab ", " habe ");
 
-		if (!RegexUtils.find(str, "(heiss|name)") && FreehalConfig.isLanguage("de")
+		if (!RegexUtils.find(str, "(heiss|name)") && Languages.getLanguage().isCode("de")
 				&& str.length() > 20) {
 			str = RegexUtils.ireplace(str, " FreeHAL(.?.?.?.?)$", " $1");
 		}
@@ -1167,7 +1169,7 @@ public class GermanParser extends AbstractParser {
 				"(^|\\s)?k(ein|eine|einen|einer|einem)\\s", "$1nicht $2 ");
 		str = RegexUtils.ireplace(str, "\\sim\\s", " in dem ");
 		str = RegexUtils.ireplace(str, "\\sbeim\\s", " bei dem ");
-		if (FreehalConfig.isLanguage("de")) {
+		if (Languages.getLanguage().isCode("de")) {
 			str = RegexUtils.ireplace(str,
 					"\\sam\\s([a-zA-Z]*?)ten($|\\s|[,])",
 					" am_$1ten{{{adj}}} $2 ");
@@ -1240,7 +1242,7 @@ public class GermanParser extends AbstractParser {
 					for (final String word : words) {
 						if (word.length() > 0) {
 							if (word != zu_verb) {
-								Tags tags = FreehalConfig.getTagger().getPartOfSpeech(word);
+								Tags tags = Taggers.getTagger().getPartOfSpeech(word);
 								if (tags.isType("linking") && found_zu_verb) {
 									break;
 								}
@@ -1347,7 +1349,7 @@ public class GermanParser extends AbstractParser {
 		str = RegexUtils.ireplace(str, "(^|\\s)tobias schulz",
 				"$1_tobias_schulz_");
 
-		if (FreehalConfig.isLanguage("de")) {
+		if (Languages.getLanguage().isCode("de")) {
 			str = RegexUtils.ireplace(str, "(^|\\s)im jahre (\\d\\d\\d\\d) ",
 					"$1$2 ");
 			str = RegexUtils.ireplace(str, "(^|\\s)im jahr (\\d\\d\\d\\d) ",
@@ -1435,7 +1437,7 @@ public class GermanParser extends AbstractParser {
 					final String rel_verb = m.get(1);
 					String[] words = clause.split("\\s+");
 
-					Tags tags = FreehalConfig.getTagger().getPartOfSpeech(rel_verb);
+					Tags tags = Taggers.getTagger().getPartOfSpeech(rel_verb);
 					if (tags.isType("v") || words.length < 3) {
 						LogUtils.d("not found an relative clause verb: "
 								+ rel_verb);
@@ -1500,7 +1502,7 @@ public class GermanParser extends AbstractParser {
 		// cout << "parser2012: step 9: " << str << endl;
 
 		Iterable<String> histMale = FileUtils.readLines(
-				FreehalConfig.getLanguageDirectory(), FreehalFiles.create("male.history"));
+				Storages.getStorage().getLanguageDirectory(), FreehalFiles.create("male.history"));
 		String last_male_substantive = null;
 		for (String line : histMale) {
 			if (line.length() > 1)
@@ -1511,7 +1513,7 @@ public class GermanParser extends AbstractParser {
 		}
 
 		Iterable<String> histFemale = FileUtils.readLines(
-				FreehalConfig.getLanguageDirectory(),
+				Storages.getStorage().getLanguageDirectory(),
 				FreehalFiles.create("female.history"));
 		String last_female_substantive = null;
 		for (String line : histFemale) {

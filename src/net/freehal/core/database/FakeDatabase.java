@@ -24,7 +24,7 @@ import java.util.Set;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
 
-public class FakeDatabase implements DatabaseImpl {
+public class FakeDatabase implements Database {
 
 	/**
 	 * returns the question itself as answer

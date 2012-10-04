@@ -14,10 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.lang.german;
+package net.freehal.core.pos.storage;
 
-import net.freehal.core.grammar.StandardGrammar;
+import net.freehal.core.pos.Tags;
+import net.freehal.core.util.FreehalFile;
+import java.util.Map;
 
-public class GermanGrammar extends StandardGrammar {
+public interface TagContainer extends Iterable<Map.Entry<String, Tags>> {
+	public void add(String word, Tags tags);
 
+	public boolean containsKey(String word);
+
+	public Tags get(String word);
+
+	public boolean add(FreehalFile filename);
 }

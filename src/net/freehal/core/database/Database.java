@@ -14,10 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.lang.german;
+package net.freehal.core.database;
 
-import net.freehal.core.grammar.StandardGrammar;
+import net.freehal.core.util.FreehalFile;
+import java.util.List;
+import java.util.Set;
 
-public class GermanGrammar extends StandardGrammar {
+import net.freehal.core.xml.Word;
+import net.freehal.core.xml.XmlFact;
+
+public interface Database {
+
+	public Set<XmlFact> findFacts(XmlFact xfact);
+
+	public Set<XmlFact> findFacts(List<Word> words);
+
+	public Set<XmlFact> findFacts(Word word);
+
+	public void updateCache();
+
+	public void updateCache(FreehalFile filename);
 
 }

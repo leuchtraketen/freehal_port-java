@@ -19,7 +19,6 @@ package net.freehal.core.xml;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.util.LogUtils;
 
 /**
@@ -146,7 +145,6 @@ public class XmlList extends XmlObj {
 	 * @see #part(String)
 	 * @see #part(List, String)
 	 */
-	@Override
 	public void trim() {
 
 		XmlList subject = new XmlList();
@@ -156,22 +154,24 @@ public class XmlList extends XmlObj {
 		List<XmlObj> other = new ArrayList<XmlObj>();
 
 		for (XmlObj e : embedded) {
-			XmlList unique = null;
-			if (e.getName().equals("subject"))
-				unique = subject;
-			else if (e.getName().equals("object"))
-				unique = object;
-			else if (e.getName().equals("adverbs"))
-				unique = adverbs;
-			else if (e.getName().equals("verb"))
-				unique = verb;
-			e.trim();
+			if (e instanceof XmlList) {
+				XmlList unique = null;
+				if (e.getName().equals("subject"))
+					unique = subject;
+				else if (e.getName().equals("object"))
+					unique = object;
+				else if (e.getName().equals("adverbs"))
+					unique = adverbs;
+				else if (e.getName().equals("verb"))
+					unique = verb;
+				((XmlList) e).trim();
 
-			if (unique != null) {
-				unique.setName(e.getName());
-				unique.addAll(e);
-			} else {
-				other.add(e);
+				if (unique != null) {
+					unique.setName(e.getName());
+					unique.addAll(e);
+				} else {
+					other.add(e);
+				}
 			}
 		}
 
@@ -203,10 +203,10 @@ public class XmlList extends XmlObj {
 	}
 
 	@Override
-	public boolean toggle(AbstractTagger tagger) {
+	public boolean toggle() {
 		boolean changed = false;
 		for (XmlObj e : embedded) {
-			if (e.toggle(tagger)) {
+			if (e.toggle()) {
 				changed = true;
 			}
 		}
@@ -314,20 +314,6 @@ public class XmlList extends XmlObj {
 					e.prepareWords();
 					e.getWords(cacheWords);
 				}
-			}
-		}
-		return true;
-	}
-
-	@Override
-	protected boolean prepareTags(AbstractTagger tagger) {
-		if (super.prepareTags(tagger)) {
-			for (XmlObj e : embedded) {
-				e.prepareTags(tagger);
-			}
-			for (Word word : cacheWords) {
-				if (!word.hasTags())
-					word.setTags(tagger.getPartOfSpeech(word.getWord()));
 			}
 		}
 		return true;

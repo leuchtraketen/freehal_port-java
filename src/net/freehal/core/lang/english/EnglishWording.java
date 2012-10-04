@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.lang.german;
+package net.freehal.core.lang.english;
 
-import net.freehal.core.grammar.StandardGrammar;
+import net.freehal.core.wording.StandardWording;
 
-public class GermanGrammar extends StandardGrammar {
+public class EnglishWording extends StandardWording {
 
 }

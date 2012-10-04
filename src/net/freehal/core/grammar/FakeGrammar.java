@@ -16,6 +16,6 @@
  ******************************************************************************/
 package net.freehal.core.grammar;
 
-public class FakeGrammar extends Grammar2012 {
+public class FakeGrammar extends StandardGrammar {
 
 }

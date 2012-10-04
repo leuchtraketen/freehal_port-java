@@ -19,7 +19,6 @@ package net.freehal.core.xml;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.freehal.core.pos.AbstractTagger;
 import net.freehal.core.pos.Tags;
 
 /**
@@ -42,11 +41,6 @@ public abstract class XmlObj {
 	 * {@code false} otherwise.
 	 */
 	protected boolean isCachedWords = false;
-	/**
-	 * {@code true} if {@link #prepareTags(AbstractTagger)} has already been run
-	 * with a valid part of speech tagger, {@code false} otherwise.
-	 */
-	protected boolean isCachedTags = false;
 	/**
 	 * A cache of all words contained in all embedded XML objects used by
 	 * {@link #getWords()} and {@link #getWords(List)}.
@@ -78,7 +72,7 @@ public abstract class XmlObj {
 	}
 
 	/**
-	 * Returns the XML code (ASCII) representation of this data structure.
+	 * The XML code (ASCII) representation of this data structure.
 	 * 
 	 * @return XML code
 	 */
@@ -89,39 +83,33 @@ public abstract class XmlObj {
 	protected abstract String printXml(int level, int secondlevel);
 
 	/**
-	 * Returns a string representation of this XML object and its embedded XML
-	 * objects which is principally used for logging purposes.
+	 * A string representation of this XML object and its embedded XML objects
+	 * which is principally used for logging purposes.
 	 * 
 	 * @return a string representation
 	 */
 	public abstract String printStr();
 
 	/**
-	 * Returns a 
+	 * All words contained in any embedded objects join'ed together with spaces.
 	 * 
-	 * @return XML code
+	 * @return the text representation of this object
 	 */
 	public abstract String printText();
 
+	/**
+	 * Search all words in all embedded objects and put them in
+	 * {@link #cacheWords}. Set {@link #isCachedWords} to {@code true}.
+	 * 
+	 * @return {@code false} if the words are already cached, {@code false}
+	 *         otherwise.
+	 */
 	protected boolean prepareWords() {
 		if (isCachedWords)
 			return false;
 		cacheWords.clear();
 		isCachedWords = true;
 		return true;
-	}
-
-	protected boolean prepareTags(AbstractTagger tagger) {
-		if (isCachedTags)
-			return false;
-
-		prepareWords();
-		isCachedTags = (tagger != null);
-		return (tagger != null);
-	}
-
-	public void tag(AbstractTagger tagger) {
-		prepareTags(tagger);
 	}
 
 	public List<Word> getWords() {
@@ -141,7 +129,6 @@ public abstract class XmlObj {
 
 	public void resetCache() {
 		isCachedWords = false;
-		isCachedTags = false;
 		cacheWords = new ArrayList<Word>();
 	}
 
@@ -166,12 +153,13 @@ public abstract class XmlObj {
 	}
 
 	/**
-	 * Toggle all words in any embedded XML objects using the given part of
+	 * Toggle all words in any embedded XML objects using the global part of
 	 * speech tagger.
 	 * 
-	 * @see AbstractTagger#toggle(Word)
+	 * @see net.freehal.core.pos.Taggers#getTagger()
+	 * @see net.freehal.core.pos.Tagger#toggle(Word)
 	 */
-	public abstract boolean toggle(AbstractTagger tagger);
+	public abstract boolean toggle();
 
 	@Override
 	public abstract String toString();

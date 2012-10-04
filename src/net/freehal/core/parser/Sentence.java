@@ -21,9 +21,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.freehal.core.grammar.Entities;
-import net.freehal.core.grammar.Grammar2012;
+import net.freehal.core.grammar.StandardGrammar;
+import net.freehal.core.grammar.Grammars;
+import net.freehal.core.pos.Taggers;
 import net.freehal.core.pos.Tags;
-import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
@@ -51,7 +52,7 @@ public class Sentence {
 		wordsList = new ArrayList<Word>();
 
 		for (String word : tmpList) {
-			Tags tags = FreehalConfig.getTagger().getPartOfSpeech(word);
+			Tags tags = Taggers.getTagger().getPartOfSpeech(word);
 			wordsList.add(new Word(word, tags));
 		}
 
@@ -59,8 +60,8 @@ public class Sentence {
 	}
 
 	private void parse() {
-		List<Entities> parsed = FreehalConfig.getGrammar().parse(wordsList);
-		final String xmlInput = Grammar2012.printXml(parsed);
+		List<Entities> parsed = Grammars.getGrammar().parse(wordsList);
+		final String xmlInput = StandardGrammar.printXml(parsed);
 		LogUtils.d("parsed fact as xml:");
 		LogUtils.d(xmlInput);
 		final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(new XmlUtils.OneStringIterator(
@@ -71,7 +72,6 @@ public class Sentence {
 			@Override
 			public void useXmlFact(XmlFact xfact, int countFacts, long start, FreehalFile filename,
 					int countFactsSoFar) {
-				xfact.tag(FreehalConfig.getTagger());
 				sentence.setFact(xfact);
 				LogUtils.i("found fact: " + xfact);
 			}

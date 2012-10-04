@@ -1,22 +1,20 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.pos;
-
-import net.freehal.core.util.FreehalConfig;
 
 public class Tags {
 
@@ -99,7 +97,7 @@ public class Tags {
 			return "d-linking";
 		else if (type.equals("n")) {
 			if (isName == null && word != null) {
-				isName = FreehalConfig.getTagger().isName(word);
+				isName = Taggers.getTagger().isName(word);
 			}
 			if (isName != null && isName)
 				return "d-title";
@@ -116,9 +114,8 @@ public class Tags {
 			return "v";
 		else if (type.startsWith("a") && !type.equals("art"))
 			return "adj";
-		else if (type.equals("n") || type.equals("f") || type.equals("m")
-				|| type.startsWith("n,") || type.equals("pron")
-				|| type.equals("b"))
+		else if (type.equals("n") || type.equals("f") || type.equals("m") || type.startsWith("n,")
+				|| type.equals("pron") || type.equals("b"))
 			return "n";
 		else if (type.equals("fw") || type.startsWith("ques"))
 			return "questionword";
@@ -127,8 +124,7 @@ public class Tags {
 
 	@Override
 	public String toString() {
-		return "{" + (hasType() ? "type=" + type : "")
-				+ (hasType() && hasGenus() ? "," : "")
+		return "{" + (hasType() ? "type=" + type : "") + (hasType() && hasGenus() ? "," : "")
 				+ (hasGenus() ? "genus=" + genus : "") + "}";
 	}
 }

@@ -14,10 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.lang.german;
+package net.freehal.core.pos;
 
-import net.freehal.core.grammar.StandardGrammar;
+import net.freehal.core.util.FreehalFile;
 
-public class GermanGrammar extends StandardGrammar {
+import net.freehal.core.xml.Word;
 
+public interface Tagger {
+
+	public Tags getPartOfSpeech(final String word);
+	
+	public boolean isName(final String word);
+
+	public void readTagsFrom(final FreehalFile filename);
+
+	public void readRegexFrom(final FreehalFile filename);
+
+	public Word toggle(Word word);
+
+	public void readToggleWordsFrom(final FreehalFile filename);
+
+	public boolean isIndexWord(final Word word);
 }

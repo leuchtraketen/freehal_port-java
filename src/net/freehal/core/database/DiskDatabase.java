@@ -24,9 +24,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import net.freehal.core.cache.DiskStorage;
+import net.freehal.core.database.Database;
+import net.freehal.core.database.SynonymMap;
+import net.freehal.core.pos.Taggers;
+import net.freehal.core.storage.Storages;
 import net.freehal.core.util.FileUtils;
-import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
@@ -39,7 +41,7 @@ import net.freehal.core.xml.XmlText;
 import net.freehal.core.xml.XmlUtils;
 import net.freehal.core.xml.XmlUtils.XmlStreamIterator;
 
-public class DiskDatabase implements DatabaseImpl {
+public class DiskDatabase implements Database {
 
 	private Map<String, Integer> cacheFiles = new HashMap<String, Integer>();
 	private Mutable<SynonymMap> synonymmap = new Mutable<SynonymMap>(new SynonymMap());
@@ -50,7 +52,7 @@ public class DiskDatabase implements DatabaseImpl {
 	}
 
 	private void readMetadata() {
-		Iterable<String> lines = FileUtils.readLines(DiskStorage.getDirectory("database", "meta"),
+		Iterable<String> lines = FileUtils.readLines(DiskStorage.getCacheDirectory("database", "meta"),
 				FreehalFiles.create("files.csv"));
 
 		for (String line : lines) {
@@ -70,7 +72,7 @@ public class DiskDatabase implements DatabaseImpl {
 		for (String filename : cacheFiles.keySet()) {
 			sb.append(filename).append(":").append(cacheFiles.get(filename)).append("\n");
 		}
-		FileUtils.write(DiskStorage.getDirectory("database", "meta"), FreehalFiles.create("files.csv"),
+		FileUtils.write(DiskStorage.getCacheDirectory("database", "meta"), FreehalFiles.create("files.csv"),
 				sb.toString());
 	}
 
@@ -79,7 +81,7 @@ public class DiskDatabase implements DatabaseImpl {
 		LogUtils.i("find by fact: " + xfact);
 
 		xfact.insertSynonyms(synonymmap.get());
-		xfact.toggle(FreehalConfig.getTagger());
+		xfact.toggle();
 
 		List<Word> words = xfact.getWords();
 		List<Word> usefulWords = filterUsefulWords(words);
@@ -90,7 +92,7 @@ public class DiskDatabase implements DatabaseImpl {
 	private List<Word> filterUsefulWords(List<Word> words) {
 		List<Word> usefulWords = new ArrayList<Word>();
 		for (Word word : words) {
-			if (FreehalConfig.getTagger().isIndexWord(word)) {
+			if (Taggers.getTagger().isIndexWord(word)) {
 				LogUtils.i("index word: " + word);
 				usefulWords.add(word);
 			} else
@@ -124,7 +126,7 @@ public class DiskDatabase implements DatabaseImpl {
 	private Set<XmlFact> findFacts(DiskStorage.Key key) {
 		LogUtils.i("find by key: " + key);
 
-		FreehalFile databaseFile = DiskStorage.getFile("database", "index", key, null);
+		FreehalFile databaseFile = DiskStorage.getCacheFile("database", "index", key, null);
 
 		Set<XmlFact> found = findFacts(databaseFile);
 
@@ -175,7 +177,7 @@ public class DiskDatabase implements DatabaseImpl {
 	@Override
 	public void updateCache(FreehalFile databaseFile) {
 		if (!databaseFile.isAbsolute()) {
-			databaseFile = FreehalFiles.create(FreehalConfig.getLanguageDirectory().getPath(),
+			databaseFile = FreehalFiles.create(Storages.getStorage().getLanguageDirectory().getPath(),
 					databaseFile.getPath());
 		}
 
@@ -341,7 +343,7 @@ public class DiskDatabase implements DatabaseImpl {
 
 			List<Word> words = xfact.getWords();
 			for (Word w : words) {
-				FreehalFile cacheFile = DiskStorage.getFile("database", "index", new DiskStorage.Key(w),
+				FreehalFile cacheFile = DiskStorage.getCacheFile("database", "index", new DiskStorage.Key(w),
 						FreehalFiles.create(xfact.getFilename().getName()));
 				if (!cacheFacts.get().containsKey(cacheFile)) {
 					cacheFacts.get().put(cacheFile, new HashSet<String>());

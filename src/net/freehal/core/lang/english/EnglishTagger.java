@@ -21,13 +21,13 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import net.freehal.core.pos.Tagger2012;
-import net.freehal.core.pos.TaggerCache;
+import net.freehal.core.pos.StandardTagger;
 import net.freehal.core.pos.Tags;
+import net.freehal.core.pos.storage.TaggerCache;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
 
-public class EnglishTagger extends Tagger2012 {
+public class EnglishTagger extends StandardTagger {
 
 	Set<String> builtinEntityEnds = new HashSet<String>();
 	Set<String> builtinMaleNames = new HashSet<String>();

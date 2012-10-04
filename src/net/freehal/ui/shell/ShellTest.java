@@ -20,13 +20,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.freehal.compat.sunjava.FreehalConfigStandard;
-import net.freehal.compat.sunjava.FreehalFileStandard;
-import net.freehal.compat.sunjava.LogUtilsStandard;
+import net.freehal.compat.sunjava.StandardFreehalFile;
+import net.freehal.compat.sunjava.StandardLogUtils;
 import net.freehal.core.answer.AnswerProvider;
 import net.freehal.core.answer.AnswerProviders;
 import net.freehal.core.database.DatabaseAnswerProvider;
-import net.freehal.core.database.DatabaseImpl;
+import net.freehal.core.database.Database;
 import net.freehal.core.database.DiskDatabase;
 import net.freehal.core.filter.FactFilters;
 import net.freehal.core.filter.FilterNoNames;
@@ -34,25 +33,31 @@ import net.freehal.core.filter.FilterNot;
 import net.freehal.core.filter.FilterQuestionExtra;
 import net.freehal.core.filter.FilterQuestionWhat;
 import net.freehal.core.filter.FilterQuestionWho;
-import net.freehal.core.grammar.AbstractGrammar;
+import net.freehal.core.grammar.Grammar;
+import net.freehal.core.grammar.Grammars;
+import net.freehal.core.lang.Languages;
 import net.freehal.core.lang.german.GermanGrammar;
+import net.freehal.core.lang.german.GermanLanguage;
 import net.freehal.core.lang.german.GermanParser;
-import net.freehal.core.lang.german.GermanPhrase;
+import net.freehal.core.lang.german.GermanWording;
 import net.freehal.core.lang.german.GermanPredefinedAnswerProvider;
 import net.freehal.core.lang.german.GermanRandomAnswerProvider;
 import net.freehal.core.lang.german.GermanTagger;
 import net.freehal.core.parser.AbstractParser;
 import net.freehal.core.parser.Sentence;
-import net.freehal.core.phrase.AbstractPhrase;
-import net.freehal.core.pos.AbstractTagger;
-import net.freehal.core.pos.TaggerCacheMemory;
+import net.freehal.core.pos.Tagger;
+import net.freehal.core.pos.Taggers;
+import net.freehal.core.pos.storage.TaggerCacheMemory;
+import net.freehal.core.storage.StandardStorage;
+import net.freehal.core.storage.Storages;
 import net.freehal.core.util.AbstractFreehalFile;
 import net.freehal.core.util.FileUtilsImpl;
-import net.freehal.core.util.FreehalConfig;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.StringUtils;
+import net.freehal.core.wording.Wording;
+import net.freehal.core.wording.Wordings;
 
 /**
  * This class is a reference implementation of a simple console user interface.
@@ -63,7 +68,7 @@ import net.freehal.core.util.StringUtils;
 public class ShellTest {
 	private static void init() {
 		// use java.io.File for all protocols
-		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, new FreehalFileStandard(null));
+		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, new StandardFreehalFile(null));
 		FreehalFiles.add("sqlite", new FakeFreehalFile(null));
 
 		// how and where to print the log
@@ -71,43 +76,44 @@ public class ShellTest {
 		// packages "xml" (net.freehal.core.xml) and "filter"
 		// (net.freehal.core.filter) are not logged to console output, but
 		// everything is written into a log file
-		LogUtilsStandard log = new LogUtilsStandard();
-		log.to(LogUtilsStandard.ConsoleLogStream.create(System.out).addFilter("DiskDatabase", "debug")
+		StandardLogUtils log = new StandardLogUtils();
+		log.to(StandardLogUtils.ConsoleLogStream.create(System.out).addFilter("DiskDatabase", "debug")
 				.addFilter("xml", "debug").addFilter("filter", "debug"));
-		log.to(LogUtilsStandard.FileLogStream.create("../stdout.txt"));
+		log.to(StandardLogUtils.FileLogStream.create("../stdout.txt"));
 		LogUtils.set(log);
 
 		// set the language and the base directory (if executed in "bin/", the
 		// base directory is ".."). Freehal expects a "lang_xy" directory there
 		// which contains the database files.
-		FreehalConfig.set(new FreehalConfigStandard().setLanguage("de").setPath(FreehalFiles.create("..")));
+		Languages.setLanguage(new GermanLanguage());
+		Storages.setStorage(new StandardStorage(".."));
 
 		// initialize the grammar
 		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
-		AbstractGrammar grammar = new GermanGrammar();
+		Grammar grammar = new GermanGrammar();
 		grammar.readGrammar(FreehalFiles.create("grammar.txt"));
-		FreehalConfig.setGrammar(grammar);
+		Grammars.setGrammar(grammar);
 
 		// initialize the part of speech tagger
 		// (also possible: EnglishTagger, GermanTagger, FakeTagger)
 		// the parameter is either a TaggerCacheMemory (faster, higher memory
 		// usage) or a TaggerCacheDisk (slower, less memory usage)
-		AbstractTagger tagger = new GermanTagger(new TaggerCacheMemory());
+		Tagger tagger = new GermanTagger(new TaggerCacheMemory());
 		tagger.readTagsFrom(FreehalFiles.create("guessed.pos"));
 		tagger.readTagsFrom(FreehalFiles.create("brain.pos"));
 		tagger.readTagsFrom(FreehalFiles.create("memory.pos"));
 		tagger.readRegexFrom(FreehalFiles.create("regex.pos"));
 		tagger.readToggleWordsFrom(FreehalFiles.create("toggle.csv"));
-		FreehalConfig.setTagger(tagger);
+		Taggers.setTagger(tagger);
 
 		// how to phrase the output sentences
 		// (also possible: EnglishPhrase, GermanPhrase, FakePhrase)
-		AbstractPhrase phrase = new GermanPhrase();
-		FreehalConfig.setPhrase(phrase);
+		Wording phrase = new GermanWording();
+		Wordings.setWording(phrase);
 
 		// initialize the database
 		// (also possible: DiskDatabase, FakeDatabase)
-		DatabaseImpl database = new DiskDatabase();
+		Database database = new DiskDatabase();
 		// while updating the cache, a cache_xy/ directory will be filled with
 		// information from the database files in lang_xy/
 		database.updateCache();

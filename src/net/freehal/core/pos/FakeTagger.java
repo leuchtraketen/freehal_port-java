@@ -21,7 +21,7 @@ import net.freehal.core.util.FreehalFile;
 import net.freehal.core.xml.Word;
 
 
-public class FakeTagger implements AbstractTagger {
+public class FakeTagger implements Tagger {
 
 	@Override
 	public Tags getPartOfSpeech(String word) {

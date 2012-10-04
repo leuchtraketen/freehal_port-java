@@ -1,24 +1,24 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.xml;
 
 import java.util.List;
 
-import net.freehal.core.pos.AbstractTagger;
+import net.freehal.core.pos.Taggers;
 import net.freehal.core.util.LogUtils;
 
 public class XmlText extends XmlObj {
@@ -75,17 +75,6 @@ public class XmlText extends XmlObj {
 	}
 
 	@Override
-	protected boolean prepareTags(AbstractTagger tagger) {
-		if (super.prepareTags(tagger)) {
-			for (Word word : cacheWords) {
-				if (!word.hasTags())
-					word.setTags(tagger);
-			}
-		}
-		return true;
-	}
-
-	@Override
 	public double isLike(XmlObj other) {
 		double matches = 0;
 
@@ -112,8 +101,7 @@ public class XmlText extends XmlObj {
 				matches /= count;
 		}
 
-		LogUtils.d("---- compare: " + this.printStr() + " isLike "
-				+ other.printStr() + " = " + matches);
+		LogUtils.d("---- compare: " + this.printStr() + " isLike " + other.printStr() + " = " + matches);
 		return matches;
 	}
 
@@ -144,8 +132,7 @@ public class XmlText extends XmlObj {
 				matches /= count;
 		}
 
-		LogUtils.d("---- compare: " + this.printStr() + " matches "
-				+ other.printStr() + " = " + matches);
+		LogUtils.d("---- compare: " + this.printStr() + " matches " + other.printStr() + " = " + matches);
 		return matches;
 	}
 
@@ -155,11 +142,11 @@ public class XmlText extends XmlObj {
 	}
 
 	@Override
-	public boolean toggle(AbstractTagger tagger) {
+	public boolean toggle() {
 		boolean reset = false;
 		List<Word> words = this.getWords();
 		for (Word word : words) {
-			Word newWord = tagger.toggle(word);
+			Word newWord = Taggers.getTagger().toggle(word);
 			LogUtils.d("TOGGLE: " + word + " -> " + newWord);
 			if (!newWord.equals(word)) {
 				reset = true;

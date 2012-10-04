@@ -19,7 +19,8 @@ package net.freehal.core.xml;
 import java.util.Iterator;
 import java.util.List;
 
-import net.freehal.core.pos.AbstractTagger;
+import net.freehal.core.pos.Tagger;
+import net.freehal.core.pos.Taggers;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.util.LogUtils;
 
@@ -131,7 +132,7 @@ public class Word {
 	 * @param tagger
 	 *        the part of speech tagger
 	 */
-	public void setTags(AbstractTagger tagger) {
+	public void setTags(Tagger tagger) {
 		this.tag = tagger.getPartOfSpeech(word);
 	}
 
@@ -148,6 +149,8 @@ public class Word {
 	}
 
 	public Tags getTags() {
+		if (tag == null)
+			this.setTags(Taggers.getTagger());
 		return tag;
 	}
 
@@ -157,6 +160,8 @@ public class Word {
 	 * @return true if the tags are not null, false otherwise
 	 */
 	public boolean hasTags() {
+		if (tag == null)
+			this.setTags(Taggers.getTagger());
 		return tag != null;
 	}
 

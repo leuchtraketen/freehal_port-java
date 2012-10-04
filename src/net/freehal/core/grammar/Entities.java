@@ -31,7 +31,7 @@ public class Entities extends ArrayList<Entity> {
 		super(entities);
 	}
 
-	public void add(Entities entities, Entity previous, Grammar2012 grammar) {
+	public void add(Entities entities, Entity previous, StandardGrammar grammar) {
 
 		// / cout << "get_virt: size=" << previous->get_virt().size() << endl;
 		if (previous.getMarker().size() > 0) {
