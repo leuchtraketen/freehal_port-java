@@ -34,41 +34,74 @@ import net.freehal.core.pos.Tags;
  */
 public abstract class XmlObj {
 
+	/** The name of the tag this object represents. */
 	protected String name = new String();
 
+	/**
+	 * {@code true} if {@link #prepareWords()} has already been run,
+	 * {@code false} otherwise.
+	 */
 	protected boolean isCachedWords = false;
+	/**
+	 * {@code true} if {@link #prepareTags(AbstractTagger)} has already been run
+	 * with a valid part of speech tagger, {@code false} otherwise.
+	 */
 	protected boolean isCachedTags = false;
+	/**
+	 * A cache of all words contained in all embedded XML objects used by
+	 * {@link #getWords()} and {@link #getWords(List)}.
+	 */
 	protected List<Word> cacheWords = new ArrayList<Word>();
 
+	/**
+	 * Create a new XML object. This constructor does nothing.
+	 */
 	public XmlObj() {}
 
+	/**
+	 * Get the name of the tag which is represented by this object.
+	 * 
+	 * @return the name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * Set the name of the tag which is represented by this object.
+	 * 
+	 * @param name
+	 *        the name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public void trim() {
-		// does nothing
-	}
-
+	/**
+	 * Returns the XML code (ASCII) representation of this data structure.
+	 * 
+	 * @return XML code
+	 */
 	public String printXml() {
 		return printXml(0, 0);
 	}
 
-	protected String printXml(int level, int secondlevel) {
-		return "";
-	}
+	protected abstract String printXml(int level, int secondlevel);
 
-	public String printStr() {
-		return "";
-	}
+	/**
+	 * Returns a string representation of this XML object and its embedded XML
+	 * objects which is principally used for logging purposes.
+	 * 
+	 * @return a string representation
+	 */
+	public abstract String printStr();
 
-	public String printText() {
-		return "";
-	}
+	/**
+	 * Returns a 
+	 * 
+	 * @return XML code
+	 */
+	public abstract String printText();
 
 	protected boolean prepareWords() {
 		if (isCachedWords)
