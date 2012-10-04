@@ -24,7 +24,7 @@ import net.freehal.core.util.Ranking;
 
 /**
  * This class represents a fact which is (in most cases) read from an xml
- * database file. It extends {@code XmlList} which is a list of xml tags and
+ * database file. It extends {@link XmlList} which is a list of xml tags and
  * their contents.<br />
  * <br />
  * 
@@ -52,7 +52,7 @@ import net.freehal.core.util.Ranking;
  * |   |
  * |   \-> XmlList: {name="text",cacheWords=["my","name"]}
  * |       |
- * |      \-> XmlText: {text="my name"}
+ * |       \-> XmlText: {text="my name"}
  * |
  * |-> XmlList: {name="object",cacheWords=["freehal"]}
  * |   |
@@ -67,10 +67,11 @@ import net.freehal.core.util.Ranking;
  *         \-> XmlText: {text="is"}
  * </pre>
  * 
- * It doesn't seem to make much sense that there is a {@code XmlList} with
- * {@code name="text"} which always contains only one {@code XmlText} object,
+ * It doesn't seem to make much sense that there is a {@link XmlList} with
+ * {@code name="text"} which always contains only one {@link XmlText} object,
  * but this structure is needed because later we can add synonyms to that
- * {@code XmlList} with a {@code SynonymProvider}.
+ * {@link XmlList} with a {@link SynonymProvider} and
+ * {@link XmlList#insertSynonyms(SynonymProvider)}.
  * 
  * @see XmlList
  * @see XmlText
