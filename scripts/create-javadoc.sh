@@ -28,7 +28,8 @@ pwd
 
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 export doclet="-doclet com.google.doclava.Doclava -docletpath $(dirname $0)/doclava-1.0.6.jar -bootclasspath $JAVA_HOME/jre/lib/rt.jar"
+export federate='-federate JDK http://download.oracle.com/javase/6/docs/api/index.html? -federationxml JDK http://doclava.googlecode.com/svn/static/api/openjdk-6.xml'
 echo $doclet
 mkdir -p $2/
-javadoc -hdf project.name "FreeHAL Library" -d $2/ $doclet $(find $1/src -name "*.java")
+javadoc -hdf project.name "FreeHAL Library" -d $2/ $doclet $federate $(find $1/src -name "*.java")
 

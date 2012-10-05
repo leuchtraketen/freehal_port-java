@@ -1,28 +1,36 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.util;
 
 import java.io.File;
 
+/**
+ * An abstract basic implementation of a {@link FreehalFile} which uses
+ * {@link java.io.File} from the standard library for the name/path resolution
+ * and management. The place where the data is stored must be specified by a
+ * subclass.
+ * 
+ * @author "Tobias Schulz"
+ */
 public abstract class AbstractFreehalFile implements FreehalFile {
-
+	
 	/**
-	 * The corresponding standard Java file object. It is at least used for the
-	 * name/path management.
+	 * The corresponding standard {@link java.io.File} instance from the
+	 * standard library. It is at least used for the name/path management.
 	 */
 	protected File file;
 
@@ -31,12 +39,15 @@ public abstract class AbstractFreehalFile implements FreehalFile {
 		this.file = null;
 	}
 
+	/**
+	 * Creates a new freehal file instance from a given {@link java.io.File}
+	 * from the standard library.
+	 * 
+	 * @param file
+	 *        the file
+	 */
 	public AbstractFreehalFile(File file) {
 		this.file = file;
-	}
-
-	public FreehalFile getAbsoluteFile() {
-		return create(file.getAbsolutePath());
 	}
 
 	@Override

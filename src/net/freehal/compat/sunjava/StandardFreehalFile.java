@@ -1,18 +1,18 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.compat.sunjava;
 
@@ -55,8 +55,10 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 	public FreehalFile[] listFiles() {
 		ArrayList<FreehalFile> files = new ArrayList<FreehalFile>();
 		File[] realFiles = file.listFiles();
-		for (File realFile : realFiles) {
-			files.add(this.create(realFile.getPath()));
+		if (realFiles != null) {
+			for (File realFile : realFiles) {
+				files.add(this.create(realFile.getPath()));
+			}
 		}
 		return files.toArray(new FreehalFile[realFiles.length]);
 	}
