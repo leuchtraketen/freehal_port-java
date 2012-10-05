@@ -17,6 +17,7 @@
 package net.freehal.core.util;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * A {@link FreehalFile} is a wrapper for something like a file. For example,
@@ -36,21 +37,27 @@ public interface FreehalFile extends Comparable<FreehalFile> {
 	 *        the path
 	 * @return a freehal file object
 	 */
-	public FreehalFile create(String path);
+	public FreehalFile getFile(String path);
 
 	/**
-	 * Creates a new freehal file instance from a parent pathname string and a
-	 * child pathname string. This is equivalent to
-	 * {@link java.io.File#File(String, String)}
+	 * Creates a new freehal file instance from a file which is a child of this
+	 * freehal file instance (which must be a directory to be a parent file!)
 	 * 
-	 * @see java.io.File#File(String, String)
-	 * @param dir
-	 *        the directory
-	 * @param file
-	 *        the file
+	 * @param path
+	 *        the path
 	 * @return a freehal file object
 	 */
-	public FreehalFile create(String dir, String file);
+	public FreehalFile getChild(String path);
+
+	/**
+	 * Creates a new freehal file instance from a file which is a child of this
+	 * freehal file instance (which must be a directory to be a parent file!)
+	 * 
+	 * @param path
+	 *        the path
+	 * @return a freehal file object
+	 */
+	public FreehalFile getChild(FreehalFile path);
 
 	/**
 	 * Get a {@link java.io.File} from the java standard library which has the
@@ -159,10 +166,43 @@ public interface FreehalFile extends Comparable<FreehalFile> {
 	public String toString();
 
 	/**
-	 * Get the corresponding {@link FileUtilsImpl} implementation.
+	 * Returns an string {@link java.lang.Iterable} which iterates over all
+	 * lines from the given file.
 	 * 
-	 * @return an instance of a class implementing the {@link FileUtilsImpl}
-	 *         interface.
+	 * @return the iterator
 	 */
-	public FileUtilsImpl getFileUtilsImpl();
+	public Iterable<String> readLines();
+
+	/**
+	 * Returns an list which contains all lines from the given file.
+	 * 
+	 * @return the iterator
+	 */
+	public List<String> readLinesAsList();
+
+	/**
+	 * Returns the content of the given file as a single string.
+	 * 
+	 * @return the iterator
+	 */
+	public String read();
+
+	/**
+	 * Appends the given string to the end of the given file.
+	 * 
+	 * @param s
+	 *        the string to append
+	 * @return the iterator
+	 */
+	public void append(String s);
+
+	/**
+	 * Writes the given string into the given file. If the file already exists,
+	 * it is overridden.
+	 * 
+	 * @param s
+	 *        the string to write
+	 * @return the iterator
+	 */
+	public void write(String s);
 }

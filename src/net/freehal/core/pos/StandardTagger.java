@@ -26,7 +26,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
@@ -189,7 +188,7 @@ public abstract class StandardTagger implements Tagger {
 			LogUtils.i("write part of speech file: " + filename);
 			LogUtils.i(toAppend.toString());
 
-			FileUtils.append(Storages.getStorage().getLanguageDirectory(), filename, toAppend.toString());
+			Storages.inLanguageDirectory(filename).append(toAppend.toString());
 		}
 	}
 
@@ -207,7 +206,7 @@ public abstract class StandardTagger implements Tagger {
 	public void readToggleWordsFrom(FreehalFile filename) {
 		LogUtils.i("read verbs file: " + filename);
 
-		Iterable<String> lines = FileUtils.readLines(Storages.getStorage().getLanguageDirectory(), filename);
+		Iterable<String> lines = Storages.inLanguageDirectory(filename).readLines();
 
 		for (String line : lines) {
 			line = line.trim();

@@ -25,7 +25,6 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.RegexUtils;
 
 public class TagContainerDisk implements TagContainer {
@@ -59,8 +58,7 @@ public class TagContainerDisk implements TagContainer {
 		final String search = word + ":";
 		for (FreehalFile filename : files) {
 			Tags tags = null;
-			Iterable<String> lines = FileUtils.readLines(Storages.getStorage().getLanguageDirectory(),
-					filename);
+			Iterable<String> lines = Storages.inLanguageDirectory(filename).readLines();
 			for (String line : lines) {
 				line = RegexUtils.trimRight(line, "\\s");
 

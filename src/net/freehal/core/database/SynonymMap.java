@@ -1,18 +1,18 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.database;
 
@@ -23,8 +23,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import net.freehal.core.util.FileUtils;
-import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.xml.Word;
 
@@ -77,8 +75,7 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 	}
 
 	public void write() {
-		FileUtils.write(DiskStorage.getCacheDirectory("database", "synonyms"),
-				FreehalFiles.create("synonyms.csv"), this.print());
+		DiskStorage.getCacheDirectory("database", "synonyms").getChild("synonyms.csv").write(this.print());
 	}
 
 	private String print() {
@@ -90,8 +87,8 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 	}
 
 	public void read() {
-		Iterable<String> lines = FileUtils.readLines(DiskStorage.getCacheDirectory(
-				"database", "synonyms"), FreehalFiles.create("synonyms.csv"));
+		Iterable<String> lines = DiskStorage.getCacheDirectory("database", "synonyms")
+				.getChild("synonyms.csv").readLines();
 		for (String line : lines) {
 			String[] csv = line.split("[|]");
 			Set<String> set = new HashSet<String>();

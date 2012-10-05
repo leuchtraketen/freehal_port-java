@@ -27,7 +27,6 @@ import java.util.Map;
 import java.util.Set;
 
 import net.freehal.core.storage.Storages;
-import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.MultiHashMap;
 import net.freehal.core.util.MultiMap;
@@ -433,7 +432,7 @@ public abstract class StandardGrammar extends Grammar {
 	}
 
 	public boolean readGrammar(FreehalFile filename) {
-		Iterable<String> lines = FileUtils.readLines(Storages.getStorage().getLanguageDirectory(), filename);
+		Iterable<String> lines = Storages.inLanguageDirectory(filename).readLines();
 
 		if (!lines.iterator().hasNext()) {
 			LogUtils.e("Error! Could not open grammar file: " + filename);

@@ -18,7 +18,6 @@ package net.freehal.core.database;
 
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.FreehalFile;
-import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
 
@@ -27,7 +26,7 @@ public class DiskStorage {
 	public static FreehalFile getCacheFile(final String dir1, final String dir2, final Key key,
 			final FreehalFile filename) {
 		if (filename != null)
-			return FreehalFiles.create(getCacheDirectory(dir1, dir2, key), filename.getPath());
+			return getCacheDirectory(dir1, dir2, key).getChild(filename);
 		else
 			return getCacheDirectory(dir1, dir2, key);
 	}
@@ -37,15 +36,14 @@ public class DiskStorage {
 		keyPath.append(key.getKey(0)).append("/").append(key.getKey(1)).append("/").append(key.getKey(2))
 				.append("/").append(key.getKey(3));
 
-		FreehalFile directory = FreehalFiles.create(getCacheDirectory(dir1, dir2), keyPath.toString());
+		FreehalFile directory = getCacheDirectory(dir1, dir2).getChild(keyPath.toString());
 		directory.mkdirs();
 
 		return directory;
 	}
 
 	public static FreehalFile getCacheDirectory(final String dir1, final String dir2) {
-		FreehalFile directory = FreehalFiles.create(Storages.getStorage().getCacheDirectory(), dir1 + "/"
-				+ dir2);
+		FreehalFile directory = Storages.inCacheDirectory(dir1 + "/" + dir2);
 		directory.mkdirs();
 		return directory;
 	}

@@ -1,18 +1,18 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.lang.german;
 
@@ -23,8 +23,6 @@ import net.freehal.core.parser.Parser;
 import net.freehal.core.pos.Taggers;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.storage.Storages;
-import net.freehal.core.util.FileUtils;
-import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Mutable;
 import net.freehal.core.util.RegexUtils;
@@ -82,8 +80,7 @@ public class GermanParser extends Parser {
 
 	}
 
-	private void buildPairSentences(String str, String string, String string2,
-			String string3) {
+	private void buildPairSentences(String str, String string, String string2, String string3) {
 		// TODO Automatisch generierter Methodenstub
 
 	}
@@ -103,23 +100,15 @@ public class GermanParser extends Parser {
 
 		if (Languages.getLanguage().isCode("en")) {
 			if (str.length() > 7) {
-				str = RegexUtils.ireplace(str, "(^|\\s)no(\\s|$)",
-						"$1not a$2");
+				str = RegexUtils.ireplace(str, "(^|\\s)no(\\s|$)", "$1not a$2");
 			}
 			str = RegexUtils.ireplace(str, "(^|\\s)an\\s(...)", "$1a $2");
-			str = RegexUtils.ireplace(str,
-					"(^|\\s)(are|is|be|was|were|am)\\s(.+?)\\sable\\sto\\s",
+			str = RegexUtils.ireplace(str, "(^|\\s)(are|is|be|was|were|am)\\s(.+?)\\sable\\sto\\s",
 					"$1can $3 ");
-			str = RegexUtils
-					.ireplace(str,
-							"(^|\\s)(are|is|be|was|were|am)\\sable\\sto\\s",
-							"$1 can ");
-			str = RegexUtils.ireplace(str,
-					"(^|\\s)(are|is|be|was|were|am)\\s(.+?)\\sunable\\sto\\s",
+			str = RegexUtils.ireplace(str, "(^|\\s)(are|is|be|was|were|am)\\sable\\sto\\s", "$1 can ");
+			str = RegexUtils.ireplace(str, "(^|\\s)(are|is|be|was|were|am)\\s(.+?)\\sunable\\sto\\s",
 					"$1not can $3 ");
-			str = RegexUtils.ireplace(str,
-					"(^|\\s)(are|is|be|was|were|am)\\sunable\\sto\\s",
-					"$1 not can ");
+			str = RegexUtils.ireplace(str, "(^|\\s)(are|is|be|was|were|am)\\sunable\\sto\\s", "$1 not can ");
 		}
 		str = RegexUtils.ireplace(str, "[,]", " , ");
 		str = RegexUtils.ireplace(str, "\\s+", " ");
@@ -153,26 +142,16 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "\\(false\\)", "_(false)_");
 		str = RegexUtils.ireplace(str, "\\(logic\\)", "_(logic)_");
 
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(^|\\s)es\\s(.*?\\s)zu\\s(.?ein)em\\s(.*?)\\s((?:kommt)|(?:kommen))",
-						"$1$2 $3 $4 ist");
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(^|\\s)es\\s(.*?\\s)zu\\s(.?ein)em\\s(.*?)\\s((?:gekommen ist)|(?:gekommen war)|(?:kam))",
-						"$1$2 $3 $4 war");
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(^|\\s)es\\s(.*?\\s)zu\\s(.?ein)er\\s(.*?)\\s((?:kommt)|(?:kommen))",
-						"$1$2 $3 $4 ist");
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(^|\\s)es\\s(.*?\\s)zu\\s(.?ein)er\\s(.*?)\\s((?:gekommen ist)|(?:gekommen war)|(?:kam))",
-						"$1$2 $3e $4 war");
+		str = RegexUtils.ireplace(str, "(^|\\s)es\\s(.*?\\s)zu\\s(.?ein)em\\s(.*?)\\s((?:kommt)|(?:kommen))",
+				"$1$2 $3 $4 ist");
+		str = RegexUtils.ireplace(str,
+				"(^|\\s)es\\s(.*?\\s)zu\\s(.?ein)em\\s(.*?)\\s((?:gekommen ist)|(?:gekommen war)|(?:kam))",
+				"$1$2 $3 $4 war");
+		str = RegexUtils.ireplace(str, "(^|\\s)es\\s(.*?\\s)zu\\s(.?ein)er\\s(.*?)\\s((?:kommt)|(?:kommen))",
+				"$1$2 $3 $4 ist");
+		str = RegexUtils.ireplace(str,
+				"(^|\\s)es\\s(.*?\\s)zu\\s(.?ein)er\\s(.*?)\\s((?:gekommen ist)|(?:gekommen war)|(?:kam))",
+				"$1$2 $3e $4 war");
 
 		str = RegexUtils.ireplace(str, "jeden Tag ", "_jeden_tag_ ");
 
@@ -185,19 +164,14 @@ public class GermanParser extends Parser {
 
 		if ((m = RegexUtils.match(str, "^(ist|war|sind|waren)\\s")) != null) {
 			final String verb = m.get(0);
-			str = RegexUtils.ireplace(str, "^(ist|war|sind|waren)\\s", verb
-					+ " ");
+			str = RegexUtils.ireplace(str, "^(ist|war|sind|waren)\\s", verb + " ");
 		}
-		str = RegexUtils
-				.replace(
-						str,
-						"^(ist|war|sind|waren)\\s([a-z]+?)\\s(ein.?.?)\\s([A-Z][a-z]+?)(\\s?[?]?)$",
-						"$1 _$2_ $3 $4 $5");
+		str = RegexUtils.replace(str,
+				"^(ist|war|sind|waren)\\s([a-z]+?)\\s(ein.?.?)\\s([A-Z][a-z]+?)(\\s?[?]?)$",
+				"$1 _$2_ $3 $4 $5");
 
-		str = RegexUtils.ireplace(str, "^(.*?)du mir deinen Namen.*?$",
-				"Wie ist dein Name? ");
-		str = RegexUtils.ireplace(str, "^(.*?)du mir.*?deinen Namen.*?$",
-				"Wie ist dein Name? ");
+		str = RegexUtils.ireplace(str, "^(.*?)du mir deinen Namen.*?$", "Wie ist dein Name? ");
+		str = RegexUtils.ireplace(str, "^(.*?)du mir.*?deinen Namen.*?$", "Wie ist dein Name? ");
 
 		if (RegexUtils.find(str, "\\(bad\\)")) {
 			str = RegexUtils.ireplace(str, "\\s*?\\(bad\\)", "");
@@ -212,16 +186,12 @@ public class GermanParser extends Parser {
 			str = "_" + str + "_ = _(good)_";
 		}
 
-		str = RegexUtils.ireplace(str,
-				"sowohl\\s(.+?)als auch([a-z0-9\\s]*?[A-Z][a-z]+?)(\\s|$)",
+		str = RegexUtils.ireplace(str, "sowohl\\s(.+?)als auch([a-z0-9\\s]*?[A-Z][a-z]+?)(\\s|$)",
 				"$1 \\$\\$aswellas\\$\\$ $2$3");
-		str = RegexUtils.ireplace(str, "sowohl\\s(.+?)als auch(.*)",
-				"$1 \\$\\$aswellas\\$\\$ $2");
-		str = RegexUtils.ireplace(str,
-				"weder\\s(.+?)noch([a-z0-9\\s]*?[A-Z][a-z]+?)(\\s|$)",
+		str = RegexUtils.ireplace(str, "sowohl\\s(.+?)als auch(.*)", "$1 \\$\\$aswellas\\$\\$ $2");
+		str = RegexUtils.ireplace(str, "weder\\s(.+?)noch([a-z0-9\\s]*?[A-Z][a-z]+?)(\\s|$)",
 				"nicht $1 \\$\\$aswellas\\$\\$ $2$3");
-		str = RegexUtils.ireplace(str, "weder\\s(.+?)noch(.*)",
-				"nicht $1 \\$\\$aswellas\\$\\$ $2");
+		str = RegexUtils.ireplace(str, "weder\\s(.+?)noch(.*)", "nicht $1 \\$\\$aswellas\\$\\$ $2");
 
 		str = RegexUtils
 				.ireplace(
@@ -230,45 +200,35 @@ public class GermanParser extends Parser {
 						"in dem _$2_");
 
 		str = RegexUtils.ireplace(str, "jaenner", "januar");
-		final String months[] = { "januar", "jaenner", "februar", "maerz",
-				"april", "mai", "juni", "juli", "august", "september",
-				"oktober", "november", "dezember" };
+		final String months[] = { "januar", "jaenner", "februar", "maerz", "april", "mai", "juni", "juli",
+				"august", "september", "oktober", "november", "dezember" };
 		int month_num = 1;
 		final String year = "2012";
 		for (final String month : months) {
-			str = RegexUtils.ireplace(str, "(seit|bis) " + month + " ([0-9]+)",
-					"$1 01." + month_num + ".$2s");
-			str = RegexUtils.ireplace(str, "(seit|bis) " + month, "$1 01."
-					+ month_num + "." + year);
+			str = RegexUtils
+					.ireplace(str, "(seit|bis) " + month + " ([0-9]+)", "$1 01." + month_num + ".$2s");
+			str = RegexUtils.ireplace(str, "(seit|bis) " + month, "$1 01." + month_num + "." + year);
 			++month_num;
 		}
 
-		str = RegexUtils.ireplace(str, "(^)([A-Z][a-z]+?en) (ist) ",
-				"$1_$2_ $3 ");
+		str = RegexUtils.ireplace(str, "(^)([A-Z][a-z]+?en) (ist) ", "$1_$2_ $3 ");
 
-		str = RegexUtils.ireplace(str, "(^|\\s)genauso (.*?) wie ",
-				"$1genauso $2 wie{{{adj}}} ");
-		str = RegexUtils.ireplace(str, "(^|\\s)so (.*?) wie ",
-				"$1so $2 wie{{{adj}}} ");
+		str = RegexUtils.ireplace(str, "(^|\\s)genauso (.*?) wie ", "$1genauso $2 wie{{{adj}}} ");
+		str = RegexUtils.ireplace(str, "(^|\\s)so (.*?) wie ", "$1so $2 wie{{{adj}}} ");
 
 		str = RegexUtils.ireplace(str, "was ist ", "was ist ");
-		str = RegexUtils
-				.replace(str, "was ist ([A-Z][a-z]+?)([\\.?!+,;\\s-]*?)$",
-						"was ist _$1_$2");
+		str = RegexUtils.replace(str, "was ist ([A-Z][a-z]+?)([\\.?!+,;\\s-]*?)$", "was ist _$1_$2");
 
 		str = RegexUtils.ireplace(str, "wie war ", "wie ist ");
 		str = RegexUtils.ireplace(str, "\\s+kein", " nicht ein");
-		str = RegexUtils.ireplace(str, "(^|\\s)?und sonst(\\s|\\$)",
-				" wie geht es dir ");
+		str = RegexUtils.ireplace(str, "(^|\\s)?und sonst(\\s|\\$)", " wie geht es dir ");
 		str = RegexUtils.ireplace(str, "(^|\\s)?bevor\\s", " , bevor ");
-		str = RegexUtils.ireplace(str, "(^|\\s)?kurz \\, bevor\\s",
-				" , kurz bevor ");
+		str = RegexUtils.ireplace(str, "(^|\\s)?kurz \\, bevor\\s", " , kurz bevor ");
 		str = RegexUtils.ireplace(str, "^ \\,", " ");
 		str = RegexUtils.ireplace(str, "^\\,", " ");
 		str = RegexUtils.ireplace(str, " mehr als ", " mehr als{{{adj}}} ");
 		str = RegexUtils.ireplace(str, " lust zu ", " lust , zu ");
-		str = RegexUtils.ireplace(str, " weisst du was (.*) ist ",
-				" was ist $1 ");
+		str = RegexUtils.ireplace(str, " weisst du was (.*) ist ", " was ist $1 ");
 		if (str.length() < 14) {
 			str = RegexUtils.ireplace(str, " weisst du ", " weisst du , ");
 		}
@@ -281,50 +241,37 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "^bis auf ", " bisauf ");
 		str = RegexUtils.ireplace(str, "^kein(.*)", "ein$1 nicht");
 		str = RegexUtils.ireplace(str, "wozu braucht man ", "was ist ");
-		str = RegexUtils.ireplace(str, "(brauch)(st|e|en)(.*?)zu\\s(haben)",
-				"$1$2$3 $4");
+		str = RegexUtils.ireplace(str, "(brauch)(st|e|en)(.*?)zu\\s(haben)", "$1$2$3 $4");
 
 		str = RegexUtils.replace(str, "(^|\\s)X(\\s|$)", "$1\\$a\\$$2");
 		str = RegexUtils.replace(str, "(^|\\s)Y(\\s|$)", "$1\\$b\\$$2");
 		str = RegexUtils.replace(str, "(^|\\s)Z(\\s|$)", "$1\\$c\\$$2");
 
-		str = RegexUtils.ireplace(str, "([0-9]|\\$)\\s*?(mal)\\s*?([0-9]|\\$)",
-				"$1*$3");
+		str = RegexUtils.ireplace(str, "([0-9]|\\$)\\s*?(mal)\\s*?([0-9]|\\$)", "$1*$3");
 
-		str = RegexUtils
-				.ireplace(str, "(^|\\s)([+-])ein(\\s|$)", "$1$2 1$3");
-		final String numbers[] = { "eins", "zwei", "drei", "vier", "fuenf",
-				"sechs", "sieben", "acht", "neun", "zehn", "elf", "zwoelf",
-				"dreizehn", "vierzehn", "fuenfzehn", "sechzehn", "siebzehn",
+		str = RegexUtils.ireplace(str, "(^|\\s)([+-])ein(\\s|$)", "$1$2 1$3");
+		final String numbers[] = { "eins", "zwei", "drei", "vier", "fuenf", "sechs", "sieben", "acht",
+				"neun", "zehn", "elf", "zwoelf", "dreizehn", "vierzehn", "fuenfzehn", "sechzehn", "siebzehn",
 				"achtzehn", "neunzehn", "zwanzig" };
 
 		int i = 0;
 		for (final String number : numbers) {
-			str = RegexUtils.ireplace(str, "(^|\\s)" + number + "(\\s|$)",
-					"$1 " + i + "$3");
-			str = RegexUtils.ireplace(str, "(^|\\s)[+]" + number + "(\\s|$)",
-					"$1+" + i + "$3");
-			str = RegexUtils.ireplace(str, "(^|\\s)[-]" + number + "(\\s|$)",
-					"$1-" + i + "$3");
+			str = RegexUtils.ireplace(str, "(^|\\s)" + number + "(\\s|$)", "$1 " + i + "$3");
+			str = RegexUtils.ireplace(str, "(^|\\s)[+]" + number + "(\\s|$)", "$1+" + i + "$3");
+			str = RegexUtils.ireplace(str, "(^|\\s)[-]" + number + "(\\s|$)", "$1-" + i + "$3");
 			++i;
 		}
 
-		str = RegexUtils.ireplace(str, "(tag|datum|monat|woche|jahr) war\\s",
-				"$1 ist ");
+		str = RegexUtils.ireplace(str, "(tag|datum|monat|woche|jahr) war\\s", "$1 ist ");
 		str = RegexUtils.ireplace(str, "welche uhrzeit\\s", "wie uhr ");
-		str = RegexUtils.ireplace(str, "\\suhr\\shaben\\swir\\s",
-				" uhr ist es ");
-		str = RegexUtils.ireplace(str, "\\suhr\\shaben\\swir[?]",
-				" uhr ist es?");
+		str = RegexUtils.ireplace(str, "\\suhr\\shaben\\swir\\s", " uhr ist es ");
+		str = RegexUtils.ireplace(str, "\\suhr\\shaben\\swir[?]", " uhr ist es?");
 		str = RegexUtils.ireplace(str, "aneinander ", "aneinander");
 		str = RegexUtils.ireplace(str, "\\shaben\\swir\\sheute", " haben wir ");
 		str = RegexUtils.ireplace(str, "\\sist\\sheute", " ist ");
-		str = RegexUtils.ireplace(str, "(\\s|^)(ist|bist)\\s(.*?)\\sheute\\s",
-				"$1$2 $3 ");
-		str = RegexUtils.ireplace(str, "welchen\\stag\\shaben\\swir\\s",
-				"welch Datum haben wir ");
-		str = RegexUtils.ireplace(str, "welcher\\stag\\sist\\s",
-				"welch Datum haben wir ");
+		str = RegexUtils.ireplace(str, "(\\s|^)(ist|bist)\\s(.*?)\\sheute\\s", "$1$2 $3 ");
+		str = RegexUtils.ireplace(str, "welchen\\stag\\shaben\\swir\\s", "welch Datum haben wir ");
+		str = RegexUtils.ireplace(str, "welcher\\stag\\sist\\s", "welch Datum haben wir ");
 
 		str = RegexUtils.ireplace(str, " hab ", " habe ");
 
@@ -334,15 +281,11 @@ public class GermanParser extends Parser {
 		}
 
 		str = " " + str + " ";
-		str = RegexUtils.ireplace(str, "\\snoch\\s(nie|nicht)([\\s!.,?]+)",
-				" noch-$1$2");
+		str = RegexUtils.ireplace(str, "\\snoch\\s(nie|nicht)([\\s!.,?]+)", " noch-$1$2");
 		str = RegexUtils.ireplace(str, "\\snoch([\\s!.,?]+)", "$1");
-		str = RegexUtils.ireplace(str, "\\snoch[-](nie|nicht)([\\s!.,?]+)",
-				" noch $1$2");
-		str = RegexUtils.ireplace(str,
-				"(^|[\\s!.,?]+)(so)\\setwas([\\s!.,?]+)", "$1_$2_etwas_$3");
-		str = RegexUtils.ireplace(str, "(^|[\\s!.,?]+)(so)was([\\s!.,?]+)",
-				"$1_$2_etwas_$3");
+		str = RegexUtils.ireplace(str, "\\snoch[-](nie|nicht)([\\s!.,?]+)", " noch $1$2");
+		str = RegexUtils.ireplace(str, "(^|[\\s!.,?]+)(so)\\setwas([\\s!.,?]+)", "$1_$2_etwas_$3");
+		str = RegexUtils.ireplace(str, "(^|[\\s!.,?]+)(so)was([\\s!.,?]+)", "$1_$2_etwas_$3");
 
 		// TODO!!!
 
@@ -376,90 +319,55 @@ public class GermanParser extends Parser {
 		// str = RegexUtils.ireplace(str, "mein name", "mein_name");
 		// str = RegexUtils.ireplace(str, "dein name", "dein_name");
 
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?januar(\\s|$)",
-				"$1$2.01.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?jaenner(\\s|$)",
-				"$1$2.01.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?februar(\\s|$)",
-				"$1$2.02.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?maerz(\\s|$)",
-				"$1$2.03.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?april(\\s|$)",
-				"$1$2.04.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?mai(\\s|$)",
-				"$1$2.05.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?juni(\\s|$)",
-				"$1$2.06.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?juli(\\s|$)",
-				"$1$2.07.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?august(\\s|$)",
-				"$1$2.08.$4");
-		str = RegexUtils.ireplace(str,
-				"(^|\\s)(\\d+?)\\.\\s*?september(\\s|$)", "$1$2.09.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?oktober(\\s|$)",
-				"$1$2.10.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?november(\\s|$)",
-				"$1$2.11.$4");
-		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?dezember(\\s|$)",
-				"$1$2.12.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?januar(\\s|$)", "$1$2.01.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?jaenner(\\s|$)", "$1$2.01.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?februar(\\s|$)", "$1$2.02.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?maerz(\\s|$)", "$1$2.03.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?april(\\s|$)", "$1$2.04.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?mai(\\s|$)", "$1$2.05.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?juni(\\s|$)", "$1$2.06.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?juli(\\s|$)", "$1$2.07.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?august(\\s|$)", "$1$2.08.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?september(\\s|$)", "$1$2.09.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?oktober(\\s|$)", "$1$2.10.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?november(\\s|$)", "$1$2.11.$4");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.\\s*?dezember(\\s|$)", "$1$2.12.$4");
 
-		str = RegexUtils.ireplace(str,
-				"(^|\\s)(\\d)\\.(\\d+?)\\.(\\d+?)(\\s|$)",
-				"$1 0$2.$3.$4$5");
-		str = RegexUtils
-				.ireplace(str, "(^|\\s)(\\d+?)\\.(\\d)\\.(\\d+?)(\\s|$)",
-						"$1$2.0$3.$4$5");
-		str = RegexUtils.ireplace(str,
-				"(^|\\s)(\\d+?)\\.(\\d+?)\\.(\\d\\d)(\\s|$)",
-				"$1$2.$3.19$4$5");
-		str = RegexUtils.replace(str,
-				"(^|\\s)(\\d+?)\\.(\\d+?)\\.(\\d+?)(\\s|$)", "$2.$3.$4$5");
-		str = RegexUtils.replace(str, "(^|\\s)(\\d+?)\\.(\\d+?)\\.?(\\s|$)",
-				"$2.$3.0000$5");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d)\\.(\\d+?)\\.(\\d+?)(\\s|$)", "$1 0$2.$3.$4$5");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.(\\d)\\.(\\d+?)(\\s|$)", "$1$2.0$3.$4$5");
+		str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?)\\.(\\d+?)\\.(\\d\\d)(\\s|$)", "$1$2.$3.19$4$5");
+		str = RegexUtils.replace(str, "(^|\\s)(\\d+?)\\.(\\d+?)\\.(\\d+?)(\\s|$)", "$2.$3.$4$5");
+		str = RegexUtils.replace(str, "(^|\\s)(\\d+?)\\.(\\d+?)\\.?(\\s|$)", "$2.$3.0000$5");
 
 		str = StringUtils.trim(str);
 
-		str = RegexUtils.ireplace(str, "(^|\\s)sein\\s([A-Z])",
-				"$1sein{{{art}}} $2");
+		str = RegexUtils.ireplace(str, "(^|\\s)sein\\s([A-Z])", "$1sein{{{art}}} $2");
 
-		str = RegexUtils.ireplace(str, "\\s([mds])eines\\s(.*?[a-z])s(\\s|$)",
-				" von $1einem $2$3");
+		str = RegexUtils.ireplace(str, "\\s([mds])eines\\s(.*?[a-z])s(\\s|$)", " von $1einem $2$3");
 		str = RegexUtils.ireplace(str, "\\s([mds])eines\\s", " von $1einem ");
 		str = RegexUtils.ireplace(str, "\\s([mds])eines\\s", " von $1einem ");
 		str = RegexUtils.ireplace(str, "\\s([mds])einer\\s", " von $1einer ");
-		str = RegexUtils.ireplace(str,
-				"\\s(aus|von|in|an)\\svon\\s([mds])eine([rs])\\s",
-				" $1 $2eine$3 ");
+		str = RegexUtils.ireplace(str, "\\s(aus|von|in|an)\\svon\\s([mds])eine([rs])\\s", " $1 $2eine$3 ");
 
-		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sder\\s([A-Z])",
-				"$1$2 von der _$3_");
-		str = RegexUtils
-				.replace(
-						str,
-						"(\\s)([A-Z][a-z]*?)\\sdes\\s((?:[a-z]+?\\s)*[A-Z][a-z]*?)s([^a-zA-Z])",
-						"$1$2 von dem _$3_$4");
-		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sdes\\s([A-Z])",
-				"$1$2 von dem _$3_");
-
-		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sjeder\\s([A-Z])",
-				"$1$2 von jeder _$3_");
+		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sder\\s([A-Z])", "$1$2 von der _$3_");
 		str = RegexUtils.replace(str,
-				"(\\s)([A-Z][a-z]*?)\\sjedes\\s([A-Z][a-z]*?)s([^a-zA-Z])",
+				"(\\s)([A-Z][a-z]*?)\\sdes\\s((?:[a-z]+?\\s)*[A-Z][a-z]*?)s([^a-zA-Z])",
+				"$1$2 von dem _$3_$4");
+		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sdes\\s([A-Z])", "$1$2 von dem _$3_");
+
+		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sjeder\\s([A-Z])", "$1$2 von jeder _$3_");
+		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sjedes\\s([A-Z][a-z]*?)s([^a-zA-Z])",
 				"$1$2 von jedem _$3_$4");
-		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sjedes\\s([A-Z])",
-				"$1$2 von jedem _$3_");
+		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\sjedes\\s([A-Z])", "$1$2 von jedem _$3_");
 
-		str = RegexUtils.replace(str,
-				"(\\s)([A-Z][a-z]*?)\\s(mehrer|viel|wenig|einig)er\\s([A-Z])",
+		str = RegexUtils.replace(str, "(\\s)([A-Z][a-z]*?)\\s(mehrer|viel|wenig|einig)er\\s([A-Z])",
 				"$1$2 von $3en $4");
 
 		if (RegexUtils.find(str, "(^|\\s)(.+?)\\s(den|dem|der|des)\\s([A-Z])")) {
-			if ((m = RegexUtils.match(str.toLowerCase(),
-					"(^|\\s)(laut|nach)\\s(den|dem|der|des)\\s")) != null) {
+			if ((m = RegexUtils.match(str.toLowerCase(), "(^|\\s)(laut|nach)\\s(den|dem|der|des)\\s")) != null) {
 				final String preposition = m.get(1);
-				str = RegexUtils.ireplace(str,
-						"(^|\\s)(laut|nach)\\s(den|dem|der|des)\\s", "$1_"
-								+ preposition + "_ $3 ");
+				str = RegexUtils.ireplace(str, "(^|\\s)(laut|nach)\\s(den|dem|der|des)\\s", "$1_"
+						+ preposition + "_ $3 ");
 			}
 		}
 
@@ -486,9 +394,7 @@ public class GermanParser extends Parser {
 				str = subject + " is-property " + prop + " ?";
 			}
 		} else {
-			if ((m = RegexUtils
-					.match(str,
-							"^(.*?) hat (?:der|die|das)\\s([^A-Z]*?[A-Z][^\\s]+?)\\s(.*?)$")) != null) {
+			if ((m = RegexUtils.match(str, "^(.*?) hat (?:der|die|das)\\s([^A-Z]*?[A-Z][^\\s]+?)\\s(.*?)$")) != null) {
 				final String subject = m.get(0);
 				String prop = m.get(1);
 				String value = m.get(2);
@@ -503,26 +409,18 @@ public class GermanParser extends Parser {
 			 * if (RegexUtils.find(m, str, "^(.*?) ist ([a-z]+?)\\s*?$")) {
 			 * const string& subject = m.get(0); const string& prop = ""; string
 			 * value = m.get(1);
-			 * 
-			 * //////////////////////////////////////////////////////////////////
-			 * // TODO //set new flag contains_verb to contains_part_of_speech
-			 * with var value, var lang, var path //if (flag contains_verb) { //
-			 * value = "" //}
-			 * 
-			 * if (value.size() > 0) { trim(value); regex_replace(value, "\\s+",
-			 * " ");
-			 * 
-			 * set new array possible_props to find_property_by_value with var
-			 * value, var lang, var path foreach (new var _prop in array
-			 * possible_props) { print "prossible property foreach (value: "
-			 * concat var _prop concat " = " concat var value concat new line
-			 * prop = var _prop }
-			 * 
+			 * ////////////////////////////////////////////////
+			 * ////////////////// // TODO //set new flag contains_verb to
+			 * contains_part_of_speech with var value, var lang, var path //if
+			 * (flag contains_verb) { // value = "" //} if (value.size() > 0) {
+			 * trim(value); regex_replace(value, "\\s+", " "); set new array
+			 * possible_props to find_property_by_value with var value, var
+			 * lang, var path foreach (new var _prop in array possible_props) {
+			 * print "prossible property foreach (value: " concat var _prop
+			 * concat " = " concat var value concat new line prop = var _prop }
 			 * if (var prop) { prop = toName with var prop value = toName with
-			 * var value
-			 * 
-			 * string expr = var prop concat " _:_ " concat var value str =
-			 * "var subject is-property var expr" } } }
+			 * var value string expr = var prop concat " _:_ " concat var value
+			 * str = "var subject is-property var expr" } } }
 			 */
 		}
 
@@ -555,8 +453,7 @@ public class GermanParser extends Parser {
 
 				str = a + " is-own " + b + " " + adverbs;
 			}
-			if ((m = RegexUtils.imatch(str,
-					"^(.+?)\\s+?(beinhaltet)\\s+?(.+?)$")) != null) {
+			if ((m = RegexUtils.imatch(str, "^(.+?)\\s+?(beinhaltet)\\s+?(.+?)$")) != null) {
 				String a = m.get(2);
 				String b = m.get(0);
 				Mutable<String> adverbs = new Mutable<String>("");
@@ -587,17 +484,15 @@ public class GermanParser extends Parser {
 			 * and flag is_question is false) { String a = m.get(0); String b =
 			 * m.get(2); Mutable<String> adverbs = new Mutable<String>("");
 			 * removeAdverbs(a, adverbs); removeAdverbs(b, adverbs);
-			 * 
-			 * //////////////////////////////////////////////////////////////////
-			 * // TODO set new flag contains_verb to contains_part_of_speech
-			 * with var b, var lang, var path if (flag contains_verb is false) {
-			 * a = toName with var a b = toName with var b
-			 * 
-			 * if (RegexUtils.find(a not, "\\(a\\)") and RegexUtils.find(b,
-			 * "\\(a\\)") and RegexUtils.find(input not, "[=]")) { str = var a
-			 * concat " is-a " concat var b concat " " concat var adverbs } else
-			 * { str = var a concat " = " concat var b concat " " concat var
-			 * adverbs } }}
+			 * ////////////
+			 * ////////////////////////////////////////////////////// // TODO
+			 * set new flag contains_verb to contains_part_of_speech with var b,
+			 * var lang, var path if (flag contains_verb is false) { a = toName
+			 * with var a b = toName with var b if (RegexUtils.find(a not,
+			 * "\\(a\\)") and RegexUtils.find(b, "\\(a\\)") and
+			 * RegexUtils.find(input not, "[=]")) { str = var a concat " is-a "
+			 * concat var b concat " " concat var adverbs } else { str = var a
+			 * concat " = " concat var b concat " " concat var adverbs } }}
 			 */
 
 			/*
@@ -615,18 +510,13 @@ public class GermanParser extends Parser {
 		 * /(ein.?.?)\s(<[A-Z]><[a-z]>+?)(\s|$)/ do set new var word to lc with
 		 * $1 set new array _collective_nouns to global array collective_nouns
 		 * push into array _collective_nouns, var word print "collective noun: "
-		 * concat var word concat new line
-		 * 
-		 * do regex with var __input: /(ein.?.?)\s(var word)/ -> "" :global:i
-		 * done
+		 * concat var word concat new line do regex with var __input:
+		 * /(ein.?.?)\s(var word)/ -> "" :global:i done
 		 */
 
-		str = RegexUtils.ireplace(str, "(^|\\s)du hast (.*?) aus ",
-				"$1du bekommst $2 aus ");
-		str = RegexUtils.ireplace(str, "(^|\\s)woher hast du ",
-				"$1woher bekommst du ");
-		str = RegexUtils.ireplace(str, "(^|\\s)woher hast du ",
-				"$1woher bekommst du ");
+		str = RegexUtils.ireplace(str, "(^|\\s)du hast (.*?) aus ", "$1du bekommst $2 aus ");
+		str = RegexUtils.ireplace(str, "(^|\\s)woher hast du ", "$1woher bekommst du ");
+		str = RegexUtils.ireplace(str, "(^|\\s)woher hast du ", "$1woher bekommst du ");
 
 		str = RegexUtils.ireplace(str, " wehnig ", " wenig ");
 		str = RegexUtils.ireplace(str, "niss(\\s|$)", "nis$1");
@@ -640,12 +530,10 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, " wirst du genannt", " heisst du ");
 		str = RegexUtils.ireplace(str, " wird (.*?) genannt", " $1 ist ");
 
-		str = RegexUtils.ireplace(str, "^das\\s([a-z]+?)\\s(ich|du)",
-				"$2 $1 das ");
+		str = RegexUtils.ireplace(str, "^das\\s([a-z]+?)\\s(ich|du)", "$2 $1 das ");
 
 		str = RegexUtils.ireplace(str, " ein jeder ", " _jeder_ ");
-		str = RegexUtils.ireplace(str, " sinn des lebens",
-				" _sinn_des_lebens_ ");
+		str = RegexUtils.ireplace(str, " sinn des lebens", " _sinn_des_lebens_ ");
 
 		str = RegexUtils.ireplace(str, " du jetzt ", " du ");
 		str = RegexUtils.ireplace(str, " ich jetzt ", " ich ");
@@ -659,8 +547,7 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, " mich befinde ", " liege ");
 		str = RegexUtils.ireplace(str, " dich befindest ", " liegst ");
 
-		str = RegexUtils.ireplace(str, "(^|\\s)da([r]?)(durch|auf|fuer|an) ",
-				" $3 _das_ ");
+		str = RegexUtils.ireplace(str, "(^|\\s)da([r]?)(durch|auf|fuer|an) ", " $3 _das_ ");
 
 		str = RegexUtils.ireplace(str, "([0-9])([a-z]|[A-Z])", "$1 $2");
 		str = RegexUtils.ireplace(str, "([a-z]|[A-Z])([0-9])", "$1 $2");
@@ -670,8 +557,7 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "\\smacht man mit\\s", " ist ");
 		str = RegexUtils.ireplace(str, "\\sist mit\\s", " ist-mit ");
 
-		str = RegexUtils.ireplace(str, "Was fuer (.*?) kennst du.*",
-				"was ist $1 ?");
+		str = RegexUtils.ireplace(str, "Was fuer (.*?) kennst du.*", "was ist $1 ?");
 
 		str = RegexUtils.ireplace(str, "dem Begriff der ", "der ");
 		str = RegexUtils.ireplace(str, "den Begriff der ", "die ");
@@ -710,17 +596,13 @@ public class GermanParser extends Parser {
 						str,
 						"([-_a-zA-Z]+?\\s+?[-_a-zA-Z]+?)\\s*?[,]\\s*?([-_a-zA-Z]+?)\\s*?(und|oder)\\s*?([-_a-zA-Z]+?)",
 						"$1 $3 $2 $3 $4");
-		str = RegexUtils
-				.ireplace(
-						str,
-						"([-_a-zA-Z]+?)\\s*?[,]\\s*?([-_a-zA-Z]+?)\\s*?(und|oder)\\s*?([-_a-zA-Z]+?)",
-						"$1 $3 $2 $3 $4");
+		str = RegexUtils.ireplace(str,
+				"([-_a-zA-Z]+?)\\s*?[,]\\s*?([-_a-zA-Z]+?)\\s*?(und|oder)\\s*?([-_a-zA-Z]+?)",
+				"$1 $3 $2 $3 $4");
 
-		str = RegexUtils
-				.ireplace(str, "^was\\sgeht<ws>[?]", "wie geht es dir?");
+		str = RegexUtils.ireplace(str, "^was\\sgeht<ws>[?]", "wie geht es dir?");
 		str = RegexUtils.ireplace(str, "^was\\sgeht$", "wie geht es dir?");
-		str = RegexUtils.ireplace(str, "^was\\sgeht\\sab<ws>[?]",
-				"wie geht es dir?");
+		str = RegexUtils.ireplace(str, "^was\\sgeht\\sab<ws>[?]", "wie geht es dir?");
 		str = RegexUtils.ireplace(str, "^was\\sgeht\\sab$", "wie geht es dir?");
 
 		str = RegexUtils.ireplace(str, "^wie\\slang\\s", "wie ");
@@ -746,99 +628,60 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "stell mir eine frage", "was ist ");
 		str = RegexUtils.ireplace(str, "stelle eine frage", "was ist ");
 		str = RegexUtils.ireplace(str, "stell eine frage", "was ist ");
-		str = RegexUtils.ireplace(str, "Was kannst du mir ueber (.*?) sagen",
-				"was ist $1");
-		str = RegexUtils.ireplace(str, "Was weisst du ueber (.*?)$",
-				"was ist $1");
-		str = RegexUtils.ireplace(str,
-				"Was kannst du mir ueber (.*?) erzaehlen", "was ist $1");
-		str = RegexUtils.ireplace(str, "Was kannst du ueber (.*?) sagen",
-				"was ist $1");
+		str = RegexUtils.ireplace(str, "Was kannst du mir ueber (.*?) sagen", "was ist $1");
+		str = RegexUtils.ireplace(str, "Was weisst du ueber (.*?)$", "was ist $1");
+		str = RegexUtils.ireplace(str, "Was kannst du mir ueber (.*?) erzaehlen", "was ist $1");
+		str = RegexUtils.ireplace(str, "Was kannst du ueber (.*?) sagen", "was ist $1");
 		str = RegexUtils.ireplace(str, "Was weisst du alles", "was ist");
 
 		str = RegexUtils.ireplace(str, "frag mich was", "was ist");
 		str = RegexUtils.ireplace(str, "frag mich etwas", "was ist");
 		str = RegexUtils.ireplace(str, "frag mich<ws>?[,]", "");
-		str = RegexUtils.ireplace(str, "was ist ([dsmk]?ein)([a-zA-Z]+?)\\s",
-				"was ist $1$2 ");
+		str = RegexUtils.ireplace(str, "was ist ([dsmk]?ein)([a-zA-Z]+?)\\s", "was ist $1$2 ");
 		str = RegexUtils.ireplace(str, "was denkst du ueber ", "was ist ");
 		str = RegexUtils.ireplace(str, "wie denkst du ueber ", "was ist ");
 		str = RegexUtils.ireplace(str, "was haeltst du von ", "was ist ");
 		str = RegexUtils.ireplace(str, "was haelst du von ", "was ist ");
-		str = RegexUtils.ireplace(str, "erzaehl mir was(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str,
-				"erzaehl mir etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzaehle mir was(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str,
-				"erzaehle mir etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
-		str = RegexUtils.ireplace(str,
-				"erzaehl mir bitte was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
-		str = RegexUtils
-				.ireplace(str, "erzaehl mir bitte etwas(?:([\\s!?.]?.*?$)|$)",
-						"was ist $1 ?");
-		str = RegexUtils.ireplace(str,
-				"erzaehle mir bitte was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
-		str = RegexUtils.ireplace(str,
-				"erzaehle mir bitte etwas(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzael mir was(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzael mir etwas(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzaele mir was(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str,
-				"erzaele mir etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzaehl was(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzaehl etwas(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzaehle was(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzaehle etwas(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzael was(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzael etwas(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzaele was(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
-		str = RegexUtils.ireplace(str, "erzaele etwas(?:([\\s!?.]?.*?$)|$)",
-				"was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehl mir was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehl mir etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehle mir was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehle mir etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehl mir bitte was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehl mir bitte etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehle mir bitte was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehle mir bitte etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzael mir was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzael mir etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaele mir was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaele mir etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehl was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehl etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehle was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaehle etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzael was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzael etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaele was(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
+		str = RegexUtils.ireplace(str, "erzaele etwas(?:([\\s!?.]?.*?$)|$)", "was ist $1 ?");
 		str = RegexUtils.ireplace(str, "Erzaehlst du .*", "was ist?");
 		str = RegexUtils.ireplace(str, "was ist\\s+?ueber ", "was ist ");
 
 		if ((m = RegexUtils.imatch(str, "(was heisst) ([a-z])")) != null) {
 			final String temp = StringUtils.ucfirst(m.get(1));
-			str = RegexUtils.ireplace(str, "(was heisst) ([a-z])", "$1 "
-					+ temp);
+			str = RegexUtils.ireplace(str, "(was heisst) ([a-z])", "$1 " + temp);
 		}
 
 		str = RegexUtils.ireplace(str, "(was\\sheisst\\s)", "was heisst ");
-		str = RegexUtils
-				.replace(
-						str,
-						"(was\\sheisst\\s)([A-Z][a-z]+?\\s[a-z]+?)((?:\\s.?.?.?.?.?)|$)",
-						"$1 _$2_$3");
+		str = RegexUtils.replace(str, "(was\\sheisst\\s)([A-Z][a-z]+?\\s[a-z]+?)((?:\\s.?.?.?.?.?)|$)",
+				"$1 _$2_$3");
 
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(ich weiss nicht)\\s+?(?:(global var questionwords_reg_ex) (.*?))($|[.,])",
-						"_$2_ _no-question_ $3 , weiss ich nicht$4");
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(du weisst nicht)\\s+?(?:(global var questionwords_reg_ex) (.*?))($|[.,])",
-						"_$2_ _no-question_ $3 , weisst du nicht$4");
 		str = RegexUtils.ireplace(str,
-				"(weiss ich)\\s+?(global var questionwords_reg_ex)",
-				"$1 , $2");
+				"(ich weiss nicht)\\s+?(?:(global var questionwords_reg_ex) (.*?))($|[.,])",
+				"_$2_ _no-question_ $3 , weiss ich nicht$4");
 		str = RegexUtils.ireplace(str,
-				"(weisst du)\\s+?(global var questionwords_reg_ex)",
-				"$1 , $2");
+				"(du weisst nicht)\\s+?(?:(global var questionwords_reg_ex) (.*?))($|[.,])",
+				"_$2_ _no-question_ $3 , weisst du nicht$4");
+		str = RegexUtils.ireplace(str, "(weiss ich)\\s+?(global var questionwords_reg_ex)", "$1 , $2");
+		str = RegexUtils.ireplace(str, "(weisst du)\\s+?(global var questionwords_reg_ex)", "$1 , $2");
 
 		if (!str.contains("_no-question_")
 				&& RegexUtils
@@ -850,11 +693,8 @@ public class GermanParser extends Parser {
 			str += " ?";
 		}
 
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(was (?:machst|tust) du).*?(heute|jetzt|momentan|gerade|grade).*?$",
-						"$1 ?");
+		str = RegexUtils.ireplace(str, "(was (?:machst|tust) du).*?(heute|jetzt|momentan|gerade|grade).*?$",
+				"$1 ?");
 		str = RegexUtils.ireplace(str, "(das weiss ich,)$", "$1 ?");
 		str = RegexUtils.ireplace(str, "(das weiss ich)$", "$1 ?");
 		str = RegexUtils.ireplace(str, "sag mir ", "");
@@ -869,31 +709,21 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "(^|\\s)was fuer einem\\s", " welchem ");
 		str = RegexUtils.ireplace(str, "(^|\\s)was fuer ein\\s", " welches ");
 		str = RegexUtils.ireplace(str, "(^|\\s)was fuer\\s", " welch ");
-		str = RegexUtils.ireplace(str, "was (.+?) fuer eine\\s(.+)",
-				"welche $2 $1");
-		str = RegexUtils.ireplace(str, "was (.+?) fuer einen\\s(.+)",
-				"welchen $2 $1");
-		str = RegexUtils.ireplace(str, "was (.+?) fuer einem\\s(.+)",
-				"welchem $2 $1");
-		str = RegexUtils.ireplace(str, "was (.+?) fuer ein\\s(.+)",
-				"welches $2 $1");
-		str = RegexUtils
-				.ireplace(str, "was (.+?) fuer\\s(.+)", "welch $2 $1");
+		str = RegexUtils.ireplace(str, "was (.+?) fuer eine\\s(.+)", "welche $2 $1");
+		str = RegexUtils.ireplace(str, "was (.+?) fuer einen\\s(.+)", "welchen $2 $1");
+		str = RegexUtils.ireplace(str, "was (.+?) fuer einem\\s(.+)", "welchem $2 $1");
+		str = RegexUtils.ireplace(str, "was (.+?) fuer ein\\s(.+)", "welches $2 $1");
+		str = RegexUtils.ireplace(str, "was (.+?) fuer\\s(.+)", "welch $2 $1");
 		str = RegexUtils.ireplace(str, "can you tell me whether\\s", "");
-		str = RegexUtils.ireplace(str,
-				"can you tell me (who|how|where|when|if|what)", "$1 ");
+		str = RegexUtils.ireplace(str, "can you tell me (who|how|where|when|if|what)", "$1 ");
 		str = RegexUtils.ireplace(str, "can you tell me\\s", "what is ");
 
-		str = RegexUtils.ireplace(str, "^sobald\\s*?(.*),\\s*?(.*)$",
-				"$1, wenn $2");
-		str = RegexUtils.ireplace(str, "^(.*),\\s*?sobald\\s*?(.*)$",
-				"$2, wenn $1");
-		str = RegexUtils.ireplace(str, "^wenn\\s*?(.*),\\s*?(.*)$",
-				"$2, wenn $1");
+		str = RegexUtils.ireplace(str, "^sobald\\s*?(.*),\\s*?(.*)$", "$1, wenn $2");
+		str = RegexUtils.ireplace(str, "^(.*),\\s*?sobald\\s*?(.*)$", "$2, wenn $1");
+		str = RegexUtils.ireplace(str, "^wenn\\s*?(.*),\\s*?(.*)$", "$2, wenn $1");
 
 		if (!RegexUtils.find(str, " aus.?.?.?.?$")) {
-			str = RegexUtils.ireplace(str, "kennst du ein(e|en) ",
-					"what-nowiki ist ");
+			str = RegexUtils.ireplace(str, "kennst du ein(e|en) ", "what-nowiki ist ");
 			str = RegexUtils.ireplace(str, "kennst du ", "was ist ");
 		}
 
@@ -901,14 +731,11 @@ public class GermanParser extends Parser {
 
 		str = RegexUtils.ireplace(str, "was macht ", "was ");
 
-		str = RegexUtils.ireplace(str, "kannst du (.*?isch)($|(?:.?.?.?.?$))",
-				"kannst du $1 sprechen $2");
-		str = RegexUtils.ireplace(str, "kann ich (.*?isch)($|(?:.?.?.?.?$))",
-				"kann ich $1 sprechen $2");
+		str = RegexUtils.ireplace(str, "kannst du (.*?isch)($|(?:.?.?.?.?$))", "kannst du $1 sprechen $2");
+		str = RegexUtils.ireplace(str, "kann ich (.*?isch)($|(?:.?.?.?.?$))", "kann ich $1 sprechen $2");
 
 		str = RegexUtils.ireplace(str, "(^|\\s)?wie wird ", "$1 wie ist ");
-		str = RegexUtils.ireplace(str, "Wie ist das Wetter heute",
-				"Wie ist das Wetter ");
+		str = RegexUtils.ireplace(str, "Wie ist das Wetter heute", "Wie ist das Wetter ");
 		str = RegexUtils.ireplace(str, "dir heute", "dir ");
 		if (str.length() > 10) {
 			str = RegexUtils.ireplace(str, " ja ", " ");
@@ -921,15 +748,11 @@ public class GermanParser extends Parser {
 
 		if ((m = RegexUtils.match(str, "\\s(|d|m|k)ein\\s([a-z]+?en)(\\s|$)")) != null) {
 			final String noun = StringUtils.ucfirst(m.get(1));
-			str = RegexUtils.replace(str,
-					"\\s(|d|m|k)ein\\s([a-z]+?en)(\\s|$)", " $1ein " + noun
-							+ "$3");
+			str = RegexUtils.replace(str, "\\s(|d|m|k)ein\\s([a-z]+?en)(\\s|$)", " $1ein " + noun + "$3");
 		}
 
 		if (RegexUtils.find(str, "(([?])|global var questionwords_reg_ex)")) {
-			str = RegexUtils.ireplace(str,
-					" (seinen|ihren|seiner|ihrer|seines|ihres|seine|ihre) ",
-					" das ");
+			str = RegexUtils.ireplace(str, " (seinen|ihren|seiner|ihrer|seines|ihres|seine|ihre) ", " das ");
 		}
 
 		str = RegexUtils.ireplace(str, "Weisst du etwas ueber ", "was ist ");
@@ -964,24 +787,16 @@ public class GermanParser extends Parser {
 
 		str = RegexUtils.ireplace(str, "geht es so[?\\s]", "geht es$1");
 		str = RegexUtils.ireplace(str, "wie geht es [?]", "wie geht es dir ?");
-		str = RegexUtils
-				.ireplace(str, "wie geht es\\s*?$", "wie geht es dir ?");
-		str = RegexUtils
-				.ireplace(str, "wie geht es<ws>?$", "wie geht es dir ?");
+		str = RegexUtils.ireplace(str, "wie geht es\\s*?$", "wie geht es dir ?");
+		str = RegexUtils.ireplace(str, "wie geht es<ws>?$", "wie geht es dir ?");
 
 		// cout << "parser2012: step 4: " << str << endl;
 
 		for (int j = 1; j < 20; ++j) {
-			str = RegexUtils
-					.ireplace(
-							str,
-							"([a-zA-Z0-9_]+)<ws>[,]<ws>([a-zA-Z0-9_]+)\\s+(und|oder|or|and)<ws>",
-							"$1 $3 $2 $3 ");
-			str = RegexUtils
-					.ireplace(
-							str,
-							"<ws>[,]<ws>([a-zA-Z0-9_]+\\s+[a-zA-Z0-9_]+)\\s+(und|oder|or|and)<ws>",
-							" $2 $1 $2 ");
+			str = RegexUtils.ireplace(str,
+					"([a-zA-Z0-9_]+)<ws>[,]<ws>([a-zA-Z0-9_]+)\\s+(und|oder|or|and)<ws>", "$1 $3 $2 $3 ");
+			str = RegexUtils.ireplace(str,
+					"<ws>[,]<ws>([a-zA-Z0-9_]+\\s+[a-zA-Z0-9_]+)\\s+(und|oder|or|and)<ws>", " $2 $1 $2 ");
 		}
 
 		// str = RegexUtils.ireplace(str, "wie heisst\\sdu", "wer bin ich");
@@ -993,8 +808,7 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "wer\\sbist\\sdu", "was ist dein name");
 		str = RegexUtils.ireplace(str, "wer\\sdu\\sbist", "wer ist dein name");
 
-		str = RegexUtils.replace(str, "(ist) ([A-Z][a-z]+?) (ein)",
-				"$1 _$2_ $3");
+		str = RegexUtils.replace(str, "(ist) ([A-Z][a-z]+?) (ein)", "$1 _$2_ $3");
 
 		str = RegexUtils.ireplace(str, ", die du kennst\\s", " ");
 		str = RegexUtils.ireplace(str, "die du kennst\\s", " ");
@@ -1013,93 +827,55 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "nenne mir (.*)", "zaehle $1 auf");
 		str = RegexUtils.ireplace(str, "nenne (.*)", "zaehle $1 auf");
 
-		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*)en auf.*",
-				"ENUMALL ein $1e");
-		str = RegexUtils.ireplace(str, "Zaehle mir die (.*)en auf.*",
-				"ENUMALL eine $1e");
-		str = RegexUtils.ireplace(str, "Zaehle mir den (.*)en auf.*",
-				"ENUMALL ein $1e");
-		str = RegexUtils.ireplace(str, "Zaehle mir das (.*)en auf.*",
-				"ENUMALL ein $1e");
-		str = RegexUtils.ireplace(str, "Zaehle alle (.*)en auf.*",
-				"ENUMALL ein $1e");
-		str = RegexUtils.ireplace(str, "Zaehle die (.*)en auf.*",
-				"ENUMALL eine $1e");
-		str = RegexUtils.ireplace(str, "Zaehle den (.*)en auf.*",
-				"ENUMALL ein $1e");
-		str = RegexUtils.ireplace(str, "Zaehle das (.*)en auf.*",
-				"ENUMALL ein $1e");
+		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*)en auf.*", "ENUMALL ein $1e");
+		str = RegexUtils.ireplace(str, "Zaehle mir die (.*)en auf.*", "ENUMALL eine $1e");
+		str = RegexUtils.ireplace(str, "Zaehle mir den (.*)en auf.*", "ENUMALL ein $1e");
+		str = RegexUtils.ireplace(str, "Zaehle mir das (.*)en auf.*", "ENUMALL ein $1e");
+		str = RegexUtils.ireplace(str, "Zaehle alle (.*)en auf.*", "ENUMALL ein $1e");
+		str = RegexUtils.ireplace(str, "Zaehle die (.*)en auf.*", "ENUMALL eine $1e");
+		str = RegexUtils.ireplace(str, "Zaehle den (.*)en auf.*", "ENUMALL ein $1e");
+		str = RegexUtils.ireplace(str, "Zaehle das (.*)en auf.*", "ENUMALL ein $1e");
 
-		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*)n auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir die (.*)n auf.*",
-				"ENUMALL eine $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir den (.*)n auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir das (.*)n auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle alle (.*)n auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle die (.*)n auf.*",
-				"ENUMALL eine $1");
-		str = RegexUtils.ireplace(str, "Zaehle den (.*)n auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle das (.*)n auf.*",
-				"ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*)n auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir die (.*)n auf.*", "ENUMALL eine $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir den (.*)n auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir das (.*)n auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle alle (.*)n auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle die (.*)n auf.*", "ENUMALL eine $1");
+		str = RegexUtils.ireplace(str, "Zaehle den (.*)n auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle das (.*)n auf.*", "ENUMALL ein $1");
 
-		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*)s auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir die (.*)s auf.*",
-				"ENUMALL eine $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir den (.*)s auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir das (.*)s auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle alle (.*)s auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle die (.*)s auf.*",
-				"ENUMALL eine $1");
-		str = RegexUtils.ireplace(str, "Zaehle den (.*)s auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle das (.*)s auf.*",
-				"ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*)s auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir die (.*)s auf.*", "ENUMALL eine $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir den (.*)s auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir das (.*)s auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle alle (.*)s auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle die (.*)s auf.*", "ENUMALL eine $1");
+		str = RegexUtils.ireplace(str, "Zaehle den (.*)s auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle das (.*)s auf.*", "ENUMALL ein $1");
 
-		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*[rmndtp])e auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle alle (.*[rmndtp]) auf.*",
-				"ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*[rmndtp])e auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle alle (.*[rmndtp]) auf.*", "ENUMALL ein $1");
 
-		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*) auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir die (.*) auf.*",
-				"ENUMALL eine $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir den (.*) auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle mir das (.*) auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle alle (.*) auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle die (.*) auf.*",
-				"ENUMALL eine $1");
-		str = RegexUtils.ireplace(str, "Zaehle den (.*) auf.*",
-				"ENUMALL ein $1");
-		str = RegexUtils.ireplace(str, "Zaehle das (.*) auf.*",
-				"ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir alle (.*) auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir die (.*) auf.*", "ENUMALL eine $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir den (.*) auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle mir das (.*) auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle alle (.*) auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle die (.*) auf.*", "ENUMALL eine $1");
+		str = RegexUtils.ireplace(str, "Zaehle den (.*) auf.*", "ENUMALL ein $1");
+		str = RegexUtils.ireplace(str, "Zaehle das (.*) auf.*", "ENUMALL ein $1");
 
 		str = RegexUtils.ireplace(str, "Zaehle (.*) auf.*", "ENUMALL $1");
-		str = RegexUtils
-				.ireplace(str, "ENUMALL mir (.*?) auf.*", "ENUMALL $1");
+		str = RegexUtils.ireplace(str, "ENUMALL mir (.*?) auf.*", "ENUMALL $1");
 		str = RegexUtils.ireplace(str, "ENUMALL mir (.*)", "ENUMALL $1");
 
 		// cout << "parser2012: step 4.1: " << str << endl;
 
 		str = RegexUtils.ireplace(str, "http[:/]+", "http_");
 
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(^|\\s)(eigentlich|wirklich|doch|nun|wenigstens|schliesslich|denn)(\\s|$)",
-						"$1$3");
+		str = RegexUtils.ireplace(str,
+				"(^|\\s)(eigentlich|wirklich|doch|nun|wenigstens|schliesslich|denn)(\\s|$)", "$1$3");
 
 		str = RegexUtils.ireplace(str, " das verlangen ", " das _verlangen_ ");
 
@@ -1114,22 +890,14 @@ public class GermanParser extends Parser {
 		str = RegexUtils.replace(str, "opposite", " opposite ");
 		str = RegexUtils.ireplace(str, "wofuer steht ", "was ist ");
 		str = RegexUtils.ireplace(str, " schon mal ", " ");
-		str = RegexUtils.ireplace(str, "hast du schon mal von (.*?) gehoert",
-				"was ist $1");
-		str = RegexUtils.ireplace(str, "hast du schon von (.*?) gehoert",
-				"was ist $1");
-		str = RegexUtils.ireplace(str, "hast du von (.*?) gehoert",
-				"was ist $1");
-		str = RegexUtils.ireplace(str, "hast du mal von (.*?) gehoert",
-				"was ist $1");
-		str = RegexUtils.ireplace(str,
-				"hast du schon mal was von (.*?) gehoert", "was ist $1");
-		str = RegexUtils.ireplace(str, "hast du schon was von (.*?) gehoert",
-				"was ist $1");
-		str = RegexUtils.ireplace(str, "hast du was von (.*?) gehoert",
-				"was ist $1");
-		str = RegexUtils.ireplace(str, "hast du was mal von (.*?) gehoert",
-				"was ist $1");
+		str = RegexUtils.ireplace(str, "hast du schon mal von (.*?) gehoert", "was ist $1");
+		str = RegexUtils.ireplace(str, "hast du schon von (.*?) gehoert", "was ist $1");
+		str = RegexUtils.ireplace(str, "hast du von (.*?) gehoert", "was ist $1");
+		str = RegexUtils.ireplace(str, "hast du mal von (.*?) gehoert", "was ist $1");
+		str = RegexUtils.ireplace(str, "hast du schon mal was von (.*?) gehoert", "was ist $1");
+		str = RegexUtils.ireplace(str, "hast du schon was von (.*?) gehoert", "was ist $1");
+		str = RegexUtils.ireplace(str, "hast du was von (.*?) gehoert", "was ist $1");
+		str = RegexUtils.ireplace(str, "hast du was mal von (.*?) gehoert", "was ist $1");
 		str = RegexUtils.ireplace(str, "^(...*?) hast du ", "$1 du hast ");
 		str = RegexUtils.ireplace(str, "^(...*?) habe ich ", "$1 ich habe ");
 
@@ -1143,36 +911,24 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "^weisst du", "");
 
 		str = " " + str + " ";
-		str = RegexUtils.ireplace(str, "\\snoch\\s(nie|nicht)([\\s!.,?]+)",
-				" noch-$1$2");
+		str = RegexUtils.ireplace(str, "\\snoch\\s(nie|nicht)([\\s!.,?]+)", " noch-$1$2");
 		str = RegexUtils.ireplace(str, "\\snoch([\\s!.,?]+)", "$1");
-		str = RegexUtils.ireplace(str, "\\snoch[-](nie|nicht)([\\s!.,?]+)",
-				" noch $1$2");
-		str = RegexUtils.ireplace(str,
-				"(^|[\\s!.,?]+)(so)\\setwas([\\s!.,?]+)", "$1_$2_etwas_$3");
-		str = RegexUtils.ireplace(str, "(^|[\\s!.,?]+)(so)was([\\s!.,?]+)",
-				"$1_$2_etwas_$3");
+		str = RegexUtils.ireplace(str, "\\snoch[-](nie|nicht)([\\s!.,?]+)", " noch $1$2");
+		str = RegexUtils.ireplace(str, "(^|[\\s!.,?]+)(so)\\setwas([\\s!.,?]+)", "$1_$2_etwas_$3");
+		str = RegexUtils.ireplace(str, "(^|[\\s!.,?]+)(so)was([\\s!.,?]+)", "$1_$2_etwas_$3");
 
 		if (str.length() > 24 && str.contains("?")) {
 			str = RegexUtils.ireplace(str, "\\sgerne([\\s!.,?]+)", "$1");
 		}
 
-		str = RegexUtils
-				.ireplace(
-						str,
-						"\\s(kein|keine|keinen|keiner|keinem|nicht)\\skein(|e|en|er|em)\\s",
-						" kein$2 ");
-		str = RegexUtils.ireplace(str,
-				"\\s(kein|keine|keinen|keiner|keinem|nicht)\\snicht\\s",
-				" $1 ");
-		str = RegexUtils.ireplace(str,
-				"(^|\\s)?k(ein|eine|einen|einer|einem)\\s", "$1nicht $2 ");
+		str = RegexUtils.ireplace(str, "\\s(kein|keine|keinen|keiner|keinem|nicht)\\skein(|e|en|er|em)\\s",
+				" kein$2 ");
+		str = RegexUtils.ireplace(str, "\\s(kein|keine|keinen|keiner|keinem|nicht)\\snicht\\s", " $1 ");
+		str = RegexUtils.ireplace(str, "(^|\\s)?k(ein|eine|einen|einer|einem)\\s", "$1nicht $2 ");
 		str = RegexUtils.ireplace(str, "\\sim\\s", " in dem ");
 		str = RegexUtils.ireplace(str, "\\sbeim\\s", " bei dem ");
 		if (Languages.getLanguage().isCode("de")) {
-			str = RegexUtils.ireplace(str,
-					"\\sam\\s([a-zA-Z]*?)ten($|\\s|[,])",
-					" am_$1ten{{{adj}}} $2 ");
+			str = RegexUtils.ireplace(str, "\\sam\\s([a-zA-Z]*?)ten($|\\s|[,])", " am_$1ten{{{adj}}} $2 ");
 			str = RegexUtils.ireplace(str, "\\sam\\s", " an dem ");
 			str = RegexUtils.ireplace(str, "\\sins\\s", " in das ");
 			str = RegexUtils.ireplace(str, "^im\\s", " in dem ");
@@ -1180,27 +936,20 @@ public class GermanParser extends Parser {
 			str = RegexUtils.ireplace(str, "^ins\\s", " in das ");
 		}
 
-		if ((m = RegexUtils
-				.match(str,
-						"\\szu[mr]\\s+([a-zA-Z_]+)\\s+([a-zA-Z_]+)(<ws>?[,.?!]*?<ws>?)$")) != null) {
+		if ((m = RegexUtils.match(str, "\\szu[mr]\\s+([a-zA-Z_]+)\\s+([a-zA-Z_]+)(<ws>?[,.?!]*?<ws>?)$")) != null) {
 			final String _match = m.get(1);
 			if (_match.endsWith("t")) {
 
-				str = RegexUtils
-						.ireplace(
-								str,
-								"\\szu([mt])\\s+([a-zA-Z_]+)\\s+([a-zA-Z_]+)(<ws>?[,.?!]*?<ws>?)$",
-								" zu$1_\\l$2_\\l$3 $4");
+				str = RegexUtils.ireplace(str,
+						"\\szu([mt])\\s+([a-zA-Z_]+)\\s+([a-zA-Z_]+)(<ws>?[,.?!]*?<ws>?)$",
+						" zu$1_\\l$2_\\l$3 $4");
 			}
 		}
 
-		str = RegexUtils.ireplace(str,
-				"\\szu([mr])\\s+([a-zA-Z_]+)\\s+([A-Z_][a-zA-Z_]+)",
+		str = RegexUtils.ireplace(str, "\\szu([mr])\\s+([a-zA-Z_]+)\\s+([A-Z_][a-zA-Z_]+)",
 				" zu$1_\\l$2_\\l$3 ");
-		str = RegexUtils.ireplace(str, "\\szu([mr])\\s+([a-zA-Z_]+)",
-				" zu$1_\\l$2 ");
-		str = RegexUtils.ireplace(str, "^zu([mr])\\s+([a-zA-Z_]+)",
-				" zu$1_\\l$2 ");
+		str = RegexUtils.ireplace(str, "\\szu([mr])\\s+([a-zA-Z_]+)", " zu$1_\\l$2 ");
+		str = RegexUtils.ireplace(str, "^zu([mr])\\s+([a-zA-Z_]+)", " zu$1_\\l$2 ");
 		str = RegexUtils.ireplace(str, "[,]\\s+[,]", ",");
 		str = RegexUtils.ireplace(str, "^wozu\\s", "wie ");
 		str = RegexUtils.ireplace(str, "\\swozu\\s", " wie ");
@@ -1209,10 +958,8 @@ public class GermanParser extends Parser {
 
 		// cout << "parser2012: step 4.3: " << str << endl;
 
-		str = RegexUtils.ireplace(str, "(^|\\s)(ich|du|das) (weiss) ",
-				"$1$2 $3\\{\\{\\{v\\}\\}\\} ");
-		str = RegexUtils.ireplace(str, " (weiss) (ich|du|das) ",
-				" $1\\{\\{\\{v\\}\\}\\} $2 ");
+		str = RegexUtils.ireplace(str, "(^|\\s)(ich|du|das) (weiss) ", "$1$2 $3\\{\\{\\{v\\}\\}\\} ");
+		str = RegexUtils.ireplace(str, " (weiss) (ich|du|das) ", " $1\\{\\{\\{v\\}\\}\\} $2 ");
 
 		if (RegexUtils.find(str, " opposite ")) {
 			str = StringUtils.trim(str);
@@ -1223,8 +970,7 @@ public class GermanParser extends Parser {
 			str = "_" + opposites[0] + "_ opposite _" + opposites[1] + "_";
 		}
 
-		str = RegexUtils.replace(str, "\\szu\\s([a-z]+?)\\s([a-z]+?)(.?.?.?)$",
-				" $2 , _to_ $1 $3");
+		str = RegexUtils.replace(str, "\\szu\\s([a-z]+?)\\s([a-z]+?)(.?.?.?)$", " $2 , _to_ $1 $3");
 
 		{
 			str = StringUtils.replace(str, "KOMMA", ",");
@@ -1255,15 +1001,12 @@ public class GermanParser extends Parser {
 							}
 						}
 					}
-					LogUtils.d("found an other verb: "
-							+ (found_other_verb ? "true" : "false"));
+					LogUtils.d("found an other verb: " + (found_other_verb ? "true" : "false"));
 
 					if (found_other_verb) {
-						str = RegexUtils.replace(str, "\\szu\\s([a-z]+?en)\\s",
-								" , _to_ $1 ");
+						str = RegexUtils.replace(str, "\\szu\\s([a-z]+?en)\\s", " , _to_ $1 ");
 					} else {
-						str = RegexUtils.replace(str, "\\szu\\s([a-z]+?en)\\s",
-								" _to_ $1 ");
+						str = RegexUtils.replace(str, "\\szu\\s([a-z]+?en)\\s", " _to_ $1 ");
 					}
 				}
 			}
@@ -1272,8 +1015,7 @@ public class GermanParser extends Parser {
 		if (RegexUtils.find(str, "ist es.*?\\szu\\s")) {
 			str = RegexUtils.ireplace(str, " ist es ", " ist ");
 		}
-		if (RegexUtils.find(str,
-				"ist\\ses(\\s[A-Za-z]+?)?(\\s[A-Za-z]+?)?\\s(das|der|die)\\s")) {
+		if (RegexUtils.find(str, "ist\\ses(\\s[A-Za-z]+?)?(\\s[A-Za-z]+?)?\\s(das|der|die)\\s")) {
 			str = RegexUtils.ireplace(str, " ist es ", " ist ");
 		}
 
@@ -1286,36 +1028,28 @@ public class GermanParser extends Parser {
 
 		/*
 		 * static if (is an empty global array replace_array) { string
-		 * cache_file_name = '_cache_replace'
-		 * 
-		 * if (exists: var cache_file_name, end test) { string cache_str =
-		 * handle foreach (file name var cache_file_name, read foreach (new var
-		 * line from var cache_input is rw) { push into global array
-		 * replace_array, var line } } else {
-		 * 
+		 * cache_file_name = '_cache_replace' if (exists: var cache_file_name,
+		 * end test) { string cache_str = handle foreach (file name var
+		 * cache_file_name, read foreach (new var line from var cache_input is
+		 * rw) { push into global array replace_array, var line } } else {
 		 * string csv_output = '>>>^0^0^0^0^just_verb^0^0^0^0^0^0' do
 		 * hal2012_send_signal with "database_request", var csv_output string
 		 * csv_str = hal2012_fetch_signal with "database_request" set new array
-		 * csv_input_lines to split with /\\r?\\n/, var csv_input
-		 * 
-		 * string cache_output = handle foreach (file name var cache_file_name,
-		 * write foreach (new var line in array csv_input_lines) { do regex with
-		 * var a: /[+]/ -> "\\\\+" :global:i push into global array
-		 * replace_array, var line print into var cache_output data var line
-		 * concat new line } do close with var cache_output do
-		 * trigger_check_files without arguments }
-		 * 
-		 * push into global array replace_array, "" } set new array
+		 * csv_input_lines to split with /\\r?\\n/, var csv_input string
+		 * cache_output = handle foreach (file name var cache_file_name, write
+		 * foreach (new var line in array csv_input_lines) { do regex with var
+		 * a: /[+]/ -> "\\\\+" :global:i push into global array replace_array,
+		 * var line print into var cache_output data var line concat new line }
+		 * do close with var cache_output do trigger_check_files without
+		 * arguments } push into global array replace_array, "" } set new array
 		 * _replace_array to global array replace_array foreach (new var line in
 		 * array _replace_array) { set new array result to an empty array set
 		 * new array rawresult to split using /\\^/, var line if (var line) {
 		 * string a = from array rawresult element [ 2 ] string b = from array
 		 * rawresult element [ 3 ] if (var a and var b and var a not matches var
 		 * b) { str = RegexUtils.ireplace(str, "(^|\\s)var a(\\s|$)",
-		 * "$1var b$2");
-		 * 
-		 * #print "#var a# --> #var b#" #print new line #print var input #print
-		 * new line } } }
+		 * "$1var b$2"); #print "#var a# --> #var b#" #print new line #print var
+		 * input #print new line } } }
 		 */
 
 		// cout << "parser2012: step 4.5: " << str << endl;
@@ -1333,36 +1067,27 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, " [`]n ", " einen ");
 		str = RegexUtils.ireplace(str, " [`]nen ", " einen ");
 
-		str = RegexUtils.ireplace(str, " .... username .... ",
-				" \\$\\$username\\$\\$ ");
-		str = RegexUtils.ireplace(str, " ..... username ..... ",
-				" \\$\\$username\\$\\$ ");
-		str = RegexUtils.ireplace(str, " .... unknownproperty .... ",
-				" \\$\\$unknownproperty\\$\\$ ");
-		str = RegexUtils.ireplace(str, " ..... unknownproperty ..... ",
-				" \\$\\$unknownproperty\\$\\$ ");
+		str = RegexUtils.ireplace(str, " .... username .... ", " \\$\\$username\\$\\$ ");
+		str = RegexUtils.ireplace(str, " ..... username ..... ", " \\$\\$username\\$\\$ ");
+		str = RegexUtils.ireplace(str, " .... unknownproperty .... ", " \\$\\$unknownproperty\\$\\$ ");
+		str = RegexUtils.ireplace(str, " ..... unknownproperty ..... ", " \\$\\$unknownproperty\\$\\$ ");
 
 		if (RegexUtils.ifind(str, "ist\\s(\\d+?)")) {
 			str = RegexUtils.ireplace(str, "(^|\\s)(\\d+?) ", "$1_$2_ ");
 		}
 
-		str = RegexUtils.ireplace(str, "(^|\\s)tobias schulz",
-				"$1_tobias_schulz_");
+		str = RegexUtils.ireplace(str, "(^|\\s)tobias schulz", "$1_tobias_schulz_");
 
 		if (Languages.getLanguage().isCode("de")) {
-			str = RegexUtils.ireplace(str, "(^|\\s)im jahre (\\d\\d\\d\\d) ",
-					"$1$2 ");
-			str = RegexUtils.ireplace(str, "(^|\\s)im jahr (\\d\\d\\d\\d) ",
-					"$1$2 ");
+			str = RegexUtils.ireplace(str, "(^|\\s)im jahre (\\d\\d\\d\\d) ", "$1$2 ");
+			str = RegexUtils.ireplace(str, "(^|\\s)im jahr (\\d\\d\\d\\d) ", "$1$2 ");
 			if (RegexUtils.find(str, "\\d\\d\\d\\d")) {
 				if (!RegexUtils.find(str, "\\svon\\s(\\d\\d\\d\\d)\\s")
 						&& !RegexUtils.ifind(str, "ist\\s(\\d\\d\\d\\d)")) {
-					str = RegexUtils.ireplace(str, "(^|\\s)(\\d\\d\\d\\d) ",
-							"$1in_jahre_$2 ");
+					str = RegexUtils.ireplace(str, "(^|\\s)(\\d\\d\\d\\d) ", "$1in_jahre_$2 ");
 				}
 				if (!RegexUtils.find(str, "(\\d\\d\\d\\d)......")) {
-					str = RegexUtils.ireplace(str, "(^|\\s)(\\d\\d\\d\\d) ",
-							"$1_$2_ ");
+					str = RegexUtils.ireplace(str, "(^|\\s)(\\d\\d\\d\\d) ", "$1_$2_ ");
 				}
 			}
 		}
@@ -1373,23 +1098,17 @@ public class GermanParser extends Parser {
 			str = RegexUtils.ireplace(str, "(^|\\s)?(nicht|not)(\\s)", "$1");
 		}
 
-		str = RegexUtils
-				.ireplace(
-						str,
-						"(herr|frau|mr|mrs|miss|doktor|dr|firma)\\.? (\\S\\S\\S+?)($|\\s)",
-						"_$1_$2_ $3");
+		str = RegexUtils.ireplace(str, "(herr|frau|mr|mrs|miss|doktor|dr|firma)\\.? (\\S\\S\\S+?)($|\\s)",
+				"_$1_$2_ $3");
 
 		str = RegexUtils.ireplace(str, "sth\\.", "something");
 		str = RegexUtils.ireplace(str, "sth\\s", "something ");
-		str = RegexUtils.ireplace(str,
-				"do you know (what|who|where|how|when|which|whose)", "$1");
-		str = RegexUtils.ireplace(str, "do you know something about ",
-				"what is ");
+		str = RegexUtils.ireplace(str, "do you know (what|who|where|how|when|which|whose)", "$1");
+		str = RegexUtils.ireplace(str, "do you know something about ", "what is ");
 		str = RegexUtils.ireplace(str, " do you do", " are you");
 		str = StringUtils.trim(str);
 		str = RegexUtils.ireplace(str, "what<ws>up\\s($|[?])", "how are you?");
-		str = RegexUtils.ireplace(str, "what[']s<ws>up\\s($|[?])",
-				"how are you?");
+		str = RegexUtils.ireplace(str, "what[']s<ws>up\\s($|[?])", "how are you?");
 		str = RegexUtils.ireplace(str, "whats<ws>up\\s($|[?])", "how are you?");
 		str = RegexUtils.ireplace(str, "how are you doing", "how are you");
 
@@ -1412,8 +1131,7 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "^weisst du denn noch ", "weisst du ");
 		str = RegexUtils.ireplace(str, "^weisst du denn ", "weisst du ");
 		str = RegexUtils.ireplace(str, "^weisst du noch ", "weisst du ");
-		str = RegexUtils.ireplace(str, "^weisst du (w[^\\s]*?)\\s([^?!.,]*)",
-				"$2 $1");
+		str = RegexUtils.ireplace(str, "^weisst du (w[^\\s]*?)\\s([^?!.,]*)", "$2 $1");
 		str = RegexUtils.ireplace(str, "^weisst du ", "");
 
 		str = RegexUtils.ireplace(str, "wie vie[a-zA-Z]+\\s", "wie ");
@@ -1430,26 +1148,20 @@ public class GermanParser extends Parser {
 				++clause_no;
 
 				if (clause_no > 1
-						&& (m = RegexUtils
-								.match(clause,
-										"^\\s*?(der|die|das|den|dem|dessen)\\s([a-z]+?)\\s")) != null) {
+						&& (m = RegexUtils.match(clause, "^\\s*?(der|die|das|den|dem|dessen)\\s([a-z]+?)\\s")) != null) {
 					LogUtils.d("maybe found a relative clause.");
 					final String rel_verb = m.get(1);
 					String[] words = clause.split("\\s+");
 
 					Tags tags = Taggers.getTagger().getPartOfSpeech(rel_verb);
 					if (tags.isType("v") || words.length < 3) {
-						LogUtils.d("not found an relative clause verb: "
-								+ rel_verb);
-						str = RegexUtils.replace(str,
-								"\\s*?(der|die|das|den|dem|dessen)\\s("
-										+ rel_verb + ")\\s", " _$1_ $2 ");
+						LogUtils.d("not found an relative clause verb: " + rel_verb);
+						str = RegexUtils.replace(str, "\\s*?(der|die|das|den|dem|dessen)\\s(" + rel_verb
+								+ ")\\s", " _$1_ $2 ");
 					} else {
 						LogUtils.d("found an relative clause verb: " + rel_verb);
-						str = RegexUtils.replace(str,
-								"\\s*?(der|die|das|den|dem|dessen)\\s("
-										+ rel_verb + ")\\s",
-								" $1\\{\\{\\{questionword\\}\\}\\} $2 ");
+						str = RegexUtils.replace(str, "\\s*?(der|die|das|den|dem|dessen)\\s(" + rel_verb
+								+ ")\\s", " $1\\{\\{\\{questionword\\}\\}\\} $2 ");
 					}
 				}
 			}
@@ -1459,19 +1171,16 @@ public class GermanParser extends Parser {
 
 		final String mark = "\"";
 
-		str = RegexUtils.ireplace(str, "\\s" + mark + "\\s?([A-Za-z0-9_" + mark
-				+ "]+?)\\s?" + mark + "", " " + mark + "$1" + mark + "");
+		str = RegexUtils.ireplace(str, "\\s" + mark + "\\s?([A-Za-z0-9_" + mark + "]+?)\\s?" + mark + "", " "
+				+ mark + "$1" + mark + "");
 
-		str = RegexUtils.ireplace(str, "in dem jahr ([\\d]+)", "in dem " + mark
-				+ "jahre $1" + mark + "");
-		str = RegexUtils.ireplace(str, "in dem jahre ([\\d]+)", "in dem "
-				+ mark + "jahre $1" + mark + "");
+		str = RegexUtils.ireplace(str, "in dem jahr ([\\d]+)", "in dem " + mark + "jahre $1" + mark + "");
+		str = RegexUtils.ireplace(str, "in dem jahre ([\\d]+)", "in dem " + mark + "jahre $1" + mark + "");
 
 		int e = 50;
 		while (e >= 0) {
-			str = RegexUtils.ireplace(str, "" + mark + "([^\\s" + mark
-					+ "]+?)\\s([^" + mark + "]*?)" + mark + "", "" + mark
-					+ "$1_$2" + mark + "");
+			str = RegexUtils.ireplace(str, "" + mark + "([^\\s" + mark + "]+?)\\s([^" + mark + "]*?)" + mark
+					+ "", "" + mark + "$1_$2" + mark + "");
 			--e;
 		}
 		str = RegexUtils.ireplace(str, "" + mark + "", "_");
@@ -1501,8 +1210,7 @@ public class GermanParser extends Parser {
 
 		// cout << "parser2012: step 9: " << str << endl;
 
-		Iterable<String> histMale = FileUtils.readLines(
-				Storages.getStorage().getLanguageDirectory(), FreehalFiles.create("male.history"));
+		Iterable<String> histMale = Storages.inLanguageDirectory("male.history").readLines();
 		String last_male_substantive = null;
 		for (String line : histMale) {
 			if (line.length() > 1)
@@ -1512,9 +1220,7 @@ public class GermanParser extends Parser {
 			str = replaceHe(str, last_male_substantive);
 		}
 
-		Iterable<String> histFemale = FileUtils.readLines(
-				Storages.getStorage().getLanguageDirectory(),
-				FreehalFiles.create("female.history"));
+		Iterable<String> histFemale = Storages.inLanguageDirectory("female.history").readLines();
 		String last_female_substantive = null;
 		for (String line : histFemale) {
 			if (line.length() > 1)

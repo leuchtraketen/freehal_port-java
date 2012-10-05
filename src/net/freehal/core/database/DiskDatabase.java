@@ -28,7 +28,6 @@ import net.freehal.core.database.Database;
 import net.freehal.core.database.SynonymMap;
 import net.freehal.core.pos.Taggers;
 import net.freehal.core.storage.Storages;
-import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
@@ -52,8 +51,8 @@ public class DiskDatabase implements Database {
 	}
 
 	private void readMetadata() {
-		Iterable<String> lines = FileUtils.readLines(DiskStorage.getCacheDirectory("database", "meta"),
-				FreehalFiles.create("files.csv"));
+		Iterable<String> lines = DiskStorage.getCacheDirectory("database", "meta").getChild("files.csv")
+				.readLines();
 
 		for (String line : lines) {
 			String[] csv = line.split(":");
@@ -72,8 +71,7 @@ public class DiskDatabase implements Database {
 		for (String filename : cacheFiles.keySet()) {
 			sb.append(filename).append(":").append(cacheFiles.get(filename)).append("\n");
 		}
-		FileUtils.write(DiskStorage.getCacheDirectory("database", "meta"), FreehalFiles.create("files.csv"),
-				sb.toString());
+		DiskStorage.getCacheDirectory("database", "meta").getChild("files.csv").write(sb.toString());
 	}
 
 	@Override
@@ -150,7 +148,7 @@ public class DiskDatabase implements Database {
 		else if (databaseFile.isFile()) {
 			LogUtils.i("find in file: " + databaseFile);
 
-			final Iterable<String> xmlInput = FileUtils.readLines(databaseFile);
+			final Iterable<String> xmlInput = databaseFile.readLines();
 			final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(xmlInput);
 
 			XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
@@ -171,14 +169,13 @@ public class DiskDatabase implements Database {
 
 	@Override
 	public void updateCache() {
-		updateCache(FreehalFiles.create(""));
+		updateCache(FreehalFiles.getFile(""));
 	}
 
 	@Override
 	public void updateCache(FreehalFile databaseFile) {
 		if (!databaseFile.isAbsolute()) {
-			databaseFile = FreehalFiles.create(Storages.getStorage().getLanguageDirectory().getPath(),
-					databaseFile.getPath());
+			databaseFile = Storages.inLanguageDirectory(databaseFile);
 		}
 
 		if (databaseFile.isDirectory()) {
@@ -201,7 +198,7 @@ public class DiskDatabase implements Database {
 			} else {
 				LogUtils.i("update cache (file): " + databaseFile);
 
-				final Iterable<String> xmlInput = FileUtils.readLines(databaseFile);
+				final Iterable<String> xmlInput = databaseFile.readLines();
 
 				// order the xml data
 				final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(xmlInput);
@@ -344,7 +341,7 @@ public class DiskDatabase implements Database {
 			List<Word> words = xfact.getWords();
 			for (Word w : words) {
 				FreehalFile cacheFile = DiskStorage.getCacheFile("database", "index", new DiskStorage.Key(w),
-						FreehalFiles.create(xfact.getFilename().getName()));
+						FreehalFiles.getFile(xfact.getFilename().getName()));
 				if (!cacheFacts.get().containsKey(cacheFile)) {
 					cacheFacts.get().put(cacheFile, new HashSet<String>());
 				}
@@ -386,11 +383,11 @@ public class DiskDatabase implements Database {
 				}
 				LogUtils.d("write cache file: " + cacheFile);
 
-				cacheFile = FreehalFiles.create(cacheFile.getPath() + suffix);
+				cacheFile = FreehalFiles.getFile(cacheFile.getPath() + suffix);
 				if (append)
-					FileUtils.append(cacheFile, content.toString());
+					cacheFile.append(content.toString());
 				else
-					FileUtils.write(cacheFile, content.toString());
+					cacheFile.write(content.toString());
 			}
 
 			cacheFacts.set(null);

@@ -51,7 +51,6 @@ import net.freehal.core.pos.storage.TaggerCacheMemory;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.AbstractFreehalFile;
-import net.freehal.core.util.FileUtilsImpl;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
@@ -91,7 +90,7 @@ public class ShellTest {
 		// initialize the grammar
 		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
 		Grammar grammar = new GermanGrammar();
-		grammar.readGrammar(FreehalFiles.create("grammar.txt"));
+		grammar.readGrammar(FreehalFiles.getFile("grammar.txt"));
 		Grammars.setGrammar(grammar);
 
 		// initialize the part of speech tagger
@@ -99,11 +98,11 @@ public class ShellTest {
 		// the parameter is either a TaggerCacheMemory (faster, higher memory
 		// usage) or a TaggerCacheDisk (slower, less memory usage)
 		Tagger tagger = new GermanTagger(new TaggerCacheMemory());
-		tagger.readTagsFrom(FreehalFiles.create("guessed.pos"));
-		tagger.readTagsFrom(FreehalFiles.create("brain.pos"));
-		tagger.readTagsFrom(FreehalFiles.create("memory.pos"));
-		tagger.readRegexFrom(FreehalFiles.create("regex.pos"));
-		tagger.readToggleWordsFrom(FreehalFiles.create("toggle.csv"));
+		tagger.readTagsFrom(FreehalFiles.getFile("guessed.pos"));
+		tagger.readTagsFrom(FreehalFiles.getFile("brain.pos"));
+		tagger.readTagsFrom(FreehalFiles.getFile("memory.pos"));
+		tagger.readRegexFrom(FreehalFiles.getFile("regex.pos"));
+		tagger.readToggleWordsFrom(FreehalFiles.getFile("toggle.csv"));
 		Taggers.setTagger(tagger);
 
 		// how to phrase the output sentences
@@ -175,13 +174,8 @@ class FakeFreehalFile extends AbstractFreehalFile {
 	}
 
 	@Override
-	public FreehalFile create(String path) {
+	public FreehalFile getFile(String path) {
 		return new FakeFreehalFile(new File(path));
-	}
-
-	@Override
-	public FreehalFile create(String dir, String file) {
-		return new FakeFreehalFile(new File(dir, file));
 	}
 
 	@Override
@@ -215,7 +209,33 @@ class FakeFreehalFile extends AbstractFreehalFile {
 	}
 
 	@Override
-	public FileUtilsImpl getFileUtilsImpl() {
+	public FreehalFile getChild(String path) {
 		return null;
 	}
+
+	@Override
+	public FreehalFile getChild(FreehalFile path) {
+		return null;
+	}
+
+	@Override
+	public Iterable<String> readLines() {
+		return null;
+	}
+
+	@Override
+	public List<String> readLinesAsList() {
+		return null;
+	}
+
+	@Override
+	public String read() {
+		return null;
+	}
+
+	@Override
+	public void append(String s) {}
+
+	@Override
+	public void write(String s) {}
 }

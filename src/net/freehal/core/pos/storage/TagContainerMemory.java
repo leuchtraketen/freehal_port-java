@@ -1,18 +1,18 @@
 /*******************************************************************************
  * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
  * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
  * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/gpl.html>.
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
 package net.freehal.core.pos.storage;
 
@@ -20,7 +20,6 @@ import net.freehal.core.pos.Tags;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.FreehalFile;
 
-import net.freehal.core.util.FileUtils;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 
@@ -33,7 +32,7 @@ public abstract class TagContainerMemory implements TagContainer {
 		String word = null;
 		Tags tags = null;
 		int n = 0;
-		Iterable<String> lines = FileUtils.readLines(Storages.getStorage().getLanguageDirectory(), filename);
+		Iterable<String> lines = Storages.inLanguageDirectory(filename).readLines();
 		for (String line : lines) {
 			line = RegexUtils.trimRight(line, "\\s");
 

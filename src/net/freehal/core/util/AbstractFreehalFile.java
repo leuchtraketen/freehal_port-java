@@ -74,10 +74,7 @@ public abstract class AbstractFreehalFile implements FreehalFile {
 	}
 
 	@Override
-	public abstract FreehalFile create(String path);
-
-	@Override
-	public abstract FreehalFile create(String dir, String file);
+	public abstract FreehalFile getFile(String path);
 
 	@Override
 	public File getFile() {
@@ -103,25 +100,4 @@ public abstract class AbstractFreehalFile implements FreehalFile {
 	public String getName() {
 		return file.getName();
 	}
-
-	@Override
-	public abstract boolean isFile();
-
-	@Override
-	public abstract boolean isDirectory();
-
-	@Override
-	public abstract FreehalFile[] listFiles();
-
-	@Override
-	public abstract long length();
-
-	@Override
-	public abstract boolean mkdirs();
-
-	@Override
-	public abstract boolean delete();
-
-	@Override
-	public abstract FileUtilsImpl getFileUtilsImpl();
 }
