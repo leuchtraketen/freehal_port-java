@@ -1,5 +1,5 @@
 /**
- * Language-independent grammar interfaces and implementations.
+ * Grammar definitions and implementations (language-independent).
  * 
  * @author "Tobias Schulz"
  */

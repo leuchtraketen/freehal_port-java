@@ -1,5 +1,5 @@
 /**
- * Interfaces and implementations for storing and managing fact databases and synonyms.
+ * How facts, sentences and synonyms are stored and organized.
  * 
  * @author "Tobias Schulz"
  */

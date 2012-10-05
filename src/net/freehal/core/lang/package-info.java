@@ -1,5 +1,5 @@
 /**
- * Language definitions.
+ * Utility classes for languages.
  * 
  * @author "Tobias Schulz"
  */

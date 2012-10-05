@@ -1,5 +1,6 @@
 /**
- * Language-independent parser interfaces and implementations.
+ * Parser and syntactic analysis related definitions and implementations
+ * (language-independent).
  * 
  * @author "Tobias Schulz"
  */

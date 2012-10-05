@@ -1,5 +1,5 @@
 /**
- * Language-independent part of speech tagger interfaces and implementations.
+ * Part of speech tagger definitions and implementations (language-independent).
  * 
  * @author "Tobias Schulz"
  */

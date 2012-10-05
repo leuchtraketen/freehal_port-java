@@ -1,5 +1,5 @@
 /**
- * Classes and interfaces related to the answer process.
+ * Interfaces related to the answer process.
  * 
  * @author "Tobias Schulz"
  */

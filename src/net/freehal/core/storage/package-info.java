@@ -1,5 +1,5 @@
 /**
- * Interfaces and utility classes for Freehal's database directory structure.
+ *Utility classes for the database directory structure.
  * 
  * @author "Tobias Schulz"
  */
