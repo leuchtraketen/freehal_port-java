@@ -19,42 +19,117 @@ package net.freehal.core.util;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * An utility class for creating {@link FreehalFile} objects. <br />
+ * <br />
+ * 
+ * It contains a map with of protocols (like {@code "file"}, {@code "http"},
+ * {@code "sqlite"}, ...) and the corresponding {@link FreehalFile}
+ * implementations which is filled with {@link #add(String, FreehalFile)}. When
+ * creating a {@link FreehalFile} object using {@link #getFile(String)}, this
+ * map is used to determine the correct implementation. <br />
+ * <br />
+ * 
+ * You must provide a standard implementation which is added with
+ * {@link #ALL_PROTOCOLS} as protocol string. The standard implementation is
+ * used if the path given to {@link #getFile(String)} doesn't contain a protocol
+ * (like {@code "/home/username/"} instead of {@code "file:///home/username/"})
+ * or if the protocol is invalid or unknown. <br />
+ * <br />
+ * 
+ * The protocol prefix (like {@code "http://"}) is never stored in a
+ * {@link FreehalFile} object as part of the path.
+ * 
+ * @author "Tobias Schulz"
+ */
 public class FreehalFiles {
+
+	/**
+	 * Use this if you'd like to add a {@link FreehalFile} implementation for
+	 * all protocols or for the case that no protocol is specified using
+	 * {@link #add(String, FreehalFile)}.
+	 */
 	public static final String ALL_PROTOCOLS = "all";
-	private static final String NO_GENERAL_IMPL_FOUND = "There must be at least one FreehalFile implementation "
-			+ "which is registered for all protocols";
+
+	private static final String NO_GENERAL_IMPL_FOUND = "There must be at least one "
+			+ "FreehalFile implementation " + "which is registered for all protocols!";
 	private static Map<String, FreehalFile> impls = new HashMap<String, FreehalFile>();
 
+	/**
+	 * Never used.
+	 */
+	private FreehalFiles() {}
+
+	/**
+	 * Returns a map of the currently used {@link FreehalFile} implementations
+	 * (values) and the corresponding protocols (keys).
+	 * 
+	 * @return the currently used {@link FreehalFile} implementations
+	 */
 	public static Map<String, FreehalFile> getImpls() {
 		return impls;
 	}
 
+	/**
+	 * Add the given {@link FreehalFile} implementation for the given protocol
+	 * (like {@code "file"}, {@code "http"}, {@code "sqlite"}, ...) to the map.
+	 * 
+	 * @param protocol
+	 *        the protocol
+	 * @param fileImpl
+	 *        the {@link FreehalFile} implementation
+	 */
 	public static void add(String protocol, FreehalFile fileImpl) {
 		FreehalFiles.impls.put(protocol, fileImpl);
 	}
 
-	private static FreehalFile getImpl(String path) {
-		for (final String protocol : impls.keySet()) {
-			if (!protocol.equals(ALL_PROTOCOLS) && path.startsWith(protocol + ":")) {
+	private static FreehalFile getImpl(String protocol, String path) {
+		for (final String protocol2 : impls.keySet()) {
+			if (!protocol2.equals(ALL_PROTOCOLS) && protocol2.equals(protocol)) {
 				return impls.get(protocol);
 			}
 		}
-		for (final String protocol : impls.keySet()) {
-			if (protocol.equals(ALL_PROTOCOLS)) {
+		for (final String protocol2 : impls.keySet()) {
+			if (protocol2.equals(ALL_PROTOCOLS)) {
 				return impls.get(protocol);
 			}
 		}
 		throw new IllegalArgumentException(NO_GENERAL_IMPL_FOUND);
 	}
 
-	private static String removeProtocol(String path) {
-		path = RegexUtils.ireplace(path, "^[a-zA-Z]+[:][/][/]", "");
-		path = RegexUtils.ireplace(path, "^[a-zA-Z]+[:]", "");
-		return path;
+	/**
+	 * Construct a new {@link FreehalFile} instance by using the implementation that
+	 * is mapped to the protocol found in the path string. If the protocol is
+	 * unknown or if there is no protocol in the path string, the standard
+	 * implementation is used.
+	 * 
+	 * @param path
+	 *        the path (without any protocol prefix!)
+	 * @return a new object implementing {@link FreehalFile}
+	 */
+	public static FreehalFile getFile(String path) {
+		if (path.contains("://")) {
+			String[] p = path.split("[:][/][/]", 2);
+			return FreehalFiles.getFile(p[0], p[1]);
+		} else {
+			return FreehalFiles.getFile("all", path);
+		}
 	}
 
-	public static FreehalFile getFile(String path) {
-		final FreehalFile impl = FreehalFiles.getImpl(path);
-		return impl.getFile(removeProtocol(path));
+	/**
+	 * Construct a new {@link FreehalFile} instance by using the implementation that
+	 * is mapped to the given protocol string. If the protocol is unknown, the
+	 * standard implementation is used.
+	 * 
+	 * @param protocol
+	 *        to protocol to use
+	 * @param path
+	 *        the path (without any protocol prefix!)
+	 * @return a new object implementing {@link FreehalFile}
+	 */
+	public static FreehalFile getFile(String protocol, String path) {
+		path = StringUtils.replace(path, "\\", "/");
+		final FreehalFile impl = FreehalFiles.getImpl(protocol, path);
+		return impl.getFile(path);
 	}
 }

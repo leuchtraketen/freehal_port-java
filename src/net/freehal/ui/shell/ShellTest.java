@@ -76,8 +76,8 @@ public class ShellTest {
 		// (net.freehal.core.filter) are not logged to console output, but
 		// everything is written into a log file
 		StandardLogUtils log = new StandardLogUtils();
-		log.to(StandardLogUtils.ConsoleLogStream.create(System.out).addFilter("DiskDatabase", "debug")
-				.addFilter("xml", "debug").addFilter("filter", "debug"));
+		log.to(StandardLogUtils.ConsoleLogStream.create(System.out).addFilter("DiskDatabase", LogUtils.DEBUG)
+				.addFilter("xml", LogUtils.DEBUG).addFilter("filter", LogUtils.DEBUG));
 		log.to(StandardLogUtils.FileLogStream.create("../stdout.txt"));
 		LogUtils.set(log);
 

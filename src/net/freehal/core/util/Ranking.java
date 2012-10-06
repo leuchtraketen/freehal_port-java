@@ -38,7 +38,7 @@ public class Ranking<O> {
 
 	public void insert(O obj, Double ranking) {
 		if (ranking > 0) {
-			map.multiPut(ranking, obj);
+			map.put(ranking, obj);
 			keys = null;
 		}
 	}

@@ -108,7 +108,7 @@ public abstract class StandardGrammar extends Grammar {
 
 		List<Set<String>> reducekeys = new ArrayList<Set<String>>();
 
-		for (Map.Entry<String, Entities> it : grammarmap.multiEntrySet()) {
+		for (Map.Entry<String, Entities> it : grammarmap.entrySet()) {
 			Entity target = s2o(it.getKey());
 			if (target != null && target.getRepl().isEmpty()) {
 				final String keys = this.allToKey(it.getValue());
@@ -120,7 +120,7 @@ public abstract class StandardGrammar extends Grammar {
 							reducekeys.add(new HashSet<String>());
 						}
 					}
-					reducemap.get(order).multiPut(keys, new Pair<Entity, Entities>(target, it.getValue()));
+					reducemap.get(order).put(keys, new Pair<Entity, Entities>(target, it.getValue()));
 					reducekeys.get(order).add(keys);
 				}
 			}
@@ -150,13 +150,13 @@ public abstract class StandardGrammar extends Grammar {
 		Mutable<Boolean> complete = new Mutable<Boolean>(true);
 		MultiMap<String, Entities> newGrammarmap = new MultiHashMap<String, Entities>();
 
-		for (Map.Entry<String, Entities> it : grammarmap.multiEntrySet()) {
+		for (Map.Entry<String, Entities> it : grammarmap.entrySet()) {
 
 			Entities oldvalue = it.getValue();
 			List<Entities> newvalues = expandEntry(oldvalue, expanded, complete);
 
 			for (Entities newvalue : newvalues) {
-				newGrammarmap.multiPut(it.getKey(), newvalue);
+				newGrammarmap.put(it.getKey(), newvalue);
 			}
 		}
 
@@ -460,7 +460,7 @@ public abstract class StandardGrammar extends Grammar {
 					}
 				}
 
-				grammarmap.multiPut(keyObj.toKey(), valueI);
+				grammarmap.put(keyObj.toKey(), valueI);
 			}
 		}
 
@@ -470,9 +470,10 @@ public abstract class StandardGrammar extends Grammar {
 		return true;
 	}
 
+	@Override
 	public String toString() {
 		StringBuilder grammarStr = new StringBuilder();
-		for (Map.Entry<String, Entities> entry : grammarmap.multiEntrySet()) {
+		for (Map.Entry<String, Entities> entry : grammarmap.entrySet()) {
 
 			Entity first = s2o(entry.getKey());
 			grammarStr.append(first != null ? first.toString() : "#null").append(" = ");

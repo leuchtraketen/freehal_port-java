@@ -131,7 +131,7 @@ public class Entity {
 			String last = "";
 			for (String key : keys) {
 				if (!key.equals(last)) {
-					pm.multiPut(keyprefix + "/" + key, text);
+					pm.put(keyprefix + "/" + key, text);
 				}
 				last = key;
 			}

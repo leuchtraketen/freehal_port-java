@@ -16,18 +16,53 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
+/**
+ * An utility class for logging.
+ * 
+ * @author "Tobias Schulz"
+ */
 public class LogUtils {
 
+	public static final String ERROR = "debug";
+	public static final String WARNING = "warning";
+	public static final String INFO = "info";
+	public static final String DEBUG = "debug";
+
+	/**
+	 * The current {@link LogUtilsImpl} implementation.
+	 */
 	private static LogUtilsImpl instance = null;
 
+	/**
+	 * Set the {@link LogUtilsImpl} implementation to use.
+	 * 
+	 * @param instance
+	 *        an instance of a class which implements {@link LogUtilsImpl}
+	 */
 	public static void set(LogUtilsImpl instance) {
 		LogUtils.instance = instance;
 	}
 
+	/**
+	 * Print the exception and it's stacktrace as error message with
+	 * {@link StringUtils#asString(Exception)}.
+	 * 
+	 * @see StringUtils#asString(Exception)
+	 * @see LogUtilsImpl#e(String)
+	 * @param ex
+	 *        the exception to use
+	 */
 	public static void e(final Exception ex) {
 		e(StringUtils.asString(ex));
 	}
 
+	/**
+	 * Log an error!
+	 * 
+	 * @see LogUtilsImpl#e(String)
+	 * @param obj
+	 *        the message
+	 */
 	public static void e(final Object obj) {
 		final String s = obj.toString();
 		if (s.contains("\n")) {
@@ -39,6 +74,13 @@ public class LogUtils {
 		}
 	}
 
+	/**
+	 * Log a warning!
+	 * 
+	 * @see LogUtilsImpl#w(String)
+	 * @param obj
+	 *        the message
+	 */
 	public static void w(final Object obj) {
 		final String s = obj.toString();
 		if (s.contains("\n")) {
@@ -50,6 +92,13 @@ public class LogUtils {
 		}
 	}
 
+	/**
+	 * Log an info message!
+	 * 
+	 * @see LogUtilsImpl#i(String)
+	 * @param obj
+	 *        the message
+	 */
 	public static void i(final Object obj) {
 		final String s = obj.toString();
 		if (s.contains("\n")) {
@@ -61,6 +110,13 @@ public class LogUtils {
 		}
 	}
 
+	/**
+	 * Log a debug message!
+	 * 
+	 * @see LogUtilsImpl#d(String)
+	 * @param obj
+	 *        the message
+	 */
 	public static void d(final Object obj) {
 		final String s = obj.toString();
 		if (s.contains("\n")) {
@@ -72,20 +128,55 @@ public class LogUtils {
 		}
 	}
 
+	/**
+	 * Flush all output streams used for logging.
+	 */
 	public static void flush() {
 		instance.flush();
 	}
 
+	/**
+	 * Add a log filter with the given class or package name and the given
+	 * message type.
+	 * 
+	 * @see LogUtilsImpl#addFilter(String, String)
+	 * @param className
+	 *        the class or package name to filter
+	 * @param type
+	 *        the type of logs to filter (error, warning, info, debug)
+	 * @return the current instance of {@link LogUtilsImpl}
+	 */
 	public static LogUtilsImpl addFilter(String className, final String type) {
 		instance.addFilter(className, type);
 		return instance;
 	}
 
+	/**
+	 * Add a temporary log filter with the given class or package name and the
+	 * given message type. These filters are put on a separate list and can be
+	 * cleaned with {@link #resetTemporaryFilters()}. Use them for filtering
+	 * messages in a small piece of code.
+	 * 
+	 * @see LogUtilsImpl#addTemporaryFilter(String, String)
+	 * @see #resetTemporaryFilters()
+	 * @param className
+	 *        the class or package name to filter
+	 * @param type
+	 *        the type of logs to filter (error, warning, info, debug)
+	 * @return the current instance of {@link LogUtilsImpl}
+	 */
 	public static LogUtilsImpl addTemporaryFilter(String className, final String type) {
 		instance.addTemporaryFilter(className, type);
 		return instance;
 	}
 
+	/**
+	 * Reset the temporary log filter list.
+	 * 
+	 * @see LogUtilsImpl#resetTemporaryFilters()
+	 * @see #addTemporaryFilter(String, String)
+	 * @return the current instance of {@link LogUtilsImpl}
+	 */
 	public static LogUtilsImpl resetTemporaryFilters() {
 		instance.resetTemporaryFilters();
 		return instance;
