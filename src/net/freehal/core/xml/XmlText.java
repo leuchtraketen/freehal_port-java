@@ -21,28 +21,67 @@ import java.util.List;
 import net.freehal.core.pos.Taggers;
 import net.freehal.core.util.LogUtils;
 
+/**
+ * This class represent a text inside an XML tag.
+ * 
+ * @author "Tobias Schulz"
+ */
 public class XmlText extends XmlObj {
 
 	private String text;
 
+	/**
+	 * Set the text.
+	 * 
+	 * @param text
+	 *        the text to set
+	 */
 	public void setText(String text) {
 		this.text = text;
 	}
 
+	/**
+	 * Get the text.
+	 * 
+	 * @return the text
+	 */
 	public String getText() {
 		return text;
 	}
 
+	/**
+	 * Set the text.
+	 * 
+	 * @see Word#getWord()
+	 * @param word
+	 *        the text to set
+	 */
 	public void setText(Word word) {
 		this.text = word.getWord();
 	}
 
+	/**
+	 * Construct a new {@link XmlObj} instance of the given text (in fact its
+	 * an instance of {@link XmlText}).
+	 * 
+	 * @param text
+	 *        the text
+	 * @return a {@link XmlText} wrapping the given text
+	 */
 	public static XmlObj fromText(String text) {
 		XmlText xobj = new XmlText();
 		xobj.setText(text);
 		return xobj;
 	}
 
+	/**
+	 * Construct a new {@link XmlObj} instance of the given word's text (in fact its
+	 * an instance of {@link XmlText}).
+	 * 
+	 * @param word
+	 *        the text
+	 * @return a {@link XmlText} wrapping the given text
+	 */
 	public static XmlObj fromText(Word word) {
 		return fromText(word.getWord());
 	}

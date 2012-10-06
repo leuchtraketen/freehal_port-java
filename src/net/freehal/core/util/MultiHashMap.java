@@ -47,7 +47,7 @@ public class MultiHashMap<K, V> implements MultiMap<K, V> {
 	}
 
 	@Override
-	public Set<V> put(K key, Set<V> item) {
+	public Collection<V> put(K key, Collection<V> item) {
 		Set<V> values = map.get(key);
 		if (values == null) {
 			values = new HashSet<V>();
@@ -109,7 +109,7 @@ public class MultiHashMap<K, V> implements MultiMap<K, V> {
 
 	@Override
 	public Collection<? extends K> keySet() {
-		return map.keySet();
+		return Collections.unmodifiableCollection(map.keySet());
 	}
 
 	@Override

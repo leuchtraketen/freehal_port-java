@@ -20,8 +20,7 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * This interface is like {@link java.util.Map}, but for maps that can have more
- * than one value per key.
+ * A {@link MultiMap} is a map that can have more than one value per key.
  * 
  * @author "Tobias Schulz"
  * @param <A>
@@ -33,21 +32,65 @@ public interface MultiMap<A, B> {
 
 	/**
 	 * Put a key and a value into the map.
-	 * @param a the key 
-	 * @param b the value
+	 * 
+	 * @param a
+	 *        the key
+	 * @param b
+	 *        the value
 	 * @return the value
 	 */
 	public B put(A a, B b);
 
-	public Set<B> put(A a, Set<B> bs);
+	/**
+	 * Put a key and a collection of values into the map by merging the
+	 * parameter and the current value.
+	 * 
+	 * @param a
+	 *        the key
+	 * @param bs
+	 *        the collection of values
+	 * @return the collection of values
+	 */
+	public Collection<B> put(A a, Collection<B> bs);
 
+	/**
+	 * Returns an unmodifiable set of entries.
+	 * 
+	 * @see java.util.Collections#unmodifiableSet(Set)
+	 * @return an unmodifiable set of entries.
+	 */
 	public Set<java.util.Map.Entry<A, B>> entrySet();
 
-	public int count(A a);
+	/**
+	 * How many values does the given key have?
+	 * 
+	 * @param key
+	 *        the key
+	 * @return the amount of values
+	 */
+	public int count(A key);
 
+	/**
+	 * Returns an unmodifiable collection of keys.
+	 * 
+	 * @see java.util.Collections#unmodifiableCollection(Collection)
+	 * @return an unmodifiable collection of entries.
+	 */
 	public Collection<? extends A> keySet();
 
+	/**
+	 * Returns the set of values that are assigned to the given key
+	 * 
+	 * @param key
+	 *        the key
+	 * @return the corresponding values
+	 */
 	public Set<B> get(A key);
 
+	/**
+	 * How many keys are in this map?
+	 * 
+	 * @return the amount of keys
+	 */
 	public int size();
 }
