@@ -16,115 +16,243 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
-public class Tags {
+import net.freehal.core.grammar.Grammar;
 
-	private String type = null;
-	private String genus = null;
+/**
+ * A part of speech tag which consists of a specific word class and a specific
+ * grammatical gender and is immutable.
+ * 
+ * @author "Tobias Schulz"
+ */
+public final class Tags {
+
+	/** a comma (if used between main and sub clauses) **/
+	public static final String COMMA = "komma";
+	/** a verb */
+	public static final String VERB = "v";
+	/** an article */
+	public static final String ARTICLE = "art";
+	/** an adjective */
+	public static final String ADJECTIVE = "adj";
+	/** a preposition */
+	public static final String PREPOSITION = "prep";
+	/** a question word or a coordinating or subordinating conjunction */
+	public static final String QUESTIONWORD = "questionword";
+	/** a logical or correlative conjunction */
+	public static final String LINKING = "linking";
+	/** a noun or a pronoun */
+	public static final String NOUN = "linking";
+
+	private String category = null;
+	private String gender = null;
 	private String word = null;
 	private Boolean isName = null;
 
-	public Tags(String type, String genus) {
-		init(null, type, genus, null);
+	/**
+	 * Construct a new part of speech tag with the given word class and the
+	 * given grammatical gender.
+	 * 
+	 * @param category
+	 *        the word class
+	 * @param gender
+	 *        the grammatical gender
+	 */
+	public Tags(String category, String gender) {
+		init(null, category, gender, null);
 	}
 
-	public Tags(String type, String genus, String word) {
-		init(null, type, genus, word);
+	/**
+	 * Construct a new part of speech tag with the given word class and the
+	 * given grammatical gender and the given word (which is used for
+	 * {@link #getLexicalClassForGrammar()}).
+	 * 
+	 * @param category
+	 *        the word class
+	 * @param gender
+	 *        the grammatical gender
+	 * @param word
+	 *        the word as a string
+	 */
+	public Tags(String category, String gender, String word) {
+		init(null, category, gender, word);
 	}
 
-	public Tags(Tags tags, String type, String genus) {
-		init(tags, type, genus, null);
+	/**
+	 * Construct a new part of speech tag by first copying all attributes from
+	 * the given {@link Tags} instance and then overriding the attributes of the
+	 * constructed instance by other arguments (word class and grammatical
+	 * gender) if they are not {@code null}.
+	 * 
+	 * @param tags
+	 *        the tags instance to copy
+	 * @param category
+	 *        the word class
+	 * @param gender
+	 *        the grammatical gender
+	 */
+	public Tags(Tags tags, String category, String gender) {
+		init(tags, category, gender, null);
 	}
 
-	public Tags(Tags tags, String type, String genus, String word) {
-		init(tags, type, genus, word);
+	/**
+	 * Construct a new part of speech tag by first copying all attributes from
+	 * the given {@link Tags} instance and then overriding the attributes of the
+	 * constructed instance by other arguments (word class, grammatical gender
+	 * and word string) if they are not {@code null}.
+	 * 
+	 * @param tags
+	 *        the tags instance to copy
+	 * @param category
+	 *        the word class
+	 * @param gender
+	 *        the grammatical gender
+	 * @param word
+	 *        the word as a string
+	 */
+	public Tags(Tags tags, String category, String gender, String word) {
+		init(tags, category, gender, word);
 	}
 
-	private void init(Tags tags, String type, String genus, String word) {
+	private void init(Tags tags, String category, String gender, String word) {
 		if (tags != null) {
-			this.type = tags.type;
-			this.genus = tags.genus;
+			this.category = tags.category;
+			this.gender = tags.gender;
 			this.word = tags.word;
 			this.isName = tags.isName;
 		}
-		if (type != null)
-			this.type = type;
-		if (genus != null)
-			this.genus = genus;
+		if (category != null)
+			this.category = category;
+		if (gender != null)
+			this.gender = gender;
 		if (word != null)
 			this.word = word;
 	}
 
-	public boolean isType(String string) {
-		return type != null && type.equals(string);
+	/**
+	 * Check whether the category stored in this instance is equivalent to the
+	 * given category.
+	 * 
+	 * @param otherCategory
+	 *        the given category
+	 * @return {@code true} if they match, {@code false} otherwise.
+	 */
+	public boolean isCategory(String otherCategory) {
+		return category != null && category.equals(otherCategory);
 	}
 
-	public boolean hasType() {
-		return type != null;
+	/**
+	 * Is there a category stored in this instance?
+	 * 
+	 * @return {@code true} if there is a category set, {@code false} otherwise.
+	 */
+	public boolean hasCategory() {
+		return category != null;
 	}
 
-	public String getType() {
-		return type;
+	/**
+	 * Returns the category stored in this instance.
+	 * 
+	 * @return the category string
+	 */
+	public String getCategory() {
+		return category;
 	}
 
-	public boolean isGenus(String string) {
-		return genus != null && genus.equals(string);
+	/**
+	 * Check whether the gender stored in this instance is equivalent to the
+	 * given gender.
+	 * 
+	 * @param otherGender
+	 *        the given gender
+	 * @return {@code true} if they match, {@code false} otherwise.
+	 */
+	public boolean isGender(String otherGender) {
+		return gender != null && gender.equals(otherGender);
 	}
 
-	public boolean hasGenus() {
-		return genus != null;
+	/**
+	 * Is there a gender stored in this instance?
+	 * 
+	 * @return {@code true} if there is a gender set, {@code false} otherwise.
+	 */
+	public boolean hasGender() {
+		return gender != null;
 	}
 
-	public String getGenus() {
-		return genus;
+	/**
+	 * Returns the gender stored in this instance.
+	 * 
+	 * @return the gender string
+	 */
+	public String getGender() {
+		return gender;
 	}
 
-	public String getGrammarType() {
-		if (type == null)
-			return "q";
-		else if (type.equals("komma"))
-			return "d-komma";
-		else if (type.equals("v"))
-			return "d-verb";
-		else if (type.equals("art"))
-			return "d-article";
-		else if (type.equals("adj"))
-			return "d-adjective";
-		else if (type.equals("prep"))
-			return "d-preposition";
-		else if (type.equals("questionword"))
-			return "d-questionword";
-		else if (type.equals("linking"))
-			return "d-linking";
-		else if (type.equals("n")) {
+	/**
+	 * Map the category stored in this instance to a grammar word class from
+	 * {@link net.freehal.core.grammar.Grammar.LexicalClass}.
+	 * 
+	 * @see net.freehal.core.grammar.Grammar.LexicalClass
+	 * @return a grammar word class constant from
+	 *         {@link net.freehal.core.grammar.Grammar.LexicalClass}
+	 */
+	public String getLexicalClassForGrammar() {
+		if (category == null)
+			return Grammar.LexicalClass.NULL;
+		else if (category.equals(COMMA))
+			return Grammar.LexicalClass.KOMMA;
+		else if (category.equals(VERB))
+			return Grammar.LexicalClass.VERB;
+		else if (category.equals(ARTICLE))
+			return Grammar.LexicalClass.ARTICLE;
+		else if (category.equals(ADJECTIVE))
+			return Grammar.LexicalClass.ADJECTIVE;
+		else if (category.equals(PREPOSITION))
+			return Grammar.LexicalClass.PREPOSITION;
+		else if (category.equals(QUESTIONWORD))
+			return Grammar.LexicalClass.QUESTIONWORD;
+		else if (category.equals(LINKING))
+			return Grammar.LexicalClass.LINKING;
+		else if (category.equals(NOUN)) {
 			if (isName == null && word != null) {
 				isName = Taggers.getTagger().isName(word);
 			}
 			if (isName != null && isName)
-				return "d-title";
+				return Grammar.LexicalClass.TITLE;
 			else
-				return "d-noun";
+				return Grammar.LexicalClass.NOUN;
 		} else
-			return "q";
+			return Grammar.LexicalClass.NULL;
 	}
 
-	public static String getUniqueType(String type) {
-		if (type.equals("komma"))
-			return "komma";
-		else if (type.equals("vi") || type.equals("vt") || type.equals("ci"))
-			return "v";
-		else if (type.startsWith("a") && !type.equals("art"))
-			return "adj";
-		else if (type.equals("n") || type.equals("f") || type.equals("m") || type.startsWith("n,")
-				|| type.equals("pron") || type.equals("b"))
-			return "n";
-		else if (type.equals("fw") || type.startsWith("ques"))
-			return "questionword";
-		return type;
+	/**
+	 * There are some deprecated names for word classes in older Freehal
+	 * database files; this method returns the newest name.
+	 * 
+	 * @param category
+	 *        the deprecated category name
+	 * @return the the newest name if the given name was deprecates, or the same
+	 *         name otherwise.
+	 */
+	public static String getUniqueCategory(String category) {
+		if (category.equals("komma"))
+			return COMMA;
+		else if (category.equals("vi") || category.equals("vt") || category.equals("ci"))
+			return VERB;
+		else if (category.startsWith("a") && !category.equals("art"))
+			return ADJECTIVE;
+		else if (category.equals("n") || category.equals("f") || category.equals("m")
+				|| category.startsWith("n,") || category.equals("pron") || category.equals("b"))
+			return NOUN;
+		else if (category.equals("fw") || category.startsWith("ques"))
+			return QUESTIONWORD;
+		else
+			return category;
 	}
 
 	@Override
 	public String toString() {
-		return "{" + (hasType() ? "type=" + type : "") + (hasType() && hasGenus() ? "," : "")
-				+ (hasGenus() ? "genus=" + genus : "") + "}";
+		return "{" + (hasCategory() ? "category=" + category : "")
+				+ (hasCategory() && hasGender() ? "," : "") + (hasGender() ? "gender=" + gender : "") + "}";
 	}
 }

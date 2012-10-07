@@ -52,7 +52,7 @@ public class GermanWording extends StandardWording {
 		@Override
 		public List<Word> modifyWords(List<Word> words, XmlList xfact) {
 			for (Word word : words) {
-				if (word.hasTags() && word.getTags().isType("n")) {
+				if (word.hasTags() && word.getTags().isCategory("n")) {
 					word.setWord(StringUtils.ucfirst(word.getWord()));
 				}
 			}

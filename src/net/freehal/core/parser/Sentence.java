@@ -16,15 +16,14 @@
  ******************************************************************************/
 package net.freehal.core.parser;
 
-import net.freehal.core.util.FreehalFile;
 import java.util.ArrayList;
 import java.util.List;
 
 import net.freehal.core.grammar.Entities;
-import net.freehal.core.grammar.StandardGrammar;
 import net.freehal.core.grammar.Grammars;
 import net.freehal.core.pos.Taggers;
 import net.freehal.core.pos.Tags;
+import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
@@ -61,13 +60,12 @@ public class Sentence {
 
 	private void parse() {
 		List<Entities> parsed = Grammars.getGrammar().parse(wordsList);
-		final String xmlInput = StandardGrammar.printXml(parsed);
+		final String xmlInput = Grammars.printXml(parsed);
 		LogUtils.d("parsed fact as xml:");
 		LogUtils.d(xmlInput);
-		final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(new XmlUtils.OneStringIterator(
-				xmlInput));
+		final XmlStreamIterator stream = Grammars.asXmlStream(parsed);
 		final Sentence sentence = this;
-		XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
+		XmlUtils.readXmlFacts(stream, null, new XmlFactReciever() {
 
 			@Override
 			public void useXmlFact(XmlFact xfact, int countFacts, long start, FreehalFile filename,

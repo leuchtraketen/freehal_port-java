@@ -31,18 +31,33 @@ import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.xml.Word;
 
+/**
+ * An abstract language-independent tagger implementation.
+ * 
+ * @author "Tobias Schulz"
+ */
 public abstract class StandardTagger implements Tagger {
 
 	private TagContainer staticTags;
 	private TagContainer regexTags;
 	private Map<String, String> togglemap;
 
+	/**
+	 * Construct a new tagger instance by using a given tagger cache.
+	 * 
+	 * @param storage
+	 *        the cache to use
+	 */
 	public StandardTagger(TaggerCache storage) {
 		staticTags = storage.newContainer("staticTags");
 		regexTags = new TagListMemory();
 		togglemap = new HashMap<String, String>();
 	}
 
+	/**
+	 * Construct a new tagger instance by using an instance of
+	 * {@link TaggerCacheDisk} as tagger cache.
+	 */
 	public StandardTagger() {
 		staticTags = new TaggerCacheDisk().newContainer("staticTags");
 		regexTags = new TagListMemory();
@@ -127,50 +142,6 @@ public abstract class StandardTagger implements Tagger {
 		return null;
 	}
 
-	@Override
-	public Word toggle(Word word) {
-		if (togglemap.containsKey(word.getWord())) {
-			return new Word(togglemap.get(word.getWord()), word.getTags());
-		}
-
-		if (!word.hasTags()) {
-			word.setTags(this);
-		}
-
-		if (word.hasTags() && word.getTags().isType("v")) {
-
-			final String previousWord = word.getWord();
-			String newWord = word.getWord();
-
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "([gdm])elst$", "\\1le");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "([gdm])le$", "\\1elst");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "te$", "test");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "test$", "te");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "sst$", "sse");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "est$", "e");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "st$", "e");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "[td]e$", "\\1est");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "e$", "st");
-			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "sss", "ss");
-
-			if (newWord.equals(previousWord))
-				return word;
-			else
-				return new Word(newWord, word.getTags());
-		} else
-			return word;
-	}
-
 	/**
 	 * To be implemented in a language-specific tagger class!
 	 */
@@ -182,8 +153,8 @@ public abstract class StandardTagger implements Tagger {
 
 			toAppend.append(word.getWord()).append(":\n");
 			toAppend.append(word).append(":\n");
-			toAppend.append("  type: ").append(word.getTags().getType()).append("\n");
-			toAppend.append("  genus: ").append(word.getTags().getGenus()).append("\n");
+			toAppend.append("  type: ").append(word.getTags().getCategory()).append("\n");
+			toAppend.append("  genus: ").append(word.getTags().getGender()).append("\n");
 
 			LogUtils.i("write part of speech file: " + filename);
 			LogUtils.i(toAppend.toString());
@@ -244,8 +215,21 @@ public abstract class StandardTagger implements Tagger {
 		}
 
 		if (word.hasTags())
-			return word.getTags().isType("n") || word.getTags().isType("adj");
+			return word.getTags().isCategory("n") || word.getTags().isCategory("adj");
 		else
 			return false;
+	}
+
+	@Override
+	public Word toggle(Word word) {
+		if (togglemap.containsKey(word.getWord())) {
+			return new Word(togglemap.get(word.getWord()), word.getTags());
+		}
+
+		if (!word.hasTags()) {
+			word.setTags(this);
+		}
+
+		return word;
 	}
 }

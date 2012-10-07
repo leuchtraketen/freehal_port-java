@@ -118,9 +118,10 @@ public class ShellTest {
 		database.updateCache();
 
 		// Freehal has different ways to find an answer for an input
-		AnswerProviders.getInstance().add(new GermanPredefinedAnswerProvider())
-				.add(new DatabaseAnswerProvider(database)).add(new GermanRandomAnswerProvider())
-				.add(new FakeAnswerProvider());
+		AnswerProviders.add(new GermanPredefinedAnswerProvider());
+		AnswerProviders.add(new DatabaseAnswerProvider(database));
+		AnswerProviders.add(new GermanRandomAnswerProvider());
+		AnswerProviders.add(new FakeAnswerProvider());
 
 		// fact filters are used to filter the best-matching fact in the
 		// database
@@ -143,7 +144,7 @@ public class ShellTest {
 			// for each sentence...
 			for (Sentence s : inputParts) {
 				// get the answer using the AnswerProvider API
-				outputParts.add(AnswerProviders.getInstance().getAnswer(s));
+				outputParts.add(AnswerProviders.getAnswer(s));
 			}
 			// put all answers together
 			final String output = StringUtils.join(" ", outputParts);

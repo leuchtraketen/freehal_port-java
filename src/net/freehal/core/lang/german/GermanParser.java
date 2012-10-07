@@ -989,10 +989,10 @@ public class GermanParser extends Parser {
 						if (word.length() > 0) {
 							if (word != zu_verb) {
 								Tags tags = Taggers.getTagger().getPartOfSpeech(word);
-								if (tags.isType("linking") && found_zu_verb) {
+								if (tags.isCategory("linking") && found_zu_verb) {
 									break;
 								}
-								if (tags.isType("v")) {
+								if (tags.isCategory("v")) {
 									found_other_verb = true;
 									LogUtils.d("other verb: " + word);
 								}
@@ -1154,7 +1154,7 @@ public class GermanParser extends Parser {
 					String[] words = clause.split("\\s+");
 
 					Tags tags = Taggers.getTagger().getPartOfSpeech(rel_verb);
-					if (tags.isType("v") || words.length < 3) {
+					if (tags.isCategory("v") || words.length < 3) {
 						LogUtils.d("not found an relative clause verb: " + rel_verb);
 						str = RegexUtils.replace(str, "\\s*?(der|die|das|den|dem|dessen)\\s(" + rel_verb
 								+ ")\\s", " _$1_ $2 ");

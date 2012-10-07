@@ -35,6 +35,11 @@ import net.freehal.core.util.Pair;
 import net.freehal.core.util.StringLengthComparator;
 import net.freehal.core.xml.Word;
 
+/**
+ * An abstract implementation of a grammar for Indo-European languages.
+ * 
+ * @author "Tobias Schulz"
+ */
 public abstract class StandardGrammar extends Grammar {
 	private HashMap<String, Entity> symbolmapStrObj = new HashMap<String, Entity>();
 	private HashMap<Entity, String> symbolmapObjStr = new HashMap<Entity, String>();
@@ -242,7 +247,7 @@ public abstract class StandardGrammar extends Grammar {
 			}
 
 			// construct objects
-			Entity obj = addEntity(new Entity(this, word.getTags().getGrammarType()));
+			Entity obj = addEntity(new Entity(this, word.getTags().getLexicalClassForGrammar()));
 			obj.setText(word.getWord());
 			wordsI.add(obj);
 		}
@@ -420,11 +425,11 @@ public abstract class StandardGrammar extends Grammar {
 	}
 
 	private String print(Entity e) {
-		return "{" + e.print() + "}";
+		return "{" + e.toLogOutput() + "}";
 	}
 
 	private String print(Entities e) {
-		return e.print();
+		return e.toLogOutput();
 	}
 
 	public StandardGrammar() {
@@ -500,13 +505,13 @@ public abstract class StandardGrammar extends Grammar {
 		LogUtils.i("============  Grammar 2012  ============");
 		LogUtils.i("========================================");
 		LogUtils.i("input: ");
-		LogUtils.i(printInput(words));
+		LogUtils.i(Grammars.printInput(words));
 
 		Entities wordsI = parseInput(words);
 		List<Entities> reduced = reduce(wordsI);
 
 		LogUtils.i("output:");
-		LogUtils.i(printOutput(reduced));
+		LogUtils.i(Grammars.printOutput(reduced));
 
 		return reduced;
 	}
@@ -530,86 +535,4 @@ public abstract class StandardGrammar extends Grammar {
 			return null;
 		}
 	}
-
-	public static String printInput(List<Word> words) {
-		StringBuilder ss = new StringBuilder();
-
-		// for each word
-		for (Word word : words) {
-			// ignore invalid words
-			if (word.getWord().isEmpty() || word.equals("null")) {
-				continue;
-			}
-
-			// print it
-			ss.append("  - ");
-			if (word.hasTags())
-				ss.append(word.getTags().getGrammarType());
-
-			else
-				ss.append("(no tags)");
-			ss.append(": '").append(word.getWord()).append("'\n");
-		}
-
-		return ss.toString();
-	}
-
-	public static String printOutput(List<Entities> list) {
-		StringBuilder ss = new StringBuilder();
-
-		for (Entities output : list) {
-			for (Entity entity : output) {
-				// long
-				ss.append(entity.printLong());
-
-				// perl
-				MultiMap<String, String> perlmap = entity.toGroups();
-				ss.append(Entity.printPerl(perlmap));
-			}
-		}
-
-		return ss.toString();
-	}
-
-	public static String printPerl(List<Entities> list) {
-		StringBuilder ss = new StringBuilder();
-
-		for (Entities output : list) {
-			for (Entity entity : output) {
-				MultiMap<String, String> perlmap = entity.toGroups();
-				ss.append(Entity.printPerl(perlmap));
-			}
-		}
-
-		return ss.toString();
-	}
-
-	public static String printGraph(List<Entities> list) {
-		StringBuilder ss = new StringBuilder();
-		ss.append("digraph parsed {\n");
-
-		for (Entities output : list) {
-			for (Entity entity : output) {
-				ss.append(entity.toXml());
-			}
-			break;
-		}
-
-		ss.append("}\n");
-		return ss.toString();
-	}
-
-	public static String printXml(List<Entities> list) {
-		StringBuilder ss = new StringBuilder();
-
-		for (Entities output : list) {
-			for (Entity entity : output) {
-				ss.append(entity.toXml());
-			}
-			break;
-		}
-
-		return ss.toString();
-	}
-
 }

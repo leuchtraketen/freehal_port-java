@@ -204,8 +204,8 @@ public class Word {
 			else if (otherWord.hasTags())
 				tags = otherWord.getTags();
 
-			double weight = tags == null ? 0.75 : tags.isType("n") ? 1.0 : tags.isType("adj") ? 0.5 : tags
-					.isType("v") ? 0.75 : tags.isType("art") ? 0.1 : 0.4;
+			double weight = tags == null ? 0.75 : tags.isCategory("n") ? 1.0 : tags.isCategory("adj") ? 0.5 : tags
+					.isCategory("v") ? 0.75 : tags.isCategory("art") ? 0.1 : 0.4;
 
 			return weight;
 		} else {

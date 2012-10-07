@@ -71,7 +71,7 @@ public class TagContainerDisk implements TagContainer {
 						if (line.startsWith("type")) {
 							line = line.substring(4);
 							line = RegexUtils.trimLeft(line, ":\\s");
-							line = Tags.getUniqueType(line);
+							line = Tags.getUniqueCategory(line);
 							tags = new Tags(tags, line, null, word);
 						} else if (line.startsWith("genus")) {
 							line = line.substring(5);

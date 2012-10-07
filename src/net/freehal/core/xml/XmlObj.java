@@ -143,7 +143,7 @@ public abstract class XmlObj {
 		int amount = 0;
 		for (Word word : words) {
 			if (word.hasTags()) {
-				if (word.getTags().isType(tags.getType())) {
+				if (word.getTags().isCategory(tags.getCategory())) {
 					++amount;
 				}
 			}

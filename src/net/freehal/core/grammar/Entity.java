@@ -25,6 +25,12 @@ import net.freehal.core.util.MultiMap;
 import net.freehal.core.util.Mutable;
 import net.freehal.core.util.RegexUtils;
 
+/**
+ * An entity is the main data structure used by the {@link StandardGrammar}
+ * implementation for parsing.
+ * 
+ * @author "Tobias Schulz"
+ */
 public class Entity {
 
 	private StandardGrammar grammar;
@@ -291,7 +297,7 @@ public class Entity {
 		return this.toXml(null, null, 0);
 	}
 
-	public String print() {
+	public String toLogOutput() {
 		String str = this.toKey();
 		if (virt.size() > 0) {
 			for (String it : virt) {
@@ -307,7 +313,7 @@ public class Entity {
 			for (Entity it : embed) {
 				if (it != embed.get(0))
 					str += ", ";
-				str += it.print();
+				str += it.toLogOutput();
 			}
 			str += " > ";
 		}
@@ -355,7 +361,7 @@ public class Entity {
 			for (Entity it : embed) {
 				if (it != embed.get(0))
 					str += ", ";
-				str += it.print();
+				str += it.toString();
 			}
 			str += " > ";
 		}

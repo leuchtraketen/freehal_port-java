@@ -21,35 +21,42 @@ import java.util.List;
 
 import net.freehal.core.parser.Sentence;
 
-public class AnswerProviders implements AnswerProvider {
+/**
+ * An utility class for holding a list of the currently used
+ * {@link AnswerProvider} objects.
+ * 
+ * @author "Tobias Schulz"
+ */
+public class AnswerProviders {
 
-	private static AnswerProviders singleton = new AnswerProviders();
+	private static List<AnswerProvider> providers = new ArrayList<AnswerProvider>();
 
-	private List<AnswerProvider> providers = null;
+	private AnswerProviders() {}
 
-	private AnswerProviders() {
-		providers = new ArrayList<AnswerProvider>();
+	/**
+	 * Add an instance {@link AnswerProvider} to the end of the list.
+	 * 
+	 * @param provider
+	 *        the {@link AnswerProvider} to add
+	 */
+	public static void add(AnswerProvider provider) {
+		if (provider != null)
+			providers.add(provider);
 	}
 
-	public static AnswerProviders getInstance() {
-		return singleton;
-	}
-
-	public AnswerProviders add(AnswerProvider filter) {
-		if (providers == null)
-			providers = new ArrayList<AnswerProvider>();
-
-		if (filter != null)
-			providers.add(filter);
-		return this;
-	}
-
-	@Override
-	public String getAnswer(Sentence s) {
+	/**
+	 * Iterate over the list of answer providers to find an answer.
+	 * 
+	 * @param input
+	 *        the input to find an answer for
+	 * @return the first answer found, or {@code null} if no
+	 *         {@link AnswerProvider} was able to find an answer.
+	 */
+	public static String getAnswer(Sentence input) {
 		String answer = null;
 		for (AnswerProvider a : providers) {
 			if (answer == null) {
-				answer = a.getAnswer(s);
+				answer = a.getAnswer(input);
 
 				Runtime.getRuntime().gc();
 			}
