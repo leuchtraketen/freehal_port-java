@@ -19,7 +19,7 @@ package net.freehal.core.answer;
 import net.freehal.core.parser.Sentence;
 
 /**
- * An interface for all classes which can return an answer to a given input
+ * An interface for all classes which can return an answer for a given input
  * sentence.
  * 
  * @author "Tobias Schulz"
@@ -29,10 +29,10 @@ public interface AnswerProvider {
 	/**
 	 * Returns an answer for the given input sentence.
 	 * 
-	 * @param s
+	 * @param input
 	 *        the sentence to find an answer for
 	 * @return the answer as a string
 	 */
-	public String getAnswer(Sentence s);
+	public String getAnswer(Sentence input);
 
 }

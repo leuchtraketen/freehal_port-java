@@ -22,8 +22,8 @@ import java.util.List;
 import net.freehal.core.parser.Sentence;
 
 /**
- * An utility class for holding a list of the currently used
- * {@link AnswerProvider} objects.
+ * An utility class for holding a list of currently used {@link AnswerProvider}
+ * objects.
  * 
  * @author "Tobias Schulz"
  */
@@ -34,7 +34,7 @@ public class AnswerProviders {
 	private AnswerProviders() {}
 
 	/**
-	 * Add an instance {@link AnswerProvider} to the end of the list.
+	 * Add the given instance of {@link AnswerProvider} to the end of the list.
 	 * 
 	 * @param provider
 	 *        the {@link AnswerProvider} to add
@@ -45,7 +45,7 @@ public class AnswerProviders {
 	}
 
 	/**
-	 * Iterate over the list of answer providers to find an answer.
+	 * Iterate over the list of {@link AnswerProvider}s to find an answer.
 	 * 
 	 * @param input
 	 *        the input to find an answer for
