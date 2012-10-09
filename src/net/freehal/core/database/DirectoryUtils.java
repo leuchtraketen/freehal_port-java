@@ -21,7 +21,7 @@ import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
 
-public class DiskStorage {
+public class DirectoryUtils {
 
 	public static FreehalFile getCacheFile(final String dir1, final String dir2, final Key key,
 			final FreehalFile filename) {

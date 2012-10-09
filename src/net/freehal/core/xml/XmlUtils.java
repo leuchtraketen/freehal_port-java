@@ -16,10 +16,10 @@
  ******************************************************************************/
 package net.freehal.core.xml;
 
-import net.freehal.core.util.FreehalFile;
 import java.util.Iterator;
 
-import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.RegexUtils;
 
 /**
  * An utility class for reading XML files.<br />
@@ -91,7 +91,8 @@ public class XmlUtils {
 
 				@Override
 				public boolean hasNext() {
-					LogUtils.i("static string iterator: hasNext = " + hasNext);
+					// LogUtils.d("static string iterator: hasNext = " +
+					// hasNext);
 					if (hasNext == true) {
 						hasNext = false;
 						return true;
@@ -101,7 +102,7 @@ public class XmlUtils {
 
 				@Override
 				public String next() {
-					LogUtils.i("static string iterator: next = " + indata);
+					// LogUtils.d("static string iterator: next = " + indata);
 					return indata;
 				}
 
@@ -151,7 +152,8 @@ public class XmlUtils {
 	 * character by character or whether it returns the whole XML data in the
 	 * first {@code next()} call. We will cache about 5-15 KiB of data.
 	 * 
-	 * @see XmlUtils#readXmlFacts(XmlStreamIterator, FreehalFile, XmlFactReciever)
+	 * @see XmlUtils#readXmlFacts(XmlStreamIterator, FreehalFile,
+	 *      XmlFactReciever)
 	 * @author "Tobias Schulz"
 	 */
 	public static class XmlStreamIterator implements Iterable<String> {
@@ -355,5 +357,47 @@ public class XmlUtils {
 		}
 
 		return tree;
+	}
+
+	public static class StripXmlTagsIterator implements Iterable<String> {
+
+		final Iterator<String> wrapped;
+
+		public StripXmlTagsIterator(Iterator<String> wrapped) {
+			this.wrapped = wrapped;
+		}
+
+		public StripXmlTagsIterator(Iterable<String> wrapped) {
+			this.wrapped = wrapped.iterator();
+		}
+
+		@Override
+		public Iterator<String> iterator() {
+			return new Iterator<String>() {
+				@Override
+				public boolean hasNext() {
+					return wrapped.hasNext();
+				}
+
+				@Override
+				public String next() {
+					final String next = wrapped.next();
+					if (next != null)
+						return RegexUtils.replace(next, "[<]([^>]+)[>]", "");
+					else
+						return next;
+				}
+
+				@Override
+				public void remove() {
+					wrapped.remove();
+				}
+			};
+		}
+
+	}
+
+	public static String stripXmlTags(String read) {
+		return new StripXmlTagsIterator(new OneStringIterator(read)).iterator().next();
 	}
 }

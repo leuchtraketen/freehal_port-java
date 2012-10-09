@@ -23,13 +23,14 @@ import net.freehal.core.parser.Sentence;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Ranking;
 import net.freehal.core.wording.Wordings;
+import net.freehal.core.xml.FactProvider;
 import net.freehal.core.xml.XmlFact;
 
 public class DatabaseAnswerProvider implements AnswerProvider {
 
-	private Database database;
+	private FactProvider database;
 
-	public DatabaseAnswerProvider(Database database) {
+	public DatabaseAnswerProvider(FactProvider database) {
 		this.database = database;
 	}
 

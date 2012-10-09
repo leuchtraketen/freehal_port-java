@@ -27,21 +27,25 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 import net.freehal.core.util.AbstractFreehalFile;
+import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.LogUtils;
 
 public class StandardFreehalFile extends AbstractFreehalFile {
 
-	public StandardFreehalFile(File file) {
+	private StandardFreehalFile(File file) {
 		super(file);
 	}
 
-	@Override
-	public FreehalFile getFile(String path) {
-		return new StandardFreehalFile(new File(path));
+	public static Factory<FreehalFile, String> newFactory() {
+		return new Factory<FreehalFile, String>() {
+			@Override
+			public FreehalFile newInstance(String b) {
+				return new StandardFreehalFile(new File(b));
+			}
+		};
 	}
 
 	@Override
@@ -70,7 +74,7 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 		File[] realFiles = file.listFiles();
 		if (realFiles != null) {
 			for (File realFile : realFiles) {
-				files.add(this.getFile(realFile.getPath()));
+				files.add(new StandardFreehalFile(new File(realFile.getPath())));
 			}
 		}
 		return files.toArray(new FreehalFile[realFiles.length]);
@@ -119,27 +123,6 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 				iterator = new NullIterator<String>();
 		}
 		return iterator;
-	}
-
-	@Override
-	public List<String> readLinesAsList() {
-		LogUtils.d("reading line by line: " + this.getAbsolutePath());
-		List<String> lines = new ArrayList<String>();
-		try {
-			FileInputStream in = new FileInputStream(this.getFile());
-			BufferedReader br = new BufferedReader(new InputStreamReader(in));
-			String line;
-
-			while ((line = br.readLine()) != null) {
-				lines.add(line);
-			}
-
-			br.close();
-
-		} catch (Exception e) {
-			LogUtils.e(e.getMessage());
-		}
-		return lines;
 	}
 
 	@Override

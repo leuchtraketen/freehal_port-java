@@ -109,7 +109,12 @@ public class StringUtils {
 	 * @return the resulting string
 	 */
 	public static String ucfirst(String string) {
-		return string.substring(0, 1).toUpperCase() + string.substring(1);
+		if (string.length() >= 2)
+			return string.substring(0, 1).toUpperCase() + string.substring(1);
+		else if (string.length() == 1)
+			return string.substring(0, 1).toUpperCase();
+		else
+			return string;
 	}
 
 	/**

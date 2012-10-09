@@ -17,7 +17,6 @@
 package net.freehal.core.util;
 
 import java.io.File;
-import java.util.List;
 
 /**
  * A {@link FreehalFile} is a wrapper for something like a file. For example,
@@ -29,15 +28,6 @@ import java.util.List;
  * @author "Tobias Schulz"
  */
 public interface FreehalFile extends Comparable<FreehalFile> {
-
-	/**
-	 * Creates a new freehal file instance from a given path string.
-	 * 
-	 * @param path
-	 *        the path
-	 * @return a freehal file object
-	 */
-	public FreehalFile getFile(String path);
 
 	/**
 	 * Creates a new freehal file instance from a file which is a child of this
@@ -172,13 +162,6 @@ public interface FreehalFile extends Comparable<FreehalFile> {
 	 * @return the iterator
 	 */
 	public Iterable<String> readLines();
-
-	/**
-	 * Returns an list which contains all lines from the given file.
-	 * 
-	 * @return the iterator
-	 */
-	public List<String> readLinesAsList();
 
 	/**
 	 * Returns the content of the given file as a single string.

@@ -41,7 +41,7 @@ public final class Tags {
 	/** a logical or correlative conjunction */
 	public static final String LINKING = "linking";
 	/** a noun or a pronoun */
-	public static final String NOUN = "linking";
+	public static final String NOUN = "n";
 
 	private String category = null;
 	private String gender = null;
@@ -248,6 +248,20 @@ public final class Tags {
 			return QUESTIONWORD;
 		else
 			return category;
+	}
+
+	/**
+	 * Print word class and gender as tags file format.
+	 * 
+	 * @return a string in tags file format
+	 */
+	public String toTagsFormat() {
+		StringBuilder code = new StringBuilder();
+		if (category != null)
+			code.append("  type: ").append(category).append("\n");
+		if (gender != null)
+			code.append("  genus: ").append(gender).append("\n");
+		return code.toString();
 	}
 
 	@Override

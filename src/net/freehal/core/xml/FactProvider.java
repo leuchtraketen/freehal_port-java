@@ -14,31 +14,18 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.database;
+package net.freehal.core.xml;
 
-import net.freehal.core.util.FreehalFile;
-import net.freehal.core.xml.XmlFact;
+import java.util.List;
+import java.util.Set;
 
-/**
- * An interface for a class which iterates over given database (XML) files and
- * the facts inside these files and given the facts to implementations of
- * {@link DatabaseComponent}.
- * 
- * @author "Tobias Schulz"
- */
-public interface Database {
 
-	public void updateCache();
+public interface FactProvider {
 
-	public void updateCache(FreehalFile filename);
+	public Set<XmlFact> findFacts(XmlFact xfact);
 
-	public void addComponent(DatabaseComponent index);
+	public Set<XmlFact> findFacts(List<Word> words);
 
-	public interface DatabaseComponent {
-		void addToCache(XmlFact xfact);
+	public Set<XmlFact> findFacts(Word word);
 
-		void startUpdateCache();
-
-		void stopUpdateCache();
-	}
 }

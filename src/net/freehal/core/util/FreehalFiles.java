@@ -53,7 +53,7 @@ public class FreehalFiles {
 
 	private static final String NO_GENERAL_IMPL_FOUND = "There must be at least one "
 			+ "FreehalFile implementation " + "which is registered for all protocols!";
-	private static Map<String, FreehalFile> impls = new HashMap<String, FreehalFile>();
+	private static Map<String, Factory<FreehalFile, String>> impls = new HashMap<String, Factory<FreehalFile, String>>();
 
 	/**
 	 * Never used.
@@ -66,7 +66,7 @@ public class FreehalFiles {
 	 * 
 	 * @return the currently used {@link FreehalFile} implementations
 	 */
-	public static Map<String, FreehalFile> getImpls() {
+	public static Map<String, Factory<FreehalFile, String>> getImpls() {
 		return impls;
 	}
 
@@ -79,28 +79,28 @@ public class FreehalFiles {
 	 * @param fileImpl
 	 *        the {@link FreehalFile} implementation
 	 */
-	public static void add(String protocol, FreehalFile fileImpl) {
-		FreehalFiles.impls.put(protocol, fileImpl);
+	public static void add(String protocol, Factory<FreehalFile, String> fileImpl) {
+		if (fileImpl != null)
+			FreehalFiles.impls.put(protocol, fileImpl);
 	}
 
-	private static FreehalFile getImpl(String protocol, String path) {
+	private static Factory<FreehalFile, String> getImpl(String protocol, String path) {
+		if (!impls.containsKey(ALL_PROTOCOLS))
+			throw new IllegalArgumentException(NO_GENERAL_IMPL_FOUND);
+
 		for (final String protocol2 : impls.keySet()) {
 			if (!protocol2.equals(ALL_PROTOCOLS) && protocol2.equals(protocol)) {
 				return impls.get(protocol);
 			}
 		}
-		for (final String protocol2 : impls.keySet()) {
-			if (protocol2.equals(ALL_PROTOCOLS)) {
-				return impls.get(protocol);
-			}
-		}
-		throw new IllegalArgumentException(NO_GENERAL_IMPL_FOUND);
+
+		return impls.get(ALL_PROTOCOLS);
 	}
 
 	/**
-	 * Construct a new {@link FreehalFile} instance by using the implementation that
-	 * is mapped to the protocol found in the path string. If the protocol is
-	 * unknown or if there is no protocol in the path string, the standard
+	 * Construct a new {@link FreehalFile} instance by using the implementation
+	 * that is mapped to the protocol found in the path string. If the protocol
+	 * is unknown or if there is no protocol in the path string, the standard
 	 * implementation is used.
 	 * 
 	 * @param path
@@ -117,9 +117,9 @@ public class FreehalFiles {
 	}
 
 	/**
-	 * Construct a new {@link FreehalFile} instance by using the implementation that
-	 * is mapped to the given protocol string. If the protocol is unknown, the
-	 * standard implementation is used.
+	 * Construct a new {@link FreehalFile} instance by using the implementation
+	 * that is mapped to the given protocol string. If the protocol is unknown,
+	 * the standard implementation is used.
 	 * 
 	 * @param protocol
 	 *        to protocol to use
@@ -129,7 +129,7 @@ public class FreehalFiles {
 	 */
 	public static FreehalFile getFile(String protocol, String path) {
 		path = StringUtils.replace(path, "\\", "/");
-		final FreehalFile impl = FreehalFiles.getImpl(protocol, path);
-		return impl.getFile(path);
+		final Factory<FreehalFile, String> impl = FreehalFiles.getImpl(protocol, path);
+		return impl.newInstance(path);
 	}
 }

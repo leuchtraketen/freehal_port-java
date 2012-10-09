@@ -24,6 +24,7 @@ import java.util.Set;
 import net.freehal.core.pos.StandardTagger;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.pos.storage.TaggerCache;
+import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
 
@@ -97,9 +98,11 @@ public class GermanTagger extends StandardTagger {
 
 	@Override
 	protected Tags getBuiltinTags(String word) {
-		if (builtinPosTypes.containsKey(word))
+		if (builtinPosTypes.containsKey(word)) {
+			LogUtils.i("  found (builtin): " + builtinPosTypes.get(word));
+
 			return builtinPosTypes.get(word);
-		else
+		} else
 			return null;
 	}
 

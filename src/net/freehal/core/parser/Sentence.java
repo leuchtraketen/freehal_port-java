@@ -26,6 +26,7 @@ import net.freehal.core.pos.Tags;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
+import net.freehal.core.xml.SynonymProviders;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlFactReciever;
@@ -70,8 +71,11 @@ public class Sentence {
 			@Override
 			public void useXmlFact(XmlFact xfact, int countFacts, long start, FreehalFile filename,
 					int countFactsSoFar) {
-				sentence.setFact(xfact);
 				LogUtils.i("found fact: " + xfact);
+				xfact.insertSynonyms(SynonymProviders.getSynonymProvider());
+				xfact.toggle();
+				LogUtils.i("toggle fact: " + xfact);
+				sentence.setFact(xfact);
 			}
 
 		});

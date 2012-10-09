@@ -27,7 +27,7 @@ import java.io.File;
  * @author "Tobias Schulz"
  */
 public abstract class AbstractFreehalFile implements FreehalFile {
-	
+
 	/**
 	 * The corresponding standard {@link java.io.File} instance from the
 	 * standard library. It is at least used for the name/path management.
@@ -72,9 +72,6 @@ public abstract class AbstractFreehalFile implements FreehalFile {
 		else
 			return false;
 	}
-
-	@Override
-	public abstract FreehalFile getFile(String path);
 
 	@Override
 	public File getFile() {

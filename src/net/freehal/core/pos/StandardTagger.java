@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
@@ -138,8 +139,96 @@ public abstract class StandardTagger implements Tagger {
 	}
 
 	private Tags guess(String word) {
-		// TODO Automatisch generierter Methodenstub
-		return null;
+		int wordLength = word.length();
+		boolean wordIsLower = word.equals(word.toLowerCase());
+		LogUtils.i("  guess: " + word);
+
+		Map<String, Integer> ends = new HashMap<String, Integer>();
+		if (wordLength > 1)
+			ends.put(word.substring(wordLength - 1), 2);
+		if (wordLength > 2)
+			ends.put(word.substring(wordLength - 2), 6);
+		if (wordLength > 3)
+			ends.put(word.substring(wordLength - 3), 12);
+		if (wordLength > 4)
+			ends.put(word.substring(wordLength - 4), 8);
+		if (wordLength > 5)
+			ends.put(word.substring(wordLength - 5), 10);
+		if (wordLength > 6)
+			ends.put(word.substring(wordLength - 6), 12);
+		Map<String, Integer> begins = new HashMap<String, Integer>();
+		if (wordLength > 1)
+			begins.put(word.substring(0, 1), 1);
+		if (wordLength > 2)
+			begins.put(word.substring(0, 2), 2);
+		if (wordLength > 3)
+			begins.put(word.substring(0, 3), 3);
+
+		Map<String, Long> posToRating = new HashMap<String, Long>();
+		Map<String, Long> posToCount = new HashMap<String, Long>();
+
+		for (Map.Entry<String, Tags> entry : staticTags) {
+			final String valWord = entry.getKey();
+			final String valType = entry.getValue().getCategory();
+
+			if (valType != null) {
+				if (!valType.equals(Tags.NOUN) && !valType.equals(Tags.ADJECTIVE)
+						&& !valType.equals(Tags.VERB))
+					continue;
+				boolean valWordIsLower = valWord.equals(valWord.toLowerCase());
+
+				if ((wordIsLower && !valWordIsLower) || (!wordIsLower && valWordIsLower))
+					continue;
+
+				long rating = posToRating.containsKey(valType) ? posToRating.get(valType) : 0;
+				long count = posToCount.containsKey(valType) ? posToCount.get(valType) : 0;
+				for (Map.Entry<String, Integer> end : ends.entrySet()) {
+					if (valWord.endsWith(end.getKey())) {
+						rating += end.getValue();
+						count += 1;
+					}
+				}
+				for (Map.Entry<String, Integer> begin : begins.entrySet()) {
+					if (valWord.startsWith(begin.getKey())) {
+						rating += begin.getValue();
+						count += 1;
+					}
+				}
+				posToRating.put(valType, rating);
+				// posToRating.put(" + valType + ", " + rating + ");");
+				posToCount.put(valType, count);
+			}
+		}
+
+		String bestCategory = null;
+		long bestScore = 0;
+
+		for (Map.Entry<String, Long> iter : posToRating.entrySet()) {
+			final String category = iter.getKey();
+			long score = iter.getValue();
+			long count = posToCount.get(iter.getKey());
+			LogUtils.i("  -> part of speech: '" + category + "', rating: " + score + ", count: " + count);
+
+			score *= score;
+			score = 100 * score / count;
+
+			if (score > bestScore || bestScore == 0) {
+				bestScore = score;
+				bestCategory = category;
+			}
+
+			LogUtils.i("  -> part of speech: '" + category + "', rating: " + score + ", count: " + count);
+		}
+
+		Tags tags = null;
+		if (bestCategory != null) {
+			tags = new Tags(bestCategory, null);
+			staticTags.add(word, tags);
+			writeTagsTo(FreehalFiles.getFile("guessed.pos"), new Word(word, tags));
+			LogUtils.i("  guessed: " + tags);
+		}
+
+		return tags;
 	}
 
 	/**
@@ -152,9 +241,7 @@ public abstract class StandardTagger implements Tagger {
 			StringBuilder toAppend = new StringBuilder();
 
 			toAppend.append(word.getWord()).append(":\n");
-			toAppend.append(word).append(":\n");
-			toAppend.append("  type: ").append(word.getTags().getCategory()).append("\n");
-			toAppend.append("  genus: ").append(word.getTags().getGender()).append("\n");
+			toAppend.append(word.getTags().toTagsFormat());
 
 			LogUtils.i("write part of speech file: " + filename);
 			LogUtils.i(toAppend.toString());
@@ -190,9 +277,10 @@ public abstract class StandardTagger implements Tagger {
 	}
 
 	private Tags getStaticTags(final String word) {
-		if (staticTags.containsKey(word))
+		if (staticTags.containsKey(word)) {
+			LogUtils.i("  found (static): " + staticTags.get(word));
 			return staticTags.get(word);
-		else
+		} else
 			return null;
 	}
 
@@ -202,6 +290,7 @@ public abstract class StandardTagger implements Tagger {
 			final Tags tags = entry.getValue();
 
 			if (RegexUtils.ifind(word, regex)) {
+				LogUtils.i("  found (static): " + tags);
 				return tags;
 			}
 		}

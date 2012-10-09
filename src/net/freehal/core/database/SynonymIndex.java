@@ -24,12 +24,21 @@ import java.util.List;
 import java.util.Set;
 
 import net.freehal.core.util.StringUtils;
+import net.freehal.core.xml.SynonymProvider;
 import net.freehal.core.xml.Word;
+import net.freehal.core.xml.XmlFact;
+import net.freehal.core.xml.XmlObj;
+import net.freehal.core.xml.XmlText;
 
-public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
+public class SynonymIndex implements SynonymProvider, Database.DatabaseComponent {
 
 	List<Set<String>> map = new ArrayList<Set<String>>();
 
+	public SynonymIndex() {
+		readSynonyms();
+	}
+
+	@Override
 	public Collection<String> getSynonyms(final String text) {
 		for (final Set<String> synonyms : map) {
 			if (synonyms.contains(text))
@@ -38,6 +47,7 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 		return new HashSet<String>();
 	}
 
+	@Override
 	public Collection<Word> getSynonyms(final Word word) {
 		Collection<String> strings = getSynonyms(word.getWord());
 
@@ -48,7 +58,7 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 		return words;
 	}
 
-	public void add(String word1, String word2) {
+	public void addSynonyms(String word1, String word2) {
 		Integer index1 = null;
 		Integer index2 = null;
 		for (int i = 0; i < map.size(); ++i) {
@@ -71,11 +81,10 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 			map.get(index1).addAll(map.get(index2));
 			map.remove(index2);
 		}
-
 	}
 
-	public void write() {
-		DiskStorage.getCacheDirectory("database", "synonyms").getChild("synonyms.csv").write(this.print());
+	public void writeSynonyms() {
+		DirectoryUtils.getCacheDirectory("database", "synonyms").getChild("synonyms.csv").write(this.print());
 	}
 
 	private String print() {
@@ -86,8 +95,8 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 		return sb.toString();
 	}
 
-	public void read() {
-		Iterable<String> lines = DiskStorage.getCacheDirectory("database", "synonyms")
+	public void readSynonyms() {
+		Iterable<String> lines = DirectoryUtils.getCacheDirectory("database", "synonyms")
 				.getChild("synonyms.csv").readLines();
 		for (String line : lines) {
 			String[] csv = line.split("[|]");
@@ -96,4 +105,39 @@ public class SynonymMap implements net.freehal.core.xml.SynonymProvider {
 			map.add(set);
 		}
 	}
+
+	/**
+	 * Add a fact to the synonym cache.
+	 * 
+	 * @param xfact
+	 *        the fact to add
+	 */
+	public void addToCache(XmlFact xfact) {
+		// does this fact contain a synonym?
+		if (xfact.part("verb").matches(XmlText.fromText("=")) == 1) {
+			final XmlObj subject = xfact.part("subject");
+			final XmlObj object = xfact.part("object");
+			double countSubject = subject.countWords();
+			double countObject = object.countWords();
+
+			if (countSubject > 0 && countObject > 0) {
+				if ((countSubject == 1 || subject.matches(XmlText.fromText("(a)")) == 0)
+						&& (countObject == 1 || object.matches(XmlText.fromText("(a)")) == 0)) {
+
+					// it does!
+					this.addSynonyms(Word.join(" ", subject.getWords()), Word.join(" ", object.getWords()));
+				}
+			}
+		}
+	}
+
+	@Override
+	public void stopUpdateCache() {
+		// write the synonym cache files
+		this.writeSynonyms();
+		System.gc();
+	}
+
+	@Override
+	public void startUpdateCache() {}
 }

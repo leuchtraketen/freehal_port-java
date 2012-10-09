@@ -257,7 +257,7 @@ public class XmlList extends XmlObj {
 			for (XmlObj e : embedded) {
 				if (k++ > 0)
 					ss.append("|");
-				ss.append(e.printText());
+				ss.append(e.printStr());
 			}
 			ss.append("\"");
 		} else {
@@ -290,16 +290,16 @@ public class XmlList extends XmlObj {
 
 		StringBuilder ss = new StringBuilder();
 		if (name == "text" && embedded.size() == 1) {
-			ss.append(embedded.get(0).printStr());
+			ss.append(embedded.get(0).printText());
 		} else {
 			if (embedded.size() == 1) {
-				ss.append(embedded.get(0).printStr());
+				ss.append(embedded.get(0).printText());
 			} else if (embedded.size() > 1) {
 				int k;
 				for (k = 0; k < embedded.size(); ++k) {
 					if (k > 0)
 						ss.append(delem);
-					ss.append(embedded.get(k).printStr());
+					ss.append(embedded.get(k).printText());
 				}
 			}
 		}

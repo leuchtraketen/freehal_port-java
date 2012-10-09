@@ -21,12 +21,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.freehal.compat.sunjava.StandardFreehalFile;
+import net.freehal.compat.sunjava.StandardHttpClient;
 import net.freehal.compat.sunjava.StandardLogUtils;
 import net.freehal.core.answer.AnswerProvider;
 import net.freehal.core.answer.AnswerProviders;
-import net.freehal.core.database.DatabaseAnswerProvider;
 import net.freehal.core.database.Database;
-import net.freehal.core.database.DiskDatabase;
+import net.freehal.core.database.DatabaseAnswerProvider;
+import net.freehal.core.database.FactIndex;
+import net.freehal.core.database.StandardDatabase;
+import net.freehal.core.database.SynonymIndex;
 import net.freehal.core.filter.FactFilters;
 import net.freehal.core.filter.FilterNoNames;
 import net.freehal.core.filter.FilterNot;
@@ -39,10 +42,10 @@ import net.freehal.core.lang.Languages;
 import net.freehal.core.lang.german.GermanGrammar;
 import net.freehal.core.lang.german.GermanLanguage;
 import net.freehal.core.lang.german.GermanParser;
-import net.freehal.core.lang.german.GermanWording;
 import net.freehal.core.lang.german.GermanPredefinedAnswerProvider;
 import net.freehal.core.lang.german.GermanRandomAnswerProvider;
 import net.freehal.core.lang.german.GermanTagger;
+import net.freehal.core.lang.german.GermanWording;
 import net.freehal.core.parser.Parser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.pos.Tagger;
@@ -51,12 +54,18 @@ import net.freehal.core.pos.storage.TaggerCacheMemory;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.AbstractFreehalFile;
+import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.wording.Wording;
 import net.freehal.core.wording.Wordings;
+import net.freehal.core.xml.FactProviders;
+import net.freehal.core.xml.SynonymProviders;
+import net.freehal.plugin.wikipedia.GermanWikipedia;
+import net.freehal.plugin.wikipedia.WikipediaClient;
+import net.freehal.plugin.wikipedia.WikipediaPlugin;
 
 /**
  * This class is a reference implementation of a simple console user interface.
@@ -66,9 +75,11 @@ import net.freehal.core.wording.Wordings;
  */
 public class ShellTest {
 	private static void init() {
-		// use java.io.File for all protocols
-		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, new StandardFreehalFile(null));
-		FreehalFiles.add("sqlite", new FakeFreehalFile(null));
+		// set the virtual file implementations
+		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
+		FreehalFiles.add("sqlite", FakeFreehalFile.newFactory());
+		FreehalFiles.add("http", StandardHttpClient.newFactory());
+		FreehalFiles.add("wikipedia", WikipediaClient.newFactory());
 
 		// how and where to print the log
 		// example: all debug messages from the class "DiskDatabase" and the sub
@@ -82,8 +93,8 @@ public class ShellTest {
 		LogUtils.set(log);
 
 		// set the language and the base directory (if executed in "bin/", the
-		// base directory is ".."). Freehal expects a "lang_xy" directory there
-		// which contains the database files.
+		// base directory is ".."). The "StandardStorage" implementation expects
+		// a "lang_xy" directory there which contains the database files.
 		Languages.setLanguage(new GermanLanguage());
 		Storages.setStorage(new StandardStorage(".."));
 
@@ -106,20 +117,34 @@ public class ShellTest {
 		Taggers.setTagger(tagger);
 
 		// how to phrase the output sentences
-		// (also possible: EnglishPhrase, GermanPhrase, FakePhrase)
+		// (also possible: EnglishWording, GermanWording, FakeWording)
 		Wording phrase = new GermanWording();
 		Wordings.setWording(phrase);
 
-		// initialize the database
-		// (also possible: DiskDatabase, FakeDatabase)
-		Database database = new DiskDatabase();
+		// we need to store facts...
+		FactIndex facts = new FactIndex();
+		// ... and synonyms
+		SynonymIndex synonyms = new SynonymIndex();
+		// add both to their utility classes
+		FactProviders.addFactProvider(facts);
+		SynonymProviders.addSynonymProvider(synonyms);
+		// both are components of a database!
+		Database database = new StandardDatabase();
+		database.addComponent(facts);
+		database.addComponent(synonyms);
+		// update the cache of that database...
 		// while updating the cache, a cache_xy/ directory will be filled with
 		// information from the database files in lang_xy/
 		database.updateCache();
 
+		// the Wikipedia plugin is a FactProvider too!
+		WikipediaPlugin wikipedia = new WikipediaPlugin(new GermanWikipedia());
+		FactProviders.addFactProvider(wikipedia);
+
 		// Freehal has different ways to find an answer for an input
 		AnswerProviders.add(new GermanPredefinedAnswerProvider());
-		AnswerProviders.add(new DatabaseAnswerProvider(database));
+		AnswerProviders.add(wikipedia);
+		AnswerProviders.add(new DatabaseAnswerProvider(facts));
 		AnswerProviders.add(new GermanRandomAnswerProvider());
 		AnswerProviders.add(new FakeAnswerProvider());
 
@@ -170,13 +195,17 @@ class FakeAnswerProvider implements AnswerProvider {
 
 class FakeFreehalFile extends AbstractFreehalFile {
 
-	public FakeFreehalFile(File file) {
+	private FakeFreehalFile(File file) {
 		super(file);
 	}
 
-	@Override
-	public FreehalFile getFile(String path) {
-		return new FakeFreehalFile(new File(path));
+	public static Factory<FreehalFile, String> newFactory() {
+		return new Factory<FreehalFile, String>() {
+			@Override
+			public FreehalFile newInstance(String b) {
+				return new FakeFreehalFile(new File(b));
+			}
+		};
 	}
 
 	@Override
@@ -221,11 +250,6 @@ class FakeFreehalFile extends AbstractFreehalFile {
 
 	@Override
 	public Iterable<String> readLines() {
-		return null;
-	}
-
-	@Override
-	public List<String> readLinesAsList() {
 		return null;
 	}
 
