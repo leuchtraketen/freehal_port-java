@@ -69,7 +69,7 @@ public class Sentence {
 		XmlUtils.readXmlFacts(stream, null, new XmlFactReciever() {
 
 			@Override
-			public void useXmlFact(XmlFact xfact, int countFacts, long start, FreehalFile filename,
+			public void useXmlFact(XmlFact xfact, long start, FreehalFile filename,
 					int countFactsSoFar) {
 				LogUtils.i("found fact: " + xfact);
 				xfact.insertSynonyms(SynonymProviders.getSynonymProvider());

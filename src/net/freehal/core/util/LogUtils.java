@@ -16,6 +16,9 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * An utility class for logging.
  * 
@@ -27,6 +30,8 @@ public class LogUtils {
 	public static final String WARNING = "warning";
 	public static final String INFO = "info";
 	public static final String DEBUG = "debug";
+
+	private static final List<ProgressListener> progressListeners = new ArrayList<ProgressListener>();
 
 	/**
 	 * The current {@link LogUtilsImpl} implementation.
@@ -180,5 +185,37 @@ public class LogUtils {
 	public static LogUtilsImpl resetTemporaryFilters() {
 		instance.resetTemporaryFilters();
 		return instance;
+	}
+
+	public static void updateProgress(double d, double e) {
+		if (e > 0) {
+			for (ProgressListener listener : progressListeners) {
+				listener.onProgressUpdate(d, e);
+			}
+		}
+	}
+
+	public static void addProgressListener(ProgressListener listener) {
+		progressListeners.add(listener);
+	}
+
+	public static void startProgress() {
+		for (ProgressListener listener : progressListeners) {
+			listener.onProgressBeginning();
+		}
+	}
+
+	public static void stopProgress() {
+		for (ProgressListener listener : progressListeners) {
+			listener.onProgressEnd();
+		}
+	}
+
+	public static interface ProgressListener {
+		void onProgressUpdate(double d, double e);
+
+		void onProgressEnd();
+
+		void onProgressBeginning();
 	}
 }

@@ -49,6 +49,12 @@ public class TagContainerDisk implements TagContainer {
 	}
 
 	@Override
+	public boolean add(FreehalFile filename) {
+		files.add(filename);
+		return true;
+	}
+
+	@Override
 	public boolean containsKey(String word) {
 		return get(word) != null;
 	}
@@ -87,12 +93,6 @@ public class TagContainerDisk implements TagContainer {
 				return tags;
 		}
 		return null;
-	}
-
-	@Override
-	public boolean add(FreehalFile filename) {
-		files.add(filename);
-		return true;
 	}
 
 }

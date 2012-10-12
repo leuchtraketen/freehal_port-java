@@ -295,7 +295,6 @@ public class XmlUtils {
 		long start = System.currentTimeMillis() / 1000;
 
 		Iterator<String> lines = xmlIterator.iterator();
-		int countFacts = 1; // how to do that with an iterator?
 
 		int countFactsSoFar = 0;
 		while (lines.hasNext()) {
@@ -304,7 +303,7 @@ public class XmlUtils {
 				if (filename != null)
 					xfact.setFilename(filename);
 
-				reciever.useXmlFact(xfact, countFacts, start, filename, countFactsSoFar);
+				reciever.useXmlFact(xfact, start, filename, countFactsSoFar);
 				++countFactsSoFar;
 			}
 		}

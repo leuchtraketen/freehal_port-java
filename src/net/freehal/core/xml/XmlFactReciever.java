@@ -36,8 +36,6 @@ public interface XmlFactReciever {
 	 *      XmlFactReciever)
 	 * @param xfact
 	 *        the fact as XmlFact object
-	 * @param countFacts
-	 *        the amount of facts in the input source
 	 * @param start
 	 *        the timestamp when we started reading
 	 * @param filename
@@ -46,7 +44,6 @@ public interface XmlFactReciever {
 	 * @param countFactsSoFar
 	 *        how many facts have been read so far
 	 */
-	public void useXmlFact(XmlFact xfact, int countFacts, long start, FreehalFile filename,
-			int countFactsSoFar);
+	public void useXmlFact(XmlFact xfact, long start, FreehalFile filename, int countFactsSoFar);
 
 }

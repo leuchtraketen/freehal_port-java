@@ -35,6 +35,10 @@ public class StandardDatabase implements Database {
 	private Map<String, Integer> cacheFiles;
 	private List<DatabaseComponent> components;
 
+	private double countFilesCurrent = 0;
+	private double countFilesMax = 0;
+	private double countFactsCurrent = 0;
+
 	public StandardDatabase() {
 		cacheFiles = new HashMap<String, Integer>();
 		components = new ArrayList<DatabaseComponent>();
@@ -85,21 +89,37 @@ public class StandardDatabase implements Database {
 			LogUtils.i("update cache (directory): " + databaseFile);
 
 			FreehalFile[] files = databaseFile.listFiles();
-			for (FreehalFile file : files) {
-				LogUtils.i("file:" + file);
-				if (file.isFile() && file.getName().contains(".xml")) {
-					this.updateCache(file);
+
+			for (FreehalFile file : files)
+				if (file.isFile() && file.getName().contains(".xml"))
+					++countFilesMax;
+
+			if (countFilesMax > 0) {
+				LogUtils.startProgress();
+				LogUtils.updateProgress(countFilesCurrent, countFilesMax);
+				for (FreehalFile file : files) {
+					LogUtils.i("file:" + file);
+					if (file.isFile() && file.getName().contains(".xml")) {
+						this.updateCache(file);
+					}
 				}
+				LogUtils.updateProgress(countFilesMax, countFilesMax);
+				LogUtils.stopProgress();
 			}
 		}
 
 		else if (databaseFile.isFile()) {
+
+			++countFilesCurrent;
+
 			if (cacheFiles.containsKey(databaseFile.getName())
 					&& cacheFiles.get(databaseFile.getName()) == (int) databaseFile.length()) {
 				LogUtils.i("cache is up to date (file): " + databaseFile);
 
 			} else {
 				LogUtils.i("update cache (file): " + databaseFile);
+
+				final double countFactsThisFile = countFacts(databaseFile);
 
 				final Iterable<String> xmlInput = databaseFile.readLines();
 
@@ -121,8 +141,12 @@ public class StandardDatabase implements Database {
 					// read the xml data and build XmlFact objects
 					XmlUtils.readXmlFacts(xmlPre, databaseFile, new XmlFactReciever() {
 						@Override
-						public void useXmlFact(XmlFact xfact, int countFacts, long start,
-								FreehalFile filename, int countFactsSoFar) {
+						public void useXmlFact(XmlFact xfact, long start, FreehalFile filename,
+								int countFactsSoFar) {
+
+							LogUtils.updateProgress(countFactsSoFar + countFactsCurrent,
+									(countFactsThisFile + countFactsCurrent) / countFilesCurrent
+											* countFilesMax);
 
 							// update the caches
 							for (DatabaseComponent updater : components) {
@@ -146,7 +170,19 @@ public class StandardDatabase implements Database {
 				// ... and mark this database file as done!
 				cacheFiles.put(databaseFile.getName(), (int) databaseFile.length());
 				writeMetadata();
+
+				countFactsCurrent += countFactsThisFile;
 			}
 		}
+	}
+
+	private int countFacts(FreehalFile databaseFile) {
+		int count = 0;
+		final Iterable<String> xmlInput = databaseFile.readLines();
+		for (String line : xmlInput) {
+			if (line.contains("<fact"))
+				++count;
+		}
+		return count;
 	}
 }

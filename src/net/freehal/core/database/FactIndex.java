@@ -103,7 +103,7 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 
 			XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
 				@Override
-				public void useXmlFact(XmlFact xfact, int countFacts, long start, FreehalFile filename,
+				public void useXmlFact(XmlFact xfact, long start, FreehalFile filename,
 						int countFactsSoFar) {
 
 					list.add(xfact);

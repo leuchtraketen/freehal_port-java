@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.freehal.core.parser.Sentence;
+import net.freehal.core.util.LogUtils;
 
 /**
  * An utility class for holding a list of currently used {@link AnswerProvider}
@@ -57,6 +58,7 @@ public class AnswerProviders {
 		for (AnswerProvider a : providers) {
 			if (answer == null) {
 				answer = a.getAnswer(input);
+				LogUtils.i("AnswerProvider: " + a + ", output=\"" + (answer == null ? "null" : answer) + "\"");
 
 				Runtime.getRuntime().gc();
 			}
