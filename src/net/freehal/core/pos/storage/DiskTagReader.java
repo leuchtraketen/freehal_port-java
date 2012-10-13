@@ -18,6 +18,7 @@ package net.freehal.core.pos.storage;
 
 import net.freehal.core.pos.Tags;
 import net.freehal.core.storage.Storages;
+import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -27,13 +28,13 @@ import java.util.Set;
 
 import net.freehal.core.util.RegexUtils;
 
-public class TagContainerDisk implements TagContainer {
+public class DiskTagReader implements TagContainer {
 
 	@SuppressWarnings("unused")
 	private String name;
 	private Set<FreehalFile> files;
 
-	public TagContainerDisk(String name) {
+	public DiskTagReader(String name) {
 		this.name = name;
 		files = new HashSet<FreehalFile>();
 	}
@@ -95,4 +96,12 @@ public class TagContainerDisk implements TagContainer {
 		return null;
 	}
 
+	public static Factory<TagContainer, String> newFactory() {
+		return new Factory<TagContainer, String>() {
+			@Override
+			public TagContainer newInstance(String b) {
+				return new DiskTagReader(b);
+			}
+		};
+	}
 }

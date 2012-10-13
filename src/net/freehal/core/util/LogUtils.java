@@ -19,6 +19,8 @@ package net.freehal.core.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.freehal.core.storage.Storages;
+
 /**
  * An utility class for logging.
  * 
@@ -32,6 +34,8 @@ public class LogUtils {
 	public static final String DEBUG = "debug";
 
 	private static final List<ProgressListener> progressListeners = new ArrayList<ProgressListener>();
+	private static Progress topProgress = new TopProgress();
+	private static Progress currentProgress = null;
 
 	/**
 	 * The current {@link LogUtilsImpl} implementation.
@@ -187,35 +191,349 @@ public class LogUtils {
 		return instance;
 	}
 
-	public static void updateProgress(double d, double e) {
-		if (e > 0) {
-			for (ProgressListener listener : progressListeners) {
-				listener.onProgressUpdate(d, e);
-			}
+	private static void updateProgressListeners(String text) {
+		for (ProgressListener listener : progressListeners) {
+			listener.onProgressUpdate(topProgress.getCurrent(), topProgress.getMax(), text);
 		}
+	}
+
+	public static void updateProgress(double d, double e) {
+		updateProgress(e, d, null);
+	}
+
+	public static void updateProgress(double d, double e, String text) {
+		if (e > 0) {
+			currentProgress.updateProgress(d, e);
+		}
+		updateProgressListeners(text);
+	}
+
+	public static void updateProgress() {
+		updateProgress(null);
+	}
+
+	public static void updateProgress(String text) {
+		currentProgress.updateProgress();
+		updateProgressListeners(text);
 	}
 
 	public static void addProgressListener(ProgressListener listener) {
 		progressListeners.add(listener);
 	}
 
-	public static void startProgress() {
-		for (ProgressListener listener : progressListeners) {
-			listener.onProgressBeginning();
+	public static void startProgress(double current, double step, double max) {
+		startProgress(new FixedProgress(current, step, max));
+	}
+
+	public static void startProgress(String componentName) {
+		startProgress(new FlexibleProgress(componentName));
+		updateProgressListeners(componentName);
+	}
+
+	private static void startProgress(Progress step) {
+		if (currentProgress == null) {
+			step.setParent(topProgress);
+			topProgress.setChild(step);
+			currentProgress = step;
+			for (ProgressListener listener : progressListeners) {
+				listener.onProgressBeginning();
+			}
+		} else {
+			step.setParent(currentProgress);
+			currentProgress.setChild(step);
+			currentProgress = step;
+			for (ProgressListener listener : progressListeners) {
+				listener.onSubProgressBeginning();
+			}
 		}
 	}
 
 	public static void stopProgress() {
-		for (ProgressListener listener : progressListeners) {
-			listener.onProgressEnd();
+		if (currentProgress.getParent() == topProgress) {
+			for (ProgressListener listener : progressListeners) {
+				listener.onProgressEnd();
+			}
+			currentProgress = null;
+		} else {
+			for (ProgressListener listener : progressListeners) {
+				listener.onSubProgressEnd();
+			}
+			currentProgress.updateToParent();
+			currentProgress.getParent().setChild(null);
+			currentProgress = currentProgress.getParent();
 		}
 	}
 
 	public static interface ProgressListener {
-		void onProgressUpdate(double d, double e);
+		void onProgressUpdate(double d, double e, String text);
+
+		void onProgressBeginning();
 
 		void onProgressEnd();
 
-		void onProgressBeginning();
+		void onSubProgressBeginning();
+
+		void onSubProgressEnd();
+	}
+
+	public static interface Progress {
+		void updateProgress();
+
+		void updateProgress(double d, double e);
+
+		double getMax();
+
+		double getCurrent();
+
+		Progress getParent();
+
+		void setParent(Progress parent);
+
+		Progress getChild();
+
+		void setChild(Progress parent);
+
+		void updateToParent();
+
+		void updateFromChild();
+
+	}
+
+	public static class FixedProgress implements Progress {
+
+		private double max = 1;
+		private double step = 0.1;
+		private double current = 0;
+		private Progress parent = null;
+		private Progress child = null;
+
+		public FixedProgress(double current, double step, double max) {
+			this.current = current;
+			this.step = step;
+			this.max = max;
+		}
+
+		@Override
+		public Progress getParent() {
+			return parent;
+		}
+
+		@Override
+		public void setParent(Progress parent) {
+			this.parent = parent;
+		}
+
+		@Override
+		public Progress getChild() {
+			return child;
+		}
+
+		@Override
+		public void setChild(Progress child) {
+			this.child = child;
+		}
+
+		@Override
+		public void updateProgress() {
+			current += step;
+		}
+
+		@Override
+		public void updateProgress(double d, double e) {
+			current = max / e * d;
+		}
+
+		@Override
+		public double getMax() {
+			if (child != null)
+				return max; // + child.getMax();
+			else
+				return max;
+		}
+
+		@Override
+		public double getCurrent() {
+			if (child != null)
+				return current + step * child.getCurrent() / child.getMax();
+			else
+				return current;
+			/*
+			 * if (false) LogUtils.i("FixedProgress: current=" + current + " + "
+			 * + ((child != null) ? (step * child.getCurrent() / child.getMax())
+			 * : 0) + ", max=" + max + ", step=" + step); if (child != null)
+			 * return current + step * child.getCurrent() / child.getMax(); else
+			 * return current;
+			 */
+		}
+
+		@Override
+		public void updateToParent() {
+			parent.updateFromChild();
+		}
+
+		@Override
+		public void updateFromChild() {
+			updateProgress();
+		}
+	}
+
+	public static class FlexibleProgress implements Progress {
+
+		private final String name;
+		private final double averageMax;
+
+		private double max = 2;
+		private double step = 1;
+		private double current = 0;
+		private Progress parent = null;
+		private Progress child = null;
+
+		public FlexibleProgress(String name) {
+			this.name = name;
+
+			final String maxStr = Storages.getLanguageDirectory().getChild("progress/" + name).read();
+			try {
+				this.max = Double.parseDouble(maxStr);
+
+			} catch (Exception ex) {
+				// NumberFormatException and NullPointerException!
+				this.max = 1;
+				LogUtils.e(ex);
+			}
+			averageMax = this.max;
+		}
+
+		@Override
+		public void updateProgress() {
+			current += step;
+			if (current >= max) {
+				max = max * 2;
+			}
+		}
+
+		@Override
+		public void updateProgress(double d, double e) {
+			if (max < e) {
+				max = e;
+			}
+			current = max / e * d;
+		}
+
+		@Override
+		public double getMax() {
+			if (child != null)
+				return max + child.getMax();
+			else
+				return max;
+		}
+
+		@Override
+		public double getCurrent() {
+			if (child != null)
+				return current + child.getCurrent();
+			else
+				return current;
+		}
+
+		@Override
+		public Progress getParent() {
+			return parent;
+		}
+
+		@Override
+		public void setParent(Progress parent) {
+			this.parent = parent;
+		}
+
+		@Override
+		public void updateToParent() {
+			if (averageMax == 1)
+				Storages.getLanguageDirectory().getChild("progress/" + name).write(max + "");
+			else
+				Storages.getLanguageDirectory().getChild("progress/" + name)
+						.write(((averageMax * 2 + max) / 3) + "");
+			parent.updateProgress();
+		}
+
+		@Override
+		public Progress getChild() {
+			return child;
+		}
+
+		@Override
+		public void setChild(Progress child) {
+			this.child = child;
+		}
+
+		@Override
+		public void updateFromChild() {
+			if (child.getMax() != step) {
+				max *= child.getMax() / step;
+				current *= child.getMax() / step;
+				step = child.getMax();
+			}
+			updateProgress();
+		}
+	}
+
+	public static class TopProgress implements Progress {
+
+		private Progress step = null;
+
+		@Override
+		public Progress getParent() {
+			return this;
+		}
+
+		@Override
+		public void setParent(Progress parent) {
+			// this is the root progress!
+		}
+
+		@Override
+		public void updateToParent() {
+			// this is the root progress!
+		}
+
+		@Override
+		public void updateProgress() {
+			// this is the root progress!
+		}
+
+		@Override
+		public void updateProgress(double d, double e) {
+			// this is the root progress!
+		}
+
+		@Override
+		public double getMax() {
+			if (step != null)
+				return step.getMax();
+			else
+				return 1;
+		}
+
+		@Override
+		public double getCurrent() {
+			if (step != null)
+				return step.getCurrent();
+			else
+				return 1;
+		}
+
+		@Override
+		public Progress getChild() {
+			return step;
+		}
+
+		@Override
+		public void setChild(Progress child) {
+			this.step = child;
+		}
+
+		@Override
+		public void updateFromChild() {
+			// this is the root progress!
+		}
 	}
 }

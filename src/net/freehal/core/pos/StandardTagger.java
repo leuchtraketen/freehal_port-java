@@ -17,15 +17,15 @@
 package net.freehal.core.pos;
 
 import net.freehal.core.pos.storage.TagContainer;
-import net.freehal.core.pos.storage.TagListMemory;
-import net.freehal.core.pos.storage.TaggerCache;
-import net.freehal.core.pos.storage.TaggerCacheDisk;
+import net.freehal.core.pos.storage.MemoryTagList;
+import net.freehal.core.pos.storage.MemoryTagMap;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.FreehalFile;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
@@ -49,19 +49,19 @@ public abstract class StandardTagger implements Tagger {
 	 * @param storage
 	 *        the cache to use
 	 */
-	public StandardTagger(TaggerCache storage) {
-		staticTags = storage.newContainer("staticTags");
-		regexTags = new TagListMemory();
+	public StandardTagger(Factory<TagContainer, String> storage) {
+		staticTags = storage.newInstance("staticTags");
+		regexTags = new MemoryTagList();
 		togglemap = new HashMap<String, String>();
 	}
 
 	/**
-	 * Construct a new tagger instance by using an instance of
+	 * Construct a new tagger insbtance by using an instance of
 	 * {@link TaggerCacheDisk} as tagger cache.
 	 */
 	public StandardTagger() {
-		staticTags = new TaggerCacheDisk().newContainer("staticTags");
-		regexTags = new TagListMemory();
+		staticTags = MemoryTagMap.newFactory().newInstance("staticTags");
+		regexTags = new MemoryTagList();
 		togglemap = new HashMap<String, String>();
 	}
 

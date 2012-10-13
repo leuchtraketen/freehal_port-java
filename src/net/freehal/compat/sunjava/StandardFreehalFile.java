@@ -19,12 +19,10 @@ package net.freehal.compat.sunjava;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -114,8 +112,8 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 		LogUtils.d("reading line by line (via iterator): " + this.getAbsolutePath());
 		Iterable<String> iterator = null;
 		try {
-			FileInputStream in = new FileInputStream(this.getFile());
-			iterator = new BufferedReaderIterator(new BufferedReader(new InputStreamReader(in)));
+			iterator = new BufferedReaderIterator(new BufferedReader(new FileReader(this.getFile()),
+					128 * 1024));
 
 		} catch (Exception e) {
 			LogUtils.e(e.getMessage());
@@ -253,8 +251,6 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 
 				@Override
 				public boolean hasNext() {
-					// LogUtils.d("FileUtilsStandard.BufferedReaderIterator("+r+").hasNext() = "
-					// + !end);
 					return !end;
 				}
 
@@ -263,16 +259,12 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 					String next = null;
 					try {
 						next = r.readLine();
-						// LogUtils.d("FileUtilsStandard.BufferedReaderIterator("+r+").next() = "
-						// + next);
 					} catch (IOException e) {
 						LogUtils.e(e.getMessage());
 					}
 					if (next == null) {
 						end = true;
 						next = "";
-						// LogUtils.d("FileUtilsStandard.BufferedReaderIterator("+r+").next() = "
-						// + next + " (end!)");
 					}
 					return next;
 				}

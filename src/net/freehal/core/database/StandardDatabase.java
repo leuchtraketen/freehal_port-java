@@ -35,10 +35,6 @@ public class StandardDatabase implements Database {
 	private Map<String, Integer> cacheFiles;
 	private List<DatabaseComponent> components;
 
-	private double countFilesCurrent = 0;
-	private double countFilesMax = 0;
-	private double countFactsCurrent = 0;
-
 	public StandardDatabase() {
 		cacheFiles = new HashMap<String, Integer>();
 		components = new ArrayList<DatabaseComponent>();
@@ -90,27 +86,25 @@ public class StandardDatabase implements Database {
 
 			FreehalFile[] files = databaseFile.listFiles();
 
+			double countFiles = 0;
 			for (FreehalFile file : files)
 				if (file.isFile() && file.getName().contains(".xml"))
-					++countFilesMax;
+					++countFiles;
 
-			if (countFilesMax > 0) {
-				LogUtils.startProgress();
-				LogUtils.updateProgress(countFilesCurrent, countFilesMax);
+			if (countFiles > 0) {
+				LogUtils.startProgress(0, 1, countFiles);
 				for (FreehalFile file : files) {
 					LogUtils.i("file:" + file);
 					if (file.isFile() && file.getName().contains(".xml")) {
 						this.updateCache(file);
+						LogUtils.updateProgress();
 					}
 				}
-				LogUtils.updateProgress(countFilesMax, countFilesMax);
 				LogUtils.stopProgress();
 			}
 		}
 
 		else if (databaseFile.isFile()) {
-
-			++countFilesCurrent;
 
 			if (cacheFiles.containsKey(databaseFile.getName())
 					&& cacheFiles.get(databaseFile.getName()) == (int) databaseFile.length()) {
@@ -120,6 +114,7 @@ public class StandardDatabase implements Database {
 				LogUtils.i("update cache (file): " + databaseFile);
 
 				final double countFactsThisFile = countFacts(databaseFile);
+				LogUtils.startProgress(0, 1, countFactsThisFile);
 
 				final Iterable<String> xmlInput = databaseFile.readLines();
 
@@ -144,9 +139,7 @@ public class StandardDatabase implements Database {
 						public void useXmlFact(XmlFact xfact, long start, FreehalFile filename,
 								int countFactsSoFar) {
 
-							LogUtils.updateProgress(countFactsSoFar + countFactsCurrent,
-									(countFactsThisFile + countFactsCurrent) / countFilesCurrent
-											* countFilesMax);
+							LogUtils.updateProgress();
 
 							// update the caches
 							for (DatabaseComponent updater : components) {
@@ -171,7 +164,7 @@ public class StandardDatabase implements Database {
 				cacheFiles.put(databaseFile.getName(), (int) databaseFile.length());
 				writeMetadata();
 
-				countFactsCurrent += countFactsThisFile;
+				LogUtils.stopProgress();
 			}
 		}
 	}

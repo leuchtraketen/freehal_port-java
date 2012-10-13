@@ -21,8 +21,9 @@ import java.util.Iterator;
 import java.util.Map;
 
 import net.freehal.core.pos.Tags;
+import net.freehal.core.util.Factory;
 
-public class TagMapMemory extends TagContainerMemory {
+public class MemoryTagMap extends MemoryTagContainer {
 
 	Map<String, Tags> map = new HashMap<String, Tags>();
 
@@ -44,5 +45,14 @@ public class TagMapMemory extends TagContainerMemory {
 	@Override
 	public Tags get(String word) {
 		return map.get(word);
+	}
+
+	public static Factory<TagContainer, String> newFactory() {
+		return new Factory<TagContainer, String>() {
+			@Override
+			public TagContainer newInstance(String b) {
+				return new MemoryTagMap();
+			}
+		};
 	}
 }

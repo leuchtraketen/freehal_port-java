@@ -50,7 +50,7 @@ import net.freehal.core.parser.Parser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.pos.Tagger;
 import net.freehal.core.pos.Taggers;
-import net.freehal.core.pos.storage.TaggerCacheMemory;
+import net.freehal.core.pos.storage.MemoryTagMap;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.AbstractFreehalFile;
@@ -98,17 +98,24 @@ public class ShellTest {
 		Languages.setLanguage(new GermanLanguage());
 		Storages.setStorage(new StandardStorage(".."));
 
+		// now language and filesystem stuff are ready!
+		LogUtils.startProgress("init");
+
+		LogUtils.updateProgress("set up grammar");
+
 		// initialize the grammar
 		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
 		Grammar grammar = new GermanGrammar();
 		grammar.readGrammar(FreehalFiles.getFile("grammar.txt"));
 		Grammars.setGrammar(grammar);
 
+		LogUtils.startProgress("set up part of speech tagger");
+
 		// initialize the part of speech tagger
 		// (also possible: EnglishTagger, GermanTagger, FakeTagger)
 		// the parameter is either a TaggerCacheMemory (faster, higher memory
 		// usage) or a TaggerCacheDisk (slower, less memory usage)
-		Tagger tagger = new GermanTagger(new TaggerCacheMemory());
+		Tagger tagger = new GermanTagger(MemoryTagMap.newFactory());
 		tagger.readTagsFrom(FreehalFiles.getFile("guessed.pos"));
 		tagger.readTagsFrom(FreehalFiles.getFile("brain.pos"));
 		tagger.readTagsFrom(FreehalFiles.getFile("memory.pos"));
@@ -116,10 +123,14 @@ public class ShellTest {
 		tagger.readToggleWordsFrom(FreehalFiles.getFile("toggle.csv"));
 		Taggers.setTagger(tagger);
 
+		LogUtils.stopProgress();
+
 		// how to phrase the output sentences
 		// (also possible: EnglishWording, GermanWording, FakeWording)
 		Wording phrase = new GermanWording();
 		Wordings.setWording(phrase);
+
+		LogUtils.startProgress("set up database");
 
 		// we need to store facts...
 		FactIndex facts = new FactIndex();
@@ -137,6 +148,8 @@ public class ShellTest {
 		// information from the database files in lang_xy/
 		database.updateCache();
 
+		LogUtils.stopProgress();
+
 		// the Wikipedia plugin is a FactProvider too!
 		WikipediaPlugin wikipedia = new WikipediaPlugin(new GermanWikipedia());
 		FactProviders.addFactProvider(wikipedia);
@@ -152,6 +165,8 @@ public class ShellTest {
 		// database
 		FactFilters.getInstance().add(new FilterNot()).add(new FilterNoNames()).add(new FilterQuestionWho())
 				.add(new FilterQuestionWhat()).add(new FilterQuestionExtra());
+
+		LogUtils.stopProgress();
 	}
 
 	public static void main(String[] args) {

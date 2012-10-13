@@ -23,7 +23,7 @@ import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 
-public abstract class TagContainerMemory implements TagContainer {
+public abstract class MemoryTagContainer implements TagContainer {
 
 	public boolean add(final FreehalFile filename) {
 

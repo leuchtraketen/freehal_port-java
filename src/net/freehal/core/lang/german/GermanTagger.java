@@ -23,7 +23,8 @@ import java.util.Set;
 
 import net.freehal.core.pos.StandardTagger;
 import net.freehal.core.pos.Tags;
-import net.freehal.core.pos.storage.TaggerCache;
+import net.freehal.core.pos.storage.TagContainer;
+import net.freehal.core.util.Factory;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.Word;
@@ -36,7 +37,7 @@ public class GermanTagger extends StandardTagger {
 	Set<String> customNames = new HashSet<String>();
 	Map<String, Tags> builtinPosTypes = new HashMap<String, Tags>();
 
-	public GermanTagger(TaggerCache container) {
+	public GermanTagger(Factory<TagContainer, String> container) {
 		super(container);
 
 		for (String s : GermanBuiltinData.builtinEntityEnds.split(";")) {
