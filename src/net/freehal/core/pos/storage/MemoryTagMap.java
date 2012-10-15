@@ -22,6 +22,7 @@ import java.util.Map;
 
 import net.freehal.core.pos.Tags;
 import net.freehal.core.util.Factory;
+import net.freehal.core.util.FreehalFile;
 
 public class MemoryTagMap extends MemoryTagContainer {
 
@@ -30,6 +31,11 @@ public class MemoryTagMap extends MemoryTagContainer {
 	@Override
 	public void add(String word, Tags tags) {
 		map.put(word, tags);
+	}
+
+	@Override
+	public void add(String word, Tags tags, FreehalFile from) {
+		add(word, tags);
 	}
 
 	@Override

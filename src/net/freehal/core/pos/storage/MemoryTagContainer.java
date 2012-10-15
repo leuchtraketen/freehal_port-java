@@ -22,6 +22,7 @@ import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
+import net.freehal.core.util.StringUtils;
 
 public abstract class MemoryTagContainer implements TagContainer {
 
@@ -29,34 +30,22 @@ public abstract class MemoryTagContainer implements TagContainer {
 
 		LogUtils.i("read part of speech file: " + filename);
 
-		String word = null;
-		Tags tags = null;
+		int countOfLines = Storages.inLanguageDirectory(filename).countLines();
+		LogUtils.startProgress(0, 1, countOfLines);
+		LogUtils.updateProgress("read part of speech file");
+
 		int n = 0;
 		Iterable<String> lines = Storages.inLanguageDirectory(filename).readLines();
 		for (String line : lines) {
 			line = RegexUtils.trimRight(line, "\\s");
 
-			if (line.endsWith(":")) {
-				if (word != null && tags != null) {
-					this.add(word, tags);
-					word = null;
-					tags = null;
-				}
+			LogUtils.updateProgress();
 
-				line = RegexUtils.trim(line, ":\\s");
-				word = line;
-			} else if (line.startsWith(" ")) {
-				line = RegexUtils.trim(line, ":,;\\s");
-				if (line.startsWith("type")) {
-					line = line.substring(4);
-					line = RegexUtils.trimLeft(line, ":\\s");
-					line = Tags.getUniqueCategory(line);
-					tags = new Tags(tags, line, null, word);
-				} else if (line.startsWith("genus")) {
-					line = line.substring(5);
-					line = RegexUtils.trimLeft(line, ":\\s");
-					tags = new Tags(tags, null, line, word);
-				}
+			String[] parts = StringUtils.splitEscaped(line, "|");
+			if (parts.length == 3) {
+				this.add(parts[0], new Tags(parts[1], parts[2]), filename);
+			} else if (parts.length == 2) {
+				this.add(parts[0], new Tags(parts[1], null), filename);
 			}
 
 			if (++n % 10000 == 0) {
@@ -64,13 +53,13 @@ public abstract class MemoryTagContainer implements TagContainer {
 				LogUtils.flush();
 			}
 		}
-		if (word != null && tags != null) {
-			this.add(word, tags);
-		}
 
 		LogUtils.i("\\r  " + n + " lines...          ");
 		LogUtils.flush();
+		LogUtils.stopProgress();
 
 		return n > 0 ? true : false;
 	}
+
+	protected abstract void add(String word, Tags tags, FreehalFile from);
 }

@@ -156,8 +156,8 @@ public class ShellTest {
 
 		// Freehal has different ways to find an answer for an input
 		AnswerProviders.add(new GermanPredefinedAnswerProvider());
-		AnswerProviders.add(wikipedia);
 		AnswerProviders.add(new DatabaseAnswerProvider(facts));
+		AnswerProviders.add(wikipedia);
 		AnswerProviders.add(new GermanRandomAnswerProvider());
 		AnswerProviders.add(new FakeAnswerProvider());
 
@@ -278,4 +278,9 @@ class FakeFreehalFile extends AbstractFreehalFile {
 
 	@Override
 	public void write(String s) {}
+
+	@Override
+	public int countLines() {
+		return 0;
+	}
 }

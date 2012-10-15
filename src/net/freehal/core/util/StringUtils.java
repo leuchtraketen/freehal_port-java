@@ -90,6 +90,22 @@ public class StringUtils {
 	}
 
 	/**
+	 * Split the given string by the given delimiter with escaping it.
+	 * 
+	 * @param text
+	 *        the string to split
+	 * @param splitBy
+	 *        the delimiter
+	 * @return the parts after splitting
+	 */
+	public static String[] splitEscaped(String text, String splitBy) {
+		String[] parts = text.split("(?<!\\\\)" + Pattern.quote(splitBy));
+		for (String part : parts)
+			part = part.replace(Pattern.quote("\\" + splitBy), "|");
+		return parts;
+	}
+
+	/**
 	 * Trim the given string.
 	 * 
 	 * @param str

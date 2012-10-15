@@ -188,4 +188,11 @@ public interface FreehalFile extends Comparable<FreehalFile> {
 	 * @return the iterator
 	 */
 	public void write(String s);
+
+	/**
+	 * Returns the amount of lines in this file.
+	 * 
+	 * @return the count of files
+	 */
+	public int countLines();
 }

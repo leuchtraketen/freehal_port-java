@@ -17,9 +17,11 @@
 package net.freehal.core.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 /**
  * An utility class for regular expression-based string operations.
@@ -41,9 +43,14 @@ public class RegexUtils {
 	 *         expression, {@code false} otherwise
 	 */
 	public static boolean find(final String text, final String find) {
-		Pattern pattern = Pattern.compile(find);
-		Matcher m = pattern.matcher(text);
-		return (m.find());
+		try {
+			Pattern pattern = Pattern.compile(find);
+			Matcher m = pattern.matcher(text);
+			return (m.find());
+		} catch (PatternSyntaxException ex) {
+			LogUtils.e(ex);
+			return false;
+		}
 	}
 
 	/**
@@ -66,7 +73,12 @@ public class RegexUtils {
 	 * @return the resulting string
 	 */
 	public static String replace(final String text, final String find, final String replacement) {
-		return text.replaceAll(find, replacement);
+		try {
+			return text.replaceAll(find, replacement);
+		} catch (PatternSyntaxException ex) {
+			LogUtils.e(ex);
+			return text;
+		}
 	}
 
 	/**
@@ -87,16 +99,21 @@ public class RegexUtils {
 	 * @return a list of capturing groups
 	 */
 	public static List<String> match(final String text, final String find) {
-		Pattern pattern = Pattern.compile(find);
-		Matcher m = pattern.matcher(text);
-		List<String> list = null;
-		if (m.find()) {
-			list = new ArrayList<String>();
-			for (int i = 1; i <= m.groupCount(); ++i) {
-				list.add(m.group(i));
+		try {
+			Pattern pattern = Pattern.compile(find);
+			Matcher m = pattern.matcher(text);
+			List<String> list = null;
+			if (m.find()) {
+				list = new ArrayList<String>();
+				for (int i = 1; i <= m.groupCount(); ++i) {
+					list.add(m.group(i));
+				}
 			}
+			return list;
+		} catch (PatternSyntaxException ex) {
+			LogUtils.e(ex);
+			return Collections.emptyList();
 		}
-		return list;
 	}
 
 	/**

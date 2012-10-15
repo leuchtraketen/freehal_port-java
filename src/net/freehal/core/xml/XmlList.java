@@ -410,6 +410,27 @@ public class XmlList extends XmlObj {
 		this.resetCache();
 	}
 
+	/**
+	 * Construct a new {@link XmlObj} instance of the parts of a given text,
+	 * separated by '|' (in fact its an instance of {@link XmlList} containing
+	 * {@link XmlText} objects).
+	 * 
+	 * @param text
+	 *        the text
+	 * @return a {@link XmlList} wrapping the parts of given text separated by
+	 *         '|'
+	 */
+	public static XmlObj fromText(String text) {
+		XmlList xlist = new XmlList();
+		xlist.setName("fromText");
+		for (String word : text.split("[|]")) {
+			XmlText xobj = new XmlText();
+			xobj.setText(word);
+			xlist.add(xobj);
+		}
+		return xlist;
+	}
+
 	@Override
 	public String toString() {
 		return printStr();

@@ -1,211 +1,71 @@
-Abend:
-  count: 4
-  genus: m
-  type: n
-Ahnung:
-  count: 20
-  genus: f
-  type: n
-Alkohol:
-  count: 14
-  genus: m
-  type: n
-Apple:
-  count: 1
-  type: n
-Barack:
-  count: 1
-  type: n
-Das:
-  count: 3
-  type: art
-Es:
-  count: 20
-  type: n
-Familienname:
-  count: 1
-  genus: m
-  type: n
-Felix:
-  count: 17
-  type: n
-Hallo:
-  count: 4
-  genus: s
-  type: n
-Ich:
-  count: 12
-  type: n
-Ja:
-  count: 1
-  type: adv
-Keine:
-  count: 1
-  type: pron
-Lust:
-  count: 3
-  genus: f
-  type: n
-Mir:
-  count: 1
-  type: n
-Nein:
-  count: 25
-  type: n
-Obstbrand:
-  count: 1
-  genus: m
-  type: n
-Tag:
-  count: 3
-  type: n
-Tobias:
-  count: 10
-  type: n
-alkohol:
-  count: 13
-  genus: m
-  type: n
-alkohooool:
-  count: 10
-  type: n
-apfel:
-  count: 1
-  type: n
-apple:
-  count: 1
-  type: n
-ausgesprochen:
-  count: 2
-  type: adv
-barack:
-  count: 1
-  type: n
-bruder:
-  count: 5
-  type: n
-dir:
-  count: 43
-  type: n
-du:
-  count: 48
-  type: n
-es:
-  count: 56
-  type: n
-felix:
-  count: 6
-  type: n
-freehal:
-  count: 2
-  type: n
-gar:
-  count: 12
-  type: adj
-hallo:
-  count: 3
-  genus: s
-  type: n
-hi:
-  count: 4
-  type: inter
-ich:
-  count: 34
-  type: n
-jahre:
-  count: 7
-  type: n
-kuenstliche:
-  count: 4
-  type: adv
-mir:
-  count: 27
-  type: n
-trinke:
-  count: 2
-  type: vi
-trinkst:
-  count: 14
-  type: vi
-und:
-  count: 23
-  type: linking
-?:
-  type: n
-  type: n
-  type: n
-  type: n
-?:
-  type: n
-  type: n
-  type: n
-  type: n
-?:
-  type: n
-  type: n
-  type: n
-  type: n
-?:
-  type: n
-  type: n
-  type: n
-  type: n
-Antwort:
-  genus: f
-  type: n
-Daten:
-  genus: f
-  type: n
-Eingabe:
-  genus: f
-  type: n
-Guten:
-  type: adv
-Hm:
-  type: inter
-Klar:
-  type: adj
-Sorry:
-  type: inter
-Ungarn:
-  type: n
-Vorname:
-  genus: m
-  type: n
-beantworten:
-  genus: s
-  type: n
-dem:
-  type: art
-englische:
-  type: adv
-firma:
-  genus: f
-  type: n
-hufiger:
-  type: adj
-internet:
-  type: n
-komme:
-  type: vi
-kommst:
-  type: vi
-land:
-  genus: s
-  type: n
-mich:
-  type: n
-momentan:
-  type: adj
-obama:
-  type: n
-programmierer:
-  type: adj
-programmiert:
-  type: vi
-so:
-  type: adj
-vorhanden:
-  type: adj
-wort:
-  type: n
+Abend|n|m
+Ahnung|n|f
+Alkohol|n|m
+Apple|n|
+Barack|n|
+Das|art|
+Es|n|
+Familienname|n|m
+Felix|n|
+Hallo|n|s
+Ich|n|
+Ja|adv|
+Keine|pron|
+Lust|n|f
+Mir|n|
+Nein|n|
+Obstbrand|n|m
+Tag|n|
+Tobias|n|
+alkohol|n|m
+alkohooool|n|
+apfel|n|
+apple|n|
+ausgesprochen|adv|
+barack|n|
+bruder|n|
+dir|n|
+du|n|
+es|n|
+felix|n|
+freehal|n|
+gar|adj|
+hallo|n|s
+hi|inter|
+ich|n|
+jahre|n|
+kuenstliche|adv|
+mir|n|
+trinke|vi|
+trinkst|vi|
+und|linking|
+?|n|
+?|n|
+?|n|
+?|n|
+Antwort|n|f
+Daten|n|f
+Eingabe|n|f
+Guten|adv|
+Hm|inter|
+Klar|adj|
+Sorry|inter|
+Ungarn|n|
+Vorname|n|m
+beantworten|n|s
+dem|art|
+englische|adv|
+firma|n|f
+hufiger|adj|
+internet|n|
+komme|vi|
+kommst|vi|
+land|n|s
+mich|n|
+momentan|adj|
+obama|n|
+programmierer|adj|
+programmiert|vi|
+so|adj|
+vorhanden|adj|
+wort|n|

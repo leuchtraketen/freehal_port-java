@@ -258,9 +258,11 @@ public final class Tags {
 	public String toTagsFormat() {
 		StringBuilder code = new StringBuilder();
 		if (category != null)
-			code.append("  type: ").append(category).append("\n");
+			code.append(category);
+		if (category != null && gender != null)
+			code.append("|");
 		if (gender != null)
-			code.append("  genus: ").append(gender).append("\n");
+			code.append(gender);
 		return code.toString();
 	}
 

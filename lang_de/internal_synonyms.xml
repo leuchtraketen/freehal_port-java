@@ -167,4 +167,73 @@
   <object></object>
   <verb>=</verb>
 </fact>
-
+<fact>
+  <subject>mein</subject>
+  <object>my</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>meine</subject>
+  <object>my</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>meiner</subject>
+  <object>my</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>meins</subject>
+  <object>my</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>meines</subject>
+  <object>my</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>meinen</subject>
+  <object>my</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>meinem</subject>
+  <object>my</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>dein</subject>
+  <object>your</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>deine</subject>
+  <object>your</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>deiner</subject>
+  <object>your</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>deins</subject>
+  <object>your</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>deines</subject>
+  <object>your</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>deinen</subject>
+  <object>your</object>
+  <verb>=</verb>
+</fact>
+<fact>
+  <subject>deinem</subject>
+  <object>your</object>
+  <verb>=</verb>
+</fact>

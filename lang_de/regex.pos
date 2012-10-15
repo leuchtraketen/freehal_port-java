@@ -1,40 +1,20 @@
-no-question:
-  type: q
-_(wie|wer|was|wo|wann|warum|wieso|weshalb)_:
-  type: adj
-^in_:
-  type: adj
-^zu[rm]_:
-  type: adj
-tion(|en)?$:
-  type: n
-^jahr:
-  type: n
-[0123456789]:
-  type: adj
-[_]:
-  type: n
-[-]:
-  type: adj
-[ ]:
-  type: n
-ste[nmrs]?$:
-  type: adj
-ist$:
-  type: n
-(los|voll|frei|ig)(e|es|er|en|em)?$:
-  type: adj
-ere(n|r|m|s)$:
-  type: adj
-st$:
-  type: v
-iert$:
-  type: v
-iere$:
-  type: v
-ieren$:
-  type: v
-ierst$:
-  type: v
-system$:
-  type: n
+no-question|q|
+_(wie|wer|was|wo|wann|warum|wieso|weshalb)_|adj|
+^in_|adj|
+^zu[rm]_|adj|
+tion(\|en)?$|n|
+^jahr|n|
+[0123456789]|adj|
+[_]|n|
+[-]|adj|
+[ ]|n|
+ste[nmrs]?$|adj|
+ist$|n|
+(los|voll|frei|ig)(e|es|er|en|em)?$|adj|
+ere(n|r|m|s)$|adj|
+st$|v|
+iert$|v|
+iere$|v|
+ieren$|v|
+ierst$|v|
+system$|n|

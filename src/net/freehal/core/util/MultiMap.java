@@ -93,4 +93,9 @@ public interface MultiMap<A, B> {
 	 * @return the amount of keys
 	 */
 	public int size();
+
+	/**
+	 * Clear the map.
+	 */
+	public void clear();
 }

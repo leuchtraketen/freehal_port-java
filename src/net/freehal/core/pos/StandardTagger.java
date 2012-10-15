@@ -21,6 +21,8 @@ import net.freehal.core.pos.storage.MemoryTagList;
 import net.freehal.core.pos.storage.MemoryTagMap;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.FreehalFile;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -237,17 +239,26 @@ public abstract class StandardTagger implements Tagger {
 	public abstract boolean isName(final String word);
 
 	public static void writeTagsTo(FreehalFile filename, Word word) {
-		if (word.hasTags()) {
-			StringBuilder toAppend = new StringBuilder();
+		List<Word> words = new ArrayList<Word>();
+		words.add(word);
+		writeTagsTo(filename, words);
+	}
 
-			toAppend.append(word.getWord()).append(":\n");
-			toAppend.append(word.getTags().toTagsFormat());
+	public static void writeTagsTo(FreehalFile filename, Iterable<Word> words) {
+		StringBuilder toAppend = new StringBuilder();
 
-			LogUtils.i("write part of speech file: " + filename);
-			LogUtils.i(toAppend.toString());
-
-			Storages.inLanguageDirectory(filename).append(toAppend.toString());
+		for (Word word : words) {
+			if (word.hasTags()) {
+				toAppend.append(word.getWord()).append(":\n");
+				toAppend.append(word.getTags().toTagsFormat());
+				toAppend.append("\n");
+			}
 		}
+
+		LogUtils.i("write part of speech file: " + filename);
+		LogUtils.i(toAppend.toString());
+
+		Storages.inLanguageDirectory(filename).append(toAppend.toString());
 	}
 
 	@Override

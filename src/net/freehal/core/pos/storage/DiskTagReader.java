@@ -20,6 +20,9 @@ import net.freehal.core.pos.Tags;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.StringUtils;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -62,37 +65,30 @@ public class DiskTagReader implements TagContainer {
 
 	@Override
 	public Tags get(String word) {
-		final String search = word + ":";
+		LogUtils.startProgress("search-in-pos");
+		LogUtils.updateProgress("read part of speech file");
+
+		final String search = word + "|";
 		for (FreehalFile filename : files) {
-			Tags tags = null;
 			Iterable<String> lines = Storages.inLanguageDirectory(filename).readLines();
 			for (String line : lines) {
 				line = RegexUtils.trimRight(line, "\\s");
 
-				if (line.equals(search)) {
-					tags = new Tags((Tags) null, null, null);
+				LogUtils.updateProgress();
 
-				} else if (tags != null) {
-					if (line.startsWith(" ")) {
-						line = RegexUtils.trim(line, ":,;\\s");
-						if (line.startsWith("type")) {
-							line = line.substring(4);
-							line = RegexUtils.trimLeft(line, ":\\s");
-							line = Tags.getUniqueCategory(line);
-							tags = new Tags(tags, line, null, word);
-						} else if (line.startsWith("genus")) {
-							line = line.substring(5);
-							line = RegexUtils.trimLeft(line, ":\\s");
-							tags = new Tags(tags, null, line, word);
-						}
-					} else if (line.endsWith(":")) {
-						return tags;
+				if (line.startsWith(search)) {
+					String[] parts = StringUtils.splitEscaped(line, "|");
+					if (parts.length == 3) {
+						LogUtils.stopProgress();
+						return new Tags((Tags) null, parts[1], parts[2]);
+					} else if (parts.length == 2) {
+						LogUtils.stopProgress();
+						return new Tags((Tags) null, parts[1], null);
 					}
 				}
 			}
-			if (tags != null)
-				return tags;
 		}
+		LogUtils.stopProgress();
 		return null;
 	}
 

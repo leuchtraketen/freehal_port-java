@@ -26,10 +26,13 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 /**
+ * An implementation of a {@link MultiMap}.
  * 
  * @author "Tobias Schulz"
  * @param <K>
+ *        first type parameter
  * @param <V>
+ *        second type parameter
  */
 public class MultiHashMap<K, V> implements MultiMap<K, V> {
 
@@ -225,5 +228,10 @@ public class MultiHashMap<K, V> implements MultiMap<K, V> {
 			}
 
 		});
+	}
+
+	@Override
+	public void clear() {
+		map.clear();
 	}
 }

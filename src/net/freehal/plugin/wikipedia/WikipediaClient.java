@@ -196,4 +196,14 @@ public class WikipediaClient implements FreehalFile {
 
 		http = null;
 	}
+
+	@Override
+	public int countLines() {
+		int countOfLines = 0;
+		Iterable<String> lines = readLines();
+		for (@SuppressWarnings("unused") String line : lines) {
+			++countOfLines;
+		}
+		return countOfLines;
+	}
 }

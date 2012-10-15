@@ -148,4 +148,14 @@ public class StandardHttpClient implements FreehalFile {
 		return parts[parts.length - 1];
 	}
 
+	@Override
+	public int countLines() {
+		int countOfLines = 0;
+		Iterable<String> lines = readLines();
+		for (@SuppressWarnings("unused")
+		String line : lines) {
+			++countOfLines;
+		}
+		return countOfLines;
+	}
 }

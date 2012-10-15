@@ -192,7 +192,7 @@ public class Word {
 	 * 
 	 * @param otherWord
 	 * @return 0.75 if there are no part of speech tags, 1.0 for a noun, 0.5 for
-	 *         an adjective, 0.75 for a verb, 0.1 for article and 0.4 for any
+	 *         an adjective, 0.75 for a verb, 0.2 for article and 0.4 for any
 	 *         other part of speech given, neither in this object not in the
 	 *         other one.
 	 */
@@ -204,8 +204,8 @@ public class Word {
 			else if (otherWord.hasTags())
 				tags = otherWord.getTags();
 
-			double weight = tags == null ? 0.75 : tags.isCategory("n") ? 1.0 : tags.isCategory("adj") ? 0.5 : tags
-					.isCategory("v") ? 0.75 : tags.isCategory("art") ? 0.1 : 0.4;
+			double weight = tags == null ? 0.75 : tags.isCategory("n") ? 1.0 : tags.isCategory("adj") ? 0.5
+					: tags.isCategory("v") ? 0.75 : tags.isCategory("art") ? 0.2 : 0.4;
 
 			return weight;
 		} else {
@@ -270,5 +270,22 @@ public class Word {
 			builder.append(delimiter).append(iter.next().getWord());
 		}
 		return builder.toString();
+	}
+
+	/**
+	 * @see String#substring(int, int)
+	 * @param i
+	 *        the begin index
+	 * @param j
+	 *        the end index
+	 * @return
+	 */
+	public String substring(int i, int j) {
+		if (word.length() >= j)
+			return word.substring(i, j);
+		else if (word.length() >= i)
+			return word.substring(i, word.length());
+		else
+			return "";
 	}
 }

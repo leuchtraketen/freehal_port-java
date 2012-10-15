@@ -131,7 +131,7 @@ public class GermanTagger extends StandardTagger {
 			if (newWord.equals(previousWord))
 				newWord = RegexUtils.replace(previousWord, "est$", "e");
 			if (newWord.equals(previousWord))
-				newWord = RegexUtils.replace(previousWord, "st$", "e");
+				newWord = RegexUtils.replace(previousWord, "(..)st$", "$1e");
 			if (newWord.equals(previousWord))
 				newWord = RegexUtils.replace(previousWord, "[td]e$", "\\1est");
 			if (newWord.equals(previousWord))

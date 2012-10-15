@@ -77,7 +77,10 @@ public class Storages {
 	 *         file
 	 */
 	public static FreehalFile inLanguageDirectory(FreehalFile f) {
-		return storage.getLanguageDirectory().getChild(f);
+		if (f.isAbsolute())
+			return f;
+		else
+			return storage.getLanguageDirectory().getChild(f);
 	}
 
 	/**
@@ -103,7 +106,10 @@ public class Storages {
 	 *         file
 	 */
 	public static FreehalFile inPath(FreehalFile f) {
-		return storage.getPath().getChild(f);
+		if (f.isAbsolute())
+			return f;
+		else
+			return storage.getPath().getChild(f);
 	}
 
 	/**
@@ -129,7 +135,10 @@ public class Storages {
 	 *         file
 	 */
 	public static FreehalFile inCacheDirectory(FreehalFile f) {
-		return storage.getCacheDirectory().getChild(f);
+		if (f.isAbsolute())
+			return f;
+		else
+			return storage.getCacheDirectory().getChild(f);
 	}
 
 	/**

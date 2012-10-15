@@ -165,7 +165,7 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 
 		try {
 			File parent = this.getFile().getParentFile();
-			if (!parent.exists()) {
+			if (!parent.exists() || !parent.isDirectory()) {
 				parent.mkdirs();
 			}
 
@@ -209,6 +209,17 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 					// just ignore it
 				}
 		} // end try/catch/finally
+	}
+
+	@Override
+	public int countLines() {
+		int countOfLines = 0;
+		Iterable<String> lines = readLines();
+		for (@SuppressWarnings("unused")
+		String line : lines) {
+			++countOfLines;
+		}
+		return countOfLines;
 	}
 
 	public static class NullIterator<A> implements Iterable<A> {
