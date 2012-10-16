@@ -50,7 +50,10 @@ import net.freehal.core.parser.Parser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.pos.Tagger;
 import net.freehal.core.pos.Taggers;
-import net.freehal.core.pos.storage.MemoryTagMap;
+import net.freehal.core.pos.Tags;
+import net.freehal.core.pos.storage.TagDatabase;
+import net.freehal.core.storage.KeyValueDatabase;
+import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.AbstractFreehalFile;
@@ -63,6 +66,7 @@ import net.freehal.core.wording.Wording;
 import net.freehal.core.wording.Wordings;
 import net.freehal.core.xml.FactProviders;
 import net.freehal.core.xml.SynonymProviders;
+import net.freehal.plugin.berkeleydb.BerkeleyDb;
 import net.freehal.plugin.wikipedia.GermanWikipedia;
 import net.freehal.plugin.wikipedia.WikipediaClient;
 import net.freehal.plugin.wikipedia.WikipediaPlugin;
@@ -115,7 +119,12 @@ public class ShellTest {
 		// (also possible: EnglishTagger, GermanTagger, FakeTagger)
 		// the parameter is either a TaggerCacheMemory (faster, higher memory
 		// usage) or a TaggerCacheDisk (slower, less memory usage)
-		Tagger tagger = new GermanTagger(MemoryTagMap.newFactory());
+		KeyValueDatabase<Tags> tags = new BerkeleyDb<Tags>(Storages.getCacheDirectory().getChild("tagger"),
+				new Tags.StringSerializer());
+		KeyValueDatabase<String> meta = new BerkeleyDb<String>(Storages.getCacheDirectory()
+				.getChild("tagger"), new Serializer.StringSerializer());
+		Tagger tagger = new GermanTagger(TagDatabase.newFactory(tags, meta));
+		// Tagger tagger = new GermanTagger(MemoryTagMap.newFactory());
 		tagger.readTagsFrom(FreehalFiles.getFile("guessed.pos"));
 		tagger.readTagsFrom(FreehalFiles.getFile("brain.pos"));
 		tagger.readTagsFrom(FreehalFiles.getFile("memory.pos"));

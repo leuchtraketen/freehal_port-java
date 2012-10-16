@@ -259,16 +259,46 @@ public final class Tags {
 		StringBuilder code = new StringBuilder();
 		if (category != null)
 			code.append(category);
-		if (category != null && gender != null)
+		if (gender != null)
 			code.append("|");
 		if (gender != null)
 			code.append(gender);
 		return code.toString();
 	}
 
+	/**
+	 * Parse a given tags file format string and create a corresponding
+	 * {@link Tags} object.
+	 * 
+	 * @return a {@link Tags} object
+	 */
+	public static Tags fromTagsFormat(String code) {
+		String[] parts = code.split("[|]");
+		if (parts.length == 2)
+			return new Tags(parts[0], parts[1]);
+		else if (parts.length == 1)
+			return new Tags(parts[0], null);
+		else
+			return null;
+	}
+
 	@Override
 	public String toString() {
 		return "{" + (hasCategory() ? "category=" + category : "")
 				+ (hasCategory() && hasGender() ? "," : "") + (hasGender() ? "gender=" + gender : "") + "}";
+	}
+
+	public static class StringSerializer implements net.freehal.core.storage.Serializer<Tags> {
+
+		@Override
+		public String toString(Tags object) {
+			return object.toTagsFormat();
+		}
+
+		@Override
+		public Tags fromString(String serialized) {
+			return Tags.fromTagsFormat(serialized);
+		}
+
 	}
 }
