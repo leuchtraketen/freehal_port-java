@@ -125,7 +125,7 @@ public class StandardDatabase implements Database {
 				{
 					// we use the component interface for updating the caches
 					for (DatabaseComponent updater : components) {
-						updater.startUpdateCache();
+						updater.startUpdateCache(databaseFile);
 					}
 
 					// don't print all these checks whether a fact is a synonym

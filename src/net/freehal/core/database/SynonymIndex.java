@@ -23,6 +23,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.xml.SynonymProvider;
 import net.freehal.core.xml.Word;
@@ -139,5 +140,5 @@ public class SynonymIndex implements SynonymProvider, Database.DatabaseComponent
 	}
 
 	@Override
-	public void startUpdateCache() {}
+	public void startUpdateCache(FreehalFile databaseFile) {}
 }

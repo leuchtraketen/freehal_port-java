@@ -17,6 +17,7 @@
 package net.freehal.core.pos;
 
 import net.freehal.core.grammar.Grammar;
+import net.freehal.core.storage.Serializer;
 
 /**
  * A part of speech tag which consists of a specific word class and a specific
@@ -288,7 +289,9 @@ public final class Tags {
 				+ (hasCategory() && hasGender() ? "," : "") + (hasGender() ? "gender=" + gender : "") + "}";
 	}
 
-	public static class StringSerializer implements net.freehal.core.storage.Serializer<Tags> {
+	public static class StringSerializer implements Serializer<Tags> {
+
+		private Serializer<String> stringSerializer = new Serializer.StringSerializer();
 
 		@Override
 		public String toString(Tags object) {
@@ -298,6 +301,16 @@ public final class Tags {
 		@Override
 		public Tags fromString(String serialized) {
 			return Tags.fromTagsFormat(serialized);
+		}
+
+		@Override
+		public Iterable<String> toStringIterator(Tags object) {
+			return stringSerializer.toStringIterator(toString(object));
+		}
+
+		@Override
+		public Tags fromStringIterator(Iterable<String> serialized) {
+			return fromString(stringSerializer.fromStringIterator(serialized));
 		}
 
 	}

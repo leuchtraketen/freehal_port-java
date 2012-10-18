@@ -118,5 +118,18 @@ public class DirectoryUtils {
 		public String toString() {
 			return "{key=\"" + key + "\",word=" + word + "}";
 		}
+
+		@Override
+		public int hashCode() {
+			return key.hashCode();
+		}
+
+		@Override
+		public boolean equals(Object other) {
+			if (other instanceof Key) {
+				return key == ((Key) other).key;
+			} else
+				return false;
+		}
 	}
 }

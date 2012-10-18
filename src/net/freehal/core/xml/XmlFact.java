@@ -16,11 +16,17 @@
  ******************************************************************************/
 package net.freehal.core.xml;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import net.freehal.core.storage.Serializer;
 import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.filter.FactFilters;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Ranking;
+import net.freehal.core.xml.XmlUtils.XmlStreamIterator;
 
 /**
  * This class represents a fact which is (in most cases) read from an xml
@@ -172,5 +178,65 @@ public class XmlFact extends XmlList {
 			rank.insert(other, this.isLike(other));
 		}
 		return rank;
+	}
+
+	public static class StringSerializer implements Serializer<Iterable<XmlFact>> {
+
+		private Serializer<String> stringSerializer = new Serializer.StringSerializer();
+
+		@Override
+		public String toString(Iterable<XmlFact> object) {
+			return stringSerializer.fromStringIterator(toStringIterator(object));
+		}
+
+		@Override
+		public List<XmlFact> fromString(String serialized) {
+			return fromStringIterator(stringSerializer.toStringIterator(serialized));
+		}
+
+		@Override
+		public Iterable<String> toStringIterator(final Iterable<XmlFact> object) {
+			return new Iterable<String>() {
+				@Override
+				public Iterator<String> iterator() {
+					return new Iterator<String>() {
+						private Iterator<XmlFact> i = object.iterator();
+
+						@Override
+						public boolean hasNext() {
+							return i.hasNext();
+						}
+
+						@Override
+						public String next() {
+							return i.hasNext() ? i.next().printXml() : null;
+						}
+
+						@Override
+						public void remove() {
+							throw new UnsupportedOperationException("Not implemented.");
+						}
+					};
+				}
+			};
+		}
+
+		@Override
+		public List<XmlFact> fromStringIterator(Iterable<String> serialized) {
+			final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(serialized);
+			final List<XmlFact> list = new ArrayList<XmlFact>();
+
+			XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
+				@Override
+				public void useXmlFact(XmlFact xfact, long start, FreehalFile filename, int countFactsSoFar) {
+
+					list.add(xfact);
+					LogUtils.d("found fact: " + xfact);
+				}
+			});
+
+			return list;
+		}
+
 	}
 }

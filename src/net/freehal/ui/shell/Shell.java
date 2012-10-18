@@ -66,7 +66,9 @@ import net.freehal.core.wording.Wording;
 import net.freehal.core.wording.Wordings;
 import net.freehal.core.xml.FactProviders;
 import net.freehal.core.xml.SynonymProviders;
+import net.freehal.core.xml.XmlFact;
 import net.freehal.plugin.berkeleydb.BerkeleyDb;
+import net.freehal.plugin.filesystemstorage.FileSystemStorage;
 import net.freehal.plugin.wikipedia.GermanWikipedia;
 import net.freehal.plugin.wikipedia.WikipediaClient;
 import net.freehal.plugin.wikipedia.WikipediaPlugin;
@@ -77,7 +79,7 @@ import net.freehal.plugin.wikipedia.WikipediaPlugin;
  * 
  * @author "Tobias Schulz"
  */
-public class ShellTest {
+public class Shell {
 	private static void init() {
 		// set the virtual file implementations
 		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
@@ -142,7 +144,9 @@ public class ShellTest {
 		LogUtils.startProgress("set up database");
 
 		// we need to store facts...
-		FactIndex facts = new FactIndex();
+		KeyValueDatabase<Iterable<XmlFact>> factsCache = new BerkeleyDb<Iterable<XmlFact>>(Storages
+				.getCacheDirectory().getChild("facts"), new XmlFact.StringSerializer());
+		FactIndex facts = new FactIndex(factsCache);
 		// ... and synonyms
 		SynonymIndex synonyms = new SynonymIndex();
 		// add both to their utility classes

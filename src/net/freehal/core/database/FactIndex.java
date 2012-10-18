@@ -1,7 +1,6 @@
 package net.freehal.core.database;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -10,10 +9,10 @@ import java.util.Set;
 
 import net.freehal.core.database.Database.DatabaseComponent;
 import net.freehal.core.pos.Taggers;
+import net.freehal.core.storage.KeyValueDatabase;
+import net.freehal.core.storage.KeyValueTransaction;
 import net.freehal.core.util.FreehalFile;
-import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
-import net.freehal.core.util.Mutable;
 import net.freehal.core.xml.FactProvider;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
@@ -24,8 +23,11 @@ import net.freehal.core.xml.XmlUtils.XmlStreamIterator;
 public class FactIndex implements FactProvider, DatabaseComponent {
 
 	private DatabaseComponent cacheUpdater;
+	private KeyValueDatabase<Iterable<XmlFact>> factsCache;
 
-	public FactIndex() {}
+	public FactIndex(KeyValueDatabase<Iterable<XmlFact>> factsCache) {
+		this.factsCache = factsCache;
+	}
 
 	@Override
 	public Set<XmlFact> findFacts(XmlFact xfact) {
@@ -74,9 +76,21 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 	private Set<XmlFact> findFacts(DirectoryUtils.Key key) {
 		LogUtils.i("find by key: " + key);
 
-		FreehalFile databaseFile = DirectoryUtils.getCacheFile("database", "index", key, null);
+		// FreehalFile databaseFile = DirectoryUtils.getCacheFile("database",
+		// "index", key, null);
+		// Set<XmlFact> found = findFacts(databaseFile);
 
-		Set<XmlFact> found = findFacts(databaseFile);
+		KeyValueTransaction<Iterable<XmlFact>> transaction = factsCache.transaction();
+
+		Iterable<XmlFact> result = transaction.get(key.getKey());
+		Set<XmlFact> found = new HashSet<XmlFact>();
+		if (result != null) {
+			for (XmlFact xfact : result) {
+				found.add(xfact);
+			}
+		}
+
+		transaction.finish();
 
 		return found;
 	}
@@ -121,9 +135,9 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 	}
 
 	@Override
-	public void startUpdateCache() {
-		cacheUpdater = new FactCacheUpdater();
-		cacheUpdater.startUpdateCache();
+	public void startUpdateCache(FreehalFile databaseFile) {
+		cacheUpdater = new FactCacheUpdater(factsCache);
+		cacheUpdater.startUpdateCache(databaseFile);
 	}
 
 	@Override
@@ -144,20 +158,26 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 	 */
 	private static class FactCacheUpdater implements Database.DatabaseComponent {
 
+		private KeyValueDatabase<Iterable<XmlFact>> factsCache;
+		private KeyValueTransaction<Iterable<XmlFact>> transaction;
+
+		public FactCacheUpdater(KeyValueDatabase<Iterable<XmlFact>> factsCache) {
+			this.factsCache = factsCache;
+		}
+
 		/**
 		 * the XmlFactReciever will store the data which need to be written to
-		 * files in this hashmap
+		 * cache in this hashmap
 		 */
-		final Mutable<Map<FreehalFile, Set<String>>> cacheFacts = new Mutable<Map<FreehalFile, Set<String>>>(
-				new HashMap<FreehalFile, Set<String>>());
+		private Map<String, Set<XmlFact>> cache = null;
+		private FreehalFile databaseFile = null;
 
 		/**
 		 * The max count of facts to cache in memory.
 		 */
 		public static int memoryLimit = 500;
 
-		int count = 0;
-		boolean append = false;
+		private int count = 0;
 
 		/**
 		 * Add a fact to cache.
@@ -169,22 +189,21 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 		public void addToCache(XmlFact xfact) {
 			// LogUtils.d("update cache for this fact: " + xfact.printText());
 
-			List<Word> words = xfact.getWords();
-			for (Word w : words) {
-				FreehalFile cacheFile = DirectoryUtils.getCacheFile("database", "index",
-						new DirectoryUtils.Key(w), FreehalFiles.getFile(xfact.getFilename().getName()));
-				if (!cacheFacts.get().containsKey(cacheFile)) {
-					cacheFacts.get().put(cacheFile, new HashSet<String>());
+			if (cache != null) {
+				List<Word> words = xfact.getWords();
+				for (Word w : words) {
+					final String key = new DirectoryUtils.Key(w).getKey();
+					if (!cache.containsKey(key)) {
+						cache.put(key, new HashSet<XmlFact>());
+					}
+					cache.get(key).add(xfact);
 				}
-				cacheFacts.get().get(cacheFile).add(xfact.printXml());
-			}
-			++count;
+				++count;
 
-			if (count % memoryLimit == 0) {
-				if (count > memoryLimit)
-					append = true;
-				stopUpdateCache("-" + (count / memoryLimit));
-				startUpdateCache();
+				if (count % memoryLimit == 0 && count >= memoryLimit) {
+					stopUpdateCache();
+					startUpdateCache(databaseFile);
+				}
 			}
 		}
 
@@ -192,8 +211,10 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 		 * Initialize everything. Run this before add().
 		 */
 		@Override
-		public void startUpdateCache() {
-			cacheFacts.set(new HashMap<FreehalFile, Set<String>>());
+		public void startUpdateCache(FreehalFile databaseFile) {
+			this.databaseFile = databaseFile;
+			transaction = factsCache.transaction();
+			cache = new HashMap<String, Set<XmlFact>>();
 		}
 
 		/**
@@ -201,28 +222,22 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 		 */
 		@Override
 		public void stopUpdateCache() {
-			stopUpdateCache("");
-		}
+			if (cache != null && transaction != null) {
+				final int suffix = (count / memoryLimit) + (count % memoryLimit == 0 ? 0 : 1);
+				final String dbname = databaseFile.getName() + "-" + suffix;
 
-		private void stopUpdateCache(final String suffix) {
-			List<FreehalFile> sorted = new ArrayList<FreehalFile>(cacheFacts.get().keySet());
-			Collections.sort(sorted);
-			for (FreehalFile cacheFile : sorted) {
-				StringBuilder content = new StringBuilder();
-				for (final String xfactXml : cacheFacts.get().get(cacheFile)) {
-					content.append(xfactXml);
+				transaction.remove(null, dbname);
+
+				for (String key : cache.keySet()) {
+					LogUtils.d("write cache: dbname=" + dbname + ", key: " + key);
+					transaction.set(key, cache.get(key), dbname);
 				}
-				LogUtils.d("write cache file: " + cacheFile);
 
-				cacheFile = FreehalFiles.getFile(cacheFile.getPath() + suffix);
-				if (append)
-					cacheFile.append(content.toString());
-				else
-					cacheFile.write(content.toString());
+				transaction.finish();
+				transaction = null;
+				cache = null;
+				System.gc();
 			}
-
-			cacheFacts.set(null);
-			System.gc();
 		}
 	}
 }

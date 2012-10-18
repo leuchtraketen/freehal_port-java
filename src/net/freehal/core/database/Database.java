@@ -37,7 +37,7 @@ public interface Database {
 	public interface DatabaseComponent {
 		void addToCache(XmlFact xfact);
 
-		void startUpdateCache();
+		void startUpdateCache(FreehalFile databaseFile);
 
 		void stopUpdateCache();
 	}
