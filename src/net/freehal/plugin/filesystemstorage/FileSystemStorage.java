@@ -8,6 +8,7 @@ import net.freehal.core.util.FreehalFile;
 
 public class FileSystemStorage<T> implements KeyValueDatabase<T> {
 
+	@SuppressWarnings("unused")
 	private Serializer<T> serializer;
 
 	public FileSystemStorage(FreehalFile path, Serializer<T> serializer) {

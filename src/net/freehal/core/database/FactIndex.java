@@ -16,9 +16,6 @@ import net.freehal.core.util.LogUtils;
 import net.freehal.core.xml.FactProvider;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
-import net.freehal.core.xml.XmlFactReciever;
-import net.freehal.core.xml.XmlUtils;
-import net.freehal.core.xml.XmlUtils.XmlStreamIterator;
 
 public class FactIndex implements FactProvider, DatabaseComponent {
 
@@ -93,40 +90,6 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 		transaction.finish();
 
 		return found;
-	}
-
-	private Set<XmlFact> findFacts(FreehalFile databaseFile) {
-		final Set<XmlFact> list = new HashSet<XmlFact>();
-
-		if (databaseFile.isDirectory()) {
-			LogUtils.i("find in directory: " + databaseFile);
-
-			FreehalFile[] files = databaseFile.listFiles();
-			for (FreehalFile file : files) {
-				if (file.isFile() && file.getName().contains(".xml")) {
-					list.addAll(findFacts(file));
-				}
-			}
-		}
-
-		else if (databaseFile.isFile()) {
-			LogUtils.i("find in file: " + databaseFile);
-
-			final Iterable<String> xmlInput = databaseFile.readLines();
-			final XmlStreamIterator xmlPre = new XmlUtils.XmlStreamIterator(xmlInput);
-
-			XmlUtils.readXmlFacts(xmlPre, null, new XmlFactReciever() {
-				@Override
-				public void useXmlFact(XmlFact xfact, long start, FreehalFile filename, int countFactsSoFar) {
-
-					list.add(xfact);
-					LogUtils.d("found fact: " + xfact);
-				}
-			});
-		}
-
-		Runtime.getRuntime().gc();
-		return list;
 	}
 
 	@Override

@@ -1,12 +1,19 @@
 package net.freehal.plugin.berkeleydb;
 
 import java.io.File;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import net.freehal.compat.sunjava.StandardFreehalFile;
+import net.freehal.core.storage.KeyValueDatabase;
+import net.freehal.core.storage.KeyValueTransaction;
+import net.freehal.core.storage.Serializer;
+import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.StringUtils;
 
 import com.sleepycat.je.Database;
 import com.sleepycat.je.DatabaseConfig;
@@ -16,14 +23,6 @@ import com.sleepycat.je.Environment;
 import com.sleepycat.je.EnvironmentConfig;
 import com.sleepycat.je.OperationStatus;
 import com.sleepycat.je.Transaction;
-
-import net.freehal.compat.sunjava.StandardFreehalFile;
-import net.freehal.core.storage.KeyValueDatabase;
-import net.freehal.core.storage.KeyValueTransaction;
-import net.freehal.core.storage.Serializer;
-import net.freehal.core.util.FreehalFile;
-import net.freehal.core.util.LogUtils;
-import net.freehal.core.util.StringUtils;
 
 public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 
@@ -130,149 +129,150 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 	}
 
 	@Override
-	public KeyValueTransaction<T> transaction() {
+	public BerkeleyTransaction transaction() {
 		writeDatabaseNames();
-		return new KeyValueTransaction<T>() {
+		return new BerkeleyTransaction().init();
+	}
 
-			private Transaction txn;
+	public class BerkeleyTransaction implements KeyValueTransaction<T> {
 
-			public KeyValueTransaction<T> init() {
-				txn = env.beginTransaction(null, null);
-				txn.setLockTimeout(5000, TimeUnit.MILLISECONDS);
-				dbs = new HashMap<String, Database>();
-				return this;
+		private Transaction txn;
+
+		public BerkeleyTransaction init() {
+			txn = env.beginTransaction(null, null);
+			txn.setLockTimeout(5000, TimeUnit.MILLISECONDS);
+			dbs = new HashMap<String, Database>();
+			return this;
+		}
+
+		private Map<String, Database> dbs;
+
+		public Database getDatabase(String dbname) {
+			if (dbs.containsKey(dbname) && dbs.get(dbname) != null) {
+				return dbs.get(dbname);
+			} else {
+				final DatabaseConfig dbConfig = new DatabaseConfig();
+				dbConfig.setTransactional(true);
+				dbConfig.setAllowCreate(true);
+				dbConfig.setSortedDuplicates(true);
+				final Database db = env.openDatabase(txn, dbname, dbConfig);
+				dbnames.add(dbname);
+				dbs.put(dbname, db);
+				return db;
 			}
+		}
 
-			private Map<String, Database> dbs;
-
-			private Database getDatabase(String dbname) {
-				if (dbs.containsKey(dbname) && dbs.get(dbname) != null) {
-					return dbs.get(dbname);
-				} else {
-					final DatabaseConfig dbConfig = new DatabaseConfig();
-					dbConfig.setTransactional(true);
-					dbConfig.setAllowCreate(true);
-					dbConfig.setSortedDuplicates(true);
-					final Database db = env.openDatabase(txn, dbname, dbConfig);
-					dbnames.add(dbname);
-					dbs.put(dbname, db);
-					return db;
+		@Override
+		public KeyValueTransaction<T> set(String key, T value, String dbname) {
+			try {
+				final DatabaseEntry keyEntry = new DatabaseEntry(key.getBytes());
+				final DatabaseEntry dataEntry = new DatabaseEntry(serializer.toString(value).getBytes());
+				final OperationStatus res = getDatabase(dbname).put(txn, keyEntry, dataEntry);
+				if (res != OperationStatus.SUCCESS) {
+					LogUtils.e("Error: " + res.toString());
 				}
+			} catch (DatabaseException ex) {
+				LogUtils.e("Caught exception: " + ex.toString());
 			}
+			return this;
+		}
 
-			@Override
-			public KeyValueTransaction<T> set(String key, T value, String dbname) {
-				try {
+		@Override
+		public KeyValueTransaction<T> remove(String key, String dbname) {
+			try {
+				if (key != null) {
+					// remove a single key
 					final DatabaseEntry keyEntry = new DatabaseEntry(key.getBytes());
-					final DatabaseEntry dataEntry = new DatabaseEntry(serializer.toString(value).getBytes());
-					final OperationStatus res = getDatabase(dbname).put(txn, keyEntry, dataEntry);
-					if (res != OperationStatus.SUCCESS) {
-						LogUtils.e("Error: " + res.toString());
-					}
-				} catch (DatabaseException ex) {
-					LogUtils.e("Caught exception: " + ex.toString());
-				}
-				return this;
-			}
+					getDatabase(dbname).delete(txn, keyEntry);
 
-			@Override
-			public KeyValueTransaction<T> remove(String key, String dbname) {
+				} else {
+					LogUtils.d("delete: " + dbname);
+					// close all databases
+					for (Database db : dbs.values())
+						db.close();
+					dbs.clear();
+					// commit all changes
+					txn.commit();
+					txn = env.beginTransaction(null, null);
+					// remove the whole database
+					env.truncateDatabase(null, dbname, false);
+					// compress the databases
+					env.compress();
+					env.cleanLog();
+				}
+			} catch (DatabaseException ex) {
+				LogUtils.e("Caught exception: " + ex.toString());
+			}
+			return this;
+		}
+
+		@Override
+		public boolean contains(String key) {
+			return get(key) != null;
+		}
+
+		@Override
+		public boolean contains(String key, String dbname) {
+			return get(key, dbname) != null;
+		}
+
+		@Override
+		public T get(String key) {
+			final DatabaseEntry keyEntry = new DatabaseEntry(key.getBytes());
+			StringBuilder data = new StringBuilder();
+			String error = null;
+			for (String dbname : env.getDatabaseNames()) {
+				Database db = getDatabase(dbname);
+				LogUtils.i("test: dbname=" + dbname);
+
 				try {
-					if (key != null) {
-						// remove a single key
-						final DatabaseEntry keyEntry = new DatabaseEntry(key.getBytes());
-						getDatabase(dbname).delete(txn, keyEntry);
-
-					} else {
-						LogUtils.d("delete: " + dbname);
-						// close all databases
-						for (Database db : dbs.values())
-							db.close();
-						dbs.clear();
-						// commit all changes
-						txn.commit();
-						txn = env.beginTransaction(null, null);
-						// remove the whole database
-						env.truncateDatabase(null, dbname, false);
-						// compress the databases
-						env.compress();
-						env.cleanLog();
-					}
-				} catch (DatabaseException ex) {
-					LogUtils.e("Caught exception: " + ex.toString());
-				}
-				return this;
-			}
-
-			@Override
-			public boolean contains(String key) {
-				return get(key) != null;
-			}
-
-			@Override
-			public boolean contains(String key, String dbname) {
-				return get(key, dbname) != null;
-			}
-
-			@SuppressWarnings({ "rawtypes", "unchecked" })
-			@Override
-			public T get(String key) {
-				final DatabaseEntry keyEntry = new DatabaseEntry(key.getBytes());
-				StringBuilder data = new StringBuilder();
-				String error = null;
-				for (String dbname : env.getDatabaseNames()) {
-					Database db = getDatabase(dbname);
-					LogUtils.i("test: dbname=" + dbname);
-
-					try {
-						final DatabaseEntry dataEntry = new DatabaseEntry();
-						final OperationStatus res = db.get(txn, keyEntry, dataEntry, null);
-						if (res != OperationStatus.SUCCESS) {
-							error = res.toString();
-						} else {
-							data.append(new String(dataEntry.getData()));
-							System.out.println(new String(dataEntry.getData()));
-						}
-					} catch (DatabaseException ex) {
-						LogUtils.e("Caught exception: " + ex.toString());
-					}
-
-					db.close();
-					dbs.remove(dbname);
-				}
-				if (error != null)
-					LogUtils.e("Error: " + error);
-				return serializer.fromString(data.toString());
-			}
-
-			@Override
-			public T get(String key, String dbname) {
-				final DatabaseEntry keyEntry = new DatabaseEntry(key.getBytes());
-				final DatabaseEntry dataEntry = new DatabaseEntry();
-				T result = null;
-				try {
-					final OperationStatus res = getDatabase(dbname).get(txn, keyEntry, dataEntry, null);
+					final DatabaseEntry dataEntry = new DatabaseEntry();
+					final OperationStatus res = db.get(txn, keyEntry, dataEntry, null);
 					if (res != OperationStatus.SUCCESS) {
-						LogUtils.e("Error: " + res.toString());
+						error = res.toString();
 					} else {
-						result = serializer.fromString(new String(dataEntry.getData()));
+						data.append(new String(dataEntry.getData()));
+						System.out.println(new String(dataEntry.getData()));
 					}
 				} catch (DatabaseException ex) {
 					LogUtils.e("Caught exception: " + ex.toString());
 				}
-				return result;
-			}
 
-			@Override
-			public BerkeleyDb<T> finish() {
-				txn.commit();
-				for (Database db : dbs.values())
-					db.close();
-				dbs.clear();
-				dbs = null;
-				txn = null;
-				return BerkeleyDb.this;
+				db.close();
+				dbs.remove(dbname);
 			}
-		}.init();
+			if (error != null)
+				LogUtils.e("Error: " + error);
+			return serializer.fromString(data.toString());
+		}
+
+		@Override
+		public T get(String key, String dbname) {
+			final DatabaseEntry keyEntry = new DatabaseEntry(key.getBytes());
+			final DatabaseEntry dataEntry = new DatabaseEntry();
+			T result = null;
+			try {
+				final OperationStatus res = getDatabase(dbname).get(txn, keyEntry, dataEntry, null);
+				if (res != OperationStatus.SUCCESS) {
+					LogUtils.e("Error: " + res.toString());
+				} else {
+					result = serializer.fromString(new String(dataEntry.getData()));
+				}
+			} catch (DatabaseException ex) {
+				LogUtils.e("Caught exception: " + ex.toString());
+			}
+			return result;
+		}
+
+		@Override
+		public BerkeleyDb<T> finish() {
+			txn.commit();
+			for (Database db : dbs.values())
+				db.close();
+			dbs.clear();
+			dbs = null;
+			txn = null;
+			return BerkeleyDb.this;
+		}
 	}
 }
