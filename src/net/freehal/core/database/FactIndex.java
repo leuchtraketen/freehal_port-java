@@ -199,7 +199,7 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 				transaction.finish();
 				transaction = null;
 				cache = null;
-				System.gc();
+				//System.gc();
 			}
 		}
 	}

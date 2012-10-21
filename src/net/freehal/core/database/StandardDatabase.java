@@ -112,6 +112,7 @@ public class StandardDatabase implements Database {
 
 			} else {
 				LogUtils.i("update cache (file): " + databaseFile);
+				LogUtils.updateProgress("reading database file: " + databaseFile.getName());
 
 				final double countFactsThisFile = countFacts(databaseFile);
 				LogUtils.startProgress(0, 1, countFactsThisFile);

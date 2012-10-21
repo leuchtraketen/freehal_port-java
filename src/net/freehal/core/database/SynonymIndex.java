@@ -136,7 +136,7 @@ public class SynonymIndex implements SynonymProvider, Database.DatabaseComponent
 	public void stopUpdateCache() {
 		// write the synonym cache files
 		this.writeSynonyms();
-		System.gc();
+		//System.gc();
 	}
 
 	@Override

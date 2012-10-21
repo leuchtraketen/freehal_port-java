@@ -288,7 +288,7 @@ public abstract class StandardTagger implements Tagger {
 	}
 
 	private Tags getStaticTags(final String word) {
-		if (staticTags.containsKey(word)) {
+		if (staticTags.containsKey(word) && staticTags.get(word).hasCategory()) {
 			LogUtils.i("  found (static): " + staticTags.get(word));
 			return staticTags.get(word);
 		} else

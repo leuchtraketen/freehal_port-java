@@ -69,7 +69,6 @@ import net.freehal.core.xml.SynonymProviders;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.plugin.berkeleydb.BerkeleyDb;
 import net.freehal.plugin.berkeleydb.BerkeleyFile;
-import net.freehal.plugin.filesystemstorage.FileSystemStorage;
 import net.freehal.plugin.wikipedia.GermanWikipedia;
 import net.freehal.plugin.wikipedia.WikipediaClient;
 import net.freehal.plugin.wikipedia.WikipediaPlugin;
@@ -104,7 +103,7 @@ public class Shell {
 		// base directory is ".."). The "StandardStorage" implementation expects
 		// a "lang_xy" directory there which contains the database files.
 		Languages.setLanguage(new GermanLanguage());
-		Storages.setStorage(new StandardStorage(".."));
+		Storages.setStorage(new StandardStorage("."));
 
 		// now language and filesystem stuff are ready!
 		LogUtils.startProgress("init");
@@ -164,6 +163,10 @@ public class Shell {
 		// while updating the cache, a cache_xy/ directory will be filled with
 		// information from the database files in lang_xy/
 		database.updateCache();
+		
+		tags.compress();
+		factsCache.compress();
+		meta.compress();
 
 		LogUtils.stopProgress();
 

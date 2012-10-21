@@ -41,13 +41,13 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 			final EnvironmentConfig envConfig = new EnvironmentConfig();
 			envConfig.setTransactional(true);
 			envConfig.setAllowCreate(true);
-			envConfig.setConfigParam(EnvironmentConfig.CLEANER_MIN_UTILIZATION, "90");
+			envConfig.setConfigParam(EnvironmentConfig.CLEANER_MIN_UTILIZATION, "75");
 			this.env = new Environment(envDir, envConfig);
-			try {
-				env.cleanLog();
-			} catch (DatabaseException dbe) {
-				LogUtils.e(dbe);
-			}
+			/*
+			 * try { LogUtils.updateProgress("compressing database...");
+			 * env.cleanLog(); } catch (DatabaseException dbe) {
+			 * LogUtils.e(dbe); }
+			 */
 
 			dbnames = new HashSet<String>();
 			for (String dbname : path.getChild("dbnames").readLines()) {
@@ -114,10 +114,20 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 	}
 
 	@Override
+	public void compress() {
+		writeDatabaseNames();
+		try {
+			LogUtils.updateProgress("compressing database: " + path.getName());
+			env.cleanLog();
+		} catch (DatabaseException dbe) {
+			LogUtils.e(dbe);
+		}
+	}
+
+	@Override
 	public void finish() {
 		writeDatabaseNames();
 		try {
-			env.cleanLog();
 			env.close();
 		} catch (DatabaseException dbe) {
 			LogUtils.e(dbe);
@@ -196,9 +206,6 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 					txn = env.beginTransaction(null, null);
 					// remove the whole database
 					env.truncateDatabase(null, dbname, false);
-					// compress the databases
-					env.compress();
-					env.cleanLog();
 				}
 			} catch (DatabaseException ex) {
 				LogUtils.e("Caught exception: " + ex.toString());

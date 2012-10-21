@@ -147,7 +147,7 @@ public final class Tags {
 	 * @return {@code true} if there is a category set, {@code false} otherwise.
 	 */
 	public boolean hasCategory() {
-		return category != null;
+		return category != null && category.length() > 0;
 	}
 
 	/**
@@ -177,7 +177,7 @@ public final class Tags {
 	 * @return {@code true} if there is a gender set, {@code false} otherwise.
 	 */
 	public boolean hasGender() {
-		return gender != null;
+		return gender != null && gender.length() > 0;
 	}
 
 	/**

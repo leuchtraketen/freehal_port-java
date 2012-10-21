@@ -7,4 +7,6 @@ public interface KeyValueDatabase<T> extends KeyValueModifiable<T>, KeyValueRead
 	KeyValueTransaction<T> transaction();
 
 	void finish();
+
+	void compress();
 }

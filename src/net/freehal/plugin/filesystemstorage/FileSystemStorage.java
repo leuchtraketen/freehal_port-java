@@ -64,4 +64,10 @@ public class FileSystemStorage<T> implements KeyValueDatabase<T> {
 
 	}
 
+	@Override
+	public void compress() {
+		// TODO Automatisch generierter Methodenstub
+		
+	}
+
 }
