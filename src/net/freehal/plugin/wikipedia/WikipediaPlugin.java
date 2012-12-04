@@ -114,19 +114,7 @@ public class WikipediaPlugin implements FactProvider, AnswerProvider {
 	}
 
 	@Override
-	public Set<XmlFact> findFacts(XmlFact xfact) {
-		// TODO Automatisch generierter Methodenstub
-		return null;
-	}
-
-	@Override
 	public Set<XmlFact> findFacts(List<Word> words) {
-		// TODO Automatisch generierter Methodenstub
-		return null;
-	}
-
-	@Override
-	public Set<XmlFact> findFacts(Word word) {
 		// TODO Automatisch generierter Methodenstub
 		return null;
 	}

@@ -45,32 +45,10 @@ public class FactProviders {
 		List<FactProvider> providers = new ArrayList<FactProvider>();
 
 		@Override
-		public Set<XmlFact> findFacts(XmlFact xfact) {
-			Set<XmlFact> set = new HashSet<XmlFact>();
-			for (FactProvider provider : providers) {
-				Set<XmlFact> result = provider.findFacts(xfact);
-				if (result != null)
-					set.addAll(result);
-			}
-			return set;
-		}
-
-		@Override
 		public Set<XmlFact> findFacts(List<Word> words) {
 			Set<XmlFact> set = new HashSet<XmlFact>();
 			for (FactProvider provider : providers) {
 				Set<XmlFact> result = provider.findFacts(words);
-				if (result != null)
-					set.addAll(result);
-			}
-			return set;
-		}
-
-		@Override
-		public Set<XmlFact> findFacts(Word word) {
-			Set<XmlFact> set = new HashSet<XmlFact>();
-			for (FactProvider provider : providers) {
-				Set<XmlFact> result = provider.findFacts(word);
 				if (result != null)
 					set.addAll(result);
 			}

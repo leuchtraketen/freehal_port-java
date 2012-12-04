@@ -52,6 +52,7 @@ import net.freehal.core.pos.Tagger;
 import net.freehal.core.pos.Taggers;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.pos.storage.TagDatabase;
+import net.freehal.core.reasoning.FactReasoning;
 import net.freehal.core.storage.KeyValueDatabase;
 import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.StandardStorage;
@@ -169,6 +170,10 @@ public class Shell {
 		meta.compress();
 
 		LogUtils.stopProgress();
+		
+		
+		FactReasoning reasoning = new FactReasoning(facts);
+		reasoning.doIdle();
 
 		// the Wikipedia plugin is a FactProvider too!
 		WikipediaPlugin wikipedia = new WikipediaPlugin(new GermanWikipedia());

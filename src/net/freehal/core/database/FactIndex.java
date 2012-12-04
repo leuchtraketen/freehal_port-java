@@ -1,6 +1,5 @@
 package net.freehal.core.database;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -8,7 +7,6 @@ import java.util.Map;
 import java.util.Set;
 
 import net.freehal.core.database.Database.DatabaseComponent;
-import net.freehal.core.pos.Taggers;
 import net.freehal.core.storage.KeyValueDatabase;
 import net.freehal.core.storage.KeyValueTransaction;
 import net.freehal.core.util.FreehalFile;
@@ -27,29 +25,6 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 	}
 
 	@Override
-	public Set<XmlFact> findFacts(XmlFact xfact) {
-		LogUtils.i("find by fact: " + xfact);
-
-		List<Word> words = xfact.getWords();
-		List<Word> usefulWords = filterUsefulWords(words);
-
-		return findFacts(usefulWords);
-	}
-
-	private List<Word> filterUsefulWords(List<Word> words) {
-		List<Word> usefulWords = new ArrayList<Word>();
-		for (Word word : words) {
-			if (Taggers.getTagger().isIndexWord(word)) {
-				LogUtils.i("index word: " + word);
-				usefulWords.add(word);
-			} else
-				LogUtils.i("no index word: " + word);
-
-		}
-		return usefulWords;
-	}
-
-	@Override
 	public Set<XmlFact> findFacts(List<Word> words) {
 		LogUtils.i("find by words: " + words);
 
@@ -63,8 +38,7 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 		return found;
 	}
 
-	@Override
-	public Set<XmlFact> findFacts(Word word) {
+	private Set<XmlFact> findFacts(Word word) {
 		LogUtils.i("find by word: " + word);
 
 		return findFacts(new DirectoryUtils.Key(word));
@@ -199,7 +173,7 @@ public class FactIndex implements FactProvider, DatabaseComponent {
 				transaction.finish();
 				transaction = null;
 				cache = null;
-				//System.gc();
+				// System.gc();
 			}
 		}
 	}

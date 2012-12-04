@@ -20,6 +20,7 @@ import java.util.Set;
 
 import net.freehal.core.answer.AnswerProvider;
 import net.freehal.core.parser.Sentence;
+import net.freehal.core.pos.TaggerUtils;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Ranking;
 import net.freehal.core.wording.Wordings;
@@ -41,7 +42,7 @@ public class DatabaseAnswerProvider implements AnswerProvider {
 		}
 
 		XmlFact input = s.getFact();
-		Set<XmlFact> possibleAnswers = database.findFacts(input);
+		Set<XmlFact> possibleAnswers = database.findFacts(TaggerUtils.getIndexWords(input));
 		Ranking<XmlFact> rank = input.ranking(possibleAnswers);
 		for (int i = 0; i < rank.size(); ++i) {
 			for (XmlFact xfact : rank.get(i)) {

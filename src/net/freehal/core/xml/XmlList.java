@@ -198,7 +198,7 @@ public class XmlList extends XmlObj {
 	 * 
 	 * @return a list of embedded XML objects
 	 */
-	List<XmlObj> getEmbedded() {
+	public List<XmlObj> getEmbedded() {
 		return embedded;
 	}
 

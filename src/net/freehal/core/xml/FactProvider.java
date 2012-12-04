@@ -19,13 +19,8 @@ package net.freehal.core.xml;
 import java.util.List;
 import java.util.Set;
 
-
 public interface FactProvider {
 
-	public Set<XmlFact> findFacts(XmlFact xfact);
-
 	public Set<XmlFact> findFacts(List<Word> words);
-
-	public Set<XmlFact> findFacts(Word word);
 
 }
