@@ -112,24 +112,26 @@ public class Pattern {
 			List<XmlObj> emb1 = f1.getEmbedded();
 			List<XmlObj> emb2 = f2.getEmbedded();
 			int i = 0;
-			int j = 0;
+			int k = 0;
 			boolean matches1 = true;
 			for (; i < emb1.size() && matches1; ++i) {
 				boolean matches2 = false;
-				for (int k = 0; k < 2; ++k) {
-					for (j = matches2 ? j : 0; j < emb2.size() && !matches2; ++j) {
-						XmlObj left = emb1.get(i);
-						XmlObj right = emb2.get(j);
-						if (left instanceof XmlVariable)
-							matches2 = matches2
-									|| matches((XmlVariable) left, ArrayUtils.partOfList(emb2, j, 0),
-											variablemap);
-						else if (left instanceof XmlWord)
-							matches2 = matches2 || matches((XmlWord) left, right, variablemap);
-						else
-							matches2 = matches2 || matches((XmlList) left, right, variablemap);
-					}
+				for (; k < emb2.size() * 2 && !matches2; ++k) {
+					int j = k % emb2.size();
+					XmlObj left = emb1.get(i);
+					XmlObj right = emb2.get(j);
+					if (left instanceof XmlVariable)
+						matches2 = matches2
+								|| matches((XmlVariable) left, ArrayUtils.partOfList(emb2, j, 0), variablemap);
+					else if (left instanceof XmlWord)
+						matches2 = matches2 || matches((XmlWord) left, right, variablemap);
+					else
+						matches2 = matches2 || matches((XmlList) left, right, variablemap);
 				}
+
+				k %= emb2.size();
+				if (k >= emb2.size())
+					k = 0;
 
 				matches1 = matches1 && matches2;
 			}

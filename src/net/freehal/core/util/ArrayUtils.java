@@ -59,7 +59,7 @@ public class ArrayUtils<A> {
 	public static <A> List<A> partOfList(List<A> list, int i, int j) {
 		if (i <= 0)
 			i = 0;
-		if (i <= 0)
+		if (j <= 0)
 			j = list.size();
 
 		List<A> newList = new ArrayList<A>();
