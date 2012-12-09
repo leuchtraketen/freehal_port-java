@@ -230,7 +230,7 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 			String error = null;
 			for (String dbname : env.getDatabaseNames()) {
 				Database db = getDatabase(dbname);
-				//LogUtils.i("test: dbname=" + dbname);
+				// LogUtils.i("test: dbname=" + dbname);
 
 				try {
 					final DatabaseEntry dataEntry = new DatabaseEntry();
@@ -239,7 +239,7 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 						error = res.toString();
 					} else {
 						data.append(new String(dataEntry.getData()));
-						//System.out.println(new String(dataEntry.getData()));
+						// System.out.println(new String(dataEntry.getData()));
 					}
 				} catch (DatabaseException ex) {
 					LogUtils.e("Caught exception: " + ex.toString());
@@ -248,7 +248,7 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 				db.close();
 				dbs.remove(dbname);
 			}
-			if (error != null)
+			if (error != null && !error.equals("OperationStatus.NOTFOUND"))
 				LogUtils.e("Error: " + error);
 			return serializer.fromString(data.toString());
 		}

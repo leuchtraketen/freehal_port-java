@@ -24,7 +24,7 @@ import java.util.Collection;
  * 
  * @author "Tobias Schulz"
  */
-public class XmlSynonyms extends XmlList {
+public class XmlSynonyms extends XmlList.OrOperation {
 
 	@SuppressWarnings("unused")
 	private XmlSynonyms() {
@@ -47,6 +47,10 @@ public class XmlSynonyms extends XmlList {
 		add(database.getSynonyms(word.getWord()));
 	}
 
+	public XmlSynonyms(final Collection<String> synonyms) {
+		add(synonyms);
+	}
+
 	/**
 	 * A no-op because an XML synonym list already contains all synonyms.
 	 */
@@ -64,7 +68,9 @@ public class XmlSynonyms extends XmlList {
 	 */
 	private void add(Collection<String> synonyms) {
 		for (String word : synonyms) {
-			this.add(XmlText.fromText(word));
+			XmlWord xword = new XmlWord();
+			xword.setText(word);
+			this.add(xword);
 		}
 	}
 }

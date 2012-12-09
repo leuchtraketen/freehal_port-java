@@ -19,7 +19,10 @@ package net.freehal.core.util;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
+
+import net.freehal.core.util.ArrayUtils.Concatenator;
 
 /**
  * An utility class for non-regex string operations.
@@ -44,7 +47,8 @@ public class StringUtils {
 	 * @return the resulting string
 	 */
 	public static String replace(final String text, final String find, final String replacement) {
-		return text.replace(Pattern.quote(find), replacement);
+		// return text.replace(Pattern.quote(find), replacement);
+		return text.replace(find, replacement);
 	}
 
 	/**
@@ -133,6 +137,17 @@ public class StringUtils {
 			return string;
 	}
 
+	public static String removeSubstring(String text, List<String> substrings) {
+		for (String substring : substrings) {
+			text = removeSubstring(text, substring);
+		}
+		return text;
+	}
+
+	public static String removeSubstring(String text, String substring) {
+		return text.replaceFirst(Pattern.quote(substring), "");
+	}
+
 	/**
 	 * Delete all non-ASCII characters in the given string.
 	 * 
@@ -159,5 +174,18 @@ public class StringUtils {
 		StringWriter errors = new StringWriter();
 		ex.printStackTrace(new PrintWriter(errors));
 		return errors.toString();
+	}
+
+	public static class StringConcatenator implements Concatenator<String> {
+		private String delimiter;
+
+		public StringConcatenator(String delimiter) {
+			this.delimiter = delimiter;
+		}
+
+		@Override
+		public String concat(String a, String b) {
+			return a + delimiter + b;
+		}
 	}
 }

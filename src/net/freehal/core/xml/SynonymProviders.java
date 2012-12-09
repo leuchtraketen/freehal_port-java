@@ -69,4 +69,19 @@ public class SynonymProviders {
 			providers.add(provider);
 		}
 	}
+
+	public static class NullSynonymProvider implements SynonymProvider {
+
+		@Override
+		public Collection<String> getSynonyms(String text) {
+			List<String> words = new ArrayList<String>();
+			return words;
+		}
+
+		@Override
+		public Collection<Word> getSynonyms(Word word) {
+			List<Word> words = new ArrayList<Word>();
+			return words;
+		}
+	}
 }

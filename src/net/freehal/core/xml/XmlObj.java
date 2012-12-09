@@ -23,12 +23,12 @@ import net.freehal.core.pos.Tags;
 
 /**
  * This class represents an abstract XML object and is extended by
- * {@link XmlList}, {@link XmlText} and their subclasses like {@link XmlFact}
+ * {@link XmlList}, {@link XmlWord} and their subclasses like {@link XmlFact}
  * and {@link XmlSynonyms}.
  * 
  * @see XmlList
  * @see XmlFact
- * @see XmlText
+ * @see XmlWord
  * @author "Tobias Schulz"
  */
 public abstract class XmlObj {
@@ -59,6 +59,18 @@ public abstract class XmlObj {
 	 */
 	public String getName() {
 		return name;
+	}
+
+	/**
+	 * Check if the given parameter is the name of the tag which is represented
+	 * by this object.
+	 * 
+	 * @param name
+	 *        the name to check
+	 * @return {@code true} if it's the name, {@code false} otherwise.
+	 */
+	public boolean isName(String name) {
+		return this.name.equals(name);
 	}
 
 	/**
@@ -160,6 +172,13 @@ public abstract class XmlObj {
 	 * @see net.freehal.core.pos.Tagger#toggle(Word)
 	 */
 	public abstract boolean toggle();
+
+	/**
+	 * Create a deep copy of this object.
+	 * 
+	 * @return the deep copy
+	 */
+	public abstract XmlObj copy();
 
 	@Override
 	public abstract String toString();

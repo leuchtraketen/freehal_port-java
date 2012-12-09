@@ -18,8 +18,11 @@ package net.freehal.core.xml;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import net.freehal.core.util.ArrayUtils;
 import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.StringUtils;
 
 /**
  * This class represents an XML tag which contains other XML tags. It is used to
@@ -27,7 +30,7 @@ import net.freehal.core.util.LogUtils;
  * 
  * @see XmlFact
  * @see XmlObj
- * @see XmlText
+ * @see XmlWord
  * @author "Tobias Schulz"
  */
 public class XmlList extends XmlObj {
@@ -35,7 +38,7 @@ public class XmlList extends XmlObj {
 	/**
 	 * the embedded XML objects
 	 */
-	private List<XmlObj> embedded = new ArrayList<XmlObj>();
+	protected List<XmlObj> embedded = new ArrayList<XmlObj>();
 
 	/**
 	 * Add all embedded XML objects with the given tag name to the given list.
@@ -215,51 +218,71 @@ public class XmlList extends XmlObj {
 
 	@Override
 	protected String printXml(int level, int secondlevel) {
-		if (name == "clause") {
+		if (name.equals("clause")) {
 			++level;
 			secondlevel = 0;
 		}
 
-		StringBuilder str = new StringBuilder();
-		str.append("<").append(name).append(">").append((secondlevel == 0 ? "\n" : ""));
-		for (XmlObj e : embedded) {
+		if (name.equals("synonyms")) {
+			StringBuilder str = new StringBuilder();
+			for (XmlObj e : embedded) {
+				str.append(e.printXml(level, secondlevel));
+				break;
+			}
+			return str.toString();
+
+		}
+		if (name.equals("text")) {
+			StringBuilder str = new StringBuilder();
+			for (XmlObj e : embedded) {
+				if (str.length() > 0)
+					str.append(" ");
+				str.append(e.printXml(level, secondlevel));
+			}
+			return str.toString();
+
+		} else {
+			StringBuilder str = new StringBuilder();
+			str.append("<").append(name).append(">").append((secondlevel == 0 ? "\n" : ""));
+			for (XmlObj e : embedded) {
+
+				if (secondlevel == 0)
+					for (int r = 0; r < level + 1; ++r)
+						str.append("  ");
+
+				str.append(e.printXml(level, secondlevel + 1)).append((secondlevel == 0 ? "\n" : ""));
+			}
 
 			if (secondlevel == 0)
-				for (int r = 0; r < level + 1; ++r)
+				for (int r = 0; r < level; ++r)
 					str.append("  ");
 
-			str.append(e.printXml(level, secondlevel + 1)).append((secondlevel == 0 ? "\n" : ""));
+			str.append("</").append(name).append(">");
+			return str.toString();
 		}
-
-		if (secondlevel == 0)
-			for (int r = 0; r < level; ++r)
-				str.append("  ");
-
-		str.append("</").append(name).append(">");
-		return str.toString();
 	}
 
 	@Override
 	public String printStr() {
 		String delem;
-		if (name == "and" || name == "or") {
+		if (name.equals("and") || name.equals("or")) {
 			delem = " " + name;
 		} else {
 			delem = ",";
 		}
 
 		StringBuilder ss = new StringBuilder();
-		if (name == "text" && embedded.size() == 1) {
+		if (name.equals("text") && embedded.size() == 1) {
 			ss.append(name).append(":").append(embedded.get(0).printStr());
-		} else if (name == "synonyms") {
-			ss.append(name).append(": \"");
+			// ss.append(embedded.get(0).printStr());
+		} else if (name.equals("synonyms")) {
+			ss.append(name).append(": ");
 			int k = 0;
 			for (XmlObj e : embedded) {
 				if (k++ > 0)
 					ss.append("|");
 				ss.append(e.printStr());
 			}
-			ss.append("\"");
 		} else {
 			ss.append("'").append(name).append("':{");
 
@@ -282,14 +305,14 @@ public class XmlList extends XmlObj {
 	@Override
 	public String printText() {
 		String delem;
-		if (name == "and" || name == "or") {
+		if (name.equals("and") || name.equals("or")) {
 			delem = " " + name + " ";
 		} else {
 			delem = " ";
 		}
 
 		StringBuilder ss = new StringBuilder();
-		if (name == "text" && embedded.size() == 1) {
+		if (name.equals("text") && embedded.size() == 1) {
 			ss.append(embedded.get(0).printText());
 		} else {
 			if (embedded.size() == 1) {
@@ -332,10 +355,10 @@ public class XmlList extends XmlObj {
 			}
 		}
 
-		if (this.getName() == "link_&")
+		if (this.getName().equals("link_&"))
 			matches = (count == embedded.size() ? matches : 0);
-		if (this.getName() == "synonyms")
-			matches /= count;
+		// if (this.getName() == "synonyms")
+		// matches /= count;
 
 		LogUtils.d("---- compare: " + this.printStr() + " isLike " + other.printStr() + " = " + matches);
 		return matches;
@@ -354,10 +377,10 @@ public class XmlList extends XmlObj {
 			}
 		}
 
-		if (this.getName() == "link_&")
+		if (this.getName().equals("link_&"))
 			matches = (count == embedded.size() ? matches : 0);
-		if (this.getName() == "synonyms")
-			matches /= count;
+		// if (this.getName() == "synonyms")
+		// matches /= count;
 
 		LogUtils.d("---- compare: " + this.printStr() + " matches " + other.printStr() + " = " + matches);
 		return matches;
@@ -372,7 +395,7 @@ public class XmlList extends XmlObj {
 				c += subobj.countWords();
 			}
 		}
-		if (this.getName() == "link_|" || this.getName() == "synonyms")
+		if (name.equals("link_|") || name.equals("synonyms"))
 			c /= embedded.size();
 		return c;
 	}
@@ -380,40 +403,60 @@ public class XmlList extends XmlObj {
 	/**
 	 * Iterator over all words in all embedded XML objects, use the given
 	 * {@link SynonymProvider} to get their synonyms and replace the embedded
-	 * {@link XmlText} object by a {@link XmlSynonyms} object, which contains
+	 * {@link XmlWord} object by a {@link XmlSynonyms} object, which contains
 	 * the original word and all synonyms.
 	 * 
 	 * @param database
 	 */
 	public void insertSynonyms(SynonymProvider database) {
-		List<XmlObj> newEmbedded = new ArrayList<XmlObj>();
 		for (XmlObj e : embedded) {
-			if (e instanceof XmlList) {
-				((XmlList) e).insertSynonyms(database);
-				newEmbedded.add(e);
-			} else if (e instanceof XmlText) {
-				List<Word> words = e.getWords();
-				if (words.size() > 1) {
-					XmlList list = new XmlList();
-					list.setName("list");
-					for (Word word : words) {
-						list.add(new XmlSynonyms(word, database));
+			if (e instanceof XmlText) {
+				List<XmlObj> newEmbedded = new ArrayList<XmlObj>();
+				for (XmlObj t : ((XmlText) e).embedded) {
+					if (t instanceof XmlVariable) {
+						newEmbedded.add(t);
+					} else if (t instanceof XmlWord) {
+						newEmbedded.add(new XmlSynonyms(((XmlWord) t).getWord(), database));
+					} else {
+						newEmbedded.add(t);
 					}
-					newEmbedded.add(list);
-				} else if (words.size() == 1) {
-					newEmbedded.add(new XmlSynonyms(words.get(0), database));
 				}
+				for (int i = 0; i < newEmbedded.size(); ++i) {
+					XmlObj v = newEmbedded.get(i);
+					if (v instanceof XmlVariable) {
+						((XmlVariable) v).setBefore(ArrayUtils.partOfList(newEmbedded, 0, i));
+						((XmlVariable) v).setAfter(ArrayUtils.partOfList(newEmbedded, i + i, 0));
+					}
+				}
+				((XmlText) e).embedded = newEmbedded;
+
+			} else if (e instanceof XmlList) {
+				((XmlList) e).insertSynonyms(database);
 			}
 		}
-		embedded = null;
-		embedded = newEmbedded;
 		this.resetCache();
 	}
+
+	/*
+	 * public void expandSynonyms() { List<XmlObj> newEmbedded = new
+	 * ArrayList<XmlObj>(); for (XmlObj e : embedded) { if (e instanceof
+	 * XmlList) { if (e.name.equals("text")) { List<List<String>> synonymlists =
+	 * new ArrayList<List<String>>(); for (XmlObj synonymlist : ((XmlList)
+	 * e).embedded) { if (synonymlist instanceof XmlSynonyms) { List<String>
+	 * plainSynonyms = new ArrayList<String>(); for (XmlObj synonym : ((XmlList)
+	 * synonymlist).embedded) { plainSynonyms.add(synonym.printText()); }
+	 * synonymlists.add(plainSynonyms); } else { newEmbedded.add(synonymlist); }
+	 * } List<String> mixed = ArrayUtils.concatMatrix(synonymlists, new
+	 * StringUtils.StringConcatenator(" ")); newEmbedded.add(new
+	 * XmlSynonyms(mixed)); } else { ((XmlList) e).expandSynonyms();
+	 * newEmbedded.add(e); } } } embedded = null; embedded = newEmbedded;
+	 * this.resetCache(); }
+	 */
 
 	/**
 	 * Construct a new {@link XmlObj} instance of the parts of a given text,
 	 * separated by '|' (in fact its an instance of {@link XmlList} containing
-	 * {@link XmlText} objects).
+	 * {@link XmlWord} objects).
 	 * 
 	 * @param text
 	 *        the text
@@ -424,7 +467,7 @@ public class XmlList extends XmlObj {
 		XmlList xlist = new XmlList();
 		xlist.setName("fromText");
 		for (String word : text.split("[|]")) {
-			XmlText xobj = new XmlText();
+			XmlWord xobj = new XmlWord();
 			xobj.setText(word);
 			xlist.add(xobj);
 		}
@@ -445,4 +488,34 @@ public class XmlList extends XmlObj {
 		}
 		return ss.toString();
 	}
+
+	@Override
+	public XmlObj copy() {
+		XmlList copy = new XmlList();
+		copy.name = name;
+		for (XmlObj e : embedded) {
+			copy.add(e.copy());
+		}
+		return copy;
+	}
+
+	public void insertVariables(Map<String, String> variablemap) {
+		for (XmlObj e : embedded) {
+			if (e instanceof XmlList) {
+				((XmlList) e).insertVariables(variablemap);
+			} else if (e instanceof XmlWord) {
+				String text = ((XmlWord) e).getText();
+				for (final String variable : variablemap.keySet()) {
+					final String value = variablemap.get(variable);
+					text = StringUtils.replace(text, variable, value);
+				}
+				((XmlWord) e).setText(text);
+			}
+		}
+		this.resetCache();
+	}
+
+	public static class OrOperation extends XmlList {}
+
+	public static class AndOperation extends XmlList {}
 }

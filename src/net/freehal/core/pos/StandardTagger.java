@@ -33,6 +33,8 @@ import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.xml.Word;
+import net.freehal.core.xml.XmlWord;
+import net.freehal.core.xml.XmlVariable;
 
 /**
  * An abstract language-independent tagger implementation.
@@ -314,7 +316,9 @@ public abstract class StandardTagger implements Tagger {
 			word.setTags(this);
 		}
 
-		if (word.hasTags())
+		if (RegexUtils.find(word.getWord(), XmlVariable.REGEX_VARIABLE))
+			return false;
+		else if (word.hasTags())
 			return word.getTags().isCategory("n") || word.getTags().isCategory("adj");
 		else
 			return false;

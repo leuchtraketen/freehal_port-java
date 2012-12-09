@@ -74,13 +74,13 @@ import net.freehal.core.xml.XmlUtils.XmlStreamIterator;
  * </pre>
  * 
  * It doesn't seem to make much sense that there is a {@link XmlList} with
- * {@code name="text"} which always contains only one {@link XmlText} object,
+ * {@code name="text"} which always contains only one {@link XmlWord} object,
  * but this structure is needed because later we can add synonyms to that
  * {@link XmlList} with a {@link SynonymProvider} and
  * {@link XmlList#insertSynonyms(SynonymProvider)}.
  * 
  * @see XmlList
- * @see XmlText
+ * @see XmlWord
  * @see SynonymProvider
  * @author "Tobias Schulz"
  */

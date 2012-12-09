@@ -14,6 +14,7 @@ import net.freehal.core.xml.FactProvider;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlText;
+import net.freehal.core.xml.XmlWord;
 
 public class WikipediaPlugin implements FactProvider, AnswerProvider {
 
@@ -26,19 +27,19 @@ public class WikipediaPlugin implements FactProvider, AnswerProvider {
 	@Override
 	public String getAnswer(Sentence input) {
 		XmlFact fact = input.getFact();
+		if (fact != null) {
 
-		if (fact.part("questionword").matches(XmlText.fromText("what")) == 1
-				&& fact.part("verb").matches(XmlText.fromText("is-a")) == 1) {
+			if (fact.part("questionword").matches(XmlText.fromText("what")) == 1
+					&& fact.part("verb").matches(XmlText.fromText("is-a")) == 1) {
 
-			final String rawName = fact.part("subject").printText() + " " + fact.part("object").printText();
-			final String name = toArticleName(rawName);
-			if (name.length() > 0) {
-				return getShortDescription(name);
+				final String rawName = fact.part("subject").printText() + " "
+						+ fact.part("object").printText();
+				final String name = toArticleName(rawName);
+				if (name.length() > 0) {
+					return getShortDescription(name);
+				}
 			}
 		}
-
-		// if ((matched = RegexUtils.imatch(input.getInput(),
-		// "was ist ([^?!.]+)")) != null) {
 		return null;
 	}
 

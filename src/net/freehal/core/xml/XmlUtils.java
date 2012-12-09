@@ -341,16 +341,10 @@ public class XmlUtils {
 				final String text = line;
 				// check for default values
 				if (!text.equals("00000") && !text.startsWith("0.50")) {
-					XmlText t = new XmlText();
-					t.setText(text.startsWith("0.0") ? "0" : text.startsWith("1.0") ? "1" : text);
-					if (tagname.equals("text")) {
-						tree.add(t);
-					} else {
-						XmlList textObj = new XmlList();
-						textObj.setName("text");
-						textObj.add(t);
-						tree.add(textObj);
-					}
+
+					XmlObj t = XmlText.fromText(text.startsWith("0.0") ? "0" : text.startsWith("1.0") ? "1"
+							: text);
+					tree.add(t);
 				}
 			}
 		}
