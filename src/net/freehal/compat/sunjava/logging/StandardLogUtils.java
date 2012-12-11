@@ -14,11 +14,8 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.compat.sunjava;
+package net.freehal.compat.sunjava.logging;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -26,7 +23,6 @@ import java.util.List;
 import java.util.Set;
 
 import net.freehal.core.util.LogUtilsImpl;
-import net.freehal.core.util.RegexUtils;
 
 public class StandardLogUtils implements LogUtilsImpl {
 
@@ -109,86 +105,6 @@ public class StandardLogUtils implements LogUtilsImpl {
 		if (!(stream instanceof NullLogStream))
 			streams.add(stream);
 		return stream;
-	}
-
-	public static class NullLogStream extends AbstractLogStream {
-
-		@Override
-		public void add(String type, String line, StackTraceElement stacktrace) {
-			// ignore
-		}
-
-		@Override
-		public void flush() {
-			// ignore
-		}
-	}
-
-	public static class FileLogStream extends PrintStreamLogStream {
-
-		public static LogStream create(File filename) {
-			try {
-				return new FileLogStream(filename);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-				return new NullLogStream();
-			}
-		}
-
-		public static LogStream create(String filename) {
-			return create(new File(filename));
-		}
-
-		public FileLogStream(File filename) throws FileNotFoundException {
-			super(new PrintStream(new FileOutputStream(filename)));
-		}
-
-		public void print(String e) {
-			super.print(e);
-		}
-
-		@Override
-		public void add(String type, String line, StackTraceElement stacktrace) {
-			final String prefix = StackTraceUtils.whereInCode(stacktrace) + "(" + type + ") "
-					+ (type.length() == 4 ? " " : "");
-
-			// remove all carriage returns
-			if (line.contains("\\r")) {
-				line = RegexUtils.replace(line, "\\\\r", "");
-				println(prefix + line);
-			} else {
-				println(prefix + line);
-			}
-		}
-	}
-
-	public static class ConsoleLogStream extends PrintStreamLogStream {
-
-		public static LogStream create(PrintStream out) {
-			return new ConsoleLogStream(out);
-		}
-
-		public ConsoleLogStream(PrintStream out) {
-			super(out);
-		}
-
-		public void print(String e) {
-			super.print(e);
-		}
-
-		@Override
-		public void add(String type, String line, StackTraceElement stacktrace) {
-			final String prefix = StackTraceUtils.whereInCode(stacktrace) + "(" + type + ") "
-					+ (type.length() == 4 ? " " : "");
-
-			// use carriage return for output
-			if (line.contains("\\r")) {
-				line = RegexUtils.replace(line, "\\\\r", "\r" + prefix);
-				print(prefix + line + "\r");
-			} else {
-				println(prefix + line);
-			}
-		}
 	}
 
 	public static abstract class PrintStreamLogStream extends AbstractLogStream {

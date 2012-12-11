@@ -411,24 +411,24 @@ public class XmlList extends XmlObj {
 	public void insertSynonyms(SynonymProvider database) {
 		for (XmlObj e : embedded) {
 			if (e instanceof XmlText) {
-				List<XmlObj> newEmbedded = new ArrayList<XmlObj>();
+				List<XmlObj> toInsert = new ArrayList<XmlObj>();
 				for (XmlObj t : ((XmlText) e).embedded) {
 					if (t instanceof XmlVariable) {
-						newEmbedded.add(t);
+						toInsert.add(t);
 					} else if (t instanceof XmlWord) {
-						newEmbedded.add(new XmlSynonyms(((XmlWord) t).getWord(), database));
+						toInsert.add(new XmlSynonyms(((XmlWord) t).getWord(), database));
 					} else {
-						newEmbedded.add(t);
+						toInsert.add(t);
 					}
 				}
-				for (int i = 0; i < newEmbedded.size(); ++i) {
-					XmlObj v = newEmbedded.get(i);
+				for (int i = 0; i < toInsert.size(); ++i) {
+					XmlObj v = toInsert.get(i);
 					if (v instanceof XmlVariable) {
-						((XmlVariable) v).setBefore(ArrayUtils.partOfList(newEmbedded, 0, i));
-						((XmlVariable) v).setAfter(ArrayUtils.partOfList(newEmbedded, i + i, 0));
+						((XmlVariable) v).setBefore(ArrayUtils.partOfList(toInsert, 0, i));
+						((XmlVariable) v).setAfter(ArrayUtils.partOfList(toInsert, i + i, 0));
 					}
 				}
-				((XmlText) e).embedded = newEmbedded;
+				((XmlText) e).embedded = toInsert;
 
 			} else if (e instanceof XmlList) {
 				((XmlList) e).insertSynonyms(database);
@@ -499,19 +499,22 @@ public class XmlList extends XmlObj {
 		return copy;
 	}
 
-	public void insertVariables(Map<String, String> variablemap) {
+	public void insertVariables(Map<String, List<XmlObj>> variablemap) {
+		List<XmlObj> subitems = new ArrayList<XmlObj>();
 		for (XmlObj e : embedded) {
 			if (e instanceof XmlList) {
 				((XmlList) e).insertVariables(variablemap);
+				subitems.add(e);
 			} else if (e instanceof XmlWord) {
 				String text = ((XmlWord) e).getText();
-				for (final String variable : variablemap.keySet()) {
-					final String value = variablemap.get(variable);
-					text = StringUtils.replace(text, variable, value);
+				if (variablemap.containsKey(text)) {
+					subitems.addAll(variablemap.get(text));
+				} else {
+					subitems.add(e);
 				}
-				((XmlWord) e).setText(text);
 			}
 		}
+		embedded = subitems;
 		this.resetCache();
 	}
 

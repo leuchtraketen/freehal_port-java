@@ -8,7 +8,6 @@ import java.util.Map;
 import net.freehal.core.util.ArrayUtils;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Mutable;
-import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.xml.SynonymProvider;
 import net.freehal.core.xml.SynonymProviders;
@@ -57,7 +56,7 @@ public class Pattern {
 	}
 
 	public boolean matches(XmlFact xfact, Mutable<XmlList> conclusionHolder) {
-		Map<String, String> variablemap = new HashMap<String, String>();
+		Map<String, List<XmlObj>> variablemap = new HashMap<String, List<XmlObj>>();
 		xfact.insertSynonyms(selfSynonymProvider);
 		if (Pattern.matches(premise, xfact, variablemap)) {
 			if (conclusionHolder != null) {
@@ -90,27 +89,56 @@ public class Pattern {
 				|| tree.isName("conclusion");
 	}
 
-	private static boolean matches(XmlList f1, XmlList f2, Map<String, String> variablemap) {
-		LogUtils.d("compare: (1) " + f1.printStr() + ", (2) " + f2.printStr());
+	private static String whatis(XmlObj o) {
+		if (o instanceof XmlVariable)
+			return "XmlVariable";
+		else if (o instanceof XmlText)
+			return "XmlText";
+		else if (o instanceof XmlWord)
+			return "XmlWord";
+		else if (o instanceof XmlFact)
+			return "XmlFact";
+		else if (o instanceof XmlList)
+			return "XmlList";
+		else
+			return "XmlObj";
+	}
 
-		if (isIgnoredTree(f1)) {
-			return true;
+	private static boolean matches(XmlObj left, XmlObj right, Map<String, List<XmlObj>> variablemap) {
+		LogUtils.d("compare (" + whatis(left) + "," + whatis(right) + "): (1) " + left.printStr() + ", (2) "
+				+ right.printStr());
 
-		} else if (isOuterTree(f1)) {
-			boolean matches = true;
-			for (XmlObj e1 : f1.getEmbedded()) {
-				XmlList e2 = f2.part(e1.getName());
-
-				matches = matches && matches((XmlList) e1, e2, variablemap);
-
-				if (!matches)
-					break;
+		if (left instanceof XmlWord) {
+			if (right instanceof XmlList) {
+				boolean matches = false;
+				for (XmlObj e2 : ((XmlList) right).getEmbedded()) {
+					if (e2 instanceof XmlWord)
+						matches = matches || matches(left, (XmlWord) e2, variablemap);
+					else
+						matches = matches || matches(left, (XmlList) e2, variablemap);
+					if (matches)
+						break;
+				}
+				return matches;
+			} else if (right instanceof XmlWord) {
+				String text1 = left.printText();
+				String text2 = right.printText();
+				if (text1.equals(text2)) {
+					LogUtils.d("equal: compare (XmlWord,XmlWord): (1) " + left.printStr() + ", (2) "
+							+ right.printStr());
+					return true;
+				} else {
+					LogUtils.d("not equal: compare (XmlWord,XmlWord): (1) " + left.printStr() + ", (2) "
+							+ right.printStr());
+					return false;
+				}
+			} else {
+				return false;
 			}
-			return matches;
 
-		} else if (f1 instanceof XmlText && f2 instanceof XmlText) {
-			List<XmlObj> emb1 = f1.getEmbedded();
-			List<XmlObj> emb2 = f2.getEmbedded();
+		} else if (left instanceof XmlText && right instanceof XmlText) {
+			List<XmlObj> emb1 = ((XmlList) left).getEmbedded();
+			List<XmlObj> emb2 = ((XmlList) right).getEmbedded();
 			int i = 0;
 			int k = 0;
 			boolean matches1 = true;
@@ -118,15 +146,15 @@ public class Pattern {
 				boolean matches2 = false;
 				for (; k < emb2.size() * 2 && !matches2; ++k) {
 					int j = k % emb2.size();
-					XmlObj left = emb1.get(i);
-					XmlObj right = emb2.get(j);
-					if (left instanceof XmlVariable)
+					XmlObj l = emb1.get(i);
+					XmlObj r = emb2.get(j);
+					if (l instanceof XmlVariable)
 						matches2 = matches2
-								|| matches((XmlVariable) left, ArrayUtils.partOfList(emb2, j, 0), variablemap);
-					else if (left instanceof XmlWord)
-						matches2 = matches2 || matches((XmlWord) left, right, variablemap);
+								|| matches((XmlVariable) l, ArrayUtils.partOfList(emb2, j, 0), variablemap);
+					else if (l instanceof XmlWord)
+						matches2 = matches2 || matches((XmlWord) l, r, variablemap);
 					else
-						matches2 = matches2 || matches((XmlList) left, right, variablemap);
+						matches2 = matches2 || matches((XmlList) l, r, variablemap);
 				}
 
 				k %= emb2.size();
@@ -135,88 +163,57 @@ public class Pattern {
 
 				matches1 = matches1 && matches2;
 			}
-
 			return matches1;
 
-		} else if (f1 instanceof XmlList.AndOperation) {
-			boolean matches = true;
-			for (XmlObj e1 : f1.getEmbedded()) {
-				matches = matches && matches((XmlList) e1, f2, variablemap);
-				if (!matches)
-					break;
-			}
-			return matches;
+		} else if (left instanceof XmlList) {
+			if (isIgnoredTree(left)) {
+				return true;
 
-		} else if (f1 instanceof XmlList) {
-			boolean matches = false;
-			for (XmlObj e1 : f1.getEmbedded()) {
-				if (e1 instanceof XmlWord)
-					matches = matches || matches((XmlWord) e1, f2, variablemap);
-				else
-					matches = matches || matches((XmlList) e1, f2, variablemap);
-				if (matches)
-					break;
-			}
-			return matches;
+			} else if (isOuterTree(left)) {
+				if (right instanceof XmlList) {
+					boolean matches = true;
+					for (XmlObj e1 : ((XmlList) left).getEmbedded()) {
+						XmlList e2 = ((XmlList) right).part(e1.getName());
 
+						matches = matches && matches(e1, e2, variablemap);
+
+						if (!matches)
+							break;
+					}
+					return matches;
+
+				} else {
+					boolean matches = false;
+					for (XmlObj e1 : ((XmlList) left).getEmbedded()) {
+						matches = matches || matches(e1, right, variablemap);
+						if (matches)
+							break;
+					}
+					return matches;
+				}
+			} else {
+				boolean matches = false;
+				for (XmlObj e1 : ((XmlList) left).getEmbedded()) {
+					matches = matches || matches(e1, right, variablemap);
+					if (matches)
+						break;
+				}
+				return matches;
+
+			}
 		} else {
-			throw new IllegalArgumentException("Unknown: f1=" + f1.printXml() + ", f2=" + f2.printStr()
-					+ ", " + (f1 instanceof XmlText) + "," + (f1 instanceof XmlList));
+			throw new IllegalArgumentException("unknown: left=" + left.printXml() + ", right="
+					+ right.printStr());
 		}
 	}
 
-	private static boolean matches(XmlList left, XmlObj right, Map<String, String> variablemap) {
-		boolean matches = false;
-		for (XmlObj e1 : left.getEmbedded()) {
-			if (e1 instanceof XmlWord)
-				matches = matches || matches((XmlWord) e1, right, variablemap);
-			else
-				matches = matches || matches((XmlList) e1, right, variablemap);
-			if (matches)
-				break;
-		}
-		return matches;
-	}
-
-	private static boolean matches(XmlWord left, XmlObj right, Map<String, String> variablemap) {
-		if (right instanceof XmlList) {
-			boolean matches = false;
-			for (XmlObj e2 : ((XmlList) right).getEmbedded()) {
-				if (e2 instanceof XmlWord)
-					matches = matches || matches(left, (XmlWord) e2, variablemap);
-				else
-					matches = matches || matches(left, (XmlList) e2, variablemap);
-				if (matches)
-					break;
-			}
-			return matches;
-		} else if (right instanceof XmlWord) {
-			return matches(left, (XmlWord) right, variablemap);
-		} else
-			return false;
-	}
-
-	private static boolean matches(XmlWord f1, XmlWord f2, Map<String, String> variablemap) {
-		LogUtils.d("compare (word): (1) " + f1.printStr() + ", (2) " + f2.printStr());
-
-		String text1 = f1.printText();
-		String text2 = f2.printText();
-		if (text1.equals(text2)) {
-			LogUtils.d("equal (string): '" + text1 + "', '" + text2 + "'");
-			return true;
-		} else {
-			LogUtils.d("not equal: '" + text1 + "', '" + text2 + "'");
-			return false;
-		}
-	}
-
-	private static boolean matches(XmlVariable left, List<XmlObj> right, Map<String, String> variablemap) {
-		LogUtils.d("compare (variable): (1) " + left.printStr() + ", (2) " + right);
+	private static boolean matches(XmlVariable left, List<XmlObj> right, Map<String, List<XmlObj>> variablemap) {
+		LogUtils.d("compare (XmlVariable,List<XmlObj>): (1) " + left.printStr() + ", (2) " + right);
 
 		String text1 = left.printText();
 
 		List<XmlObj> after = left.getAfter();
-		List<String> words = new ArrayList<String>();
+		List<XmlObj> words = new ArrayList<XmlObj>();
 		for (XmlObj e2 : right) {
 			if (after.size() != 0 && after.get(0) == e2) {
 				LogUtils.d("first element of after-variable array reached: after.size()=" + after.size()
@@ -224,47 +221,15 @@ public class Pattern {
 				break;
 			}
 
-			words.add(e2.printText());
+			words.add(e2);
 		}
-		String text2 = StringUtils.join(" ", words);
+		// String text2 = StringUtils.join(" ", words);
 
-		LogUtils.d("equal (regex): '" + text1 + "', '" + text2 + "'");
-		variablemap.put(text1, text2);
-		LogUtils.d("variable: '" + text1 + "'='" + text2 + "'");
+		LogUtils.d("  equal (regex): '" + text1 + "', '" + words + "'");
+		variablemap.put(text1, words);
+		LogUtils.d("  variable: '" + text1 + "'='" + words + "'");
 
 		return true;
-	}
-
-	@SuppressWarnings("unused")
-	private static boolean __matches(XmlWord f1, XmlWord f2, Map<String, String> variablemap) {
-		LogUtils.d("compare (word): (1) " + f1.printStr() + ", (2) " + f2.printStr());
-
-		String text1 = f1.printText();
-		List<String> variables = new ArrayList<String>();
-		List<String> groups;
-		while ((groups = RegexUtils.match(text1, XmlVariable.REGEX_VARIABLE)) != null) {
-			variables.add(groups.get(0));
-			text1 = RegexUtils.replace(text1, java.util.regex.Pattern.quote(groups.get(0)), "(.*)");
-		}
-
-		String text2 = f2.printText();
-
-		if (text1.equals(text2)) {
-			LogUtils.d("equal (string): '" + text1 + "', '" + text2 + "'");
-			return true;
-		} else if ((groups = RegexUtils.match(text2, text1)) != null) {
-			LogUtils.d("equal (regex): '" + text1 + "', '" + text2 + "'");
-			for (int i = 0; i < groups.size(); ++i) {
-				final String variable = i < variables.size() ? variables.get(i) : "unknown";
-				final String value = groups.get(i);
-				variablemap.put(variable, value);
-				LogUtils.d("variable: '" + variable + "'='" + value + "'");
-			}
-			return true;
-		} else {
-			LogUtils.d("not equal: '" + text1 + "', '" + text2 + "'");
-			return false;
-		}
 	}
 
 	public String printStr() {

@@ -22,7 +22,11 @@ import java.util.List;
 
 import net.freehal.compat.sunjava.StandardFreehalFile;
 import net.freehal.compat.sunjava.StandardHttpClient;
-import net.freehal.compat.sunjava.StandardLogUtils;
+import net.freehal.compat.sunjava.logging.ConsoleLogStream;
+import net.freehal.compat.sunjava.logging.FileLogStream;
+import net.freehal.compat.sunjava.logging.LinuxConsoleLogStream;
+import net.freehal.compat.sunjava.logging.StandardLogUtils;
+import net.freehal.compat.sunjava.logging.StandardLogUtils.LogStream;
 import net.freehal.core.answer.AnswerProvider;
 import net.freehal.core.answer.AnswerProviders;
 import net.freehal.core.database.Database;
@@ -95,9 +99,14 @@ public class Shell {
 		// (net.freehal.core.filter) are not logged to console output, but
 		// everything is written into a log file
 		StandardLogUtils log = new StandardLogUtils();
-		log.to(StandardLogUtils.ConsoleLogStream.create(System.out).addFilter("DiskDatabase", LogUtils.DEBUG)
-				.addFilter("xml", LogUtils.DEBUG).addFilter("filter", LogUtils.DEBUG));
-		log.to(StandardLogUtils.FileLogStream.create("../stdout.txt"));
+		LogStream logToConsole = null;
+		if (System.getProperty("os.name").toLowerCase().contains("linux"))
+			logToConsole = LinuxConsoleLogStream.create(System.out);
+		else
+			logToConsole = ConsoleLogStream.create(System.out);
+		log.to(logToConsole.addFilter("DiskDatabase", LogUtils.DEBUG).addFilter("xml", LogUtils.DEBUG)
+				.addFilter("filter", LogUtils.DEBUG));
+		log.to(FileLogStream.create("../stdout.txt"));
 		LogUtils.set(log);
 
 		// set the language and the base directory (if executed in "bin/", the
@@ -120,8 +129,8 @@ public class Shell {
 		LogUtils.startProgress("set up part of speech tagger");
 
 		// this database is shared by several classes for storing metadata
-		KeyValueDatabase<String> meta = new BerkeleyDb<String>(Storages.getCacheDirectory()
-				.getChild("meta"), new Serializer.StringSerializer());
+		KeyValueDatabase<String> meta = new BerkeleyDb<String>(Storages.getCacheDirectory().getChild("meta"),
+				new Serializer.StringSerializer());
 
 		// initialize the part of speech tagger
 		// (also possible: EnglishTagger, GermanTagger, FakeTagger)
@@ -164,14 +173,13 @@ public class Shell {
 		// while updating the cache, a cache_xy/ directory will be filled with
 		// information from the database files in lang_xy/
 		database.updateCache();
-		
+
 		tags.compress();
 		factsCache.compress();
 		meta.compress();
 
 		LogUtils.stopProgress();
-		
-		
+
 		FactReasoning reasoning = new FactReasoning(facts);
 		reasoning.doIdle();
 

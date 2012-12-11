@@ -318,6 +318,8 @@ public class XmlUtils {
 
 	private static XmlList readTree(XmlList tree, String tagname, Iterator<String> lines) {
 
+		if (tagname.equals("text"))
+			return tree;
 		tree.setName(tagname);
 
 		for (String line = lines.next(); lines.hasNext(); line = lines.next()) {

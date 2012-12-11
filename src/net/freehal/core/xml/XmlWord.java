@@ -30,6 +30,16 @@ public class XmlWord extends XmlObj {
 
 	private String text;
 
+	public static XmlObj fromWord(String word) {
+		XmlWord xword = new XmlWord();
+		xword.setText(word);
+		return xword;
+	}
+
+	public static XmlObj fromWord(Word word) {
+		return fromWord(word.getWord());
+	}
+
 	/**
 	 * Set the text.
 	 * 
@@ -43,7 +53,10 @@ public class XmlWord extends XmlObj {
 	/**
 	 * Get the text.
 	 * 
-	 * @return the text
+	 * @r
+	 * 
+	 *    public static XmlWord fromWord(String word) { XmlWord xword = new
+	 *    XmlWord(); xword.setText(word); return xword; }eturn the text
 	 */
 	public String getText() {
 		return text;
@@ -59,7 +72,6 @@ public class XmlWord extends XmlObj {
 	public void setText(Word word) {
 		this.text = word.getWord();
 	}
-
 
 	@Override
 	public String printXml(int level, int secondlevel) {

@@ -43,7 +43,7 @@ public class XmlSynonyms extends XmlList.OrOperation {
 	 */
 	public XmlSynonyms(final Word word, SynonymProvider database) {
 		setName("synonyms");
-		add(XmlText.fromText(word));
+		add(XmlWord.fromWord(word));
 		add(database.getSynonyms(word.getWord()));
 	}
 
@@ -68,9 +68,7 @@ public class XmlSynonyms extends XmlList.OrOperation {
 	 */
 	private void add(Collection<String> synonyms) {
 		for (String word : synonyms) {
-			XmlWord xword = new XmlWord();
-			xword.setText(word);
-			this.add(xword);
+			this.add(XmlWord.fromWord(word));
 		}
 	}
 }
