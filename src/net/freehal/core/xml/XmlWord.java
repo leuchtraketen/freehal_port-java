@@ -53,10 +53,7 @@ public class XmlWord extends XmlObj {
 	/**
 	 * Get the text.
 	 * 
-	 * @r
-	 * 
-	 *    public static XmlWord fromWord(String word) { XmlWord xword = new
-	 *    XmlWord(); xword.setText(word); return xword; }eturn the text
+	 * @return the text
 	 */
 	public String getText() {
 		return text;

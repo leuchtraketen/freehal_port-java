@@ -161,7 +161,7 @@ public class StringUtils {
 	}
 
 	/**
-	 * Use a {@link java.io.PrintWriter} and
+	 * Use a {@link PrintWriter} and
 	 * {@link Exception#printStackTrace(PrintWriter)} to get a string
 	 * representation of the given regular expression.
 	 * 

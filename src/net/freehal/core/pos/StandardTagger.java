@@ -16,24 +16,22 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
-import net.freehal.core.pos.storage.TagContainer;
-import net.freehal.core.pos.storage.MemoryTagList;
-import net.freehal.core.pos.storage.MemoryTagMap;
-import net.freehal.core.storage.Storages;
-import net.freehal.core.util.FreehalFile;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.freehal.core.pos.storage.MemoryTagList;
+import net.freehal.core.pos.storage.MemoryTagMap;
+import net.freehal.core.pos.storage.TagContainer;
+import net.freehal.core.storage.Storages;
 import net.freehal.core.util.Factory;
+import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.xml.Word;
-import net.freehal.core.xml.XmlWord;
 import net.freehal.core.xml.XmlVariable;
 
 /**

@@ -20,6 +20,14 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.GnuParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.OptionBuilder;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+
 import net.freehal.compat.sunjava.StandardFreehalFile;
 import net.freehal.compat.sunjava.StandardHttpClient;
 import net.freehal.compat.sunjava.logging.ConsoleLogStream;
@@ -202,7 +210,29 @@ public class Shell {
 		LogUtils.stopProgress();
 	}
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
+		Options options = new Options();
+		options.addOption("a", "all", false, "do not hide entries starting with .");
+		options.addOption("A", "almost-all", false, "do not list implied . and ..");
+		options.addOption("b", "escape", false, "print octal escapes for nongraphic " + "characters");
+		options.addOption(OptionBuilder.withLongOpt("block-size").withDescription("use SIZE-byte blocks")
+				.hasArg().withArgName("SIZE").create());
+
+		// create the parser
+		CommandLineParser parser = new GnuParser();
+		try {
+			// parse the command line arguments
+			CommandLine line = parser.parse(options, args);
+		} catch (ParseException exp) {
+			// oops, something went wrong
+			System.err.println(exp.getMessage());
+		}
+		HelpFormatter formatter = new HelpFormatter();
+		formatter.printHelp(args[0], options, true);
+	}
+
+	public static void shell(String[] args) {
 		// initialize everything
 		init();
 

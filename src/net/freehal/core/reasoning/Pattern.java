@@ -8,15 +8,14 @@ import java.util.Map;
 import net.freehal.core.util.ArrayUtils;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.Mutable;
-import net.freehal.core.util.StringUtils;
 import net.freehal.core.xml.SynonymProvider;
 import net.freehal.core.xml.SynonymProviders;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlList;
 import net.freehal.core.xml.XmlObj;
 import net.freehal.core.xml.XmlText;
-import net.freehal.core.xml.XmlWord;
 import net.freehal.core.xml.XmlVariable;
+import net.freehal.core.xml.XmlWord;
 
 public class Pattern {
 
@@ -56,14 +55,17 @@ public class Pattern {
 	}
 
 	public boolean matches(XmlFact xfact, Mutable<XmlList> conclusionHolder) {
+
 		Map<String, List<XmlObj>> variablemap = new HashMap<String, List<XmlObj>>();
 		xfact.insertSynonyms(selfSynonymProvider);
+
 		if (Pattern.matches(premise, xfact, variablemap)) {
 			if (conclusionHolder != null) {
 				XmlList modifiedConclusion = (XmlList) conclusion.copy();
 				modifiedConclusion.insertVariables(variablemap);
 				modifiedConclusion.setName("fact");
 				modifiedConclusion.add(Pattern.CONCLUSION_MARKER);
+				
 				XmlList origin = new XmlList();
 				origin.setName("origin");
 				origin.addAll(xfact);
@@ -71,8 +73,8 @@ public class Pattern {
 
 				conclusionHolder.set(modifiedConclusion);
 			}
-
 			return true;
+
 		} else {
 			return false;
 		}

@@ -30,7 +30,6 @@ import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlObj;
 import net.freehal.core.xml.XmlText;
-import net.freehal.core.xml.XmlWord;
 
 public class SynonymIndex implements SynonymProvider, Database.DatabaseComponent {
 

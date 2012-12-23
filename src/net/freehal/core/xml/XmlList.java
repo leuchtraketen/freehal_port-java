@@ -22,7 +22,6 @@ import java.util.Map;
 
 import net.freehal.core.util.ArrayUtils;
 import net.freehal.core.util.LogUtils;
-import net.freehal.core.util.StringUtils;
 
 /**
  * This class represents an XML tag which contains other XML tags. It is used to
