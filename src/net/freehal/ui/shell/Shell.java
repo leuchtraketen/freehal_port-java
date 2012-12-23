@@ -229,7 +229,8 @@ public class Shell {
 			System.err.println(exp.getMessage());
 		}
 		HelpFormatter formatter = new HelpFormatter();
-		formatter.printHelp(args[0], options, true);
+		System.out.println(Shell.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+		formatter.printHelp("", options, true);
 	}
 
 	public static void shell(String[] args) {
