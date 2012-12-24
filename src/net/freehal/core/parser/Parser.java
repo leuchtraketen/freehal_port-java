@@ -38,8 +38,7 @@ public abstract class Parser {
 
 	abstract protected String cleanInput(String str);
 
-	abstract protected String simplifyInput(String str,
-			Mutable<Boolean> isQuestion);
+	abstract protected String simplifyInput(String str, Mutable<Boolean> isQuestion);
 
 	abstract protected String extendInput(String str);
 

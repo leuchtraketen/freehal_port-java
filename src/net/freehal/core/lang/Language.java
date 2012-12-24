@@ -36,7 +36,7 @@ public interface Language {
 	 * this {@link Language} instance.
 	 * 
 	 * @param otherCode
-	 *            the other language code
+	 *        the other language code
 	 * @return {@code true} if they are equal, {code false} otherwise.
 	 */
 	public boolean isCode(String otherCode);

@@ -7,17 +7,15 @@ import net.freehal.core.util.MultiHashMap;
 import net.freehal.core.util.MultiMap;
 import net.freehal.core.util.StringUtils;
 
-public class DefaultImpl {
+public class LanguageSpecific {
 
 	private static MultiMap<String, Class<?>> defaults = new MultiHashMap<String, Class<?>>();
 
-	public static <T> void add(Class<? extends Language> languageType,
-			Class<? extends T> implType) {
+	public static <T> void add(Class<? extends Language> languageType, Class<? extends T> implType) {
 
 		final String languageClassName;
 		if (languageType != null)
-			languageClassName = StringUtils.substringAfterLast(
-					languageType.getName(), ".");
+			languageClassName = StringUtils.substringAfterLast(languageType.getName(), ".");
 		else
 			languageClassName = "null";
 
@@ -25,22 +23,17 @@ public class DefaultImpl {
 	}
 
 	@SuppressWarnings("unchecked")
-	private static <T> T chooseByInterface(final String lang,
-			Class<T> interfaceType) {
+	private static <T> T chooseByInterface(final String lang, Class<T> interfaceType) {
 
 		Set<Class<?>> pool = defaults.get(lang);
-		LogUtils.i(lang + ": looking for default implementations of "
-				+ interfaceType.getName());
+		LogUtils.i(lang + ": looking for default implementations of " + interfaceType.getName());
 
 		for (Class<?> type : pool) {
-			if (type.isAssignableFrom(interfaceType)
-					|| interfaceType.isAssignableFrom(type)) {
-				LogUtils.i(lang + ": found default implementation: "
-						+ type.getName());
+			if (type.isAssignableFrom(interfaceType) || interfaceType.isAssignableFrom(type)) {
+				LogUtils.i(lang + ": found default implementation: " + type.getName());
 				return (T) newInstanceOf(type, null);
 			} else {
-				LogUtils.i(lang + ": no default implementation: "
-						+ type.getName());
+				LogUtils.i(lang + ": no default implementation: " + type.getName());
 			}
 		}
 
@@ -48,15 +41,13 @@ public class DefaultImpl {
 	}
 
 	public static <T> T chooseByLanguage(Class<T> interfaceType) {
-		final String lang = StringUtils.substringAfterLast(Languages
-				.getLanguage().getClass().getName(), ".");
+		final String lang = StringUtils.substringAfterLast(Languages.getLanguage().getClass().getName(), ".");
 		T obj = chooseByInterface(lang, interfaceType);
 		if (obj == null) {
 			obj = chooseByInterface("null", interfaceType);
 		}
 		if (obj == null) {
-			LogUtils.e(lang + ": no implementation found. "
-					+ "Classes associated with the language: "
+			LogUtils.e(lang + ": no implementation found. " + "Classes associated with the language: "
 					+ defaults.get(lang));
 
 		}

@@ -53,7 +53,7 @@ import net.freehal.core.filter.FilterQuestionWhat;
 import net.freehal.core.filter.FilterQuestionWho;
 import net.freehal.core.grammar.Grammar;
 import net.freehal.core.grammar.Grammars;
-import net.freehal.core.lang.DefaultImpl;
+import net.freehal.core.lang.LanguageSpecific;
 import net.freehal.core.lang.Language;
 import net.freehal.core.lang.Languages;
 import net.freehal.core.lang.english.EnglishLanguage;
@@ -136,7 +136,7 @@ public class Shell {
 
 		// initialize the grammar
 		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
-		Grammar grammar = DefaultImpl.chooseByLanguage(Grammar.class);
+		Grammar grammar = LanguageSpecific.chooseByLanguage(Grammar.class);
 		grammar.readGrammar(FreehalFiles.getFile("grammar.txt"));
 		Grammars.setGrammar(grammar);
 
@@ -152,7 +152,7 @@ public class Shell {
 		// usage) or a TaggerCacheDisk (slower, less memory usage)
 		KeyValueDatabase<Tags> tags = new BerkeleyDb<Tags>(Storages.getCacheDirectory().getChild("tagger"),
 				new Tags.StringSerializer());
-		Tagger tagger = DefaultImpl.chooseByLanguage(Tagger.class);
+		Tagger tagger = LanguageSpecific.chooseByLanguage(Tagger.class);
 		tagger.setDatabase(TagDatabase.newFactory(tags, meta));
 		// Tagger tagger = new GermanTagger(MemoryTagMap.newFactory());
 		tagger.readTagsFrom(FreehalFiles.getFile("guessed.pos"));
@@ -166,7 +166,7 @@ public class Shell {
 
 		// how to phrase the output sentences
 		// (also possible: EnglishWording, GermanWording, FakeWording)
-		Wording phrase = DefaultImpl.chooseByLanguage(Wording.class);
+		Wording phrase = LanguageSpecific.chooseByLanguage(Wording.class);
 		Wordings.setWording(phrase);
 
 		LogUtils.startProgress("set up database");
@@ -205,10 +205,10 @@ public class Shell {
 		FactProviders.addFactProvider(wikipedia);
 
 		// Freehal has different ways to find an answer for an input
-		AnswerProviders.add(DefaultImpl.chooseByLanguage(PredefinedAnswerProvider.class));
+		AnswerProviders.add(LanguageSpecific.chooseByLanguage(PredefinedAnswerProvider.class));
 		AnswerProviders.add(new DatabaseAnswerProvider(facts));
 		AnswerProviders.add(wikipedia);
-		AnswerProviders.add(DefaultImpl.chooseByLanguage(RandomAnswerProvider.class));
+		AnswerProviders.add(LanguageSpecific.chooseByLanguage(RandomAnswerProvider.class));
 		AnswerProviders.add(new FakeAnswerProvider());
 
 		// fact filters are used to filter the best-matching fact in the
@@ -304,7 +304,7 @@ public class Shell {
 
 		for (String input : args) {
 			// also possible: EnglishParser, GermanParser, FakeParser
-			Parser p = DefaultImpl.chooseByLanguage(Parser.class);
+			Parser p = LanguageSpecific.chooseByLanguage(Parser.class);
 			p.parse(input);
 
 			// parse the input and get a list of sentences

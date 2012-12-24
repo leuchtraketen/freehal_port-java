@@ -37,8 +37,7 @@ public class StringUtils {
 	 */
 	public static final String NEWLINE = System.getProperty("line.separator");
 
-	private StringUtils() {
-	}
+	private StringUtils() {}
 
 	/**
 	 * Replaces each substring of the string in the first argument that matches
@@ -46,15 +45,14 @@ public class StringUtils {
 	 * expressions.
 	 * 
 	 * @param text
-	 *            the text
+	 *        the text
 	 * @param find
-	 *            the string to find
+	 *        the string to find
 	 * @param replacement
-	 *            the replacement
+	 *        the replacement
 	 * @return the resulting string
 	 */
-	public static String replace(final String text, final String find,
-			final String replacement) {
+	public static String replace(final String text, final String find, final String replacement) {
 		// return text.replace(Pattern.quote(find), replacement);
 		return text.replace(find, replacement);
 	}
@@ -64,9 +62,9 @@ public class StringUtils {
 	 * delimiter.
 	 * 
 	 * @param delimiter
-	 *            the delimiter
+	 *        the delimiter
 	 * @param s
-	 *            the string to join
+	 *        the string to join
 	 * @return the resultng string
 	 */
 	public static String join(final String delimiter, final Iterable<String> s) {
@@ -85,9 +83,9 @@ public class StringUtils {
 	 * Join all string in the given string array using the given delimiter.
 	 * 
 	 * @param delimiter
-	 *            the delimiter
+	 *        the delimiter
 	 * @param s
-	 *            the string to join
+	 *        the string to join
 	 * @return the resultng string
 	 */
 	public static String join(String delimiter, String[] s) {
@@ -105,9 +103,9 @@ public class StringUtils {
 	 * Split the given string by the given delimiter with escaping it.
 	 * 
 	 * @param text
-	 *            the string to split
+	 *        the string to split
 	 * @param splitBy
-	 *            the delimiter
+	 *        the delimiter
 	 * @return the parts after splitting
 	 */
 	public static String[] splitEscaped(String text, String splitBy) {
@@ -121,7 +119,7 @@ public class StringUtils {
 	 * Trim the given string.
 	 * 
 	 * @param str
-	 *            the string to trim
+	 *        the string to trim
 	 * @return the resulting string
 	 */
 	public static String trim(String str) {
@@ -133,7 +131,7 @@ public class StringUtils {
 	 * equivalent, like Perl's {@code ucfirst}.
 	 * 
 	 * @param string
-	 *            the given string
+	 *        the given string
 	 * @return the resulting string
 	 */
 	public static String ucfirst(String string) {
@@ -160,7 +158,7 @@ public class StringUtils {
 	 * Delete all non-ASCII characters in the given string.
 	 * 
 	 * @param string
-	 *            the string
+	 *        the string
 	 * @return the resulting string
 	 */
 	public static String toAscii(String string) {
@@ -181,7 +179,7 @@ public class StringUtils {
 	 * representation of the given regular expression.
 	 * 
 	 * @param ex
-	 *            the regular expression
+	 *        the regular expression
 	 * @return it's string representation as it would have been printed to a
 	 *         console
 	 */
