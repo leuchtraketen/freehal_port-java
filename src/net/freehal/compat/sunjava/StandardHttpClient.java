@@ -158,4 +158,7 @@ public class StandardHttpClient implements FreehalFile {
 		}
 		return countOfLines;
 	}
+
+	@Override
+	public void touch() {}
 }

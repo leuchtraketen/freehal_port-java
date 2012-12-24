@@ -195,4 +195,6 @@ public interface FreehalFile extends Comparable<FreehalFile> {
 	 * @return the count of files
 	 */
 	public int countLines();
+
+	public void touch();
 }

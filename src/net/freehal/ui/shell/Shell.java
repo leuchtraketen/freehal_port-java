@@ -17,8 +17,11 @@
 package net.freehal.ui.shell;
 
 import java.io.File;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -50,26 +53,26 @@ import net.freehal.core.filter.FilterQuestionWhat;
 import net.freehal.core.filter.FilterQuestionWho;
 import net.freehal.core.grammar.Grammar;
 import net.freehal.core.grammar.Grammars;
+import net.freehal.core.lang.DefaultImpl;
+import net.freehal.core.lang.Language;
 import net.freehal.core.lang.Languages;
-import net.freehal.core.lang.german.GermanGrammar;
+import net.freehal.core.lang.english.EnglishLanguage;
 import net.freehal.core.lang.german.GermanLanguage;
-import net.freehal.core.lang.german.GermanParser;
-import net.freehal.core.lang.german.GermanPredefinedAnswerProvider;
-import net.freehal.core.lang.german.GermanRandomAnswerProvider;
-import net.freehal.core.lang.german.GermanTagger;
-import net.freehal.core.lang.german.GermanWording;
 import net.freehal.core.parser.Parser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.pos.Tagger;
 import net.freehal.core.pos.Taggers;
 import net.freehal.core.pos.Tags;
 import net.freehal.core.pos.storage.TagDatabase;
+import net.freehal.core.predefined.PredefinedAnswerProvider;
+import net.freehal.core.predefined.RandomAnswerProvider;
 import net.freehal.core.reasoning.FactReasoning;
 import net.freehal.core.storage.KeyValueDatabase;
 import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.AbstractFreehalFile;
+import net.freehal.core.util.ArrayUtils;
 import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
@@ -93,7 +96,7 @@ import net.freehal.plugin.wikipedia.WikipediaPlugin;
  * @author "Tobias Schulz"
  */
 public class Shell {
-	private static void init() {
+	private static void init(Language language, Set<String> params) {
 		// set the virtual file implementations
 		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
 		FreehalFiles.add("sqlite", FakeFreehalFile.newFactory());
@@ -117,10 +120,13 @@ public class Shell {
 		log.to(FileLogStream.create("../stdout.txt"));
 		LogUtils.set(log);
 
-		// set the language and the base directory (if executed in "bin/", the
+		// initialize the languages and the base directory (if executed in
+		// "bin/", the
 		// base directory is ".."). The "StandardStorage" implementation expects
 		// a "lang_xy" directory there which contains the database files.
-		Languages.setLanguage(new GermanLanguage());
+		GermanLanguage.initializeDefaults();
+		EnglishLanguage.initializeDefaults();
+		Languages.setLanguage(language);
 		Storages.setStorage(new StandardStorage("."));
 
 		// now language and filesystem stuff are ready!
@@ -130,7 +136,7 @@ public class Shell {
 
 		// initialize the grammar
 		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
-		Grammar grammar = new GermanGrammar();
+		Grammar grammar = DefaultImpl.chooseByLanguage(Grammar.class);
 		grammar.readGrammar(FreehalFiles.getFile("grammar.txt"));
 		Grammars.setGrammar(grammar);
 
@@ -146,7 +152,8 @@ public class Shell {
 		// usage) or a TaggerCacheDisk (slower, less memory usage)
 		KeyValueDatabase<Tags> tags = new BerkeleyDb<Tags>(Storages.getCacheDirectory().getChild("tagger"),
 				new Tags.StringSerializer());
-		Tagger tagger = new GermanTagger(TagDatabase.newFactory(tags, meta));
+		Tagger tagger = DefaultImpl.chooseByLanguage(Tagger.class);
+		tagger.setDatabase(TagDatabase.newFactory(tags, meta));
 		// Tagger tagger = new GermanTagger(MemoryTagMap.newFactory());
 		tagger.readTagsFrom(FreehalFiles.getFile("guessed.pos"));
 		tagger.readTagsFrom(FreehalFiles.getFile("brain.pos"));
@@ -159,7 +166,7 @@ public class Shell {
 
 		// how to phrase the output sentences
 		// (also possible: EnglishWording, GermanWording, FakeWording)
-		Wording phrase = new GermanWording();
+		Wording phrase = DefaultImpl.chooseByLanguage(Wording.class);
 		Wordings.setWording(phrase);
 
 		LogUtils.startProgress("set up database");
@@ -188,18 +195,20 @@ public class Shell {
 
 		LogUtils.stopProgress();
 
-		FactReasoning reasoning = new FactReasoning(facts);
-		reasoning.doIdle();
+		if (params.contains("reasoning")) {
+			FactReasoning reasoning = new FactReasoning(facts);
+			reasoning.doIdle();
+		}
 
 		// the Wikipedia plugin is a FactProvider too!
 		WikipediaPlugin wikipedia = new WikipediaPlugin(new GermanWikipedia());
 		FactProviders.addFactProvider(wikipedia);
 
 		// Freehal has different ways to find an answer for an input
-		AnswerProviders.add(new GermanPredefinedAnswerProvider());
+		AnswerProviders.add(DefaultImpl.chooseByLanguage(PredefinedAnswerProvider.class));
 		AnswerProviders.add(new DatabaseAnswerProvider(facts));
 		AnswerProviders.add(wikipedia);
-		AnswerProviders.add(new GermanRandomAnswerProvider());
+		AnswerProviders.add(DefaultImpl.chooseByLanguage(RandomAnswerProvider.class));
 		AnswerProviders.add(new FakeAnswerProvider());
 
 		// fact filters are used to filter the best-matching fact in the
@@ -210,36 +219,93 @@ public class Shell {
 		LogUtils.stopProgress();
 	}
 
+	public static void think(Language language) {
+		init(language, ArrayUtils.asSet(new String[] { "reasoning" }));
+	}
+
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		Options options = new Options();
-		options.addOption("a", "all", false, "do not hide entries starting with .");
-		options.addOption("A", "almost-all", false, "do not list implied . and ..");
-		options.addOption("b", "escape", false, "print octal escapes for nongraphic " + "characters");
-		options.addOption(OptionBuilder.withLongOpt("block-size").withDescription("use SIZE-byte blocks")
-				.hasArg().withArgName("SIZE").create());
+		options.addOption("h", "help", false, "display this help and exit");
+		options.addOption("v", "version", false, "output version information and exit");
 
-		// create the parser
-		CommandLineParser parser = new GnuParser();
-		try {
-			// parse the command line arguments
-			CommandLine line = parser.parse(options, args);
-		} catch (ParseException exp) {
-			// oops, something went wrong
-			System.err.println(exp.getMessage());
+		options.addOption(OptionBuilder.withLongOpt("input")
+				.withDescription("a statement or question to answer").hasArg().withArgName("TEXT")
+				.create("i"));
+		options.addOption(OptionBuilder.withLongOpt("language")
+				.withDescription("the natual language TEXT is written in").hasArg().withArgName("LANG")
+				.create("l"));
+		options.addOption("t", "think", false, "do some reasoning processes");
+
+		if (args.length == 0) {
+			printHelp(options);
+
+		} else {
+			// create the parser
+			CommandLineParser parser = new GnuParser();
+			try {
+				// parse command line arguments
+				CommandLine line = parser.parse(options, args);
+				parse(line, options);
+			} catch (ParseException exp) {
+				System.err.println(exp.getMessage());
+			}
 		}
-		HelpFormatter formatter = new HelpFormatter();
-		System.out.println(Shell.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-		formatter.printHelp("", options, true);
 	}
 
-	public static void shell(String[] args) {
+	private static void parse(CommandLine line, Options options) {
+		if (line.hasOption("help"))
+			printHelp(options);
+
+		Language language = new GermanLanguage(); // default language
+
+		if (line.hasOption("language")) {
+			final String langCode = line.getOptionValue("language").toLowerCase();
+			if (langCode.equals("de") || langCode.equals("german") || langCode.equals("deutsch")) {
+				language = new GermanLanguage();
+			} else if (langCode.equals("en") || langCode.equals("english")
+					|| langCode.equals("international")) {
+				language = new EnglishLanguage();
+			}
+		}
+
+		if (line.hasOption("input")) {
+			String[] args = { line.getOptionValue("input") };
+			shell(language, args);
+		}
+
+		if (line.hasOption("think")) {
+			think(language);
+		}
+	}
+
+	private static void printHelp(Options options) {
+		final String header = "FreeHAL is a self-learning conversation simulator, "
+				+ "an artificial intelligence " + "which uses semantic nets to organize its knowledge.";
+		final String footer = "Please report bugs to <info@freehal.net>.";
+		final int width = 80;
+		final int descPadding = 10;
+		final PrintWriter out = new PrintWriter(System.out, true);
+
+		HelpFormatter formatter = new HelpFormatter();
+		formatter.setWidth(width);
+		formatter.setDescPadding(descPadding);
+		formatter.printUsage(out, width, "java " + Shell.class.getName(), options);
+		formatter.printWrapped(out, width, header);
+		formatter.printWrapped(out, width, "");
+		formatter.printOptions(out, width, options, formatter.getLeftPadding(), formatter.getDescPadding());
+		formatter.printWrapped(out, width, "");
+		formatter.printWrapped(out, width, footer);
+	}
+
+	public static void shell(Language language, String[] args) {
 		// initialize everything
-		init();
+		init(language, Collections.<String> emptySet());
 
 		for (String input : args) {
 			// also possible: EnglishParser, GermanParser, FakeParser
-			Parser p = new GermanParser(input);
+			Parser p = DefaultImpl.chooseByLanguage(Parser.class);
+			p.parse(input);
 
 			// parse the input and get a list of sentences
 			final List<Sentence> inputParts = p.getSentences();
@@ -346,5 +412,10 @@ class FakeFreehalFile extends AbstractFreehalFile {
 	@Override
 	public int countLines() {
 		return 0;
+	}
+
+	@Override
+	public void touch() {
+		append("");
 	}
 }

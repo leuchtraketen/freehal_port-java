@@ -16,6 +16,8 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
+import net.freehal.core.pos.storage.TagContainer;
+import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.xml.Word;
@@ -27,6 +29,8 @@ import net.freehal.core.xml.Word;
  * @author "Tobias Schulz"
  */
 public interface Tagger {
+
+	public void setDatabase(Factory<TagContainer, String> newFactory);
 
 	/**
 	 * Returns the part of speech tags of the given word as a {@link Tags}

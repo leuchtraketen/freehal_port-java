@@ -21,10 +21,6 @@ import net.freehal.core.util.Mutable;
 
 public class EnglishParser extends Parser {
 
-	public EnglishParser(String rawInput) {
-		super(rawInput);
-	}
-
 	@Override
 	protected String cleanInput(String str) {
 		return str;

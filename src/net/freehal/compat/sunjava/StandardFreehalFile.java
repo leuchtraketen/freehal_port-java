@@ -288,4 +288,9 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 		}
 
 	}
+
+	@Override
+	public void touch() {
+		append("");
+	}
 }

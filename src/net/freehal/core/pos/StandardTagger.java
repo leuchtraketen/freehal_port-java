@@ -46,23 +46,25 @@ public abstract class StandardTagger implements Tagger {
 	private Map<String, String> togglemap;
 
 	/**
-	 * Construct a new tagger instance by using a given tagger cache.
-	 * 
-	 * @param storage
-	 *        the cache to use
+	 * Construct a new tagger instance by using an instance of
+	 * {@link TaggerCacheDisk} as tagger cache; you should set a tagger cache
+	 * with {@link #setDatabase(Factory)} !!
 	 */
-	public StandardTagger(Factory<TagContainer, String> storage) {
-		staticTags = storage.newInstance("staticTags");
+	public StandardTagger() {
+		staticTags = MemoryTagMap.newFactory().newInstance("staticTags");
 		regexTags = new MemoryTagList();
 		togglemap = new HashMap<String, String>();
 	}
 
 	/**
-	 * Construct a new tagger insbtance by using an instance of
-	 * {@link TaggerCacheDisk} as tagger cache.
+	 * Set the tagger cache factory to the given value.
+	 * 
+	 * @param storage
+	 *        the cache to use
 	 */
-	public StandardTagger() {
-		staticTags = MemoryTagMap.newFactory().newInstance("staticTags");
+	@Override
+	public void setDatabase(Factory<TagContainer, String> storage) {
+		staticTags = storage.newInstance("staticTags");
 		regexTags = new MemoryTagList();
 		togglemap = new HashMap<String, String>();
 	}

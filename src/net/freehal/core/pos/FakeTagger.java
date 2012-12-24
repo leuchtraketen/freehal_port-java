@@ -16,6 +16,8 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
+import net.freehal.core.pos.storage.TagContainer;
+import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
 
 import net.freehal.core.xml.Word;
@@ -26,6 +28,14 @@ import net.freehal.core.xml.Word;
  * @author "Tobias Schulz"
  */
 public class FakeTagger implements Tagger {
+
+	/**
+	 * ignore...
+	 */
+	@Override
+	public void setDatabase(Factory<TagContainer, String> newFactory) {
+
+	}
 
 	/**
 	 * Always returns a noun, no matter which word is given.
@@ -51,13 +61,15 @@ public class FakeTagger implements Tagger {
 	 * A no-op.
 	 */
 	@Override
-	public void readTagsFrom(FreehalFile filename) {}
+	public void readTagsFrom(FreehalFile filename) {
+	}
 
 	/**
 	 * A no-op.
 	 */
 	@Override
-	public void readRegexFrom(FreehalFile filename) {}
+	public void readRegexFrom(FreehalFile filename) {
+	}
 
 	/**
 	 * Returns the given word.
@@ -73,7 +85,8 @@ public class FakeTagger implements Tagger {
 	 * A no-op.
 	 */
 	@Override
-	public void readToggleWordsFrom(FreehalFile filename) {}
+	public void readToggleWordsFrom(FreehalFile filename) {
+	}
 
 	/**
 	 * Always returns {@code true}.

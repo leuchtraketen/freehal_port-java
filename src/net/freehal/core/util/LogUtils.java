@@ -19,6 +19,8 @@ package net.freehal.core.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.freehal.compat.sunjava.logging.ConsoleLogStream;
+import net.freehal.compat.sunjava.logging.StandardLogUtils;
 import net.freehal.core.storage.Storages;
 
 /**
@@ -40,7 +42,12 @@ public class LogUtils {
 	/**
 	 * The current {@link LogUtilsImpl} implementation.
 	 */
-	private static LogUtilsImpl instance = null;
+	private static LogUtilsImpl instance;
+
+	static {
+		instance = new StandardLogUtils();
+		((StandardLogUtils) instance).to(ConsoleLogStream.create(System.out));
+	}
 
 	/**
 	 * Set the {@link LogUtilsImpl} implementation to use.
@@ -391,14 +398,16 @@ public class LogUtils {
 		public FlexibleProgress(String name) {
 			this.name = name;
 
-			final String maxStr = Storages.getLanguageDirectory().getChild("progress/" + name).read();
+			FreehalFile file = Storages.getLanguageDirectory().getChild("progress/" + name);
+			file.touch();
+			final String maxStr = file.read();
 			try {
 				this.max = Double.parseDouble(maxStr);
 
 			} catch (Exception ex) {
 				// NumberFormatException and NullPointerException!
 				this.max = 1;
-				LogUtils.e(ex);
+				// LogUtils.e(ex);
 			}
 			averageMax = this.max;
 		}

@@ -31,7 +31,8 @@ public class WikipediaClient implements FreehalFile {
 
 	private String getGoogleSearchUrl(String lang, String name) {
 		return "ajax.googleapis.com/ajax/services/search/web?v=1.0&q=site:" + lang + ".wikipedia.org%20"
-				+ encode(name); // StringUtils.replace(name, " ", "%20");
+				+ encode(name); // StringUtils.replace(name,
+								// " ", "%20");
 	}
 
 	private String encode(String name) {
@@ -201,9 +202,13 @@ public class WikipediaClient implements FreehalFile {
 	public int countLines() {
 		int countOfLines = 0;
 		Iterable<String> lines = readLines();
-		for (@SuppressWarnings("unused") String line : lines) {
+		for (@SuppressWarnings("unused")
+		String line : lines) {
 			++countOfLines;
 		}
 		return countOfLines;
 	}
+
+	@Override
+	public void touch() {}
 }

@@ -173,4 +173,9 @@ public class BerkeleyFile implements FreehalFile {
 	public String getName() {
 		return name;
 	}
+
+	@Override
+	public void touch() {
+		append("");
+	}
 }

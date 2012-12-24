@@ -16,11 +16,12 @@
  ******************************************************************************/
 package net.freehal.core.lang.german;
 
+import net.freehal.core.lang.DefaultImpl;
 import net.freehal.core.lang.Language;
 
 public class GermanLanguage implements Language {
-	
-	private static final String code = "de"; 
+
+	private static final String code = "de";
 
 	@Override
 	public String getCode() {
@@ -30,5 +31,16 @@ public class GermanLanguage implements Language {
 	@Override
 	public boolean isCode(String otherCode) {
 		return code.equals(otherCode);
+	}
+
+	public static void initializeDefaults() {
+		DefaultImpl.add(GermanLanguage.class, GermanGrammar.class);
+		DefaultImpl.add(GermanLanguage.class, GermanParser.class);
+		DefaultImpl.add(GermanLanguage.class, GermanTagger.class);
+		DefaultImpl.add(GermanLanguage.class, GermanWording.class);
+		DefaultImpl.add(GermanLanguage.class,
+				GermanPredefinedAnswerProvider.class);
+		DefaultImpl.add(GermanLanguage.class,
+				GermanRandomAnswerProvider.class);
 	}
 }

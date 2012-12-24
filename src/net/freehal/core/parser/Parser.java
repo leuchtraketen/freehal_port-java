@@ -25,7 +25,7 @@ public abstract class Parser {
 
 	private List<Sentence> sentences = new ArrayList<Sentence>();
 
-	public Parser(String rawInput) {
+	public void parse(String rawInput) {
 		String[] splittedInput = cleanInput(rawInput).split("[@]+");
 		for (String i : splittedInput) {
 			Mutable<Boolean> isQuestion = new Mutable<Boolean>(false);
@@ -38,12 +38,12 @@ public abstract class Parser {
 
 	abstract protected String cleanInput(String str);
 
-	abstract protected String simplifyInput(String str, Mutable<Boolean> isQuestion);
+	abstract protected String simplifyInput(String str,
+			Mutable<Boolean> isQuestion);
 
 	abstract protected String extendInput(String str);
 
 	public List<Sentence> getSentences() {
 		return sentences;
 	}
-
 }

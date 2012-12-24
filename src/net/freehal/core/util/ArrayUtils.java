@@ -1,8 +1,11 @@
 package net.freehal.core.util;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class ArrayUtils<A> {
 
@@ -67,5 +70,9 @@ public class ArrayUtils<A> {
 			newList.add(list.get(i));
 		}
 		return newList;
+	}
+
+	public static <A> Set<A> asSet(A[] array) {
+		return new HashSet<A>(Arrays.asList(array));
 	}
 }

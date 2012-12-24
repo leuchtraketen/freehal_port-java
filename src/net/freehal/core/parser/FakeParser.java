@@ -20,10 +20,6 @@ import net.freehal.core.util.Mutable;
 
 public class FakeParser extends Parser {
 
-	public FakeParser(String rawInput) {
-		super(rawInput);
-	}
-
 	@Override
 	protected String cleanInput(String str) {
 		return str;
