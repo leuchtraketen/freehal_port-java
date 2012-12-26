@@ -14,41 +14,29 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.pos;
+package net.freehal.core.lang.fake;
 
-import net.freehal.core.lang.fake.FakeTagger;
+import net.freehal.core.lang.LanguageSpecific;
+import net.freehal.core.lang.Language;
 
-/**
- * An utility class for holding the currently used tagger.
- * 
- * @author "Tobias Schulz"
- */
-public class Taggers {
+public class FakeLanguage implements Language {
 
-	private static Tagger tagger = null;
+	private static final String code = "en";
 
-	static {
-		tagger = new FakeTagger();
+	@Override
+	public String getCode() {
+		return code;
 	}
 
-	private Taggers() {}
-
-	/**
-	 * Get the currently used tagger.
-	 * 
-	 * @return an instance of a class implementing the {@link Tagger} interface
-	 */
-	public static Tagger getTagger() {
-		return tagger;
+	@Override
+	public boolean isCode(String otherCode) {
+		return code.equals(otherCode);
 	}
 
-	/**
-	 * Set the tagger to use; run at the beginning of your code!
-	 * 
-	 * @param tagger
-	 *        the tagger to set
-	 */
-	public static void setTagger(Tagger tagger) {
-		Taggers.tagger = tagger;
+	public static void initializeDefaults() {
+		LanguageSpecific.add(null, FakeGrammar.class);
+		LanguageSpecific.add(null, FakeParser.class);
+		LanguageSpecific.add(null, FakeTagger.class);
+		LanguageSpecific.add(null, FakeWording.class);
 	}
 }

@@ -14,8 +14,9 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.parser;
+package net.freehal.core.lang.fake;
 
+import net.freehal.core.parser.Parser;
 import net.freehal.core.util.Mutable;
 
 public class FakeParser extends Parser {

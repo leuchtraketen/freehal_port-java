@@ -14,8 +14,10 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.pos;
+package net.freehal.core.lang.fake;
 
+import net.freehal.core.pos.Tagger;
+import net.freehal.core.pos.Tags;
 import net.freehal.core.pos.storage.TagContainer;
 import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;

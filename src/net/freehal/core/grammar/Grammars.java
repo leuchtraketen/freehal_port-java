@@ -18,6 +18,7 @@ package net.freehal.core.grammar;
 
 import java.util.List;
 
+import net.freehal.core.lang.fake.FakeGrammar;
 import net.freehal.core.util.MultiMap;
 import net.freehal.core.xml.Word;
 import net.freehal.core.xml.XmlUtils;

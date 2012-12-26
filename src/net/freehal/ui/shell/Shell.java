@@ -16,7 +16,6 @@
  ******************************************************************************/
 package net.freehal.ui.shell;
 
-import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -38,7 +37,6 @@ import net.freehal.compat.sunjava.logging.FileLogStream;
 import net.freehal.compat.sunjava.logging.LinuxConsoleLogStream;
 import net.freehal.compat.sunjava.logging.StandardLogUtils;
 import net.freehal.compat.sunjava.logging.StandardLogUtils.LogStream;
-import net.freehal.core.answer.AnswerProvider;
 import net.freehal.core.answer.AnswerProviders;
 import net.freehal.core.database.Database;
 import net.freehal.core.database.DatabaseAnswerProvider;
@@ -57,6 +55,7 @@ import net.freehal.core.lang.LanguageSpecific;
 import net.freehal.core.lang.Language;
 import net.freehal.core.lang.Languages;
 import net.freehal.core.lang.english.EnglishLanguage;
+import net.freehal.core.lang.fake.FakeLanguage;
 import net.freehal.core.lang.german.GermanLanguage;
 import net.freehal.core.parser.Parser;
 import net.freehal.core.parser.Sentence;
@@ -71,10 +70,7 @@ import net.freehal.core.storage.KeyValueDatabase;
 import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
-import net.freehal.core.util.AbstractFreehalFile;
 import net.freehal.core.util.ArrayUtils;
-import net.freehal.core.util.Factory;
-import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.StringUtils;
@@ -96,7 +92,8 @@ import net.freehal.plugin.wikipedia.WikipediaPlugin;
  * @author "Tobias Schulz"
  */
 public class Shell {
-	private static void init(Language language, Set<String> params) {
+
+	private static void initializeFilesystem(String baseDirectory) {
 		// set the virtual file implementations
 		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
 		FreehalFiles.add("sqlite", FakeFreehalFile.newFactory());
@@ -104,31 +101,42 @@ public class Shell {
 		FreehalFiles.add("wikipedia", WikipediaClient.newFactory());
 		FreehalFiles.add("berkeley", BerkeleyFile.newFactory());
 
-		// how and where to print the log
-		// example: all debug messages from the class "DiskDatabase" and the sub
-		// packages "xml" (net.freehal.core.xml) and "filter"
-		// (net.freehal.core.filter) are not logged to console output, but
-		// everything is written into a log file
+		// how and where to print the log. example: everything except debug
+		// messages from some classes and packages are logged to console output
 		StandardLogUtils log = new StandardLogUtils();
-		LogStream logToConsole = null;
-		if (System.getProperty("os.name").toLowerCase().contains("linux"))
-			logToConsole = LinuxConsoleLogStream.create(System.out);
-		else
-			logToConsole = ConsoleLogStream.create(System.out);
-		log.to(logToConsole.addFilter("DiskDatabase", LogUtils.DEBUG).addFilter("xml", LogUtils.DEBUG)
-				.addFilter("filter", LogUtils.DEBUG));
-		log.to(FileLogStream.create("../stdout.txt"));
 		LogUtils.set(log);
 
-		// initialize the languages and the base directory (if executed in
-		// "bin/", the
-		// base directory is ".."). The "StandardStorage" implementation expects
-		// a "lang_xy" directory there which contains the database files.
+		// the Linux/Unix implementation uses ANSI colors
+		LogStream console = null;
+		if (System.getProperty("os.name").toLowerCase().contains("linux"))
+			console = LinuxConsoleLogStream.create(System.out);
+		else
+			console = ConsoleLogStream.create(System.out);
+		console.addFilter("DiskDatabase", LogUtils.DEBUG);
+		console.addFilter("xml", LogUtils.DEBUG);
+		console.addFilter("filter", LogUtils.DEBUG);
+		log.to(console);
+
+		// initialize the directory structure. The "StandardStorage"
+		// implementation expects a "lang_xy" directory there which contains the
+		// database files.
+		Storages.setStorage(new StandardStorage(baseDirectory));
+
+		// all messages are written into a log file
+		log.to(FileLogStream.create(baseDirectory + "/stdout.txt"));
+	}
+
+	private static void initializeLanguage(Language language) {
+		// initialize the languages
+		FakeLanguage.initializeDefaults();
 		GermanLanguage.initializeDefaults();
 		EnglishLanguage.initializeDefaults();
-		Languages.setLanguage(language);
-		Storages.setStorage(new StandardStorage("."));
 
+		// set the language
+		Languages.setLanguage(language);
+	}
+
+	private static void initializeData(Set<String> params) {
 		// now language and filesystem stuff are ready!
 		LogUtils.startProgress("init");
 
@@ -195,6 +203,7 @@ public class Shell {
 
 		LogUtils.stopProgress();
 
+		// do reasoning processes if requested
 		if (params.contains("reasoning")) {
 			FactReasoning reasoning = new FactReasoning(facts);
 			reasoning.doIdle();
@@ -219,8 +228,8 @@ public class Shell {
 		LogUtils.stopProgress();
 	}
 
-	public static void think(Language language) {
-		init(language, ArrayUtils.asSet(new String[] { "reasoning" }));
+	public static void think() {
+		initializeData(ArrayUtils.asSet(new String[] { "reasoning" }));
 	}
 
 	@SuppressWarnings("static-access")
@@ -229,6 +238,9 @@ public class Shell {
 		options.addOption("h", "help", false, "display this help and exit");
 		options.addOption("v", "version", false, "output version information and exit");
 
+		options.addOption(OptionBuilder.withLongOpt("base")
+				.withDescription("the base directory for language data and caches").hasArg()
+				.withArgName("DIRECTORY").create("b"));
 		options.addOption(OptionBuilder.withLongOpt("input")
 				.withDescription("a statement or question to answer").hasArg().withArgName("TEXT")
 				.create("i"));
@@ -257,8 +269,13 @@ public class Shell {
 		if (line.hasOption("help"))
 			printHelp(options);
 
-		Language language = new GermanLanguage(); // default language
+		String base = "."; // default base directory
+		if (line.hasOption("base")) {
+			base = line.getOptionValue("base");
+		}
+		initializeFilesystem(base);
 
+		Language language = new GermanLanguage(); // default language
 		if (line.hasOption("language")) {
 			final String langCode = line.getOptionValue("language").toLowerCase();
 			if (langCode.equals("de") || langCode.equals("german") || langCode.equals("deutsch")) {
@@ -268,14 +285,15 @@ public class Shell {
 				language = new EnglishLanguage();
 			}
 		}
+		initializeLanguage(language);
 
 		if (line.hasOption("input")) {
 			String[] args = { line.getOptionValue("input") };
-			shell(language, args);
+			shell(args);
 		}
 
 		if (line.hasOption("think")) {
-			think(language);
+			think();
 		}
 	}
 
@@ -298,11 +316,11 @@ public class Shell {
 		formatter.printWrapped(out, width, footer);
 	}
 
-	public static void shell(Language language, String[] args) {
-		// initialize everything
-		init(language, Collections.<String> emptySet());
+	public static void shell(String[] sentences) {
+		// initialize data
+		initializeData(Collections.<String> emptySet());
 
-		for (String input : args) {
+		for (String input : sentences) {
 			// also possible: EnglishParser, GermanParser, FakeParser
 			Parser p = LanguageSpecific.chooseByLanguage(Parser.class);
 			p.parse(input);
@@ -321,101 +339,5 @@ public class Shell {
 			System.out.println("Input: " + input);
 			System.out.println("Output: " + output);
 		}
-	}
-}
-
-/**
- * This is just for testing the AnswerProvider API
- * 
- * @author tobias
- */
-class FakeAnswerProvider implements AnswerProvider {
-
-	@Override
-	public String getAnswer(Sentence s) {
-		return "Hello World!";
-	}
-
-}
-
-class FakeFreehalFile extends AbstractFreehalFile {
-
-	private FakeFreehalFile(File file) {
-		super(file);
-	}
-
-	public static Factory<FreehalFile, String> newFactory() {
-		return new Factory<FreehalFile, String>() {
-			@Override
-			public FreehalFile newInstance(String b) {
-				return new FakeFreehalFile(new File(b));
-			}
-		};
-	}
-
-	@Override
-	public boolean isFile() {
-		return false;
-	}
-
-	@Override
-	public boolean isDirectory() {
-		return false;
-	}
-
-	@Override
-	public FreehalFile[] listFiles() {
-		return new FreehalFile[0];
-	}
-
-	@Override
-	public long length() {
-		return 0;
-	}
-
-	@Override
-	public boolean mkdirs() {
-		return false;
-	}
-
-	@Override
-	public boolean delete() {
-		return false;
-	}
-
-	@Override
-	public FreehalFile getChild(String path) {
-		return null;
-	}
-
-	@Override
-	public FreehalFile getChild(FreehalFile path) {
-		return null;
-	}
-
-	@Override
-	public Iterable<String> readLines() {
-		return null;
-	}
-
-	@Override
-	public String read() {
-		return null;
-	}
-
-	@Override
-	public void append(String s) {}
-
-	@Override
-	public void write(String s) {}
-
-	@Override
-	public int countLines() {
-		return 0;
-	}
-
-	@Override
-	public void touch() {
-		append("");
 	}
 }

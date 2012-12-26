@@ -16,6 +16,8 @@
  ******************************************************************************/
 package net.freehal.core.wording;
 
+import net.freehal.core.lang.fake.FakeWording;
+
 public class Wordings {
 
 	private static Wording wording = new FakeWording();

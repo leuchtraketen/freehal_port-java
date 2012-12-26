@@ -55,8 +55,10 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 			}
 
 		} else {
-			throw new IllegalArgumentException("BerkeleyDb only supports real files "
-					+ "(java.io.File wrapped by StandardFreehalFile)!");
+			LogUtils.e(new IllegalArgumentException("BerkeleyDb only supports real files "
+					+ "(that means an instance of java.io.File wrapped by "
+					+ StandardFreehalFile.class.getName() + ")!"));
+			System.exit(1);
 		}
 	}
 

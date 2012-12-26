@@ -14,7 +14,9 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.core.grammar;
+package net.freehal.core.lang.fake;
+
+import net.freehal.core.grammar.StandardGrammar;
 
 /**
  * A fake implementation of a grammar for API tests.
