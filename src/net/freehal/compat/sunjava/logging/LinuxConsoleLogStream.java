@@ -56,7 +56,7 @@ public class LinuxConsoleLogStream extends ConsoleLogStream {
 	public void add(String type, String line, StackTraceElement stacktrace) {
 
 		final String prefix = StringUtils.replace(StackTraceUtils.whereInCode(stacktrace), ":", ":")
-				+ typeToColor(type, true) + "" + type + ": " + ANSI + RESET + (type.length() == 4 ? " " : "");
+				+ typeToColor(type, true) + "[" + type + "] " + ANSI + RESET + (type.length() == 4 ? " " : "");
 
 		if (type.equals("error") || type.equals("warn"))
 			line = ANSI + BOLD_ON + RED + line + ANSI + RESET;
