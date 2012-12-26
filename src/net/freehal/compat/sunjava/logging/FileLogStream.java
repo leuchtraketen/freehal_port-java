@@ -5,9 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
-import net.freehal.compat.sunjava.logging.StandardLogUtils.LogStream;
-import net.freehal.compat.sunjava.logging.StandardLogUtils.PrintStreamLogStream;
-import net.freehal.compat.sunjava.logging.StandardLogUtils.StackTraceUtils;
 import net.freehal.core.util.RegexUtils;
 
 public class FileLogStream extends PrintStreamLogStream {

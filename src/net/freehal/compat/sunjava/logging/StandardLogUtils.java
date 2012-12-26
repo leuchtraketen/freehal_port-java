@@ -16,7 +16,6 @@
  ******************************************************************************/
 package net.freehal.compat.sunjava.logging;
 
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -41,7 +40,7 @@ public class StandardLogUtils implements LogUtilsImpl {
 				|| isFiltered(temporaryFilter, className, type);
 	}
 
-	private static boolean isFiltered(Set<String> filter, final String className, final String type) {
+	static boolean isFiltered(Set<String> filter, final String className, final String type) {
 		return filter.contains(className + ":" + type) || filter.contains(className + ":" + type.charAt(0))
 				|| filter.contains(className + ":*") || filter.contains(className);
 	}
@@ -105,140 +104,5 @@ public class StandardLogUtils implements LogUtilsImpl {
 		if (!(stream instanceof NullLogStream))
 			streams.add(stream);
 		return stream;
-	}
-
-	public static abstract class PrintStreamLogStream extends AbstractLogStream {
-		private PrintStream out;
-
-		public PrintStreamLogStream(PrintStream out) {
-			this.out = out;
-		}
-
-		public PrintStream getStream() {
-			return out;
-		}
-
-		@Override
-		public void flush() {
-			out.flush();
-		}
-
-		protected void println(String string) {
-			out.println(string);
-		}
-
-		protected void print(String string) {
-			out.print(string);
-		}
-	}
-
-	public static abstract class AbstractLogStream implements LogStream {
-		private Set<String> filter = new HashSet<String>();
-
-		@Override
-		public abstract void add(String type, String line, StackTraceElement stacktrace);
-
-		@Override
-		public Set<String> getFilters() {
-			return filter;
-		}
-
-		@Override
-		public LogStream addFilter(String className, String type) {
-			filter.add(className + ":" + type);
-			return this;
-		}
-
-		public boolean isFiltered(final String className, final String type) {
-			return StandardLogUtils.isFiltered(filter, className, type);
-		}
-	}
-
-	public static interface LogStream {
-		void add(String type, String e, StackTraceElement stacktrace);
-
-		Set<String> getFilters();
-
-		void flush();
-
-		LogStream addFilter(String string, String string2);
-	}
-
-	public static class StackTraceUtils {
-
-		/**
-		 * How many spaces to add to the source file for formatted output
-		 */
-		private static final int maxLengthSourceFile = 20;
-		/**
-		 * How many spaces to add to the line number for formatted output
-		 */
-		private static final int maxLengthLineNumber = 4;
-
-		/**
-		 * Find the last stacktrace entry which does not correspond to a
-		 * LogUtils* class
-		 * 
-		 * @return
-		 */
-		public static StackTraceElement caller() {
-			for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
-				if (!className(ste).contains("LogUtils") && !className(ste).contains("Thread")
-						&& !className(ste).contains("LogStream") && !className(ste).contains("VMStack")) {
-					return ste;
-				}
-			}
-			return null;
-		}
-
-		public static String className(StackTraceElement ste) {
-			final String fullClassName = ste.getClassName();
-			final String className = fullClassName.substring(fullClassName.lastIndexOf(".") + 1);
-			return className;
-		}
-
-		public static String methodName(StackTraceElement ste) {
-			final String methodName = ste.getMethodName();
-			return methodName;
-		}
-
-		public static String lastPackage(StackTraceElement ste) {
-			final String fullClassName = ste.getClassName();
-			String[] pkgs = fullClassName.split("[.]");
-			final String lastPackage = pkgs[pkgs.length - 2];
-			return lastPackage;
-		}
-
-		public static String whereInCode(StackTraceElement ste) {
-			final String fullClassName = ste.getClassName();
-			final String className = fullClassName.substring(fullClassName.lastIndexOf(".") + 1);
-			final String sourceFile = className;// + ".java";
-			@SuppressWarnings("unused")
-			final String methodName = ste.getMethodName();
-			int lineNumber = ste.getLineNumber();
-
-			int lengthSourceFile = sourceFile.length();
-			int lengthLineNumber = ("" + lineNumber).length();
-
-			StringBuilder place = new StringBuilder();
-
-			if (lengthSourceFile < maxLengthSourceFile)
-				place.append(sourceFile);
-			else {
-				place.append(
-						sourceFile.substring(0, maxLengthSourceFile - 2 + maxLengthLineNumber
-								- lengthLineNumber)).append("..");
-				lengthSourceFile = maxLengthSourceFile;
-				lengthLineNumber = maxLengthLineNumber;
-			}
-
-			place.append(":");
-			place.append(lineNumber);
-
-			for (int i = lengthSourceFile + lengthLineNumber; i <= maxLengthSourceFile + maxLengthLineNumber; ++i)
-				place.append(" ");
-
-			return place.toString();
-		}
 	}
 }

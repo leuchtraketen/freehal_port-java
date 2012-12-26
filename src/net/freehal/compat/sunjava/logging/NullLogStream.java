@@ -1,6 +1,5 @@
 package net.freehal.compat.sunjava.logging;
 
-import net.freehal.compat.sunjava.logging.StandardLogUtils.AbstractLogStream;
 
 public class NullLogStream extends AbstractLogStream {
 

@@ -2,9 +2,6 @@ package net.freehal.compat.sunjava.logging;
 
 import java.io.PrintStream;
 
-import net.freehal.compat.sunjava.logging.StandardLogUtils.LogStream;
-import net.freehal.compat.sunjava.logging.StandardLogUtils.PrintStreamLogStream;
-import net.freehal.compat.sunjava.logging.StandardLogUtils.StackTraceUtils;
 import net.freehal.core.util.RegexUtils;
 
 public class ConsoleLogStream extends PrintStreamLogStream {

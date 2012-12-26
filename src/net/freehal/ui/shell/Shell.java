@@ -35,8 +35,8 @@ import net.freehal.compat.sunjava.StandardHttpClient;
 import net.freehal.compat.sunjava.logging.ConsoleLogStream;
 import net.freehal.compat.sunjava.logging.FileLogStream;
 import net.freehal.compat.sunjava.logging.LinuxConsoleLogStream;
+import net.freehal.compat.sunjava.logging.LogStream;
 import net.freehal.compat.sunjava.logging.StandardLogUtils;
-import net.freehal.compat.sunjava.logging.StandardLogUtils.LogStream;
 import net.freehal.core.answer.AnswerProviders;
 import net.freehal.core.database.Database;
 import net.freehal.core.database.DatabaseAnswerProvider;
@@ -71,8 +71,10 @@ import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.ArrayUtils;
+import net.freehal.core.util.ExitListener;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.RuntimeUtils;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.wording.Wording;
 import net.freehal.core.wording.Wordings;
@@ -92,7 +94,6 @@ import net.freehal.plugin.wikipedia.WikipediaPlugin;
  * @author "Tobias Schulz"
  */
 public class Shell {
-
 	private static void initializeFilesystem(String baseDirectory) {
 		// set the virtual file implementations
 		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
@@ -259,10 +260,14 @@ public class Shell {
 				// parse command line arguments
 				CommandLine line = parser.parse(options, args);
 				parse(line, options);
+
 			} catch (ParseException exp) {
 				System.err.println(exp.getMessage());
+				RuntimeUtils.exit(1);
 			}
 		}
+
+		RuntimeUtils.exit(0);
 	}
 
 	private static void parse(CommandLine line, Options options) {

@@ -13,6 +13,7 @@ import net.freehal.core.storage.KeyValueTransaction;
 import net.freehal.core.storage.Serializer;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.LogUtils;
+import net.freehal.core.util.RuntimeUtils;
 import net.freehal.core.util.StringUtils;
 
 import com.sleepycat.je.Database;
@@ -58,7 +59,7 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 			LogUtils.e(new IllegalArgumentException("BerkeleyDb only supports real files "
 					+ "(that means an instance of java.io.File wrapped by "
 					+ StandardFreehalFile.class.getName() + ")!"));
-			System.exit(1);
+			RuntimeUtils.exit(1);
 		}
 	}
 
