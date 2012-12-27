@@ -76,10 +76,10 @@ import net.freehal.core.xml.SynonymProviders;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.plugin.berkeleydb.BerkeleyDb;
 import net.freehal.plugin.berkeleydb.BerkeleyFile;
-import net.freehal.plugin.swing.SwingLogWindow;
 import net.freehal.plugin.wikipedia.GermanWikipedia;
 import net.freehal.plugin.wikipedia.WikipediaClient;
 import net.freehal.plugin.wikipedia.WikipediaPlugin;
+import net.freehal.ui.swing.SwingLogWindow;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;

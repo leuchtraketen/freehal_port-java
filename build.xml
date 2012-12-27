@@ -3,15 +3,18 @@
 	<property name="build.dir" value="build" />
 	<property name="dist.dir" value="dist" />
 	<property name="lib.dir" value="libs" />
-	<property name="jar.file" value="${dist.dir}/freehal-core.jar" />
-	<property name="main-class" value="net.freehal.ui.shell.Shell" />
+	<property name="core.jar" value="${dist.dir}/freehal-core.jar" />
+	<property name="shell.jar" value="${dist.dir}/freehal-ui-shell.jar" />
+	<property name="swing.jar" value="${dist.dir}/freehal-ui-swing.jar" />
+	<property name="shell.mainclass" value="net.freehal.ui.shell.Shell" />
 
-	<path id="classpath">
+	<path id="build-classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
-	<manifestclasspath property="lib.list" jarfile="${jar.file}">
-		<classpath refid="classpath" />
+	<manifestclasspath property="lib.list" jarfile="${core.jar}">
+		<classpath refid="build-classpath" />
 	</manifestclasspath>
+	<property name="build-classpath" value="${toString:build-classpath}" />
 
 	<target name="clean">
 		<delete dir="${build.dir}" />
@@ -20,21 +23,38 @@
 
 	<target name="compile">
 		<mkdir dir="${build.dir}" />
-		<javac srcdir="${src.dir}" classpathref="classpath" destdir="${build.dir}" />
+		<javac srcdir="${src.dir}" classpathref="build-classpath"
+			destdir="${build.dir}" />
 	</target>
 
 	<target name="jar" depends="compile">
 		<mkdir dir="${dist.dir}" />
-		<jar destfile="${jar.file}" basedir="${build.dir}">
+		<echo message="Build Classpath: ${build-classpath}" />
+		<echo message="Manifest Classpath: ${lib.list}" />
+		<jar destfile="${core.jar}">
+			<fileset dir="${build.dir}" includes="**/*.class" excludes="**/ui/**/*.class" />
 			<manifest>
-				<attribute name="Main-Class" value="${main-class}" />
 				<attribute name="Class-Path" value="${lib.list}" />
+			</manifest>
+		</jar>
+		<jar destfile="${shell.jar}">
+			<fileset dir="${build.dir}" includes="**/ui/shell/**/*.class" />
+			<manifest>
+				<attribute name="Main-Class" value="${shell.mainclass}" />
+				<attribute name="Class-Path" value="${lib.list} ../${core.jar}" />
+			</manifest>
+		</jar>
+		<jar destfile="${swing.jar}">
+			<fileset dir="${build.dir}" includes="**/ui/swing/**/*.class" />
+			<manifest>
+				<attribute name="Main-Class" value="${shell.mainclass}" />
+				<attribute name="Class-Path" value="${lib.list} ../${core.jar} ../${shell.jar}" />
 			</manifest>
 		</jar>
 	</target>
 
 	<target name="run" depends="jar">
-		<java jar="${jar.file}" classpathref="classpath" fork="true" />
+		<java jar="${shell.jar}" classpathref="build-classpath" fork="true" />
 	</target>
 
 	<target name="main" depends="clean,jar,docs" />
@@ -44,7 +64,7 @@
 	<target name="doclava" depends="jar">
 		<javadoc packagenames="net.freehal.*" destdir="${dist.dir}/docs"
 			sourcepath="${src.dir}" docletpath="${lib.dir}/doclava-1.0.6.jar"
-			bootclasspath="${java.home}/lib/rt.jar" classpathref="classpath">
+			bootclasspath="${java.home}/lib/rt.jar" classpathref="build-classpath">
 			<doclet name="com.google.doclava.Doclava">
 				<param name="-stubs" value="build/stubs" />
 				<param name="-hdf" />

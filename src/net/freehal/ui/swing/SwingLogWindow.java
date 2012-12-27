@@ -1,4 +1,4 @@
-package net.freehal.plugin.swing;
+package net.freehal.ui.swing;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -26,6 +26,11 @@ import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.SystemUtils;
 
 public class SwingLogWindow extends JFrame implements LogReceiver, ExitListener {
+
+	public static final Color GREEN = new Color(0x8ae25a);
+	public static final Color BLUE = new Color(0x729fd2);
+	public static final Color RED = new Color(0xf22929);
+	public static final Color YELLOW = new Color(0xfce342);
 
 	private static final long serialVersionUID = -1937995417483545737L;
 
@@ -165,15 +170,15 @@ public class SwingLogWindow extends JFrame implements LogReceiver, ExitListener 
 			if (column == 1) {
 				Color color = Color.black;
 				if ("error".equals(value))
-					color = Color.RED;
+					color = SwingLogWindow.RED;
 				else if ("info".equals(value))
-					color = Color.GREEN;
+					color = SwingLogWindow.GREEN;
 				else if ("debug".equals(value))
-					color = Color.BLUE;
+					color = SwingLogWindow.BLUE;
 				else if ("warn".equals(value))
-					color = Color.YELLOW;
+					color = SwingLogWindow.YELLOW;
 				else if ("info".equals(value))
-					color = Color.GREEN;
+					color = SwingLogWindow.GREEN;
 				comp.setForeground(color);
 				mod = Font.BOLD;
 			}

@@ -1,4 +1,4 @@
-package net.freehal.plugin.swing;
+package net.freehal.ui.swing;
 
 import java.awt.Component;
 import java.awt.FontMetrics;
