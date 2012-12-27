@@ -14,20 +14,23 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.compat.sunjava.logging;
+package net.freehal.core.logs;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import net.freehal.core.logs.receiver.FakeLogReciever;
+import net.freehal.core.logs.receiver.LogReceiver;
+import net.freehal.core.logs.receiver.StackTraceUtils;
 import net.freehal.core.util.LogUtilsImpl;
 
 public class StandardLogUtils implements LogUtilsImpl {
 
 	private Set<String> filter = new HashSet<String>();
 	private Set<String> temporaryFilter = new HashSet<String>();
-	private List<LogStream> streams = new ArrayList<LogStream>();
+	private List<FilteredLog> streams = new ArrayList<FilteredLog>();
 
 	@Override
 	public LogUtilsImpl addFilter(String className, String type) {
@@ -35,7 +38,7 @@ public class StandardLogUtils implements LogUtilsImpl {
 		return this;
 	}
 
-	public boolean isFiltered(LogStream stream, final String className, final String type) {
+	public boolean isFiltered(FilteredLog stream, final String className, final String type) {
 		return isFiltered(stream.getFilters(), className, type) || isFiltered(filter, className, type)
 				|| isFiltered(temporaryFilter, className, type);
 	}
@@ -80,7 +83,7 @@ public class StandardLogUtils implements LogUtilsImpl {
 	private void output(final String type, String e) {
 		StackTraceElement stacktrace = StackTraceUtils.caller();
 		// for each stream
-		for (LogStream stream : streams) {
+		for (FilteredLog stream : streams) {
 			// is it filtered?
 			if (isFiltered(stream, StackTraceUtils.className(stacktrace), type)
 					|| isFiltered(stream, StackTraceUtils.lastPackage(stacktrace), type)) {
@@ -88,21 +91,70 @@ public class StandardLogUtils implements LogUtilsImpl {
 			}
 			// print it
 			else {
-				stream.add(type, e, stacktrace);
+				stream.addLine(type, e, stacktrace);
 			}
 		}
 	}
 
 	@Override
 	public void flush() {
-		for (LogStream stream : streams) {
+		for (LogReceiver stream : streams) {
 			stream.flush();
 		}
 	}
 
-	public LogStream to(LogStream stream) {
-		if (!(stream instanceof NullLogStream))
-			streams.add(stream);
+	public LogReceiver to(LogReceiver stream) {
+		if (stream instanceof FakeLogReciever) {
+			// ignore
+			return stream;
+		} else {
+			final FilteredLog filteredStream;
+			if (stream instanceof FilteredLog)
+				filteredStream = (FilteredLog) stream;
+			else
+				filteredStream = new FilteredLog(stream);
+
+			streams.add(filteredStream);
+			return filteredStream;
+		}
+	}
+
+	public FilteredLog to(FilteredLog stream) {
+		streams.add(stream);
 		return stream;
+	}
+
+	public static class FilteredLog implements LogReceiver {
+
+		LogReceiver unfiltered;
+
+		public FilteredLog(LogReceiver unfiltered) {
+			this.unfiltered = unfiltered;
+		}
+
+		private Set<String> filter = new HashSet<String>();
+
+		@Override
+		public void addLine(String type, String e, StackTraceElement stacktrace) {
+			unfiltered.addLine(type, e, stacktrace);
+		}
+
+		public Set<String> getFilters() {
+			return filter;
+		}
+
+		public LogReceiver addFilter(String className, String type) {
+			filter.add(className + ":" + type);
+			return this;
+		}
+
+		public boolean isFiltered(final String className, final String type) {
+			return StandardLogUtils.isFiltered(filter, className, type);
+		}
+
+		@Override
+		public void flush() {
+			unfiltered.flush();
+		}
 	}
 }

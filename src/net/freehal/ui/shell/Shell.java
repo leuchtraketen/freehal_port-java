@@ -22,21 +22,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.GnuParser;
-import org.apache.commons.cli.HelpFormatter;
-import org.apache.commons.cli.OptionBuilder;
-import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
-
 import net.freehal.compat.sunjava.StandardFreehalFile;
 import net.freehal.compat.sunjava.StandardHttpClient;
-import net.freehal.compat.sunjava.logging.ConsoleLogStream;
-import net.freehal.compat.sunjava.logging.FileLogStream;
-import net.freehal.compat.sunjava.logging.LinuxConsoleLogStream;
-import net.freehal.compat.sunjava.logging.LogStream;
-import net.freehal.compat.sunjava.logging.StandardLogUtils;
 import net.freehal.core.answer.AnswerProviders;
 import net.freehal.core.database.Database;
 import net.freehal.core.database.DatabaseAnswerProvider;
@@ -51,12 +38,19 @@ import net.freehal.core.filter.FilterQuestionWhat;
 import net.freehal.core.filter.FilterQuestionWho;
 import net.freehal.core.grammar.Grammar;
 import net.freehal.core.grammar.Grammars;
-import net.freehal.core.lang.LanguageSpecific;
 import net.freehal.core.lang.Language;
+import net.freehal.core.lang.LanguageSpecific;
 import net.freehal.core.lang.Languages;
 import net.freehal.core.lang.english.EnglishLanguage;
 import net.freehal.core.lang.fake.FakeLanguage;
 import net.freehal.core.lang.german.GermanLanguage;
+import net.freehal.core.logs.StandardLogUtils;
+import net.freehal.core.logs.StandardLogUtils.FilteredLog;
+import net.freehal.core.logs.output.ConsoleLog;
+import net.freehal.core.logs.output.FileLog;
+import net.freehal.core.logs.receiver.ColoredLog;
+import net.freehal.core.logs.receiver.LogReceiver;
+import net.freehal.core.logs.receiver.UncoloredLog;
 import net.freehal.core.parser.Parser;
 import net.freehal.core.parser.Sentence;
 import net.freehal.core.pos.Tagger;
@@ -71,11 +65,10 @@ import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.ArrayUtils;
-import net.freehal.core.util.ExitListener;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
-import net.freehal.core.util.RuntimeUtils;
 import net.freehal.core.util.StringUtils;
+import net.freehal.core.util.SystemUtils;
 import net.freehal.core.wording.Wording;
 import net.freehal.core.wording.Wordings;
 import net.freehal.core.xml.FactProviders;
@@ -83,9 +76,18 @@ import net.freehal.core.xml.SynonymProviders;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.plugin.berkeleydb.BerkeleyDb;
 import net.freehal.plugin.berkeleydb.BerkeleyFile;
+import net.freehal.plugin.swing.SwingLogWindow;
 import net.freehal.plugin.wikipedia.GermanWikipedia;
 import net.freehal.plugin.wikipedia.WikipediaClient;
 import net.freehal.plugin.wikipedia.WikipediaPlugin;
+
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.GnuParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.OptionBuilder;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
 
 /**
  * This class is a reference implementation of a simple console user interface.
@@ -94,6 +96,46 @@ import net.freehal.plugin.wikipedia.WikipediaPlugin;
  * @author "Tobias Schulz"
  */
 public class Shell {
+	private static void initializeLogging(String baseDirectory, String logfile, boolean showLogTerminal,
+			boolean showLogWindow) {
+		// how and where to print the log. example: everything except debug
+		// messages from some classes and packages are logged to console output
+		StandardLogUtils log = new StandardLogUtils();
+		LogUtils.set(log);
+
+		// show logs in terminal?
+		if (showLogTerminal) {
+			// the Linux/Unix implementation uses ANSI colors
+			LogReceiver console = null;
+			switch (SystemUtils.getOperatingSystem()) {
+			case LINUX:
+			case UNIX:
+			case MACOSX:
+				console = new ColoredLog(new ConsoleLog(System.out), ColoredLog.ANSI);
+				break;
+			case WINDOWS:
+			default:
+				console = new UncoloredLog(new ConsoleLog(System.out));
+				break;
+			}
+			FilteredLog consoleFiltered = new FilteredLog(console);
+			consoleFiltered.addFilter("DiskDatabase", LogUtils.DEBUG);
+			consoleFiltered.addFilter("xml", LogUtils.DEBUG);
+			consoleFiltered.addFilter("filter", LogUtils.DEBUG);
+			log.to(consoleFiltered);
+		}
+
+		// show logs in a swing window?
+		if (showLogWindow) {
+			log.to(new SwingLogWindow());
+		}
+
+		// all messages are written into a log file
+		if (logfile != null) {
+			log.to(new UncoloredLog(new FileLog(logfile)));
+		}
+	}
+
 	private static void initializeFilesystem(String baseDirectory) {
 		// set the virtual file implementations
 		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
@@ -102,29 +144,10 @@ public class Shell {
 		FreehalFiles.add("wikipedia", WikipediaClient.newFactory());
 		FreehalFiles.add("berkeley", BerkeleyFile.newFactory());
 
-		// how and where to print the log. example: everything except debug
-		// messages from some classes and packages are logged to console output
-		StandardLogUtils log = new StandardLogUtils();
-		LogUtils.set(log);
-
-		// the Linux/Unix implementation uses ANSI colors
-		LogStream console = null;
-		if (System.getProperty("os.name").toLowerCase().contains("linux"))
-			console = LinuxConsoleLogStream.create(System.out);
-		else
-			console = ConsoleLogStream.create(System.out);
-		console.addFilter("DiskDatabase", LogUtils.DEBUG);
-		console.addFilter("xml", LogUtils.DEBUG);
-		console.addFilter("filter", LogUtils.DEBUG);
-		log.to(console);
-
 		// initialize the directory structure. The "StandardStorage"
 		// implementation expects a "lang_xy" directory there which contains the
 		// database files.
 		Storages.setStorage(new StandardStorage(baseDirectory));
-
-		// all messages are written into a log file
-		log.to(FileLogStream.create(baseDirectory + "/stdout.txt"));
 	}
 
 	private static void initializeLanguage(Language language) {
@@ -248,6 +271,16 @@ public class Shell {
 		options.addOption(OptionBuilder.withLongOpt("language")
 				.withDescription("the natual language TEXT is written in").hasArg().withArgName("LANG")
 				.create("l"));
+		options.addOption(OptionBuilder.withLongOpt("log-file").withDescription("write logs to a file")
+				.hasArg().withArgName("FILE").create());
+		options.addOption(OptionBuilder
+				.withLongOpt("log-window")
+				.withDescription(
+						"display a window to show logs " + "(default on Microsoft Windows and Mac OS X)")
+				.hasArg().withArgName("FILE").create());
+		options.addOption(OptionBuilder.withLongOpt("log-terminal")
+				.withDescription("display logs in terminal " + "(default on Linux and Unix)").hasArg()
+				.withArgName("FILE").create());
 		options.addOption("t", "think", false, "do some reasoning processes");
 
 		if (args.length == 0) {
@@ -263,21 +296,49 @@ public class Shell {
 
 			} catch (ParseException exp) {
 				System.err.println(exp.getMessage());
-				RuntimeUtils.exit(1);
+				SystemUtils.exit(1);
 			}
 		}
 
-		RuntimeUtils.exit(0);
+		SystemUtils.exit(0);
+	}
+
+	private static String getStringOption(CommandLine line, String option, String defaultValue) {
+		if (line.hasOption(option)) {
+			return line.getOptionValue(option);
+		} else {
+			return defaultValue;
+		}
+	}
+
+	private static boolean getBooleanOption(CommandLine line, String option, boolean defaultValue) {
+		if (line.hasOption(option)) {
+			final String value = line.getOptionValue(option).toLowerCase();
+			if (value.contains("y") || value.contains("1"))
+				return true;
+			else
+				return false;
+		} else {
+			return defaultValue;
+		}
 	}
 
 	private static void parse(CommandLine line, Options options) {
 		if (line.hasOption("help"))
 			printHelp(options);
 
-		String base = "."; // default base directory
-		if (line.hasOption("base")) {
-			base = line.getOptionValue("base");
-		}
+		// default base directory
+		final String base = getStringOption(line, "base", ".");
+		// default log file
+		final String logfile = getStringOption(line, "log-file", base + "/stdout.txt");
+		// show a swing log window? it's default on windows systems...
+		final boolean showLogWindow = getBooleanOption(line, "log-window", SystemUtils.isWindows()
+				|| SystemUtils.isMacOSX());
+		// show logs in terminal? it's default on unix systems...
+		final boolean showLogTerminal = getBooleanOption(line, "log-terminal", !SystemUtils.isWindows()
+				&& !SystemUtils.isMacOSX());
+
+		initializeLogging(base, logfile, showLogTerminal, showLogWindow);
 		initializeFilesystem(base);
 
 		Language language = new GermanLanguage(); // default language

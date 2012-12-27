@@ -19,8 +19,9 @@ package net.freehal.core.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.freehal.compat.sunjava.logging.ConsoleLogStream;
-import net.freehal.compat.sunjava.logging.StandardLogUtils;
+import net.freehal.core.logs.StandardLogUtils;
+import net.freehal.core.logs.output.ConsoleLog;
+import net.freehal.core.logs.receiver.UncoloredLog;
 import net.freehal.core.storage.Storages;
 
 /**
@@ -45,8 +46,9 @@ public class LogUtils {
 	private static LogUtilsImpl instance;
 
 	static {
-		instance = new StandardLogUtils();
-		((StandardLogUtils) instance).to(ConsoleLogStream.create(System.out));
+		StandardLogUtils log = new StandardLogUtils();
+		log.to(new UncoloredLog(new ConsoleLog(System.out)));
+		instance = log;
 	}
 
 	/**

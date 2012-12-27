@@ -1,4 +1,4 @@
-package net.freehal.compat.sunjava.logging;
+package net.freehal.core.logs.receiver;
 
 public class StackTraceUtils {
 

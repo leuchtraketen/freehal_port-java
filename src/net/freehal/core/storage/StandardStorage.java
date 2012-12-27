@@ -23,7 +23,7 @@ import net.freehal.core.lang.Languages;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
-import net.freehal.core.util.RuntimeUtils;
+import net.freehal.core.util.SystemUtils;
 
 /**
  * A standard directory structure; the root directory is given to the
@@ -52,13 +52,13 @@ public class StandardStorage implements Storage {
 		if (!path.exists()) {
 			if (!path.mkdirs()) {
 				LogUtils.e("Directory does not exist and is at a read-only location: " + path);
-				RuntimeUtils.exit(1);
+				SystemUtils.exit(1);
 			}
 		}
 
 		if (path.isFile()) {
 			LogUtils.e("Path is no directory: " + path);
-			RuntimeUtils.exit(1);
+			SystemUtils.exit(1);
 		}
 	}
 
