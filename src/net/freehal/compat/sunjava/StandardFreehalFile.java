@@ -109,7 +109,7 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 
 	@Override
 	public Iterable<String> readLines() {
-		LogUtils.d("reading line by line (via iterator): " + this.getAbsolutePath());
+		LogUtils.d("reading line by line: "+this);
 		Iterable<String> iterator = null;
 		try {
 			iterator = new BufferedReaderIterator(new BufferedReader(new FileReader(this.getFile()),
@@ -125,7 +125,7 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 
 	@Override
 	public String read() {
-		LogUtils.d("reading whole file: " + this.getAbsolutePath());
+		LogUtils.d("reading in one chunk: "+this);
 		BufferedReader theReader = null;
 		String returnString = null;
 

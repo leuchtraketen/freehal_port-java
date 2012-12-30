@@ -26,17 +26,20 @@ public class LanguageSpecific {
 	private static <T> T chooseByInterface(final String lang, Class<T> interfaceType) {
 
 		Set<Class<?>> pool = defaults.get(lang);
-		LogUtils.i(lang + ": looking for default implementations of " + interfaceType.getName());
 
 		for (Class<?> type : pool) {
 			if (type.isAssignableFrom(interfaceType) || interfaceType.isAssignableFrom(type)) {
-				LogUtils.i(lang + ": found default implementation: " + type.getName());
+				LogUtils.i(interfaceType.getName() + " is provided by " + type.getName() + " for language ["
+						+ lang + "]");
 				return (T) newInstanceOf(type, null);
 			}
 		}
 
+		LogUtils.e("Error! no implementation of interface " + interfaceType.getName() + " found for language [" + lang
+				+ "]");
+		LogUtils.e("Classes associated with that language:");
 		for (Class<?> type : pool) {
-			LogUtils.i(lang + ": no default implementation: " + type.getName());
+			LogUtils.e(" - " + type.getName());
 		}
 
 		return null;
@@ -49,9 +52,8 @@ public class LanguageSpecific {
 			obj = chooseByInterface("null", interfaceType);
 		}
 		if (obj == null) {
-			LogUtils.e(lang + ": no implementation found. " + "Classes associated with the language: "
-					+ defaults.get(lang));
-
+			LogUtils.e("No implementation found. Returning null.");
+			LogUtils.e("This could have unintentional side effects.");
 		}
 		return obj;
 	}
