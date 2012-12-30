@@ -1,24 +1,6 @@
-/*******************************************************************************
- * Copyright (c) 2006 - 2012 Tobias Schulz and Contributors.
- * 
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
- ******************************************************************************/
 package net.freehal.ui.shell;
 
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -44,12 +26,12 @@ import net.freehal.core.lang.Languages;
 import net.freehal.core.lang.english.EnglishLanguage;
 import net.freehal.core.lang.fake.FakeLanguage;
 import net.freehal.core.lang.german.GermanLanguage;
+import net.freehal.core.logs.FilteredLog;
 import net.freehal.core.logs.StandardLogUtils;
-import net.freehal.core.logs.StandardLogUtils.FilteredLog;
 import net.freehal.core.logs.output.ConsoleLog;
 import net.freehal.core.logs.output.FileLog;
 import net.freehal.core.logs.receiver.ColoredLog;
-import net.freehal.core.logs.receiver.LogReceiver;
+import net.freehal.core.logs.receiver.LogDestination;
 import net.freehal.core.logs.receiver.UncoloredLog;
 import net.freehal.core.parser.Parser;
 import net.freehal.core.parser.Sentence;
@@ -64,7 +46,6 @@ import net.freehal.core.storage.KeyValueDatabase;
 import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
-import net.freehal.core.util.ArrayUtils;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.StringUtils;
@@ -81,32 +62,18 @@ import net.freehal.plugin.wikipedia.WikipediaClient;
 import net.freehal.plugin.wikipedia.WikipediaPlugin;
 import net.freehal.ui.swing.SwingLogWindow;
 
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.GnuParser;
-import org.apache.commons.cli.HelpFormatter;
-import org.apache.commons.cli.OptionBuilder;
-import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
+public class DataInitializer {
 
-/**
- * This class is a reference implementation of a simple console user interface.
- * It uses all main APIs and runs on every normal java platform.
- * 
- * @author "Tobias Schulz"
- */
-public class Shell {
-	private static void initializeLogging(String baseDirectory, String logfile, boolean showLogTerminal,
+	protected static void initializeLogging(String baseDirectory, String logfile, boolean showLogTerminal,
 			boolean showLogWindow) {
-		// how and where to print the log. example: everything except debug
-		// messages from some classes and packages are logged to console output
+		// how and where to print the log.
 		StandardLogUtils log = new StandardLogUtils();
 		LogUtils.set(log);
 
 		// show logs in terminal?
 		if (showLogTerminal) {
 			// the Linux/Unix implementation uses ANSI colors
-			LogReceiver console = null;
+			LogDestination console = null;
 			switch (SystemUtils.getOperatingSystem()) {
 			case LINUX:
 			case UNIX:
@@ -118,25 +85,27 @@ public class Shell {
 				console = new UncoloredLog(new ConsoleLog(System.out));
 				break;
 			}
-			FilteredLog consoleFiltered = new FilteredLog(console);
+			// everything except debug messages from some classes and packages
+			// are logged to console output
+			FilteredLog consoleFiltered = new FilteredLog.StandardFilteredLog(console);
 			consoleFiltered.addFilter("DiskDatabase", LogUtils.DEBUG);
 			consoleFiltered.addFilter("xml", LogUtils.DEBUG);
 			consoleFiltered.addFilter("filter", LogUtils.DEBUG);
-			log.to(consoleFiltered);
+			log.addDestination(consoleFiltered);
 		}
 
 		// show logs in a swing window?
 		if (showLogWindow) {
-			log.to(new SwingLogWindow());
+			log.addDestination(new SwingLogWindow());
 		}
 
 		// all messages are written into a log file
 		if (logfile != null) {
-			log.to(new UncoloredLog(new FileLog(logfile)));
+			log.addDestination(new UncoloredLog(new FileLog(logfile)));
 		}
 	}
 
-	private static void initializeFilesystem(String baseDirectory) {
+	protected static void initializeFilesystem(String baseDirectory) {
 		// set the virtual file implementations
 		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
 		FreehalFiles.add("sqlite", FakeFreehalFile.newFactory());
@@ -150,7 +119,7 @@ public class Shell {
 		Storages.setStorage(new StandardStorage(baseDirectory));
 	}
 
-	private static void initializeLanguage(Language language) {
+	protected static void initializeLanguage(Language language) {
 		// initialize the languages
 		FakeLanguage.initializeDefaults();
 		GermanLanguage.initializeDefaults();
@@ -160,7 +129,7 @@ public class Shell {
 		Languages.setLanguage(language);
 	}
 
-	private static void initializeData(Set<String> params) {
+	protected static void initializeData(Set<String> params) {
 		// now language and filesystem stuff are ready!
 		LogUtils.startProgress("init");
 
@@ -252,158 +221,26 @@ public class Shell {
 		LogUtils.stopProgress();
 	}
 
-	public static void think() {
-		initializeData(ArrayUtils.asSet(new String[] { "reasoning" }));
-	}
+	public static String processInput(String input) {
+		LogUtils.i("input: " + input);
 
-	@SuppressWarnings("static-access")
-	public static void main(String[] args) {
-		Options options = new Options();
-		options.addOption("h", "help", false, "display this help and exit");
-		options.addOption("v", "version", false, "output version information and exit");
+		// also possible: EnglishParser, GermanParser, FakeParser
+		Parser p = LanguageSpecific.chooseByLanguage(Parser.class);
+		p.parse(input);
 
-		options.addOption(OptionBuilder.withLongOpt("base")
-				.withDescription("the base directory for language data and caches").hasArg()
-				.withArgName("DIRECTORY").create("b"));
-		options.addOption(OptionBuilder.withLongOpt("input")
-				.withDescription("a statement or question to answer").hasArg().withArgName("TEXT")
-				.create("i"));
-		options.addOption(OptionBuilder.withLongOpt("language")
-				.withDescription("the natual language TEXT is written in").hasArg().withArgName("LANG")
-				.create("l"));
-		options.addOption(OptionBuilder.withLongOpt("log-file").withDescription("write logs to a file")
-				.hasArg().withArgName("FILE").create());
-		options.addOption(OptionBuilder
-				.withLongOpt("log-window")
-				.withDescription(
-						"display a window to show logs " + "(default on Microsoft Windows and Mac OS X)")
-				.hasArg().withArgName("FILE").create());
-		options.addOption(OptionBuilder.withLongOpt("log-terminal")
-				.withDescription("display logs in terminal " + "(default on Linux and Unix)").hasArg()
-				.withArgName("FILE").create());
-		options.addOption("t", "think", false, "do some reasoning processes");
+		// parse the input and get a list of sentences
+		final List<Sentence> inputParts = p.getSentences();
 
-		if (args.length == 0) {
-			printHelp(options);
-
-		} else {
-			// create the parser
-			CommandLineParser parser = new GnuParser();
-			try {
-				// parse command line arguments
-				CommandLine line = parser.parse(options, args);
-				parse(line, options);
-
-			} catch (ParseException exp) {
-				System.err.println(exp.getMessage());
-				SystemUtils.exit(1);
-			}
+		List<String> outputParts = new ArrayList<String>();
+		// for each sentence...
+		for (Sentence s : inputParts) {
+			// get the answer using the AnswerProvider API
+			outputParts.add(AnswerProviders.getAnswer(s));
 		}
+		// put all answers together
+		final String output = StringUtils.join(" ", outputParts);
 
-		SystemUtils.exit(0);
-	}
-
-	private static String getStringOption(CommandLine line, String option, String defaultValue) {
-		if (line.hasOption(option)) {
-			return line.getOptionValue(option);
-		} else {
-			return defaultValue;
-		}
-	}
-
-	private static boolean getBooleanOption(CommandLine line, String option, boolean defaultValue) {
-		if (line.hasOption(option)) {
-			final String value = line.getOptionValue(option).toLowerCase();
-			if (value.contains("y") || value.contains("1"))
-				return true;
-			else
-				return false;
-		} else {
-			return defaultValue;
-		}
-	}
-
-	private static void parse(CommandLine line, Options options) {
-		if (line.hasOption("help"))
-			printHelp(options);
-
-		// default base directory
-		final String base = getStringOption(line, "base", ".");
-		// default log file
-		final String logfile = getStringOption(line, "log-file", base + "/stdout.txt");
-		// show a swing log window? it's default on windows systems...
-		final boolean showLogWindow = getBooleanOption(line, "log-window", SystemUtils.isWindows()
-				|| SystemUtils.isMacOSX());
-		// show logs in terminal? it's default on unix systems...
-		final boolean showLogTerminal = getBooleanOption(line, "log-terminal", !SystemUtils.isWindows()
-				&& !SystemUtils.isMacOSX());
-
-		initializeLogging(base, logfile, showLogTerminal, showLogWindow);
-		initializeFilesystem(base);
-
-		Language language = new GermanLanguage(); // default language
-		if (line.hasOption("language")) {
-			final String langCode = line.getOptionValue("language").toLowerCase();
-			if (langCode.equals("de") || langCode.equals("german") || langCode.equals("deutsch")) {
-				language = new GermanLanguage();
-			} else if (langCode.equals("en") || langCode.equals("english")
-					|| langCode.equals("international")) {
-				language = new EnglishLanguage();
-			}
-		}
-		initializeLanguage(language);
-
-		if (line.hasOption("input")) {
-			String[] args = { line.getOptionValue("input") };
-			shell(args);
-		}
-
-		if (line.hasOption("think")) {
-			think();
-		}
-	}
-
-	private static void printHelp(Options options) {
-		final String header = "FreeHAL is a self-learning conversation simulator, "
-				+ "an artificial intelligence " + "which uses semantic nets to organize its knowledge.";
-		final String footer = "Please report bugs to <info@freehal.net>.";
-		final int width = 80;
-		final int descPadding = 10;
-		final PrintWriter out = new PrintWriter(System.out, true);
-
-		HelpFormatter formatter = new HelpFormatter();
-		formatter.setWidth(width);
-		formatter.setDescPadding(descPadding);
-		formatter.printUsage(out, width, "java " + Shell.class.getName(), options);
-		formatter.printWrapped(out, width, header);
-		formatter.printWrapped(out, width, "");
-		formatter.printOptions(out, width, options, formatter.getLeftPadding(), formatter.getDescPadding());
-		formatter.printWrapped(out, width, "");
-		formatter.printWrapped(out, width, footer);
-	}
-
-	public static void shell(String[] sentences) {
-		// initialize data
-		initializeData(Collections.<String> emptySet());
-
-		for (String input : sentences) {
-			// also possible: EnglishParser, GermanParser, FakeParser
-			Parser p = LanguageSpecific.chooseByLanguage(Parser.class);
-			p.parse(input);
-
-			// parse the input and get a list of sentences
-			final List<Sentence> inputParts = p.getSentences();
-
-			List<String> outputParts = new ArrayList<String>();
-			// for each sentence...
-			for (Sentence s : inputParts) {
-				// get the answer using the AnswerProvider API
-				outputParts.add(AnswerProviders.getAnswer(s));
-			}
-			// put all answers together
-			final String output = StringUtils.join(" ", outputParts);
-			System.out.println("Input: " + input);
-			System.out.println("Output: " + output);
-		}
+		LogUtils.i("output: " + output);
+		return output;
 	}
 }

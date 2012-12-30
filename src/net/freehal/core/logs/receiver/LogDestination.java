@@ -1,6 +1,6 @@
 package net.freehal.core.logs.receiver;
 
-public interface LogReceiver {
+public interface LogDestination {
 
 	void addLine(String type, String e, StackTraceElement stacktrace);
 

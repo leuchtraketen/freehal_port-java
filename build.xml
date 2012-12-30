@@ -6,7 +6,10 @@
 	<property name="core.jar" value="${dist.dir}/freehal-core.jar" />
 	<property name="shell.jar" value="${dist.dir}/freehal-ui-shell.jar" />
 	<property name="swing.jar" value="${dist.dir}/freehal-ui-swing.jar" />
-	<property name="shell.mainclass" value="net.freehal.ui.shell.Shell" />
+	<property name="core-sources.jar" value="${dist.dir}/freehal-core-sources.jar" />
+	<property name="shell-sources.jar" value="${dist.dir}/freehal-ui-shell-sources.jar" />
+	<property name="swing-sources.jar" value="${dist.dir}/freehal-ui-swing-sources.jar" />
+	<property name="shell.mainclass" value="net.freehal.ui.shell.Main" />
 
 	<path id="build-classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
@@ -37,6 +40,12 @@
 				<attribute name="Class-Path" value="${lib.list}" />
 			</manifest>
 		</jar>
+		<jar destfile="${core-sources.jar}">
+			<fileset dir="${src.dir}" includes="**/*.java" excludes="**/ui/**/*.java" />
+			<manifest>
+				<attribute name="Class-Path" value="${lib.list}" />
+			</manifest>
+		</jar>
 		<jar destfile="${shell.jar}">
 			<fileset dir="${build.dir}" includes="**/ui/shell/**/*.class" />
 			<manifest>
@@ -44,8 +53,22 @@
 				<attribute name="Class-Path" value="${lib.list} ../${core.jar}" />
 			</manifest>
 		</jar>
+		<jar destfile="${shell-sources.jar}">
+			<fileset dir="${src.dir}" includes="**/ui/shell/**/*.java" />
+			<manifest>
+				<attribute name="Main-Class" value="${shell.mainclass}" />
+				<attribute name="Class-Path" value="${lib.list} ../${core.jar}" />
+			</manifest>
+		</jar>
 		<jar destfile="${swing.jar}">
 			<fileset dir="${build.dir}" includes="**/ui/swing/**/*.class" />
+			<manifest>
+				<attribute name="Main-Class" value="${shell.mainclass}" />
+				<attribute name="Class-Path" value="${lib.list} ../${core.jar} ../${shell.jar}" />
+			</manifest>
+		</jar>
+		<jar destfile="${swing-sources.jar}">
+			<fileset dir="${src.dir}" includes="**/ui/swing/**/*.java" />
 			<manifest>
 				<attribute name="Main-Class" value="${shell.mainclass}" />
 				<attribute name="Class-Path" value="${lib.list} ../${core.jar} ../${shell.jar}" />

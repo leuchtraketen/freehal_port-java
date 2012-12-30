@@ -16,13 +16,15 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
+import net.freehal.core.logs.receiver.LogDestination;
+
 /**
  * This interface is used by {@link LogUtils} and needs be implemented by any
  * class which can be used for receiving and saving or displaying log messages.
  * 
  * @author "Tobias Schulz"
  */
-public interface LogUtilsImpl {
+public interface LogUtilsImpl extends LogDestination {
 
 	/**
 	 * Log an error!

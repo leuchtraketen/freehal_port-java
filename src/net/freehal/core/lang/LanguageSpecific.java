@@ -32,9 +32,11 @@ public class LanguageSpecific {
 			if (type.isAssignableFrom(interfaceType) || interfaceType.isAssignableFrom(type)) {
 				LogUtils.i(lang + ": found default implementation: " + type.getName());
 				return (T) newInstanceOf(type, null);
-			} else {
-				LogUtils.i(lang + ": no default implementation: " + type.getName());
 			}
+		}
+
+		for (Class<?> type : pool) {
+			LogUtils.i(lang + ": no default implementation: " + type.getName());
 		}
 
 		return null;

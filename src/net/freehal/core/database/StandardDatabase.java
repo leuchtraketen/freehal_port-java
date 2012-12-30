@@ -94,7 +94,7 @@ public class StandardDatabase implements Database {
 			if (countFiles > 0) {
 				LogUtils.startProgress(0, 1, countFiles);
 				for (FreehalFile file : files) {
-					LogUtils.i("file:" + file);
+					//LogUtils.i("file:" + file);
 					if (file.isFile() && file.getName().contains(".xml")) {
 						this.updateCache(file);
 						LogUtils.updateProgress();

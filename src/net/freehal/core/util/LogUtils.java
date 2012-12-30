@@ -47,7 +47,7 @@ public class LogUtils {
 
 	static {
 		StandardLogUtils log = new StandardLogUtils();
-		log.to(new UncoloredLog(new ConsoleLog(System.out)));
+		log.addDestination(new UncoloredLog(new ConsoleLog(System.out)));
 		instance = log;
 	}
 
@@ -59,6 +59,15 @@ public class LogUtils {
 	 */
 	public static void set(LogUtilsImpl instance) {
 		LogUtils.instance = instance;
+	}
+
+	/**
+	 * Returns the currently used {@link LogUtilsImpl} implementation.
+	 * 
+	 * @return an instance of a class which implements {@link LogUtilsImpl}
+	 */
+	public static LogUtilsImpl get() {
+		return LogUtils.instance;
 	}
 
 	/**

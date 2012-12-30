@@ -3,7 +3,7 @@ package net.freehal.core.logs.receiver;
 import net.freehal.core.logs.output.LogOutput;
 import net.freehal.core.util.RegexUtils;
 
-public class UncoloredLog implements LogReceiver {
+public class UncoloredLog implements LogDestination {
 
 	private LogOutput stream;
 

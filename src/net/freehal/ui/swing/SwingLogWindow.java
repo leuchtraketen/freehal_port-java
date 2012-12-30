@@ -19,13 +19,13 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
-import net.freehal.core.logs.receiver.LogReceiver;
+import net.freehal.core.logs.receiver.LogDestination;
 import net.freehal.core.logs.receiver.StackTraceUtils;
 import net.freehal.core.util.ExitListener;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.SystemUtils;
 
-public class SwingLogWindow extends JFrame implements LogReceiver, ExitListener {
+public class SwingLogWindow extends JFrame implements LogDestination, ExitListener {
 
 	public static final Color GREEN = new Color(0x8ae25a);
 	public static final Color BLUE = new Color(0x729fd2);

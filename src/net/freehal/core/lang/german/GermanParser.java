@@ -67,7 +67,6 @@ public class GermanParser extends Parser {
 		str = RegexUtils.replace(str, "\\s*STOP\\s*", "@");
 		str = RegexUtils.trim(str, "@");
 
-		System.out.println(str);
 		return str;
 	}
 

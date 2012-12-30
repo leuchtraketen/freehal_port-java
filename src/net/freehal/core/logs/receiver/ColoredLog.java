@@ -7,7 +7,7 @@ import net.freehal.core.logs.output.LogOutput;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
 
-public class ColoredLog implements LogReceiver {
+public class ColoredLog implements LogDestination {
 
 	public static final ColorImpl ANSI = new AnsiColorImpl();
 	public static final ColorImpl HTML = new HtmlColorImpl();
@@ -38,6 +38,7 @@ public class ColoredLog implements LogReceiver {
 	private String formatLine(String line) {
 		line = RegexUtils.replace(line, "([\"][^\"]+[\"])", colors.color("$1", Color.YELLOW));
 		line = RegexUtils.replace(line, "([\'][^\']+[\'])", colors.color("$1", Color.BLUE));
+		line = RegexUtils.replace(line, "[{]([^\']+)[}]", "{"+colors.color("$1", Color.BLUE)+"}");
 		return line;
 	}
 

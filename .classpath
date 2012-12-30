@@ -7,5 +7,7 @@
 	<classpathentry kind="lib" path="libs/commons-cli-1.2-sources.jar"/>
 	<classpathentry kind="lib" path="libs/commons-lang3-3.1-sources.jar"/>
 	<classpathentry kind="lib" path="libs/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="libs/jline-2.10-sources.jar"/>
+	<classpathentry kind="lib" path="libs/jline-2.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

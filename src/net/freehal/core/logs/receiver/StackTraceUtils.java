@@ -12,15 +12,15 @@ public class StackTraceUtils {
 	private static final int maxLengthLineNumber = 4;
 
 	/**
-	 * Find the last stacktrace entry which does not correspond to a
-	 * LogUtils* class
+	 * Find the last stacktrace entry which does not correspond to a LogUtils*
+	 * class
 	 * 
 	 * @return
 	 */
 	public static StackTraceElement caller() {
 		for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
 			if (!className(ste).contains("LogUtils") && !className(ste).contains("Thread")
-					&& !className(ste).contains("LogStream") && !className(ste).contains("VMStack")) {
+					&& !className(ste).contains("LogStream") && !className(ste).contains("Stack")) {
 				return ste;
 			}
 		}
@@ -62,8 +62,8 @@ public class StackTraceUtils {
 			place.append(sourceFile);
 		else {
 			place.append(
-					sourceFile.substring(0, maxLengthSourceFile - 2 + maxLengthLineNumber
-							- lengthLineNumber)).append("..");
+					sourceFile.substring(0, maxLengthSourceFile - 2 + maxLengthLineNumber - lengthLineNumber))
+					.append("..");
 			lengthSourceFile = maxLengthSourceFile;
 			lengthLineNumber = maxLengthLineNumber;
 		}
