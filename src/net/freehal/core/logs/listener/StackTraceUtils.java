@@ -1,4 +1,4 @@
-package net.freehal.core.logs.receiver;
+package net.freehal.core.logs.listener;
 
 public class StackTraceUtils {
 

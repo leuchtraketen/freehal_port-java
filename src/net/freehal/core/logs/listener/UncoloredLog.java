@@ -1,4 +1,4 @@
-package net.freehal.core.logs.receiver;
+package net.freehal.core.logs.listener;
 
 import net.freehal.core.logs.output.LogOutput;
 import net.freehal.core.util.RegexUtils;

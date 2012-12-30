@@ -1,4 +1,4 @@
-package net.freehal.core.logs.receiver;
+package net.freehal.core.logs.listener;
 
 import net.freehal.core.storage.Serializer;
 import net.freehal.core.util.LogUtils;

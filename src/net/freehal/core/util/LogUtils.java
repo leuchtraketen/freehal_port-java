@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.freehal.core.logs.StandardLogUtils;
+import net.freehal.core.logs.listener.UncoloredLog;
 import net.freehal.core.logs.output.ConsoleLog;
-import net.freehal.core.logs.receiver.UncoloredLog;
 import net.freehal.core.storage.Storages;
 
 /**

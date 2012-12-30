@@ -16,7 +16,7 @@
  ******************************************************************************/
 package net.freehal.core.util;
 
-import net.freehal.core.logs.receiver.LogDestination;
+import net.freehal.core.logs.listener.LogDestination;
 
 /**
  * This interface is used by {@link LogUtils} and needs be implemented by any

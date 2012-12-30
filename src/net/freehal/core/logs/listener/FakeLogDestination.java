@@ -1,6 +1,6 @@
-package net.freehal.core.logs.receiver;
+package net.freehal.core.logs.listener;
 
-public class FakeLogReciever implements LogDestination {
+public class FakeLogDestination implements LogDestination {
 
 	@Override
 	public void addLine(String type, String line, StackTraceElement stacktrace) {

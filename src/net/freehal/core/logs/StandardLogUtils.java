@@ -21,9 +21,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import net.freehal.core.logs.receiver.FakeLogReciever;
-import net.freehal.core.logs.receiver.LogDestination;
-import net.freehal.core.logs.receiver.StackTraceUtils;
+import net.freehal.core.logs.listener.FakeLogDestination;
+import net.freehal.core.logs.listener.LogDestination;
+import net.freehal.core.logs.listener.StackTraceUtils;
 import net.freehal.core.util.LogUtilsImpl;
 
 public class StandardLogUtils implements LogUtilsImpl, FilteredLog {
@@ -120,7 +120,7 @@ public class StandardLogUtils implements LogUtilsImpl, FilteredLog {
 	}
 
 	public LogDestination addDestination(LogDestination stream) {
-		if (stream instanceof FakeLogReciever) {
+		if (stream instanceof FakeLogDestination) {
 			// ignore
 			return stream;
 

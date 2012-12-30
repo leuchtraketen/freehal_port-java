@@ -19,8 +19,8 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 
-import net.freehal.core.logs.receiver.LogDestination;
-import net.freehal.core.logs.receiver.StackTraceUtils;
+import net.freehal.core.logs.listener.LogDestination;
+import net.freehal.core.logs.listener.StackTraceUtils;
 import net.freehal.core.util.ExitListener;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.SystemUtils;

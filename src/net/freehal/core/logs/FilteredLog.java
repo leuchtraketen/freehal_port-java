@@ -3,7 +3,7 @@ package net.freehal.core.logs;
 import java.util.HashSet;
 import java.util.Set;
 
-import net.freehal.core.logs.receiver.LogDestination;
+import net.freehal.core.logs.listener.LogDestination;
 
 public interface FilteredLog extends LogDestination {
 
