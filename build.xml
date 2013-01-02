@@ -3,13 +3,21 @@
 	<property name="build.dir" value="build" />
 	<property name="dist.dir" value="dist" />
 	<property name="lib.dir" value="libs" />
-	<property name="core.jar" value="${dist.dir}/freehal-core.jar" />
-	<property name="shell.jar" value="${dist.dir}/freehal-ui-shell.jar" />
-	<property name="swing.jar" value="${dist.dir}/freehal-ui-swing.jar" />
-	<property name="core-sources.jar" value="${dist.dir}/freehal-core-sources.jar" />
-	<property name="shell-sources.jar" value="${dist.dir}/freehal-ui-shell-sources.jar" />
-	<property name="swing-sources.jar" value="${dist.dir}/freehal-ui-swing-sources.jar" />
+	
+	<property name="core.jar" value="${dist.dir}/libfreehal.jar" />
+	<property name="shell.jar" value="${dist.dir}/freehal-shell.jar" />
+	<property name="swing.jar" value="${dist.dir}/libfreehal-swing.jar" />
+	<property name="xmpp.jar" value="${dist.dir}/libfreehal-xmpp.jar" />
+	
+	<property name="core-sources.jar" value="${dist.dir}/libfreehal-sources.jar" />
+	<property name="shell-sources.jar" value="${dist.dir}/freehal-shell-sources.jar" />
+	<property name="swing-sources.jar" value="${dist.dir}/libfreehal-swing-sources.jar" />
+	<property name="xmpp-sources.jar" value="${dist.dir}/libfreehal-xmpp-sources.jar" />
+
+	<property name="dist.jar" value="${dist.dir}/freehal-dist.jar" />
+
 	<property name="shell.mainclass" value="net.freehal.ui.shell.Main" />
+
 
 	<path id="build-classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
@@ -30,10 +38,13 @@
 			destdir="${build.dir}" />
 	</target>
 
-	<target name="jar" depends="compile">
+	<target name="dist-prepare">
 		<mkdir dir="${dist.dir}" />
 		<echo message="Build Classpath: ${build-classpath}" />
 		<echo message="Manifest Classpath: ${lib.list}" />
+	</target>
+
+	<target name="jar-core" depends="compile">
 		<jar destfile="${core.jar}">
 			<fileset dir="${build.dir}" includes="**/*.class" excludes="**/ui/**/*.class" />
 			<manifest>
@@ -42,10 +53,10 @@
 		</jar>
 		<jar destfile="${core-sources.jar}">
 			<fileset dir="${src.dir}" includes="**/*.java" excludes="**/ui/**/*.java" />
-			<manifest>
-				<attribute name="Class-Path" value="${lib.list}" />
-			</manifest>
 		</jar>
+	</target>
+
+	<target name="jar-shell" depends="compile">
 		<jar destfile="${shell.jar}">
 			<fileset dir="${build.dir}" includes="**/ui/shell/**/*.class" />
 			<manifest>
@@ -55,36 +66,53 @@
 		</jar>
 		<jar destfile="${shell-sources.jar}">
 			<fileset dir="${src.dir}" includes="**/ui/shell/**/*.java" />
-			<manifest>
-				<attribute name="Main-Class" value="${shell.mainclass}" />
-				<attribute name="Class-Path" value="${lib.list} ../${core.jar}" />
-			</manifest>
 		</jar>
+	</target>
+
+	<target name="jar-swing" depends="compile">
 		<jar destfile="${swing.jar}">
 			<fileset dir="${build.dir}" includes="**/ui/swing/**/*.class" />
-			<manifest>
-				<attribute name="Main-Class" value="${shell.mainclass}" />
-				<attribute name="Class-Path" value="${lib.list} ../${core.jar} ../${shell.jar}" />
-			</manifest>
 		</jar>
 		<jar destfile="${swing-sources.jar}">
 			<fileset dir="${src.dir}" includes="**/ui/swing/**/*.java" />
+		</jar>
+	</target>
+
+	<target name="jar-xmpp" depends="compile">
+		<jar destfile="${xmpp.jar}">
+			<fileset dir="${build.dir}" includes="**/ui/xmpp/**/*.class" />
+		</jar>
+		<jar destfile="${xmpp-sources.jar}">
+			<fileset dir="${src.dir}" includes="**/ui/xmpp/**/*.java" />
+		</jar>
+	</target>
+
+	<target name="jars" depends="jar-core,jar-shell,jar-swing,jar-xmpp">
+		<jar destfile="${dist.jar}">
+			<zipgroupfileset dir="${lib.dir}">
+				<include name="**/*.jar" />
+				<exclude name="*sources*" />
+				<exclude name="*javadoc*" />
+			</zipgroupfileset>
+			<zipgroupfileset dir="${basedir}" includes="${core.jar}"/>
+			<zipgroupfileset dir="${basedir}" includes="${shell.jar}"/>
+			<zipgroupfileset dir="${basedir}" includes="${swing.jar}"/>
+			<zipgroupfileset dir="${basedir}" includes="${xmpp.jar}"/>
 			<manifest>
 				<attribute name="Main-Class" value="${shell.mainclass}" />
-				<attribute name="Class-Path" value="${lib.list} ../${core.jar} ../${shell.jar}" />
 			</manifest>
 		</jar>
 	</target>
 
-	<target name="run" depends="jar">
-		<java jar="${shell.jar}" classpathref="build-classpath" fork="true" />
+	<target name="run" depends="jars">
+		<java jar="${dist.jar}" classpathref="build-classpath" fork="true" />
 	</target>
 
-	<target name="main" depends="clean,jar,docs" />
+	<target name="main" depends="clean,jars,docs" />
 
 	<target name="docs" depends="doclava" />
 
-	<target name="doclava" depends="jar">
+	<target name="doclava" depends="jars">
 		<javadoc packagenames="net.freehal.*" destdir="${dist.dir}/docs"
 			sourcepath="${src.dir}" docletpath="${lib.dir}/doclava-1.0.6.jar"
 			bootclasspath="${java.home}/lib/rt.jar" classpathref="build-classpath">

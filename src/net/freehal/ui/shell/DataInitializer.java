@@ -60,48 +60,64 @@ import net.freehal.plugin.berkeleydb.BerkeleyFile;
 import net.freehal.plugin.wikipedia.GermanWikipedia;
 import net.freehal.plugin.wikipedia.WikipediaClient;
 import net.freehal.plugin.wikipedia.WikipediaPlugin;
-import net.freehal.ui.swing.SwingLogWindow;
 
 public class DataInitializer {
+
+	protected static void initializeTerminalLogging(StandardLogUtils log) {
+		// the Linux/Unix implementation uses ANSI colors
+		LogDestination console = null;
+		switch (SystemUtils.getOperatingSystem()) {
+		case LINUX:
+		case UNIX:
+		case MACOSX:
+			console = new ColoredLog(new ConsoleLog(System.out), ColoredLog.ANSI);
+			break;
+		case WINDOWS:
+		default:
+			console = new UncoloredLog(new ConsoleLog(System.out));
+			break;
+		}
+		// everything except debug messages from some classes and packages
+		// are logged to console output
+		FilteredLog consoleFiltered = new FilteredLog.StandardFilteredLog(console);
+		consoleFiltered.addFilter("DiskDatabase", LogUtils.DEBUG);
+		consoleFiltered.addFilter("xml", LogUtils.DEBUG);
+		consoleFiltered.addFilter("filter", LogUtils.DEBUG);
+		log.addDestination(consoleFiltered);
+	}
+
+	protected static void initializeFileLogging(StandardLogUtils log, String logfile) {
+		log.addDestination(new UncoloredLog(new FileLog(logfile)));
+	}
 
 	protected static void initializeLogging(String baseDirectory, String logfile, boolean showLogTerminal,
 			boolean showLogWindow) {
 		// how and where to print the log.
-		StandardLogUtils log = new StandardLogUtils();
-		LogUtils.set(log);
+		StandardLogUtils logger = new StandardLogUtils();
+		LogUtils.set(logger);
 
 		// show logs in terminal?
 		if (showLogTerminal) {
-			// the Linux/Unix implementation uses ANSI colors
-			LogDestination console = null;
-			switch (SystemUtils.getOperatingSystem()) {
-			case LINUX:
-			case UNIX:
-			case MACOSX:
-				console = new ColoredLog(new ConsoleLog(System.out), ColoredLog.ANSI);
-				break;
-			case WINDOWS:
-			default:
-				console = new UncoloredLog(new ConsoleLog(System.out));
-				break;
-			}
-			// everything except debug messages from some classes and packages
-			// are logged to console output
-			FilteredLog consoleFiltered = new FilteredLog.StandardFilteredLog(console);
-			consoleFiltered.addFilter("DiskDatabase", LogUtils.DEBUG);
-			consoleFiltered.addFilter("xml", LogUtils.DEBUG);
-			consoleFiltered.addFilter("filter", LogUtils.DEBUG);
-			log.addDestination(consoleFiltered);
-		}
-
-		// show logs in a swing window?
-		if (showLogWindow) {
-			log.addDestination(new SwingLogWindow());
+			initializeTerminalLogging(logger);
 		}
 
 		// all messages are written into a log file
 		if (logfile != null) {
-			log.addDestination(new UncoloredLog(new FileLog(logfile)));
+			initializeFileLogging(logger, logfile);
+		}
+
+		// show logs in a swing window?
+		if (showLogWindow) {
+			final String className = "net.freehal.ui.swing.SwingLogWindow";
+			try {
+				Class<?> classType = Class.forName(className);
+				logger.addDestination((LogDestination) classType.newInstance());
+			} catch (Exception ex) {
+				if (!showLogTerminal) {
+					initializeTerminalLogging(logger);
+				}
+				LogUtils.e(ex);
+			}
 		}
 	}
 
