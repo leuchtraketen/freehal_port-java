@@ -2,14 +2,14 @@ package net.freehal.ui.shell;
 
 import java.io.IOException;
 
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.OptionBuilder;
-import org.apache.commons.cli.Options;
-
 import net.freehal.core.util.LogUtils;
+import net.freehal.ui.common.Configuration;
 import net.freehal.ui.common.Extension;
 import net.freehal.ui.common.Extensions;
 import net.freehal.ui.common.MainLoopListener;
+
+import org.apache.commons.cli.OptionBuilder;
+import org.apache.commons.cli.Options;
 
 public class Loader implements Extension, MainLoopListener {
 
@@ -23,7 +23,7 @@ public class Loader implements Extension, MainLoopListener {
 	}
 
 	@Override
-	public void parseCommandLine(CommandLine line) {
+	public void parseConfig(Configuration line) {
 		if (line.hasOption("shell")) {
 			shell = new InteractiveShell();
 			Extensions.registerMainLoop(this);

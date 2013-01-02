@@ -114,14 +114,16 @@ public class DataInitializer {
 		LogUtils.set(logger);
 	}
 
-	public static synchronized void initializeFilesystem(String baseDirectory) {
+	public static synchronized void initializeFilesystem() {
 		// set the virtual file implementations
 		FreehalFiles.addImplementation(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
 		FreehalFiles.addImplementation("sqlite", FakeFreehalFile.newFactory());
 		FreehalFiles.addImplementation("http", StandardHttpClient.newFactory());
 		FreehalFiles.addImplementation("wikipedia", WikipediaClient.newFactory());
 		FreehalFiles.addImplementation("berkeley", BerkeleyFile.newFactory());
+	}
 
+	public static synchronized void initializeStorage(String baseDirectory) {
 		// initialize the directory structure. The "StandardStorage"
 		// implementation expects a "lang_xy" directory there which contains the
 		// database files.

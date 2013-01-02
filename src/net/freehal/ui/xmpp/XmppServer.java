@@ -11,16 +11,19 @@ import net.freehal.ui.common.MainLoopListener;
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManagerListener;
 import org.jivesoftware.smack.ConnectionConfiguration;
+import org.jivesoftware.smack.MessageListener;
 import org.jivesoftware.smack.SASLAuthentication;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Presence;
 
-public class XmppServer implements ExitListener, MainLoopListener {
+public class XmppServer implements ExitListener, MainLoopListener, ChatManagerListener, MessageListener {
 
 	private ConnectionConfiguration connConfig;
 	private String username;
 	private String password;
+	private boolean useSaslPlain;
 
 	public XmppServer(String host, int port, String username, String password) {
 		SystemUtils.destructOnExit(this);
@@ -38,10 +41,13 @@ public class XmppServer implements ExitListener, MainLoopListener {
 		this.username = username;
 		this.password = password;
 
-		if (host.contains("gmail") || host.contains("google"))
+		if (host.contains("gmail") || host.contains("google")) {
 			connConfig = new ConnectionConfiguration("talk.google.com", port, "gmail.com");
-		else
+			useSaslPlain = true;
+		} else {
 			connConfig = new ConnectionConfiguration(host, port, host);
+			useSaslPlain = false;
+		}
 	}
 
 	@Override
@@ -51,15 +57,41 @@ public class XmppServer implements ExitListener, MainLoopListener {
 	public void loop() {
 		XMPPConnection connection = new XMPPConnection(connConfig);
 		if (connect(connection) && login(connection)) {
-			connection.getChatManager().addChatListener(new ChatManagerListener() {
-				@Override
-				public void chatCreated(Chat chat, boolean createdLocally) {
-					if (!createdLocally) {
-						chat.addMessageListener(new IncomingMessageListener());
-					}
-				}
-			});
+			connection.getChatManager().addChatListener(this);
+
+			while (connection.isConnected()) {
+				SystemUtils.sleep(500);
+			}
 		}
+	}
+
+	/**
+	 * Overriden from ChatManagerListener
+	 */
+	@Override
+	public void chatCreated(Chat chat, boolean createdLocally) {
+		if (!createdLocally) {
+			chat.addMessageListener(this);
+		}
+	}
+
+	/**
+	 * Overriden from MessageListener
+	 */
+	@Override
+	public void processMessage(Chat chat, Message msg) {
+		String otherUser = chat.getParticipant();
+
+		String input = msg.getBody();
+		LogUtils.i("[XMPP] " + otherUser + ": \"" + input + "\"");
+		final String output = DataInitializer.processInput(input);
+		try {
+			chat.sendMessage(output);
+		} catch (XMPPException ex) {
+			LogUtils.e(ex);
+		}
+		LogUtils.i("[XMPP] " + otherUser + ": \"" + input + "\"");
+		LogUtils.i("[XMPP] " + username + ": \"" + output + "\"");
 	}
 
 	private boolean login(XMPPConnection connection) {
@@ -80,7 +112,8 @@ public class XmppServer implements ExitListener, MainLoopListener {
 
 	private boolean connect(XMPPConnection connection) {
 		try {
-			SASLAuthentication.supportSASLMechanism("PLAIN", 0);
+			if (useSaslPlain)
+				SASLAuthentication.supportSASLMechanism("PLAIN", 0);
 			connection.connect();
 			LogUtils.i("Connected to " + connection.getHost());
 			return true;

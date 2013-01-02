@@ -1,10 +1,10 @@
 package net.freehal.ui.xmpp;
 
-import net.freehal.ui.common.CommandLineUtils;
+import net.freehal.core.util.LogUtils;
+import net.freehal.ui.common.Configuration;
 import net.freehal.ui.common.Extension;
 import net.freehal.ui.common.Extensions;
 
-import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 
@@ -31,15 +31,19 @@ public class Loader implements Extension {
 	}
 
 	@Override
-	public void parseCommandLine(CommandLine line) {
-		if (line.hasOption("xmpp-user") && line.hasOption("xmpp-password")) {
-			String user = CommandLineUtils.getStringOption(line, "xmpp-user", null);
-			String password = CommandLineUtils.getStringOption(line, "xmpp-password", null);
-			String host = CommandLineUtils.getStringOption(line, "xmpp-host", DEFAULT_SERVER);
-			int port = CommandLineUtils.getIntOption(line, "xmpp-port", DEFAULT_PORT);
+	public void parseConfig(Configuration config) {
+		if (config.hasOption("xmpp-user") && config.hasOption("xmpp-password")) {
+			String user = config.getStringOption("xmpp-user", null);
+			String password = config.getStringOption("xmpp-password", null);
+			String host = config.getStringOption("xmpp-host", DEFAULT_SERVER);
+			int port = config.getIntegerOption("xmpp-port", DEFAULT_PORT);
 
 			server = new XmppServer(host, port, user, password);
 			Extensions.registerMainLoop(server);
+			
+		} else if (config.hasOption("xmpp-user") || config.hasOption("xmpp-password")
+				|| config.hasOption("xmpp-host") || config.hasOption("xmpp-port")) {
+			LogUtils.e("You have to specify a valid username and password to use XMPP.");
 		}
 	}
 }

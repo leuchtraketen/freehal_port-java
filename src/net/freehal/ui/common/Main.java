@@ -116,16 +116,22 @@ public class Main {
 		if (line.hasOption("help"))
 			printHelp(options);
 
+		DataInitializer.initializeFilesystem();
+
+		Configuration config = new Configuration();
+		config.addSource(line);
+		config.addSource(new ConfigFile(ConfigFile.COMMON_LOCATIONS));
+
 		// default base directory
-		final String base = CommandLineUtils.getStringOption(line, "base", ".");
+		final String base = config.getStringOption("base", ".");
 		// default log file
-		final String logfile = CommandLineUtils.getStringOption(line, "log-file", base + "/stdout.txt");
+		final String logfile = config.getStringOption("log-file", base + "/stdout.txt");
 		// show logs in terminal? it's default on unix systems...
-		final boolean showLogTerminal = CommandLineUtils.getBooleanOption(line, "log-terminal",
+		final boolean showLogTerminal = config.getBooleanOption("log-terminal",
 				!Extensions.hasExtension("swing") || (!SystemUtils.isWindows() && !SystemUtils.isMacOSX()));
 
 		DataInitializer.initializeLogging(base, logfile, showLogTerminal);
-		DataInitializer.initializeFilesystem(base);
+		DataInitializer.initializeStorage(base);
 
 		Language language = new GermanLanguage(); // default language
 		if (line.hasOption("language")) {
@@ -141,17 +147,17 @@ public class Main {
 
 		if (Extensions.hasExtension("swing")) {
 			Extension swing = (Extension) Extensions.getExtension("swing");
-			swing.parseCommandLine(line);
+			swing.parseConfig(config);
 		}
 
 		if (Extensions.hasExtension("shell")) {
 			Extension shell = (Extension) Extensions.getExtension("shell");
-			shell.parseCommandLine(line);
+			shell.parseConfig(config);
 		}
 
 		if (Extensions.hasExtension("xmpp")) {
 			Extension xmpp = (Extension) Extensions.getExtension("xmpp");
-			xmpp.parseCommandLine(line);
+			xmpp.parseConfig(config);
 		}
 
 		if (line.hasOption("input")) {
@@ -162,7 +168,7 @@ public class Main {
 		if (line.hasOption("think")) {
 			think();
 		}
-		
+
 		Extensions.runLoops();
 	}
 

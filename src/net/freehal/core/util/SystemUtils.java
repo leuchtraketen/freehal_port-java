@@ -88,4 +88,12 @@ public class SystemUtils {
 	public static void setEmailAddr(String emailAddr) {
 		EMAIL_ADDR = emailAddr;
 	}
+
+	public static void sleep(int millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			// ignore
+		}
+	}
 }

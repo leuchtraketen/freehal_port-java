@@ -3,10 +3,9 @@ package net.freehal.ui.swing;
 import net.freehal.core.logs.StandardLogUtils;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.SystemUtils;
-import net.freehal.ui.common.CommandLineUtils;
+import net.freehal.ui.common.Configuration;
 import net.freehal.ui.common.Extension;
 
-import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.OptionBuilder;
 import org.apache.commons.cli.Options;
 
@@ -25,10 +24,10 @@ public class Loader implements Extension {
 	}
 
 	@Override
-	public void parseCommandLine(CommandLine line) {
+	public void parseConfig(Configuration line) {
 		// show a swing log window? it's default on windows systems...
-		final boolean showLogWindow = CommandLineUtils.getBooleanOption(line, "log-window",
-				SystemUtils.isWindows() || SystemUtils.isMacOSX());
+		final boolean showLogWindow = line.getBooleanOption("log-window", SystemUtils.isWindows()
+				|| SystemUtils.isMacOSX());
 
 		if (showLogWindow) {
 			StandardLogUtils logger = (StandardLogUtils) LogUtils.get();
