@@ -6,14 +6,14 @@ import java.net.URLEncoder;
 import java.util.List;
 
 import net.freehal.core.lang.Languages;
-import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.FreehalFileImpl;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.xml.XmlUtils;
 
-public class WikipediaClient implements FreehalFile {
+public class WikipediaClient implements FreehalFileImpl {
 
 	private FreehalFile http;
 	private String lang;
@@ -53,24 +53,24 @@ public class WikipediaClient implements FreehalFile {
 			this.lang = parts[0];
 			this.name = parts[1];
 		} else if (parts.length == 1) {
-			this.lang = Languages.getLanguage().getCode();
+			this.lang = Languages.getCurrentLanguage().getCode();
 			this.name = parts[0];
 		}
-		this.http = FreehalFiles.getFile("http", getArticleUrl(lang, name));
+		this.http = new FreehalFile("http", getArticleUrl(lang, name));
 		check();
 	}
 
-	public static Factory<FreehalFile, String> newFactory() {
-		return new Factory<FreehalFile, String>() {
+	public static FreehalFiles.Factory newFactory() {
+		return new FreehalFiles.Factory() {
 			@Override
-			public FreehalFile newInstance(String b) {
-				return new WikipediaClient(b);
+			public FreehalFileImpl newInstance(String path) {
+				return new WikipediaClient(path);
 			}
 		};
 	}
 
 	@Override
-	public int compareTo(FreehalFile o) {
+	public int compareTo(FreehalFileImpl o) {
 		if (o instanceof WikipediaClient)
 			return http.compareTo(((WikipediaClient) o).http);
 		else
@@ -79,12 +79,14 @@ public class WikipediaClient implements FreehalFile {
 
 	@Override
 	public FreehalFile getChild(String path) {
-		return new WikipediaClient(path);
+		return new FreehalFile(new WikipediaClient(path));
 	}
 
 	@Override
-	public FreehalFile getChild(FreehalFile path) {
-		return path;
+	public FreehalFile getChild(FreehalFileImpl path) {
+		LogUtils.e(new UnsupportedOperationException("What are you doing? "
+				+ "Wikipedia Files can't have children files."));
+		return new FreehalFile(this);
 	}
 
 	@Override
@@ -171,12 +173,12 @@ public class WikipediaClient implements FreehalFile {
 
 		// use the wikipedia search
 		LogUtils.i("1");
-		http = FreehalFiles.getFile("http", getWikipediaSearchUrl(lang, name));
+		http = new FreehalFile("http", getWikipediaSearchUrl(lang, name));
 		for (String line : http.readLines()) {
 			if ((match = RegexUtils.imatch(line, "<Url.*>([^<]+)</Url>")) != null) {
 				String[] parts = match.get(0).split("/");
 				LogUtils.i("2");
-				http = FreehalFiles.getFile("http", getArticleUrl(lang, parts[parts.length - 1]));
+				http = new FreehalFile("http", getArticleUrl(lang, parts[parts.length - 1]));
 				if (http.length() > 0)
 					return;
 			}
@@ -184,12 +186,12 @@ public class WikipediaClient implements FreehalFile {
 
 		// use the google ajax search api
 		LogUtils.i("3");
-		http = FreehalFiles.getFile("http", getGoogleSearchUrl(lang, name));
+		http = new FreehalFile("http", getGoogleSearchUrl(lang, name));
 		for (String line : http.readLines()) {
 			if ((match = RegexUtils.imatch(line, "\"url\":\"([^\"]+)\"")) != null) {
 				String[] parts = match.get(0).split("/");
 				LogUtils.i("4");
-				http = FreehalFiles.getFile("http", getArticleUrl(lang, parts[parts.length - 1]));
+				http = new FreehalFile("http", getArticleUrl(lang, parts[parts.length - 1]));
 				if (http.length() > 0)
 					return;
 			}

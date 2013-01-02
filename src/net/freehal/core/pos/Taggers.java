@@ -16,6 +16,8 @@
  ******************************************************************************/
 package net.freehal.core.pos;
 
+import net.freehal.core.lang.ExplicitLanguageImplMap;
+import net.freehal.core.lang.LanguageImplMap;
 import net.freehal.core.lang.fake.FakeTagger;
 
 /**
@@ -25,11 +27,7 @@ import net.freehal.core.lang.fake.FakeTagger;
  */
 public class Taggers {
 
-	private static Tagger tagger = null;
-
-	static {
-		tagger = new FakeTagger();
-	}
+	public static LanguageImplMap<Tagger> tagger = new ExplicitLanguageImplMap<Tagger>(new FakeTagger());
 
 	private Taggers() {}
 
@@ -39,7 +37,7 @@ public class Taggers {
 	 * @return an instance of a class implementing the {@link Tagger} interface
 	 */
 	public static Tagger getTagger() {
-		return tagger;
+		return tagger.getCurrent();
 	}
 
 	/**
@@ -49,6 +47,6 @@ public class Taggers {
 	 *        the tagger to set
 	 */
 	public static void setTagger(Tagger tagger) {
-		Taggers.tagger = tagger;
+		Taggers.tagger.setCurrent(tagger);
 	}
 }

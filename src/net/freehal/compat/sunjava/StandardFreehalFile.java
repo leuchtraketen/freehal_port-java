@@ -27,8 +27,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import net.freehal.core.util.AbstractFreehalFile;
-import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.FreehalFileImpl;
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 
 public class StandardFreehalFile extends AbstractFreehalFile {
@@ -37,23 +38,23 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 		super(file);
 	}
 
-	public static Factory<FreehalFile, String> newFactory() {
-		return new Factory<FreehalFile, String>() {
+	public static FreehalFiles.Factory newFactory() {
+		return new FreehalFiles.Factory() {
 			@Override
-			public FreehalFile newInstance(String b) {
-				return new StandardFreehalFile(new File(b));
+			public FreehalFileImpl newInstance(String path) {
+				return new StandardFreehalFile(new File(path));
 			}
 		};
 	}
 
 	@Override
 	public FreehalFile getChild(String file) {
-		return new StandardFreehalFile(new File(this.getAbsolutePath(), file));
+		return new FreehalFile(new StandardFreehalFile(new File(this.getAbsolutePath(), file)));
 	}
 
 	@Override
-	public FreehalFile getChild(FreehalFile file) {
-		return new StandardFreehalFile(new File(this.getAbsolutePath(), file.getPath()));
+	public FreehalFile getChild(FreehalFileImpl file) {
+		return getChild(file.getPath());
 	}
 
 	@Override
@@ -72,7 +73,7 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 		File[] realFiles = file.listFiles();
 		if (realFiles != null) {
 			for (File realFile : realFiles) {
-				files.add(new StandardFreehalFile(new File(realFile.getPath())));
+				files.add(new FreehalFile(new StandardFreehalFile(new File(realFile.getPath()))));
 			}
 		}
 		return files.toArray(new FreehalFile[realFiles.length]);
@@ -109,7 +110,7 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 
 	@Override
 	public Iterable<String> readLines() {
-		LogUtils.d("reading line by line: "+this);
+		LogUtils.d("reading line by line: " + this);
 		Iterable<String> iterator = null;
 		try {
 			iterator = new BufferedReaderIterator(new BufferedReader(new FileReader(this.getFile()),
@@ -125,7 +126,7 @@ public class StandardFreehalFile extends AbstractFreehalFile {
 
 	@Override
 	public String read() {
-		LogUtils.d("reading in one chunk: "+this);
+		LogUtils.d("reading in one chunk: " + this);
 		BufferedReader theReader = null;
 		String returnString = null;
 

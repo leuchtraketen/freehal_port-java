@@ -36,7 +36,7 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 		this.path = path;
 		this.serializer = serializer;
 
-		if (path instanceof StandardFreehalFile) {
+		if (path.getImpl() instanceof StandardFreehalFile) {
 			path.mkdirs();
 			final File envDir = path.getFile();
 			final EnvironmentConfig envConfig = new EnvironmentConfig();
@@ -58,7 +58,8 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 		} else {
 			LogUtils.e(new IllegalArgumentException("BerkeleyDb only supports real files "
 					+ "(that means an instance of java.io.File wrapped by "
-					+ StandardFreehalFile.class.getName() + ")!"));
+					+ StandardFreehalFile.class.getName() + ")! " + "You have given me an instance of "
+					+ path.getImpl().getClass()));
 			SystemUtils.exit(1);
 		}
 	}

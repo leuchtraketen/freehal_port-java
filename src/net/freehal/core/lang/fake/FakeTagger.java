@@ -35,7 +35,7 @@ public class FakeTagger implements Tagger {
 	 * ignore...
 	 */
 	@Override
-	public void setDatabase(Factory<TagContainer, String> newFactory) {
+	public void setDatabase(Factory<TagContainer> newFactory) {
 
 	}
 

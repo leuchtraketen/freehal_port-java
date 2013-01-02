@@ -13,11 +13,12 @@ import com.sleepycat.je.OperationStatus;
 
 import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.Storages;
-import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.FreehalFileImpl;
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.RegexUtils;
 
-public class BerkeleyFile implements FreehalFile {
+public class BerkeleyFile implements FreehalFileImpl {
 
 	private static final String DBNAME = "filesystem";
 	private static BerkeleyDb<String> db = null;
@@ -36,10 +37,10 @@ public class BerkeleyFile implements FreehalFile {
 		}
 	}
 
-	public static Factory<FreehalFile, String> newFactory() {
-		return new Factory<FreehalFile, String>() {
+	public static FreehalFiles.Factory newFactory() {
+		return new FreehalFiles.Factory() {
 			@Override
-			public FreehalFile newInstance(String b) {
+			public FreehalFileImpl newInstance(String b) {
 				return new BerkeleyFile(b);
 			}
 		};
@@ -52,11 +53,11 @@ public class BerkeleyFile implements FreehalFile {
 			child += "/";
 		child += name;
 		child = RegexUtils.replace(child, "[/]+", "/");
-		return new BerkeleyFile(child);
+		return new FreehalFile(new BerkeleyFile(child));
 	}
 
 	@Override
-	public FreehalFile getChild(FreehalFile file) {
+	public FreehalFile getChild(FreehalFileImpl file) {
 		return getChild(file.getPath());
 	}
 
@@ -96,7 +97,7 @@ public class BerkeleyFile implements FreehalFile {
 		while (cursor.getNext(keyEntry, dataEntry, LockMode.DEFAULT) == OperationStatus.SUCCESS) {
 			final String key = new String(keyEntry.getData());
 			if (key.startsWith(path1) || key.startsWith(path2)) {
-				files.add(new BerkeleyFile(key));
+				files.add(new FreehalFile(new BerkeleyFile(key)));
 			}
 		}
 		return files.toArray(new FreehalFile[files.size()]);
@@ -141,7 +142,7 @@ public class BerkeleyFile implements FreehalFile {
 	}
 
 	@Override
-	public int compareTo(FreehalFile o) {
+	public int compareTo(FreehalFileImpl o) {
 		if (o instanceof BerkeleyFile) {
 			return path.compareTo(((BerkeleyFile) o).path);
 		} else {

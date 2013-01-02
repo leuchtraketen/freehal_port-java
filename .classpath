@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="libs/runtime/core/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="libs/runtime/core/je-5.0.58.jar"/>
 	<classpathentry kind="lib" path="libs/runtime/shell/jline-2.10.jar"/>
+	<classpathentry kind="lib" path="libs/runtime/xmpp/smack.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

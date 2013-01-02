@@ -26,7 +26,7 @@ import java.io.File;
  * 
  * @author "Tobias Schulz"
  */
-public abstract class AbstractFreehalFile implements FreehalFile {
+public abstract class AbstractFreehalFile implements FreehalFileImpl {
 
 	/**
 	 * The corresponding standard {@link java.io.File} instance from the
@@ -56,7 +56,7 @@ public abstract class AbstractFreehalFile implements FreehalFile {
 	}
 
 	@Override
-	public int compareTo(FreehalFile o) {
+	public int compareTo(FreehalFileImpl o) {
 		return file.getAbsolutePath().compareTo(o.getAbsolutePath());
 	}
 

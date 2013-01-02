@@ -23,7 +23,6 @@ import java.util.Map;
 
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.FreehalFile;
-import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.core.xml.XmlFactReciever;
@@ -72,7 +71,7 @@ public class StandardDatabase implements Database {
 
 	@Override
 	public void updateCache() {
-		updateCache(FreehalFiles.getFile(""));
+		updateCache(Storages.getLanguageDirectory());
 	}
 
 	@Override
@@ -94,7 +93,7 @@ public class StandardDatabase implements Database {
 			if (countFiles > 0) {
 				LogUtils.startProgress(0, 1, countFiles);
 				for (FreehalFile file : files) {
-					//LogUtils.i("file:" + file);
+					// LogUtils.i("file:" + file);
 					if (file.isFile() && file.getName().contains(".xml")) {
 						this.updateCache(file);
 						LogUtils.updateProgress();

@@ -27,7 +27,6 @@ import net.freehal.core.pos.storage.TagContainer;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
-import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
@@ -63,7 +62,7 @@ public abstract class StandardTagger implements Tagger {
 	 *        the cache to use
 	 */
 	@Override
-	public void setDatabase(Factory<TagContainer, String> storage) {
+	public void setDatabase(Factory<TagContainer> storage) {
 		staticTags = storage.newInstance("staticTags");
 		regexTags = new MemoryTagList();
 		togglemap = new HashMap<String, String>();
@@ -228,7 +227,7 @@ public abstract class StandardTagger implements Tagger {
 		if (bestCategory != null) {
 			tags = new Tags(bestCategory, null);
 			staticTags.add(word, tags);
-			writeTagsTo(FreehalFiles.getFile("guessed.pos"), new Word(word, tags));
+			writeTagsTo(Storages.getLanguageDirectory().getChild("guessed.pos"), new Word(word, tags));
 			LogUtils.i("  guessed: " + tags);
 		}
 

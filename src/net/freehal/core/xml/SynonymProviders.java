@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import net.freehal.core.lang.ImplicitLanguageImplMap;
+import net.freehal.core.lang.LanguageImplMap;
+import net.freehal.core.util.Factory;
+
 /**
  * An utility class for holding the currently used {@link SynonymProvider}s.
  * 
@@ -11,11 +15,13 @@ import java.util.List;
  */
 public class SynonymProviders {
 
-	private static CompositeSynonymProvider provider = null;
-
-	static {
-		provider = new CompositeSynonymProvider();
-	}
+	private static LanguageImplMap<CompositeSynonymProvider> provider = new ImplicitLanguageImplMap<CompositeSynonymProvider>(
+			new Factory<CompositeSynonymProvider>() {
+				@Override
+				public CompositeSynonymProvider newInstance(String... params) {
+					return new CompositeSynonymProvider();
+				}
+			});
 
 	private SynonymProviders() {}
 
@@ -26,7 +32,7 @@ public class SynonymProviders {
 	 *         interface
 	 */
 	public static SynonymProvider getSynonymProvider() {
-		return provider;
+		return provider.getCurrent();
 	}
 
 	/**
@@ -36,10 +42,13 @@ public class SynonymProviders {
 	 *        the synonym provider to set
 	 */
 	public static void addSynonymProvider(SynonymProvider provider) {
-		SynonymProviders.provider.add(provider);
+		if (!SynonymProviders.provider.hasCurrent()) {
+			SynonymProviders.provider.setCurrent(new CompositeSynonymProvider());
+		}
+		SynonymProviders.provider.getCurrent().add(provider);
 	}
 
-	private static class CompositeSynonymProvider implements SynonymProvider {
+	public static class CompositeSynonymProvider implements SynonymProvider {
 
 		List<SynonymProvider> providers = new ArrayList<SynonymProvider>();
 

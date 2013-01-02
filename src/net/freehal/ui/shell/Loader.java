@@ -8,8 +8,12 @@ import org.apache.commons.cli.Options;
 
 import net.freehal.core.util.LogUtils;
 import net.freehal.ui.common.Extension;
+import net.freehal.ui.common.Extensions;
+import net.freehal.ui.common.MainLoopListener;
 
-public class Loader implements Extension {
+public class Loader implements Extension, MainLoopListener {
+
+	private InteractiveShell shell = null;
 
 	@SuppressWarnings("static-access")
 	@Override
@@ -21,8 +25,15 @@ public class Loader implements Extension {
 	@Override
 	public void parseCommandLine(CommandLine line) {
 		if (line.hasOption("shell")) {
+			shell = new InteractiveShell();
+			Extensions.registerMainLoop(this);
+		}
+	}
+
+	@Override
+	public void loop() {
+		if (shell != null) {
 			try {
-				InteractiveShell shell = new InteractiveShell();
 				shell.loop(System.in, System.out);
 			} catch (IOException ex) {
 				LogUtils.e(ex);

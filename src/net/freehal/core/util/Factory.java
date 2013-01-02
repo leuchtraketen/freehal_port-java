@@ -1,5 +1,5 @@
 package net.freehal.core.util;
 
-public interface Factory<A, B> {
-	public A newInstance(B b);
+public interface Factory<A> {
+	public A newInstance(String... params);
 }

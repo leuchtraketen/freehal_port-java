@@ -86,6 +86,12 @@ public class Main {
 			swing.addOptions(options);
 		}
 
+		// optional extensions: xmpp plugin
+		if (Extensions.hasExtension("xmpp")) {
+			Extension xmpp = (Extension) Extensions.getExtension("xmpp");
+			xmpp.addOptions(options);
+		}
+
 		if (args.length == 0) {
 			printHelp(options);
 
@@ -143,6 +149,11 @@ public class Main {
 			shell.parseCommandLine(line);
 		}
 
+		if (Extensions.hasExtension("xmpp")) {
+			Extension xmpp = (Extension) Extensions.getExtension("xmpp");
+			xmpp.parseCommandLine(line);
+		}
+
 		if (line.hasOption("input")) {
 			String[] args = { line.getOptionValue("input") };
 			processNonInteractiveInput(args);
@@ -151,6 +162,8 @@ public class Main {
 		if (line.hasOption("think")) {
 			think();
 		}
+		
+		Extensions.runLoops();
 	}
 
 	private void printHelp(Options options) {
@@ -174,7 +187,7 @@ public class Main {
 
 	public void processNonInteractiveInput(String[] sentences) {
 		// initialize data
-		DataInitializer.initializeData(Collections.<String> emptySet());
+		DataInitializer.initializeLanguageSpecificData(Collections.<String> emptySet());
 
 		for (String input : sentences) {
 			final String output = DataInitializer.processInput(input);
@@ -184,6 +197,6 @@ public class Main {
 	}
 
 	public void think() {
-		DataInitializer.initializeData(ArrayUtils.asSet(new String[] { "reasoning" }));
+		DataInitializer.initializeLanguageSpecificData(ArrayUtils.asSet(new String[] { "reasoning" }));
 	}
 }

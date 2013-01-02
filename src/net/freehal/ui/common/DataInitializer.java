@@ -1,6 +1,7 @@
 package net.freehal.ui.common;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -48,6 +49,7 @@ import net.freehal.core.storage.KeyValueDatabase;
 import net.freehal.core.storage.Serializer;
 import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
+import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.StringUtils;
@@ -65,7 +67,9 @@ import net.freehal.plugin.wikipedia.WikipediaPlugin;
 
 public class DataInitializer {
 
-	public static void initializeTerminalLogging(StandardLogUtils log) {
+	private static Set<Language> isDataInitialized = new HashSet<Language>();
+
+	public static synchronized void initializeTerminalLogging(StandardLogUtils log) {
 		// the Linux/Unix implementation uses ANSI colors
 		LogDestination console = null;
 		switch (SystemUtils.getOperatingSystem()) {
@@ -88,11 +92,12 @@ public class DataInitializer {
 		log.addDestination(consoleFiltered);
 	}
 
-	public static void initializeFileLogging(StandardLogUtils log, String logfile) {
+	public static synchronized void initializeFileLogging(StandardLogUtils log, String logfile) {
 		log.addDestination(new UncoloredLog(new FileLog(logfile)));
 	}
 
-	public static void initializeLogging(String baseDirectory, String logfile, boolean showLogTerminal) {
+	public static synchronized void initializeLogging(String baseDirectory, String logfile,
+			boolean showLogTerminal) {
 		// how and where to print the log.
 		StandardLogUtils logger = new StandardLogUtils();
 
@@ -109,13 +114,13 @@ public class DataInitializer {
 		LogUtils.set(logger);
 	}
 
-	public static void initializeFilesystem(String baseDirectory) {
+	public static synchronized void initializeFilesystem(String baseDirectory) {
 		// set the virtual file implementations
-		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
-		FreehalFiles.add("sqlite", FakeFreehalFile.newFactory());
-		FreehalFiles.add("http", StandardHttpClient.newFactory());
-		FreehalFiles.add("wikipedia", WikipediaClient.newFactory());
-		FreehalFiles.add("berkeley", BerkeleyFile.newFactory());
+		FreehalFiles.addImplementation(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
+		FreehalFiles.addImplementation("sqlite", FakeFreehalFile.newFactory());
+		FreehalFiles.addImplementation("http", StandardHttpClient.newFactory());
+		FreehalFiles.addImplementation("wikipedia", WikipediaClient.newFactory());
+		FreehalFiles.addImplementation("berkeley", BerkeleyFile.newFactory());
 
 		// initialize the directory structure. The "StandardStorage"
 		// implementation expects a "lang_xy" directory there which contains the
@@ -123,7 +128,7 @@ public class DataInitializer {
 		Storages.setStorage(new StandardStorage(baseDirectory));
 	}
 
-	public static void initializeLanguage(Language language) {
+	public static synchronized void initializeLanguage(Language language) {
 		// initialize the languages
 		FakeLanguage.initializeDefaults();
 		GermanLanguage.initializeDefaults();
@@ -133,7 +138,12 @@ public class DataInitializer {
 		Languages.setLanguage(language);
 	}
 
-	public static void initializeData(Set<String> params) {
+	public static synchronized void initializeLanguageSpecificData(Set<String> params) {
+		// abort if already initialized for that language
+		if (isDataInitialized.contains(Languages.getCurrentLanguage())) {
+			return;
+		}
+
 		// now language and filesystem stuff are ready!
 		LogUtils.startProgress("init");
 
@@ -141,8 +151,8 @@ public class DataInitializer {
 
 		// initialize the grammar
 		// (also possible: EnglishGrammar, GermanGrammar, FakeGrammar)
-		Grammar grammar = LanguageSpecific.chooseByLanguage(Grammar.class);
-		grammar.readGrammar(FreehalFiles.getFile("grammar.txt"));
+		Grammar grammar = LanguageSpecific.chooseByCurrentLanguage(Grammar.class);
+		grammar.readGrammar(new FreehalFile("grammar.txt"));
 		Grammars.setGrammar(grammar);
 
 		LogUtils.startProgress("set up part of speech tagger");
@@ -157,21 +167,21 @@ public class DataInitializer {
 		// usage) or a TaggerCacheDisk (slower, less memory usage)
 		KeyValueDatabase<Tags> tags = new BerkeleyDb<Tags>(Storages.getCacheDirectory().getChild("tagger"),
 				new Tags.StringSerializer());
-		Tagger tagger = LanguageSpecific.chooseByLanguage(Tagger.class);
+		Tagger tagger = LanguageSpecific.chooseByCurrentLanguage(Tagger.class);
 		tagger.setDatabase(TagDatabase.newFactory(tags, meta));
 		// Tagger tagger = new GermanTagger(MemoryTagMap.newFactory());
-		tagger.readTagsFrom(FreehalFiles.getFile("guessed.pos"));
-		tagger.readTagsFrom(FreehalFiles.getFile("brain.pos"));
-		tagger.readTagsFrom(FreehalFiles.getFile("memory.pos"));
-		tagger.readRegexFrom(FreehalFiles.getFile("regex.pos"));
-		tagger.readToggleWordsFrom(FreehalFiles.getFile("toggle.csv"));
+		tagger.readTagsFrom(new FreehalFile("guessed.pos"));
+		tagger.readTagsFrom(new FreehalFile("brain.pos"));
+		tagger.readTagsFrom(new FreehalFile("memory.pos"));
+		tagger.readRegexFrom(new FreehalFile("regex.pos"));
+		tagger.readToggleWordsFrom(new FreehalFile("toggle.csv"));
 		Taggers.setTagger(tagger);
 
 		LogUtils.stopProgress();
 
 		// how to phrase the output sentences
 		// (also possible: EnglishWording, GermanWording, FakeWording)
-		Wording phrase = LanguageSpecific.chooseByLanguage(Wording.class);
+		Wording phrase = LanguageSpecific.chooseByCurrentLanguage(Wording.class);
 		Wordings.setWording(phrase);
 
 		LogUtils.startProgress("set up database");
@@ -211,10 +221,10 @@ public class DataInitializer {
 		FactProviders.addFactProvider(wikipedia);
 
 		// Freehal has different ways to find an answer for an input
-		AnswerProviders.add(LanguageSpecific.chooseByLanguage(PredefinedAnswerProvider.class));
+		AnswerProviders.add(LanguageSpecific.chooseByCurrentLanguage(PredefinedAnswerProvider.class));
 		AnswerProviders.add(new DatabaseAnswerProvider(facts));
 		AnswerProviders.add(wikipedia);
-		AnswerProviders.add(LanguageSpecific.chooseByLanguage(RandomAnswerProvider.class));
+		AnswerProviders.add(LanguageSpecific.chooseByCurrentLanguage(RandomAnswerProvider.class));
 		AnswerProviders.add(new FakeAnswerProvider());
 
 		// fact filters are used to filter the best-matching fact in the
@@ -223,13 +233,16 @@ public class DataInitializer {
 				.add(new FilterQuestionWhat()).add(new FilterQuestionExtra());
 
 		LogUtils.stopProgress();
+
+		// mark this language as initialized
+		isDataInitialized.add(Languages.getCurrentLanguage());
 	}
 
-	public static String processInput(String input) {
+	public static synchronized String processInput(String input) {
 		LogUtils.i("input: " + input);
 
 		// also possible: EnglishParser, GermanParser, FakeParser
-		Parser p = LanguageSpecific.chooseByLanguage(Parser.class);
+		Parser p = LanguageSpecific.chooseByCurrentLanguage(Parser.class);
 		p.parse(input);
 
 		// parse the input and get a list of sentences

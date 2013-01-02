@@ -53,10 +53,10 @@ public class MemoryTagMap extends MemoryTagContainer {
 		return map.get(word);
 	}
 
-	public static Factory<TagContainer, String> newFactory() {
-		return new Factory<TagContainer, String>() {
+	public static Factory<TagContainer> newFactory() {
+		return new Factory<TagContainer>() {
 			@Override
-			public TagContainer newInstance(String b) {
+			public TagContainer newInstance(String... params) {
 				return new MemoryTagMap();
 			}
 		};

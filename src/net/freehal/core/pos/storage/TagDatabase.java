@@ -13,11 +13,11 @@ import net.freehal.core.util.LogUtils;
 
 public class TagDatabase extends MemoryTagContainer implements TagContainer {
 
-	public static Factory<TagContainer, String> newFactory(final KeyValueDatabase<Tags> database,
+	public static Factory<TagContainer> newFactory(final KeyValueDatabase<Tags> database,
 			final KeyValueDatabase<String> meta) {
-		return new Factory<TagContainer, String>() {
+		return new Factory<TagContainer>() {
 			@Override
-			public TagContainer newInstance(String dbname) {
+			public TagContainer newInstance(String... dbname) {
 				return new TagDatabase(database, meta);
 			}
 		};

@@ -53,7 +53,7 @@ public class WikipediaPlugin implements FactProvider, AnswerProvider {
 	private String getShortDescription(String name) {
 		LogUtils.i("Searching a short description for: \"" + name + "\"");
 
-		final Iterable<String> html = FreehalFiles.getFile("wikipedia", name).readLines();
+		final Iterable<String> html = FreehalFiles.createInstance("wikipedia", name).readLines();
 		List<String> desc = new ArrayList<String>();
 		final int limitLines = 3;
 

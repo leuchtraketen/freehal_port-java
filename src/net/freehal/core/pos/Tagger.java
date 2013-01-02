@@ -30,7 +30,7 @@ import net.freehal.core.xml.Word;
  */
 public interface Tagger {
 
-	public void setDatabase(Factory<TagContainer, String> newFactory);
+	public void setDatabase(Factory<TagContainer> newFactory);
 
 	/**
 	 * Returns the part of speech tags of the given word as a {@link Tags}

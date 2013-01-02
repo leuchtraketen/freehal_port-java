@@ -8,13 +8,14 @@ import java.util.Scanner;
 
 import net.freehal.compat.sunjava.StandardFreehalFile.BufferedReaderIterator;
 import net.freehal.compat.sunjava.StandardFreehalFile.NullIterator;
-import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.FreehalFileImpl;
+import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
 
-public class StandardHttpClient implements FreehalFile {
+public class StandardHttpClient implements FreehalFileImpl {
 
 	protected String protocol = "http";
 	private String path;
@@ -25,23 +26,23 @@ public class StandardHttpClient implements FreehalFile {
 		this.path = path;
 	}
 
-	public static Factory<FreehalFile, String> newFactory() {
-		return new Factory<FreehalFile, String>() {
+	public static FreehalFiles.Factory newFactory() {
+		return new FreehalFiles.Factory() {
 			@Override
-			public FreehalFile newInstance(String b) {
-				return new StandardHttpClient(b);
+			public FreehalFileImpl newInstance(String path) {
+				return new StandardHttpClient(path);
 			}
 		};
 	}
 
 	@Override
 	public FreehalFile getChild(String path) {
-		return new StandardHttpClient(this.path + "/" + path);
+		return new FreehalFile(new StandardHttpClient(this.path + "/" + path));
 	}
 
 	@Override
-	public FreehalFile getChild(FreehalFile path) {
-		return new StandardHttpClient(this.path + "/" + path.getPath());
+	public FreehalFile getChild(FreehalFileImpl path) {
+		return getChild(path.getPath());
 	}
 
 	@Override
@@ -118,7 +119,7 @@ public class StandardHttpClient implements FreehalFile {
 	public void write(String s) {}
 
 	@Override
-	public int compareTo(FreehalFile o) {
+	public int compareTo(FreehalFileImpl o) {
 		return path.compareTo(o.getPath());
 	}
 

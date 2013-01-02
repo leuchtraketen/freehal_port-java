@@ -26,7 +26,6 @@ import net.freehal.core.pos.Tags;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
-import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.MultiHashMap;
 import net.freehal.core.util.MultiMap;
@@ -55,7 +54,7 @@ public class DiskTagCachedReader extends MemoryTagContainer implements TagContai
 
 	@Override
 	public void add(String word, Tags tags) {
-		add(word, tags, FreehalFiles.getFile("unknown.pos"));
+		add(word, tags, new FreehalFile("unknown.pos"));
 	}
 
 	@Override
@@ -178,11 +177,14 @@ public class DiskTagCachedReader extends MemoryTagContainer implements TagContai
 		return null;
 	}
 
-	public static Factory<TagContainer, String> newFactory() {
-		return new Factory<TagContainer, String>() {
+	public static Factory<TagContainer> newFactory() {
+		return new Factory<TagContainer>() {
 			@Override
-			public TagContainer newInstance(String b) {
-				return new DiskTagCachedReader(b);
+			public TagContainer newInstance(String... params) {
+				if (params.length > 0)
+					return new DiskTagCachedReader(params[0]);
+				else
+					throw new IllegalArgumentException("no parameters given");
 			}
 		};
 	}

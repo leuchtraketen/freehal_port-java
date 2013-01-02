@@ -32,7 +32,7 @@ public class Languages {
 	 * 
 	 * @return an instance of {@link Language}
 	 */
-	public static Language getLanguage() {
+	public static Language getCurrentLanguage() {
 		return language;
 	}
 

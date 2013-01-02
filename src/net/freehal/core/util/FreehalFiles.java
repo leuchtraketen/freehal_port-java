@@ -25,14 +25,14 @@ import java.util.Map;
  * 
  * It contains a map with of protocols (like {@code "file"}, {@code "http"},
  * {@code "sqlite"}, ...) and the corresponding {@link FreehalFile}
- * implementations which is filled with {@link #add(String, FreehalFile)}. When
- * creating a {@link FreehalFile} object using {@link #getFile(String)}, this
+ * implementations which is filled with {@link #addImplementation(String, FreehalFile)}. When
+ * creating a {@link FreehalFile} object using {@link #createInstance(String)}, this
  * map is used to determine the correct implementation. <br />
  * <br />
  * 
  * You must provide a standard implementation which is added with
  * {@link #ALL_PROTOCOLS} as protocol string. The standard implementation is
- * used if the path given to {@link #getFile(String)} doesn't contain a protocol
+ * used if the path given to {@link #createInstance(String)} doesn't contain a protocol
  * (like {@code "/home/username/"} instead of {@code "file:///home/username/"})
  * or if the protocol is invalid or unknown. <br />
  * <br />
@@ -47,28 +47,18 @@ public class FreehalFiles {
 	/**
 	 * Use this if you'd like to add a {@link FreehalFile} implementation for
 	 * all protocols or for the case that no protocol is specified using
-	 * {@link #add(String, FreehalFile)}.
+	 * {@link #addImplementation(String, FreehalFile)}.
 	 */
 	public static final String ALL_PROTOCOLS = "all";
 
 	private static final String NO_GENERAL_IMPL_FOUND = "There must be at least one "
 			+ "FreehalFile implementation " + "which is registered for all protocols!";
-	private static Map<String, Factory<FreehalFile, String>> impls = new HashMap<String, Factory<FreehalFile, String>>();
+	private static Map<String, FreehalFiles.Factory> impls = new HashMap<String, FreehalFiles.Factory>();
 
 	/**
 	 * Never used.
 	 */
 	private FreehalFiles() {}
-
-	/**
-	 * Returns a map of the currently used {@link FreehalFile} implementations
-	 * (values) and the corresponding protocols (keys).
-	 * 
-	 * @return the currently used {@link FreehalFile} implementations
-	 */
-	public static Map<String, Factory<FreehalFile, String>> getImpls() {
-		return impls;
-	}
 
 	/**
 	 * Add the given {@link FreehalFile} implementation for the given protocol
@@ -79,12 +69,12 @@ public class FreehalFiles {
 	 * @param fileImpl
 	 *        the {@link FreehalFile} implementation
 	 */
-	public static void add(String protocol, Factory<FreehalFile, String> fileImpl) {
+	public static void addImplementation(String protocol, FreehalFiles.Factory fileImpl) {
 		if (fileImpl != null)
 			FreehalFiles.impls.put(protocol, fileImpl);
 	}
 
-	private static Factory<FreehalFile, String> getImpl(String protocol, String path) {
+	private static FreehalFiles.Factory getFactory(String protocol, String path) {
 		if (!impls.containsKey(ALL_PROTOCOLS))
 			throw new IllegalArgumentException(NO_GENERAL_IMPL_FOUND);
 
@@ -107,12 +97,12 @@ public class FreehalFiles {
 	 *        the path (without any protocol prefix!)
 	 * @return a new object implementing {@link FreehalFile}
 	 */
-	public static FreehalFile getFile(String path) {
+	public static FreehalFileImpl createInstance(String path) {
 		if (path.contains("://")) {
 			String[] p = path.split("[:][/][/]", 2);
-			return FreehalFiles.getFile(p[0], p[1]);
+			return FreehalFiles.createInstance(p[0], p[1]);
 		} else {
-			return FreehalFiles.getFile("all", path);
+			return FreehalFiles.createInstance("all", path);
 		}
 	}
 
@@ -127,9 +117,13 @@ public class FreehalFiles {
 	 *        the path (without any protocol prefix!)
 	 * @return a new object implementing {@link FreehalFile}
 	 */
-	public static FreehalFile getFile(String protocol, String path) {
+	public static FreehalFileImpl createInstance(String protocol, String path) {
 		path = StringUtils.replace(path, "\\", "/");
-		final Factory<FreehalFile, String> impl = FreehalFiles.getImpl(protocol, path);
+		final FreehalFiles.Factory impl = FreehalFiles.getFactory(protocol, path);
 		return impl.newInstance(path);
+	}
+
+	public interface Factory {
+		FreehalFileImpl newInstance(String path);
 	}
 }

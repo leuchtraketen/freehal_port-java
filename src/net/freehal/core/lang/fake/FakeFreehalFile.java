@@ -4,8 +4,9 @@ import java.io.File;
 import java.util.Collections;
 
 import net.freehal.core.util.AbstractFreehalFile;
-import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
+import net.freehal.core.util.FreehalFileImpl;
+import net.freehal.core.util.FreehalFiles;
 
 public class FakeFreehalFile extends AbstractFreehalFile {
 
@@ -13,11 +14,11 @@ public class FakeFreehalFile extends AbstractFreehalFile {
 		super(file);
 	}
 
-	public static Factory<FreehalFile, String> newFactory() {
-		return new Factory<FreehalFile, String>() {
+	public static FreehalFiles.Factory newFactory() {
+		return new net.freehal.core.util.FreehalFiles.Factory() {
 			@Override
-			public FreehalFile newInstance(String b) {
-				return new FakeFreehalFile(new File(b));
+			public FreehalFileImpl newInstance(String path) {
+				return new FakeFreehalFile(new File(path));
 			}
 		};
 	}
@@ -54,12 +55,12 @@ public class FakeFreehalFile extends AbstractFreehalFile {
 
 	@Override
 	public FreehalFile getChild(String path) {
-		return this;
+		return new FreehalFile(this);
 	}
 
 	@Override
-	public FreehalFile getChild(FreehalFile path) {
-		return this;
+	public FreehalFile getChild(FreehalFileImpl path) {
+		return new FreehalFile(this);
 	}
 
 	@Override

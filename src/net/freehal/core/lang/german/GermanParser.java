@@ -93,7 +93,7 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "\\s*[?]", " ?");
 		str = RegexUtils.ireplace(str, "^[und]<ws>[,]<ws>", "");
 
-		if (Languages.getLanguage().isCode("en")) {
+		if (Languages.getCurrentLanguage().isCode("en")) {
 			if (str.length() > 7) {
 				str = RegexUtils.ireplace(str, "(^|\\s)no(\\s|$)", "$1not a$2");
 			}
@@ -270,7 +270,7 @@ public class GermanParser extends Parser {
 
 		str = RegexUtils.ireplace(str, " hab ", " habe ");
 
-		if (!RegexUtils.find(str, "(heiss|name)") && Languages.getLanguage().isCode("de")
+		if (!RegexUtils.find(str, "(heiss|name)") && Languages.getCurrentLanguage().isCode("de")
 				&& str.length() > 20) {
 			str = RegexUtils.ireplace(str, " FreeHAL(.?.?.?.?)$", " $1");
 		}
@@ -922,7 +922,7 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "(^|\\s)?k(ein|eine|einen|einer|einem)\\s", "$1nicht $2 ");
 		str = RegexUtils.ireplace(str, "\\sim\\s", " in dem ");
 		str = RegexUtils.ireplace(str, "\\sbeim\\s", " bei dem ");
-		if (Languages.getLanguage().isCode("de")) {
+		if (Languages.getCurrentLanguage().isCode("de")) {
 			str = RegexUtils.ireplace(str, "\\sam\\s([a-zA-Z]*?)ten($|\\s|[,])", " am_$1ten{{{adj}}} $2 ");
 			str = RegexUtils.ireplace(str, "\\sam\\s", " an dem ");
 			str = RegexUtils.ireplace(str, "\\sins\\s", " in das ");
@@ -1073,7 +1073,7 @@ public class GermanParser extends Parser {
 
 		str = RegexUtils.ireplace(str, "(^|\\s)tobias schulz", "$1_tobias_schulz_");
 
-		if (Languages.getLanguage().isCode("de")) {
+		if (Languages.getCurrentLanguage().isCode("de")) {
 			str = RegexUtils.ireplace(str, "(^|\\s)im jahre (\\d\\d\\d\\d) ", "$1$2 ");
 			str = RegexUtils.ireplace(str, "(^|\\s)im jahr (\\d\\d\\d\\d) ", "$1$2 ");
 			if (RegexUtils.find(str, "\\d\\d\\d\\d")) {

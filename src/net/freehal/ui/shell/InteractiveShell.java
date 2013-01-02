@@ -69,7 +69,7 @@ public class InteractiveShell {
 	 */
 	public void loop(InputStream in, PrintStream out) throws IOException {
 		// initialize data
-		DataInitializer.initializeData(Collections.<String> emptySet());
+		DataInitializer.initializeLanguageSpecificData(Collections.<String> emptySet());
 
 		ConsoleReader reader = new ConsoleReader();
 		reader.setBellEnabled(false);

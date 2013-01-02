@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import net.freehal.core.lang.ImplicitLanguageImplMap;
+import net.freehal.core.lang.LanguageImplMap;
+import net.freehal.core.util.Factory;
+
 /**
  * An utility class for holding the currently used {@link FactProvider}s.
  * 
@@ -12,11 +16,13 @@ import java.util.Set;
  */
 public class FactProviders {
 
-	private static CompositeFactProvider provider = null;
-
-	static {
-		provider = new CompositeFactProvider();
-	}
+	private static LanguageImplMap<CompositeFactProvider> provider = new ImplicitLanguageImplMap<CompositeFactProvider>(
+			new Factory<CompositeFactProvider>() {
+				@Override
+				public CompositeFactProvider newInstance(String... params) {
+					return new CompositeFactProvider();
+				}
+			});
 
 	private FactProviders() {}
 
@@ -27,7 +33,7 @@ public class FactProviders {
 	 *         interface
 	 */
 	public static FactProvider getFactProvider() {
-		return provider;
+		return provider.getCurrent();
 	}
 
 	/**
@@ -37,10 +43,13 @@ public class FactProviders {
 	 *        the synonym provider to set
 	 */
 	public static void addFactProvider(FactProvider provider) {
-		FactProviders.provider.add(provider);
+		if (!FactProviders.provider.hasCurrent()) {
+			FactProviders.provider.setCurrent(new CompositeFactProvider());
+		}
+		FactProviders.provider.getCurrent().add(provider);
 	}
 
-	private static class CompositeFactProvider implements FactProvider {
+	public static class CompositeFactProvider implements FactProvider {
 
 		List<FactProvider> providers = new ArrayList<FactProvider>();
 

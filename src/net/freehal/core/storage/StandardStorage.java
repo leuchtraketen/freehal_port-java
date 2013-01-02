@@ -21,7 +21,6 @@ import java.io.File;
 import net.freehal.core.lang.Language;
 import net.freehal.core.lang.Languages;
 import net.freehal.core.util.FreehalFile;
-import net.freehal.core.util.FreehalFiles;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.SystemUtils;
 
@@ -29,7 +28,7 @@ import net.freehal.core.util.SystemUtils;
  * A standard directory structure; the root directory is given to the
  * constructor, and the language and cache directories are called
  * {@code "lang_xy"} and {@code "cache_xy"} while {@code xy} is the current
- * language code from {@link Languages#getLanguage()} and
+ * language code from {@link Languages#getCurrentLanguage()} and
  * {@link Language#getCode()}.
  * 
  * @author "Tobias Schulz"
@@ -45,7 +44,7 @@ public class StandardStorage implements Storage {
 	 */
 	public StandardStorage(File path) {
 		check(path);
-		this.path = FreehalFiles.getFile(path.getPath());
+		this.path = new FreehalFile(path.getPath());
 	}
 
 	private void check(File path) {
@@ -80,7 +79,7 @@ public class StandardStorage implements Storage {
 	 */
 	public StandardStorage(String path) {
 		check(new File(path));
-		this.path = FreehalFiles.getFile(path);
+		this.path = new FreehalFile(path);
 	}
 
 	@Override
@@ -90,11 +89,11 @@ public class StandardStorage implements Storage {
 
 	@Override
 	public FreehalFile getLanguageDirectory() {
-		return path.getChild("lang_" + Languages.getLanguage().getCode());
+		return path.getChild("lang_" + Languages.getCurrentLanguage().getCode());
 	}
 
 	@Override
 	public FreehalFile getCacheDirectory() {
-		return path.getChild("cache_" + Languages.getLanguage().getCode());
+		return path.getChild("cache_" + Languages.getCurrentLanguage().getCode());
 	}
 }

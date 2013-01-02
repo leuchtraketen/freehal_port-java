@@ -27,174 +27,141 @@ import java.io.File;
  * 
  * @author "Tobias Schulz"
  */
-public interface FreehalFile extends Comparable<FreehalFile> {
+public class FreehalFile implements FreehalFileImpl {
 
-	/**
-	 * Creates a new freehal file instance from a file which is a child of this
-	 * freehal file instance (which must be a directory to be a parent file!)
-	 * 
-	 * @param path
-	 *        the path
-	 * @return a freehal file object
-	 */
-	public FreehalFile getChild(String path);
+	private FreehalFileImpl impl = null;
 
-	/**
-	 * Creates a new freehal file instance from a file which is a child of this
-	 * freehal file instance (which must be a directory to be a parent file!)
-	 * 
-	 * @param path
-	 *        the path
-	 * @return a freehal file object
-	 */
-	public FreehalFile getChild(FreehalFile path);
+	public FreehalFile(FreehalFileImpl other) {
+		if (impl instanceof FreehalFile)
+			this.impl = ((FreehalFile) other).impl;
+		else
+			this.impl = other;
+	}
 
-	/**
-	 * Get a {@link java.io.File} from the java standard library which has the
-	 * same path as this file.
-	 * 
-	 * @return return an instance of {@link java.io.File}
-	 */
-	public File getFile();
+	public FreehalFile(File path) {
+		this.impl = FreehalFiles.createInstance("file", path.getPath());
+	}
 
-	/**
-	 * Tests whether this file's path is absolute.
-	 * 
-	 * @see java.io.File#isAbsolute()
-	 * @return {@code true} if this file's path is absolute, {@code false}
-	 *         otherwise
-	 */
-	public boolean isAbsolute();
+	public FreehalFile(String path) {
+		this.impl = FreehalFiles.createInstance(path);
+	}
 
-	/**
-	 * Returns this file's absolute path string.
-	 * 
-	 * @see #isAbsolute()
-	 * @see java.io.File#getAbsolutePath()
-	 * @return the pathname string
-	 */
-	public String getAbsolutePath();
+	public FreehalFile(String protocol, String path) {
+		this.impl = FreehalFiles.createInstance(protocol, path);
+	}
 
-	/**
-	 * Returns this file's path string as it as stored in this object, so it may
-	 * be relative.
-	 * 
-	 * @see java.io.File#getPath()
-	 * @return the pathname string
-	 */
-	public String getPath();
+	@Override
+	public FreehalFile getChild(String path) {
+		return impl.getChild(path);
+	}
 
-	/**
-	 * Returns the name of this file or directory.
-	 * 
-	 * @see java.io.File#getName()
-	 * @return the name of this file or directory
-	 */
-	public String getName();
+	@Override
+	public FreehalFile getChild(FreehalFileImpl path) {
+		return impl.getChild(path);
+	}
 
-	/**
-	 * Tests whether this freehal file is a normal file.
-	 * 
-	 * @see java.io.File#isFile()
-	 * @return {@code true} if and only if this freehal file exists and is a
-	 *         normal file; {@code false} otherwise
-	 */
-	public boolean isFile();
+	@Override
+	public File getFile() {
+		return impl.getFile();
+	}
 
-	/**
-	 * Tests whether this freehal file is a directory.
-	 * 
-	 * @see java.io.File#isDirectory()
-	 * @return {@code true} if and only if this freehal file exists and is a
-	 *         directory; {@code false} otherwise
-	 */
-	public boolean isDirectory();
+	@Override
+	public boolean isAbsolute() {
+		return impl.isAbsolute();
+	}
 
-	/**
-	 * Returns an array of freehal files contained in the directory represented
-	 * by this freehal file.
-	 * 
-	 * @see java.io.File#listFiles()
-	 * @return An array of freehal files in the directory represented by this
-	 *         freehal file. The array will be empty if the directory is empty,
-	 *         or if this freehal file is no directory, or if an I/O error
-	 *         occurs.
-	 */
-	public FreehalFile[] listFiles();
+	@Override
+	public String getAbsolutePath() {
+		return impl.getAbsolutePath();
+	}
 
-	/**
-	 * Returns the length of this freehal file.
-	 * 
-	 * @see java.io.File#length()
-	 * @return the length in bytes, or 0L if the file does not exist
-	 */
-	public long length();
+	@Override
+	public String getPath() {
+		return impl.getPath();
+	}
 
-	/**
-	 * Creates the directory named by this freehal file, including any necessary
-	 * but nonexistent parent directories.
-	 * 
-	 * @return {@code true} if and only if the directory was created, along with
-	 *         all necessary parent directories; {@code false} otherwise
-	 */
-	public boolean mkdirs();
+	@Override
+	public String getName() {
+		return impl.getName();
+	}
 
-	/**
-	 * Deletes this file or directory.
-	 * 
-	 * @return {@code true} if and only if the file or directory is successfully
-	 *         deleted; {@code false} otherwise
-	 */
-	public boolean delete();
+	@Override
+	public boolean isFile() {
+		return impl.isFile();
+	}
 
-	/**
-	 * Returns a unique string which is - in most cases - the path name of this
-	 * freehal file instance.
-	 * 
-	 * @return a string
-	 */
-	public String toString();
+	@Override
+	public boolean isDirectory() {
+		return impl.isDirectory();
+	}
 
-	/**
-	 * Returns an string {@link java.lang.Iterable} which iterates over all
-	 * lines from the given file.
-	 * 
-	 * @return the iterator
-	 */
-	public Iterable<String> readLines();
+	@Override
+	public FreehalFile[] listFiles() {
+		FreehalFileImpl[] childrenImpls = impl.listFiles();
+		FreehalFile[] children = new FreehalFile[childrenImpls.length];
+		int i = 0;
+		for (FreehalFileImpl childrenImpl : childrenImpls) {
+			children[i++] = new FreehalFile(childrenImpl);
+		}
+		return children;
+	}
 
-	/**
-	 * Returns the content of the given file as a single string.
-	 * 
-	 * @return the iterator
-	 */
-	public String read();
+	@Override
+	public long length() {
+		return impl.length();
+	}
 
-	/**
-	 * Appends the given string to the end of the given file.
-	 * 
-	 * @param s
-	 *        the string to append
-	 * @return the iterator
-	 */
-	public void append(String s);
+	@Override
+	public boolean mkdirs() {
+		return impl.mkdirs();
+	}
 
-	/**
-	 * Writes the given string into the given file. If the file already exists,
-	 * it is overridden.
-	 * 
-	 * @param s
-	 *        the string to write
-	 * @return the iterator
-	 */
-	public void write(String s);
+	@Override
+	public boolean delete() {
+		return impl.delete();
+	}
 
-	/**
-	 * Returns the amount of lines in this file.
-	 * 
-	 * @return the count of files
-	 */
-	public int countLines();
+	@Override
+	public String toString() {
+		return impl.toString();
+	}
 
-	public void touch();
+	@Override
+	public Iterable<String> readLines() {
+		return impl.readLines();
+	}
+
+	@Override
+	public String read() {
+		return impl.read();
+	}
+
+	@Override
+	public void append(String s) {
+		impl.append(s);
+	}
+
+	@Override
+	public void write(String s) {
+		impl.write(s);
+	}
+
+	@Override
+	public int countLines() {
+		return impl.countLines();
+	}
+
+	@Override
+	public void touch() {
+		impl.touch();
+	}
+
+	@Override
+	public int compareTo(FreehalFileImpl o) {
+		return impl.compareTo(o);
+	}
+
+	public FreehalFileImpl getImpl() {
+		return impl;
+	}
 }

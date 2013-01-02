@@ -18,6 +18,8 @@ package net.freehal.core.grammar;
 
 import java.util.List;
 
+import net.freehal.core.lang.ExplicitLanguageImplMap;
+import net.freehal.core.lang.LanguageImplMap;
 import net.freehal.core.lang.fake.FakeGrammar;
 import net.freehal.core.util.MultiMap;
 import net.freehal.core.xml.Word;
@@ -30,11 +32,7 @@ import net.freehal.core.xml.XmlUtils.XmlStreamIterator;
  * @author "Tobias Schulz"
  */
 public class Grammars {
-	private static Grammar grammar = null;
-
-	static {
-		grammar = new FakeGrammar();
-	}
+	public static LanguageImplMap<Grammar> grammar = new ExplicitLanguageImplMap<Grammar>(new FakeGrammar());
 
 	/**
 	 * Returns the current grammar.
@@ -42,7 +40,7 @@ public class Grammars {
 	 * @return an instance of {@link Grammar}
 	 */
 	public static Grammar getGrammar() {
-		return grammar;
+		return grammar.getCurrent();
 	}
 
 	/**
@@ -52,7 +50,7 @@ public class Grammars {
 	 *        the grammar to set
 	 */
 	public static void setGrammar(Grammar grammar) {
-		Grammars.grammar = grammar;
+		Grammars.grammar.setCurrent(grammar);
 	}
 
 	/**

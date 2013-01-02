@@ -23,7 +23,7 @@ public class LanguageSpecific {
 	}
 
 	@SuppressWarnings("unchecked")
-	private static <T> T chooseByInterface(final String lang, Class<T> interfaceType) {
+	private static <T> T chooseByInterface(String lang, Class<T> interfaceType) {
 
 		Set<Class<?>> pool = defaults.get(lang);
 
@@ -35,8 +35,8 @@ public class LanguageSpecific {
 			}
 		}
 
-		LogUtils.e("Error! no implementation of interface " + interfaceType.getName() + " found for language [" + lang
-				+ "]");
+		LogUtils.e("Error! no implementation of interface " + interfaceType.getName()
+				+ " found for language [" + lang + "]");
 		LogUtils.e("Classes associated with that language:");
 		for (Class<?> type : pool) {
 			LogUtils.e(" - " + type.getName());
@@ -45,8 +45,12 @@ public class LanguageSpecific {
 		return null;
 	}
 
-	public static <T> T chooseByLanguage(Class<T> interfaceType) {
-		final String lang = StringUtils.substringAfterLast(Languages.getLanguage().getClass().getName(), ".");
+	public static <T> T chooseByCurrentLanguage(Class<T> interfaceType) {
+		return chooseByLanguage(Languages.getCurrentLanguage(), interfaceType);
+	}
+
+	public static <T> T chooseByLanguage(Language language, Class<T> interfaceType) {
+		final String lang = StringUtils.substringAfterLast(language.getClass().getName(), ".");
 		T obj = chooseByInterface(lang, interfaceType);
 		if (obj == null) {
 			obj = chooseByInterface("null", interfaceType);
