@@ -155,19 +155,22 @@ public class Storages {
 	}
 
 	private static class IllegalStorage implements Storage {
+		
+		private static final String ERROR = "No Storage class set!"; 
+		
 		@Override
 		public FreehalFile getLanguageDirectory() {
-			throw new UnsupportedOperationException();
+			throw new UnsupportedOperationException(ERROR);
 		}
 
 		@Override
 		public FreehalFile getPath() {
-			throw new UnsupportedOperationException();
+			throw new UnsupportedOperationException(ERROR);
 		}
 
 		@Override
 		public FreehalFile getCacheDirectory() {
-			throw new UnsupportedOperationException();
+			throw new UnsupportedOperationException(ERROR);
 		}
 	}
 }

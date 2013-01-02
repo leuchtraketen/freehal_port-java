@@ -22,8 +22,7 @@ import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.LogUtilsImpl;
 import net.freehal.core.util.SystemUtils;
-
-import org.apache.commons.cli.Options;
+import net.freehal.ui.common.DataInitializer;
 
 public class InteractiveShell {
 
@@ -68,7 +67,7 @@ public class InteractiveShell {
 	 * @throws IOException
 	 *         when an IO error occurs
 	 */
-	public void loop(Options options, InputStream in, PrintStream out) throws IOException {
+	public void loop(InputStream in, PrintStream out) throws IOException {
 		// initialize data
 		DataInitializer.initializeData(Collections.<String> emptySet());
 

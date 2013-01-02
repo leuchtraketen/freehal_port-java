@@ -1,4 +1,4 @@
-package net.freehal.ui.shell;
+package net.freehal.core.lang.fake;
 
 import java.io.File;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import net.freehal.core.util.AbstractFreehalFile;
 import net.freehal.core.util.Factory;
 import net.freehal.core.util.FreehalFile;
 
-class FakeFreehalFile extends AbstractFreehalFile {
+public class FakeFreehalFile extends AbstractFreehalFile {
 
 	private FakeFreehalFile(File file) {
 		super(file);

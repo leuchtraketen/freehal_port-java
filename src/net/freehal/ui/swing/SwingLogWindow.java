@@ -195,4 +195,5 @@ public class SwingLogWindow extends JFrame implements LogDestination, ExitListen
 			e.printStackTrace();
 		}
 	}
+
 }

@@ -14,9 +14,8 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/gpl.html>.
  ******************************************************************************/
-package net.freehal.ui.shell;
+package net.freehal.ui.common;
 
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collections;
 
@@ -24,7 +23,6 @@ import net.freehal.core.lang.Language;
 import net.freehal.core.lang.english.EnglishLanguage;
 import net.freehal.core.lang.german.GermanLanguage;
 import net.freehal.core.util.ArrayUtils;
-import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.SystemUtils;
 
 import org.apache.commons.cli.CommandLine;
@@ -43,34 +41,50 @@ import org.apache.commons.cli.ParseException;
  */
 public class Main {
 
-	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
+		new Main().run(args);
+	}
+
+	@SuppressWarnings("static-access")
+	public void run(String[] args) {
 		Options options = new Options();
+
+		// general options
 		options.addOption("h", "help", false, "display this help and exit");
 		options.addOption("v", "version", false, "output version information and exit");
 
+		// options related to the directory structure
 		options.addOption(OptionBuilder.withLongOpt("base")
 				.withDescription("the base directory for language data and caches").hasArg()
 				.withArgName("DIRECTORY").create("b"));
-		options.addOption(OptionBuilder.withLongOpt("input")
-				.withDescription("a statement or question to answer").hasArg().withArgName("TEXT")
-				.create("i"));
-		options.addOption(OptionBuilder.withLongOpt("shell")
-				.withDescription("opens an interactive shell for answering").create("s"));
 		options.addOption(OptionBuilder.withLongOpt("language")
 				.withDescription("the natual language TEXT is written in").hasArg().withArgName("LANG")
 				.create("l"));
+
+		// interactive or non-interactive?
+		options.addOption(OptionBuilder.withLongOpt("input")
+				.withDescription("a statement or question to answer").hasArg().withArgName("TEXT")
+				.create("i"));
+
+		// options for logging
 		options.addOption(OptionBuilder.withLongOpt("log-file").withDescription("write logs to a file")
-				.hasArg().withArgName("FILE").create());
-		options.addOption(OptionBuilder
-				.withLongOpt("log-window")
-				.withDescription(
-						"display a window to show logs " + "(default on Microsoft Windows and Mac OS X)")
 				.hasArg().withArgName("FILE").create());
 		options.addOption(OptionBuilder.withLongOpt("log-terminal")
 				.withDescription("display logs in terminal " + "(default on Linux and Unix)").hasArg()
 				.withArgName("FILE").create());
 		options.addOption("t", "think", false, "do some reasoning processes");
+
+		// optional extensions: interactive shell?
+		if (Extensions.hasExtension("shell")) {
+			Extension shell = (Extension) Extensions.getExtension("shell");
+			shell.addOptions(options);
+		}
+
+		// optional extensions: swing log window?
+		if (Extensions.hasExtension("swing")) {
+			Extension swing = (Extension) Extensions.getExtension("swing");
+			swing.addOptions(options);
+		}
 
 		if (args.length == 0) {
 			printHelp(options);
@@ -92,42 +106,19 @@ public class Main {
 		SystemUtils.exit(0);
 	}
 
-	private static String getStringOption(CommandLine line, String option, String defaultValue) {
-		if (line.hasOption(option)) {
-			return line.getOptionValue(option);
-		} else {
-			return defaultValue;
-		}
-	}
-
-	private static boolean getBooleanOption(CommandLine line, String option, boolean defaultValue) {
-		if (line.hasOption(option)) {
-			final String value = line.getOptionValue(option).toLowerCase();
-			if (value.contains("y") || value.contains("1"))
-				return true;
-			else
-				return false;
-		} else {
-			return defaultValue;
-		}
-	}
-
-	private static void parse(CommandLine line, Options options) {
+	private void parse(CommandLine line, Options options) {
 		if (line.hasOption("help"))
 			printHelp(options);
 
 		// default base directory
-		final String base = getStringOption(line, "base", ".");
+		final String base = CommandLineUtils.getStringOption(line, "base", ".");
 		// default log file
-		final String logfile = getStringOption(line, "log-file", base + "/stdout.txt");
-		// show a swing log window? it's default on windows systems...
-		final boolean showLogWindow = getBooleanOption(line, "log-window", SystemUtils.isWindows()
-				|| SystemUtils.isMacOSX());
+		final String logfile = CommandLineUtils.getStringOption(line, "log-file", base + "/stdout.txt");
 		// show logs in terminal? it's default on unix systems...
-		final boolean showLogTerminal = getBooleanOption(line, "log-terminal", !SystemUtils.isWindows()
-				&& !SystemUtils.isMacOSX());
+		final boolean showLogTerminal = CommandLineUtils.getBooleanOption(line, "log-terminal",
+				!Extensions.hasExtension("swing") || (!SystemUtils.isWindows() && !SystemUtils.isMacOSX()));
 
-		DataInitializer.initializeLogging(base, logfile, showLogTerminal, showLogWindow);
+		DataInitializer.initializeLogging(base, logfile, showLogTerminal);
 		DataInitializer.initializeFilesystem(base);
 
 		Language language = new GermanLanguage(); // default language
@@ -142,18 +133,19 @@ public class Main {
 		}
 		DataInitializer.initializeLanguage(language);
 
+		if (Extensions.hasExtension("swing")) {
+			Extension swing = (Extension) Extensions.getExtension("swing");
+			swing.parseCommandLine(line);
+		}
+
+		if (Extensions.hasExtension("shell")) {
+			Extension shell = (Extension) Extensions.getExtension("shell");
+			shell.parseCommandLine(line);
+		}
+
 		if (line.hasOption("input")) {
 			String[] args = { line.getOptionValue("input") };
 			processNonInteractiveInput(args);
-		}
-
-		if (line.hasOption("shell")) {
-			try {
-				InteractiveShell shell = new InteractiveShell();
-				shell.loop(options, System.in, System.out);
-			} catch (IOException ex) {
-				LogUtils.e(ex);
-			}
 		}
 
 		if (line.hasOption("think")) {
@@ -161,7 +153,7 @@ public class Main {
 		}
 	}
 
-	private static void printHelp(Options options) {
+	private void printHelp(Options options) {
 		final String header = "FreeHAL is a self-learning conversation simulator, "
 				+ "an artificial intelligence " + "which uses semantic nets to organize its knowledge.";
 		final String footer = "Please report bugs to <info@freehal.net>.";
@@ -180,7 +172,7 @@ public class Main {
 		formatter.printWrapped(out, width, footer);
 	}
 
-	public static void processNonInteractiveInput(String[] sentences) {
+	public void processNonInteractiveInput(String[] sentences) {
 		// initialize data
 		DataInitializer.initializeData(Collections.<String> emptySet());
 
@@ -191,7 +183,7 @@ public class Main {
 		}
 	}
 
-	public static void think() {
+	public void think() {
 		DataInitializer.initializeData(ArrayUtils.asSet(new String[] { "reasoning" }));
 	}
 }

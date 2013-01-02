@@ -1,4 +1,4 @@
-package net.freehal.ui.shell;
+package net.freehal.ui.common;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,8 @@ import net.freehal.core.lang.Language;
 import net.freehal.core.lang.LanguageSpecific;
 import net.freehal.core.lang.Languages;
 import net.freehal.core.lang.english.EnglishLanguage;
+import net.freehal.core.lang.fake.FakeAnswerProvider;
+import net.freehal.core.lang.fake.FakeFreehalFile;
 import net.freehal.core.lang.fake.FakeLanguage;
 import net.freehal.core.lang.german.GermanLanguage;
 import net.freehal.core.logs.FilteredLog;
@@ -63,7 +65,7 @@ import net.freehal.plugin.wikipedia.WikipediaPlugin;
 
 public class DataInitializer {
 
-	protected static void initializeTerminalLogging(StandardLogUtils log) {
+	public static void initializeTerminalLogging(StandardLogUtils log) {
 		// the Linux/Unix implementation uses ANSI colors
 		LogDestination console = null;
 		switch (SystemUtils.getOperatingSystem()) {
@@ -86,15 +88,13 @@ public class DataInitializer {
 		log.addDestination(consoleFiltered);
 	}
 
-	protected static void initializeFileLogging(StandardLogUtils log, String logfile) {
+	public static void initializeFileLogging(StandardLogUtils log, String logfile) {
 		log.addDestination(new UncoloredLog(new FileLog(logfile)));
 	}
 
-	protected static void initializeLogging(String baseDirectory, String logfile, boolean showLogTerminal,
-			boolean showLogWindow) {
+	public static void initializeLogging(String baseDirectory, String logfile, boolean showLogTerminal) {
 		// how and where to print the log.
 		StandardLogUtils logger = new StandardLogUtils();
-		LogUtils.set(logger);
 
 		// show logs in terminal?
 		if (showLogTerminal) {
@@ -106,22 +106,10 @@ public class DataInitializer {
 			initializeFileLogging(logger, logfile);
 		}
 
-		// show logs in a swing window?
-		if (showLogWindow) {
-			final String className = "net.freehal.ui.swing.SwingLogWindow";
-			try {
-				Class<?> classType = Class.forName(className);
-				logger.addDestination((LogDestination) classType.newInstance());
-			} catch (Exception ex) {
-				if (!showLogTerminal) {
-					initializeTerminalLogging(logger);
-				}
-				LogUtils.e(ex);
-			}
-		}
+		LogUtils.set(logger);
 	}
 
-	protected static void initializeFilesystem(String baseDirectory) {
+	public static void initializeFilesystem(String baseDirectory) {
 		// set the virtual file implementations
 		FreehalFiles.add(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
 		FreehalFiles.add("sqlite", FakeFreehalFile.newFactory());
@@ -135,7 +123,7 @@ public class DataInitializer {
 		Storages.setStorage(new StandardStorage(baseDirectory));
 	}
 
-	protected static void initializeLanguage(Language language) {
+	public static void initializeLanguage(Language language) {
 		// initialize the languages
 		FakeLanguage.initializeDefaults();
 		GermanLanguage.initializeDefaults();
@@ -145,7 +133,7 @@ public class DataInitializer {
 		Languages.setLanguage(language);
 	}
 
-	protected static void initializeData(Set<String> params) {
+	public static void initializeData(Set<String> params) {
 		// now language and filesystem stuff are ready!
 		LogUtils.startProgress("init");
 
