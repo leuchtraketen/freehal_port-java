@@ -13,7 +13,7 @@ public class Loader implements Extension {
 	private static final String DEFAULT_SERVER = "talk.google.com";
 	private static final int DEFAULT_PORT = 5222;
 
-	private XmppServer server;
+	private XmppConnection server;
 
 	@SuppressWarnings("static-access")
 	@Override
@@ -38,7 +38,7 @@ public class Loader implements Extension {
 			String host = config.getStringOption("xmpp-host", DEFAULT_SERVER);
 			int port = config.getIntegerOption("xmpp-port", DEFAULT_PORT);
 
-			server = new XmppServer(host, port, user, password);
+			server = new XmppConnection(host, port, user, password);
 			Extensions.registerMainLoop(server);
 			
 		} else if (config.hasOption("xmpp-user") || config.hasOption("xmpp-password")

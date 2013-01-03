@@ -8,6 +8,7 @@ import java.util.List;
 public class SystemUtils {
 
 	private static List<ExitListener> exitListeners;
+	private static boolean exitListenersExecuted;
 	private static String USERNAME;
 	private static String EMAIL_ADDR;
 	private static String HOSTNAME;
@@ -18,6 +19,7 @@ public class SystemUtils {
 
 	static {
 		exitListeners = new ArrayList<ExitListener>();
+		exitListenersExecuted = false;
 
 		try {
 			HOSTNAME = InetAddress.getLocalHost().getHostName();
@@ -27,13 +29,23 @@ public class SystemUtils {
 
 		USERNAME = System.getProperty("user.name");
 		EMAIL_ADDR = USERNAME + "@" + HOSTNAME;
+
+		Runtime.getRuntime().addShutdownHook(new Thread(new ShutdownHook()));
 	}
 
 	public static void exit(int status) {
-		for (ExitListener e : exitListeners) {
-			e.onExit(status);
-		}
+		runExitListeners(status);
 		System.exit(status);
+	}
+
+	private static void runExitListeners(int status) {
+		if (!exitListenersExecuted) {
+			for (ExitListener e : exitListeners) {
+				LogUtils.d("terminating: " + e);
+				e.onExit(status);
+			}
+			exitListenersExecuted = true;
+		}
 	}
 
 	public static void destructOnExit(ExitListener exitListener) {
@@ -94,6 +106,19 @@ public class SystemUtils {
 			Thread.sleep(millis);
 		} catch (InterruptedException e) {
 			// ignore
+		}
+	}
+
+	public static class ShutdownHook implements Runnable {
+		@Override
+		public void run() {
+			if (exitListenersExecuted) {
+				LogUtils.w("Shutting down gracefully.");
+			} else {
+				LogUtils.w("\nAaarggh, a user is trying to interrupt me!!");
+				LogUtils.w("(throw garlic at user, say `shoo, go away')");
+				runExitListeners(0);
+			}
 		}
 	}
 }

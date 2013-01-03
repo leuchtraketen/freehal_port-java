@@ -36,9 +36,11 @@ public class ColoredLog implements LogDestination {
 	}
 
 	private String formatLine(String line) {
+		line = RegexUtils.replace(line, "([\\[][a-zA-Z0-9 _-]+[\\]])",
+				colors.color("$1", Color.YELLOW, Modifier.BOLD));
 		line = RegexUtils.replace(line, "([\"][^\"]+[\"])", colors.color("$1", Color.YELLOW));
 		line = RegexUtils.replace(line, "([\'][^\']+[\'])", colors.color("$1", Color.BLUE));
-		line = RegexUtils.replace(line, "[{]([^\']+)[}]", "{"+colors.color("$1", Color.BLUE)+"}");
+		line = RegexUtils.replace(line, "[{]([^\']+)[}]", "{" + colors.color("$1", Color.BLUE) + "}");
 		return line;
 	}
 

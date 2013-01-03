@@ -168,7 +168,7 @@ public class Main {
 		if (line.hasOption("think")) {
 			think();
 		}
-
+		
 		Extensions.runLoops();
 	}
 
@@ -176,8 +176,8 @@ public class Main {
 		final String header = "FreeHAL is a self-learning conversation simulator, "
 				+ "an artificial intelligence " + "which uses semantic nets to organize its knowledge.";
 		final String footer = "Please report bugs to <info@freehal.net>.";
-		final int width = 80;
-		final int descPadding = 10;
+		final int width = 120;
+		final int descPadding = 5;
 		final PrintWriter out = new PrintWriter(System.out, true);
 
 		HelpFormatter formatter = new HelpFormatter();
