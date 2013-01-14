@@ -38,7 +38,7 @@ public class SystemUtils {
 		System.exit(status);
 	}
 
-	private static void runExitListeners(int status) {
+	public static void runExitListeners(int status) {
 		if (!exitListenersExecuted) {
 			for (ExitListener e : exitListeners) {
 				LogUtils.d("terminating: " + e);

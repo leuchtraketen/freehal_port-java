@@ -11,6 +11,7 @@ import net.freehal.compat.sunjava.StandardFreehalFile;
 import net.freehal.core.storage.KeyValueDatabase;
 import net.freehal.core.storage.KeyValueTransaction;
 import net.freehal.core.storage.Serializer;
+import net.freehal.core.util.ExitListener;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.SystemUtils;
@@ -25,7 +26,7 @@ import com.sleepycat.je.EnvironmentConfig;
 import com.sleepycat.je.OperationStatus;
 import com.sleepycat.je.Transaction;
 
-public class BerkeleyDb<T> implements KeyValueDatabase<T> {
+public class BerkeleyDb<T> implements KeyValueDatabase<T>, ExitListener {
 
 	private Environment env;
 	private Serializer<T> serializer;
@@ -33,6 +34,8 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 	private FreehalFile path;
 
 	public BerkeleyDb(FreehalFile path, Serializer<T> serializer) {
+		SystemUtils.destructOnExit(this);
+
 		this.path = path;
 		this.serializer = serializer;
 
@@ -43,6 +46,7 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 			envConfig.setTransactional(true);
 			envConfig.setAllowCreate(true);
 			envConfig.setConfigParam(EnvironmentConfig.CLEANER_MIN_UTILIZATION, "75");
+			new File(envDir, "je.lck").delete();
 			this.env = new Environment(envDir, envConfig);
 			/*
 			 * try { LogUtils.updateProgress("compressing database...");
@@ -285,5 +289,10 @@ public class BerkeleyDb<T> implements KeyValueDatabase<T> {
 			txn = null;
 			return BerkeleyDb.this;
 		}
+	}
+
+	@Override
+	public void onExit(int status) {
+		finish();
 	}
 }
