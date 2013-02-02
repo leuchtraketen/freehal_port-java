@@ -18,6 +18,8 @@ public class Loader implements Extension {
 	@SuppressWarnings("static-access")
 	@Override
 	public void addOptions(Options options) {
+		options.addOption(OptionBuilder.withLongOpt("xmpp").withDescription("connect to an XMPP server")
+				.create());
 		options.addOption(OptionBuilder.withLongOpt("xmpp-host")
 				.withDescription("the XMPP server to connect to (default: " + DEFAULT_SERVER + ")").hasArg()
 				.withArgName("HOST").create());
@@ -32,18 +34,20 @@ public class Loader implements Extension {
 
 	@Override
 	public void parseConfig(Configuration config) {
-		if (config.hasOption("xmpp-user") && config.hasOption("xmpp-password")) {
-			String user = config.getStringOption("xmpp-user", null);
-			String password = config.getStringOption("xmpp-password", null);
-			String host = config.getStringOption("xmpp-host", DEFAULT_SERVER);
-			int port = config.getIntegerOption("xmpp-port", DEFAULT_PORT);
+		if (config.hasOption("xmpp")) {
+			if (config.hasOption("xmpp-user") && config.hasOption("xmpp-password")) {
+				String user = config.getStringOption("xmpp-user", null);
+				String password = config.getStringOption("xmpp-password", null);
+				String host = config.getStringOption("xmpp-host", DEFAULT_SERVER);
+				int port = config.getIntegerOption("xmpp-port", DEFAULT_PORT);
 
-			server = new XmppConnection(host, port, user, password);
-			Extensions.registerMainLoop(server);
-			
-		} else if (config.hasOption("xmpp-user") || config.hasOption("xmpp-password")
-				|| config.hasOption("xmpp-host") || config.hasOption("xmpp-port")) {
-			LogUtils.e("You have to specify a valid username and password to use XMPP.");
+				server = new XmppConnection(host, port, user, password);
+				Extensions.registerMainLoop(server);
+
+			} else if (config.hasOption("xmpp-user") || config.hasOption("xmpp-password")
+					|| config.hasOption("xmpp-host") || config.hasOption("xmpp-port")) {
+				LogUtils.e("You have to specify a valid username and password to use XMPP.");
+			}
 		}
 	}
 }

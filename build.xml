@@ -27,6 +27,7 @@
 	<path id="build-classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
+		<mkdir dir="${dist.dir}" />
 	<manifestclasspath property="lib.list" jarfile="${core.jar}">
 		<classpath refid="build-classpath" />
 	</manifestclasspath>
