@@ -114,7 +114,7 @@
 		<java jar="${dist.jar}" classpathref="build-classpath" fork="true" />
 	</target>
 
-	<target name="main" depends="clean,jars,docs" />
+	<target name="main" depends="clean,dist-prepare,jars,docs" />
 
 	<target name="docs" depends="doclava" />
 
