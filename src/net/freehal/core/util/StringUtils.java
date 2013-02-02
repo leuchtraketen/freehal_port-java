@@ -143,6 +143,24 @@ public class StringUtils {
 			return string;
 	}
 
+
+	/**
+	 * Replace the first character of the given string by it's lower case
+	 * equivalent, like Perl's {@code lcfirst}.
+	 * 
+	 * @param string
+	 *        the given string
+	 * @return the resulting string
+	 */
+	public static String lcfirst(String string) {
+		if (string.length() >= 2)
+			return string.substring(0, 1).toLowerCase() + string.substring(1);
+		else if (string.length() == 1)
+			return string.substring(0, 1).toLowerCase();
+		else
+			return string;
+	}
+
 	public static String removeSubstring(String text, List<String> substrings) {
 		for (String substring : substrings) {
 			text = removeSubstring(text, substring);

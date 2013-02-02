@@ -1200,7 +1200,7 @@ public class GermanParser extends Parser {
 		str = RegexUtils.ireplace(str, "[_]+", "_");
 
 		if (RegexUtils.find(str, "[?]")) {
-			str = str.toLowerCase();
+			str = StringUtils.lcfirst(str);
 		}
 
 		// cout << "parser2012: step 9: " << str << endl;
