@@ -89,11 +89,17 @@ public class StandardStorage implements Storage {
 
 	@Override
 	public FreehalFile getLanguageDirectory() {
-		return path.getChild("lang_" + Languages.getCurrentLanguage().getCode());
+		FreehalFile dir = path.getChild("lang_" + Languages.getCurrentLanguage().getCode());
+		if (!dir.isDirectory())
+			dir.mkdirs();
+		return dir;
 	}
 
 	@Override
 	public FreehalFile getCacheDirectory() {
-		return path.getChild("cache_" + Languages.getCurrentLanguage().getCode());
+		FreehalFile dir = path.getChild("cache_" + Languages.getCurrentLanguage().getCode());
+		if (!dir.isDirectory())
+			dir.mkdirs();
+		return dir;
 	}
 }

@@ -21,6 +21,8 @@ public class FileLog extends PrintStreamLog {
 
 	private static OutputStream openFile(File filename) {
 		try {
+			if (!filename.getParentFile().isDirectory())
+				filename.getParentFile().mkdirs();
 			return new FileOutputStream(filename);
 
 		} catch (FileNotFoundException ex) {
@@ -30,9 +32,7 @@ public class FileLog extends PrintStreamLog {
 	}
 
 	public static class FakeOutputStream extends OutputStream {
-
 		@Override
 		public void write(int arg0) throws IOException {}
-
 	}
 }

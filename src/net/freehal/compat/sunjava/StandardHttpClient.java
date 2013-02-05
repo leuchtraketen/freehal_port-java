@@ -2,8 +2,14 @@ package net.freehal.compat.sunjava;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import net.freehal.compat.sunjava.StandardFreehalFile.BufferedReaderIterator;
@@ -15,13 +21,23 @@ import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.RegexUtils;
 import net.freehal.core.util.StringUtils;
 
+/**
+ * This class represents a HTTP[S] URL.
+ * 
+ * @author "Tobias Schulz"
+ */
 public class StandardHttpClient implements FreehalFileImpl {
 
-	protected String protocol = "http";
+	protected String protocol;
 	private String path;
 
 	private StandardHttpClient(String path) {
+		if (path.startsWith("https://"))
+			protocol = "https";
+		else
+			protocol = "http";
 		path = StringUtils.replace(path, "http://", "");
+		path = StringUtils.replace(path, "https://", "");
 		path = RegexUtils.replace(path, "[/]+", "/");
 		this.path = path;
 	}
@@ -78,13 +94,35 @@ public class StandardHttpClient implements FreehalFileImpl {
 		return false;
 	}
 
+	private static boolean isRedirected(Map<String, List<String>> header) {
+		for (String hv : header.get(null)) {
+			if (hv.contains(" 301 ") || hv.contains(" 302 "))
+				return true;
+		}
+		return false;
+	}
+
+	private InputStream openStream(String link) throws IOException {
+		URL url = new URL(link);
+		HttpURLConnection http = (HttpURLConnection) url.openConnection();
+		Map<String, List<String>> header = http.getHeaderFields();
+		while (isRedirected(header)) {
+			link = header.get("Location").get(0);
+			url = new URL(link);
+			http = (HttpURLConnection) url.openConnection();
+			header = http.getHeaderFields();
+		}
+		InputStream input = http.getInputStream();
+		return input;
+	}
+
 	@Override
 	public Iterable<String> readLines() {
 		Iterable<String> iterator = null;
 		try {
-			URL u = new URL(protocol + "://" + path);
-			LogUtils.i("HTTP GET: " + u + " (via iterator)");
-			iterator = new BufferedReaderIterator(new BufferedReader(new InputStreamReader(u.openStream())));
+			String link = protocol + "://" + path;
+			LogUtils.i("HTTP GET: " + this + " (via iterator)");
+			iterator = new BufferedReaderIterator(new BufferedReader(new InputStreamReader(openStream(link))));
 
 		} catch (Exception e) {
 			LogUtils.e(e.getMessage());
@@ -104,8 +142,8 @@ public class StandardHttpClient implements FreehalFileImpl {
 			content = new Scanner(u.openStream()).useDelimiter("\\Z").next();
 			LogUtils.i("HTTP GET: got " + content.length() + " bytes");
 
-		} catch (Exception e) {
-			LogUtils.e(e.getMessage());
+		} catch (NoSuchElementException e) {} catch (Exception e) {
+			LogUtils.e(e);
 			content = "";
 		}
 		System.gc();
@@ -162,4 +200,9 @@ public class StandardHttpClient implements FreehalFileImpl {
 
 	@Override
 	public void touch() {}
+
+	@Override
+	public String toString() {
+		return "{" + protocol + "://" + path + "}";
+	}
 }

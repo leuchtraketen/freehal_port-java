@@ -51,6 +51,7 @@ import net.freehal.core.storage.StandardStorage;
 import net.freehal.core.storage.Storages;
 import net.freehal.core.util.FreehalFile;
 import net.freehal.core.util.FreehalFiles;
+import net.freehal.core.util.FreehalFiles.Factory;
 import net.freehal.core.util.LogUtils;
 import net.freehal.core.util.StringUtils;
 import net.freehal.core.util.SystemUtils;
@@ -61,6 +62,8 @@ import net.freehal.core.xml.SynonymProviders;
 import net.freehal.core.xml.XmlFact;
 import net.freehal.plugin.berkeleydb.BerkeleyDb;
 import net.freehal.plugin.berkeleydb.BerkeleyFile;
+import net.freehal.plugin.githubstorage.GithubFile;
+import net.freehal.plugin.githubstorage.GithubStorage;
 import net.freehal.plugin.wikipedia.GermanWikipedia;
 import net.freehal.plugin.wikipedia.WikipediaClient;
 import net.freehal.plugin.wikipedia.WikipediaPlugin;
@@ -118,7 +121,10 @@ public class DataInitializer {
 		// set the virtual file implementations
 		FreehalFiles.addImplementation(FreehalFiles.ALL_PROTOCOLS, StandardFreehalFile.newFactory());
 		FreehalFiles.addImplementation("sqlite", FakeFreehalFile.newFactory());
-		FreehalFiles.addImplementation("http", StandardHttpClient.newFactory());
+		Factory httpClient = StandardHttpClient.newFactory();
+		FreehalFiles.addImplementation("http", httpClient);
+		FreehalFiles.addImplementation("https", httpClient);
+		FreehalFiles.addImplementation("github", GithubFile.newFactory());
 		FreehalFiles.addImplementation("wikipedia", WikipediaClient.newFactory());
 		FreehalFiles.addImplementation("berkeley", BerkeleyFile.newFactory());
 	}
@@ -127,7 +133,8 @@ public class DataInitializer {
 		// initialize the directory structure. The "StandardStorage"
 		// implementation expects a "lang_xy" directory there which contains the
 		// database files.
-		Storages.setStorage(new StandardStorage(baseDirectory));
+		Storages.setStorage(new GithubStorage("tobiasschulz/freehal-core/lang_", new StandardStorage(
+				baseDirectory)));
 	}
 
 	public static synchronized void initializeLanguage(Language language) {
