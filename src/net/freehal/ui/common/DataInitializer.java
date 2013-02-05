@@ -70,6 +70,9 @@ import net.freehal.plugin.wikipedia.WikipediaPlugin;
 
 public class DataInitializer {
 
+	private static final String GITHUB_USER = "tobiasschulz";
+	private static final String GITHUB_REPO = "freehal-core";
+	private static final String GITHUB_PATH_PREFIX = "lang_";
 	private static Set<Language> isDataInitialized = new HashSet<Language>();
 
 	public static synchronized void initializeTerminalLogging(StandardLogUtils log) {
@@ -133,8 +136,8 @@ public class DataInitializer {
 		// initialize the directory structure. The "StandardStorage"
 		// implementation expects a "lang_xy" directory there which contains the
 		// database files.
-		Storages.setStorage(new GithubStorage("tobiasschulz/freehal-core/lang_", new StandardStorage(
-				baseDirectory)));
+		Storages.setStorage(new GithubStorage(GITHUB_USER, GITHUB_REPO, GITHUB_PATH_PREFIX,
+				new StandardStorage(baseDirectory)));
 	}
 
 	public static synchronized void initializeLanguage(Language language) {

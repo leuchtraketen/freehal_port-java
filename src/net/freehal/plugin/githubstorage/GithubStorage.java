@@ -19,13 +19,25 @@ public class GithubStorage implements Storage {
 	private String prefix;
 
 	/**
-	 * The storage to store the downloaded files in.
+	 * The storage to store the downloaded files in. Language-dependent files
+	 * will be downloaded from the directory specified by the path prefix
+	 * concatenated with the current language code. For example, if the current
+	 * language is "en" and the path prefix is "download/lang_", then all files
+	 * from the directory "download/lang_en/" will be stored in the language
+	 * directory of the underlying storage. If the path prefix is empty, all
+	 * files from a directory called "en/" will be downloaded.
 	 * 
+	 * @param user
+	 *        the github user
+	 * @param repo
+	 *        the github repo
+	 * @param pathPrefix
+	 *        the path prefix
 	 * @param storage
 	 *        the real storage
 	 */
-	public GithubStorage(String prefix, Storage storage) {
-		this.prefix = prefix;
+	public GithubStorage(String user, String repo, String pathPrefix, Storage storage) {
+		this.prefix = user + "/" + repo + "/" + pathPrefix;
 		this.storage = storage;
 	}
 
@@ -40,8 +52,7 @@ public class GithubStorage implements Storage {
 	}
 
 	private void downloadTemplates(FreehalFile langdir) {
-		GithubFile dir = new GithubFile(prefix
-				+ Languages.getCurrentLanguage().getCode());
+		GithubFile dir = new GithubFile(prefix + Languages.getCurrentLanguage().getCode());
 		for (FreehalFile remote : dir.listFiles()) {
 			LogUtils.i("remote file: " + remote);
 			FreehalFile local = langdir.getChild(remote.getName());
